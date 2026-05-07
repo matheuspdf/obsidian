@@ -11,10 +11,14 @@
             "id": "9c39085a03a25329",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Fundamentos de Redes - Senac SC/Modulo 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Modulo 1"
             }
           }
         ]
@@ -175,6 +179,9 @@
   },
   "active": "9c39085a03a25329",
   "lastOpenFiles": [
+    "/Fundamentos de Redes - Senac SC/Modulo 1.md",
+    "/Fundamentos de Redes - Senac SC",
+    "Probabilidade e Estatística/Aula 3 Medidas de dispersão, assimetria e curtose.md",
     "/Maratona CyberSegurança/teste",
     "Maratona CyberSegurança/teste",
     "/Maratona CyberSegurança",
@@ -212,9 +219,7 @@
     "Maratona CyberSegurança",
     "CÁLCULO DIFERENCIAL E INTEGRAL A UMA VARIÁVEL/CÁLCULO DIFERENCIAL E INTEGRAL A UMA VARIÁVEL.md",
     "Guia matemático",
-    "CCST/Sem título.base",
     "CCST/Sem título.md",
-    "CCST",
     "Teste/Untfnchjcdjjitled.md",
     "Matheus/2026-02-03.md",
     "Teste.md"
