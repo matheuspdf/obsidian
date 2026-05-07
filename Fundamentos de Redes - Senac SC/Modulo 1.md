@@ -99,3 +99,79 @@ Também há muitos dispositivos conectados encontrados fora do seu lar que ofere
 
 <!-- As etiquetas de RFID (Identificação por radiofrequência) podem ser colocadas dentro de objetos ou sobre eles para controlá-los ou monitorar sensores em muitas circunstâncias. --> 
 
+
+# 1.2 Transmissão de Dados 
+
+## 1.2.1 Vídeo - Tipos de Dados Pessoais
+### O que são Dados?
+
+Ouvimos sobre dados o tempo todo, especialmente quando estamos falando de redes de computadores. Você ouve sobre dados que são transmitidos, dados inseridos, dados armazenados, e até sobre _big data_ que existe em algum lugar na nuvem — mas o que exatamente são dados?
+
+Os dados em sua forma bruta são as informações que você insere. Toda vez que você clica em enviar, compartilhar ou fazer upload, você está enviando dados que criou em algum lugar na rede.
+
+---
+
+### Tipos de Dados
+
+**1. Dados Voluntários** São dados que você mesmo fornece. Você percebe que os dados estão sendo coletados sobre você e concorda em compartilhá-los ou armazená-los em algum lugar na rede.
+
+**2. Dados Inferidos** São dados que você gera por meio de suas atividades, muitas vezes sem perceber que estão sendo coletados. Um exemplo é o cartão de crédito: todos os lugares onde você o utiliza mantêm um registro. Com isso, são coletadas informações como suas preferências, os lugares onde você costuma comer ou fazer compras e sua localização.
+
+> Por exemplo: "Estou aqui em Portland hoje e usei meu cartão ATM. Moro na Flórida. Então meu banco agora tem dados que indicam que viajei da Flórida para Portland." Essa informação passa a fazer parte de um banco de dados maior, armazenado no banco e na empresa de processamento do cartão — mesmo sem ter sido fornecida intencionalmente.
+
+**3. Dados Observados** São dados coletados automaticamente por dispositivos. Seu telefone, por exemplo, provavelmente mantém rastreio da sua localização. Com os serviços de localização ativados, essa informação é armazenada e transmitida para sua operadora.
+
+---
+
+Existe muita informação sendo coletada e armazenada — daí o termo _big data_ na nuvem. Por isso, é importante prestar atenção quando clicamos nos botões de compartilhar ou armazenar em nossos dispositivos, para sabermos para onde as coisas estão indo.
+
+
+## 1.2.2 O Bit
+Você sabia que computadores e redes só trabalham com dígitos binários, zeros e uns? Pode ser difícil imaginar que todos os nossos dados são armazenados e transmitidos como uma série de bits. Cada bit pode ter apenas dois valores possíveis: 0 ou 1. O termo bit é uma abreviação de "dígito binário" e representa a menor parte de dados. Os seres humanos interpretam palavras e imagens; os computadores interpretam apenas padrões de bits.
+
+Um bit é armazenado e transmitido como um entre dois estados distintos possíveis. Isso pode incluir duas direções de magnetização, dois níveis diferentes de corrente ou voltagem, dois níveis diferentes de intensidade da luz ou qualquer outro sistema físico com dois estados distintos. Por exemplo, um interruptor de luz pode estar ligado ou desligado; na representação binária, esses estados corresponderiam a 1 e 0, respectivamente.
+
+Cada dispositivo de entrada (mouse, teclado, receptor ativado por voz) converte a interação humana em código binário para a CPU processar e armazenar. Cada dispositivo de saída (impressora, alto-falante, monitor, etc.) converte os dados binários de volta a um formato reconhecido pelos seres humanos. Dentro do computador, todos os dados são processados e armazenados como binários.
+
+Os computadores usam códigos binários para representar e interpretar letras, números e caracteres especiais com bits. Um código muito usado é o ASCII (American Standard Code for Information Interchange). Com o ASCII, cada caractere é representado por oito bits. Por exemplo:
+
+- **Letra maiúscula:** A = 01000001
+- **Número:** 9 = 00111001
+- **Caractere especial:** # = 00100011
+
+Cada grupo de oito bits, como as representações de letras e números, corresponde a um byte.
+
+Os códigos podem ser usados para representar praticamente qualquer tipo de informação digital: dados de computador, gráficos, fotos, voz, vídeo e música.
+
+Na figura, insira até cinco caracteres no campo **Characters**. Em seguida, clique no **botão Mostre-me** ver a conversão de bits do ASCII. Clique no botão **Redefinir** para inserir um grupo diferente de caracteres.
+
+Transcrição das conversões ASCII:
+
+---
+**Imagem 1**
+
+| Caracteres | Conversão de bits ASCII |
+| ---------- | ----------------------- |
+| `oi`       | `01101111 01101001`     |
+
+---
+**Imagem 2**
+
+| Caracteres | Conversão de bits ASCII                        |
+| ---------- | ---------------------------------------------- |
+| `Turim`    | `01010100 01110101 01110010 01101001 01101101` |
+
+## 1.2.3 Métodos comuns de transmissão de dados
+
+Depois que os dados são transformados em uma série de bits, eles devem ser convertidos em sinais que possam ser enviados através da mídia de rede para o destino. Mídia significa o meio físico em que os sinais são transmitidos. Alguns exemplos de mídia são fio de cobre, cabo de fibra óptica e ondas eletromagnéticas pelo ar. Um sinal consiste em padrões ópticos ou elétricos que são transmitidos de um dispositivo conectado para outro. Esses padrões representam os bits digitais (ou seja, dados) e trafegam através da mídia desde a origem até o destino como uma série de pulsos de eletricidade, pulsos de luz ou ondas de rádio. Os sinais podem ser convertidos muitas vezes antes de alcançar o destino, à medida que a mídia correspondente muda entre a origem e o destino.
+
+Existem três métodos comuns de transmissão de sinal usados em redes:
+
+- **Sinais elétricos –** A transmissão é obtida pela representação dos dados como pulsos elétricos em fios de cobre.
+- **Sinais ópticos –** A transmissão é obtida pela conversão dos sinais elétricos em pulsos de luz.
+- **Sinais sem fio –** A transmissão é obtida pelo uso de infravermelho, micro-ondas ou ondas de rádio pelo ar.
+
+Clique em Play na figura para ver uma animação dos três tipos de transmissões de sinal.
+
+Na maioria das residências e das pequenas empresas, os sinais de rede são transmitidos através de fios de cobre (cabos) ou conexões sem fio habilitadas para Wi-Fi. As redes grandes utilizam cabos de fibra óptica para a transmissão confiável de sinais em longas distâncias.
+
