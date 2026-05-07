@@ -11,14 +11,14 @@
             "id": "278c123d48d38862",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "Sem título 1.md",
-                "bFile": "Sem título 1.md",
-                "aRef": ""
+                "file": "Maratona CyberSegurança/Final do Curso.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: Sem título 1  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "Final do Curso"
             }
           }
         ]
@@ -195,12 +195,12 @@
   },
   "active": "278c123d48d38862",
   "lastOpenFiles": [
+    "Sem título.base",
+    "Sem título.md",
+    "Sem título 1.md",
     "Maratona CyberSegurança/5 - O seu futuro estará na segurança cibernética (interrogação).md",
     "Maratona CyberSegurança/Final do Curso.md",
     "Maratona CyberSegurança/teste",
-    "Sem título 1.md",
-    "Sem título.md",
-    "Sem título.base",
     "Segurança em Sistemas de informação/Aula 2 FRAMEWORKS DE GESTÃO E APOIO À SEGURANÇA DA INFORMAÇÃO.md",
     "Segurança em Sistemas de informação/Aula 1 SEGURANÇA EM SISTEMA DE INFORMAÇÃO HISTÓRIA E CONCEITOS.md",
     "Fundamentos de Redes - Senac SC/Aulas ao vivo/Aula 01 - 28 de abril.md",
