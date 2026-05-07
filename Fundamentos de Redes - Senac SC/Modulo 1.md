@@ -171,7 +171,36 @@ Existem três métodos comuns de transmissão de sinal usados em redes:
 - **Sinais ópticos –** A transmissão é obtida pela conversão dos sinais elétricos em pulsos de luz.
 - **Sinais sem fio –** A transmissão é obtida pelo uso de infravermelho, micro-ondas ou ondas de rádio pelo ar.
 
-Clique em Play na figura para ver uma animação dos três tipos de transmissões de sinal.
-
 Na maioria das residências e das pequenas empresas, os sinais de rede são transmitidos através de fios de cobre (cabos) ou conexões sem fio habilitadas para Wi-Fi. As redes grandes utilizam cabos de fibra óptica para a transmissão confiável de sinais em longas distâncias.
 
+## 1.2.4 Verifique a sua compreensão - Transmissão de dados
+
+**Verifique sua compreensão sobre Transmissão de Dados escolhendo a resposta correta para as seguintes perguntas.**
+
+## Quiz — Fundamentos de Redes
+---
+**Pergunta 1** Uma unidade básica de informação que representa um dos dois estados distintos é conhecida como:
+
+✅ **bit**
+
+> Um dígito binário (bit) representa um dos dois estados discretos, 0 ou 1.
+---
+
+**Pergunta 2** Ao usar o cartão de crédito para fazer compras em vários locais, a empresa do cartão de crédito pode usar essas informações para saber mais sobre sua localização e suas preferências. Esse tipo de dados pessoais é conhecido como:
+
+✅ **dados inferidos**
+
+> Dados inferidos, como pontuação de crédito, são baseados na análise de dados voluntários ou observados.
+
+---
+
+**Pergunta 3** Qual dos seguintes métodos de transmissão de sinal usa frequências ou pulsos de luz?
+
+✅ **sinais ópticos**
+
+> Sinais ópticos convertem sinais elétricos em pulsos de luz.
+
+
+
+# 1.3 Largura de banda e taxa de transferência
+## 1.3.1 Largura de banda
