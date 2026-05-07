@@ -1,5 +1,0 @@
-# This directory is a Syncthing folder marker.
-# Do not delete.
-
-folderID: di2l8-9dime
-created: 2026-02-27T21:00:02-03:00
