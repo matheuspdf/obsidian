@@ -11,10 +11,14 @@
             "id": "278c123d48d38862",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nova aba"
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "Sem título 1.md",
+                "bFile": "Sem título 1.md",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: Sem título 1  (Working Tree)"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "[\"cssclasses\"]",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Maratona CyberSegurança/5 - O seu futuro estará na segurança cibernética (interrogação).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Links inversos"
+              "title": "Links inversos para 5 - O seu futuro estará na segurança cibernética (interrogação)"
             }
           },
           {
@@ -150,13 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sem título 1.canvas",
+                "file": "Maratona CyberSegurança/5 - O seu futuro estará na segurança cibernética (interrogação).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Sumário de Sem título 1"
+              "title": "Sumário de 5 - O seu futuro estará na segurança cibernética (interrogação)"
             }
           },
           {
@@ -190,6 +195,10 @@
   },
   "active": "278c123d48d38862",
   "lastOpenFiles": [
+    "Maratona CyberSegurança/5 - O seu futuro estará na segurança cibernética (interrogação).md",
+    "Maratona CyberSegurança/Final do Curso.md",
+    "Maratona CyberSegurança/teste",
+    "Sem título 1.md",
     "Sem título.md",
     "Sem título.base",
     "Segurança em Sistemas de informação/Aula 2 FRAMEWORKS DE GESTÃO E APOIO À SEGURANÇA DA INFORMAÇÃO.md",
@@ -212,7 +221,6 @@
     "images/Pasted image 20260423212304.png",
     "AZ-104/módulo 1 - identity solutions.md",
     "CompTIA A+ 220-1201 Training Course",
-    "Maratona CyberSegurança/Final do Curso.md",
     "Guia matemático/Guia.md",
     "Lab - AD + VirtualBox/🧪 Lab de Active Directory no VirtualBox.md",
     "Probabilidade e Estatística/Aula 3 Medidas de dispersão, assimetria e curtose.md",
@@ -225,17 +233,13 @@
     "IT Support Specialist Career Path",
     "Probabilidade e Estatística/Aula 1 Conceitos da estatística.md",
     "Segurança em Sistemas de informação",
-    "Probabilidade e Estatística",
     "Maratona CyberSegurança/2 - Ataques, Conceitos e Técnicas.md",
     "Maratona CyberSegurança/3 - Protegendo seus dados e privacidade.md",
     "Maratona CyberSegurança/1 - Introdução à Segurança Cibernética.md",
-    "Maratona CyberSegurança/5 - O seu futuro estará na segurança cibernética (interrogação).md",
     "Maratona CyberSegurança/4 - Protegendo a Organização.md",
     "CÁLCULO DIFERENCIAL E INTEGRAL A UMA VARIÁVEL/CÁLCULO DIFERENCIAL E INTEGRAL A UMA VARIÁVEL.md",
     "Teste/Untfnchjcdjjitled.md",
     "2026-02-27.md",
-    "Bem-vindo.md",
-    "teste.md",
     "Sem título.canvas",
     "Sem título 1.canvas"
   ]
