@@ -38,14 +38,14 @@
             "id": "f481b8f4bd1c449f",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".gitignore",
-                "bFile": ".gitignore",
-                "aRef": ""
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "git-pull-request",
-              "title": "Diff: .gitignore"
+              "icon": "lucide-file",
+              "title": "Untitled"
             }
           }
         ],
@@ -140,6 +140,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "Untitled.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -171,6 +172,7 @@
         "state": {
           "type": "outline",
           "state": {
+            "file": "Untitled.md",
             "followCursor": false,
             "showSearch": false,
             "searchQuery": ""
@@ -204,7 +206,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ab50899e759b62f7",
+  "active": "f481b8f4bd1c449f",
   "lastOpenFiles": [
     "/Untitled.md",
     "conflict-files-obsidian-git.md",
