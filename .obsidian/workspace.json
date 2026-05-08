@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Turim - Infra/Variáveis de ambiente (Windows).md",
-                "mode": "source",
+                "file": "AZ-104/Laboratórios - AZ104/Lab 02a — Gerenciar Assinaturas e RBAC.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Variáveis de ambiente (Windows)"
+              "title": "Lab 02a — Gerenciar Assinaturas e RBAC"
             }
           }
         ]
@@ -193,9 +193,12 @@
   },
   "active": "9456f4a9e204be30",
   "lastOpenFiles": [
+    "AZ-104/módulo 1 - identity solutions.md",
+    "AZ-104/Laboratórios - AZ104/Lab 02a — Gerenciar Assinaturas e RBAC.md",
+    "Turim - Infra/Variáveis de ambiente (Windows).md",
+    "AZ-104/Laboratórios - AZ104",
     "Turim - Infra/Usuário não consegue acessar a máquina com VPN.md",
     "Turim - Infra/Erro SafeGuard.md",
-    "Turim - Infra/Variáveis de ambiente (Windows).md",
     "Sem título.base",
     "Turim - Infra",
     "images/Pasted image 20260423212426.png",
@@ -230,11 +233,9 @@
     "Guia matemático",
     "Fundamentos de Redes - Senac SC/Aulas ao vivo/Aula 01 - 28 de abril.md",
     "Fundamentos de Redes - Senac SC/Modulo 1.md",
-    "Fundamentos de Redes - Senac SC/Aulas ao vivo",
     "CÁLCULO DIFERENCIAL E INTEGRAL A UMA VARIÁVEL/CÁLCULO DIFERENCIAL E INTEGRAL A UMA VARIÁVEL.md",
     "CompTIA A+ 220-1201 Training Course/Introdução à IP - CompTIA A+ 220-1201 - 2.1.md",
     "CompTIA A+ 220-1201 Training Course/Common Ports - CompTIA A+ 220-1201 - 2.1.md",
-    "CCNA - Introdução às Redes/Módulo 1 - As redes de hoje.md",
-    "AZ-104/módulo 1 - identity solutions.md"
+    "CCNA - Introdução às Redes/Módulo 1 - As redes de hoje.md"
   ]
 }
