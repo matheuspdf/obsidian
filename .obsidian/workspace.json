@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a45f303a7da29aeb",
+        "id": "a11fef9f1d0f8548",
         "type": "tabs",
         "children": [
           {
-            "id": "fdf73586aa9b86cc",
+            "id": "080133a49a04f372",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -122,7 +122,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true,
+                "useHierarchy": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -169,7 +169,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -177,6 +177,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "markdown-importer:Abrir importador Markdown": false,
       "obsidian-git:Open Git source control": false,
       "switcher:Abrir a troca rápida": false,
       "graph:Abrir visualização em gráfico": false,
@@ -187,8 +188,9 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "f661d99831a48032",
+  "active": "ef65ff1dab9d39d7",
   "lastOpenFiles": [
+    "Sem título.md",
     "Turim - Infra/Variáveis de ambiente (Windows).md",
     "Turim - Infra/Usuário não consegue acessar a máquina com VPN.md",
     "Turim - Infra/Erro SafeGuard.md",
