@@ -11,10 +11,14 @@
             "id": "080133a49a04f372",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Turim - Infra/Lab 02a - Gerenciar Assinaturas e RBAC.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "Lab 02a - Gerenciar Assinaturas e RBAC"
             }
           }
         ]
@@ -189,7 +193,7 @@
   },
   "active": "080133a49a04f372",
   "lastOpenFiles": [
-    "Turim - Infra/Sem título.md",
+    "Turim - Infra/Lab 02a - Gerenciar Assinaturas e RBAC.md",
     "AZ-104/Sem título.md",
     "Sem título.md",
     "Turim - Infra",
