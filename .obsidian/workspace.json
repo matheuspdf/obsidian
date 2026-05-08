@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "75c6fb55f0b02b88",
@@ -195,6 +196,7 @@
   },
   "active": "278c123d48d38862",
   "lastOpenFiles": [
+    "Fundamentos de Redes - Senac SC/Aulas ao vivo/topologias_de_rede.svg",
     "Fundamentos de Redes - Senac SC/Modulo 1.md",
     "Maratona CyberSegurança/Final do Curso.md",
     "Sem título.base",
@@ -205,7 +207,6 @@
     "Segurança em Sistemas de informação/Aula 2 FRAMEWORKS DE GESTÃO E APOIO À SEGURANÇA DA INFORMAÇÃO.md",
     "Segurança em Sistemas de informação/Aula 1 SEGURANÇA EM SISTEMA DE INFORMAÇÃO HISTÓRIA E CONCEITOS.md",
     "Fundamentos de Redes - Senac SC/Aulas ao vivo/Aula 01 - 28 de abril.md",
-    "Fundamentos de Redes - Senac SC/Aulas ao vivo/topologias_de_rede.svg",
     "Pasted image 20260506064205.png",
     "Pasted image 20260506064421.png",
     "Pasted image 20260506064409.png",
