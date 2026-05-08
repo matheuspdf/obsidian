@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b2d221b45e70ac59",
+        "id": "323a0e63b7114b27",
         "type": "tabs",
         "children": [
           {
-            "id": "9456f4a9e204be30",
+            "id": "d6b11c10d895eee9",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nova aba"
             }
           }
         ]
