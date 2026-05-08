@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "323a0e63b7114b27",
+        "id": "a45f303a7da29aeb",
         "type": "tabs",
         "children": [
           {
-            "id": "d6b11c10d895eee9",
+            "id": "fdf73586aa9b86cc",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nova aba"
             }
           }
         ]
@@ -78,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 213.5
   },
   "right": {
     "id": "b7dfc35aa6a9057c",
@@ -177,7 +173,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 497.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,7 +187,7 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "d6b11c10d895eee9",
+  "active": "f661d99831a48032",
   "lastOpenFiles": [
     "Turim - Infra/Variáveis de ambiente (Windows).md",
     "Turim - Infra/Usuário não consegue acessar a máquina com VPN.md",
