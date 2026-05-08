@@ -11,10 +11,14 @@
             "id": "d6b11c10d895eee9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nova aba"
+              "type": "split-diff-view",
+              "state": {
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
         ]
@@ -187,14 +191,14 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "f661d99831a48032",
+  "active": "d6b11c10d895eee9",
   "lastOpenFiles": [
-    "AZ-104/Laboratórios - AZ104/Lab 02a — Gerenciar Assinaturas e RBAC.md",
-    "AZ-104/módulo 1 - identity solutions.md",
     "Turim - Infra/Variáveis de ambiente (Windows).md",
-    "AZ-104/Laboratórios - AZ104",
     "Turim - Infra/Usuário não consegue acessar a máquina com VPN.md",
     "Turim - Infra/Erro SafeGuard.md",
+    "AZ-104/Laboratórios - AZ104/Lab 02a — Gerenciar Assinaturas e RBAC.md",
+    "AZ-104/módulo 1 - identity solutions.md",
+    "AZ-104/Laboratórios - AZ104",
     "Sem título.base",
     "Turim - Infra",
     "images/Pasted image 20260423212426.png",
