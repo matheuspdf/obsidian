@@ -171,7 +171,129 @@ Existem três métodos comuns de transmissão de sinal usados em redes:
 - **Sinais ópticos –** A transmissão é obtida pela conversão dos sinais elétricos em pulsos de luz.
 - **Sinais sem fio –** A transmissão é obtida pelo uso de infravermelho, micro-ondas ou ondas de rádio pelo ar.
 
-Clique em Play na figura para ver uma animação dos três tipos de transmissões de sinal.
-
 Na maioria das residências e das pequenas empresas, os sinais de rede são transmitidos através de fios de cobre (cabos) ou conexões sem fio habilitadas para Wi-Fi. As redes grandes utilizam cabos de fibra óptica para a transmissão confiável de sinais em longas distâncias.
 
+## 1.2.4 Verifique a sua compreensão - Transmissão de dados
+
+**Verifique sua compreensão sobre Transmissão de Dados escolhendo a resposta correta para as seguintes perguntas.**
+
+## Quiz — Fundamentos de Redes
+---
+**Pergunta 1** Uma unidade básica de informação que representa um dos dois estados distintos é conhecida como:
+
+✅ **bit**
+
+> Um dígito binário (bit) representa um dos dois estados discretos, 0 ou 1.
+---
+
+**Pergunta 2** Ao usar o cartão de crédito para fazer compras em vários locais, a empresa do cartão de crédito pode usar essas informações para saber mais sobre sua localização e suas preferências. Esse tipo de dados pessoais é conhecido como:
+
+✅ **dados inferidos**
+
+> Dados inferidos, como pontuação de crédito, são baseados na análise de dados voluntários ou observados.
+
+---
+
+**Pergunta 3** Qual dos seguintes métodos de transmissão de sinal usa frequências ou pulsos de luz?
+
+✅ **sinais ópticos**
+
+> Sinais ópticos convertem sinais elétricos em pulsos de luz.
+
+
+
+# 1.3 Largura de banda e taxa de transferência
+## 1.3.1 Largura de banda
+
+Transmitir um filme ou jogar com vários jogadores exige conexões seguras e rápidas. Para comportar aplicativos com alta largura de banda, as redes precisam ser capazes de transmitir e receber bits em uma taxa muito alta.
+
+Diferentes meios físicos suportam a transferência de bits em velocidades diferentes. A transferência de dados normalmente é referenciada em termos de **largura de banda** e **taxa de transferência**.
+
+**Largura de banda** é a capacidade de um meio de transportar dados. A largura de banda digital mede a quantidade de dados que podem fluir de um lugar para outro durante um determinado tempo, sendo medida pelo número de bits que (teoricamente) podem ser enviados através da mídia em um segundo. Estas são as medidas comuns de largura de banda:
+- Milhares de bits por segundo (Kbps)
+- Milhões de bits por segundo (Mbps)
+- Bilhões de bits por segundo (Gbps)
+
+Propriedades dos meios físicos, tecnologias atuais e as leis da física têm função importante na determinação da largura de banda disponível.
+
+A tabela mostra as unidades de medida comumente usadas para largura de banda.
+
+|Unidade de Largura de Banda|Sigla|Equivalência|
+|---|---|---|
+|Bits por segundo|bps|1 bps = unidade fundamental de largura de banda|
+|Quilobits por segundo|Kbps|1 Kbps = 1.000 bps = 10³ bps|
+|Megabits por segundo|Mbps|1 Mbps = 1.000.000 bps = 10⁶ bps|
+|Gigabits por segundo|Gbps|1 Gbps = 1.000.000.000 bps = 10⁹ bps|
+|Terabits por segundo|Tbps|1 Tbps = 1.000.000.000.000 bps = 10¹² bps|
+
+## 1.3.2 Taxa de transferência
+Assim como a largura de banda, taxa de transferência é a medida da transferência de bits através do meio físico durante um determinado período. Entretanto, devido a vários fatores, geralmente a taxa de transferência não corresponde à largura de banda especificada. Diversos fatores influenciam a taxa de transferência:
+
+- A quantidade de dados enviados e recebidos pela conexão
+- Os tipos de dados transmitidos
+- A latência criada pelo número de dispositivos de rede encontrados entre a origem e o destino
+
+O termo latência se refere ao tempo necessário para os dados viajarem de um ponto a outro, incluindo atrasos.
+
+As medidas de taxa de transferência não levam em consideração a validade ou a utilidade dos bits transmitidos e recebidos. Muitas mensagens recebidas pela rede não são destinadas a aplicativos específicos de usuário. Por exemplo, as mensagens de controle de rede que regulam o tráfego e corrigem erros.
+
+Em uma inter-rede ou em uma rede com vários segmentos, a taxa de transferência não pode ser mais rápida do que o link mais lento do caminho entre o dispositivo emissor e o dispositivo receptor. Mesmo que todos os segmentos (ou a maioria deles) tenham largura de banda alta, basta um segmento no caminho com largura de banda mais baixa para provocar lentidão no rendimento da rede inteira.
+
+Existem muitos testes de velocidade on-line que podem revelar a taxa de transferência de uma conexão com a Internet.
+
+## 1.3.3 Vídeo - Taxa de transferência
+
+Transcrição:
+
+A **taxa de transferência** é a quantidade de dados enviados e recebidos em uma conexão, incluindo quaisquer atrasos que possam ocorrer — tanto no envio quanto no recebimento das mensagens.
+
+---
+
+#### Demonstração com speedtest.net
+
+O site [speedtest.net](https://www.speedtest.net) (e outros similares) é uma ferramenta prática para medir a taxa de transferência real de uma conexão. Ao iniciar o teste, ele mede:
+
+**Velocidade de Download**
+
+- Representa o número de bits por segundo que estão sendo _recebidos_
+- Medido em **Mbps** (megabits por segundo — milhões de bits por segundo)
+- Exemplo obtido no vídeo: **35,70 Mbps**
+
+**Velocidade de Upload**
+
+- Representa a largura de banda de _envio_
+- Também medido em **Mbps**
+- Exemplo obtido no vídeo: **35,04 Mbps**
+
+---
+
+#### Observação Importante
+
+Em conexões domésticas, é comum que a velocidade de **download seja maior** do que a de upload. Isso ocorre porque a maioria dos usuários consome mais dados do que envia.
+
+Ferramentas como o speedtest.net são úteis para medir o desempenho não apenas da rede local, mas também da conexão com o **provedor de serviços de Internet (ISP)**.
+
+## 1.3.4 Verifique sua compreensão - Largura de banda e taxa de transferência
+**Verifique sua compreensão de Largura de Banda e Taxa de transferência escolhendo a resposta correta para as seguintes perguntas.**
+
+**Pergunta 1** A capacidade de um meio físico transportar dados é conhecida como:
+
+✅ **largura de banda**
+
+> Largura de banda é a capacidade de um meio de transportar dados.
+
+---
+
+**Pergunta 2** Qual das seguintes medições inclui qualquer latência encontrada durante as transmissões de dados?
+
+✅ **taxa de transferência**
+
+> A quantidade de dados, o tipo de dados e a latência da rede são combinados para fazer com que a taxa de transferência não corresponda à largura de banda.
+
+---
+
+**Pergunta 3** Qual é a unidade de medida comumente usada para largura de banda?
+
+✅ **bits por segundo**
+
+> A largura de banda costuma ser medida pelo número de bits que (teoricamente) podem ser enviados através do meio físico em um segundo.
