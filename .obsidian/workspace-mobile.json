@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "4852a43e54c4eae3",
+        "id": "69cd2c324bce5ec8",
         "type": "tabs",
         "children": [
           {
-            "id": "aff0deac22828b30",
-            "type": "leaf",
-            "state": {
-              "type": "bases",
-              "state": {
-                "file": "Untitled.base",
-                "viewName": "Table"
-              },
-              "icon": "lucide-table",
-              "title": "Untitled"
-            }
-          },
-          {
-            "id": "87074465716eafcb",
+            "id": "423d30fbd68d2b3e",
             "type": "leaf",
             "state": {
               "type": "diff-view",
               "state": {
-                "aFile": ".obsidian/plugins/obsidian-git/data.json",
-                "bFile": ".obsidian/plugins/obsidian-git/data.json",
-                "aRef": "HEAD",
-                "bRef": ""
+                "aFile": "Untitled.base",
+                "bFile": "Untitled.base",
+                "aRef": ""
               },
               "icon": "git-pull-request",
-              "title": "Diff: data.json"
+              "title": "Diff: Untitled.base"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -191,10 +176,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "87074465716eafcb",
+  "active": "423d30fbd68d2b3e",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "Untitled.base",
+    "conflict-files-obsidian-git.md",
     "Fundamentos de Redes - Senac SC/Modulo 1.md",
     "/Fundamentos de Redes - Senac SC/Modulo 1.md",
     "/Fundamentos de Redes - Senac SC",
