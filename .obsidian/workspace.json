@@ -11,14 +11,10 @@
             "id": "080133a49a04f372",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Fundamentos de Redes - Senac SC/Aulas ao vivo/Aula 01 - 28 de abril.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Aula 01 - 28 de abril"
+              "title": "Nova aba"
             }
           }
         ]
@@ -181,7 +177,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "markdown-importer:Abrir importador Markdown": false,
       "obsidian-git:Open Git source control": false,
       "switcher:Abrir a troca rápida": false,
       "graph:Abrir visualização em gráfico": false,
@@ -194,11 +189,14 @@
   },
   "active": "080133a49a04f372",
   "lastOpenFiles": [
+    "Turim - Infra/Sem título.md",
+    "AZ-104/Sem título.md",
+    "Sem título.md",
+    "Turim - Infra",
     "Untitled.md",
     "Untitled.base",
-    "Fundamentos de Redes - Senac SC/Aulas ao vivo/topologias_de_rede.svg",
     "Fundamentos de Redes - Senac SC/Aulas ao vivo/Aula 01 - 28 de abril.md",
-    "Sem título.md",
+    "Fundamentos de Redes - Senac SC/Aulas ao vivo/topologias_de_rede.svg",
     "Turim - Infra/Variáveis de ambiente (Windows).md",
     "Turim - Infra/Usuário não consegue acessar a máquina com VPN.md",
     "Turim - Infra/Erro SafeGuard.md",
@@ -233,12 +231,9 @@
     "Maratona CyberSegurança/2 - Ataques, Conceitos e Técnicas.md",
     "Maratona CyberSegurança",
     "Lab - AD + VirtualBox/🧪 Lab de Active Directory no VirtualBox.md",
-    "Lab - AD + VirtualBox",
     "Guia matemático/Guia.md",
     "Fundamentos de Redes - Senac SC/Modulo 1.md",
     "CÁLCULO DIFERENCIAL E INTEGRAL A UMA VARIÁVEL/CÁLCULO DIFERENCIAL E INTEGRAL A UMA VARIÁVEL.md",
-    "CompTIA A+ 220-1201 Training Course/Introdução à IP - CompTIA A+ 220-1201 - 2.1.md",
-    "CompTIA A+ 220-1201 Training Course/Common Ports - CompTIA A+ 220-1201 - 2.1.md",
-    "CCNA - Introdução às Redes/Módulo 1 - As redes de hoje.md"
+    "CompTIA A+ 220-1201 Training Course/Introdução à IP - CompTIA A+ 220-1201 - 2.1.md"
   ]
 }
