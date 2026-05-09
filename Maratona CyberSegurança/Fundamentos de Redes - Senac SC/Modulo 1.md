@@ -70,12 +70,12 @@ Muitos itens na sua casa também podem ser conectados à Internet para serem mon
 
 Também há muitos dispositivos conectados encontrados fora do seu lar que oferecem comodidade e informações úteis, ou mesmo vitais.
 
-|Dispositivo|Descrição|
-|---|---|
-|**Carros Inteligentes**|Conectam-se à Internet para acessar mapas, conteúdo de áudio/vídeo e informações sobre destinos. Podem enviar mensagens em caso de roubo ou acidente, e se conectar a smartphones para exibir dados do motor, alertas de manutenção e status do sistema de segurança.|
-|**Etiquetas RFID**|Etiquetas de Identificação por Radiofrequência que podem ser colocadas dentro ou sobre objetos para controlá-los ou monitorar sensores em diversas circunstâncias.|
-|**Sensores e Atuadores**|Sensores fornecem dados de temperatura, umidade, vento, pressão barométrica e umidade do solo. Atuadores são acionados automaticamente com base nessas condições — ex: sensor de umidade do solo que aciona automaticamente um sistema de irrigação.|
-|**Dispositivos Médicos**|Marcapassos, bombas de insulina e monitores hospitalares fornecem feedback e alertas diretos a usuários e profissionais médicos quando sinais vitais atingem níveis específicos.|
+| Dispositivo              | Descrição                                                                                                                                                                                                                                                             |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Carros Inteligentes**  | Conectam-se à Internet para acessar mapas, conteúdo de áudio/vídeo e informações sobre destinos. Podem enviar mensagens em caso de roubo ou acidente, e se conectar a smartphones para exibir dados do motor, alertas de manutenção e status do sistema de segurança. |
+| **Etiquetas RFID**       | Etiquetas de Identificação por Radiofrequência que podem ser colocadas dentro ou sobre objetos para controlá-los ou monitorar sensores em diversas circunstâncias.                                                                                                    |
+| **Sensores e Atuadores** | Sensores fornecem dados de temperatura, umidade, vento, pressão barométrica e umidade do solo. Atuadores são acionados automaticamente com base nessas condições — ex: sensor de umidade do solo que aciona automaticamente um sistema de irrigação.                  |
+| **Dispositivos Médicos** | Marcapassos, bombas de insulina e monitores hospitalares fornecem feedback e alertas diretos a usuários e profissionais médicos quando sinais vitais atingem níveis específicos.                                                                                      |
 
 ### 1.1.8 Verifique sua compreensão – Tipos de redes
 
@@ -297,3 +297,155 @@ Ferramentas como o speedtest.net são úteis para medir o desempenho não apenas
 ✅ **bits por segundo**
 
 > A largura de banda costuma ser medida pelo número de bits que (teoricamente) podem ser enviados através do meio físico em um segundo.
+
+
+
+# 1.4. Resumo Comunicação em um mundo conectado
+
+## O que eu aprendi neste módulo?
+
+### Tipos de Rede
+
+A internet não é de propriedade de nenhum indivíduo ou grupo. A **Internet** é um conjunto mundial de redes interconectadas (inter-rede), que cooperam entre si para trocar informações usando padrões comuns. Através de fios de telefone, cabos de fibra óptica, transmissões sem fio e links de satélite, os usuários podem trocar informações de várias formas.
+
+Os principais tipos de rede por porte são:
+
+- **Redes domésticas pequenas** — conectam alguns computadores entre si e com a Internet.
+- **Rede SOHO** _(Small Office / Home Office)_ — permite que computadores em um escritório em casa ou remoto se conectem a uma rede corporativa ou acessem recursos compartilhados centralizados.
+- **Redes de médio a grande porte** — usadas por empresas e escolas, podem ter muitos locais com centenas ou milhares de hosts interconectados.
+- **Internet** — uma rede de redes que conecta centenas de milhões de computadores em todo o mundo.
+
+Além de computadores, inúmeros dispositivos do cotidiano também estão conectados à Internet, como smartphones, tablets, smartwatches, sistemas de segurança, eletrodomésticos, TVs inteligentes, consoles de jogos, carros inteligentes, etiquetas RFID, sensores, atuadores e dispositivos médicos.
+
+---
+
+## Transmissão de Dados
+
+### Tipos de Dados Pessoais
+
+- **Dados voluntários** — criados e compartilhados explicitamente por indivíduos, como perfis de redes sociais, arquivos de vídeo, texto, imagem ou áudio.
+- **Dados observados** — capturados quando indivíduos registram suas atividades, como dados de localização de celulares.
+- **Dados inferidos** — baseados na análise de dados voluntários ou observados, como uma pontuação de crédito.
+
+### Bit
+
+O termo **bit** é uma abreviação de "dígito binário" e representa a menor parte de dados. Cada bit pode ter apenas dois valores possíveis: **0** ou **1**.
+
+### Métodos de Transmissão de Sinal
+
+- **Sinais elétricos** — a transmissão é obtida pela representação dos dados como pulsos elétricos em fios de cobre.
+- **Sinais ópticos** — a transmissão é obtida pela conversão dos sinais elétricos em pulsos de luz.
+- **Sinais sem fio** — a transmissão é obtida pelo uso de infravermelho, micro-ondas ou ondas de rádio pelo ar.
+
+---
+
+## Largura de Banda e Taxa de Transferência
+
+**Largura de banda** é a capacidade de um meio de transportar dados. A largura de banda digital mede a quantidade de dados que podem fluir de um lugar para outro durante um determinado tempo, sendo medida pelo número de bits que (teoricamente) podem ser enviados através da mídia em um segundo.
+
+Medidas comuns de largura de banda:
+
+- Milhares de bits por segundo **(Kbps)**
+- Milhões de bits por segundo **(Mbps)**
+- Bilhões de bits por segundo **(Gbps)**
+
+A **taxa de transferência** geralmente não corresponde à largura de banda especificada. Diversos fatores influenciam a taxa de transferência:
+
+- A quantidade de dados enviados e recebidos pela conexão
+- A latência criada pelo número de dispositivos de rede encontrados entre a origem e o destino
+
+> **Latência** se refere ao tempo necessário para os dados viajarem de um ponto a outro, incluindo atrasos.
+
+
+## 1.4.2 Webster - Questões para reflexão
+
+### Reflexão Final
+
+Talvez você não trabalhe em um hospital, mas se você está aqui agora é porque, como **Kishori**, você usa computadores e quer saber mais sobre redes.
+
+Você sabia que a Internet é uma rede massiva de redes que são conectadas, direta ou indiretamente, entre si? É como a Web em que eu vivo. Uma parte pode ser quebrada, mas a minha Web não se desfaz — posso corrigi-la e até fortalecê-la.
+
+**Você gostaria de fazer isso pela sua rede?**
+
+
+## 1.4.3 Quiz sobre Comunicações em um mundo conectado
+
+### Quiz — Redes e Transmissão de Dados
+
+**P1** O que é a Internet?
+
+- [ ] o tipo de mídia física usada por computadores para acessar a World Wide Web
+- [ ] uma pequena rede interna isolada de uma empresa
+- [x] **uma rede de redes**
+- [ ] um aplicativo usado para acessar a World Wide Web
+
+**P2** Qual das opções é um exemplo de um valor binário da vida cotidiana?
+
+- [ ] temperatura ambiente
+- [ ] a velocidade de um carro em movimento
+- [ ] o brilho de uma lâmpada
+- [x] **um interruptor de luz simples**
+
+**P3** Qual categoria de componentes de rede inclui fios e cabos usados em uma rede com fio?
+
+- [ ] periféricos
+- [ ] dispositivos
+- [x] **mídias**
+- [ ] hosts
+
+**P4** Que tipo de dispositivo é capaz de criar movimento físico?
+
+- [x] **um atuador**
+- [ ] tag de RFID
+- [ ] Console
+- [ ] sensor
+
+**P5** Quais são as três opções para transmissão de sinal em uma rede? _(Escolha três.)_
+
+- [x] **ondas de rádio**
+- [x] **pulsos de luz**
+- [x] **pulsos elétricos**
+- [ ] pulsos vibratórios
+- [ ] ondas sonoras
+
+**P6** Quem é o dono da Internet?
+
+- [ ] Cisco
+- [ ] Bill Gates
+- [x] **Nenhuma pessoa ou grupo**
+- [ ] O governo
+
+**P7** Que tipo de dispositivo conectado é colocado em objetos para acompanhá-los e monitorá-los?
+
+- [ ] Consoles
+- [ ] atuadores
+- [x] **etiquetas RFID**
+- [ ] sensores
+
+**P8** Um byte consiste em quantos bits?
+
+- [x] **8**
+- [ ] 4
+- [ ] 16
+- [ ] 2
+
+**P9** Quais dois números são possíveis valores de um bit? _(Escolha duas.)_
+
+- [ ] 2
+- [x] **1**
+- [ ] 16
+- [ ] 8
+- [x] **0**
+
+**P10** Que medida é usada para indicar milhares de bits por segundo?
+
+- [ ] Mbps
+- [ ] Tbps
+- [x] **Kbps**
+- [ ] Gbps
+
+**P11** Que tipo de rede deve um usuário doméstico acessar para fazer compras on-line?
+
+- [ ] Uma rede local
+- [x] **a Internet**
+- [ ] uma rede SOHO
