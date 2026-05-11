@@ -113,3 +113,34 @@ Um único computador pode também executar vários tipos de software cliente. De
 - [x] **rede ponto-a-ponto**
 
 > Uma rede ponto-a-ponto consiste de dois computadores diretamente conectados onde ambos são capazes de trocar dados e serviços com o outro, agindo como cliente ou servidor quando necessário.
+
+## 2.2 Componentes de rede
+
+## 2.2.1 Vídeo - Símbolos de infraestrutura de rede
+
+### Dispositivos Intermediários
+
+|Símbolo|Dispositivo|
+|---|---|
+|🔀|Roteador|
+|📡|Roteador sem fio|
+|🔲|Switch|
+|📶|Ponto de acesso sem fio|
+
+### Dispositivos Finais
+
+|Símbolo|Dispositivo|
+|---|---|
+|💻|Laptop|
+|🖨️|Impressora|
+|📱|Smartphone|
+|☎️|Telefone IP|
+
+### Mídias de Rede
+
+|Mídia|Descrição|
+|---|---|
+|**LAN**|Rede local — mais comumente uma LAN Ethernet|
+|**WAN**|Rede de longa distância — usada para comunicações de provedores de serviços de Internet (ISP)|
+|**Sem fio**|Mídia de transmissão wireless|
+|**Nuvem**|Representa outra rede ou a Internet|
