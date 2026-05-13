@@ -249,3 +249,97 @@ A maioria dos usuários de rede doméstica não se conecta aos provedores de ser
 - **DSL - Linha digital do Assinante** fornece uma conexão com a internet sempre ativa e com alta largura de banda. Ele requer um modem especial de alta velocidade que separa o sinal DSL do sinal de telefone e fornece uma conexão Ethernet para um computador host ou LAN. A DSL passa por uma linha telefônica, com a linha dividida em três canais. Um canal é usado para chamadas telefônicas. Esse canal permite que um indivíduo receba chamadas telefônicas sem se desconectar da Internet. Um segundo canal é um canal de download mais rápido, usado para receber informações da Internet. O terceiro canal é usado para enviar ou carregar informações. Esse canal geralmente é um pouco mais lento do que o canal de download. A qualidade e a velocidade da conexão DSL depende principalmente da qualidade da linha telefônica e da distância da central telefônica da operadora de telefonia. Quanto mais longe você estiver da central telefônica, mais lenta será a conexão.
 
 ![[Pasted image 20260511070231.png]]
+
+## 2.3.4 Opções Adicionais para Conectividade
+
+Outras opções de conexão ISP para usuários domésticos incluem o seguinte:
+
+**Celular**:
+O acesso do celular à Internet usa uma rede de telefonia celular para se conectar. Onde quer que você possa obter um sinal de celular, você pode obter acesso à Internet por celular. O desempenho será limitado pelos recursos do telefone e da torre do celular à qual ele está conectado. A disponibilidade do acesso à Internet via celular é um benefício real para pessoas que vivem em áreas que, de outra forma, não teriam nenhuma conectividade à Internet ou para aquelas que estão sempre em movimento. O problema da conectividade por celular é que a operadora geralmente mede o uso da largura de banda da conexão e pode cobrar taxas extras caso ele exceda o plano de dados do contrato.
+
+**Satélite**:
+Serviço de satélite é uma boa opção para casas ou escritórios que não tenham acesso a DSL ou cabo. As antenas parabólicas (veja a figura) exigem uma linha de visão clara para o satélite e isso pode ser difícil de conseguir em áreas muito arborizadas ou em locais com outras obstruções aéreas. As velocidades variam de acordo com o contrato, embora geralmente sejam boas. Os custos de equipamento e instalação podem ser altos (consulte o provedor para ofertas especiais), com uma taxa mensal moderada a partir de então. Assim como o acesso por celular, a disponibilidade de acesso à Internet via satélite é um benefício real em áreas que, de outra forma, não teriam nenhuma conectividade com a Internet.
+
+**Conexão discada (dial-up)**:
+Uma opção de baixo custo que usa qualquer linha telefônica e um modem. Para se conectar ao ISP, um usuário chama o número de telefone de acesso do ISP. A pequena largura de banda fornecida por uma conexão discada via modem geralmente não é suficiente para grandes transferências de dados, mas pode ser útil quando se esta deslocando em viagens. Uma conexão discada por modem só deve ser considerada quando as opções de conexão de velocidade mais alta não estiverem disponíveis.
+
+
+#### Satellite Connection
+
+Em áreas metropolitanas, muitos apartamentos e pequenos escritórios estão conectados diretamente com cabos de fibra óptica. Isso permite que um provedor de serviços de Internet forneça velocidades de largura de banda mais altas e suporte a mais serviços, como Internet, telefone e TV.
+
+A escolha da conexão varia dependendo da localização geográfica e da disponibilidade do provedor de serviço.
+
+#### Conexão via Satélite
+![[Pasted image 20260513060537.png]]
+
+
+
+## 2.3.5 Verifique a sua compreensão - Opções de conectividade com o ISP
+
+**P1** O que é um serviço que fornece um sinal de dados da Internet na mesma rede que oferece serviços de transmissão de televisão e telefone?
+
+- [x] **Internet a cabo**
+- [ ] Digital Subscriber Line (DSL)
+- [ ] Acesso para convidados
+- [ ] Plano de dados de celular
+
+> O cabo de Internet fornece um sinal de dados de Internet na mesma rede que oferece serviços de televisão e telefone de transmissão.
+
+---
+
+**P2** O que é um serviço que fornece conexão de banda larga sempre ativa, usando fios de telefonia fixa existentes?
+
+- [x] **Digital Subscriber Line (DSL)**
+- [ ] Plano de dados de celular
+- [ ] Internet a cabo
+- [ ] Acesso para convidados
+
+> Uma conexão DSL é um serviço que fornece banda larga sempre ativa, usando fios de telefonia fixa existentes.
+
+---
+
+**P3** O que é um serviço de Internet que usa redes de telefonia móvel para transmitir dados?
+
+- [x] **Plano de dados de celular**
+- [ ] Internet a cabo
+- [ ] Digital Subscriber Line (DSL)
+- [ ] Acesso para convidados
+
+> Um plano de dados de celular é um serviço de Internet que usa redes de telefonia móvel para transmitir dados.
+
+
+
+# 2.4 Resumo de componentes de rede, tipos de conexões
+
+## 2.4.1 O que aprendi neste módulo?
+
+### Clientes e Servidores
+
+Todos os computadores conectados a uma rede que participam diretamente na comunicação de rede são classificados como hosts. Os hosts podem enviar e receber mensagens na rede. Nas redes modernas, um host pode atuar como cliente, servidor ou ambos. O software instalado no computador determina qual função o computador desempenha.
+
+Os softwares de cliente e de servidor geralmente são executados em computadores separados, mas também é possível que um computador execute as duas funções ao mesmo tempo. Em pequenas empresas e em casas, muitos computadores funcionam como servidores e clientes na rede. Esse tipo de rede é chamado de rede ponto a ponto (P2P). Em empresas de grande porte, devido ao potencial para quantidades altas de tráfego de rede, geralmente é necessário ter servidores dedicados para suportar o número de solicitações de serviço. As redes P2P são fáceis de configurar, menos complexas, de custo mais baixo e podem ser usadas para tarefas simples, como transferência de arquivos e compartilhamento de impressoras. No entanto, não existe uma administração centralizada. Elas têm menos segurança, não são escaláveis e podem ter um desempenho mais lento.
+
+---
+
+### Componentes de Rede
+
+Existem símbolos que representam vários tipos de equipamentos de rede. A infraestrutura de rede é a plataforma que suporta a rede. Ela fornece o canal estável e confiável sobre o qual nossas comunicações podem ocorrer. A infraestrutura de rede contém três categorias de componentes de hardware: dispositivos intermediários, dispositivos final e meios físicos de rede. O hardware é geralmente composto pelos componentes visíveis da plataforma de rede, tais como um laptop, um PC, um switch, um roteador, um access point sem fio ou os cabos usados para conectar os dispositivos. Os componentes que não estão visíveis incluem mídia sem fio.
+
+Os dispositivos finais, ou hosts, formam a interface entre os usuários e a rede de comunicação subjacente. Alguns exemplos de dispositivos finais são:
+
+- Computadores (estações de trabalho, laptops, servidores de arquivo, servidores Web);
+- Impressoras de rede
+- Telefones e equipamento de teleconferência
+- Câmeras de segurança
+- Dispositivos móveis (como smartphones, tablets, PDAs, leitores de cartão de débito/crédito sem fio e scanners de código de barras)
+
+---
+
+### Opções de conectividade com o ISP
+
+Um ISP fornece um link entre a rede doméstica e a Internet. Um ISP pode ser o provedor de TV a cabo local, um provedor de serviços de telefonia fixa, a rede celular que fornece seu serviço de smartphone ou um provedor independente que aluga largura de banda na infraestrutura de rede física de outra empresa. Cada ISP conecta-se a outros ISPs para formar uma rede de links que interconectam usuários em todo o mundo. Os ISPs são conectados de maneira hierárquica que garante que o tráfego da Internet geralmente siga o caminho mais curto da origem ao destino.
+
+A interconexão de ISPs, que forma a espinha dorsal da internet, é uma teia complexa de cabos de fibra ótica com switches e roteadores de rede caros que direcionam o fluxo de informações entre os hosts de origem e destino.
+
+Para ele, conectar-se ao ISP é um processo bastante simples. Esta é a opção de conexão mais comum. Consiste em usar um roteador integrado sem fio para se conectar ao ISP. O roteador inclui um switch para conectar hosts com fio e um AP sem fio para conectar hosts sem fio. O roteador também fornece informações de endereçamento IP do cliente e segurança para hosts internos. Os dois métodos mais comuns são cabo e DSL. Outras opções incluem celular, satélite e conexão discada usando uma linha telefônica.
