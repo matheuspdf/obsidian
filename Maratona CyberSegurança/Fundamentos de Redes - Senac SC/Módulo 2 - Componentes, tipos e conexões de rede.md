@@ -343,3 +343,70 @@ Um ISP fornece um link entre a rede doméstica e a Internet. Um ISP pode ser o p
 A interconexão de ISPs, que forma a espinha dorsal da internet, é uma teia complexa de cabos de fibra ótica com switches e roteadores de rede caros que direcionam o fluxo de informações entre os hosts de origem e destino.
 
 Para ele, conectar-se ao ISP é um processo bastante simples. Esta é a opção de conexão mais comum. Consiste em usar um roteador integrado sem fio para se conectar ao ISP. O roteador inclui um switch para conectar hosts com fio e um AP sem fio para conectar hosts sem fio. O roteador também fornece informações de endereçamento IP do cliente e segurança para hosts internos. Os dois métodos mais comuns são cabo e DSL. Outras opções incluem celular, satélite e conexão discada usando uma linha telefônica.
+
+## 2.4.2 Webster - Questões para Reflexão
+
+Você já pediu algum móvel que precisava montar? A caixa tem todas as peças e partes necessárias, juntamente com as instruções de montagem. Ele ajuda você a analisar todos esses itens enquanto lê as instruções. Pense na sua rede. Você sabia quais eram os diferentes dispositivos e tipos de conexão antes de usar este módulo? Você observa essas peças e partes de forma diferente agora?
+
+
+## 2.4.3 Quiz sobre Componentes de Rede, Tipos e Perguntas
+
+**P1 –** Que tipo de rede é definida por dois computadores que podem enviar e receber solicitações para recursos?
+
+- **ponto-a-ponto** ✓
+
+---
+
+**P2 –** Quais são as duas funções dos dispositivos finais na rede? (Escolha duas.)
+
+- **Eles são a interface entre as pessoas e a rede de comunicação.** ✓
+- **Eles originam os dados que fluem na rede.** ✓
+
+---
+
+**P3 –** Um usuário doméstico busca conexão de ISP com transmissão digital de alta velocidade via linhas telefônicas. Que tipo de conexão deve ser usada?
+
+- **DSL** ✓
+
+---
+
+**P4 –** Que tipo de conexão seria melhor para uma residência em área remota sem cobertura celular ou cabeada?
+
+- **satélite** ✓
+
+---
+
+**P5 –** Qual termo descreve corretamente a função de um ISP?
+
+- **Responsável por fornecer o link entre uma rede privada e a Internet.** ✓
+
+---
+
+**P6 –** Qual dispositivo é um dispositivo intermediário?
+
+- **firewall** ✓
+
+---
+
+**P7 –** Qual cenário descreve uma rede ponto-a-ponto?
+
+- **Um usuário compartilhou uma impressora conectada à estação de trabalho.** ✓
+
+---
+
+**P8 –** Que termo descreve um dispositivo de rede cuja função principal é fornecer informações a outros dispositivos?
+
+- **servidor** ✓
+
+---
+
+**P9 –** Qual é uma vantagem do modelo de rede ponto-a-ponto?
+
+- **facilidade de configuração** ✓
+
+---
+
+**P10 –** Qual é uma característica de um aplicativo ponto a ponto?
+
+- **Cada dispositivo que usa o aplicativo provê uma interface de usuário e executa um serviço em segundo plano.** ✓
+
