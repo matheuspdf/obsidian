@@ -225,7 +225,7 @@ A desativação do broadcast SSID pode dificultar a detecção da rede sem fio p
 
 **Verifique sua compreensão sobre padrões de rede sem fio escolhendo a resposta corretas para as seguintes perguntas**
 
-# Questões de Revisão
+### Questões de Revisão
 
 **P1 –** Qual organização é responsável por testar os dispositivos de LAN sem fio?
 
@@ -255,3 +255,235 @@ A desativação do broadcast SSID pode dificultar a detecção da rede sem fio p
 - **falso** ✓
 
 > **Feedback:** A rede deve ser configurada no modo misto para incluir dispositivos que usem qualquer um dos padrões Wi-Fi atuais.
+
+
+# 4.4 Configurar um roteador doméstico
+## 4.4.1 Primeira configuração
+
+Muitos roteadores sem fio para residências têm um utilitário de configuração automática que pode ser usado para ajustar as configurações básicas no roteador. Esses utilitários geralmente exigem que um computador ou um notebook seja conectado a uma porta com fio no roteador. Se não houver nenhum dispositivo disponível que tenha uma conexão com fio, talvez seja necessário configurar primeiro o software de cliente sem fio no notebook ou no tablet.
+
+Para se conectar ao roteador usando uma conexão com fio, conecte um cabo de ligação Ethernet à porta de rede no computador Conecte a outra extremidade a uma porta LAN no roteador. Não conecte o cabo à porta ou à interface denominada "Internet". A porta Internet será conectada ao modem DSL ou a cabo. Alguns roteadores residenciais podem ter um modem incorporado para conexões com a Internet. Nesse caso, verifique se o tipo de conexão está correto para o serviço de Internet. Uma conexão de cable modem terá um terminal coaxial para aceitar um conector do tipo BNC. Uma conexão DSL terá uma porta para um cabo de telefone, geralmente um conector RJ-11.
+
+Após a confirmação de que o computador está conectado ao roteador de rede e que as luzes dos links na NIC (placa de interface de rede) indicam uma conexão ativa, o computador precisa de um endereço IP. A maioria dos roteadores de rede estão configurados para que o computador receba um endereço IP automaticamente de um servidor DHCP local. Se o computador não tiver um endereço IP, verifique a documentação do roteador e configure o PC ou tablet com um endereço IP, máscara de sub-rede, gateway padrão e informações de DNS exclusivas.
+
+## 4.4.2 Considerações de Design
+
+Antes de entrar no utilitário de configuração ou configurar manualmente o roteador através de um navegador da Web, você deve considerar como a rede será usada. Você não deseja configurar o roteador e ter essa configuração limitando o que pode fazer na rede, mas também não quer deixar sua rede desprotegida.
+
+### Que nome devo dar à minha rede?
+
+Se a transmissão SSID estiver ativa, o nome SSID será visto por todos os clientes sem fio no intervalo de sinal. Muitas vezes, o SSID revela informações demais sobre a rede para dispositivos clientes desconhecidos. Não é recomendável incluir o modelo de dispositivo ou a marca como parte do SSID. Os dispositivos sem fio têm configurações padrão que podem ser facilmente encontradas na Internet, bem como pontos fracos na segurança conhecidos.
+
+
+### Que tipos de dispositivos se conectarão à minha rede?
+
+Os dispositivos sem fio têm transmissor de rádio/receptores que funcionam dentro de uma determinada faixa de frequências. Se um dispositivo tiver apenas o rádio necessário para 802.11 b/g, ele não se conectará caso o roteador sem fio ou o ponto de acesso esteja configurado para aceitar somente os padrões 802.11n ou 802.11ac. Se todos os dispositivos forem compatíveis com o mesmo padrão, a rede funcionará na velocidade máxima. Se você tiver dispositivos incompatíveis com os padrões n ou ac, você terá que habilitar o mode enable legacy Um ambiente de rede sem fio do modo legado varia entre os modelos de roteador, mas pode incluir uma combinação de 802.11a, 802.11b, 802.11g, 802.11n e 802.11ac. Esse ambiente fornece acesso fácil para dispositivos antigos que precisam de uma conexão sem fio.
+
+
+### Como adiciono novos dispositivos?
+
+O modo de uso da rede determina quem pode acessar a rede doméstica. Em alguns roteadores sem fio, é possível configurar o acesso para convidado. Essa é uma área de cobertura do SSID que permite o acesso aberto, restringindo-o apenas ao uso da Internet.
+
+A figura mostra uma tela de configuração sem fio.
+
+**Observação:** alguns roteadores sem fio podem rotular o modo legado como modo misto.
+
+
+## 4.4.3 Vídeo - Configuração de Roteador e Cliente sem fio
+
+### 1. Conectar os dispositivos
+
+**Cabos coaxiais:** – Divisor de cabo → Cable Modem (Port 0) – Divisor de cabo → TV (porta coaxial 2)
+
+**Cabos straight-through de cobre:** – Cable Modem → porta Internet do Wireless Router – Office PC (FastEthernet 0) → porta GigabitEthernet 1 do Wireless Router – Bedroom PC → Wireless Router (configurar sozinho)
+
+---
+
+### 2. Configurar endereçamento IP
+
+– No Office PC: Desktop > IP Configuration > selecionar **DHCP** – Anotar o **gateway padrão: 192.168.0.1** (IP do roteador) – Se não receber IP imediatamente, clicar em **Fast Forward Time**
+
+---
+
+### 3. Acessar a interface do roteador
+
+– Abrir Web Browser no Office PC – Acessar **192.168.0.1** – Login padrão: usuário `admin` / senha `admin`
+
+---
+
+### 4. Configurações do roteador
+
+**Setup:** – Limitar número de usuários DHCP para **10** – Clicar em **Save Settings**
+
+**Administration:** – Alterar senha para `MyPassword1!` – Salvar e fazer login com a nova senha
+
+---
+
+### 5. Configurar rede sem fio
+
+**Wireless > Basic:** – Ativar rádio de **2,4 GHz** – Nome da rede (SSID): `MyHome` – Salvar configurações
+
+**Wireless > Security:** – Modo de segurança: **WPA2 Personal** – Senha: `MyPassphrase1!` – Salvar configurações
+
+---
+
+### 6. Conectar o Laptop ao Wi-Fi
+
+– Laptop > Desktop > PC Wireless > aba Connect – Selecionar a rede `MyHome` e clicar em **Connect** – Inserir chave: `MyPassphrase1!` – Verificar IP iniciando com `192.168.x.x`
+
+---
+
+### 7. Testar conectividade
+
+– Abrir Web Browser em qualquer dispositivo – Acessar `skillsforall.srv` – Mensagem esperada: **"Welcome to Skills for All"** – Verificar conclusão em **Check Results** (meta: 100%)
+
+
+## 4.4.4 Packet Tracer - Configurar um Roteador sem fio e um cliente
+
+Nesta atividade do Packet Tracer, você completará os seguintes objetivos.
+
+- Parte 1: Conectar os Dispositivos
+- Parte 2: Configurar o roteador sem fio
+- Parte 3: Configurar o endereçamento IP e testar a conectividade
+
+Packet Tracer - Configurar um roteador sem fio e clientes
+
+### Objetivos
+
+Parte 1: Conectar os Dispositivos
+
+Parte 2: Configurar o roteador sem fio
+
+Parte 3: Configurar o endereçamento IP e testar a conectividade
+
+### Histórico/Cenário
+
+Sua amiga, Natsumi, ouviu falar que você está estudando redes. Ela pediu que você fosse ajudá-la a conectar sua nova casa à rede de TV a cabo. Você precisa conectar os cabos aos dispositivos corretos, conectar dispositivos a um roteador sem fio doméstico e configurar o roteador para fornecer endereços IP aos clientes da rede. Natsumi também quer que você configure uma LAN sem fio para a rede doméstica, então você também vai configurá-la. Você está confiante de que será um processo fácil e que a rede será configurada rapidamente!
+
+### Instruções
+
+### Parte 1: Conecte os dispositivos
+
+A área de trabalho mostra o interior da casa de sua amiga. Role a janela para ter uma ideia do layout da casa e da localização dos dispositivos. Nesta parte, você conectará todos os dispositivos com lable.
+
+### Etapa 1: Conecte os cabos coaxiais.
+
+A empresa de serviços a cabo de Natsumi oferece serviços de Internet e vídeo em sua casa por meio de um cabo coaxial. O cabo está conectado a uma tomada em sua casa. Um dispositivo divisor separa o serviço de dados da Internet do serviço de vídeo. Isso permite que os dois serviços sejam conectados aos dispositivos apropriados. Você conectará o serviço de Internet ao modem a cabo e o serviço de vídeo à televisão.
+
+a.  Em Network Components, clique em Connections (raio).
+
+b.  Localize e clique no ícone do cabo coaxial. É o ícone azul em zigue-zague.
+
+c.  Clique no Cable Splitter (divisor de cabo) e selecione a porta Coaxial1.
+
+d.  Clique no Cable Modem e selecione Port 0.
+
+e.  Repita as etapas anteriores para conectar o Coaxial2 no Cable Splitter à Port 0 na TV.
+
+f.   Clique na TV e clique em ON em Status. Se as conexões estiverem corretas, será exibida uma imagem que representa um programa de TV.
+
+### Etapa 2: Conecte os cabos de rede.
+
+Há dois PCs na casa de Natsumi. Eles não têm adaptadores de LAN sem fio, então eles serão conectados com cabos Ethernet. O roteador sem fio doméstico é o centro da rede. Ele permite que os dispositivos configurados na rede doméstica se comuniquem entre si e com a Internet. O roteador inclui um switch de rede que aceita conexões com fio com até quatro hosts. Você conectará os PCs a essas portas.
+
+Para que o **Home Wireless Router** acesse a Internet pela rede do provedor de TV a cabo, o cable modem deve estar conectado à porta Internet do roteador sem fio doméstico. Isso é feito com um cabo direto (straight-through) de cobre.
+
+a.  Clique em **Connections**, e depois no cabo **Copper Straight-Through**. Se parece com uma linha preta sólida.
+
+b.  Conecte a **Port 1** no **Cable Modem** à porta **Internet** do **Home Wireless Router**.
+
+c.  Clique no **Office PC** e conecte o cabo à porta **FastEthernet0**. Localize o **Home Wireless Router** e clique nele. Conecte a outra extremidade do cabo à porta **GigabitEthernet 1** para concluir a conexão.
+
+d.  Repita as etapas anteriores para conectar o **Bedroom PC** à porta **GigabitEthernet 2** no **Home Wireless Router**.
+
+A rede doméstica com fio agora está totalmente conectada à Internet pela rede do provedor de TV a cabo.
+
+## Parte 2: Configurar o roteador sem fio (Wireless Router)
+
+A maioria dos roteadores sem fio domésticos são configurados usando uma interface gráfica de usuário (GUI) que é acessada através do navegador Web do computador. Nesta parte, você acessará o roteador sem fio doméstico através do navegador no **Office PC** e configurará a rede doméstica da Natsumi.
+
+### Etapa 1: Acesse a GUI do roteador sem fio doméstico.
+
+a.  Clique **Office PC** > guia **Desktop**, e depois **IP Configuration**.
+
+b.  Clique em **DHCP**. O DHCP configurará automaticamente o **Office PC** para estar na mesma rede IP do **Home Wireless Router**.
+
+c.  Após um breve atraso, os valores da **IP Configuration** deverão ser atualizados automaticamente. O endereço IPv4 deve começar com o número 192. Caso contrário, clique em **Fast Forward Time** (Tempo de avanço rápido), que fica logo abaixo da topologia de rede no canto inferior esquerdo. Isso vai acelerar a simulação do DHCP.
+
+d.  Anote o endereço do gateway padrão. O gateway padrão é o dispositivo que fornece aos dispositivos na rede doméstica acesso a redes externas, como a Internet. Nesse caso, o endereço de gateway padrão é o endereço do **Home Wireless Router.**
+
+e.  Mantendo a janela do **Office PC** aberta, feche a janela **IP Configuration**, e depois clique em **Web Browser**. Insira o endereço IP do **Home Wireless Router** (o endereço de gateway padrão) na caixa **URL** e clique em **Go**.
+
+f.   Os roteadores domésticos recém-instalados são configurados com credenciais padrão. Entre com **admin** em ambos campos: **User Name** e **Password**. Você deve ver a GUI do **Home Wireless Router** sendo exibida e pronta para configurar a rede de Natsumi. Ajuste o tamanho da janela, conforme necessário, para ver mais da interface.
+
+**Observação: as senhas padrão em dispositivos do mundo real devem ser alteradas imediatamente, pois são amplamente conhecidas, inclusive por agentes de ameaças.**
+
+### Etapa 2: Defina as configurações básicas.
+
+Nesta etapa, você configurará um novo nome de usuário e senha para o roteador sem fio e limitará o número de endereços IP que o DHCP fornecerá aos hosts conectados à rede.
+
+Natsumi tem apenas alguns dispositivos para conectar a rede, e ela não terá muitos amigos visitando. Ela acredita que não mais de 10 dispositivos se conectariam à rede ao mesmo tempo. Você decide diminuir o número de usuários para 10. Sua amiga mora em uma parte densamente povoada da cidade, então é possível que muitas pessoas possam ver a rede sem fio dela.
+
+a.  No momento, você está visualizando opções de configuração na guia **Setup**. Localize a área **Network Setup**. É onde você pode definir as configurações do servidor DHCP do roteador. Localize o campo **Maximum Number of Users**, digite **10**. Role a tela até a parte inferior da página e clique em **Save Settings**. Você deve salvar as configurações em todas as páginas da GUI nas quais fizer alterações.
+
+**Observação:** é possível que você perca a conexão com o roteador. Clique em **Go** no navegador Web para recarregar a página da GUI. Talvez seja necessário fechar o **Web Browser**, clicar em **IP Configuration**, e alternar entre **DHCP** e **Static** para atualizar o endereçamento IP do **Office PC**. Em seguida, verifique se o Office PC tem uma configuração de endereço IP que comece com 192, abra o **Web Browser** novamente, insira o endereço IP do roteador e autentique novamente com **admin** como credenciais padrão.
+
+b.  Clique na guia **Administration**. Aqui, você pode alterar a senha de **admin** padrão. Digite e confirme **MyPassword1!** como a nova senha. Vá até o final da página e clique em **Save Settings** (Salvar Configurações).
+
+Você será solicitado a fazer login novamente. Insira **admin** como o nome de usuário e **MyPassword1!** como a nova senha e clique em **Continue**.
+
+### Etapa 3: Configure a LAN sem fio.
+
+Neste ponto, você está pronto para configurar a rede sem fio de Natsumi para que ela possa conectar seus dispositivos sem fio à Internet por Wi-Fi.
+
+a.  Role até a parte superior da janela e clique na guia **Wireless**.
+
+b.  Para a rede de **2,4 GHz**, clique em **Enable** para ativar o rádio da rede.
+
+c.  Altere o **Network Name** **(SSID)** de **Default** para **MyHome**. Quando as pessoas procurarem redes Wi-Fi para se conectar, elas verão esse nome de rede. O nome da rede pode estar oculto, mas isso pode dificultar um pouco a conexão dos convidados à rede. Vá até o final da página e clique em **Save Settings** (Salvar Configurações).
+
+d.  Agora você vai configurar a segurança na rede **MyHome**. Isso impedirá que pessoas não autorizadas se conectem à rede sem fio. Role até a parte superior da janela e clique em **Wireless Security** na guia **Wireless**.
+
+e.  Observe que a segurança está desativada no momento em todas as três redes sem fio. Você só está usando a rede de 2,4 GHz. Clique no menu suspenso da rede de **2,4 GHz** e selecione **WPA2 Personal**. Essa é a segurança mais forte que esse roteador oferece para redes sem fio.
+
+f.   Mais configurações são reveladas. O WPA2 Personal exige uma senha que deve ser inserida por qualquer pessoa que queira se conectar à rede sem fio. Insira **MyPassPhrase1!** como a **senha**. Observe que a capitalização é importante.
+
+g.  Role até a parte inferior da página, clique em **Save Settings** e feche o **Web Browser** do PC.
+
+## Parte 3: Configurar o endereçamento IP e testar a conectividade
+
+Agora que o roteador está configurado, nesta parte você vai configurar o endereçamento IP para PCs e laptops e verificar se eles podem se conectar à Internet.
+
+### Etapa 1: Conecte o laptop à rede sem fio.
+
+a.  Clique no **Laptop** em living room, e depois na guia **Desktop** > **PC Wireless**.
+
+b.  Clique na guia **Connect**. Após um breve atraso, a rede sem fio configurada deve aparecer anteriormente na lista de nomes de redes sem fio.
+
+c.  Clique no nome da rede que você criou e, em seguida, clique no botão Connect.
+
+d.  Insira a senha que você configurou anteriormente para a rede sem fio no campo Pre-shared Key e clique em Connect.
+
+e.  Clique na guia **Link Information**. Você deverá ver a mensagem: **You have successfully connected to the access point**.
+
+f.   Clique no botão **More Information** para ver detalhes sobre a conexão. Se o endereço IP não começar com **192**, clique em **Fast Forward Time** várias vezes para acelerar a simulação.
+
+g.  Feche o app **PC Wireless** e abra o **Web Browser**. Verifique se o **Laptop** agora pode se conectar a **skillsforall.srv**, clicando em **Fast Forward Time** (Tempo de avanço rápido) até que a página carregue. Isso verifica se o **Laptop** tem conectividade com a Internet.
+
+### Etapa 2: Teste a conectividade do Office PC.
+
+Você sabe que o Office PC pode se conectar à rede porque você o usou para configurar o roteador. No entanto, ele também pode acessar a Internet? Se conseguir, você saberá que a rede com fio está conectada e configurada corretamente.
+
+a.  Clique em **Office PC** > guia **Desktop**  > **Web Browser**.
+
+b.  Insira **skillsforall.srv** e clique em **Go**. Após um breve intervalo de tempo, a página da Web será exibida. Se necessário, clique em **Fast Forward Time** várias vezes para acelerar a convergência.
+
+O carregamento de um site externo verifica a conectividade do **Office PC** com a Internet.
+
+### Etapa 3: Configure o bedroom PC.
+
+a.  Em **Bedroom PC**, abra **IP Configuration** e configure para **DHCP**. Verifique se o Bedroom PC recebeu um endereço IP que começa com **192**.
+
+b.  Feche a janela **IP Configuration** e abra **Web Browser**. Verifique se o **Bedroom PC** agora pode se conectar a **skillsforall.srv**, clicando em **Fast Forward Time** (Tempo de avanço rápido) até que a página carregue. Isso verifica se o **Bedroom PC** tem conectividade com a Internet.
+
+Você concluiu a conexão dos dispositivos de rede, a configuração do roteador e da LAN sem fio e a configuração dos hosts para se conectarem à rede. Todos os dispositivos devem ser capazes de se conectar à Internet. Seu trabalho está feito e a Natsumi ofereceu o jantar como recompensa por sua ajuda.
