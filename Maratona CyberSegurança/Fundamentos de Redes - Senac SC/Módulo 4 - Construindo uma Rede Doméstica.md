@@ -487,3 +487,368 @@ a.  Em **Bedroom PC**, abra **IP Configuration** e configure para **DHCP**
 b.  Feche a janela **IP Configuration** e abra **Web Browser**. Verifique se o **Bedroom PC** agora pode se conectar a **skillsforall.srv**, clicando em **Fast Forward Time** (Tempo de avanço rápido) até que a página carregue. Isso verifica se o **Bedroom PC** tem conectividade com a Internet.
 
 Você concluiu a conexão dos dispositivos de rede, a configuração do roteador e da LAN sem fio e a configuração dos hosts para se conectarem à rede. Todos os dispositivos devem ser capazes de se conectar à Internet. Seu trabalho está feito e a Natsumi ofereceu o jantar como recompensa por sua ajuda.
+
+
+# 4.5 Resumo Construindo uma rede doméstica
+
+## 4.5.1 O que aprendi neste módulo?
+
+### Conceitos básicos da rede doméstica
+
+A maioria das redes domésticas consiste em pelo menos duas redes separadas. A rede pública vem do provedor de serviços. O roteador está conectado à Internet. Provavelmente, o roteador doméstico tem recursos com e sem fio. Uma rede doméstica é uma pequena LAN com dispositivos que normalmente se conectam uns aos outros e a um roteador integrado para trocar informações.
+
+A tecnologia sem fio é razoavelmente econômica e fácil de instalar. Vantagens da tecnologia de LAN sem fio incluem mobilidade, escalabilidade, flexibilidade, economia de custos, tempo de instalação reduzido e confiabilidade em ambientes hostis.
+
+Além de um roteador integrado, há muitos tipos diferentes de dispositivos que podem estar se conectando a uma rede doméstica. Por exemplo, computadores desktop, sistemas de jogos, sistemas de smart TV, impressoras, scanners, câmeras de segurança e dispositivos de controle do clima.
+
+Roteadores residenciais e de pequenas empresas normalmente têm dois tipos principais de portas: portas Ethernet e uma porta de Internet. Além das portas com fio, muitos roteadores residenciais incluem antena sem fio e um ponto de acesso interno sem fio.
+
+---
+
+### Tecnologias de rede na residência
+
+As tecnologias sem fio usam ondas eletromagnéticas para transportar informações entre dispositivos. O espectro eletromagnético inclui bandas de transmissão de rádio e televisão, luz visível, raios x e raios gama. Alguns tipos de ondas eletromagnéticas não são apropriados para transmitir dados. Outras partes do espectro são reguladas pelos governos e licenciadas a várias empresas para aplicações específicas.
+
+Essas faixas não licenciadas do espectro são incorporadas a produtos de consumo, como os roteadores Wi-Fi encontrados na maioria das casas. As tecnologias sem fio mais usadas em redes residenciais estão nas faixas de frequências não licenciadas de 2,4 GHz e 5 GHz. Bluetooth é uma tecnologia que utiliza a banda de 2,4 GHz. Outras tecnologias que usam as bandas 2,4 GHz e 5 GHz são as modernas tecnologias de LAN sem fio que estão em conformidade com vários padrões IEEE 802.11. A diferença em relação à tecnologia de Bluetooth é que elas transmitem em um nível de potência muito maior, o que lhes dá maior alcance e melhor rendimento.
+
+Embora muitos dispositivos de rede doméstica suportem comunicações sem fio, ainda existem algumas aplicações em que os dispositivos se beneficiam de uma conexão de switch com fio. O protocolo com fio implementado com mais frequência é o protocolo Ethernet. Dispositivos conectados diretamente usam um cabo de ligação Ethernet, normalmente par trançado não blindado. A categoria 5e é o cabeamento mais comum usado em uma LAN. O cabo é composto de 4 pares de fios que são trançados para reduzir a interferência elétrica. Para residências que não têm cabeamento UTP, há outras tecnologias, como o uso da rede elétrica, que podem distribuir conectividade com fio nos ambientes.
+
+---
+
+### Padrões de Redes Sem Fio
+
+O padrão IEEE 802.11 controla o ambiente WLAN. Os padrões sem fio de LANs usam as bandas de frequência de 2,4 GHz e 5 GHz. Coletivamente, essas tecnologias são conhecidas como Wi-Fi. O Wi-Fi Alliance é responsável por testar dispositivos de LAN sem fio de diferentes fabricantes.
+
+Os roteadores sem fio que usam os padrões 802.11 têm várias configurações que devem ser ajustadas. Estas configurações incluem:
+
+- **Modo de Rede –** Determina o tipo de tecnologia que deve ser suportada. Por exemplo, 802.11b, 802.11g, 802.11n ou Mixed Mode (Modo misto).
+- **Nome da rede (SSID) –** Usado para identificar a WLAN. Todos os dispositivos que desejam participar na WLAN devem ter o mesmo SSID.
+- **Canal Padrão –** Especifica o canal no qual a comunicação ocorrerá. Por padrão, é configurado para Automático para permitir que o ponto de acesso (AP) determine o melhor canal a usar.
+- **Broadcast SSID –** Determina se o SSID será transmitido para todos os dispositivos dentro do intervalo. Por padrão, é configurado para Ativado.
+
+O protocolo 802.11 pode fornecer melhor taxa de transferência, dependendo do ambiente de rede sem fio. Se todos os dispositivos sem fio se conectarem com o mesmo padrão 802.11, poderão ser obtidas as velocidades máximas desse padrão. Se o ponto de acesso estiver configurado para aceitar apenas um padrão 802.11, os dispositivos que não usarem esse padrão não poderão se conectar ao access point. Um ambiente de rede sem fio com modo misto pode incluir dispositivos que utilizem qualquer padrão Wi-Fi atual.
+
+Ao criar uma rede sem fio, é importante que os componentes sem fio se conectem à WLAN apropriada. Isso é feito por meio do SSID. O SSID é usado para informar aos dispositivos sem fio, chamados STAs, à qual WLAN eles pertencem e com quais outros dispositivos eles podem se comunicar. O broadcast SSID permite que outros dispositivos e clientes sem fio detectem automaticamente o nome da rede sem fio. Se o broadcast SSID estiver desativado, insira manualmente o SSID nos dispositivos sem fio.
+
+---
+
+### Configurar um roteador doméstico
+
+Muitos roteadores sem fio para residências têm um utilitário de configuração automática que pode ser usado para ajustar as configurações básicas no roteador. Para se conectar ao roteador usando uma conexão com fio, conecte um cabo de ligação Ethernet à porta de rede no computador. Conecte a outra extremidade a uma porta LAN no roteador.
+
+Após a confirmação de que o computador está conectado ao roteador de rede e que as luzes dos links na NIC (placa de interface de rede) indicam uma conexão ativa, o computador precisa de um endereço IP. A maioria dos roteadores de rede estão configurados para que o computador receba um endereço IP automaticamente de um servidor DHCP local.
+
+Antes de entrar no utilitário de configuração ou configurar manualmente o roteador através de um navegador da Web, você deve considerar como a rede será usada. Considere o que você chamará de rede e quais dispositivos devem se conectar à rede. Não é uma boa prática incluir o modelo do dispositivo ou o nome da marca como parte do SSID, pois as pesquisas na Internet podem expor falhas de segurança.
+
+O modo de uso da rede determina quem pode acessar a rede doméstica. Muitos roteadores são compatíveis com a filtragem de endereços MAC. Isso permite identificar especificamente quem tem permissão na rede sem fio. Isso torna a rede sem fio mais segura, mas também reduz a flexibilidade ao conectar dispositivos novos. Em alguns roteadores sem fio, é possível configurar o acesso para convidado. Essa é uma área de cobertura do SSID que permite o acesso aberto, restringindo-o apenas ao uso da Internet.
+
+---
+
+# 4.5.2 Webster – Questões para Reflexão
+
+Eu me diverti tanto usando este módulo na praia que acho que vou configurar uma rede sem fio em casa. Dessa forma, posso acompanhar este curso em qualquer lugar da minha casa. Construir sua rede doméstica para ser uma rede sem fio faz sentido. Posso trabalhar no lado oeste da Web, pegar o pôr do sol e voltar para o lado leste pela manhã. É muito melhor do que ficar preso na minha mesa o dia todo! Você configurou sua rede doméstica? Caso contrário, você poderia fazer isso se fosse necessário?
+
+# 4.5.3 Questionário - Construindo uma rede doméstica
+
+**P1 –** Que tipo de comunicação sem fio se baseia nos padrões 802.11?
+
+- WAN por Celular
+- Infravermelho
+- **Wi-Fi** ✓
+- Bluetooth
+
+> **Feedback:** Os padrões IEEE 802.11 definem as especificações de LAN sem fio Wi-Fi.
+
+---
+
+**P2 –** Qual configuração de roteador sem fio impediria que intrusos usassem sua rede doméstica?
+
+- Endereço IP
+- **criptografia** ✓
+- o local dos roteadores
+- nome da rede
+
+> **Feedback:** A criptografia configurada no roteador sem fio pode fornecer comunicações seguras e impedir que intrusos usem sua rede doméstica.
+
+---
+
+**P3 –** Que tipo de dispositivo geralmente é conectado às portas Ethernet em um roteador sem fio doméstico?
+
+- modem DSL
+- antena sem fio
+- **dispositivo LAN** ✓
+- cable modem
+
+> **Feedback:** Os dispositivos de rede de área local (LAN) normalmente são conectados às portas Ethernet de um roteador sem fio para se comunicarem na mesma rede com fio local.
+
+---
+
+**P4 –** Que tipo de tecnologia de rede é usada para a comunicação de baixa velocidade entre dispositivos periféricos?
+
+- Ethernet
+- **Bluetooth** ✓
+- 802.11
+- próprios e adquiridos
+
+> **Feedback:** Bluetooth é uma tecnologia de conexão sem fio que usa a frequência de 2,4 GHz para conectar dispositivos periféricos em uma conexão de curta distância e de baixa velocidade.
+
+---
+
+**P5 –** O que pode ser usado para permitir que dispositivos móveis visitantes se conectem a uma rede sem fio e restrinja o acesso desses dispositivos somente à Internet?
+
+- criptografia
+- filtragem de endereços MAC
+- autenticação
+- **SSID de convidado** ✓
+
+> **Feedback:** Muitos roteadores sem fio oferecem suporte a um SSID de convidado especial que permite que dispositivos não confiáveis acessem a Internet, mas restringem o acesso deles aos recursos de rede local.
+
+---
+
+**P6 –** Qual seria o objetivo de um usuário doméstico ter implementado WiFi?
+
+- **para criar uma rede sem fio que pode ser usada por outros dispositivos** ✓
+- para ouvir várias estações de rádio
+- para conectar fones de ouvido sem fio a um dispositivo móvel
+- para conectar um teclado a um PC
+
+> **Feedback:** Uma rede WiFi ou LAN sem fio é usada para se conectar a um roteador sem fio que, por sua vez, se conecta à Internet. Os dispositivos sem fio conectam-se à rede WiFi pelo roteador sem fio.
+
+---
+
+**P7 –** Qual é o outro termo para a porta de Internet de um roteador sem fio?
+
+- porta do switch
+- **porta WAN** ✓
+- porta LAN
+- porta local
+
+> **Feedback:** A porta da Internet de um roteador sem fio também pode ser conhecida ou rotulada como a porta WAN. Esta porta conecta o roteador para a Internet usado modem DSL ou a cabo.
+
+---
+
+**P8 –** Que tipo de cabo de rede consiste em 4 pares de fios trançados?
+
+- Ethernet sobre linha de energia (Ethernet sobre powerline)
+- **Categoria 5e** ✓
+- coaxial
+- Fibra Óptica
+
+> **Feedback:** O cabo de categoria 5e, que é um cabo de par trançado não blindado, consiste em 4 pares de fios trançados para reduzir a interferência elétrica.
+
+---
+
+**P9 –** Qual é a configuração padrão para broadcast em um roteador sem fio?
+
+- Automático
+- Desabilitado
+- Desativado
+- **Habilitado** ✓
+
+> **Feedback:** Quando um roteador sem fio está sendo configurado, a configuração padrão para o broadcast SSID é ativada. Isso significa que o roteador sem fio transmitirá o SSID para todos os dispositivos. Isso pode ser uma preocupação de segurança e a melhor prática é desativar a configuração de broadcast.
+
+---
+
+**P10 –** Qual é uma característica do SSID da rede?
+
+- Ele contém exatamente 16 caracteres.
+- Isso só é necessário para acesso para convidados
+- Ele é criptografado por padrão
+- **Ele é case sensitive** ✓
+
+> **Feedback:** O SSID é o nome da rede e faz distinção entre maiúsculas e minúsculas. Pode conter até 32 caracteres. Todos os computadores que se conectam à rede sem fio devem saber o SSID.
+
+
+# Exame de ponto de verificação: Construindo uma pequena rede
+## Questões de Revisão
+
+**P1 –** Qual é uma característica da Internet?
+
+- Ela está localizado em locais geográficos específicos.
+- **Não é administrada centralmente.** ✓
+- Ela suporta apenas conexões de rede com fio.
+- É operado pelo governo dos EUA.
+
+---
+
+**P2 –** Quantos valores únicos são possíveis usando um único dígito binário?
+
+- 8
+- **2** ✓
+- 9
+- 4
+- 16
+- 1
+
+---
+
+**P3 –** Que representação de dados é usada quando um computador ou dispositivo de rede está processando dados?
+
+- inferida
+- legível
+- **binário** ✓
+- texto
+
+---
+
+**P4 –** O que permite que dispositivos digitais se interliguem e transmitam dados?
+
+- um sensor
+- um smartphone
+- **uma rede** ✓
+- um sensor de posicionamento global
+
+---
+
+**P5 –** Quais itens são conhecidos coletivamente como mídias de rede?
+
+- roteadores e switches
+- firewalls e servidores
+- PCs e notebooks
+- **fios e ondas de rádio** ✓
+
+---
+
+**P6 –** Quais são os dois dispositivos considerados dispositivos finais? (Escolha duas.)
+
+- **laptop** ✓
+- switch
+- hub
+- **impressora** ✓
+- roteador
+
+---
+
+**P7 –** Quais são os dois tipos de conexões com fio a Internet de alta velocidade? (Escolha duas.)
+
+- **DSL** ✓
+- **cabo** ✓
+- dial-up
+- satélite
+- celular
+
+---
+
+**P8 –** Combine cada dispositivo com uma categoria.
+
+|Dispositivo|Categoria|
+|---|---|
+|PC|Dispositivos finais ✓|
+|Impressora|Dispositivos finais ✓|
+|Firewall|Dispositivos intermediários ✓|
+|Dispositivo inteligente|Dispositivos finais ✓|
+|Roteador|Dispositivos intermediários ✓|
+|Switch|Dispositivos intermediários ✓|
+
+---
+
+**P9 –** Quais são os três dispositivos considerados dispositivos intermediários em uma rede? (Escolha três.)
+
+- **access point sem fio** ✓
+- **roteador** ✓
+- impressora da rede
+- estação de trabalho
+- servidor
+- **switch** ✓
+
+---
+
+**P10 –** Quais são os dois métodos usados para conectar diretamente dispositivos móveis, como tablets e smartphones, a uma rede de dados? (Escolha duas.)
+
+- Comunicações por Celular
+- **Wi-Fi** ✓
+- Ethernet com fio
+- ~~Bluetooth~~ ✗
+- WiMAX
+
+---
+
+**P11 –** Um cliente coloca um smartphone perto de um terminal de pagamento em uma loja e a cobrança da compra é paga corretamente. Que tipo de tecnologia de conexão sem fio foi usada?
+
+- Bluetooth
+- **NFC** ✓
+- 3G
+- Wi-Fi
+
+---
+
+**P12 –** Um usuário está procurando um fone de ouvido sem fio para ouvir músicas armazenadas em um smartphone. Qual tecnologia sem fio os fones de ouvido usariam?
+
+- Wi-Fi
+- infravermelho
+- **Bluetooth** ✓
+- 3G/4G
+
+---
+
+**P13 –** Quais são os dois métodos normalmente usados em um dispositivo móvel para fornecer conectividade com a Internet? (Escolha duas.)
+
+- NFC
+- Bluetooth
+- **Wi-Fi** ✓
+- **celular** ✓
+- GPS
+
+---
+
+**P14 –** Quais informações podem ser solicitadas ao emparelhar dispositivos por Bluetooth?
+
+- um endereço IP
+- **um PIN** ✓
+- um nome de usuário
+- o SSID
+
+---
+
+**P15 –** Consulte a figura. Qual porta de roteador se conecta ao modem fornecido pelo provedor de serviços?
+
+- D
+- A
+- B
+- **C** ✓
+
+---
+
+**P16 –** Qual recurso é característico da filtragem de MAC em redes sem fio?
+
+- **Ele restringe o acesso do computador a uma rede sem fio.** ✓
+- Ele criptografa os dados que são transmitidos em uma rede sem fio.
+- Ele é configurado no computador e não no roteador.
+- ~~Ele permite que apenas usuários autorizados detectem a rede.~~ ✗
+
+---
+
+**P17 –** Qual tecnologia é usada para identificar exclusivamente uma rede WLAN?
+
+- WEP
+- Tabela de endereços MAC
+- WPA
+- **SSID** ✓
+
+---
+
+**P18 –** Qual banda RF wireless que os dispositivos IEEE 802.11b/g usam?
+
+- 900 MHz
+- 5 GHz
+- **2,4 GHz** ✓
+- 60 GHz
+
+---
+
+**P19 –** Quais são as duas bandas de radiofrequência usadas nas LANs sem fio domésticas? (Escolha duas.)
+
+- 900 GHz
+- **5 GHz** ✓
+- 9 MHz
+- **2,4 GHz** ✓
+- 5 MHz
+
+---
+
+**P20 –** Um usuário está configurando uma rede sem fio doméstica. Que tipo de dispositivo o usuário deve ter para estabelecer a rede sem fio e fornecer acesso à Internet para vários dispositivos residenciais?
+
+- hub
+- switch
+- patch panel
+- **roteador sem fio** ✓
