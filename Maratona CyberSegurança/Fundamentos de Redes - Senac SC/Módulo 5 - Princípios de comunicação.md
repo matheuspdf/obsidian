@@ -284,3 +284,285 @@ Ao enviar uma mensagem, o dispositivo utiliza protocolos de cada camada:
 O envio de qualquer mensagem de rede envolve o uso simultâneo de protocolos de todas essas camadas.
 
 
+## 5.3.3 O modelo TCP/IP
+
+### Modelos em Camadas
+
+Os modelos em camadas ajudam a visualizar o funcionamento conjunto dos diversos protocolos para possibilitar comunicações de rede. Um modelo de camadas representa a operação dos protocolos ocorrendo dentro de cada camada, bem como a interação com as camadas acima e abaixo dela. O modelo em camadas tem muitas vantagens:
+
+- Auxilia no projeto de protocolos, porque os protocolos que operam em uma camada específica possuem informações definidas sobre as quais atuam e uma interface definida para as camadas acima e abaixo.
+- Estimula a competição porque os produtos de diferentes fornecedores podem trabalhar em conjunto.
+- Permite que ocorram mudanças tecnológicas em um nível sem que outros níveis sejam afetados.
+- Fornece uma linguagem comum para descrever funções e habilidades de rede.
+
+O primeiro modelo em camadas para comunicações internetwork foi criado no início dos anos 1970 e é conhecido como modelo de Internet. Ele define quatro categorias de funções que devem ocorrer para que a comunicação seja bem sucedida. A suíte de protocolos TCP/IP que é usada para comunicações na Internet segue a estrutura deste modelo, conforme mostrado na tabela. Por causa disso, o modelo de Internet é comumente chamado de modelo TCP/IP.
+
+#### Camadas do Modelo TCP/IP
+
+| Camada do modelo TCP/IP | Descrição                                                                      |
+| ----------------------- | ------------------------------------------------------------------------------ |
+| Aplicação               | Representa dados para o usuário, além da codificação e do controle de diálogo. |
+| Transporte              | Permite a comunicação entre vários dispositivos diferentes em redes distintas. |
+| Internet                | Determina o melhor caminho pela rede.                                          |
+| Acesso à rede           | Controla os dispositivos de hardware e o meio físico que formam a rede.        |
+
+## 5.3.4 O Modelo de Referência OSI
+
+### Modelos de Protocolo e de Referência
+
+Há dois tipos básicos de modelo para descrever as funções que devem ocorrer para que as comunicações de rede sejam bem-sucedidas:
+
+- **Modelo de protocolo:** corresponde muito bem à estrutura de um conjunto específico de protocolo. Um conjunto de protocolos inclui o conjunto de protocolos relacionados que normalmente fornecem toda a funcionalidade necessária para as pessoas se comunicarem com a rede de dados. O modelo TCP/IP é um modelo de protocolo porque descreve as funções que ocorrem em cada camada de protocolos dentro da suíte TCP/IP.
+- **Modelo de referência:** descreve as funções que devem ser concluídas em uma determinada camada, mas não especifica exatamente como uma função deve ser realizada. Um modelo de referência não deve fornecer um nível suficiente de detalhes para definir com precisão como cada protocolo deve trabalhar em cada camada. A principal finalidade de um modelo de referência é ajudar a entender melhor as funções e os processos necessários para as comunicações de rede.
+
+O modelo de referência internetwork mais conhecido foi criado pelo projeto Open Systems Interconnection (OSI) da ISO (Organização Internacional de Padronização). Ele é usado para projeto de redes de dados, especificações de operação e solução de problemas. Esse modelo costuma ser chamado de modelo OSI.
+
+#### Camadas do Modelo OSI
+
+| Camada              | Descrição                                                                                                                                                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 7 – Aplicação       | A camada de aplicação contém protocolos usados para comunicações processo a processo.                                                                                                                               |
+| 6 –Apresentação     | A camada de apresentação fornece a representação comum de dados transferidos entre serviços da camada de aplicação.                                                                                                 |
+| 5 – Sessão          | A camada de sessão fornece serviços à camada de apresentação para organizar o diálogo e gerenciar a troca de dados.                                                                                                 |
+| 4 – Transporte      | A camada de transporte define serviços para segmentar, transferir e reagrupar os dados para comunicações individuais entre os dispositivos finais.                                                                  |
+| 3 – Rede            | A camada de rede fornece serviços para trocar dados individuais pela rede entre dispositivos finais identificados.                                                                                                  |
+| 2 – Enlace de dados | Os protocolos da camada de enlace de dados descrevem métodos para a troca de quadros de dados entre os dispositivos em um meio físico comum.                                                                        |
+| 1 – Físico          | Os protocolos da camada física descrevem os meios mecânicos, elétricos, funcionais e procedimentais para ativar, manter e desativar conexões físicas para uma transmissão de bits de e para um dispositivo de rede. |
+
+## 5.3.5 Comparação entre os Modelos OSI e TCP/IP
+
+Já que o TCP/IP é o conjunto de protocolos usado nas comunicações de Internet, por que precisamos conhecer também o modelo OSI?
+
+O modelo TCP/IP é um método para visualizar as interações dos diversos protocolos que compõem o conjunto de protocolos TCP/IP. Ele não descreve as funções gerais que são necessárias para todas as comunicações em rede. Ele descreve as funções de rede específicas para os protocolos em uso na pilha de protocolos TCP/IP. Por exemplo: na camada de acesso à rede, o conjunto de protocolos TCP/IP não especifica quais protocolos devem ser usados na transmissão por um meio físico, nem o método de codificar os sinais de transmissão. As Camadas 1 e 2 do modelo OSI discutem os procedimentos necessários para acessar a mídia e o meio físico para enviar dados por uma rede.
+
+Os protocolos que compõem o conjunto de protocolo TCP/IP podem ser descritos em termos do modelo de referência OSI. As funções que ocorrem na camada de Internet do modelo TCP/IP estão incluídas na camada de rede do modelo OSI, como mostrado na figura. A funcionalidade da camada de transporte é a mesma entre os dois modelos. No entanto, a camada de acesso à rede e a camada de aplicação do modelo TCP/IP são divididas no modelo OSI para descrever funções discretas que devem ocorrer nessas camadas.
+
+![[Pasted image 20260526072721.png]]
+
+## 5.3.6 Verifique a sua compreensão - Modelos de comunicação de rede
+
+### Pergunta 1
+
+Que protocolo é responsável por garantir a entrega confiável de informações?
+
+- HTTP
+- IP
+- Ethernet
+- **[CORRETO] TCP**
+
+**Feedback:** O Transport Control Protocol (TCP) é responsável por garantir a entrega confiável.
+
+---
+
+### Pergunta 2
+
+Qual protocolo é usado pelos roteadores para encaminhar mensagens?
+
+- **[CORRETO] IP**
+- TCP
+- HTTP
+- Ethernet
+
+**Feedback:** O protocolo Internet (IP) é usado pelos roteadores para encaminhar mensagens.
+
+---
+
+### Pergunta 3
+
+Quais duas camadas do modelo OSI mapeiam diretamente para uma camada única de acesso à rede no modelo TCP/IP? (Escolha duas)
+
+- transporte
+- apresentação
+- aplicação
+- **[CORRETO] enlace de dados**
+- **[CORRETO] físico**
+- rede
+- sessão
+
+**Feedback:** As camadas físico e enlace de dados correspondem à camada de acesso à rede do modelo TCP/IP.
+
+---
+
+### Pergunta 4
+
+O endereçamento IP ocorre em qual camada do modelo OSI?
+
+- **[CORRETO] rede**
+- transporte
+- aplicação
+- apresentação
+- sessão
+- enlace de dados
+- físico
+
+**Feedback:** Endereçamento IP ocorre na camada de rede.
+
+
+# 5.4.1 O que aprendi neste módulo?
+
+#### Protocolo de comunicação
+
+Os protocolos são necessários para que os computadores se comuniquem corretamente na rede. Isso inclui formato de mensagem, tamanho de mensagem, temporização, codificação, encapsulamento e padrões de mensagem.
+
+- **Formato da mensagem** - Quando uma mensagem é enviada, ela deve usar um formato ou estrutura específica.
+- **Tamanho da mensagem** - As regras que regem o tamanho das peças comunicadas pela rede são muito rígidas. Eles também podem ser diferentes, dependendo do canal usado.
+- **Temporização** - A temporização determina a velocidade na qual os bits são transmitidos pela rede. Também afeta quando um host individual pode enviar dados e a quantidade total de dados que pode ser enviada em qualquer transmissão.
+- **Codificação** - As mensagens enviadas pela rede são primeiro convertidas em bits pelo host de envio. Cada bit é codificado em um padrão de sons, de ondas de luz ou de impulsos elétricos, dependendo da mídia de rede em que os bits são transmitidos.
+- **Encapsulamento** - Cada mensagem transmitida em uma rede deve incluir um cabeçalho que contenha informações de endereçamento que identifiquem os hosts de origem e destino. Encapsulamento é o processo de adicionar essas informações aos dados que compõem a mensagem.
+- **Padrão de mensagem** - Algumas mensagens requerem uma confirmação antes que a próxima mensagem possa ser enviada. Esse tipo de padrão de solicitação/resposta é um aspecto comum em muitos protocolos de rede. No entanto, existem outros tipos de mensagens que podem ser simplesmente transmitidas pela rede, sem a preocupação de chegarem ao seu destino.
+
+---
+
+#### Padrões de comunicação
+
+As topologias nos permitem ver a rede usando a representação de dispositivos finais e dispositivos intermediários. Como um dispositivo vê a rede? Pense em um dispositivo em uma bolha. Um dispositivo só vê suas próprias informações de endereçamento. Como o dispositivo sabe que está na mesma rede que outro dispositivo? A resposta é: protocolos de rede. A maioria das comunicações de rede é dividida em unidades de dados menores ou pacotes.
+
+Um padrão é um conjunto de regras que determina como algo deve ser feito. Os padrões de rede e de Internet asseguram que todos os dispositivos conectados à rede implementem o mesmo conjunto de regras ou protocolos da mesma forma. O uso de padrões permite que diferentes tipos de dispositivos enviem informações entre si pela Internet.
+
+Um padrão da Internet é o resultado final de um ciclo completo de discussão, solução de problemas e testes. Esses diferentes padrões são desenvolvidos, publicados e mantidos por uma variedade de organizações. Quando um novo padrão é proposto, cada etapa do processo de desenvolvimento e aprovação é registrada em um documento numerado de Solicitação de comentários (RFC), para que a evolução do padrão seja monitorada. As RFCs de padrões da Internet são publicadas e gerenciadas pelo IETF (Internet Engineering Task Force).
+
+---
+
+#### Modelos de comunicação de rede
+
+Os protocolos são as regras que regem as comunicações. Uma comunicação bem-sucedida entre hosts requer interação entre vários protocolos. Os protocolos incluem HTTP, TCP, IP e Ethernet. Esses protocolos são implementados em software e hardware instalados em cada host e dispositivo de rede.
+
+A interação entre os diferentes protocolos em um dispositivo pode ser ilustrada como uma pilha de protocolos. Uma pilha ilustra os protocolos como uma hierarquia em camadas, com cada protocolo de alto nível dependendo dos serviços dos protocolos mostrados nos níveis inferiores. A separação das funções permite que cada camada na pilha opere de forma independente das outras.
+
+A suíte de protocolos TCP/IP que é usada para comunicações na Internet segue a estrutura deste modelo:
+
+- **Aplicativo** - Representa dados para o usuário, além de codificação e controle de diálogo.
+- **Transporte** - Suporta a comunicação entre vários dispositivos em diversas redes.
+- **Internet** - Determina o melhor caminho através da rede.
+- **Acesso à rede** - Os dispositivos de hardware e mídia que compõem a rede.
+
+Um modelo de referência descreve as funções que devem estar em uma camada específica, mas não especifica exatamente como uma função deve ser realizada. A principal finalidade de um modelo de referência é ajudar a entender melhor as funções e os processos necessários para as comunicações de rede.
+
+O modelo de referência de internetwork mais conhecido foi criado pelo projeto OSI na ISO Internacional. Ele é usado para projeto de redes de dados, especificações de operação e solução de problemas. Esse modelo costuma ser chamado de modelo OSI.
+
+---
+
+#### Descrição das camadas do modelo OSI
+
+- **7 - Aplicação** - A camada de aplicação contém protocolos usados para comunicações entre processos.
+- **6 - Apresentação** - A camada de apresentação fornece uma representação comum dos dados transferidos entre os serviços da camada de aplicação.
+- **5 - Sessão** - A camada de sessão fornece serviços à camada de apresentação para organizar seu diálogo e gerenciar a troca de dados.
+- **4 - Transporte** - A camada de transporte define serviços para segmentar, transferir e remontar os dados para comunicações individuais entre os dispositivos finais.
+- **3 - Rede** - A camada de rede fornece serviços para troca de dados individuais pela rede entre dispositivos finais identificados.
+- **2 - Enlace de dados** - Os protocolos da camada de enlace de dados descrevem métodos para troca de quadros de dados entre dispositivos em uma mídia comum.
+- **1 - Física** - Os protocolos da camada física descrevem os meios mecânicos, elétricos, funcionais e procedimentais para ativar, manter e desativar conexões físicas para uma transmissão de bits de e para um dispositivo de rede.
+
+## 5.4.3 Questionário - Princípios de comunicação
+
+### Pergunta 1
+
+Qual é a finalidade da camada física do modelo OSI?
+
+- detecção de erros nos quadros recebidos
+- troca de quadros entre nós no meio físico de rede física
+- **[CORRETO] transmissão de bits no meio físico local**
+- controle de acesso ao meio
+
+---
+
+### Pergunta 2
+
+Qual afirmação sobre protocolos de rede está correta?
+
+- Os protocolos de rede definem o tipo de hardware usado e como este é montado em racks.
+- **[CORRETO] Eles definem como as mensagens são trocadas entre a origem e o destino.**
+- Eles são necessários apenas para troca de mensagens entre dispositivos em redes remotas.
+- Todos eles funcionam na camada de acesso à rede do TCP/IP.
+
+---
+
+### Pergunta 3
+
+Quais são os três acrônimos/siglas que representam as organizações padronizadoras? (Escolha três.)
+
+- **[CORRETO] IETF**
+- TCP/IP
+- MAC
+- **[CORRETO] IANA**
+- OSI
+- **[CORRETO] IEEE**
+
+---
+
+### Pergunta 4
+
+Qual termo de rede descreve um conjunto específico de regras em uma camada que rege a comunicação nessa camada?
+
+- duplex
+- Verificação de erros
+- **[CORRETO] protocolo**
+- encapsulamento
+
+---
+### Pergunta 5
+
+Qual camada do modelo OSI define serviços para segmentar e remontar os dados das comunicações entre os dispositivos finais:
+
+- apresentação
+- aplicação
+- **[CORRETO] transporte**
+- sessão
+- rede
+
+---
+### Pergunta 6
+
+Qual é a finalidade dos protocolos nas comunicações de dados?
+
+- exibir o conteúdo da mensagem enviada durante a comunicação
+- **[CORRETO] fornecer as regras necessárias para possibilitar um tipo específico de comunicação**
+- especificar os sistemas operacionais dos dispositivos que suportam a comunicação
+- especificar a largura de banda do canal ou meio físico para cada tipo de comunicação
+
+---
+
+### Pergunta 7
+
+Qual termo se refere ao conjunto de regras que definem como uma rede opera?
+
+- **[CORRETO] padrão**
+- modelo
+- protocolo
+- domínio
+
+---
+
+### Pergunta 8
+
+Quais são as três camadas de modelos OSI que compõem a camada da aplicação do modelo TCP/IP? (Escolha três.)
+
+- transporte
+- enlace de dados
+- **[CORRETO] apresentação**
+- rede
+- **[CORRETO] aplicação**
+- **[CORRETO] sessão**
+
+---
+
+### Pergunta 9
+
+Qual organização publica e gerencia os documentos Request for Comments (RFC)?
+
+- TIA/EIA
+- IEEE
+- ISO
+- **[CORRETO] IETF**
+
+---
+
+### Pergunta 10
+
+Quais duas camadas do modelo OSI têm a mesma funcionalidade que uma única camada do modelo TCP/IP? (Escolha duas.)
+
+- sessão
+- transporte
+- **[CORRETO] enlace de dados**
+- rede
+- **[CORRETO] físico**
+
