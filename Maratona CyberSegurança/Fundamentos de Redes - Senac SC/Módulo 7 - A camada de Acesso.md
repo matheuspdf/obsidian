@@ -525,3 +525,310 @@ Qual das afirmativas abaixo, relacionada a decisões de encaminhamento dos quadr
 - [ ] Os quadros unicast são sempre encaminhados, independentemente do endereço MAC de destino.
 
 ✅ RESPOSTA CORRETA: As decisões de encaminhamento de quadros são baseadas no endereço MAC e nos mapeamentos de porta na tabela de endereços MAC.
+
+
+# Exame de ponto de verificação
+
+### Pergunta 1
+
+Qual afirmação é verdadeira sobre os modelos TCP/IP e OSI?
+
+- [ ] A camada de acesso à rede TCP/IP tem funções semelhantes à camada de rede OSI.
+- [x] A camada de transporte TCP/IP e a Camada OSI 4 fornecem serviços e funções semelhantes.
+- [ ] As três primeiras camadas do modelo OSI descrevem serviços gerais que também são fornecidos pela camada de Internet do modelo TCP/IP.
+- [ ] A camada 7 do modelo OSI e a camada de aplicação do modelo TCP/IP têm funções idênticas.
+
+✅ RESPOSTA CORRETA: A camada de transporte TCP/IP e a Camada OSI 4 fornecem serviços e funções semelhantes.
+
+---
+
+### Pergunta 2
+
+Quais são as três camadas de modelos OSI que correspondem à camada de aplicação do modelo TCP/IP? (Escolha três.)
+
+- [ ] enlace de dados
+- [ ] rede
+- [ ] Transporte
+- [x] Apresentação
+- [x] sessão
+- [x] Aplicação
+
+✅ RESPOSTAS CORRETAS: Apresentação, sessão, Aplicação
+
+---
+
+### Pergunta 3
+
+Quais são as duas camadas do modelo OSI que têm a mesma funcionalidade no modelo TCP/IP? (Escolha dois.)
+
+- [ ] transporte
+- [x] físico
+- [ ] rede
+- [ ] sessão
+- [x] enlace de dados
+
+✅ RESPOSTAS CORRETAS: físico, enlace de dados
+
+---
+
+### Pergunta 4
+
+Quais são os três acrônimos/siglas que representam as organizações padronizadoras? (Escolha três.)
+
+- [ ] MAC
+- [x] IETF
+- [ ] OSI
+- [x] IANA
+- [ ] TCP/IP
+- [x] IEEE
+
+✅ RESPOSTAS CORRETAS: IETF, IANA, IEEE
+
+---
+
+### Pergunta 5
+
+Qual afirmação define um protocolo de comunicações de dados?
+
+- [ ] uma parceria de fabricantes de dispositivos de rede
+- [x] um conjunto de regras que regem o processo de comunicação
+- [ ] um acordo de troca de dispositivos de rede entre fornecedores
+- [ ] um conjunto de padrões de produto para tipos de dispositivos de rede
+
+✅ RESPOSTA CORRETA: um conjunto de regras que regem o processo de comunicação
+
+---
+
+### Pergunta 6
+
+Quais são os três elementos comuns a todos os métodos de comunicação? (Escolha três.)
+
+- [x] origem da mensagem
+- [x] meio de transmissão comum
+- [ ] dados da mensagem
+- [x] destino da mensagem
+- [ ] tipo de mensagem
+- [ ] prioridade da mensagem
+
+✅ RESPOSTAS CORRETAS: origem da mensagem, meio de transmissão comum, destino da mensagem
+
+---
+
+### Pergunta 7
+
+Combine a função do protocolo com a descrição, levando em consideração que um cliente de rede está visitando um site.
+
+|Categoria|Resposta correta|
+|---|---|
+|preparando pacotes a serem transmitidos pela mídia de rede|protocolo de acesso à rede|
+|tomando os segmentos do Protocolo de Transporte, encapsulando-os em pacotes e atribuindo-os com endereços apropriados|protocolo de internet|
+|governando a maneira como um servidor web e um cliente web interagem|protocolo de aplicação|
+|gerenciando as conversas individuais entre servidores Web e clientes Web|protocolo de transporte|
+
+---
+
+### Pergunta 8
+
+Quais são as duas características que descrevem um cabo Ethernet? (Escolha duas.)
+
+- [ ] único núcleo de cobre envolto por uma camada de isolamento
+- [x] 4 pares de cabos trançados
+- [x] pares de cabos codificados por cor
+- [ ] núcleo de vidro cercado por várias camadas para isolamento e proteção
+- [ ] núcleo de plástico cercado por várias camadas para isolamento e proteção
+
+✅ RESPOSTAS CORRETAS: 4 pares de cabos trançados, pares de cabos codificados por cor
+
+---
+
+### Pergunta 9
+
+Que tipo de cabo de rede é usado normalmente em redes de backbone e em companhias telefônicas?
+
+- [ ] cabo de par trançado blindado
+- [x] cabo de fibra ótica
+- [ ] cabo de par trançado
+- [ ] cabo coaxial
+
+✅ RESPOSTA CORRETA: cabo de fibra ótica
+
+---
+
+### Pergunta 10
+
+Um técnico de rede está pesquisando o uso do cabeamento de fibra óptica em um novo centro de tecnologia. Quais duas questões devem ser consideradas antes de implementar meios de fibra óptica? (Escolha duas.)
+
+- [ ] O cabo de fibra óptica é capaz de suportar manuseio brusco.
+- [ ] O cabeamento de fibra óptica é suscetível à perda de sinal devido ao RFI.
+- [x] A fibra óptica fornece maior capacidade de dados, mas é mais cara do que o cabeamento de cobre.
+- [ ] O cabeamento de fibra óptica requer aterramento específico para ser imune à EMI.
+- [x] O cabeamento de fibra ótica requer uma especialização em terminação e emenda diferente do que o cabeamento de cobre exige.
+
+✅ RESPOSTAS CORRETAS: A fibra óptica fornece maior capacidade de dados, mas é mais cara do que o cabeamento de cobre. / O cabeamento de fibra ótica requer uma especialização em terminação e emenda diferente do que o cabeamento de cobre exige.
+
+---
+
+### Pergunta 11
+
+Consulte o gráfico. Que tipo de cabeamento é mostrado?
+
+- [ ] coaxial
+- [ ] fibra óptica em plástico
+- [x] par trançado
+- [ ] fibra óptica de vidro
+
+✅ RESPOSTA CORRETA: par trançado
+
+---
+
+### Pergunta 12
+
+Qual critério pode ser usado para selecionar o tipo apropriado de mídia de rede para uma rede?
+
+- [ ] o número de dispositivos intermediários instalados na rede
+- [ ] o custo dos dispositivos finais usados na rede
+- [ ] os tipos de dados que precisam ter prioridade
+- [x] o ambiente em que a mídia selecionada será instalada
+
+✅ RESPOSTA CORRETA: o ambiente em que a mídia selecionada será instalada
+
+---
+
+### Pergunta 13
+
+Qual tecnologia de codificação de dados é usada em cabos de fibra óptica?
+
+- [ ] modulação da tensão elétrica
+- [ ] pulsos elétricos
+- [ ] modulação de frequências específicas de ondas eletromagnéticas
+- [x] pulsos de luz
+
+✅ RESPOSTA CORRETA: pulsos de luz
+
+---
+
+### Pergunta 14
+
+Qual é a vantagem de usar cabeamento de fibra óptica em vez de cabeamento de cobre?
+
+- [ ] Pode ser instalado em curvas fechadas.
+- [ ] Geralmente é mais barato do que o cabeamento de cobre.
+- [x] Ele é capaz de transportar sinais muito mais longe do que o cabeamento de cobre.
+- [ ] É mais fácil terminar e instalar do que o cabeamento de cobre.
+
+✅ RESPOSTA CORRETA: Ele é capaz de transportar sinais muito mais longe do que o cabeamento de cobre.
+
+---
+
+### Pergunta 15
+
+Qual termo se refere ao processo de inserir um formato de mensagem em outro formato de mensagem?
+
+- [x] encapsulamento
+- [ ] segmentação
+- [ ] codificação
+- [ ] manipulação
+
+✅ RESPOSTA CORRETA: encapsulamento
+
+---
+
+### Pergunta 16
+
+Consulte a figura. Um PC com o endereço MAC 0800.069d.3841 ligado à porta Fa0/8 está enviando dados para um dispositivo que tenha o endereço MAC 6400.6a5a.6821. O que o switch fará primeiro para lidar com a transferência de dados?
+
+**Tabela de Endereço MAC:**
+
+```
+SW_B1_F2# show mac-address-table
+          Tabela de Endereço MAC
+----------------------------------------------------------
+Vlan  Endereço MAC       Tipo      Portos
+----  ---------          -------   ------
+1     0001.42ee.4ae7     DYNAMIC   Fa0/4
+1     6400.6a5a.6821     DYNAMIC   Fa0/6
+```
+
+- [ ] O switch enviará o quadro para a porta Fa0/6.
+- [ ] O switch adicionará o endereço 6400.6151.6821 à tabela de endereços MAC.
+- [x] O switch adicionará o endereço 0800.069d.3841 à tabela de endereços MAC.
+- [ ] O switch inundará o quadro em todas as portas, exceto na porta Fa0/8.
+- [ ] O switch enviará o quadro para as portas Fa0/4 e Fa0/6.
+
+✅ RESPOSTA CORRETA: O switch adicionará o endereço 0800.069d.3841 à tabela de endereços MAC.
+
+---
+
+### Pergunta 17
+
+Qual é o tipo de endereço é usado por um switch na construção de uma tabela de endereços MAC?
+
+- [ ] endereço MAC destino
+- [ ] endereço IP origem
+- [x] Endereço MAC origem
+- [ ] endereço IP destino
+
+✅ RESPOSTA CORRETA: Endereço MAC origem
+
+---
+
+### Pergunta 18
+
+Qual a quantidade de dados que podem ser encapsulados em um quadro Ethernet, de tamanho normal, antes de serem enviados pela rede?
+
+- [ ] 0 a 1024 bytes
+- [ ] de 32 a 1500 bytes
+- [ ] de 64 a 1518 bytes
+- [x] de 46 a 1500 bytes
+
+✅ RESPOSTA CORRETA: de 46 a 1500 bytes
+
+---
+
+### Pergunta 19
+
+Consulte a figura. Como um quadro é enviado do PC A para o PC C se a tabela de endereço MAC no switch SW1 está vazia?
+
+**Topologia:**
+
+- SW1: Fa0/1 → PCA, Fa0/2 → PCB, Fa0/23 → SW2
+    
+- SW2: Fa0/24 → SW1, Fa0/3 → PCC, Fa0/4 → PCD
+    
+- [x] O SW1 inunda o quadro em todas as portas no SW1, excluindo a porta pela qual o quadro entrou no switch.
+    
+- [ ] O SW1 encaminha o quadro diretamente para o SW2. O SW2 inunda o quadro em todas as portas conectadas ao SW2, excluindo a porta pela qual o quadro entrou no switch.
+    
+- [ ] O SW1 descarta o quadro porque não sabe o endereço MAC de destino.
+    
+- [ ] O SW1 inunda o quadro em todas as portas do switch, excluindo a porta interconectada do switch SW2 e a porta através da qual o quadro entrou no switch.
+    
+
+✅ RESPOSTA CORRETA: O SW1 inunda o quadro em todas as portas no SW1, excluindo a porta pela qual o quadro entrou no switch.
+
+---
+
+### Pergunta 20
+
+Quais são duas ações executadas por um switch Cisco? (Escolha duas.)
+
+- [ ] examinar o endereço MAC destino para adicionar novas entrada à tabela de endereços MAC
+- [ ] criar uma tabela de roteamento com base no primeiro endereço IP no cabeçalho do quadro
+- [x] usar a tabela de endereços MAC para encaminhar quadros via endereço MAC de destino
+- [x] usar os endereços MAC origem dos quadros para criar e manter um tabela de endereços MAC
+- [ ] encaminhar quadros com endereços IP de destino desconhecidos para o gateway padrão
+
+✅ RESPOSTAS CORRETAS: usar a tabela de endereços MAC para encaminhar quadros via endereço MAC de destino / usar os endereços MAC origem dos quadros para criar e manter um tabela de endereços MAC
+
+### Pergunta 21
+
+Qual informação um switch usa para povoar a tabela de endereços MAC?
+
+- [x] o endereço MAC de origem e a porta de entrada
+- [ ] o endereço MAC de destino e a porta de entrada
+- [ ] os endereços MAC de origem e destino e a porta de saída
+- [ ] o endereço MAC de destino e a porta de saída
+- [ ] o endereço MAC de origem e a porta de saída
+- [ ] os endereços MAC de origem e destino e a porta de entrada
+
+✅ RESPOSTA CORRETA: o endereço MAC de origem e a porta de entrada
