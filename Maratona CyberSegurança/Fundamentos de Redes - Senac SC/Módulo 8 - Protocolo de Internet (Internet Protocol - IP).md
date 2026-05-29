@@ -224,3 +224,153 @@ Os roteadores precisam saber apenas como alcançar cada rede, em vez de precisar
 ## 8.3.2 Webster – Questões para Reflexão
 
 Faz sentido que cada dispositivo na rede tenha um endereço IP, e os roteadores usam esses endereços para enviar pacotes da origem para o destino. Quando envio uma carta pelo correio, coloco o endereço e o endereço do destinatário no envelope. Mas agora vejo a outra conexão a forma como as redes operam. O código postal e a cidade do meu destinatário são um pouco parecidos com a parte da rede do endereço IP, e o endereço é como a porção host do endereço IP. Você consegue pensar em outras analogias com as operações de rede e endereços IP?
+
+## 8.3.3 Questionário sobre Protocolo Internet
+
+### Pergunta 1
+
+Que critério deve ser seguido no projeto de um esquema de endereçamento IPv4 para dispositivos finais?
+
+- [x] Cada endereço IP deve ser único em uma mesma rede.
+- [ ] Cada endereço IP precisa ser compatível com o endereço MAC.
+- [ ] Cada endereço IP deve corresponder ao endereço atribuído ao host pelo DNS.
+- [ ] Cada host local deve receber um endereço IP com um componente de rede exclusivo.
+
+✅ RESPOSTA CORRETA: Cada endereço IP deve ser único em uma mesma rede.
+
+---
+
+### Pergunta 2
+
+Quantos octetos existem em um endereço IPv4?
+
+- [ ] 32
+- [ ] 8
+- [x] 4
+- [ ] 16
+
+✅ RESPOSTA CORRETA: 4
+
+---
+
+### Pergunta 3
+
+Quais duas partes são componentes de um endereço IPv4? (Escolha duas.)
+
+- [ ] parte física
+- [ ] parte de broadcast
+- [ ] parte de sub-rede
+- [x] parte da rede
+- [x] parte de host
+- [ ] parte lógica
+
+✅ RESPOSTAS CORRETAS: parte da rede, parte de host
+
+---
+
+### Pergunta 4
+
+Qual é o objetivo de combinar a máscara de sub-rede com um endereço IP?
+
+- [ ] identificar exclusivamente um host em uma rede
+- [x] determinar a sub-rede a qual o host pertence
+- [ ] identificar se o endereço é público ou privado
+- [ ] mascarar o endereço IP para intrusos
+
+✅ RESPOSTA CORRETA: determinar a sub-rede a qual o host pertence
+
+---
+
+### Pergunta 5
+
+Um técnico está configurando o equipamento em uma rede. Quais são os três dispositivos que precisarão de endereços IP? (Escolha três.)
+
+- [x] um servidor com duas placas de rede
+- [x] uma impressora com uma placa de rede integrada
+- [ ] um PDA conectado a uma estação de trabalho de rede
+- [ ] um mouse sem fio
+- [x] um telefone IP
+- [ ] uma Web câmera conectada diretamente a um host
+
+✅ RESPOSTAS CORRETAS: um servidor com duas placas de rede, uma impressora com uma placa de rede integrada, um telefone IP
+
+---
+
+### Pergunta 6
+
+Qual afirmação descreve o relacionamento de uma rede física e redes endereçadas IPv4 lógicas?
+
+- [ ] Os dispositivos finais em redes lógicas IPv4 diferentes podem se comunicar entre si se todos se conectarem ao mesmo switch.
+- [ ] Uma rede física local é compatível com uma rede lógica IPv4.
+- [x] Uma rede física pode conectar vários dispositivos de redes lógicas IPv4 diferentes.
+- [ ] Todos os dispositivos conectados a uma rede física precisam pertencer à mesma rede lógica IPv4.
+
+✅ RESPOSTA CORRETA: Uma rede física pode conectar vários dispositivos de redes lógicas IPv4 diferentes.
+
+---
+
+### Pergunta 7
+
+Qual o tamanho dos endereços IPv4?
+
+- [ ] 64 bits
+- [ ] 8 bits
+- [x] 32 bits
+- [ ] 128 bits
+- [ ] 16 bits
+
+✅ RESPOSTA CORRETA: 32 bits
+
+---
+
+### Pergunta 8
+
+Qual é o número de rede para um endereço IPv4 172.16.34.10 com a máscara de sub-rede de 255.255.255.0?
+
+- [ ] 10
+- [ ] 172.16.0.0
+- [x] 172.16.34.0
+- [ ] 34.10
+
+✅ RESPOSTA CORRETA: 172.16.34.0
+
+---
+
+### Pergunta 9
+
+Quais são os dois recursos dos endereços IPv4? (Escolha duas.)
+
+- [ ] Os endereços IPv4 são usados apenas para comunicações na Internet.
+- [x] IPv4 é um esquema de endereçamento lógico.
+- [ ] Um endereço IPv4 é vinculado a uma placa de interface de rede para torná-lo único.
+- [ ] Um endereço IPv4 contém 8 octetos.
+- [x] Um esquema de endereçamento IPv4 é hierárquico.
+
+✅ RESPOSTAS CORRETAS: IPv4 é um esquema de endereçamento lógico. / Um esquema de endereçamento IPv4 é hierárquico.
+
+---
+
+### Pergunta 10
+
+Considere o grupo de cinco endereços IPv4 cada um com a máscara de sub-rede 255.255.255.0. Quais dois endereços IPv4 pertencem à mesma rede local? (Escolha duas.)
+
+- [ ] 193.168.10.16
+- [x] 192.168.10.2
+- [ ] 192.168.100.62
+- [ ] 192.167.10.74
+- [x] 192.168.10.56
+
+✅ RESPOSTAS CORRETAS: 192.168.10.2, 192.168.10.56
+
+---
+
+### Pergunta 11
+
+O grupo de TI precisa projetar e implantar a conectividade de rede IPv4 em um novo laboratório de informática do ensino médio. O projeto de rede requer que várias redes lógicas sejam implantadas em uma rede física. Qual tecnologia é necessária para permitir que computadores em redes lógicas diferentes se comuniquem?
+
+- [ ] mapeamento
+- [x] roteamento
+- [ ] hospedagem
+- [ ] comutação
+
+✅ RESPOSTA CORRETA: roteamento
