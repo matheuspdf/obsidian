@@ -147,3 +147,145 @@ Nesta atividade, você completará os seguintes objetivos:
 
 ### Configuração do DHCP em um Roteador Wireless (sem fio)
 
+## Objetivos
+
+- Conectar 3 PCs a um roteador sem fio
+- Alterar a configuração do DHCP para uma faixa de rede específica
+- Configurar os clientes para obter seus endereços por DHCP
+
+## Histórico/Cenário
+
+Um usuário doméstico quer usar um roteador sem fio para conectar 3 PCs. Todos os 3 PCs devem obter seus endereços automaticamente a partir do roteador sem fio.
+
+## Instruções
+
+## Parte 1: Configurar a topologia de rede
+
+a.  Adicione três PCs genéricos.
+
+b.  Conecte cada PC a uma porta Ethernet a um roteador sem fio com cabos diretos.
+
+## Parte 2: Observar as configurações DHCP padrão
+
+a.  Após as luzes amarelas ficarem verdes, clique em **PC0**. Clique na guia **Desktop**. Selecione **IP Configuration**. Selecione **DHCP** para receber um endereço IP do roteador **habilitado para DHCP.**
+
+#### Pergunta:
+
+Anote o endereço IP do gateway padrão.
+
+Área de Resposta
+
+192.168.0.1
+
+Ocultar resposta
+
+b.  Feche a janela **IP Configuration**.
+
+c.  Abra um Navegador Web.
+
+d.  Digite o endereço IP do gateway padrão registrado anteriormente no campo URL. Quando solicitado, insira o nome de usuário **admin** e a senha **admin**.
+
+e.  Role pela página Configuração Básica para visualizar as configurações padrão, incluindo o endereço IP padrão do roteador sem fio.
+
+f.   Observe que o DHCP está ativado, o endereço inicial da faixa DHCP e a faixa dos endereços disponíveis aos clientes.
+
+## Parte 3: Altere os endereços IP padrão do roteador sem fio.
+
+a.  Na seção Configurações do IP do Roteador, altere o endereço IP para: **192.168.5.1**.
+
+b.   Vá até o final da página e clique em **Save Settings** (Salvar Configurações).
+
+c.  Se tudo for feito corretamente, a página Web exibirá uma mensagem de erro. Feche o navegador Web.
+
+d.  Clique em **IP Configuration** para renovar o endereço IP atribuído. Clique em **Static (Estático)**. Clique em **DHCP** para receber novas informações de endereço IP do roteador sem fio.
+
+e.  Abra o Navegador Web, digite o endereço IP **192.168.5.1** no campo URL. Quando solicitado, insira o nome de usuário **admin** e a senha **admin**.
+
+## Parte 4: Altere o intervalo de endereços DHCP padrão.
+
+a.  Observe que o endereço IP inicial do servidor DHCP é atualizado para a mesma rede do IP do roteador.
+
+b.  Altere o endereço IP inicial de 192.168.5.100 para **192.168.5.126**.
+
+c.  Altere o Número Máximo de Usuários para **75**.
+
+d.   Vá até o final da página e clique em **Save Settings** (Salvar Configurações). Feche o Navegador Web.
+
+e.  Clique **em IP Configuration** para renovar o endereço IP atribuído. Clique em  **Static (Estático)**. Clique em **DHCP** para receber novas informações de endereço IP do roteador sem fio.
+
+f.   Selecione **Command Prompt**. Insira **ipconfig**.
+
+#### Pergunta:
+
+Anote o endereço IP do PC0:
+
+Área de Resposta
+
+192.168.5.126
+
+Ocultar resposta
+
+## Parte 5: Ative o DHCP nos outros PCs.
+
+a.  Clique em **PC1**.
+
+b.  Selecione a guia **Desktop**.
+
+c.  Selecione Configuração de IP.
+
+d.  Clique em **DHCP**.
+
+#### Pergunta:
+
+Anote o endereço IP do PC1:
+
+Área de Resposta
+
+192.168.5.127
+
+Ocultar resposta
+
+e.  Feche a janela de configuração de
+
+f.   Ative o DHCP no **PC2** seguindo as etapas para o PC1.
+
+## Parte 6: Verifique a conectividade
+
+a.  Clique no **PC2** e selecione a guia **Desktop**.
+
+b.  Selecione Command Prompt.
+
+c.  Digite **ipconfig** no prompt para visualizar a configuração de IP.
+
+d.   No prompt, digite **ping 192.168.5.1** para pingar o roteador wireless.
+
+e.  Execute o comando **ping 192.168.5.126** para fazer ping em PC0.
+
+f.   No prompt, digite **ping 192.168.5.127** para fazer ping em PC1.
+
+g.  Os pings para todos os dispositivos devem ser bem-sucedidos.
+
+
+# 11.13 Resumo Endereçamento Dinâmico com DHCP
+
+## 11.3.1 O que aprendi neste módulo?
+
+### Endereçamento estático e dinâmico
+
+Com uma atribuição estática, o administrador de rede deve configurar manualmente as informações da rede para um host. No mínimo, isso inclui o endereço IPv4, a máscara de sub-rede e o gateway padrão do host. Embora a atribuição estática de informações de endereçamento possa proporcionar um controle maior dos recursos de rede, a digitação de informações em cada host pode ficar demorada. Ao usar endereçamento IPv4 estático, é importante manter uma lista precisa de quais endereços IPv4 estão atribuídos a quais dispositivos.
+
+Os endereços IPv4 podem ser atribuídos automaticamente usando um protocolo conhecido como DHCP. O DHCP em geral é o método preferido de designação de endereços IPv4 para hosts em redes grandes porque reduz a carga sobre a equipe de suporte da rede e praticamente elimina erros de entrada. Outro benefício do DHCP é que o endereço não é permanentemente atribuído a um host, mas é só "alugado" por um período. Se o host é desligado ou retirado da rede, o endereço retorna ao pool para ser reutilizado.
+
+Assim que você entra na área com um ponto de acesso sem fio, o cliente DHCP do seu notebook entra em contato com o servidor DHCP local por meio de uma conexão sem fio. O servidor DHCP atribui um endereço IPv4 ao seu notebook. Nas redes residenciais, é provável que o servidor DHCP esteja localizado no ISP e um host na rede residencial recebe a configuração IPv4 diretamente do ISP. Muitas redes de residências e pequenas empresas usam um modem e um roteador sem fio. Nesse caso, o roteador sem fio é tanto servidor como cliente DHCP.
+
+---
+
+### Configuração do DHCPv4
+
+O servidor DHCP é configurado com um intervalo (ou pool) de endereços IPv4 que podem ser atribuídos a clientes DHCP. Um cliente que precise de um endereço IPv4 enviará uma mensagem de descoberta DHCP que é um broadcast com o endereço IPv4 de destino 255.255.255.255 (32 uns) e o endereço MAC de destino FF-FF-FF-FF-FF-FF (48 uns). Todos os hosts na rede receberão esse quadro DHCP de broadcast, mas apenas um servidor DHCP responderá. O servidor responderá com uma oferta DHCP, sugerindo um endereço IPv4 para o cliente. O host então envia uma solicitação DHCP pedindo para usar o endereço IPv4 sugerido. O servidor responde com um DHCP Acknowledgment.
+
+Na maioria das redes de residências e pequenas empresas, um roteador sem fio fornece serviços DHCP aos clientes de rede local. Para configurar um roteador sem fio residencial, acesse a interface gráfica Web abrindo o navegador e inserindo o endereço IPv4 padrão do roteador. O endereço IPv4 192.168.0.1 e a máscara de sub-rede 255.255.255.0 são os padrões para a interface interna do roteador. Este é o gateway padrão para todos os hosts na rede local e também o endereço IPv4 interno do servidor DHCP. A maioria dos roteadores sem fio residenciais têm o servidor DHCP ativado por padrão.
+
+## 11.3.2 Webster — Questões para Reflexão
+
+Você inseriu manualmente um endereço IPv4 para todos os dispositivos em sua rede doméstica? Eles são chamados de endereços estáticos. Fiz isso na minha rede doméstica e cometi um erro ao inserir o endereço do tablet. Eu tive que refazê-lo. Você pode imaginar ter que fazer isso em uma grande rede corporativa com centenas ou até milhares de dispositivos? Quais são as outras vantagens de usar o DHCP para endereçamento de dispositivos?
