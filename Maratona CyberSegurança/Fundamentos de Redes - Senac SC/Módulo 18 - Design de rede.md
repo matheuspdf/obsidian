@@ -76,3 +76,92 @@ A infraestrutura da rede, os serviços e os dados contidos nos dispositivos cone
 Proteger a infraestrutura de rede inclui proteger fisicamente os dispositivos que fornecem conectividade de rede e impedir o acesso não autorizado ao software de gerenciamento que reside neles, conforme mostrado na figura.
 
 ![[Pasted image 20260612185431.png]]
+
+Os administradores de rede também devem proteger as informações contidas nos pacotes transmitidos pela rede e as informações armazenadas nos dispositivos conectados à rede. Para atingir os objetivos de segurança de rede, existem três requisitos principais.
+
+- **Confidencialidade** - A confidencialidade dos dados significa que apenas os destinatários pretendidos e autorizados podem acessar e ler os dados.
+- **Integridade** - A integridade dos dados garante aos usuários que as informações não foram alteradas na transmissão, da origem ao destino.
+- **Disponibilidade** - A disponibilidade de dados garante aos usuários acesso oportuno e confiável aos serviços de dados para usuários autorizados.
+
+
+## 18.1.7 Verifique sua compreensão - Redes Confiáveis
+
+**Verifique sua compreensão sobre Redes Confiáveis escolhendo a resposta correta para as seguintes perguntas.**
+
+### Pergunta 1
+
+Quando os designers seguem padrões e protocolos aceitos, qual das quatro características básicas da arquitetura de rede é alcançado?
+
+- [ ] Tolerância a falhas
+- [x] Escalabilidade
+- [ ] QoS
+- [ ] Segurança
+
+✅ RESPOSTA CORRETA: Escalabilidade
+
+> A escalabilidade ocorre quando os designers seguem padrões e protocolos aceitos.
+
+---
+
+### Pergunta 2
+
+Confidencialidade, integridade e disponibilidade são requisitos de qual das quatro características básicas da arquitetura de rede?
+
+- [ ] Tolerância a falhas
+- [ ] Escalabilidade
+- [ ] QoS
+- [x] Segurança
+
+✅ RESPOSTA CORRETA: Segurança
+
+> Confidencialidade, integridade e disponibilidade são requisitos de segurança.
+
+---
+
+### Pergunta 3
+
+Com qual tipo de política, um roteador pode gerenciar o fluxo de dados e tráfego de voz, dando prioridade às comunicações de voz se a rede sofrer congestionamento?
+
+- [ ] Tolerância a falhas
+- [ ] Escalabilidade
+- [x] QoS
+- [ ] Segurança
+
+✅ RESPOSTA CORRETA: QoS
+
+> QoS significa que um roteador gerenciará o fluxo de dados e tráfego de voz, dando prioridade às comunicações de voz.
+
+---
+
+### Pergunta 4
+
+Ter vários caminhos para um destino é conhecido como redundância. Este é um exemplo de qual característica da arquitetura de rede?
+
+- [x] Tolerância a falhas
+- [ ] Escalabilidade
+- [ ] QoS
+- [ ] Segurança
+
+✅ RESPOSTA CORRETA: Tolerância a falhas
+
+> Redundância é um exemplo de arquitetura de rede tolerante a falhas.
+
+
+# 18.2 Projeto de rede hierárquica
+
+## 18.2.1 Endereços Físicos e Lógicos
+
+O nome de uma pessoa normalmente não muda. O endereço de uma pessoa, por outro lado, refere-se a onde a pessoa mora e pode mudar. Em um host, o endereço MAC não muda; ele é atribuído fisicamente à NIC do host e é conhecido como endereço físico. O endereço físico permanece o mesmo, independentemente de onde o host está localizado na rede.
+
+O endereço IP é semelhante ao endereço de uma pessoa. Ele é conhecido como endereço lógico porque é atribuído logicamente com base na localização do host. O endereço IP (ou endereço de rede) é atribuído a cada host por um administrador de rede com base na rede local.
+
+Os endereços IP contêm duas partes. Uma parte identifica a porção de rede. A porção de rede do endereço IP será a mesma para todos os hosts conectados à mesma rede local. A segunda parte do endereço IP identifica o host individualmente nesta rede Dentro da mesma rede local, a porção de host do endereço IP é exclusiva para cada host como mostrado na figura.
+
+Os endereços MAC físico e IP lógico são necessários para que um computador se comunique em uma rede hierárquica, assim como o nome e o endereço de uma pessoa são necessários para enviar uma carta.
+
+![[Pasted image 20260613104812.png]]
+
+## 18.2.2 Vídeo - Visualizar Informações de Rede em Meus Dispositivos
+
+**Selecione o botão Reproduzir para assistir ao vídeo.**
+
