@@ -384,4 +384,8 @@ Neste laboratório, você completará os seguintes objetivos:
 - Capturar e analisar dados ARP no Wireshark.
 - Visualizar as entradas do cache ARP no PC.
 
-[Laboratório - Observar o tráfego capturado pelo Wireshark](Labs/21.2.6 Laboratório/Observar_o_tráfego_capturado_pelo_Wireshark.html)
+#### 21.2.6 Laboratório - Observar o tráfego capturado pelo Wireshark
+
+> Arquivo interativo com respostas ocultáveis.
+
+[Abrir laboratório](Labs/21.2.6 Laboratório/Observar_o_tráfego_capturado_pelo_Wireshark.html)
