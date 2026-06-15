@@ -379,3 +379,84 @@ Esta atividade permite que você pratique a conversão decimal em valores binár
 
 <table border="1" cellpadding="6" cellspacing="0" style="width:100%; table-layout:fixed;"> <tr> <td><strong>Decimal Value</strong></td> <td colspan="8" style="text-align:center;"><strong>43</strong></td> </tr> <tr> <td><strong>Base</strong></td> <td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td> </tr> <tr> <td><strong>Exponent</strong></td> <td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td> </tr> <tr> <td><strong>Position</strong></td> <td>128</td><td>64</td><td>32</td><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td> </tr> <tr> <td><strong>Bit</strong></td> <td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td> </tr> </table>
 
+
+## 20.1.8 Atividade – Jogo Binário
+
+Esta é uma maneira divertida de aprender números binários para redes.
+
+**Link do jogo:** [https://learningnetwork.cisco.com/docs/DOC-1803](https://learningnetwork.cisco.com/s/binary-game)
+
+Você precisará fazer login no cisco.com para usar este link. Será necessário criar uma conta se você ainda não tiver uma.
+
+Há também uma variedade de jogos binários gratuitos para dispostivos mobiles. Pesquise "Binary Games" na sua loja de aplicativos.
+
+
+## 20.1.9 Endereços IPv4
+
+Como mencionado no início deste tópico, roteadores e computadores só entendem binários, enquanto humanos trabalham em decimal. É importante que você obtenha uma compreensão completa desses dois sistemas de numeração e como eles são usados na rede.
+
+**Clique em cada botão para contrastar o endereço decimal com pontos e o endereço de 32 bits.**
+
+**Endereço decimal com pontos**
+
+192.168.10.10 é um endereço IP atribuído a um computador.
+
+<table border="1" cellpadding="6" cellspacing="0" style="width:100%; table-layout:fixed;"> <tr> <td style="text-align:center;"><strong>192</strong></td> <td style="text-align:center;">·</td> <td style="text-align:center;"><strong>168</strong></td> <td style="text-align:center;">·</td> <td style="text-align:center;"><strong>10</strong></td> <td style="text-align:center;">·</td> <td style="text-align:center;"><strong>10</strong></td> </tr> <tr> <td style="text-align:center;">11000000</td> <td style="text-align:center;"></td> <td style="text-align:center;">10101000</td> <td style="text-align:center;"></td> <td style="text-align:center;">00001010</td> <td style="text-align:center;"></td> <td style="text-align:center;">00001010</td> </tr> </table>
+
+---
+
+**Octetos**
+
+Esse endereço é composto por quatro octetos diferentes.
+
+<table border="1" cellpadding="6" cellspacing="0" style="width:100%; table-layout:fixed;"> <tr> <td style="text-align:center;">192</td> <td style="text-align:center;">·</td> <td style="text-align:center;">168</td> <td style="text-align:center;">·</td> <td style="text-align:center;">10</td> <td style="text-align:center;">·</td> <td style="text-align:center;">10</td> </tr> <tr> <td style="text-align:center;"><strong>11000000</strong></td> <td style="text-align:center;"></td> <td style="text-align:center;"><strong>10101000</strong></td> <td style="text-align:center;"></td> <td style="text-align:center;"><strong>00001010</strong></td> <td style="text-align:center;"></td> <td style="text-align:center;"><strong>00001010</strong></td> </tr> </table>
+
+---
+
+**Endereço de 32 bits**
+
+O computador armazena o endereço como o fluxo de dados inteiro de 32 bits.
+
+<table border="1" cellpadding="6" cellspacing="0" style="width:100%; table-layout:fixed;"> <tr> <td style="text-align:center;">192</td> <td style="text-align:center;">·</td> <td style="text-align:center;">168</td> <td style="text-align:center;">·</td> <td style="text-align:center;">10</td> <td style="text-align:center;">·</td> <td style="text-align:center;">10</td> </tr> <tr> <td style="text-align:center;"><strong>11000000</strong></td> <td style="text-align:center;"></td> <td style="text-align:center;"><strong>10101000</strong></td> <td style="text-align:center;"></td> <td style="text-align:center;"><strong>00001010</strong></td> <td style="text-align:center;"></td> <td style="text-align:center;"><strong>00001010</strong></td> </tr> </table>
+
+
+# 20.2 Sistema de numeração hexadecimal
+
+## 20.2.1 Endereços hexadecimais e IPv6
+
+Agora você sabe como converter binário para decimal e decimal para binário. Você precisa dessa habilidade para entender o endereçamento IPv4 em sua rede. Mas é igualmente provável que esteja utilizando endereços IPv6 na sua rede. Para entender endereços IPv6, você deve ser capaz de converter hexadecimal para decimal e vice-versa.
+
+Assim como decimal é um sistema numérico de base dez, hexadecimal é um sistema de base dezesseis. O sistema numérico de base dezesseis usa os dígitos 0 a 9 e as letras A a F. A figura mostra os valores decimais e hexadecimais equivalentes para os binários 0000 a 1111.
+
+|Decimal|Binário|Hexadecimal|
+|---|---|---|
+|0|0000|0|
+|1|0001|1|
+|2|0010|2|
+|3|0011|3|
+|4|0100|4|
+|5|0101|5|
+|6|0110|6|
+|7|0111|7|
+|8|1000|8|
+|9|1001|9|
+|10|1010|A|
+|11|1011|B|
+|12|1100|C|
+|13|1101|D|
+|14|1110|E|
+|15|1111|F|
+
+Binário e hexadecimal funcionam bem juntos, porque é mais fácil expressar um valor como um único dígito de hexadecimal do que como quatro bits binários.
+
+O sistema de numeração hexadecimal é usado em rede para representar endereços IP versão 6 e endereços MAC Ethernet.
+
+Os endereços IPv6 têm 128 bits de comprimento e a cada 4 bits é representado por um único dígito hexadecimal; para um total de 32 valores hexadecimais. Os endereços IPv6 não diferenciam maiúsculas e minúsculas e podem ser escritos tanto em minúsculas como em maiúsculas.
+
+Conforme mostrado na figura, o formato preferido para escrever um endereço IPv6 é x:x:x:x:x:x:x:x, com cada "x" consistindo em quatro valores hexadecimais. Quando falamos de 8 bits de um endereço IPv4, usamos o termo octeto. No IPv6, um _hexteto_ é o termo não oficial usado para se referir a um segmento de 16 bits ou quatro valores hexadecimais. Cada "x" é um único hextet, 16 bits ou quatro dígitos hexadecimais.
+
+![[Pasted image 20260614215502.png]]
+
+A topologia de exemplo na figura exibe endereços hexadecimais IPv6.
+
+![[Pasted image 20260614215516.png]]
