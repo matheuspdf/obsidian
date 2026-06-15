@@ -460,3 +460,144 @@ Conforme mostrado na figura, o formato preferido para escrever um endereço IPv6
 A topologia de exemplo na figura exibe endereços hexadecimais IPv6.
 
 ![[Pasted image 20260614215516.png]]
+
+
+## 20.2.2 Vídeo — Conversão entre sistemas de numeração hexadecimal e decimal
+
+Hexadecimal, ou hex para abreviação, é um sistema numérico de base 16. Ele usa 16 símbolos: os números de zero a nove, bem como as letras A a F. Baseia-se em potências de 16.
+
+Se seguirmos o mesmo procedimento usado para converter binário em decimal, podemos escrever os valores de lugar ou notação posicional para o sistema de números hexadecimal também. Considerando os primeiros quatro valores de lugar: 16 elevado a zero é igual a 1; 16 elevado a um é igual a 16; 16 elevado a dois é igual a 256 (16 vezes 16); e 16 elevado a três é igual a 4.096 (16 vezes 16 vezes 16).
+
+Os equivalentes decimais e binários de cada símbolo hexadecimal são os seguintes. O símbolo hexadecimal A é igual a 10 decimal, hex B é igual a 11 decimal, e assim por diante, até hexadecimal F que é igual a 15 decimal. Cada símbolo hexadecimal pode ser usado para representar um número binário de 4 bits. Dado que 8 bits é um grupo binário comum, podemos representar um número binário de 8 bits usando apenas dois símbolos hexadecimais.
+
+**Exemplo 1: converter hexadecimal 2A em decimal**
+
+Primeiro, escrevemos a notação posicional para as duas primeiras potências de 16 e inserimos os símbolos hexadecimais abaixo dos valores de lugar correspondentes: 2 abaixo de 16 e A abaixo de 1. Em seguida, multiplicamos cada símbolo hexadecimal pelo valor do lugar e somamos os resultados:
+
+2 × 16 + A × 1 = 32 + 10 = **42 em decimal**
+
+**Exemplo 2: converter 197 decimal para hexadecimal**
+
+Multiplicar ou dividir por 16 nem sempre é fácil ao fazer conversões hexadecimais para decimais. Normalmente, é mais fácil converter o valor decimal para binário primeiro e depois converter esse número binário para hexadecimal.
+
+Primeiro, convertemos 197 para um número binário de 8 bits, usando os primeiros oito valores de lugar do sistema de numeração binário:
+
+- 197 >= 128 → colocar 1, restar 69
+- 69 >= 64 → colocar 1, restar 5
+- 5 < 32 → colocar 0
+- 5 < 16 → colocar 0
+- 5 < 8 → colocar 0
+- 5 >= 4 → colocar 1, restar 1
+- 1 < 2 → colocar 0
+- 1 >= 1 → colocar 1, restar 0
+
+Portanto, decimal 197 = **11000101** em binário.
+
+Em seguida, dividimos o número binário de 8 bits em dois grupos de 4 bits e reescrevemos os valores de lugar binário (1, 2, 4, 8) acima de cada metade:
+
+- Metade esquerda: **1100** → 8 + 4 = 12 decimal = **C** em hexadecimal
+- Metade direita: **0101** → 4 + 1 = 5 decimal = **5** em hexadecimal
+
+Portanto, 197 em decimal é **C5 em hexadecimal**, ou também pode ser escrito como **0xC5** — o prefixo 0x indica que o que se segue está escrito em hexadecimal.
+
+**Exemplo 3: converter hexadecimal 9F para decimal via binário**
+
+Primeiro, convertemos cada símbolo hexadecimal para seu equivalente binário:
+
+- 9 hexadecimal = 9 decimal = **1001** em binário
+- F hexadecimal = 15 decimal = **1111** em binário
+
+Em seguida, combinamos os dois grupos em um número binário de 8 bits: **10011111**
+
+Convertendo para decimal usando os oito valores de lugar:
+
+128 + 16 + 8 + 4 + 2 + 1 = **159 em decimal**
+
+Muitas vezes, existem várias maneiras de abordar a conversão entre sistemas numéricos. Você deve usar o que funciona melhor para você.
+
+## 20.2.3 Verifique sua compreensão - Converter entre sistemas numéricos decimais para hexadecimais
+
+### Pergunta 1
+
+Qual é o equivalente hexadecimal de 202?
+
+- [ ] B10
+- [ ] BA
+- [ ] C10
+- [x] CA
+
+✅ RESPOSTA CORRETA: CA
+
+> O equivalente hexadecimal de 202 é CA.
+
+---
+
+### Pergunta 2
+
+Qual é o equivalente hexadecimal de 254?
+
+- [ ] EA
+- [ ] ED
+- [ ] FA
+- [x] FE
+
+✅ RESPOSTA CORRETA: FE
+
+> O equivalente hexadecimal de 254 é FE.
+
+---
+
+### Pergunta 3
+
+Qual é o equivalente decimal de A9?
+
+- [ ] 168
+- [x] 169
+- [ ] 170
+- [ ] 171
+
+✅ RESPOSTA CORRETA: 169
+
+> O equivalente decimal de A9 é 169.
+
+---
+
+### Pergunta 4
+
+Qual dos seguintes é o equivalente decimal de 7D?
+
+- [ ] 124
+- [x] 125
+- [ ] 126
+- [ ] 127
+
+✅ RESPOSTA CORRETA: 125
+
+> O equivalente decimal de 7D é 125.
+
+
+# 20.3 Resumo dos sistemas numéricos
+
+## 20.3.1 O Que Eu Aprendi Neste Módulo?
+
+### Sistemas de números binários
+
+Binário é um sistema de numeração que consiste nos dígitos 0 e 1 chamados bits. Por outro lado, o sistema de numeração decimal consiste em 10 dígitos, compreendendo os dígitos de 0 a 9. Hosts, servidores e dispositivos de rede usam endereçamento binário. Especificamente, eles usam endereços IPv4 binários. Para facilitar o uso pelas pessoas, os endereços IPv4 são geralmente expressos em notação decimal com pontos.
+
+Este sistema decimal usa as potências de dez, ou base 10. Por exemplo, o número 2.146 tem 2 na casa dos milhares, ou dois mil. Tem um 1 na casa das centenas, ou cem. Tem um 4 no lugar das dezenas, ou 40. Tem um 6 no lugar das unidades, ou seis.
+
+O sistema binário é um sistema numérico de base 2. Cada valor local pode ter um 0 ou um 1. Uma ferramenta útil é a tabela de valores posicionais binários. É comum usar uma tabela com oito espaços reservados. 8 bits equivalem a um byte.
+
+---
+
+### Sistema de numeração hexadecimal
+
+O sistema de numeração hexadecimal é usado em rede para representar endereços IP versão 6 e endereços MAC Ethernet. Esse sistema numérico de base dezesseis usa os dígitos de 0 a 9 e as letras A a F. Binário e hexadecimal funcionam bem juntos porque é mais fácil expressar um valor como um único dígito hexadecimal do que como quatro bits binários.
+
+Os endereços IPv6 têm 128 bits de comprimento e a cada 4 bits é representado por um único dígito hexadecimal; para um total de 32 valores hexadecimais. Os endereços IPv6 não diferenciam maiúsculas e minúsculas e podem ser escritos tanto em minúsculas como em maiúsculas.
+
+---
+
+## 20.3.2 Webster - Questões para Reflexão
+
+Eu não esperava fazer matemática no meio do meu curso de rede, mas fiquei surpreso com o quão divertido é converter números decimais em seus equivalentes binários e hexadecimais. Eu tenho uma melhor compreensão de por que os endereços IP são representados da maneira que os vemos. Antes de fazer este módulo, o que você sabia sobre sistemas de numeração binários e hexadecimais? Dê uma olhada no endereço MAC da NIC do seu computador. O que você reconhece sobre esse endereço que talvez não tenha antes?
