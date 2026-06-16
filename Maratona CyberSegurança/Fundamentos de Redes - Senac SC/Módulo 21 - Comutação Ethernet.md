@@ -388,6 +388,8 @@ Neste laboratório, você completará os seguintes objetivos:
 
 > Arquivo interativo com respostas ocultáveis.
 
+[Abrir laboratório](Fundamentos%20de%20Redes%20-%20Senac%20SC/Labs/21.2.6%20Laboratório/Observar_o_tráfego_capturado_pelo_Wireshark.html)
 
-[Abrir laboratório](Fundamentos de Redes - Senac SC/Labs/21.2.6 Laboratório/Observar_o_tráfego_capturado_pelo_Wireshark.html)
+
+
 
