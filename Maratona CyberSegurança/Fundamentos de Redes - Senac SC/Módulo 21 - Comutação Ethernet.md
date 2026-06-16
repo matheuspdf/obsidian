@@ -392,4 +392,10 @@ Neste laboratório, você completará os seguintes objetivos:
 
 
 
+## 21.2.7 Laboratório - Use o Wireshark para examinar quadros Ethernet
+
+Neste laboratório, você cumprirá os seguintes objetivos:
+
+- Parte 1: Examinar os campos do cabeçalho de um quadro Ethernet II
+- Parte 2: Usar o Wireshark para capturar e analisar quadros Ethernet
 
