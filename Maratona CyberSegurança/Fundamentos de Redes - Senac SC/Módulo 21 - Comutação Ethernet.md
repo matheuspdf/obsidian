@@ -399,5 +399,4 @@ Neste laboratório, você cumprirá os seguintes objetivos:
 - Parte 1: Examinar os campos do cabeçalho de um quadro Ethernet II
 - Parte 2: Usar o Wireshark para capturar e analisar quadros Ethernet
 
-[Abrir laboratório](Fundamentos%20de%20Redes%20-%20Senac%20SC/Labs/21.2.7/Use o Wireshark para examinar quadros Ethernet.html)
-
+[Abrir laboratório](Labs/21.2.7/Use%20o%20Wireshark%20para%20examinar%20quadros%20Ethernet.html)
