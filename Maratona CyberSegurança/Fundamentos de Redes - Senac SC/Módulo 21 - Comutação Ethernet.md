@@ -386,8 +386,6 @@ Neste laboratório, você completará os seguintes objetivos:
 
 #### 21.2.6 Laboratório - Observar o tráfego capturado pelo Wireshark
 
-> Arquivo interativo com respostas ocultáveis.
-
 [Abrir laboratório](Fundamentos%20de%20Redes%20-%20Senac%20SC/Labs/21.2.6%20Laboratório/Observar_o_tráfego_capturado_pelo_Wireshark.html)
 
 
@@ -400,3 +398,193 @@ Neste laboratório, você cumprirá os seguintes objetivos:
 - Parte 2: Usar o Wireshark para capturar e analisar quadros Ethernet
 
 [Abrir laboratório](Labs/21.2.7/Use%20o%20Wireshark%20para%20examinar%20quadros%20Ethernet.html)
+
+
+# 21.3 Endereços MAC Ethernet
+
+## 21.3.1 Endereço MAC e Hexadecimal
+
+Equivalentes decimais e binários de 0 a F Hexadecimal
+
+Na rede, os endereços IPv4 são representados usando o sistema de dez números base decimal e o sistema de números de base binária 2. Endereços IPv6 e endereços Ethernet são representados usando o sistema hexadecimal base dezesseis números. Para entender hexadecimal, você deve primeiro estar muito familiarizado com binário e decimal.
+
+O sistema de numeração hexadecimal usa os números de 0 a 9 e as letras de A a F.
+
+Um endereço MAC Ethernet consiste em um valor binário de 48 bits. Hexadecimal é usado para identificar um endereço Ethernet porque um único dígito hexadecimal representa quatro bits binários. Portanto, um endereço MAC Ethernet de 48 bits pode ser expresso usando apenas 12 valores hexadecimais.
+
+A figura compara os valores decimal e hexadecimais equivalentes para o binário 0000 a 1111.
+
+### Equivalentes decimais e binários de 0 a F Hexadecimal
+
+|Decimal|Binário|Hexadecimal|
+|---|---|---|
+|0|0000|0|
+|1|0001|1|
+|2|0010|2|
+|3|0011|3|
+|4|0100|4|
+|5|0101|5|
+|6|0110|6|
+|7|0111|7|
+|8|1000|8|
+|9|1001|9|
+|10|1010|A|
+|11|1011|B|
+|12|1100|C|
+|13|1101|D|
+|14|1110|E|
+|15|1111|F|
+
+### Equivalentes decimais, binários e hexadecimais selecionados
+
+Dado que 8 bits (um byte) é um agrupamento binário comum, os binários 00000000 a 11111111 podem ser representados em hexadecimal como o intervalo de 00 a FF, conforme mostrado na figura a seguir.
+
+### Equivalentes decimais, binários e hexadecimais selecionados
+
+| Decimal | Binário   | Hexadecimal |
+| ------- | --------- | ----------- |
+| 0       | 0000 0000 | 00          |
+| 1       | 0000 0001 | 01          |
+| 2       | 0000 0010 | 02          |
+| 3       | 0000 0011 | 03          |
+| 4       | 0000 0100 | 04          |
+| 5       | 0000 0101 | 05          |
+| 6       | 0000 0110 | 06          |
+| 7       | 0000 0111 | 07          |
+| 8       | 0000 1000 | 08          |
+| 10      | 0000 1010 | 0A          |
+| 15      | 0000 1111 | 0F          |
+| 16      | 0001 0000 | 10          |
+| 32      | 0010 0000 | 20          |
+| 64      | 0100 0000 | 40          |
+| 128     | 1000 0000 | 80          |
+| 192     | 1100 0000 | C0          |
+| 202     | 1100 1010 | CA          |
+| 240     | 1111 0000 | F0          |
+| 255     | 1111 1111 | FF          |
+
+Ao usar hexadecimal, os zeros à esquerda são sempre exibidos para concluir a representação de 8 bits. Por exemplo, na tabela, o valor binário 0000 1010 é mostrado em hexadecimal como 0A.
+
+Números hexadecimais são frequentemente representados pelo valor precedido por **0x** (por exemplo, 0x73) para distinguir entre valores decimal e hexadecimais na documentação.
+
+O hexadecimal também pode ser representado por um subscript 16, ou o número hexadecimal seguido por um H (por exemplo, 73H).
+
+Talvez seja necessário converter entre valores decimal e hexadecimais. Se tais conversões forem necessárias, converta o valor decimal ou hexadecimal em binário e, em seguida, converta o valor binário em decimal ou hexadecimal, conforme apropriado.
+
+
+## 21.3.2 Endereço MAC Unicast
+
+Na Ethernet, são utilizados diferentes endereços MAC para comunicação unicast, broadcast e multicast da Camada 2.
+
+Um endereço MAC de unicast é o endereço exclusivo usado quando um quadro é enviado de um único dispositivo de transmissão para um único dispositivo de destino.
+
+Clique em Reproduzir na animação para ver como um quadro de unicast é processado. Neste exemplo, o endereço MAC de destino e o endereço IP de destino são unicast.
+
+![[Pasted image 20260615213011.png]]
+
+No exemplo mostrado na figura, um host com endereço IPv4 192.168.1.5 (origem) requisita uma página Web do servidor no endereço IPv4 192.168.1.200. Para que um pacote unicast seja enviado e recebido, um endereço IP de destino deve estar no cabeçalho do pacote IP. Um endereço MAC de destino correspondente também deve estar presente no cabeçalho do quadro Ethernet. O endereço IP e o endereço MAC se combinam para entregar dados a um host de destino específico.
+
+O processo que um host de origem usa para determinar o endereço MAC de destino associado a um endereço IPv4 é conhecido como ARP (Address Resolution Protocol). O processo que um host de origem usa para determinar o endereço MAC de destino associado a um endereço IPv6 é conhecido como ND (Neighbour Discovery Discovery).
+
+**Nota:** O endereço MAC de origem deve ser sempre um unicast.
+
+
+## 21.3.3 Endereço MAC de broadcast
+
+Um quadro de transmissão Ethernet é recebido e processado por cada dispositivo na LAN Ethernet. Os recursos de uma transmissão Ethernet são os seguintes:
+
+- Possui um endereço MAC de destino de FF-FF-FF-FF-FF-FF em hexadecimal (48 endereços em binário).
+- É inundada todas as portas de switch Ethernet, exceto a porta de entrada.
+- Ele não é encaminhado por um roteador.
+
+Se os dados encapsulados forem um pacote de transmissão IPv4, isso significa que o pacote contém um endereço IPv4 de destino que possui todos os 1s na parte do host. Essa numeração no endereço significa que todos os hosts naquela rede local (domínio de broadcast) receberão e processarão o pacote.
+
+Clique em Reproduzir na animação para ver como um quadro de broadcast é processado. Neste exemplo, o endereço MAC de destino e o endereço IP de destino são transmissões.
+
+![[Pasted image 20260615213043.png]]
+
+Como mostrado na animação, o host de origem envia um pacote IPv4 broadcast a todos os dispositivos de sua rede. O endereço IPv4 destino é um endereço de broadcast, 192.168.1.255. Quando o pacote IPv4 broadcast é encapsulado no quadro Ethernet, o endereço MAC de destino é o endereço MAC de broadcast FF-FF-FF-FF-FF-FF em hexadecimal (48 uns em binário).
+
+DHCP para IPv4 é um exemplo de um protocolo que usa endereços de broadcast Ethernet e IPv4.
+
+No entanto, nem todas as transmissões Ethernet carregam um pacote de difusão IPv4. Por exemplo, as Solicitações ARP não usam IPv4, mas a mensagem ARP é enviada como uma transmissão Ethernet.
+
+
+## 21.3.4 Endereço MAC Multicast
+
+Um quadro de multicast Ethernet é recebido e processado por um grupo de dispositivos na LAN Ethernet que pertencem ao mesmo grupo de multicast. Os recursos de um multicast Ethernet são os seguintes:
+
+- Há um endereço MAC de destino 01-00-5E quando os dados encapsulados são um pacote multicast IPv4 e um endereço MAC de destino de 33-33 quando os dados encapsulados são um pacote multicast IPv6.
+- Há outros endereços MAC de destino multicast reservados para quando os dados encapsulados não são IP, como STP (Spanning Tree Protocol) e LLDP (Link Layer Discovery Protocol).
+- É inundada todas as portas de switch Ethernet, exceto a porta de entrada, a menos que o switch esteja configurado para espionagem multicast.
+- Ele não é encaminhado por um roteador, a menos que o roteador esteja configurado para rotear pacotes multicast.
+
+Se os dados encapsulados forem um pacote multicast IP, os dispositivos que pertencem a um grupo multicast recebem um endereço IP do grupo multicast. O intervalo de endereços IPv4 multicast vai de 224.0.0.0 a 239.255.255.255. O intervalo de endereços multicast IPv6 começa com ff00::/8. Como os endereços multicast representam um grupo de endereços (às vezes chamado de grupo de hosts), eles só podem ser utilizados como destino de um pacote. A origem sempre será um endereço unicast.
+
+Assim como nos endereços unicast e broadcast, o endereço IP multicast requer um endereço MAC multicast correspondente para entregar quadros em uma rede local. O endereço MAC multicast está associado e usa informações de endereçamento do endereço multicast IPv4 ou IPv6.
+
+Pressione Reproduzir na animação para ver como um quadro multicast é processado. Neste exemplo, o endereço MAC de destino e o endereço IP de destino são multicasts.
+
+![[Pasted image 20260615213115.png]]
+
+Protocolos de roteamento e outros protocolos de rede usam endereçamento multicast. Aplicativos como software de vídeo e imagem também podem usar endereçamento multicast, embora aplicativos multicast não sejam tão comuns.
+
+## 21.3.5 Verifique a sua compreensão - Endereço MAC Ethernet
+
+### Pergunta 1
+
+Que tipo de endereço MAC a seguir é endereço MAC de unicast?
+
+- [ ] 01-00-5E-00-00-C8
+- [x] 00-07-E9-42-AC-28
+- [ ] 33-33-00-58-94-5C
+- [ ] FF-FF-FF-FF-FF-FF
+
+✅ RESPOSTA CORRETA: 00-07-E9-42-AC-28
+
+> 00-07-E9-42-AC-28 é o endereço MAC de unicast.
+
+---
+
+### Pergunta 2
+
+Que tipo de endereço MAC a seguir é transmitido por endereço MAC?
+
+- [ ] 01-00-5E-00-00-C8
+- [ ] 00-07-E9-42-AC-28
+- [ ] 33-33-00-58-94-5C
+- [x] FF-FF-FF-FF-FF-FF
+
+✅ RESPOSTA CORRETA: FF-FF-FF-FF-FF-FF
+
+> FF-FF-FF-FF-FF-FF é um endereço MAC de broadcast.
+
+---
+
+### Pergunta 3
+
+Que tipo do seguinte endereço MAC é um endereço MAC multicast IPv4?
+
+- [x] 01-00-5E-00-00-C8
+- [ ] 00-07-E9-42-AC-28
+- [ ] 33-33-00-58-94-5C
+- [ ] FF-FF-FF-FF-FF-FF
+
+✅ RESPOSTA CORRETA: 01-00-5E-00-00-C8
+
+> 01-00-5E-00-00-C8 é um endereço MAC multicast IPv4.
+
+---
+
+### Pergunta 4
+
+Que tipo de endereço MAC a seguir é um endereço IP multicast de IPv6?
+
+- [ ] 01-00-5E-00-00-C8
+- [ ] 00-07-E9-42-AC-28
+- [x] 33-33-00-58-94-5C
+- [ ] FF-FF-FF-FF-FF-FF
+
+✅ RESPOSTA CORRETA: 33-33-00-58-94-5C
+
+> 33-33-00-58-94-5C é um endereço MAC multicast IPv6.
