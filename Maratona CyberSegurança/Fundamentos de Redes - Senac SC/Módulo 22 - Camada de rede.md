@@ -252,6 +252,11 @@ Os campos Opções e Preenchimento raramente são usados e estão além do escop
 
 [[videos/22.2.3.vtt|Arquivo da legenda em pt-BR]]
 
+
+![](https://www.youtube.com/watch?v=_6-u61V0GGE)
+
+
+
 Eu tenho uma captura de tela do Wireshark e você pode ver que o segundo pacote capturado foi destacado. Na janela de detalhes do pacote, a informação da camada de rede foi expandida para nos mostrar todas as coisas que acontecem na camada de rede.
 
 Vamos ver o que está acontecendo neste pacote específico que estamos examinando. Podemos ver que o protocolo de camada de rede com que estamos lidando era o Protocolo de Internet versão 4 — IPv4. Também podemos ver que o endereço IP de origem era 192.168.1.109 e o endereço IP de destino era 192.168.1.1. Podemos ver que na camada superior este é um pacote de protocolo TCP.
