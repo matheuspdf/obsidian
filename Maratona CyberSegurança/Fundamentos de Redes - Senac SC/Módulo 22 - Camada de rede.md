@@ -247,15 +247,7 @@ Os campos Opções e Preenchimento raramente são usados e estão além do escop
 
 **Selecione o botão Reproduzir para assistir ao vídeo.**
 
-
-![[videos/22.2.3.mp4]]
-
-[[videos/22.2.3.vtt|Arquivo da legenda em pt-BR]]
-
-
 ![](https://www.youtube.com/watch?v=_6-u61V0GGE)
-
-
 
 Eu tenho uma captura de tela do Wireshark e você pode ver que o segundo pacote capturado foi destacado. Na janela de detalhes do pacote, a informação da camada de rede foi expandida para nos mostrar todas as coisas que acontecem na camada de rede.
 
