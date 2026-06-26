@@ -219,7 +219,76 @@ Essas informações podem ser usadas para localizar um roteador problemático no
 O Traceroute utiliza uma função do campo TTL no IPv4 e do campo Limite de saltos no IPv6 nos cabeçalhos da camada 3, junto com a mensagem ICMP Time Exceded.
 
 Execute a animação na figura para ver como o traceroute tira proveito do TTL.
+![[29.2.5.mp4]]A primeira sequência de mensagens enviadas pelo traceroute terá um campo TTL de valor 1. Isso faz com que o TTL coloque um tempo limite no pacote IPv4 que ocorrerá no primeiro roteador. Este roteador responde com uma mensagem ICMPv4 com tempo excedido. Agora o Traceroute tem o endereço do primeiro salto.
 
-![[brave_woiVgCQO90.gif]]
+O Traceroute aumenta progressivamente o campo TTL (2, 3, 4...) para cada sequência de mensagens. Isso fornece ao rastreamento o endereço de cada salto à medida que os pacotes expiram mais adiante no caminho. O campo TTL continua a ser aumentado até alcançar o destino ou até atingir um valor máximo pré-determinado.
 
-![[brave_rlRjaMRxAx.mp4]]
+Depois que o destino final é alcançado, o host responde com uma mensagem de Porta inacessível do ICMP ou uma mensagem de resposta de eco do ICMP, em vez da mensagem Tempo excedido do ICMP.
+
+
+## 29.2.6 Packet Tracer - Verifique o endereçamento IPv4 e IPv6
+
+Nesta atividade, você completará os seguintes objetivos:
+
+- Testar e Restaurar a conectividade IPv4
+- Testar e Restaurar a Conectividade IPv6
+
+
+## 29.2.7 Packet Tracer - Use Ping e Traceroute para testar a conectividade de rede
+
+Nesta atividade, você completará os seguintes objetivos:
+
+- Completar a Documentação da Tabela de Endereçamento
+- Testar a Conectividade Usando Ping
+- Descobrir o Caminho Rastreando a Rota
+
+
+# 29.3 Resumo ICMP
+
+### 29.3.1 Packet Tracer – Use ICMP para testar e corrigir a conectividade de rede
+
+Nesta atividade do Packet Tracer, você atingirá os seguintes objetivos:
+
+- Use ICMP para localizar problemas de conectividade.
+- Configurar dispositivos de rede para corrigir problemas de conectividade.
+
+## 29.3.2 O que aprendi neste módulo?
+
+### Mensagens ICMP
+
+Embora o IP seja apenas um protocolo de melhor esforço, o pacote TCP/IP fornece mensagens de erro e mensagens informativas ao se comunicar com outro dispositivo IP. Essas mensagens são enviadas com os serviços do ICMP. O objetivo dessas mensagens é dar feedback sobre questões relativas ao processamento de pacotes IP sob certas condições, e não tornar o IP confiável. O ICMP está disponível tanto para IPv4 como para IPv6. ICMPv4 é o protocolo de mensagens para o IPv4. O ICMPv6 fornece os mesmos serviços para o IPv6, mas inclui funcionalidade adicional.
+
+Uma mensagem de eco ICMP pode ser usada para testar a capacidade de acesso de um host em uma rede IP. O host local envia uma solicitação de eco ICMP (ICMP Echo Request) para um host. Se o host estiver disponível, o host de destino enviará uma resposta de eco (Echo Reply).
+
+Quando um host ou um gateway recebe um pacote que não pode entregar, ele pode usar uma mensagem ICMP de destino inalcançável para notificar à origem que o destino ou o serviço está inalcançável. A mensagem conterá um código que indica por que não foi possível entregar o pacote.
+
+Uma mensagem ICMPv4 Time Exceeded é usada por um roteador para indicar que um pacote não pode ser encaminhado porque o campo TTL do pacote foi reduzido para 0. Se um roteador recebe um pacote e o campo TTL do pacote IPv4 diminui para zero, ele descarta o pacote e envia uma mensagem de tempo excedido para o host de origem.
+
+O ICMPv6 também enviará uma mensagem de tempo excedido se o roteador não conseguir encaminhar um pacote IPv6 porque o pacote expirou. As mensagens informativas e de erro encontradas no ICMPv6 são muito semelhantes às mensagens de controle e de erros implementadas pelo ICMPv4. No entanto, o ICMPv6 inclui quatro novos protocolos como parte do ND ou NDP, como segue:
+
+- Mensagem RS
+- Mensagem RA
+- Mensagem NS
+- Mensagem NA
+
+---
+
+### Testes de Ping e Traceroute
+
+Para testar a conectividade com outro host em uma rede, uma solicitação de eco é enviada ao endereço do host usando o comando `ping`. Se o host no endereço especificado receber a requisição de eco, ele enviará uma resposta de eco. À medida que cada resposta de eco é recebida, o ping fornece feedback sobre o tempo entre o envio da requisição e o recebimento da resposta. Esta pode ser uma medida do desempenho da rede. O ping tem um valor de tempo limite para a resposta. Se a resposta não é recebida dentro do tempo de espera, o ping mostra uma mensagem informando que a resposta não foi recebida.
+
+Os tipos de testes de conectividade realizados com ping incluem o seguinte:
+
+- **Pingando a loopback local** – O ping pode ser usado para testar a configuração interna do IPv4 ou IPv6 no host local. Para realizar este teste, execute ping no endereço de loopback local.
+- **Pingando o gateway padrão** – Isso geralmente é feito pingando o endereço IP do gateway padrão do host. Um ping bem-sucedido no gateway padrão indica que o host e a interface do roteador que servem como gateway padrão estão operacionais na rede local.
+- **Pingando o host remoto** – Um ping bem-sucedido na rede confirma a comunicação na rede local, a operação do roteador que serve como gateway padrão e a operação de todos os outros roteadores que possam estar no caminho entre a rede local e a rede do host remoto.
+
+Tracert é um utilitário que gera uma lista de saltos que foram alcançados com sucesso ao longo do caminho. Essa lista pode dar informações importantes para a verificação e a solução de erros. Se os dados atingirem o destino, o rastreamento listará a interface de cada roteador no caminho entre os hosts. Caso ocorra falha nos dados em algum salto ao longo do caminho, o endereço do último roteador que respondeu ao rastreamento poderá fornecer uma indicação de onde está o problema ou das restrições de segurança que foram encontradas.
+
+O tempo de ida e volta é o tempo que um pacote leva para alcançar o host remoto e retornar a resposta do host. Um asterisco (*) é usado para indicar um pacote perdido ou não respondido. O Traceroute utiliza uma função do campo TTL no IPv4 e do campo Limite de saltos no IPv6 nos cabeçalhos da camada 3, junto com a mensagem ICMP Time Exceded.
+
+---
+
+## 29.3.3 Webster – Perguntas para reflexão
+
+Não há muito sentido em configurar uma rede se você não testá-la para ter certeza de que está funcionando corretamente. Diego precisa garantir que sua rede esteja funcionando e que ela se conecte à rede da sede e à internet. Este módulo forneceu algumas das ferramentas de solução de problemas mais comuns usadas por administradores de rede em todo o mundo. Você ainda pode usar essas ferramentas em sua rede doméstica. Experimente e veja!
