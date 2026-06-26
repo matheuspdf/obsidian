@@ -197,3 +197,27 @@ Além disso, a funcionalidade do host remoto pode ser verificada. Se o host remo
 
 **Observação**: muitos administradores de rede limitam ou proíbem a entrada de mensagens ICMP na rede corporativa, por isso a falta de uma resposta do **ping** pode ser consequência de restrições de segurança.
 
+![[Pasted image 20260625212915.png]]
+![[Pasted image 20260625212931.png]]![[Pasted image 20260625212955.png]]
+![[Pasted image 20260625213007.png]]
+![[Pasted image 20260625213027.png]]![[Pasted image 20260625213058.png]]
+![[Pasted image 20260625213116.png]]
+![[Pasted image 20260625213154.png]]
+
+## 29.2.5 Traceroute - Testar o Caminho
+
+O ping é usado para testar a conectividade entre dois hosts, mas não fornece informações sobre detalhes de dispositivos entre os hosts. Traceroute (**tracert**) é um utilitário que gera uma lista de saltos que foram alcançados com sucesso ao longo do caminho. Essa lista pode dar informações importantes para a verificação e a solução de erros. Se os dados atingirem o destino, o rastreamento listará a interface de cada roteador no caminho entre os hosts. Caso ocorra falha nos dados em algum salto ao longo do caminho, o endereço do último roteador que respondeu ao rastreamento poderá fornecer uma indicação de onde está o problema ou das restrições de segurança que foram encontradas.
+
+**Tempo de Ida e Volta (RTT)**
+
+O uso do traceroute fornece tempo de ida e volta para cada salto ao longo do caminho e indica se um salto falha na resposta. O tempo de ida e volta é o tempo que um pacote leva para alcançar o host remoto e retornar a resposta do host. Um asterisco (*) é usado para indicar um pacote perdido ou não respondido.
+
+Essas informações podem ser usadas para localizar um roteador problemático no caminho ou podem indicar que o roteador está configurado para não responder. Se forem exibidos tempos de resposta elevados ou perdas de dados para um determinado salto, significa que os recursos do roteador ou suas conexões podem estar sobrecarregados.
+
+**TTL no IPv4 e Limite de Saltos no IPv6**
+
+O Traceroute utiliza uma função do campo TTL no IPv4 e do campo Limite de saltos no IPv6 nos cabeçalhos da camada 3, junto com a mensagem ICMP Time Exceded.
+
+Execute a animação na figura para ver como o traceroute tira proveito do TTL.
+
+![[brave_woiVgCQO90.gif]]
