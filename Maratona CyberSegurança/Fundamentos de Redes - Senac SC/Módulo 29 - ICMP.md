@@ -221,3 +221,5 @@ O Traceroute utiliza uma função do campo TTL no IPv4 e do campo Limite de salt
 Execute a animação na figura para ver como o traceroute tira proveito do TTL.
 
 ![[brave_woiVgCQO90.gif]]
+
+![[brave_rlRjaMRxAx.mp4]]
