@@ -292,3 +292,4 @@ O tempo de ida e volta é o tempo que um pacote leva para alcançar o host remot
 ## 29.3.3 Webster – Perguntas para reflexão
 
 Não há muito sentido em configurar uma rede se você não testá-la para ter certeza de que está funcionando corretamente. Diego precisa garantir que sua rede esteja funcionando e que ela se conecte à rede da sede e à internet. Este módulo forneceu algumas das ferramentas de solução de problemas mais comuns usadas por administradores de rede em todo o mundo. Você ainda pode usar essas ferramentas em sua rede doméstica. Experimente e veja!
+
