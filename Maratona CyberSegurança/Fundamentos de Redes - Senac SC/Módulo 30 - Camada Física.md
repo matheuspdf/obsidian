@@ -455,3 +455,365 @@ Qual das alternativas a seguir termina com conectores BNC, tipo N e tipo F?
 ✅ RESPOSTA CORRETA: coaxial
 
 > O cabo coaxial, que é usado para TV a cabo e serviço de internet e para conectar antenas a dispositivos sem fio, usa vários tipos de conectores para incluir conectores BNC, tipo N e tipo F.
+
+
+# 30.4 Cabeamento UTP
+
+## 30.4.1 Propriedades do Cabo UTP
+
+No tópico anterior, você aprendeu um pouco sobre o cabeamento de cobre de par trançado não blindado (UTP). Como o cabeamento UTP é o padrão para uso em LANs, este tópico entra em detalhes sobre suas vantagens e limitações e o que pode ser feito para evitar problemas.
+
+Quando usado como meio de rede, o cabeamento UTP consiste em quatro pares de fios de cobre com código de cores que foram torcidos juntos e depois envoltos em uma bainha de plástico flexível. Seu tamanho reduzido pode ser vantajoso durante a instalação.
+
+O cabo UTP não usa blindagem para contrabalançar os efeitos de EMI e RFI. Em vez disso, os projetistas de cabos descobriram outras maneiras de limitar o efeito negativo da diafonia:
+
+- **Cancelamento** - Os designers agora dispõe os fios em um circuito em pares. Quando dois fios de um circuito elétrico são colocados próximos um do outro, seus campos magnéticos serão opostos. Assim, os dois campos magnéticos cancelam um ao outro e também podem cancelar sinais externos de EMI e RFI.
+- **Variando o número de torções por par de fios -** Para aumentar ainda mais o efeito de cancelamento de fios de circuitos pareados, os projetistas variam o número de torções de cada par de fios em um cabo. O cabo UTP deve seguir especificações precisas que orientam quantas tranças são permitidas por metro (3,28 pés) do cabo. Observe na figura que o par laranja/laranja e branco é menos trançado do que o par azul/azul e branco. Cada par colorido é trançado um número de vezes diferente.
+
+O cabo UTP depende exclusivamente do efeito de cancelamento produzido pelos pares de fios trançados para limitar a degradação de sinal e fornecer efetivamente a autoblindagem para cabos trançados na mídia de rede.![[Pasted image 20260628225413.png]]
+
+
+## 30.4.2 Padrões de Cabeamento e Conectores UTP
+
+O cabeamento UTP está em conformidade com os padrões estabelecidos conjuntamente pela ANSI/TIA. Especificamente, o ANSI/TIA-568 estipula os padrões de cabeamento comercial para instalações de LAN e é o padrão mais comumente usado em ambientes de cabeamento de LAN. Alguns dos elementos definidos são os seguintes:
+
+- Tipos de cabo
+- Comprimento do cabo
+- Conectores
+- Terminação do cabo
+- Métodos de teste de cabo
+
+As características elétricas do cabeamento de cobre são definidas pelo Instituto de Engenharia Elétrica e Eletrônica (IEEE). O IEEE classifica o cabeamento UTP de acordo com o desempenho. Os cabos são colocados nas categorias, com base na capacidade de transportar taxas de largura de banda mais altas. Por exemplo, o cabo Categoria 5 é usado normalmente em instalações 100BASE-TX Fast Ethernet. Outras categorias incluem cabo Categoria 5 aprimorado (5e), Categoria 6 e Categoria 6a.
+
+Os cabos em categorias mais altas são desenvolvidos e construídos para suportar taxas de dados mais elevadas. À medida que novas tecnologias Ethernet de velocidade de gigabit estão sendo desenvolvidas e adotadas, a Categoria 5e é agora o tipo de cabo minimamente aceitável, com a Categoria 6 sendo o tipo recomendado para novas instalações prediais.
+
+A figura mostra três categorias de cabo UTP:
+
+- A categoria 3 foi originalmente usada para comunicação de voz por linhas de voz, mas posteriormente usada para transmissão de dados.
+- As categorias 5 e 5e são usadas para transmissão de dados. A Categoria 5 suporta 100Mbps e a Categoria 5e suporta 1000 Mbps.
+- A categoria 6 tem um separador adicionado entre cada par de fios para suportar velocidades mais altas. Categoria 6 suporta até 10 Gbps.
+- Categoria 7 também suporta 10 Gbps.
+- Categoria 8 suporta 40 Gbps.
+
+Alguns fabricantes produzem cabos que excedem as especificações da Categoria ANSI/TIA 6a e os classificam como Categoria 7.
+
+![[Pasted image 20260628225453.png]]
+
+O cabo UTP geralmente é terminado com um conector RJ-45. O padrão ANSI/TIA-568 descreve os códigos de cores dos fios, para atribuições de pinos (pinagem), para cabos Ethernet.
+
+Conforme mostrado na figura, o conector RJ-45 é o componente macho, prensado na extremidade do cabo.
+
+### Plugues RJ-45 para UTP
+
+![[Pasted image 20260628225512.png]]
+O soquete, mostrado na figura, é o componente fêmea de um dispositivo de rede, tomada de parede, tomada de conduíte ou painel de conexões. Quando terminado incorretamente, o cabo é uma fonte potencial de degradação do desempenho da camada física.
+
+### Sockets UTP RJ-45
+
+![[Pasted image 20260628225634.png]]
+
+Esta figura mostra um exemplo de um cabo UTP mal terminado. Esse conector defeituoso possui fios expostos, sem torção e não totalmente cobertos pela bainha.
+
+### Cabo UTP mal terminado
+
+![[Pasted image 20260628225646.png]]
+
+A figura seguinte mostra um cabo UTP devidamente terminado. É um bom conector com fios que não são torcidos apenas na extensão necessária para conectar o conector.
+
+### Cabo UTP devidamente encerrado
+
+![[Pasted image 20260628225658.png]]
+
+**Nota**: A terminação inadequada do cabo pode afetar o desempenho da transmissão.
+
+## 30.4.3 Cabos UTP diretos e cruzados
+
+Situações diversas podem exigir que os cabos UTP sejam conectados de acordo com diferentes convenções de fiação. Isso significa que os fios individuais do cabo precisam ser conectados em ordem diferente para conjuntos diferentes de pinos nos conectores RJ-45.
+
+Estes são os principais tipos de cabo obtidos com o uso de convenções de cabeamento específicas:
+
+- **Ethernet direto -** o tipo mais comum de cabo de rede. Geralmente é usado para interconectar um host a um switch e um switch a um roteador.
+- **Ethernet Cruzado (Crossover) -** Um cabo usado para interconectar dispositivos semelhantes. Por exemplo, para conectar um switch a um switch, um host a um host ou um roteador a um roteador. No entanto, os cabos cruzados agora são considerados legados, pois as NICs usam o cruzamento de interface dependente médio (Auto-MDIX) para detectar automaticamente o tipo de cabo e fazer a conexão interna.
+
+**Nota**: Outro tipo de cabo é o cabo rollover, que é proprietário da Cisco. É usado para conectar uma estação de trabalho a uma porta do console do roteador ou do switch.
+
+O uso incorreto de um cabo crossover ou direto entre dois dispositivos não danifica os dispositivos, mas a conectividade e comunicação entre os dispositivos não será realizada. Este é um erro comum e verificar se as conexões do dispositivo estão corretas deve ser a primeira ação de solução de problemas se a conectividade não for alcançada.
+
+A figura identifica os pares de fios individuais para os padrões T568A e T568B.
+
+### PadrõesT568A e T568B
+
+![[Pasted image 20260628225721.png]]
+
+A tabela mostra o tipo de cabo UTP, padrões relacionados e aplicação típica desses cabos.
+
+**Tipos e padrões de cabos**
+
+|Tipo do Cabo|Padrão|Aplicação|
+|---|---|---|
+|Ethernet Direto|Ambas as extremidades T568A ou T568B|Conecta um host de rede a um dispositivo de rede, como um switch ou hub|
+|Ethernet Cruzado|Uma extremidade T568A, outra extremidade T568B|Conecta dois dispositivos intermediários de rede (switch para switch ou roteador para roteador)|
+|Rollover|Proprietário da Cisco|Conecta uma porta serial de estação de trabalho a uma porta de console do roteador usando um adaptador|
+
+## 30.4.4 Atividade - Pinagens de Cabo
+
+Para esta atividade, ordene corretamente as cores dos fios para uma pinagem de cabo ANSI/TIA. Selecione uma cor do encapamento do fio clicando nela. Em seguida, clique em um fio para aplicar esse invólucro a ele.
+
+**Selecione a caixa do pino e, em seguida, o pino do cabo para aplicar o invólucro.**
+
+![[Pasted image 20260628225844.png]]
+
+Para esta atividade, ordene corretamente as cores dos fios para uma pinagem de cabo ANSI/TIA. Selecione uma cor do encapamento do fio clicando nela. Em seguida, clique em um fio para aplicar esse invólucro a ele.
+
+**Selecione a caixa do pino e, em seguida, o pino do cabo para aplicar o invólucro.**
+
+![[Pasted image 20260628225902.png]]
+
+# 30.5 Cabeamento de Fibra Óptica
+
+## 30.5.1 Propriedades do cabeamento de fibra óptica
+
+Como você aprendeu, o cabeamento de fibra óptica é o outro tipo de cabeamento usado em redes. Por ser caro, não é tão comumente usado quanto os vários tipos de cabeamento de cobre. Mas o cabeamento de fibra óptica tem certas propriedades que o tornam a melhor opção em certas situações, que você descobrirá neste tópico.
+
+O cabo de fibra óptica transmite dados por longas distâncias e a larguras de banda mais altas do que qualquer outra mídia de rede. Diferentemente dos fios de cobre, o cabo de fibra óptica pode transmitir sinais com menos atenuação e é completamente imune à interferência de EMI e RFI. A fibra óptica é comumente usada para interconectar dispositivos de rede.
+
+A fibra óptica é um fio flexível, extremamente fino e transparente de vidro muito puro, não muito mais espesso do que um fio de cabelo humano. Os bits são codificados na fibra como pulsos de luz. O cabo de fibra óptica atua como um guia de onda, ou “tubo de luz”, para transmitir luz entre as duas extremidades com o mínimo de perda do sinal.
+
+Como uma analogia, considere um rolo de papel toalha vazio com o interior revestido como um espelho. Ele tem mil metros de comprimento e um pequeno ponteiro laser é usado para enviar sinais de código Morse na velocidade da luz. Basicamente, é assim que o cabo de fibra óptica funciona, só que tem um diâmetro menor e usa tecnologias de luz sofisticadas.
+
+![[Pasted image 20260628230000.png]]
+
+## 30.5.2 Tipos de Fibra
+
+Os cabos de fibra óptica são amplamente classificados em dois tipos:
+
+- Fibra monomodo (SMF)
+- Fibra multimodo (MMF)
+
+**Clique em cada botão para obter uma ilustração e explicação de cada tipo.**
+
+### **Fibra Monomodo**
+
+O SMF consiste em um núcleo muito pequeno e usa a tecnologia laser cara para enviar um único raio de luz, conforme mostrado na figura. O SMF é popular em situações de longa distância que se estendem por centenas de quilômetros, como os exigidos em aplicações de telefonia de longo curso e TV a cabo.
+![[Pasted image 20260628230037.png]]
+
+### **Fibra Multimodo**
+
+O MMF consiste em um núcleo maior e usa emissores de LED para enviar pulsos de luz. Especificamente, a luz de um LED entra na fibra multimodo em diferentes ângulos, como mostrado na figura. Os MMFs são populares em LANs porque podem ser alimentados por LEDs de baixo custo. Ele fornece largura de banda de até 10 Gbps em links de até 550 metros de comprimentos.
+![[Pasted image 20260628230046.png]]
+
+Uma das diferenças destacadas entre MMF e SMF é a quantidade de dispersão. O termo dispersão se refere ao espalhamento do pulso de luz com o tempo. Maior dispersão significa aumento da perda de força do sinal. MMF tem uma dispersão maior do que SMF. É por isso que o MMF só pode viajar até 500 metros antes da perda de sinal.
+
+
+## 30.5.3 Uso de cabeamento de fibra óptica
+
+Agora, o cabeamento de fibra óptica é usado em quatro setores:
+
+- **Redes Corporativas -** Isso é usado para aplicativos de cabeamento de backbone e dispositivos de infraestrutura de interconexão.
+- **Fiber-to-the-Home (FTTH) -** Isso é usado para fornecer serviços de banda larga sempre ativos para residências e pequenas empresas.
+- **Redes de longa distância -** Isso é usado por provedores de serviços para conectar países e cidades.
+- **Redes de Cabos Submarinos -** São usadas para fornecer soluções confiáveis de alta velocidade e alta capacidade, capazes de sobreviver em ambientes submarinos hostis em distâncias transoceânicas. Pesquise na internet por “mapa de telegeografia de cabos submarinos” para visualizar vários mapas on-line.
+
+Nosso foco neste curso é o uso de fibra dentro da empresa.
+
+## 30.5.4 Conectores de fibra óptica
+
+Um conector de fibra óptica termina o final de uma fibra óptica. Uma variedade de conectores de fibra óptica estão disponíveis. As principais diferenças entre os tipos de conectores são as dimensões e os métodos de acoplamento. As empresas decidem os tipos de conectores que serão usados, com base no seu equipamento.
+
+**Nota**: Alguns switches e roteadores têm portas que suportam conectores de fibra óptica por meio de um transceptor plugável de fator de forma pequeno (SFP). Pesquise na internet para vários tipos de SFPs.
+
+**Clique em cada tipo de conector de fibra óptica para obter uma imagem e obter mais informações.**
+
+
+### Conectores de Ponta Reta (Straight-Tip - ST)
+
+Os conectores ST foram um dos primeiros tipos de conectores usados. O conector trava com segurança com um mecanismo estilo baioneta 'twist-on/twist-off'.
+![[Pasted image 20260628230208.png]]
+
+### Conectores SC (Conectores de Assinante)
+
+Os conectores SC às vezes são chamados de 'conectores quadrados' ou 'conectores padrão'. Eles são um conector LAN e WAN amplamente adotado que usa um mecanismo push-pull para garantir uma inserção positiva. Esse tipo de conector é usado com fibra multimodo e monomodo.
+![[Pasted image 20260628230219.png]]
+### Conectores Lucent (LC) Simplex
+
+Os conectores LC simplex são uma versão menor do conector SC. Às vezes, eles são chamados de conectores pequenos ou locais e estão crescendo rapidamente em popularidade devido ao seu tamanho menor.
+![[Pasted image 20260628230241.png]]
+
+
+
+### Conectores LC duplex, multimodo
+
+Um conector LC multimodo duplex é semelhante a um conector LC simplex, mas usa um conector duplex.
+![[Pasted image 20260628230301.png]]
+
+Até recentemente, a luz só podia viajar em uma direção sobre fibra óptica. Duas fibras eram necessárias para suportar a operação full duplex. Portanto, os cabos de conexão de fibra óptica agrupam dois cabos de fibra óptica e os terminam com um par de conectores padrão de fibra única. Alguns conectores de fibra aceitam fibras de transmissão e de recepção em um único conector, conhecido como conector duplex, conforme mostrado no Conector LC Duplex Multimodo na Figura. Padrões BX, como 100BASE-BX, usam comprimentos de onda diferentes para enviar e receber através de uma única fibra.
+
+## 30.5.5 Patch Cords de Fibra
+
+Os cabos de fibra são necessários para interconectar dispositivos da infraestrutura. O uso das cores diferencia entre cabos monomodo e multimodo. A cor amarela indica cabos de fibra monomodo e o laranja é para cabos de fibra multimodo.
+
+**Clique em cada cabo de fibra para obter uma imagem.**
+
+### Cabo multimodo SC-SC
+![[Pasted image 20260628230357.png]]
+
+### Cabo de ligação monomodo LC-LC
+![[Pasted image 20260628230415.png]]
+
+### Cabo multimodo ST-LC
+![[Pasted image 20260628230621.png]]
+
+### Cabo de ligação monomodo SC-ST
+![[Pasted image 20260628230641.png]]
+
+**Nota**: Os cabos de fibra devem ser protegidos com uma pequena tampa plástica quando não estiverem em uso.
+
+## 30.5.6 Fibra Versus Cobre
+
+Há muitas vantagens em usar o cabo de fibra óptica em comparação com o cabo de cobre. A tabela destaca algumas dessas diferenças.
+
+Atualmente, na maioria dos ambientes empresariais, a fibra óptica é usada principalmente como cabeamento de backbone para conexões ponto a ponto de alto tráfego entre instalações de distribuição de dados. Ele também é usado para a interconexão de edifícios em campus multi-construção. Como os cabos de fibra ótica não conduzem eletricidade e têm uma baixa perda de sinal, eles são adequados para esses usos.
+
+**Comparação de cabeamento UTP e fibra óptica**
+
+|Problemas de Implementação|Cabeamento UTP|Cabeamento de Fibra Óptica|
+|---|---|---|
+|Largura de banda suportada|10 Mbps – 10 Gbps|10 Mbps – 100 Gbps|
+|Distância|Relativamente curto (1 – 100 metros)|Relativamente longo (1 – 100.000 metros)|
+|Imunidade a interferência eletromagnética e de frequências de rádio|Baixa|Alto (totalmente imune)|
+|Imunidade a perigos elétricos|Baixa|Alto (totalmente imune)|
+|Custos da mídia e dos conectores|Mais baixo|Mais alta|
+|Habilidades necessárias para a instalação|Mais baixo|Mais alta|
+|Precauções de segurança|Mais baixo|Mais alta|
+
+
+### Pergunta 1
+
+Qual dos seguintes tipos de cabos de fibra óptica pode ajudar os dados a percorrer aproximadamente 500 metros?
+
+- [ ] Monomodo
+- [x] Multimodo
+
+✅ RESPOSTA CORRETA: Multimodo
+
+> A fibra multimodo tem uma limitação de distância mais curta do que a fibra monomodo. Comumente usado em LANs com uma distância de algumas centenas de metros, mas pode ser de até 2 km.
+
+---
+
+### Pergunta 2
+
+Qual dos seguintes tipos de cabos de fibra óptica usa diodos emissores de luz (LEDs) como fonte de luz para transmissão de dados?
+
+- [ ] Monomodo
+- [x] Multimodo
+
+✅ RESPOSTA CORRETA: Multimodo
+
+> A fibra multimodo usou LEDs como fonte de luz.
+
+---
+
+### Pergunta 3
+
+Qual dos seguintes tipos de cabos de fibra óptica usa lasers em um único fluxo como fonte de luz para transmissão de dados?
+
+- [x] Monomodo
+- [ ] Multimodo
+
+✅ RESPOSTA CORRETA: Monomodo
+
+> A fibra monomodo usa a tecnologia laser como fonte de luz.
+
+---
+
+### Pergunta 4
+
+Qual dos seguintes tipos de cabo de fibra óptica é usado para conectar aplicativos de telefonia de longa distância e TV a cabo?
+
+- [x] Monomodo
+- [ ] Multimodo
+
+✅ RESPOSTA CORRETA: Monomodo
+
+> A fibra monomodo é comumente usada para aplicações de TV e telefonia de longo curso.
+
+---
+
+### Pergunta 5
+
+Qual dos seguintes tipos de cabos de fibra óptica pode percorrer aproximadamente 100 km?
+
+- [x] Monomodo
+- [ ] Multimodo
+
+✅ RESPOSTA CORRETA: Monomodo
+
+> A fibra monomodo é usada para aplicações de longo curso até 100 km.
+
+---
+
+### Pergunta 6
+
+Qual dos seguintes tipos de cabos de fibra óptica é usado em uma rede de campus?
+
+- [ ] Monomodo
+- [x] Multimodo
+
+✅ RESPOSTA CORRETA: Multimodo
+
+> A fibra multimodo tem uma limitação de distância mais curta do que a fibra monomodo. Comumente usado em LANs dentro de uma rede de campus.
+
+
+# 30.6 Resumo da Camada Física
+
+## 30.6.1 O Que Aprendi Neste Módulo?
+
+### Propósito da Camada Física
+
+Antes que qualquer comunicação de rede possa ocorrer, é necessário estabelecer uma conexão física com uma rede local. Uma conexão física pode ser uma conexão com fio usando um cabo ou uma conexão sem fio usando ondas de rádio. As placas de interface de rede (NICs) conectam um dispositivo à rede. As NICs Ethernet são usadas para uma conexão com fio, enquanto as NICs WLAN (Rede Local Sem Fio) são usadas para conexão sem fio. A camada física do modelo OSI fornece os meios para transportar os bits que formam um quadro da camada de enlace de dados no meio físico de rede. Ela aceita um quadro completo da camada de enlace de dados e o codifica como uma série de sinais que são transmitidos para o meio físico local. Os bits codificados que compreendem um quadro são recebidos por um dispositivo final ou um dispositivo intermediário.
+
+---
+
+### Características da Camada Física
+
+A camada física consiste em circuitos eletrônicos, meios físicos e conectores desenvolvidos pelos engenheiros. Os padrões da camada física abordam três áreas funcionais: componentes físicos, codificação e sinalização. Largura de banda é a capacidade na qual um meio pode transportar dados. A largura de banda digital mede a quantidade de dados que podem fluir de um lugar para outro durante um determinado tempo. A taxa de transferência é a medida da transferência de bits pela mídia durante um determinado período de tempo e geralmente é menor que a largura de banda. O termo latência se refere ao tempo necessário para os dados viajarem de um ponto a outro, incluindo atrasos. Goodput é a medida de dados usáveis transferidos em um determinado período. A camada física produz a representação e os agrupamentos de bits para cada tipo de mídia da seguinte maneira:
+
+- **Cabo de cobre** – Os sinais são padrões de pulsos elétricos.
+- **Cabo de fibra óptica** – Os sinais são padrões de luz.
+- **Sem fio** – Os sinais são padrões de transmissões por microondas.
+
+---
+
+### Cabeamento de Cobre
+
+As redes usam mídia de cobre porque é barata, fácil de instalar e tem baixa resistência à corrente elétrica. Entretanto, ela é limitada pela distância e interferência de sinal. Os valores de tempo e tensão dos pulsos elétricos também são suscetíveis à interferência de duas fontes: EMI e diafonia. Três tipos de cabeamento de cobre são: UTP, STP e cabo coaxial (coaxial). UTP tem uma jaqueta externa para proteger os fios de cobre contra danos físicos, pares torcidos para proteger o sinal de interferência e isolamento plástico codificado por cores que isolam eletricamente os fios uns dos outros e identifica cada par. O cabo STP usa quatro pares de fios, cada um enrolado em uma blindagem de alumínio, que é enrolada em uma trança ou folha metálica geral. O cabo coaxial recebe esse nome pelo fato de haver dois condutores que compartilham o mesmo eixo. Coax é usado para conectar antenas a dispositivos sem fio. Os provedores de internet por cabo usam coaxial dentro das instalações de seus clientes.
+
+---
+
+### Cabeamento UTP
+
+O cabeamento UTP consiste em quatro pares de fios de cobre com código de cores que foram torcidos juntos e depois envoltos em uma bainha de plástico flexível. O cabo UTP não usa blindagem para contrabalançar os efeitos de EMI e RFI. Em vez disso, os projetistas de cabos descobriram outras maneiras de limitar o efeito negativo da diafonia: cancelamento e variação do número de torções por par de fios. O cabeamento UTP está em conformidade com os padrões estabelecidos conjuntamente pela ANSI/TIA. As características elétricas do cabeamento de cobre são definidas pelo Instituto de Engenharia Elétrica e Eletrônica (IEEE). O cabo UTP geralmente é terminado com um conector RJ-45. Os principais tipos de cabos que são obtidos usando convenções de fiação específicas são Ethernet Direto (Straight-through) e Ethernet Cruzado (Crossover). A Cisco tem um cabo UTP proprietário chamado rollover que conecta uma estação de trabalho a uma porta de console do roteador.
+
+---
+
+### Cabeamento de Fibra Óptica
+
+O cabo de fibra óptica transmite dados por longas distâncias e a larguras de banda mais altas do que qualquer outra mídia de rede. O cabo de fibra óptica pode transmitir sinais com menos atenuação que o fio de cobre e é completamente imune a EMI e RFI. A fibra óptica é um fio flexível, extremamente fino e transparente de vidro muito puro, não muito mais espesso que um fio de cabelo humano. Os bits são codificados na fibra como pulsos de luz. O cabeamento de fibra óptica está sendo utilizado agora em quatro tipos de indústria: redes empresariais, FTTH, redes de longo curso e redes de cabos submarinos. Existem quatro tipos de conectores de fibra óptica: ST, SC, LC e LC multimodo duplex. Os cabos de patch de fibra óptica incluem multimodo SC-SC, monomodo LC-LC, multimodo ST-LC e monomodo SC-ST. Na maioria dos ambientes empresariais, a fibra óptica é usada principalmente como cabeamento de backbone para conexões ponto a ponto de alto tráfego entre instalações de distribuição de dados e para a interconexão de edifícios em campi de vários edifícios.
+
+---
+
+## 30.6.2 Webster – Questões para Reflexão
+
+Halimah já sabia sobre a camada física na rede. E você?
+
+Neste módulo, você aprendeu que uma conexão física pode ser uma conexão com fio usando um cabo ou uma conexão sem fio usando ondas de rádio. Os tipos de mídia também foram discutidos.
+
+Faça a si mesmo estas perguntas de reflexão:
+
+Já pensou na diferença entre cabo de cobre, cabo de fibra óptica e rede sem fio?
+
+Que tipos de mídia são usados em sua casa?
+
+Quais são as vantagens e desvantagens desses tipos de mídia que você tem em sua casa? Onde você pode encontrar cabos de fibra óptica sendo usados?
+
+Quais vantagens os cabos de fibra óptica oferecem?
