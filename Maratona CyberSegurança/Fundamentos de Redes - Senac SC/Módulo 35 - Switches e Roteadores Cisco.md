@@ -448,3 +448,137 @@ Neste vídeo, vamos dar uma olhada no gerenciamento remoto fora da rede (out-of-
 O gerenciamento em rede significa simplesmente que queremos ser capazes de acessar remotamente o dispositivo pela rede. Nesse caso, nosso switch Ethernet. Então, tanto nosso switch Ethernet quanto o dispositivo que estamos usando para acessá-lo devem ser capazes de se comunicar um com o outro através da rede. Podemos acessar e configurar o dispositivo remotamente usando Telnet, SSH, o SSH é muito melhor, e mais seguro que o Telnet, ou HTTP, ou HTTPS.
 
 Então, essas são as duas maneiras pelas quais podemos acessar um dispositivo. Ou gerenciamento fora da rede, onde temos que ter conectividade física ao dispositivo, mas não há conectividade de rede, ou gerenciamento pela rede, onde podemos acessar o dispositivo remotamente, mas precisamos ter conectividade de rede com o dispositivo.
+
+
+## 35.3.3 Arquivos de inicialização do IOS
+
+Como mostrado na figura, um dispositivo da Cisco carrega estes dois arquivos na RAM quando é iniciado:
+
+- **Arquivo de imagem do IOS -** O IOS facilita a operação básica dos componentes de hardware do dispositivo. A imagem do IOS geralmente é armazenada na memória flash.
+- **Arquivo de configuração de inicialização -** Contém os comandos utilizados para configurar inicialmente um roteador e criar o arquivo de configuração de execução armazenado na RAM. O arquivo de configuração de inicialização é armazenado na NVRAM. Todas as alterações de configuração são armazenadas no arquivo de configuração em execução e são implementadas imediatamente pelo IOS.
+
+O arquivo de configuração de execução é modificado quando o administrador de rede desempenha a configuração do dispositivo. Quando as alterações são feitas no arquivo running-config, ele deve ser salvo na NVRAM como arquivo de configuração de inicialização, caso o roteador seja reinicializado ou perca energia.
+
+![[Pasted image 20260630221320.png]]
+
+## 35.3.4 Verifique a sua compreensão - Processo de inicialização do switch
+
+**Verifique sua compreensão sobre processo de inicialização do switch, escolhendo a resposta correta para as seguintes perguntas.**
+
+### Pergunta 1
+
+Qual das alternativas a seguir é a ordem correta das três etapas básicas para ligar um switch?
+
+- [ ] ligar o switch, verificar os componentes, conectar os cabos ao switch
+- [x] verifique os componentes, conecte os cabos ao switch, ligue o switch
+- [ ] conectar os cabos ao switch, verificar os componentes, ligar o switch
+
+✅ RESPOSTA CORRETA: verifique os componentes, conecte os cabos ao switch, ligue o switch
+
+> Está certo.
+> 
+> 1. As três etapas básicas para inicializar um switch são:
+>     
+> 
+> - Passo 1. Verifique os componentes.
+> - Etapa 2. Conecte os cabos ao switch.
+> - Etapa 3. Inicialize o switch.
+
+### Pergunta 2
+
+Quando um switch é conectado a uma tomada, o POST começa. Como você sabe que o POST foi concluído?
+
+- [x] Os LEDs SYS piscam rapidamente em verde.
+- [ ] Os LEDs SYS piscam rapidamente na cor âmbar.
+- [ ] Os LEDs de porta piscam rapidamente em verde.
+- [ ] Os LEDs de porta piscam rapidamente em âmbar.
+
+✅ RESPOSTA CORRETA: Os LEDs SYS piscam rapidamente em verde.
+
+> Está certo. O POST é concluído quando o SYST LED está verde e pisca rapidamente. Se o POST falhar, o SYST LED fica na cor âmbar.
+
+### Pergunta 3
+
+Verdadeiro ou falso? O gerenciamento fora da banda exige que as conexões de rede local no dispositivo estejam ativas.
+
+- [ ] verdadeiro
+- [x] falso
+
+✅ RESPOSTA CORRETA: falso
+
+> Está certo. A resposta correta é falsa. O gerenciamento fora de banda requer que um computador seja conectado diretamente à porta de console do dispositivo de rede que está sendo configurado. Contudo, ele não exige que as conexões de rede local no dispositivo estejam ativas.
+
+### Pergunta 4
+
+Verdadeiro ou falso? Uma conexão de gerenciamento em banda requer que pelo menos uma interface de rede no dispositivo esteja conectada à rede e tenha um endereço IP configurado nela.
+
+- [x] verdadeiro
+- [ ] falso
+
+✅ RESPOSTA CORRETA: verdadeiro
+
+> Está certo. A resposta correta é verdadeira. Para que um computador se conecte-se ao dispositivo e realize as tarefas de gerenciamento em banda, pelo menos uma interface de rede no dispositivo deve estar conectada à rede e ter um endereço IP configurado.
+
+### Pergunta 5
+
+Onde o arquivo de imagem do IOS normalmente é armazenado?
+
+- [ ] Unidade USB
+- [ ] RAM
+- [ ] NVRAM
+- [x] Memória flash
+
+✅ RESPOSTA CORRETA: Memória flash
+
+> Está certo. A imagem do IOS geralmente é armazenada na memória flash.
+
+
+# 35.4 Roteadores Cisco
+
+## 35.4.1 Vídeo - Componentes do roteador Cisco
+
+**Selecione o botão Reproduzir para assistir o vídeo.**
+
+Neste vídeo, vamos explorar alguns dos componentes de um roteador 1941 da Cisco. Vou virar o roteador para trás, porque facilita muito a visualização dos diferentes componentes.
+
+A primeira coisa que você vai notar é significativamente diferentes dos switches, e o motivo é que o switch tinha muitas portas Ethernet, pois o switch fornece a conectividade com os dispositivos da camada de acesso. Agora, um roteador conecta apenas redes individuais, então o roteador tem muito menos portas. Então vamos observar algumas delas.
+
+O que você pode ver aqui é a cor amarela revestida das portas Ethernet. Aqui, elas são chamadas de interfaces Ethernet. E, nesse caso, elas fornecem conectividade gigabit. Então, vocês podem ver que há duas interfaces amarelas, Gigabit Ethernet no roteador.
+
+Você também verá uma interface revestida de cor azul, que fornece a conexão serial para o cabo de console. O cabo do console oferece conectividade entre o laptop ou o computador e o dispositivo de rede para que você tenha um canal através do qual comunicar-se com o dispositivo para as configurações iniciais. Você também vai notar que há uma mini USB que você pode usar como um cabo de console e também algumas portas USB que você pode usar como um armazenamento adicional.
+
+Caso contrário, algumas coisas são muito semelhantes com o switch. Você tem uma conexão de cabo de alimentação, agora um roteador você também tem um interruptor de liga e desliga. Muitos switches vêm automaticamente para que, quando você os conecte em uma fonte de alimentação, eles automaticamente são ligados e a única maneira que você consegue fisicamente desligá-los é desconectando o cabo. Agora, em um roteador, ele tem um botão liga/desliga, então você tem que ter cuidado quando conectá-lo para você realmente ligar o dispositivo.
+
+Então, basicamente, esses são os componentes de um roteador, assim que saem da caixa. Agora você também vai notar que o roteador tem algo que o switch não tem, tem slots de expansão e, neste roteador, você vai notar que existem três slots em que é possível colocar peças adicionais do equipamento.
+
+Basicamente, são os componentes de um roteador 1941 Cisco.
+
+
+## 35.4.2 Componentes do roteador
+
+Independentemente de função, tamanho ou complexidade, todos os modelos de roteador são basicamente computadores. E assim como computadores, tablets e dispositivos inteligentes, o roteador também exige:
+
+- Sistema operacional (SO)
+- Unidade central de processamento (CPU)
+- RAM (memória de acesso aleatório)
+- ROM (memória somente de leitura)
+- NVRAM (memória de acesso aleatório não volátil)
+
+Como todos os computadores, tablets e dispositivos inteligentes, os roteadores da Cisco exigem uma CPU para executar instruções do sistema operacional, como a inicialização do sistema, as funções de roteamento e as funções de switching.
+
+A CPU precisa de um sistema operacional para prover funções de roteamento e switching. O Cisco IOS (Internetwork Operating System) é o software de sistema usado para a maioria dos dispositivos Cisco, independentemente do tamanho e tipo. Ele é usado para roteadores, switches LAN, pequenos access points sem fio, grandes roteadores com dezenas de interfaces e muitos outros dispositivos.
+
+
+## 35.4.3 Portas das interfaces dos roteadores
+
+Embora existam vários tipos e modelos diferentes de roteadores, cada roteador Cisco tem os mesmos componentes gerais de hardware.
+
+A figura mostra um Roteador de Serviços Integrado (ISR) do modelo Cisco 4321. O roteador inclui as seguintes conexões:
+
+- **Portas console** - Duas portas console da configuração inicial e interface de linha de comando (CLI) usando uma porta RJ-45 regular e um novo conector USB do Tipo-B (USB mini-b).
+- **Duas interfaces LAN** - Duas interfaces Gigabit Ethernet para acesso LAN GE 0/0/0 e GE 0/0/1. A porta GE 0/0/0 pode ser acessada por uma conexão RJ-45 ou usando uma conexão SFP (tamanho pequeno) para fornecer uma conexão de fibra óptica.
+- **Módulo de Interface de Redes (NIMs)** - Dois slots de expansão NIM que proporcionam modularidade e flexibilidade ao habilitar o roteador para dar suporte aos tipos diferentes de módulos de interface, incluindo serial, a linha digital de assinante (DSL), porta do switch e sem fio.
+
+O Cisco 4321 ISR também tem uma porta USB, uma interface de gerenciamento e uma porta auxiliar. A porta USB pode ser usada para transferências de arquivos. A porta de gerenciamento pode ser usada para acesso de gerenciamento remoto quando as duas interfaces Gigabit Ethernet estiverem indisponíveis. A porta auxiliar fornece suporte antigo para um método de conexão de um modem dial-up ao roteador para acesso remoto. A porta auxiliar é hoje raramente usada em redes.
+
+![[Pasted image 20260630221654.png]]
