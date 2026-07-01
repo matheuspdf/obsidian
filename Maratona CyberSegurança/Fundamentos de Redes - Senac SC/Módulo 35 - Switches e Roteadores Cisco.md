@@ -245,3 +245,206 @@ Quais são as duas portas normalmente usadas para gerenciamento de dispositivos?
 ✅ RESPOSTA CORRETA: porta de armazenamento; porta console
 
 > Está certo. O gerenciamento de dispositivos normalmente usa a porta console e a porta de armazenamento.
+
+
+# 35.2 Velocidades do Switch e Métodos de Encaminhamento
+
+## 35.2.1 Métodos de Encaminhamento de Quadros em Switches da Cisco
+
+Como você aprendeu no tópico anterior, os switches usam suas tabelas de endereço MAC para determinar qual porta usar para encaminhar quadros. Com os switches Cisco, existem realmente dois métodos de encaminhamento de quadros e há boas razões para usar um em vez do outro, dependendo da situação.
+
+Os switches usam um dos seguintes métodos de encaminhamento para o switching (comutação) de dados entre suas interfaces de rede:
+
+- **Comutação Armazenar e encaminhar** - Este método de encaminhamento de quadros recebe o quadro inteiro e calcula o CRC. O CRC usa uma fórmula matemática, baseada no número de bits (valores 1) no quadro, para determinar se o quadro recebido apresenta erro. Se o CRC é válido, o switch procura o endereço de destino, que determina a interface de saída. Em seguida, o quadro é encaminhado para fora da porta correta.
+- **Comutação corte direto** - Esse método de encaminhamento de quadros encaminha o quadro antes de ser totalmente recebido. Pelo menos o endereço de destino do quadro deve ser lido para que o quadro possa ser encaminhado.
+
+Uma grande vantagem da Comutação Armazenar e encaminhar é que ele determina se um quadro tem erros antes de propagar o quadro. Quando um erro é detectado em um quadro, o switch o descarta. O descarte de quadros com erros reduz o consumo de largura de banda por dados corrompidos. A comutação Armazenar e encaminhar é necessária para a análise de qualidade de serviço (QoS) em redes convergentes onde a classificação de quadros para priorização de tráfego é necessária. Por exemplo, os fluxos de dados de voz sobre IP (VoIP) precisam ter prioridade sobre o tráfego de navegação na web.
+
+Clique em Reproduzir na animação para obter uma demonstração do processo armazenar e encaminhar.
+
+![[brave_K1QEGLcVyl.mp4]]
+
+
+## 35.2.2 Comutação corte direto
+
+Na comutação corte direto, o switch atua nos dados assim que eles são recebidos, mesmo que a transmissão não tenha sido concluída. O switch armazena em buffer apenas o parte do quadro suficiente para ler o endereço MAC de destino para que possa determinar para qual porta ele deve encaminhar os dados. O endereço MAC de destino está localizado nos primeiros 6 bytes do quadro após o preâmbulo. O switch consulta o endereço MAC de destino na tabela de comutação , determina a porta da interface de saída e encaminha o quadro ao seu destino pela porta de switch designada. O switch não realiza nenhuma verificação de erros no quadro.
+
+Reproduza a animação para obter uma demonstração do processo de comutação corte direto.
+
+![[brave_3kMK9pm2cA.mp4]]
+
+Há duas formas de comutação corte direto:
+
+- **Comutação avanço rápido -**  A comutação avanço rápido oferece o menor nível de latência e encaminha imediatamente um pacote depois de ler o endereço de destino. Como a comutação avanço rápido começa o encaminhamento antes de receber todo o pacote, alguns pacotes podem ser retransmitidos com erros. Isso ocorre com pouca freqüência e a NIC de destino descarta o pacote com defeito após o recebimento. No modo avanço rápido, a latência é medida do primeiro bit recebido até o primeiro bit transmitido. Comutação avanço rápido é o método corte direto típico de comutação.
+- **Comutação livre de fragmentos -** Na comutação livre de fragmentos, o switch armazena os primeiros 64 bytes do quadro antes de encaminhar. Esse tipo de comutação pode ser encarado como um compromisso entre o switching armazenar e encaminhar e o switching avanço rápido. O motivo da comutação livre de fragmentos armazenar somente os primeiros 64 bytes do quadro é que a maioria dos erros e das colisões de rede ocorre durante os primeiros 64 bytes. A comutação livre de fragmentos tenta melhorar a comutação avanço rápido executando uma pequena verificação de erros nos primeiros 64 bytes do quadro para garantir que não ocorra uma colisão antes de encaminhar o quadro. A comutação livre de fragmentos é um compromisso entre a alta latência e a alta integridade da comutação armazenar e encaminhar e a baixa latência e a integridade reduzida da comutação avanço rápido.
+
+Alguns switches são configurados para executar a comutação corte direto por porta até que um limite de erro definido pelo usuário seja atingido e, depois, mudam automaticamente para armazenar e encaminhar. Quando a taxa de erros fica abaixo do limite, a porta retorna automaticamente para a comutação corte direto.
+
+
+### 35.2.3 Buffer de Memória em Switches
+
+Um switch Ethernet pode usar uma técnica de armazenamento de quadros em buffers antes de enviá-los. O buffer também pode ser usado quando a porta de destino está ocupada devido ao congestionamento. O switch armazena o quadro até que ele possa ser transmitido.
+
+Como mostrado na tabela, existem dois métodos de buffer de memória:
+
+#### Métodos de buffer de memória
+
+| Método                | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Memória por porta     | Os quadros são armazenados em filas vinculadas a portas específicas de entrada e saída.<br>Um quadro é transmitido para a porta de saída somente quando todos os quadros à frente na fila foram transmitidos com êxito.<br>É possível que um único quadro atrase a transmissão de todos os quadros na memória caso uma porta de destino esteja ocupada.<br>Esse atraso ocorre mesmo se os outros quadros puderem ser transmitidos para portas de destino que estejam livres. |
+| Memória compartilhada | Deposita todos os quadros em um buffer de memória comum compartilhado por todas as portas do switch e a quantidade de memória buffer necessária por uma porta é alocada dinamicamente.<br>Os quadros no buffer são dinamicamente vinculados à porta de destino, permitindo que um pacote seja recebido em uma porta e depois transmitido em outra porta, sem movê-lo para uma fila diferente.                                                                                |
+
+## 35.2.4 Configurações de Velocidade e Duplex
+
+Duas das configurações mais básicas em um switch são as configurações de largura de banda (às vezes denominada "velocidade") e duplex para cada porta do switch individual. É fundamental a correspondência dessas configurações na porta do switch e nos dispositivos conectados, como um computador ou outro switch.
+
+Há dois tipos de configurações duplex usadas para comunicação em uma rede Ethernet:
+
+- **duplex completo** – As duas extremidades da conexão podem enviar e receber ao mesmo tempo.
+- **Meio duplex** - Somente uma das extremidades da conexão pode enviar e receber por vez.
+
+A negociação automática é uma função opcional encontrada na maioria dos switches Ethernet e das placas de interface de rede (NICs). Ela permite que dois dispositivos negociem automaticamente as melhores capacidades de velocidade e duplex. duplex completo será escolhido se os dois dispositivos tiverem essa capacidade e com a largura de banda mais alta em comum entre eles.
+
+Na figura, a NIC Ethernet para PC-A pode operar em duplex completo ou Meio duplex e em 10 Mbps ou 100 Mbps.
+
+![[Pasted image 20260630220910.png]]
+
+O PC-A está conectado ao switch S2 na porta 1, que pode operar em duplex completo ou Meio duplex e em 10 Mbps, 100 Mbps ou 1000 Mbps (1 Gbps). Se os dois dispositivos estiverem usando negociação automática, o modo operacional será duplex completo e 100 Mbps.
+
+**Nota**: A maioria dos switches Cisco e das NICs Ethernet faz a negociação automática por padrão para velocidade e duplex. Portas Gigabit Ethernet só operam em duplex completo.
+
+A incompatibilidade duplex é uma das causas mais comuns de problemas de desempenho nos links Ethernet 10/100 Mbps. Ocorre quando uma porta no link opera em Meio duplex, enquanto a outra porta opera em duplex completo, conforme mostrado na figura.
+
+![[Pasted image 20260630220923.png]]
+
+S2 continuará a detectar colisões porque S1 continua mandando quadros sempre que tem algo para enviar.
+
+A incompatibilidade duplex ocorre quando uma ou ambas as portas em um link são redefinidas e o processo de negociação automática não resulta nos dois parceiros de link com a mesma configuração. Também pode ocorrer quando os usuários reconfiguram um lado de um link e esquecem de reconfigurar o outro. Os dois lados de um link devem estar ambos com a negociação automática ligada ou desligada. A prática recomendada é configurar ambas as portas de switch Ethernet como duplex completo.
+
+## 35.2.5 MDIX automático
+
+As conexões entre dispositivos exigiram uma vez o uso de um cabo cruzado ou direto. O tipo de cabo necessário dependia do tipo de dispositivos de interconexão.
+
+Por exemplo, a figura identifica o tipo de cabo correto necessário para interconectar dispositivos switch para switch, switch para roteador, switch para host ou roteador para host. Um cabo cruzado é usado ao conectar dispositivos semelhantes, e um cabo direto é usado para conectar dispositivos diferentes.
+
+**Nota**: Uma conexão direta entre um roteador e um host requer uma conexão cruzada.
+
+![[Pasted image 20260630220939.png]]
+
+A maioria dos dispositivos de switch agora suporta o recurso de (Auto-MDIX) interface dependente automática. Quando ativado, o switch detecta automaticamente o tipo de cabo conectado à porta e configura as interfaces de acordo. Com isso, você pode utilizar um cabo cruzado ou direto para conexões a uma porta 10/100/1000 de cobre no switch, seja qual for o tipo de dispositivo na outra extremidade da conexão.
+
+O recurso auto-MDIX é ativado por padrão em switches que executam o Cisco IOS Release 12.2 (18) SE ou posterior. No entanto, o recurso pode ser desativado. Por esse motivo, você sempre deve usar o tipo de cabo correto e não confiar no recurso Auto-MDIX. O Auto-MDIX pode ser reativado usando o comando **mdix auto** no modo de configuração da interface.
+
+## 35.2.6 Verifique sua compreensão - Velocidades do Switch e métodos de encaminhamento
+
+**Verifique sua compreensão das velocidades do switch e métodos de encaminhamento escolhendo a resposta correta para as seguintes perguntas.**
+
+### Pergunta 1
+
+Quais são os dois métodos para comutar dados entre portas em um switch? (Escolha duas.)
+
+- [x] comutação armazenar e encaminhar
+- [ ] comutação armazenar e fornecer
+- [x] comutação corte direto
+- [ ] comutação armazenar e restaurar
+- [ ] comutação corte fora
+
+✅ RESPOSTA CORRETA: comutação armazenar e encaminhar; comutação corte direto
+
+> Está certo. Os dois métodos para comutar dados entre portas em um switch são comutação corte direto e comutação armazenar e encaminhar.
+
+### Pergunta 2
+
+Qual método de comutação pode ser implementado usando comutação rápida ou comutação sem fragmentos?
+
+- [ ] comutação armazenar e restaurar
+- [ ] comutação corte fora
+- [ ] comutação armazenar e encaminhar
+- [x] comutação corte direto
+
+✅ RESPOSTA CORRETA: comutação corte direto
+
+> Está certo. A comutação corte direto é implementada usando comutação rápida ou comutação sem fragmentos.
+
+### Pergunta 3
+
+Quais dois tipos de técnicas de buffer de memória são usadas por switches? (Escolha duas.)
+
+- [x] buffer de memória baseado em porta
+- [ ] buffer de memória de longo prazo
+- [x] buffer de memória compartilhada
+- [ ] buffer de memória de curto prazo
+
+✅ RESPOSTA CORRETA: buffer de memória baseado em porta; buffer de memória compartilhada
+
+> Está certo. Os switches usam duas técnicas de buffer de memória: buffer de memória baseado em porta e buffer de memória compartilhada.
+
+### Pergunta 4
+
+Qual recurso negocia automaticamente a melhor velocidade e configuração duplex entre dispositivos de interconexão?
+
+- [x] Negociação automática
+- [ ] MDIX Automático
+- [ ] Autobots
+- [ ] Auto-tune
+
+✅ RESPOSTA CORRETA: Negociação automática
+
+> Está certo. A negociação automática é uma tecnologia que negocia automaticamente a velocidade e o duplex entre dois dispositivos conectados.
+
+# 35.3 Processo de inicialização do switch
+
+## 35.3.1 Ligue o Switch
+
+Os switches Cisco são pré-configurados para operar em uma LAN quando são inicializados. Todas as portas de interface no switch estão ativas e começam a encaminhar o tráfego imediatamente quando os dispositivos são conectados. É importante lembrar que nenhuma configuração de segurança está habilitada por padrão. Defina as configurações básicas de segurança antes de colocar o switch na rede.
+
+As três etapas básicas para inicializar um switch são:
+
+**Etapa 1**. Verifique os componentes.  
+**Etapa 2**. Conecte os cabos ao switch.  
+**Etapa 3**. Inicialize o switch.  
+
+**Nota**: Você também pode conectar cabos após a alimentação.
+
+Quando o switch está ativado, o Power On Self Test (POST) é iniciado. Durante o POST, os LEDs piscam enquanto uma série de testes determina se o switch funciona corretamente.
+
+O POST é concluído quando o SYST LED está verde e pisca rapidamente. Se o POST falhar, o SYST LED fica na cor âmbar. Quando um POST falha, é necessário retornar o switch para reparos.
+
+Quando todos os procedimentos de inicialização são concluídos, o switch Cisco está pronto para ser configurado.
+
+**Clique em cada etapa para obter mais informações**
+
+### **Passo 1. Verifique os componentes.**
+
+Certifique-se de que todos os componentes fornecidos com o switch Cisco 2960 estão disponíveis. São eles: o cabo console, o cabo de alimentação, o cabo de Ethernet e a documentação do switch.
+
+![[Pasted image 20260630221144.png]]
+
+
+### **Etapa 2. Conecte os cabos ao switch.**
+
+Conecte o PC ao switch com um cabo console e inicie uma sessão com um emulador de terminal. Conecte o cabo de alimentação CA ao switch e a uma tomada CA aterrada.
+
+#### Conexão da console do Switch para o Laptop
+
+![[Pasted image 20260630221206.png]]
+
+
+### **Etapa 3. Inicialize o switch.**
+
+Alguns modelos de switch Cisco não têm um chave liga / desliga, como o switch Cisco Catalyst 9300 48S mostrado na figura. Para ligar o switch, conecte uma extremidade do cabo de alimentação CA ao conector de alimentação CA do switch e a outra extremidade a uma tomada CA.
+
+**Observação:** O switch Cisco Catalyst 9300 na figura tem fontes de alimentação redundantes caso haja falha.
+
+#### Painel traseiro do Cisco Catalyst 9300 48S
+![[Pasted image 20260630221221.png]]
+
+## 35.3.2 Vídeo - Gerenciamento de dispositivos por dentro (Dentro da banda) e por fora da rede (Fora da banda)
+
+**Selecione o botão Reproduzir para assistir o vídeo.**
+
+Neste vídeo, vamos dar uma olhada no gerenciamento remoto fora da rede (out-of-band) e gerenciamento via rede (in-band). O gerenciamento fora da rede requer que o computador esteja diretamente conectado à porta de console do dispositivo. Nesse caso, um switch Ethernet. Também pode ser um roteador. Isso permite que o técnico acesse o dispositivo sem ter qualquer tipo de conexão de rede. Isso pode ser para configurar o dispositivo inicialmente, ou pode ser na solução de problemas do dispositivo, ou quando quiser configurar o dispositivo sem ter ou precisar de uma conexão de rede.
+
+O gerenciamento em rede significa simplesmente que queremos ser capazes de acessar remotamente o dispositivo pela rede. Nesse caso, nosso switch Ethernet. Então, tanto nosso switch Ethernet quanto o dispositivo que estamos usando para acessá-lo devem ser capazes de se comunicar um com o outro através da rede. Podemos acessar e configurar o dispositivo remotamente usando Telnet, SSH, o SSH é muito melhor, e mais seguro que o Telnet, ou HTTP, ou HTTPS.
+
+Então, essas são as duas maneiras pelas quais podemos acessar um dispositivo. Ou gerenciamento fora da rede, onde temos que ter conectividade física ao dispositivo, mas não há conectividade de rede, ou gerenciamento pela rede, onde podemos acessar o dispositivo remotamente, mas precisamos ter conectividade de rede com o dispositivo.
