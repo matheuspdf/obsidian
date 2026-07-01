@@ -582,3 +582,43 @@ A figura mostra um Roteador de Serviços Integrado (ISR) do modelo Cisco 4321. O
 O Cisco 4321 ISR também tem uma porta USB, uma interface de gerenciamento e uma porta auxiliar. A porta USB pode ser usada para transferências de arquivos. A porta de gerenciamento pode ser usada para acesso de gerenciamento remoto quando as duas interfaces Gigabit Ethernet estiverem indisponíveis. A porta auxiliar fornece suporte antigo para um método de conexão de um modem dial-up ao roteador para acesso remoto. A porta auxiliar é hoje raramente usada em redes.
 
 ![[Pasted image 20260630221654.png]]
+
+## 35.4.4 Verifique a sua compreensão - Roteadores Cisco
+
+**Verifique sua compreensão sobre roteadores Cisco escolhendo a resposta correta para as seguintes perguntas.**
+
+### Pergunta 1
+
+Verdadeiro ou falso? Um roteador tem muitas portas Ethernet para fornecer acesso aos dispositivos na rede.
+
+- [ ] verdadeiro
+- [x] falso
+
+✅ RESPOSTA CORRETA: falso
+
+> Está certo. A resposta correta é falsa. Um roteador normalmente tem apenas algumas portas Ethernet para conectar redes. Um switch fornece muitas portas Ethernet para acesso ao dispositivo.
+
+### Pergunta 2
+
+Qual das seguintes interfaces pode ser usada para gerenciar o roteador? (Escolha três.)
+
+- [x] Porta Auxiliar
+- [x] Portas console
+- [ ] Slots NIM
+- [x] Interface de gerenciamento
+- [ ] Porta USB
+
+✅ RESPOSTA CORRETA: Porta Auxiliar; Portas console; Interface de gerenciamento
+
+> Está certo. As portas console, a interface de gerenciamento e a porta auxiliar podem ser usadas para gerenciar o roteador.
+
+### Pergunta 3
+
+Verdadeiro ou falso? Com a porta de fibra óptica baseada em SFP, o roteador 4321 tem três interfaces Gigabit Ethernet que podem ser usadas para tráfego de dados.
+
+- [x] falso
+- [ ] verdadeiro
+
+✅ RESPOSTA CORRETA: falso
+
+> Está certo. A resposta correta é falsa. A porta baseada em SFP pode ser usada como uma opção de fibra óptica para a porta RJ-45 GE 0/0/0.
