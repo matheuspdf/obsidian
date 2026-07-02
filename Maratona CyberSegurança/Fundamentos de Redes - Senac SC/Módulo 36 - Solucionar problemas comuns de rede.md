@@ -785,15 +785,151 @@ Neste laboratório, você completará os seguintes objetivos:
 - Determine o utilitário de rede que pode fornecer as informações necessárias para realizar atividades de solução de problemas em uma estratégia bottom-up.
 
 
+# 36.5 Suporte ao cliente
+
+## 36.5.1 Fontes de ajuda
+
+Se, durante o processo de solução de problemas, você não conseguir determinar o problema e sua resolução, talvez seja necessário obter assistência de fontes externas. Estas são algumas das fontes mais comuns de ajuda:
+
+- **Documentação** - Uma boa documentação pode economizar muito tempo e esforço ao direcionar o solucionador de problemas para a causa mais provável do problema. Ela também pode fornecer as informações técnicas necessárias para isolar, verificar e corrigir o problema. A documentação de muitos dispositivos de rede, entretanto, nem sempre apresenta informações suficientes para a solução de problemas mais complexos.
+- **Perguntas frequentes on-line (FAQs)** - A maioria dos fabricantes fornece uma série de perguntas frequentes sobre seu produto ou tecnologia em seu site. Definidas, em geral, por solicitações anteriores de ajuda, as Perguntas frequentes são uma excelente fonte de informações atuais e devem ser consultadas sempre que possível.
+- **Pesquisas na Internet** - Com o aumento da disponibilidade de fóruns de suporte, os solucionadores de problemas agora podem obter assistência de pessoas de todo o mundo em tempo real.
+- **Colegas** - Colegas são muitas vezes uma riqueza de informações; não há substituto para a experiência de solução de problemas.
 
 
+## 36.5.2 Quando pedir ajuda
+
+Às vezes, não conseguimos resolver sozinhos os problemas de rede. Para obter assistência, talvez seja necessário entrar em contato com o fornecedor ou o suporte do ISP. A linha de atendimento ao cliente ou o suporte desk é a primeira parada do usuário final para obter assistência. O suporte é um grupo de pessoas com o conhecimento e as ferramentas necessárias para ajudar a diagnosticar e corrigir problemas comuns. O suporte oferece ajuda para o usuário final determinar se existe um problema, a natureza do problema e a solução.
+
+Muitas empresas e ISPs disponibilizam suporte para ajudar os usuários nos problemas de rede. A maioria das grandes empresas de TI oferece suporte para produtos ou tecnologias individuais. Por exemplo, a Cisco Systems oferece suporte quando há problemas relacionados a um equipamento da Cisco em uma rede ou problemas que podem ocorrer após a instalação.
+
+Há muitas formas de contato com a equipe de suporte, como e-mail, bate-papo ao vivo e telefone. Quando o problema for urgente, entre em contato por telefone ou bate-papo ao vivo. Para problemas com menos urgência, envie um e-mail. Isso é muito importante em bancos, por exemplo, onde pequenos períodos de inatividade podem ter um alto custo.
+
+Se necessário, o suporte pode assumir o controle de um host local através de software de acesso remoto. Isso permite que os técnicos do suporte executem programas de diagnóstico e interajam com o host e a rede sem precisar se deslocar fisicamente para um local de trabalho. Isso reduz muito o tempo de espera para a resolução de problemas e permite que a equipe de suporte ajude mais usuários.
+
+![[Pasted image 20260701214225.png]]
 
 
+## 36.5.3 Interação da Central de Suporte
+
+Como usuário final, é importante fornecer ao suporte técnico o máximo de informações possível, conforme mostrado na figura. A equipe de suporte solicitará informações sobre qualquer plano de serviço ou suporte, além de detalhes do equipamento afetado. Isso pode incluir marca, modelo e número de série junto com a versão do firmware ou sistema operacional em execução no dispositivo. O suporte também pode pedir os endereços IP e MAC do dispositivo com defeito. A central de suporte solicitará informações específicas para o problema:
+
+- Quais sintomas foram encontrados?
+- Quem encontrou o problema?
+- Quando o problema se manifestou?
+- Que medidas foram tomadas para identificar o problema?
+- Quais foram os resultados das medidas tomadas?
+
+Se for uma chamada de acompanhamento, esteja preparado para informar a data e a hora da chamada anterior, o número do tíquete e o nome do técnico. Fique próximo do equipamento afetado e ofereça à equipe de suporte acesso a esse equipamento, se solicitado.
+
+![[Pasted image 20260701214253.png]]
+
+## 36.5.4 Resolução de Problemas
+
+Uma equipe de suporte é organizada em vários níveis de experiência e conhecimento. Se a equipe de primeiro nível não puder resolver o problema, o problema será encaminhado para um nível mais alto. Normalmente, a equipe de nível mais alto é mais experiente e tem acesso a recursos e ferramentas que a equipe de suporte de primeiro nível não tem.
+
+Registre todas as informações sobre a interação com a equipe de suporte, como:
+
+- Hora/data da chamada
+- Nome/ID do técnico
+- Problema reportado
+- Plano de ação seguido
+- Resolução/encaminhamento
+- Próximas etapas (acompanhamento)
+
+Ao trabalhar com a equipe de suporte, muitos problemas podem ser resolvidos de modo rápido e fácil. Quando os problemas são resolvidos, certifique-se de atualizar corretamente toda a documentação para referência futura.
+
+## 36.5.5 Tíquetes de Suporte e Ordens de Serviço
+
+Quando um técnico de suporte de Nível 1 recebe uma chamada, há um processo para coletar informações. Também existem sistemas específicos para armazenar e recuperar informações relevantes. É extremamente importante coletar as informações corretamente no caso de uma chamada precisar ser escalada para um técnico de Nível 2 ou exigir uma visita ao local.
+
+O processo de coleta e registro de informações começa no momento em que o técnico atende o telefone. Após a identificação do cliente, o técnico acessa as informações relevantes do cliente. Normalmente, um aplicativo de banco de dados é usado para gerenciar as informações do cliente.
+
+As informações são transferidas para um tíquete de problema ou um relatório de incidentes. Este documento pode ser uma folha de papel em um sistema de preenchimento de documentos ou pode ser um sistema de monitoramento eletrônico elaborado para acompanhar o processo de solução de problemas do início ao fim. Cada pessoa que trabalha no problema deve registrar o que foi feito nos tíquetes de problema. Quando uma chamada no local é necessária, as informações de tíquete de problema podem ser convertidas em uma ordem de serviço que o técnico pode levar até a instalação do cliente.
+
+Quando um problema é resolvido, a solução é documentada na ordem de serviço ou no tíquete de problema do cliente e em um documento da base de conhecimento para referência futura.
+
+![[Pasted image 20260701214319.png]]
 
 
+## 36.5.6 Verifique sua compreensão - Suporte ao cliente
+
+**Verifique sua compreensão sobre suporte ao cliente escolhendo a melhor resposta para as seguintes perguntas.**
+
+### Pergunta 1
+
+Quais das duas fontes de ajuda a seguir normalmente oferecem experiência em solução de problemas? (Escolha duas.)
+
+- [ ] documentação
+- [ ] perguntas frequentes
+- [x] pesquisa na internet
+- [x] colegas
+- [ ] familiares
+
+✅ RESPOSTA CORRETA: pesquisa na internet; colegas
+
+> Está certo. Pesquisas na Internet e outros colegas podem oferecer o conhecimento necessário para a solução de problemas.
+
+### Pergunta 2
+
+Verdadeiro ou falso? Depois que um problema for resolvido, você não precisará executar nenhuma ação adicional.
+
+- [ ] verdadeiro
+- [x] false
+
+✅ RESPOSTA CORRETA: false
+
+> Está certo. A resposta correta é falsa. Quando o problema é resolvidos, certifique-se de atualizar corretamente toda a documentação para referência futura.
 
 
+# 36.6 Resumo Solução de Problemas Comuns de Rede
 
+## 36.6.1 O que aprendi neste módulo?
 
+### Tipos de Rede
 
+A internet não é de propriedade de nenhum indivíduo ou grupo. A Internet é um conjunto mundial de redes interconectadas (inter-rede ou Internet), que cooperam entre si para trocar informações usando padrões comuns. Através de fios de telefone, cabos de fibra óptica, transmissões sem fio e links de satélite, os usuários da Internet podem trocar informações de várias formas.
 
+As redes domésticas pequenas conectam alguns computadores entre si e com a Internet. A rede SOHO permite que computadores em um escritório em casa ou em um escritório remoto se conectem a uma rede corporativa, ou acessem recursos compartilhados centralizados. Redes de médio e a grande porte, como as usadas por empresas e escolas, podem ter muitos locais com centenas ou milhares de hosts interconectados. A internet é uma rede de redes que conecta centenas de milhões de computadores em todo o mundo.
+
+Existem dispositivos em seu entorno com os quais você pode interagir diariamente que também estão conectados à Internet. Isso inclui dispositivos móveis, como smartphones, tablets, smartwatches e óculos inteligentes. Coisas em sua casa podem ser conectadas à Internet, como um sistema de segurança, aparelhos, sua TV inteligente e seu console de jogos. Fora de casa, há carros inteligentes, etiquetas RFID, sensores e atuadores e até dispositivos médicos que podem ser conectados.
+
+### Transmissão de Dados
+
+As seguintes categorias são usadas para classificar tipos de dados pessoais:
+
+- **Dados voluntários** - São criados e compartilhados explicitamente por indivíduos, como perfis de redes sociais. Esses tipos de dados podem incluir arquivos de vídeo, texto, imagem ou áudio.
+- **Dados observados** - São capturados quando indivíduos registram suas atividades, como dados de localização de celulares.
+- **Dados inferidos** - São baseados na análise de dados voluntários ou observados, como uma pontuação de crédito.
+
+O termo bit é uma abreviação de "dígito binário" e representa a menor unidade de informação. Cada bit pode ter apenas dois valores possíveis: 0 ou 1.
+
+Existem três métodos comuns de transmissão de sinal usados em redes:
+
+- **Sinais elétricos** - A transmissão é obtida pela representação de dados como pulsos elétricos em fio de cobre.
+- **Sinais ópticos** - A transmissão é conseguida convertendo os sinais elétricos em pulsos de luz.
+- **Sinais sem fio** - A transmissão é feita usando infravermelho, microondas ou ondas de rádio através do ar.
+
+### Largura de banda e Taxa de transferência
+
+Largura de banda é a capacidade de um meio de transportar dados. A largura de banda digital mede a quantidade de dados que podem fluir de um lugar para outro durante um determinado tempo. A largura de banda costuma ser medida pelo número de bits que (teoricamente) podem ser enviados através da mídia em um segundo. Estas são as medidas comuns de largura de banda:
+
+- Milhares de bits por segundo (Kbps)
+- Milhões de bits por segundo (Mbps)
+- Bilhões de bits por segundo (Gbps)
+
+A taxa de transferência geralmente não corresponde à largura de banda especificada. Diversos fatores influenciam a taxa de transferência:
+
+- A quantidade de dados enviados e recebidos através da conexão
+- Os tipos de dados transmitidos
+- A latência criada pelo número de dispositivos de rede encontrados entre a origem e o destino
+
+O termo latência se refere ao tempo necessário para os dados viajarem de um ponto a outro, incluindo atrasos.
+
+## 36.6.2 Webster - Questões para Reflexão
+
+Talvez você não trabalhe em um hospital, mas se você está aqui agora é porque, como Kishori, você usa computadores e quer saber mais sobre redes.
+
+Você sabia que a Internet é uma enorme rede de redes que são conectadas, direta ou indiretamente, entre si? É como a Rede na qual que eu vivo. Uma parte pode ser quebrada, mas a minha Rede não se desfaz; Posso corrigi-la e até fortalecê-la.
+
+Você gostaria de fazer isso pela sua rede?
