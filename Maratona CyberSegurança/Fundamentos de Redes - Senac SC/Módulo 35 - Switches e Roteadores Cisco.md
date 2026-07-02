@@ -622,3 +622,255 @@ Verdadeiro ou falso? Com a porta de fibra óptica baseada em SFP, o roteador 432
 ✅ RESPOSTA CORRETA: falso
 
 > Está certo. A resposta correta é falsa. A porta baseada em SFP pode ser usada como uma opção de fibra óptica para a porta RJ-45 GE 0/0/0.
+
+
+# 35.5 Processo de inicialização do roteador
+
+## 35.5.1 Ligar o roteador
+
+Antes de iniciar a instalação do equipamento, é importante ler o guia de início rápido e outra documentação incluída no dispositivo. A documentação contém informações importantes sobre segurança e procedimentos.
+
+**Clique para obter um resumo das etapas para instalar um roteador Cisco 4000 series.**
+
+### **Etapa 1**. Monte o dispositivo no rack com segurança.
+
+**Nota**: A figura mostra um cenário típico de montagem do chassi em um rack.
+
+![[Pasted image 20260701203621.png]]
+
+### **Etapa 2**. Aterrar o dispositivo
+![[Pasted image 20260701203634.png]]
+
+### **Etapa 3**. Conecte o cabo de alimentação.
+![[Pasted image 20260701203701.png]]
+
+### **Etapa 4**. Conecte um cabo console.
+
+Configure o software de emulação de terminal no PC e conecte o PC à porta console.
+![[Pasted image 20260701203714.png]]
+
+### **Etapa 5**. Ligue o roteador.
+![[Pasted image 20260701203732.png]]
+
+
+### **Etapa 6**. Observe as mensagens de inicialização no PC quando o roteador for inicializado.
+
+### Mensagens de inicialização do roteador
+
+```
+Located isr4200-universalk9_ias.16.09.04.SPA.bin
+#################################################....
+(output omitted)
+ 
+Package header rev 3 structure detected
+IsoSize = 486723584
+Calculating SHA-1 hash...Validate package: SHA-1 hash:
+        calculated 4155409B:CC0DB23E:6D72A6AE:EA887F82:AC94DC6A
+        expected   4155409B:CC0DB23E:6D72A6AE:EA887F82:AC94DC6A
+RSA Signed RELEASE Image Signature Verification Successful.
+Image validated
+ 
+             Restricted Rights Legend
+ 
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+ 
+           Cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+ 
+ 
+ 
+Cisco IOS Software [Fuji], ISR Software (X86_64_LINUX_IOSD-UNIVERSALK9_IAS-M), Version 16.9.4, RELEASE
+SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2019 by Cisco Systems, Inc.
+Compiled Thu 22-Aug-19 18:09 by mcpre
+ 
+(saída omitida)
+```
+
+## 35.5.2 Portas de Gerenciamento
+
+Semelhante a um switch Cisco, existem várias maneiras de acessar a interface de linha de comando em um roteador Cisco. Os métodos mais comuns são os seguintes:
+
+- **Console** - Usa uma conexão serial de baixa velocidade ou USB para fornecer conexão direta, acesso de gerenciamento fora de banda a um dispositivo Cisco.
+- **SSH** - Método para acessar remotamente uma sessão CLI através de uma interface de rede ativa, incluindo a interface de gerenciamento.
+- **Porta AUX** - Usado para o gerenciamento remoto do roteador usando uma linha telefônica e um modem de discagem.
+
+A porta console é uma porta física localizada no roteador. Quando o SSH é usado, deve haver uma interface de rede ativa configurada com um endereço IP válido para a rede. Pode ser uma das interfaces de rede ativas usadas para o tráfego de rede ou a interface de gerenciamento.
+
+### Acesso à configuração de gerenciamento
+
+![[Pasted image 20260701203814.png]]
+
+Além dessas portas de gerenciamento, os roteadores também têm interfaces de rede para receber e enviar pacotes IP. A maioria dos roteadores possui interfaces usadas para se conectarem a diversas redes. Geralmente, as interfaces se conectam a vários tipos de redes, conforme aparece na figura, o que significa que os diferentes tipos de meio físico e conectores são necessários.
+
+### Interfaces LAN e WAN
+![[Pasted image 20260701203827.png]]
+
+
+## 35.5.3 Vídeo - O processo de inicialização do roteador Cisco
+
+**Selecione o botão Reproduzir para assistir o vídeo.**
+
+Vamos percorrer o processo de inicialização do roteador. Como você pode ver, tenho uma conexão de console usando o Tera Term para um roteador Cisco. Há três etapas principais.
+
+Na primeira fase, o roteador executa o programa Power On Self Test, ou POST. Localizado na memória somente leitura, ou ROM, o Power On Self Test verifica se há erros no hardware, como a CPU, a DRAM e a NVRAM.
+
+Após o POSTs do sistema, o roteador executa o programa bootstrap. O programa de bootstrap localizado na ROM. Este é o final da primeira etapa. O objetivo do programa de bootstrap é localizar e carregar o software Cisco IOS. O IOS é o sistema operacional da Cisco para o roteador. O Cisco IOS está localizado, por padrão na memória flash. Se o arquivo de imagem do não é encontrado na memória flash e então carregado na RAM, o roteador buscará por um servidor TFTP na rede para ver se é possível localizar outra imagem IOS.
+
+Depois que o for totalmente carregado, o roteador carregará o arquivo de configuração, conhecido como arquivo de configuração de inicialização. Esse arquivo contém todas as configurações definidas no roteador, como o nome do host e os endereços IP das interface do host. O arquivo de configuração está localizado na RAM não volátil, ou NVRAM, no roteador. Se o roteador não conseguir encontrar configuração de inicialização na memória NVRAM, ele também buscará por um servidor TFTP na rede para ver se consegue encontrar um arquivo de configuração. Se um arquivo de configuração não é localizado em qualquer servidor TFTP, então o roteador entrará no modo de configuração, que é um assistente de configuração destinado à configuração inicial.
+
+Vamos observar o processo em ação. Voltarei para minha conexão de console Tera Term e pressionarei Enter. Você pode ver que eu agora tenho uma conexão de console com o roteador. Digitarei "enable" para entrar no modo de usuário privilegiado e digitarei "reload." Isso reinicializará o roteador, e poderemos ver o processo de inicialização em ação. Vou pressionar Enter. E "proceed with reload?" Vou pressionar Enter para confirmar.
+
+Tudo bem, e você poderá ver que o sistema encontrou o bootstrap. O sistema foi reinicializado. "System Bootstrap, Version 15." Você pode ver aqui. Então o sistema já executou o POST e agora encontrou o bootstrap. Está localizado na memória. Você pode ver que há 512 megabytes de memória. Há um slot DIMM que não tem nenhuma memória expandida. Você pode ver que o sistema encontrou o ROMmon, ou Modo de monitor ROM, um subconjunto de recuperação IOS, que está localizado na memória ROM caso um IOS não seja encontrado.
+
+Você poderá ver que o programa de bootstrap agora encontrou o arquivo de imagem IOS e está descompactando a imagem IOS. Você pode comprovar isto pela presença de caracteres hash. Está terminando o processo de inicialização. Ele agora reconhece que estamos com o software Cisco IOS em execução, version 15.2, subrelease 3.
+
+Na parte inferior aqui, você pode ver que a memória, a memória flash no roteador foi reconhecida. E a configuração está sendo carregada agora. Agora, com esse roteador, configurei uma interface, e essa é a interface Gigabit0/0 interface. Se observarmos aqui -- rolarei um pouco para cima -- vocês podem ver que a interface GigabitEthernet 0/0 mudou seu status para ativa. Isto é porque eu a configurei. Então, sabemos, nesse momento, que a configuração foi carregada, e é isso que vemos na saída do roteador aqui.
+
+No final, agora, o roteador terminou de inicializar, e posso pressionar Enter. O primeiro que aparece é o prompt de comando.
+
+## 35.5.4 Verifique a sua compreensão - Processo de inicialização do roteador
+
+**Verifique sua compreensão sobre processo de inicialização do roteador escolhendo a resposta correta para as seguintes perguntas.**
+
+### Pergunta 1
+
+Qual interface se conecta a redes externas, geralmente a uma grande distância?
+
+- [ ] Porta do console
+- [x] Interface WAN
+- [ ] Porta Auxiliar
+- [ ] Acesso SSH
+- [ ] Interface LAN
+
+✅ RESPOSTA CORRETA: Interface WAN
+
+> Está certo. Interfaces WAN conecta redes externas, geralmente a uma grande distância.
+
+### Pergunta 2
+
+Qual é uma maneira de acessar remotamente a interface da linha de comando (CLI) por uma interface de rede?
+
+- [ ] Porta Auxiliar
+- [ ] Interface LAN
+- [x] Acesso SSH
+- [ ] Interface WAN
+- [ ] Porta do console
+
+✅ RESPOSTA CORRETA: Acesso SSH
+
+> Está certo. O acesso SSH é uma forma de acessar remotamente a interface da linha de comandos (CLI) por uma interface de rede.
+
+### Pergunta 3
+
+Qual interface conecta computadores, switches e roteadores para redes internas?
+
+- [x] Interface LAN
+- [ ] Acesso SSH
+- [ ] Porta do console
+- [ ] Interface WAN
+- [ ] Porta Auxiliar
+
+✅ RESPOSTA CORRETA: Interface LAN
+
+> Está certo. Interface LAN conecta computadores, switches e roteadores de redes internas.
+
+### Pergunta 4
+
+Qual interface usa USB ou uma conexão serial de baixa velocidade para gerenciar dispositivos de rede?
+
+- [ ] Interface WAN
+- [ ] Acesso SSH
+- [ ] Porta Auxiliar
+- [ ] Interface LAN
+- [x] Porta do console
+
+✅ RESPOSTA CORRETA: Porta do console
+
+> Está certo. As portas console usam USB ou uma conexão serial de baixa velocidade para gerenciar dispositivos de rede.
+
+### Pergunta 5
+
+Qual interface usa linhas telefônicas e modems para gerenciar remotamente um roteador?
+
+- [ ] Porta do console
+- [x] Porta Auxiliar
+- [ ] Interface WAN
+- [ ] Acesso SSH
+- [ ] Interface LAN
+
+✅ RESPOSTA CORRETA: Porta Auxiliar
+
+> Está certo. As portas auxiliares usam linhas telefônicas e modems para gerenciar remotamente um roteador.
+
+### Pergunta 6
+
+Escolher a ordem correta do processo de inicialização do roteador.
+
+- [ ] carregar o autoinicializador, executar o POST, carregar o IOS, carregar o arquivo de configuração
+- [ ] carregar o bootstrap, carregar o IOS, executar o POST, carregar o arquivo de configuração
+- [x] executar o POST, carregar o bootstrap, carregar o IOS, carregar o arquivo de configuração
+- [ ] executar o POST, carregar o IOS, carregar o arquivo de configuração, carregar o bootstrap
+
+✅ RESPOSTA CORRETA: executar o POST, carregar o bootstrap, carregar o IOS, carregar o arquivo de configuração
+
+> Está certo. A ordem correta para o processo de inicialização do roteador é: executar o POST, carregar a inicialização, carregar o IOS e carregar o arquivo de configuração.
+
+
+# 35.6 Resumo Switches e roteadores Cisco
+
+## 35.6.1 O que aprendi neste módulo?
+
+### Switches Cisco
+
+Um switch é usado para conectar dispositivos na mesma rede. Um roteador serve para conectar várias redes entre si. Ao selecionar um switch para a LAN, é essencial escolher o número e o tipo apropriados de portas. A maioria dos switches mais baratos são compatíveis apenas com as portas de interface de par trançado de cobre. Os switches mais caros podem ter conexões de fibra óptica. Esses são utilizados para conectar o switch a outros switches mais distantes.
+
+Semelhantes a uma porta de switch, as NICs Ethernet operam em larguras de banda específicas, como 10/100 ou de 10/100/1000 Mbps. A largura de banda real do dispositivo conectado será a largura de banda comum mais alta entre a NIC do dispositivo e a porta do switch. Os dispositivos de rede são fornecidos tanto em configurações físicas fixas quanto modulares. Um switch gerenciado que usa um sistema operacional da Cisco permite o controle de portas individuais ou do switch como um todo. Os switches Ethernet Cisco Catalyst 2960 Series são adequados para redes de pequeno e médio porte.
+
+### Métodos de encaminhamento e velocidades de switches
+
+Os switches usam um dos seguintes métodos de encaminhamento para comutar dados entre portas de rede: comutação armazenar e encaminhar ou comutação corte direto. Duas variantes da comutação corte direto são avanço rápido e livre de fragmentos. Dois métodos de armazenamento em buffer de memória são memória baseada em porta e memória compartilhada. Existem dois tipos de configurações duplex usadas para comunicações em uma rede Ethernet: duplex completo e Meio duplex.
+
+A negociação automática é uma função opcional encontrada na maioria dos switches Ethernet e das placas de interface de rede (NICs). Ele permite que dois dispositivos negociem automaticamente as melhores capacidades de velocidade e duplex. duplex completo será escolhido se os dois dispositivos o tiverem para a largura de banda mais alta comum entre eles. A maioria dos dispositivos de switch agora suporta o recurso de (Auto-MDIX) interface dependente automática. Quando ativado, o switch detecta automaticamente o tipo de cabo conectado à porta e configura as interfaces de acordo.
+
+### Processo de inicialização do switch
+
+Os switches Cisco são pré-configurados para operar em uma LAN quando são inicializados. Defina as configurações básicas de segurança antes de colocar o switch na rede. As três etapas básicas para ligar um switch são as seguintes: 1) Verifique os componentes, 2) Conecte os cabos ao switch e 3) Ligue o switch. Quando o switch está ativado, o Power On Self Test (POST) é iniciado.
+
+Há dois métodos para conectar um PC ao dispositivo de rede para realizar as tarefas de configuração e de monitoramento: gerenciamento fora da banda e gerenciamento em banda. O gerenciamento fora da banda requer que um computador seja conectado diretamente à porta de console do dispositivo de rede que está sendo configurado. Use o gerenciamento em banda para monitorar e fazer alterações na configuração de um dispositivo de rede em uma conexão de rede.
+
+Um dispositivo da Cisco carrega estes dois arquivos na RAM quando é inicializado: o arquivo de imagem do IOS e o arquivo de configuração de inicialização. A imagem do IOS geralmente é armazenada na memória flash. O arquivo de configuração de inicialização é armazenado na NVRAM.
+
+### Roteadores Cisco
+
+Os roteadores precisam de um sistema operacional, CPU, RAM, ROM e NVRAM. Cada roteador Cisco tem os mesmos componentes de hardware geral: portas console, interfaces de LAN, slots de expansão para diferentes tipos de módulos de interface (por exemplo, EHWIC, Serial, DSL, portas de switch, sem fio), slots de armazenamento para recursos expandidos (por exemplo, memória flash compacta, Portas USB).
+
+### Processo de inicialização do roteador
+
+Siga estas etapas para ligar um roteador Cisco.
+
+- **Etapa 1.** Monte o dispositivo no rack com segurança.
+- **Etapa 2.** Aterrar o dispositivo
+- **Etapa 3.** Conecte o cabo de alimentação.
+- **Etapa 4.** Conecte um cabo console.
+- **Etapa 5.** Ligue o roteador.
+- **Etapa 6.** Observe as mensagens de inicialização no PC quando o roteador for inicializado.
+
+Duas formas mais comuns de acessar a interface de linha de comando em um roteador Cisco são o console, SSH e porta Aux. Roteadores também têm interfaces de rede para receber e enviar pacotes IP.
+
+## 35.6.2 Webster - Questões para Reflexão
+
+Achei este módulo muito útil e espero que você também. Agora, quero voltar à rede do escritório e visitá-la novamente. Saber configurar vários switches e roteadores me ajudará a entender melhor por que nossa rede está configurada da maneira que é.
+
+Agora que você já sabe como configurar uma rede de vários switches e vários roteadores, veja se consegue acessar a rede do escritório ou da escola.
+
+Quais são as vantagens de configurar a rede da maneira que ela é?
+
+Como isso mudaria se a rede dobrasse de tamanho?
