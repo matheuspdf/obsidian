@@ -1643,3 +1643,6 @@ O gerenciamento de rede refere-se ao processo de configuração, monitoramento e
 
 Automação de rede é o processo de automatizar a configuração, gerenciamento, teste, implantação e operação de dispositivos físicos e virtuais em uma rede. Tarefas comuns de trabalho intensivo podem ser automatizadas usando scripts e programação de rede. Python é uma linguagem de script popular para automação de rede.
 
+## 37.7.2 Webster - Questões para reflexão
+
+Lara fez um ótimo trabalho criando um guia de solução de problemas para técnicos de help desk. Compartilhar sua experiência de help desk ajudará os novos técnicos a se tornarem mais eficazes rapidamente. A informação foi prática neste módulo? Como estão suas habilidades de diagnóstico? Qual abordagem de solução de problemas funcionaria melhor se um problema estiver relacionado ao cabeamento? Qual abordagem de solução de problemas funcionaria melhor se o problema estivesse relacionado a um aplicativo?
