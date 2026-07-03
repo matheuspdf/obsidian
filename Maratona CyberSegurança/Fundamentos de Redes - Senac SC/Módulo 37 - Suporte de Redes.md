@@ -1330,3 +1330,316 @@ Nesta atividade do Packet Tracer, você usa a documentação de rede para identi
 - Identificar problemas específicos de rede.
 - Implementar soluções para problemas de comunicação em rede.
 - Verificar a operação da rede.
+
+
+# 37.6 Solucionar problemas de Conectividade Remotamente
+
+## 37.6.1 Suporte a usuários remotos
+
+Ao auxiliar usuários remotos, muitas vezes não é eficiente conduzir verbalmente um usuário através de procedimentos complicados. As tecnologias de acesso remoto permitem que os técnicos de suporte assumam o controle da área de trabalho de um usuário para visualizar e definir configurações no computador do usuário. Durante uma sessão de área de trabalho remota, o usuário geralmente não consegue controlar seu PC. No entanto, eles podem assistir tudo o que o técnico faz.
+
+Por exemplo, um usuário pode estar tendo problemas para acessar o site corporativo. Como esse acesso pode depender de várias condições de configuração do computador, um técnico de suporte solicita acesso remoto ao sistema. Depois que o usuário autoriza o acesso, o técnico pode verificar várias configurações de segurança e acesso no sistema para identificar e corrigir o problema.
+
+Os aplicativos de área de trabalho remota apresentam possíveis vulnerabilidades de segurança porque oferecem controle total dos computadores por alguém que não seja o usuário autorizado. Por exemplo, os agentes de ameaças podem explorar portas abertas de aplicativos de área de trabalho remota ou usar técnicas de engenharia social para induzir um usuário a fornecer acesso à área de trabalho remota. É importante que os usuários entendam que apenas técnicos de suporte autorizados devem ter acesso remoto aos sistemas.
+
+**Observação**: muitas organizações desativam o acesso remoto a computadores que possuem ou administram. Por esse motivo, pode ser necessário solicitar que o usuário o ative. Outras organizações usam aplicativos de desktop remoto proprietários ou alternativos para atenuar as vulnerabilidades de segurança associadas ao acesso remoto ao sistema.
+
+Os aplicativos de área de trabalho remota usam um modelo cliente-servidor. O cliente de área de trabalho remota é usado para conectar-se ao sistema remoto, que atua como um servidor. Os aplicativos de acesso remoto podem recuperar dados do sistema, transferir arquivos para sistemas e iniciar sessões de bate-papo seguras com os usuários. Alguns aplicativos de acesso remoto exigem que o usuário esteja presente para autorizar o acesso ou podem acessar sistemas sem a participação do usuário. Outros sistemas de acesso remoto podem acessar o sistema se ele estiver desacompanhado.
+
+**Selecione as setas para a direita e para a esquerda para obter exemplos de aplicativos comuns de área de trabalho remota.**
+
+**Área de Trabalho Remota da Microsoft**
+
+- Instalado em todos os computadores Windows.
+- Permite o acesso a partir de PCs, dispositivos Android ou iOS.
+- Requer uma edição Pro do Windows.
+
+
+## 37.6.2 Acesso remoto com Telnet, SSH e RDP
+
+Muito antes dos computadores desktop com interfaces gráficas sofisticadas, as pessoas utilizavam sistemas com base em texto que frequentemente eram apenas terminais de exibição fisicamente acoplados a um computador central. Quando as redes foram disponibilizadas, as pessoas precisaram de uma maneira de acessar remotamente os sistemas de computador da mesma forma que faziam com os terminais diretamente conectados.
+
+O protocolo Telnet foi desenvolvido para atender a essa necessidade. O Telnet data do início da década de 70 e está entre um dos protocolos e serviços da camada de Aplicação mais antigos da suite TCP/IP. O Telnet fornece um método padrão de emulação de dispositivos terminais baseados em texto na rede de dados. O protocolo e o software cliente que implementa o protocolo são comumente chamados de Telnet. Os servidores Telnet escutam solicitações de clientes na porta TCP 23.
+
+Uma conexão Telnet é chamada de sessão de terminal virtual (virtual terminal - vty). Em vez de usar um dispositivo físico para se conectar ao servidor, o Telnet usa software para criar um dispositivo virtual que fornece recursos de uma sessão de terminal com acesso à interface de linha de comando (CLI) do servidor.  
+Na figura, o cliente se conectou remotamente ao servidor via Telnet. O cliente agora pode executar comandos como se estivesse conectado localmente à linha de comando do servidor. Da mesma forma, o Telnet pode fornecer acesso à interface de linha de comando (CLI), ou console, de um dispositivo de rede para que o dispositivo possa ser configurado e monitorado.
+
+![[Pasted image 20260702215001.png]]
+
+Quando uma conexão Telnet é estabelecida, os usuários podem executar qualquer função autorizada no servidor, como se estivessem usando uma sessão de linha de comando no próprio servidor. Se autorizados, podem iniciar e parar processos, configurar o dispositivo e até mesmo desligar o sistema.
+
+Embora o protocolo Telnet possa exigir o login de um usuário, ele não suporta o transporte de dados criptografados. Todos os dados trocados durante as sessões Telnet são transportados como texto simples pela rede. Isso significa que os dados podem ser facilmente interceptados e compreendidos. Isso inclui nomes de usuário e senhas.
+
+O protocolo Secure Shell (SSH) oferece um método alternativo e seguro para acesso ao servidor. O SSH fornece a estrutura para proteger login remoto e outros serviços de rede segura. Ele também fornece autenticação mais forte do que o Telnet e suporta o transporte de dados de sessão usando criptografia. Os servidores SSH atendem às solicitações do cliente na porta TCP 22.
+
+Como prática recomendada, os profissionais de rede devem sempre usar SSH no lugar de Telnet, se possível.
+
+A figura ilustra como o SSH é mais seguro que o Telnet. No lado esquerdo da figura, o técnico de rede está usando Telnet e faz login no servidor usando as credenciais indicadas. O agente da ameaça capturou o tráfego Telnet e pode ver facilmente as credenciais usadas. No lado direito da figura, o técnico está usando SSH para se conectar a um servidor diferente. O agente da ameaça ainda pode capturar o tráfego. No entanto, eles não seriam capazes de decifrá-lo porque o SSH criptografa o tráfego do usuário.
+
+![[Pasted image 20260702215204.png]]
+
+Conectar-se a outros dispositivos usando Telnet ou SSH usando uma janela de terminal é comum em alguns sistemas operacionais. Existem também pacotes de emulador de terminal de software comercial disponíveis. PuTTY é um popular programa emulador de terminal gratuito e de código aberto. Este aplicativo cliente suporta SSH, Telnet e rlogin. O Terra Term é outro emulador de terminal gratuito e de código aberto que inclui uma linguagem de script de macro e plug-ins. PuTTY e Tera Term podem usar o protocolo SSH para conexões. Ambos assumem que um servidor SSH, como o disponível com OpenSSH, está sendo executado no dispositivo de destino. O OpenSSH é distribuído com uma ampla gama de sistemas operacionais, incluindo várias distribuições Linux, Windows e MacOS.
+
+O Remote Desktop Protocol (RDP) foi criado pela Microsoft. Ele usa um modelo cliente-servidor no qual o cliente pode se conectar a um servidor RDP executado em um sistema remoto para exibir a interface gráfica do usuário do dispositivo remoto. Os servidores e clientes RDP estão incluídos no Windows e estão disponíveis para OS X, Linux e Unix via xrdp, que é uma implementação gratuita e de código aberto do servidor Microsoft RDP. Outros sistemas operacionais também podem executar essas funções. Por exemplo, no macOS, a funcionalidade de acesso remoto é fornecida pelo recurso de compartilhamento de tela, que é baseado no Virtual Network Computing (VNC). Qualquer cliente VNC pode se conectar a um servidor de compartilhamento de tela. O VNC é um produto freeware que é semelhante em funcionalidade ao RDP e funciona na porta 5900.
+
+
+## 37.6.3 Demonstração em Vídeo - Área de Trabalho Remota e Assistência Remota
+
+Outros sistemas operacionais também podem executar essas funções. Por exemplo, no macOS, a funcionalidade de acesso remoto é fornecida pelo recurso de compartilhamento de tela, que é baseado no Virtual Network Computing (VNC). Qualquer cliente VNC pode se conectar a um servidor de compartilhamento de tela. O VNC é um produto freeware que é semelhante em funcionalidade ao RDP e funciona na porta 5900.
+
+Selecione **Play** para ver o vídeo.
+
+Você já desejou você poderia ter um segundo par de olhos dê uma olhada em algo que você vê na tela? Bem, é esse vídeo, estamos aqui para conversar sobre desktop remoto e assistência remota aqui no Windows 10, então isso vai ser divertido, porque vamos realmente fazer isso e não apenas falar sobre isso, então para começar, uma das primeiras coisas que queremos fazer é ir para a área de trabalho remota.
+
+E isso vai estar dentro do nosso, clique com o botão direito em nosso botão iniciar, e vamos direto para as configurações. Nós vamos expandir, bem aí. Poderíamos ter clicado em iniciar e digitado as configurações e descobri dessa forma, mas estamos fazendo clique com o botão direito em iniciar e o botão esquerdo em configurações. Agora, dentro das configurações, o que vamos abordar é o sistema, e dentro do sistema, é aqui que vamos rolar até o final no lado esquerdo, e aqui encontramos a área de trabalho remota.
+
+Vou prosseguir e clicar em área de trabalho remota, e o que vemos aqui é que, por padrão, a área de trabalho remota está desativada no Windows 10. Agora, com a área de trabalho remota desligada, isso significa que usuários remotos não podem acessar nosso sistema. Agora, se quisermos permitir que um usuário remoto se conecte ao nosso computador através da rede, e obter acesso ao nosso sistema e ser literalmente nós no sistema, podemos utilizar este controle deslizante à direita e diz tem certeza? Você e os usuários selecionados nas contas de usuário será capaz de se conectar a esta máquina remotamente. E vou clicar em confirmar.
+
+Agora deixe-me conversar um pouco mais sobre isso. Quando você liga a área de trabalho remota, alguém agora pode se conectar remotamente à sua máquina, e quando eles se conectarem a ele, eles vão autenticar utilizando sua combinação de nome de usuário e senha. Bem, e se eu não quiser divulgar meu nome de usuário e senha? Então um usuário remoto teria que ter seu próprio nome de usuário e senha em sua máquina. O que significa que você teria que criar uma conta de usuário para eles em sua máquina. Então, se você quiser cinco usuários diferentes ser capaz de acessar remotamente sua caixa usando seu próprio nome de usuário e senha, eles precisariam de cinco contas, é o que isso significa. Caso contrário, você está compartilhando seu nome de usuário e senha para que eles tenham acesso.
+
+Portanto, esta é uma área de trabalho remota, e há algumas configurações que podemos modificar aqui, por exemplo, há configurações de energia que podemos ver, que é apenas mostrar as configurações, fala sobre energia e modo suspenso, não queremos que nosso PC durma e não poder acessá-lo remotamente. Além disso, tornar nossa máquina detectável em nossa rede para que as pessoas possam ver, temos configurações aqui que vimos anteriormente em nossas configurações de rede, e é aqui que encontramos coisas para compartilhamento de arquivos de rede, bem como a ideia de compartilhamento protegido por senha. Portanto, esses são atendidos por padrão.
+
+Agora vamos rolar para baixo aqui para configurações de área de trabalho remota, e o que podemos ver aqui é o nome que as pessoas vão almejar quando eles usam a área de trabalho remota como uma ferramenta no computador deles, será o nome do PC de StudentPC_1, esse é o nome do meu computador que estamos no momento, que nós apenas permitiu que as pessoas se conectassem.
+
+Lá embaixo, contas de usuários, eu estava falando sobre isso, por padrão, o usuário que pode acessá-lo é o nome de usuário do aluno, com o senha para a conta do aluno. Agora, se você quiser adicionar outras pessoas para poder acessá-lo, clicaríamos em adicionar, e agora aqui dentro, poderíamos digitar os diferentes nomes de usuário ou grupo de usuários que seriam capazes de acessar remotamente nossa máquina. Você os coloca aqui, e então selecionaremos OK.
+
+Agora, continuando em frente, na parte inferior, além de contas de usuário que podem ter acesso remoto, se você não sabe nem como usar a área de trabalho remota de uma máquina remota e usá-la como uma ferramenta, há muitos links aqui para obter ajuda. E o Windows faz um ótimo trabalho para isso.
+
+Então, o que queremos tentar agora, é que queremos tentar acessar remotamente este computador. Mas tenho que fazer algo primeiro. Para acessar remotamente, as pessoas vão precisar de um nome de usuário e senha, e se eu verificar minha conta de estudante aqui, alterar as configurações da conta na minha máquina, o que poderemos ver é que não tenho uma senha. Portanto, as opções de login da conta de estudante, minha conta não tem uma senha, vou adicionar uma senha para que possamos realmente acessar remotamente esta máquina usando uma área de trabalho remota. 123, porque isso é incrível, e a dica vai ser você sabe disso. 123, vamos utilizar isso com a conta de usuário do aluno, para acessar remotamente esta máquina.
+
+Então, vamos tentar, vou carregar um sistema operacional diferente. Então, aqui estamos no Windows 7, vou seguir em frente e clicar em iniciar, e vamos usar a área de trabalho remota, e aqui está a conexão de área de trabalho remota, e então o que farei é digitar o nome do computador que desejo acessar, StudentPC_1 e clicarei em conectar. Agora, quando clico em conectar, diz ooh, você quer se conectar, tudo bem, você vai usar a conta do usuário de aluno, mas qual é a senha para essa conta na outra máquina? E isso é Cisco123, e eu irei em frente e clicarei em OK.
+
+E o que vai acontecer aqui é que minha máquina Windows 7 vai se conectar remotamente à outra máquina de StudentPC_1, e terei controle total e absoluto dessa máquina usando essa conta de usuário. Diz que você deseja verificar, sim, vamos verificar com um certificado, está apenas falando sobre autenticação de certificado e autoridade, e agora a conexão será realizada.
+
+Então, aqui estamos nós com acesso remoto na outra máquina neste momento. Estamos remotos e deixe-me mudar de vista para que você possa ver o topo da minha janela. E no topo da minha janela, você pode ver aqui que na minha máquina Windows 7, estamos conectados à StudentPC_1, e com o que foi dito Eu posso apenas minimizar, e estou de volta minha máquina cliente Windows, ou Windows 7, e eu poderia trazê-lo de volta, e estou de volta na conexão de área de trabalho remota para o StudentPC_1.
+
+Vou mudar minha janela novamente e continuar. Então, na máquina Windows 7, Eu literalmente assumi a caixa do Windows 10, e o que é realmente importante observar sobre isso, se eu for dar uma olhada no Windows 10 sistema novamente, como é? Na máquina Windows 10, ele está desconectado. Quando o usuário remoto conectado à nossa máquina com a conta de estudante, nossa conta corrente que estávamos usando, que era a conta do aluno foi desconectada, e se eu entrar do meu lado na minha conta aqui na caixa do Windows 10, vamos dar uma olhada no que aconteceu a sessão remota na caixa do Windows 7.
+
+Dê uma olhada, uma vez que o usuário no computador Windows 10 se logou novamente no lado deles, fomos desconectados de nossa sessão remota. Vá em frente e clique em OK, e estamos de volta aqui no Windows 7.
+
+Então essa é a área de trabalho remota, e agora temos mais um item para discutir, e isso vai ser assistência remota. Então, estamos de volta ao nosso cliente Windows 10, e agora vamos falar de assistência remota. Agora primeiro, para entrar nas configurações de assistência remota o que vamos fazer é ir em frente e clicar em iniciar, e vamos para o PC. E com o PC, vamos passar para nossas propriedades. Agora, quando clicamos nas propriedades deste PC, isso vai abrir uma nova janela para nós. Queremos ir, fica do lado esquerdo aqui, e é chamado de configurações remotas.
+
+Entramos no nosso link de configurações remotas, o que veremos quando eu redimensionar minha janela, é que temos a assistência remota aqui, que está definido para permitir assistência remota conexões a este computador, isso é ótimo. Incrível, então isso significa que as pessoas que oferecemos um arquivo especial conhecido como convite, pode usar esse arquivo e uma senha para se conectar a nós.
+
+Isso é diferente da área de trabalho remota, porque desktop remoto, estamos literalmente ativando um serviço que qualquer pessoa a qualquer momento podem por conta própria iniciar uma conexão e assumir nosso computador e usá-lo. Apenas remotamente, o que é ótimo. Com a área de trabalho remota, as pessoas podem iniciar por conta própria. Com assistência remota, temos que fornecê-los um arquivo e uma senha para acessar nossa máquina.
+
+Então, como vamos fazer isso? Bem, não é nem um pouco difícil. Agora que temos conexões de assistência remota sendo selecionado, posso ir em frente e clicar em avançar aqui, e o que podemos dar uma olhada é uma de nossas configurações reais para isso. Sim, nosso computador pode ser controlado remotamente. Além disso, por quanto tempo podemos criar um convite e fornecer alguém para ficar aberto? Bem, o padrão aqui é de seis horas, então vamos deixá-lo no padrão de seis horas, e o que queremos fazer agora é criar um convite de assistência remota.
+
+Para fazer isso, clico no meu botão iniciar, e vamos digitar assistência remota aqui. E quando digitamos assistência remota, o que teremos é permitir convites de assistência remota a ser enviado deste computador. Ok, e nas configurações, convide alguém para se conectar ao seu PC e te ajudar, vou clicar nisso.
+
+Quando clico nele, obtemos esta janela de assistência remota. E aqui podemos ir em frente e ajudar outra pessoa quem nos convidou com um arquivo, ou podemos usar convidar alguém, então clicarei no primeiro, Quero convidar outra pessoa para me ajudar remotamente. Quando eu clico nisso, há três opções aqui. Dois deles estão esmaecidos, a primeira opção é que posso salvar o convite como um arquivo na minha máquina. Então terei que enviar esse arquivo para outra pessoa. Por meio de um anexo de e-mail, unidade flash, compartilhamento de arquivos, o que quiser. As outras opções estão esmaecidas, porque não posso selecioná-los neste momento, mas se eu tivesse um programa de e-mail instalado na minha máquina, poderia enviá-lo automaticamente para um alvo remoto ou com um aplicativo Easy Connect da loja do Windows, eu poderia usar isso também.
+
+Vou fazer a opção padrão de salvar o convite como um arquivo. Quando eu clicar nele, ele me perguntará onde colocá-lo, Vou apenas jogá-lo no meu desktop, e agora meu arquivo de convite será salvo para a minha área de trabalho da minha máquina Windows 10. O arquivo salvo na minha máquina, também tenho uma nova janela que aparece, diz por favor certifique-se você dá esta senha para o outro usuário para acessar sua máquina junto com esse arquivo de convite.
+
+Então, vamos para a máquina Windows 7, e vamos usar este arquivo e esta senha para assistir remotamente a caixa do Windows 10. Então estamos na caixa do Windows 7, Eu mudei aquele arquivo de convite para a área de trabalho, e o que posso fazer posso clicar duas vezes no arquivo de convite, diz, ah, qual é a senha para conectar? Bem, essa senha vai ser aquela grande e musculosa que vimos originalmente, que é 92252M92W2MXD5M2X, que é uma loucura, mas é bom, é uma boa segurança. Vá em frente e clique em OK.
+
+A partir daí, o que veremos está de volta no Windows 10, deixe-me voltar novamente. Aqui estamos nós, minha caixa do Windows 10, diz, você permitiria que o aluno se conectasse à sua máquina? Eu vou dizer sim, vá em frente, e você tipo, ei eu não fui desconectado desta vez como a área de trabalho remota, nós desconectamos, mas agora diz que a pessoa a lhe ajudar agora pode ver sua área de trabalho.
+
+Bem, isso é legal, posso pausar a habilidade para o meu ajudante ver, ha, eles não podem ver mais, ou continue, agora meu ajudante pode ver a área de trabalho novamente, Eu posso abrir uma janela de bate-papo onde podemos bater um papo para a frente e para trás, eu e meu ajudante, então, mesmo na área de configurações aqui, temos algumas opções que podemos dar uma olhada, como uso de largura de banda, salvando um registro, você tem informações aqui que você pode personalizar, o que é ótimo.
+
+Nós vamos voltar na máquina Windows 7 para ver o que estão vendo e continuaremos. Ok, isso é legal, então na máquina Windows 7, temos esta janela de assistência remota que está aberta, e diz que estamos ajudando a conta do aluno na outra máquina, e o que podemos fazer é personalizar nosso tamanho aqui, e como vimos na outra máquina, o Windows 10, temos coisas como chat e também configurações.
+
+Não consigo clicar em nada, esta não é uma área de trabalho remota. Eu não tenho acesso ao controle. Se eu quiser solicitar o controle, posso ir em frente e clique em solicitar controle, e ele aparecerá na máquina Windows 10, ainda não consigo clicar, e na máquina Windows 10 diz você quer dar a essa pessoa o controle de sua máquina? porque agora eles podem apenas visualizar, e se eu fosse para o cliente Windows 10, Eu seria capaz de permitir que este usuário do Windows 7 controlasse remotamente minha máquina.
+
+Então essa é a diferença entre assistência remota e desktop remoto, ambos usam um protocolo criptografado em toda a rede para permitir esse tipo de acesso e controle. Obrigado por ver, personalizar, praticar e brincar com seus próprios desktops remotos e remotos Configurações de assistência do Windows e divirta-se e se tornar esse profissional de TI.
+
+## 37.6.4 Entendendo as VPNs
+
+Para se comunicar e compartilhar recursos com segurança em uma rede não segura, como a Internet, é usada uma rede privada virtual (VPN). Os tipos mais comuns de VPN são usados para acessar uma rede privada corporativa por usuários remotos ou sites corporativos remotos.
+
+Uma VPN usa conexões seguras dedicadas, roteadas pela Internet, da rede privada corporativa para o usuário remoto. Quando conectados à rede privada corporativa, os usuários de VPN de acesso remoto passam a fazer parte dessa rede e têm acesso a todos os serviços e recursos como se estivessem fisicamente conectados a ela. As VPNs também são usadas para conectar filiais e outras instalações à rede corporativa.
+
+As VPNs geralmente são implantadas em uma das seguintes configurações: acesso site a site ou acesso remoto.
+
+**Clique nas setas à direita e à esquerda para visualizar informações sobre cada tipo de VLAN.**
+
+### **VPN de site para site**
+
+Uma VPN site a site é criada quando os dispositivos de terminação da VPN, também chamados de gateways VPN, são pré-configurados com informações para estabelecer um túnel seguro. O tráfego da VPN é criptografado apenas entre esses dispositivos. Os hosts internos não sabem que uma VPN está sendo usada.
+![[Pasted image 20260702215837.png]]
+
+### **VPNs de acesso remoto**
+
+Uma VPN de acesso remoto é criada dinamicamente para estabelecer uma conexão segura entre um cliente e um dispositivo de terminação da VPN. Por exemplo, uma VPN SSL de acesso remoto é usada quando você verifica suas informações bancárias online.
+![[Pasted image 20260702215847.png]]
+
+
+Os usuários de acesso remoto devem instalar um cliente VPN em seus computadores para formar uma conexão segura com a rede privada corporativa. Roteadores especiais também podem ser usados ​​para conectar computadores à rede privada corporativa. O software VPN criptografa os dados antes de enviá-los pela Internet para o gateway VPN na rede privada corporativa. Os gateways VPN estabelecem, gerenciam e controlam conexões VPN, também conhecidas como túneis VPN. O Windows suporta vários tipos de VPN, no entanto, para algumas VPNs, pode ser necessário um software de terceiros. O cliente Cisco AnyConnect VPN é mostrado na figura.
+
+![[Pasted image 20260702215757.png]]
+
+Uma VPN no Windows 10 pode ser configurada nas configurações de Rede e Internet, conforme mostrado na figura.
+![[Pasted image 20260702215806.png]]
+
+Além de proteger o compartilhamento de área de trabalho remota para fins de suporte técnico, os usuários podem usar a área de trabalho remota para acessar remotamente computadores dentro da rede corporativa para realizar suas tarefas normais de trabalho. Isso significa que um usuário pode acessar a área de trabalho de seu computador de trabalho a partir de seu computador doméstico. Isso permite que os funcionários acessem os recursos de trabalho de seus próprios dispositivos e acessem remotamente arquivos e programas hospedados em seu PC de trabalho. Além disso, a computação com desktops virtuais baseados em nuvem está se tornando popular. As organizações podem economizar dinheiro e aumentar a eficiência terceirizando o gerenciamento de estações de trabalho para a nuvem. Nesse caso, as estações de trabalho do usuário são máquinas virtuais hospedadas na nuvem. Isso permite que os usuários acessem seus recursos de computador de praticamente qualquer dispositivo que suporte um cliente de desktop remoto compatível.
+
+No entanto, isso pode criar desafios de segurança. Muitos clientes de área de trabalho remota não são seguros. O uso de VPNs para acessar estações de trabalho de computadores virtuais remotos e baseados em nuvem garante maior segurança quando esta solução está em uso. Microsoft Azure e Amazon Web Services fornecem soluções de espaço de trabalho remoto. A equipe de suporte de TI será necessária para ajudar os funcionários a acessar e operar esses recursos virtuais.
+
+## 37.6.5 Sistemas de gerenciamento de rede
+
+O gerenciamento de rede refere-se a dois conceitos relacionados. O primeiro é o processo de configuração, monitoramento e gerenciamento do desempenho de uma rede. O segundo é a plataforma que as equipes de TI e operações de rede usam para concluir essas tarefas. As plataformas modernas de gerenciamento de rede fornecem análises avançadas, aprendizado de máquina e automação inteligente para otimizar continuamente o desempenho da rede. À medida que as organizações se adaptam a uma força de trabalho mais distribuída, esses sistemas de gerenciamento de rede são cada vez mais implantados em ambientes de nuvem e hospedados.
+
+Os sistemas de gerenciamento de rede coletam dados de dispositivos de rede conectados, como switches, roteadores, pontos de acesso e dispositivos clientes. Eles também fornecem aos administradores de rede controle sobre como esses dispositivos operam e interagem uns com os outros. Os dados capturados desses dispositivos são usados para identificar proativamente problemas de desempenho, monitorar segurança e segmentação e acelerar a solução de problemas.
+
+Os sistemas de gerenciamento de rede geralmente usam o Simple Network Management Protocol (SNMP) e o Remote Network Monitoring (RMON) para coletar informações de dispositivos de rede. Os sistemas operacionais host possuem plataformas de gerenciamento que permitem o monitoramento e a configuração de muitos computadores host.
+
+Os sistemas de gerenciamento de rede são implantados usando dois modelos operacionais, conforme mostrado na tabela.
+
+<table border="1" cellpadding="6" cellspacing="0" style="width:100%; table-layout:fixed; word-wrap:break-word;"> <tr style="background:#6b7280; color:white;"> <th>Baseado em Nuvem</th><th>No local (on-premises)</th> </tr> <tr> <td> <ul> <li>Os sistemas baseados em nuvem são projetados para fornecer flexibilidade e acesso amplo a redes geograficamente dispersas.</li> <li>Essas plataformas oferecem fácil acesso e monitoramento em redes altamente distribuídas e simplificam o provisionamento de sites remotos.</li> <li>Eles também fornecem um alto nível de configuração e personalização por meio de APIs abertas e ecossistemas de aplicativos robustos.</li> <li>Essas plataformas também oferecem suporte a análises avançadas, automação e casos de uso de otimização, por meio de grandes data lakes e o poder da computação em nuvem para oferecer suporte a aplicativos sofisticados de aprendizado de máquina.</li> </ul> </td> <td> <ul> <li>Os sistemas de gerenciamento de rede no local podem ser usados para grandes redes de campus que exigem maior desempenho e escalabilidade.</li> <li>Eles também fornecem recursos avançados, como análise, garantia e inteligência artificial (IA) e aprendizado de máquina (ML).</li> <li>Algumas organizações devem manter um controle rígido sobre seus ativos de dados e são proibidas de armazenar dados em locais dispersos.</li> <li>Os servidores de gerenciamento de rede on-premises (no local) evitam tais problemas de conformidade porque todos os dados podem ser armazenados no local.</li> <li>Como grandes redes podem gerar muitos dados de gerenciamento, os sistemas locais geralmente são servidores maiores que têm poder suficiente para processar os dados para que possam ser usados para fornecer os insights de que a TI precisa para gerenciar a rede.</li> <li>Esse é um dos motivos pelos quais um servidor local geralmente está localizado no núcleo da rede.</li> <li>Embora possa ser acessado pela internet, o acesso remoto requer uma conexão VPN.</li> </ul> </td> </tr> </table>
+
+Cisco Meraki é uma plataforma líder de gerenciamento de rede baseada em nuvem que fornece recursos de gerenciamento de rede poderosos sem consumir largura de banda do usuário. É seguro, flexível e fácil de implantar. Com ele, as redes podem ser gerenciadas de qualquer lugar. Ele pode gerenciar uma ampla variedade de dispositivos de rede Meraki e não Meraki com segurança. Ele fornece visualizações detalhadas de redes grandes, dispersas e complexas até o computador desktop ou telefone individuais. A figura fornece uma visão de um aspecto de um painel Meraki.
+
+![[Pasted image 20260702220729.png]]
+
+## 37.6.6 Vídeo - O que é gerenciamento de rede?
+
+Este vídeo explora brevemente o gerenciamento de rede, incluindo o gerenciamento de rede em nuvem e o Cisco Nexus Dashboard.
+
+Selecione **Play** para ver o vídeo.
+
+O que é gerenciamento de rede e como ele pode ajudá-lo a alcançar seus objetivos de negócios corporativos?
+
+O gerenciamento de rede é um conjunto de ferramentas projetado para ajudar os gerentes de TI do sistema de rede a implantar, manter, otimizar, e atualizar uma rede de qualquer tamanho. Essas ferramentas ajudam as organizações a avaliar dados rapidamente e fazer mudanças rápidas para dar suporte a novas metas de negócios como trabalhar em casa ou fazer compras online.
+
+Quer sejam no local ou baseados na nuvem e acessado por meio de um navegador, sistemas de gerenciamento de rede gerencia elementos de rede, como switches, roteadores, access points e controladores sem fio. E com a crescente complexidade atual, eles também gerenciam sensores, câmeras e dispositivos industriais.
+
+Eles fazem isso coletando dados como dados de telemetria em tempo real de elementos de rede para fornecer informações sobre a integridade de uma rede em uma GUI fácil de ler. Com estatísticas sobre dispositivos endpoint como telefones celulares, laptops e desktops, os operadores podem solucionar e resolver problemas muito mais facilmente. Além disso, os sistemas de gerenciamento de rede também impulsionam novas atualizações de software e arquivos de configuração atualizados que ajudam a melhorar o desempenho, a confiabilidade e a segurança.
+
+Aqui estão mais duas ferramentas que a TI pode usar para obter melhores insights ao monitorar a integridade da rede. Automação de Rede, onde tarefas repetitivas, como configuração e as atualizações de software são feitas automaticamente. E garantia de rede, que aproveita a inteligência artificial e aprendizado de máquina para melhorar o desempenho, escalabilidade, experiência do usuário e segurança da rede.
+
+Agora que você sabe o que são sistemas de gerenciamento de rede e como eles funcionam, você pode estar se perguntando se deve optar por um sistema local ou baseado em nuvem. Ambos têm suas vantagens.
+
+Sistemas locais, como o Cisco DNA Center são projetados para grandes implementações de rede onde recursos avançados que usam automação, inteligência artificial e aprendizado de máquina são necessários. Com grandes quantidades de dados para processar e armazenar, o servidor de gerenciamento de rede geralmente precisa estar no local, mas ainda terá acesso à toda a rede. E a TI também pode acessar o sistema de gerenciamento de rede via VPN remota. On-premises oferece maior segurança e governança de dados, já que todos os dados da rede são armazenados no local.
+
+No entanto, o gerenciamento de nuvem ajuda a TI a acessar a rede de qualquer lugar a qualquer hora. Sistemas de gerenciamento de rede baseados em nuvem, como Cisco Meraki, fornece tempo quase imediato para o mercado com provisionamento zero touch. Você também pode gerenciar SD-WAN e redes de data center da nuvem. Cisco vManage para SD-WAN permite que operadoras de rede implantem, gerenciem e monitorem dispositivos de rede rapidamente em toda a malha SD-WAN de forma altamente visualizada. O painel do Cisco Nexus é um híbrido, baseado em nuvem, plataforma de rede altamente ágil, e pode configurar a escala, monitorar e simplificar as operações e automação em sites locais e na nuvem pública.
+
+No panorama geral, as redes modernas estão crescendo exponencialmente e tornando-se mais complexo. Os sistemas de gerenciamento de rede ajudarão sua escala de rede tão rápido como você.
+
+Veja o que o Cisco Network Management pode fazer por você. Visite cisco.com/go/networking e saiba mais sobre as plataformas para controlar sua rede.
+
+## 37.6.7 Scripts, Automação e Programabilidade
+
+Redes grandes e complexas são extremamente difíceis e demoradas de gerenciar. É trabalhoso e requer muitos funcionários altamente treinados. Uma única organização pode ter milhares de dispositivos de rede em centenas de locais. Claramente não é praticável monitorar e configurar manualmente este grande número de dispositivos.
+
+A automação envolve a criação de sistemas que operam por conta própria. Automação de rede é o processo de automatizar a configuração, gerenciamento, teste, implantação e operação de dispositivos físicos e virtuais em uma rede. Ao automatizar tarefas diárias de rede, funções e processos repetitivos, a disponibilidade do serviço de rede e a eficiência operacional melhoram.
+
+## 37.6.8 Verifique sua compreensão - Solucione problemas de conectividade remota
+
+### Pergunta 1
+
+Um administrador de rede júnior precisa de uma solução para permitir que os técnicos de help-desk acessem dispositivos remotos para fornecer suporte técnico. A solução precisa ser segura e fornecer uma interface gráfica. Qual tecnologia fornecerá a solução necessária?
+
+- [ ] Telnet
+- [x] RDP
+- [ ] SSH
+- [ ] VPN
+
+✅ RESPOSTA CORRETA: RDP
+
+> Está certo. O Remote Desktop Protocol (RDP) é uma tecnologia que permite uma experiência de desktop completa com gráficos de alta resolução para os usuários acessarem um dispositivo remoto. As sessões RPD operam em um canal criptografado para impedir a espionagem da sessão. A segurança pode ser aprimorada com senhas fortes e autenticação de dois fatores.
+
+### Pergunta 2
+
+Qual tecnologia de tunelamento permite que um usuário se conecte a uma rede privada e acesse remotamente os serviços e recursos da rede?
+
+- [x] VPN de acesso remoto
+- [ ] RDP
+- [ ] VPN site-to-site
+- [ ] GRE tunnel
+
+✅ RESPOSTA CORRETA: VPN de acesso remoto
+
+> Está certo. Uma VPN de acesso remoto cria um túnel virtual entre um dispositivo de usuário e uma rede remota por meio da Internet pública. Através deste túnel VPN o usuário se conecta à rede privada e tem acesso remoto aos serviços e recursos permitidos. Uma VPN site a site é criada quando os dispositivos de terminação da VPN, também chamados de gateways VPN, são pré-configurados com informações para estabelecer um túnel seguro.
+
+### Pergunta 3
+
+O que é usado pelos administradores para controlar, interagir e coletar dados da rede e dos dispositivos clientes?
+
+- [ ] Ferramentas da linha de base de rede
+- [ ] Analisadores de protocolo
+- [x] Sistemas de monitoramento de rede
+- [ ] Bases de conhecimento do fornecedor de rede
+
+✅ RESPOSTA CORRETA: Sistemas de monitoramento de rede
+
+> Está certo. Os sistemas de gerenciamento de rede (NMS) são usados para coletar dados de dispositivos de rede, como switches, roteadores, pontos de acesso e dispositivos clientes. Os dados coletados são usados para fornecer informações sobre a saúde da rede. Um NMS também dá ao administrador de rede a capacidade de controlar a operação desses dispositivos e interação uns com os outros.
+
+
+# 37.7 Resumo do suporte de rede
+
+## 37.7.1 O que aprendi neste módulo?
+
+### Metodologias de diagnóstico e solução de problemas
+
+A solução de problemas é um processo que deve ser aplicado sistematicamente. Uma abordagem usa um processo de sete etapas em que o técnico define o problema, reúne informações relevantes, analisa as informações, elimina possíveis causas, propõe uma hipótese sobre a causa mais provável do problema e, em seguida, testa a hipótese e resolve o problema. Outra abordagem é seguir as camadas do modelo OSI.
+
+A solução de problemas estruturada pode incluir o uso de sete métodos diferentes, de baixo para cima, de cima para baixo, dividir para conquistar, seguir o caminho, substituição, comparação, suposição fundamentada.
+
+A escolha do método às vezes depende do tipo de problema que está sendo tratado e da experiência do técnico. É importante sempre documentar o problema de acordo com os procedimentos da empresa, inclusive fornecendo informações sobre a eventual resolução do problema.
+
+### Documentação da rede
+
+A documentação da rede é essencial para manter, proteger e solucionar problemas de redes. A documentação pode consistir em diagramas de rede físicos e lógicos, documentos escritos e linhas de base de desempenho de rede.
+
+Existem nove topologias de rede que podem ser documentadas. Isso inclui redes de área pessoal (PAN), redes de área local (LAN), LANs virtuais (VLANS), LANs sem fio (WLAN), redes de malha sem fio (WMN), redes de área de campus (CAN), redes de área metropolitana (MAN), ampla redes de área (WAN) e redes privadas virtuais (VPN).
+
+Os diagramas de topologia física incluem as localizações físicas dos dispositivos e documentam suas conexões. Os diagramas de topologia lógica incluem endereços IP e detalhes do dispositivo de rede, como portas conectadas. Outras informações, como serviços de nuvem, políticas de roteamento e políticas de segurança e acesso remoto, podem aparecer nos diagramas de topologia.
+
+Os serviços em nuvem podem ser Software as a Service (SaaS), Platform as a Service (PaaS), ou Infrastructure as a Service (IaaS). XaaS significa qualquer coisa/tudo como serviço, incluindo desktop como serviço (DaaS), recuperação de desastre como serviço (DRaaS), comunicações como serviço (CaaS) e monitoramento como serviço (MaaS).
+
+Os padrões sem fio definem as características operacionais das operações sem fio, incluindo especificações de sinalização, taxas de dados e eficiência de energia. Os padrões sem fio formam a família de padrões Ethernet sem fio IEEE 802.11, como 802.11b, n, ge ac. Esses padrões existem no espectro sem fio não licenciado. As frequências sem fio licenciadas são controladas pela Federal Communications Commission (FCC) e as licenças são concedidas a estações de rádio, empresas de celular e estações de televisão.
+
+A documentação do dispositivo difere dependendo do tipo de dispositivo. Geralmente inclui sistema operacional e software do dispositivo, informações de licenciamento, status da interface, endereçamento e protocolos de roteamento, etc.
+
+As linhas de base da rede são uma série de medições do desempenho da rede feitas durante diferentes tipos de uso da rede. As linhas de base ajudam a entender os parâmetros de uma rede funcionando adequadamente, de modo que o desempenho da rede ou os problemas de segurança possam ser identificados quando o desempenho se desvia significativamente das medições de linha de base anteriores.
+
+O Cisco Discovery Protocol (CDP) é um protocolo Cisco executado em dispositivos de rede Cisco. Ele envia anúncios CDP para dispositivos vizinhos conectados diretamente. As informações enviadas nesses anúncios incluem o nome do dispositivo configurado, um identificador de porta, a plataforma de hardware e versões de software e endereços IP. Essas informações são exibidas com os comandos IOS show cdp neighbors e show cdp neighbors detail. O CDP pode ser usado para revelar informações sobre topologias de rede.
+
+### Help Desks
+
+As políticas de segurança especificam o que os funcionários precisam fazer para garantir a segurança da rede. Isso inclui políticas relacionadas à identificação e autenticação do usuário, tamanho da senha, complexidade e intervalo de atualização, comportamento aceitável e requisitos de acesso remoto. Os Procedimentos Operacionais Padrão (SOP) definem os procedimentos que devem ser seguidos para substituição de dispositivos de rede, instalação ou remoção de aplicativos de software, integração de novos funcionários e rescisão de funcionários. As diretrizes são sugestões de procedimentos adequados que existem quando nenhum POP é definido.
+
+Um help desk é uma equipe especializada de profissionais de TI que são o ponto central de contato para funcionários e clientes que precisam de assistência técnica. Os help desks usam ferramentas de comunicação como bate-papo, telefone ou e-mail para receber problemas dos clientes e facilitar o processo de solução de problemas. Um sistema de tickets é usado para gerenciar "tickets de problemas" que consistem em detalhes dos problemas relatados pelos usuários. Os usuários iniciam os tickets e os técnicos validam os problemas, trabalham com os usuários para resolver os problemas e encaminham os tickets se um grau mais alto de especialização for necessário para resolver os problemas.
+
+Um técnico de suporte deve ser sempre atencioso e deve simpatizar com os usuários, que podem estar estressados e ansiosos para resolver um problema rapidamente. Os técnicos nunca devem menosprezar, insultar, falar mal ou acusar os usuários de causar o problema.
+
+O conjunto de habilidades Conhecer, se relacionar e entender é uma maneira útil de se relacionar com os clientes. Para conhecer o cliente, chame-o pelo nome ou pergunte se há outro nome que você possa usar. Para se relacionar melhor com o cliente, tente criar uma conexão individual. E para entender o cliente, determine seu nível de conhecimento técnico como forma de falar com ele em um nível adequado. O questionamento é importante usando perguntas abertas ou fechadas. A escuta ativa envolve o uso de respostas compreensivas enquanto os usuários falam e resumem o que eles dizem para verificar sua compreensão.
+
+Ao resolver um problema com hosts, reúna informações sobre o dispositivo, sistema operacional, ambiente de rede e os resultados dos testes de conectividade, como ping e tracert. Outras fontes de informação são códigos de bipe, logs do visualizador de eventos, configurações do gerenciador de dispositivos, dados do gerenciador de tarefas e resultados de ferramentas de diagnóstico.
+
+Para tickets relacionados a dispositivos Cisco, use comandos IOS, capturas de pacotes e logs de dispositivos para coletar informações. Os comandos IOS para teste de conectividade, como ping e traceroute, são úteis. O Secure Shell (SSH) é a maneira preferida de se conectar à CLI do IOS remotamente porque o Telnet não é seguro. Os comandos IOS show, como show ip interface brief, show ip route e show protocols também são úteis.
+
+A próxima etapa no processo de solução de problemas é analisar as informações coletadas e resolver o problema. Você pode consultar o software do sistema de tickets para localizar problemas semelhantes, acessar recursos de informações do fornecedor e perguntas frequentes e pesquisar na Internet informações relevantes. Se você não conseguir resolver o problema, deverá encaminhá-lo para um técnico de nível superior para resolução.
+
+### Solucionar problemas de conectividade de endpoint
+
+Para verificar a configuração de rede de um host Windows, verifique o status das conexões na Central de Rede e Compartilhamento. Você também pode usar ipconfig /all para exibir essas informações. Use ping e traceroute ou tracert para testar a conectividade.
+
+Em um host Linux, você pode visualizar as conexões ativas na GUI ou usar o comando ifconfig em um terminal. Além de ping e traceroute, outras ferramentas de linha de comando, como speedtest e ncat (nc), estão disponíveis para teste de rede.
+
+No MacOS, abra Network Preferences > Advanced para obter informações de endereçamento IP. O comando ifconfig também pode ser emitido de um terminal. Outros comandos úteis são networksetup -listallnetworkservices e networksetup -getinfo <network service>. Os comandos do Linux mencionados acima também estão disponíveis no MacOS. A ferramenta de diagnóstico sem fio do MacOS também pode ajudar a resolver problemas de conectividade.
+
+A rede Apple iOS pode ser verificada acessando as configurações de Wi-Fi. No Android, as informações sobre o endereçamento e as conexões do dispositivo podem ser acessadas em About phone > Status settings. Estão disponíveis aplicativos de terceiros que aprimoram o diagnóstico de redes para Android.
+
+### Solucionar Problemas de uma rede
+
+Para coletar informações para solucionar um problema de rede, os dispositivos Cisco IOS têm muitos comandos show que podem fornecer informações detalhadas. O software Cisco IOS separa o acesso de gerenciamento em dois níveis de privilégio: User EXEC, que é de nível inferior, e Privileged EXEC, que possui privilégios totais. Use o comando enable para entrar no modo Cisco EXEC privilegiado A ajuda sensível ao contexto do IOS pode ser usada para localizar comandos e obter informações sobre seu uso. A ajuda contextual está disponível inserindo um "?" em um prompt vazio ou após um comando.
+
+Os aplicativos de captura de pacotes e análise de protocolo permitem que você investigue o conteúdo do pacote à medida que ele flui pela rede. O software decodifica as camadas de protocolo alojadas em um pacote. O Wireshark é um exemplo de aplicativo popular de análise de protocolo/captura de pacotes de código aberto.
+
+Largura de banda e taxa de transferência são características do fluxo de dados da rede. Largura de banda é a quantidade teórica de dados que podem ser transmitidos de um dispositivo para outro em um período de tempo. A largura de banda é normalmente medida em número de bits por segundo. Taxa de transferência é a medida do número real de bits por segundo que estão sendo transmitidos pela mídia. A taxa de transferência é sempre menor que a largura de banda devido à latência e ao atraso. As ferramentas de teste de velocidade da Internet on-line e a ferramenta iPerf Windows permitem a medição da taxa de transferência.
+
+### Solucionar problemas de Conectividade Remotamente
+
+Ao auxiliar usuários remotos, pode ser mais eficiente usar aplicativos de área de trabalho remota. Esses aplicativos permitem que um técnico assuma o controle de uma área de trabalho remota para investigar problemas e fazer alterações na configuração. Os aplicativos de área de trabalho remota podem criar vulnerabilidades de segurança e muitas organizações têm o compartilhamento de área de trabalho desativado nos computadores. O Microsoft Remote Desktop está incluído em todas as versões profissionais do Windows. O Apple Remote Desktop e o TeamViewer são exemplos de outros softwares de desktop remoto.
+
+Telnet, SSH e Remote Desktop Protocol (RDP) são protocolos para acesso remoto a sistemas. Telnet é um antigo aplicativo de terminal virtual usado para acessar a linha de comando de um sistema remoto. Ele usa a porta TCP 23. O Telnet não possui nenhum mecanismo para criptografar os dados transmitidos e, portanto, não deve ser usado. O SSH, assim como o Telnet, permite sessões de terminal virtual, mas inclui criptografia e deve ser usado no lugar do Telnet. Clientes de terminais virtuais, como PuTTY e Tera Term, estão disponíveis para conexão com servidores Telnet e SSH.
+
+O RDP foi criado pela Microsoft. Ele também usa um modelo cliente-servidor no qual o cliente acessa uma GUI do sistema operacional em um computador remoto. O software RDP está disponível com Windows, OS X, Linux e Unix via xrdp. Para macOS, a funcionalidade de área de trabalho remota é fornecida pelo software Virtual Network Computing (VNC).
+
+As Redes Privadas Virtuais (VPN) permitem o acesso remoto seguro à rede em redes não seguras, como a Internet. Uma VPN usa conexões seguras dedicadas que criptografam o tráfego de rede. VPNs site a site conectam instalações remotas inteiras. As VPNs de acesso remoto conectam usuários individuais à rede corporativa. Os usuários de VPN de acesso remoto se conectam a um gateway de VPN de rede corporativa usando um cliente de software como o Cisco AnyConnect. O Microsoft Windows tem seu próprio cliente VPN.
+
+O gerenciamento de rede refere-se ao processo de configuração, monitoramento e gerenciamento do desempenho de uma rede. As plataformas modernas de gerenciamento de rede fornecem análises avançadas, aprendizado de máquina e automação inteligente para otimizar continuamente o desempenho da rede. Os sistemas de gerenciamento de rede geralmente usam o Simple Network Management Protocol (SNMP) e o Remote Network Monitoring (RMON) para coletar informações. Os sistemas de gerenciamento de rede podem ser implantados em modelos locais ou baseados em nuvem. As implantações baseadas em nuvem são boas para ambientes distribuídos geograficamente dispersos. Os sistemas locais exigem muito poder de computação e armazenamento, mas são bons para situações em que a conformidade com os regulamentos de soberania de dados é necessária. Cisco Meraki é uma plataforma líder de gerenciamento de rede baseada em nuvem que fornece recursos de gerenciamento de rede poderosos sem consumir largura de banda do usuário.
+
+Automação de rede é o processo de automatizar a configuração, gerenciamento, teste, implantação e operação de dispositivos físicos e virtuais em uma rede. Tarefas comuns de trabalho intensivo podem ser automatizadas usando scripts e programação de rede. Python é uma linguagem de script popular para automação de rede.
+
