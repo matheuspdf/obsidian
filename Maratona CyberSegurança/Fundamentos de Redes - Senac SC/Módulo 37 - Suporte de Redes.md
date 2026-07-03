@@ -912,3 +912,421 @@ As bases de conhecimento que podem ser pesquisadas incluem:
 
 Se o problema não puder ser resolvido, o ticket deverá ser escalado para um membro da equipe de TI mais experiente.
 
+## 37.3.11 Verifique sua compreensão – Help Desks
+
+### Pergunta 1
+
+Quais são as duas abordagens de comunicação eficazes para solucionar um problema para um usuário final? (Escolha duas.)
+
+- [x] Ouça atentamente enquanto o usuário explica o problema.
+- [x] Fale no nível técnico do usuário.
+- [ ] Use o jargão mais atual do setor ao discutir o problema com o usuário.
+- [ ] Espere até que a conversa termine antes de fazer anotações.
+- [ ] Coloque o usuário em espera enquanto você tenta resolver o problema.
+
+✅ RESPOSTA CORRETA: Ouça atentamente enquanto o usuário explica o problema.; Fale no nível técnico do usuário.
+
+> Está certo. Ao se comunicar com um usuário final para resolver um problema, você deve falar em um nível técnico que ele possa entender, ouvir atentamente sem interromper quando ele estiver falando e fazer anotações para documentar a conversa. Você também deve evitar o uso de jargões técnicos e da indústria. Não coloque o usuário em espera para resolver o problema. Em vez disso, informe-os de que resolver o problema é importante e que você os acompanhará assim que uma solução for encontrada.
+
+### Pergunta 2
+
+Que tipo de informação pode ser coletada emitindo o **comando show ip interface brief** do IOS?
+
+- [x] um resumo do status e endereços IP atribuídos de todas as interfaces
+- [ ] uma lista de protocolos configurados e status específico da interface de protocolos habilitados da camada 3
+- [ ] uma lista de versões de software instaladas para todos ou componentes específicos
+- [ ] uma lista de todas as rotas IPv4 e IPv6 atuais
+
+✅ RESPOSTA CORRETA: um resumo do status e endereços IP atribuídos de todas as interfaces
+
+> Está certo. O comando show ip interface brief exibirá um resumo do status e dos endereços IP de todas as interfaces do dispositivo.
+
+### Pergunta 3
+
+Durante a etapa de coleta de informações, qual comando exibirá os protocolos configurados e o status global e específico da interface de qualquer protocolo da Camada 3 configurado?
+
+- [x] show protocols
+- [ ] show ip route
+- [ ] show ip interface brief
+- [ ] debug
+
+✅ RESPOSTA CORRETA: show protocols
+
+> Está certo. O comando show protocols exibe os protocolos configurados no dispositivo e o status específico da interface de quaisquer protocolos da Camada 3 habilitados.
+
+### Pergunta 4
+
+Como as bases de conhecimento baseadas em fornecedores são usadas para auxiliar na solução de problemas?
+
+- [ ] Elas podem ajudar com tarefas de documentação comuns, como desenhar diagramas de rede, manter software de rede e documentação de hardware atualizados e medir a linha de base de uso de largura de banda de rede.
+- [ ] Elas podem ser usadas para investigar e corrigir problemas de rede e permitir que os administradores de rede monitorem dispositivos remotos de forma contínua e automática.
+- [x] Elas podem ser combinadas com mecanismos de busca na Internet para fornecer ao administrador de rede acesso a um vasto conjunto de informações baseadas em experiência.
+- [ ] Elas podem fornecer software de gerenciamento de dispositivo para mostrar o status dinâmico de dispositivos, estatísticas e informações de configuração para os principais dispositivos de rede.
+
+✅ RESPOSTA CORRETA: Elas podem ser combinadas com mecanismos de busca na Internet para fornecer ao administrador de rede acesso a um vasto conjunto de informações baseadas em experiência.
+
+> Está certo. As bases de conhecimento de fornecedores de dispositivos de rede on-line são fontes importantes de informações para administradores de rede. Quando essas bases de conhecimento são combinadas com os mecanismos de pesquisa da Internet, elas fornecem ao administrador um grande conjunto de informações baseadas na experiência.
+
+
+# 37.4 Solucionar problemas de conectividade de endpoint
+
+## 37.4.1 Configuração de rede do Windows
+
+Se você usou alguma das ferramentas para verificar a conectividade e descobriu que alguma parte da sua rede não está funcionando como deveria, agora é a hora de usar alguns comandos para solucionar problemas de seus dispositivos. Comandos de host e de IOS podem ajudá-lo a determinar se o problema está no endereço IP de seus dispositivos, o que é um problema de comum em redes.
+
+Verificar o endereçamento IP em dispositivos host é uma prática comum em rede para verificar e solucionar problemas de conectividade de ponta a ponta. No Windows 10, você pode acessar os detalhes do endereço **IP em Centro** de Rede e Compartilhamento > _interface_ > **Detalhes**. Conforme mostrado na figura, os detalhes da interface revelam o endereço IP do host, a máscara de sub-rede, o gateway padrão e os servidores DNS conhecidos.
+
+![[Pasted image 20260702213434.png]]
+
+O método preferencial usado pelos técnicos para visualizar as informações de endereçamento IP em um host Windows é usar o **comando ipconfig** do Windows, conforme mostrado na saída de amostra.
+
+```
+C:\Users\PC-A> ipconfig
+Windows IP Configuration
+(Output omitted)
+Wireless LAN adapter Wi-Fi:
+   Connection-specific DNS Suffix   . :
+   Link-local IPv6 Address . . . . . :
+fe80::a4aa:2dd1:ae2d:a75e%16
+   IPv4 Address. . . . . . . . . . . : 192.168.10.10
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.10.1
+(Output omitted)
+```
+
+O **comando ipconfig /all** é usado para exibir detalhes de endereçamento adicionais, conforme mostrado na saída de exemplo.
+
+```
+C:\Users\PC-A> ipconfig /all
+Windows IP Configuration
+   Host Name . . . . . . . . . . . . : PC-A-00H20
+   Primary Dns Suffix . . . . . . . : cisco.com
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : cisco.com
+(Output omitted)
+Wireless LAN adapter Wi-Fi:
+   Connection-specific DNS Suffix   . :
+   Description . . . . . . . . . . . : Intel(R) Dual Band Wireless-AC 8265
+   Physical Address. . . . . . . . . : F8-94-C2-E4-C5-0A
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . :
+fe80::a4aa:2dd1:ae2d:a75e%16(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.10.10(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : August 17, 2019 1:20:17 PM
+   Lease Expires . . . . . . . . . . : August 18, 2019 1:20:18 PM
+   Default Gateway . . . . . . . . . : 192.168.10.1
+   DHCP Server . . . . . . . . . . . : 192.168.10.1
+   DHCPv6 IAID . . . . . . . . . . . : 100177090
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-21-F3-76-75-54-E1-AD-DE-DA-9A
+   DNS Servers . . . . . . . . . . . : 192.168.10.1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+```
+
+## 37.4.2 Verificação da conectividade no Windows
+
+O comando **ping é** uma maneira eficaz de testar rapidamente a conectividade de Camada 3 entre um endereço IP de origem e de destino. Este comando também exibe várias estatísticas de tempo de ida e volta.
+
+```
+ C:\Users\PC-A> ping 10.1.1.10
+ Pinging 10.1.1.10 with 32 bytes of data:
+ Reply from 10.1.1.10: bytes=32 time=47ms TTL=51
+ Reply from 10.1.1.10: bytes=32 time=60ms TTL=51
+ Reply from 10.1.1.10: bytes=32 time=53ms TTL=51
+ Reply from 10.1.1.10: bytes=32 time=50ms TTL=51
+ Ping statistics for 10.1.1.10:
+     Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+ Approximate round trip times in milli-seconds:
+     Minimum = 47ms, Maximum = 60ms, Average = 52ms
+ C:\Users\PC-A>
+```
+
+Conforme mostrado no exemplo acima, a saída valida a conectividade da Camada 3 entre o PC A e o dispositivo com o endereço IPv4 10.1.1.10.
+
+O **traceroute** ou o comando **tracert** do Windows pode ajudar a localizar áreas problemáticas da Camada 3 em uma rede. O tracert retorna uma lista dos saltos no roteamento de um pacote pela rede. Ele pode ser usado para identificar o ponto ao longo do caminho onde o problema pode ser encontrado.
+
+Alguns firewalls, como o Firewall do Windows, bloqueiam pings por padrão. É importante que isso faça parte da documentação da sua rede e esteja ciente dessas configurações ao testar e verificar a conectividade da rede.
+
+![[Pasted image 20260702213823.png]]
+
+Os técnicos geralmente preferem usar o comando **ifconfig** na janela de terminal para exibir o status
+
+```
+ubuntu@ubuntu2004:~$ ifconfig
+enp0s3    Link encap:Ethernet HWaddr 08:00:27:b5:d6:cb
+          inet addr: 10.0.2.15  Bcast:10.0.2.255  Mask: 255.255.255.0
+          inet6 addr: fe80::57c6:ed95:b3c9:2951/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500 Metric:1
+          RX packets:1332239 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:105910 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:1855455014 (1.8 GB)  TX bytes:13140139 (13.1 MB)
+lo: flags=73 mtu 65536
+          inet 127.0.0.1  netmask 255.0.0.0
+          inet6 ::1  prefixlen 128  scopeid 0x10
+          loop  txqueuelen 1000  (Local Loopback)
+          RX packets 0  bytes 0 (0.0 B)
+          RX errors 0  dropped 0  overruns 0  frame 0
+          TX packets 0  bytes 0 (0.0 B)
+          TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
+
+O comando **ip address** do Linux é usado para exibir endereços e suas propriedades. Ele também pode ser usado para adicionar ou excluir endereços IP.
+
+**Observação:** A saída exibida pode variar dependendo da distribuição Linux.
+
+## 37.4.4 Verificar conectividade no Linux
+
+O Linux oferece as mesmas ferramentas de ping traceroute que o Windows para verificar a conectividade de rede.
+
+Existem várias outras ferramentas de linha de comando do Linux disponíveis para a maioria das distribuições do Linux, incluindo:
+
+- **speedtest** - Esta é uma ferramenta que testa a largura de banda de sua conectividade com seu provedor de internet.
+    
+- **ncat** - Ncat é um utilitário de rede que faz parte do conjunto nmap de ferramentas de rede. Ncat ou nc, tem muitos usos, incluindo a verificação da conectividade com um dispositivo usando uma porta específica. Veja a seguir um exemplo de conectividade HTTPS (porta 443) de teste ncat para dois dispositivos diferentes.
+
+```
+ubuntu@ubuntu2004:~$ nc -z -v www.google.com 443
+ Connection to www.google.com (142.250.138.105) 443 port [tcp/https] succeeded!
+ ubuntu@ubuntu2004:~$
+ ubuntu@ubuntu2004:~$ nc -z -v 10.0.0.122 443
+ nc: connect to 10.0.0.122 port 443 (tcp) failed: Connection refused
+ ubuntu@ubuntu2004:~$ 
+```
+
+## 37.4.5 Configuração de rede MacOS
+
+Na GUI de um host Mac, abra **Network Preferences > Advanced** para obter as informações de endereço IP, conforme mostrado na figura.
+
+![[Pasted image 20260702213914.png]]
+
+No entanto, o **comando ifconfig** também pode ser usado para verificar a configuração de IP da interface mostrada na saída.
+
+```
+MacBook-Air:~ Admin$ ifconfig en0
+en0: flags=8863 mtu 1500
+        ether c4:b3:01:a0:64:98
+        inet6 fe80::c0f:1bf4:60b1:3adb%en0 prefixlen 64 secured scopeid 0x5
+        inet 10.10.10.113 netmask 0xffffff00 broadcast 10.10.10.255
+        nd6 options=201
+        media: autoselect
+        status: active
+MacBook-Air:~ Admin$
+```
+
+Outros comandos úteis do macOS para verificar as configurações de IP do host incluem **networksetup -listallnetworkservices** e networksetup **-getinfo <**_network service_**>,** conforme mostrado na saída a seguir.
+
+```
+MacBook-Air:~ Admin$ networksetup -listallnetworkservices
+An asterisk (*) denotes that a network service is disabled.
+iPhone USB
+Wi-Fi
+Bluetooth PAN
+Thunderbolt Bridge
+MacBook-Air:~ Admin$
+MacBook-Air:~ Admin$ networksetup -getinfo Wi-Fi
+DHCP Configuration
+IP address: 10.10.10.113
+Subnet mask: 255.255.255.0
+Router: 10.10.10.1
+Client ID:
+IPv6: Automatic
+IPv6 IP address: none
+IPv6 Router: none
+Wi-Fi ID: c4:b3:01:a0:64:98
+MacBook-Air:~ Admin$
+```
+
+## 37.4.6 Verificar conectividade no MacOS 
+
+Os **comandos ping** e **traceroute** para verificar a conectividade de rede também estão disponíveis no MacOS. Como o Linux, o MacOS é baseado no sistema operacional UNIX e, portanto, compartilha muitos dos mesmos comandos de conectividade de rede, incluindo **ncat** e **speedtest**.
+
+Informações adicionais de verificação de rede podem ser obtidas usando a ferramenta MacOS **System Information**, conforme mostrado na figura. O exemplo exibe informações de Wi-Fi, incluindo protocolos de Wi-Fi compatíveis, como IEEE 802.11ac.
+
+![[Pasted image 20260702214002.png]]
+
+O aplicativo MacOS **Wireless Diagnostics** pode ser usado para solucionar problemas e monitorar a conectividade Wi-Fi. Ao selecionar a opção de monitorar a rede, o aplicativo irá gerar um relatório de diagnóstico.
+
+![[Pasted image 20260702214010.png]]
+
+
+## 37.4.7 Configurar e verificar a rede no iOS 
+
+A conectividade de rede em um dispositivo Apple iOS pode ser facilmente verificada ao tentar acessar um site ou aplicativo online.
+
+Você também pode verificar as informações de endereçamento IPv4 e IPv6, incluindo o gateway padrão (roteador) em um dispositivo Apple IOS, conforme mostrado na figura. Para fazer isso, vá para **Configurações** > **Wi-Fi** > Selecione o ícone de informações (i) à direita do nome da rede Wi-Fi ativa (SSID).
+
+![[Pasted image 20260702214021.png]]
+
+## 37.4.8 Configurar e verificar a rede no Android 
+
+Como o Apple iOS, a conectividade de rede em um dispositivo Android pode ser verificada ao tentar acessar um site ou aplicativo online.
+
+Se a conexão falhar, verifique se você tem uma conexão confiável com seu provedor de dados de celular. Se você estiver tentando se conectar por Wi-Fi, certifique-se de estar conectado a uma rede Wi-Fi e de ter se autenticado com sucesso nessa rede. Às vezes, é necessária autenticação adicional por meio de um método de autenticação alternativo que pode exigir a concordância com os termos de uso ou o fornecimento de informações de login adicionais.
+
+Em algumas versões do Android, um ícone pode aparecer ao lado do indicador de intensidade do sinal Wi-Fi na barra de status do dispositivo, indicando um problema com a conexão com a Internet. A conectividade Wi-Fi pode ser estabelecida sem acesso à Internet. Isso pode indicar um problema com o gateway de Internet da rede à qual você está conectado ou pode indicar que outras medidas são necessárias para obter acesso à rede.
+
+A interface do Android pode variar significativamente dependendo da versão do Android e do fabricante do dispositivo. Portanto, o processo de verificação das conexões de rede pode diferir ligeiramente entre os dispositivos.
+
+Para acessar suas configurações de rede, abra o aplicativo de configurações em seu telefone e toque **em** Conexões ou **Rede e Internet**. Faça o seguinte:
+
+1. Se estiver usando Wi-Fi, verifique se o Wi-Fi está ativo em seu telefone.
+2. Toque em Wi-Fi e verifique se você está conectado a uma rede na qual possa se autenticar. Verifique as redes disponíveis para ver se outras redes podem ser mais adequadas. Pode ser necessário determinar a senha de rede para as várias redes que você verá. Verifique também se a força do sinal é adequada.
+3. Se estiver usando uma rede de dados móveis de celular, verifique se você tem conectividade com essa rede na barra de status do dispositivo. Verifique o menu de configurações deslizante para garantir que os dados móveis estejam ativos em seu dispositivo.
+
+
+As informações de endereçamento IPv4 e IPv6, incluindo o gateway padrão (roteador), podem ser verificadas em Configurações > ****Sobre** o telefone** > **Status**, conforme mostrado na figura.
+
+![[Pasted image 20260702214037.png]]
+
+Aplicativos de análise de rede de terceiros com várias funções estão disponíveis para Android. Eles podem fornecer informações mais detalhadas sobre as configurações de rede do dispositivo, permitir testes de rede com **ping** e **trace** e até mesmo realizar varreduras de portas e dispositivos de rede, conforme mostrado na figura.![[Pasted image 20260702214046.png]]
+
+
+## 37.4.9 Laboratório - Verificar endereço com uma calculadora de sub-rede
+
+Nesta atividade, você determinará o endereço IPv4 e a máscara de sub-rede de seu dispositivo e usará uma calculadora de sub-rede on-line para determinar o endereço de rede IPv4.
+
+## 37.4.10 Verifique sua compreensão - Solução de problemas de conectividade de endpoint
+
+### Pergunta 1
+
+Quais são as duas informações que podem ser verificadas emitindo o **comando ipconfig/all** em uma máquina Windows? (Escolha duas.)
+
+- [ ] todas as sessões TCP/IP estabelecidas com o host local
+- [ ] todos os endereços IP associados a um nome de domínio de destino
+- [ ] o número de dispositivos da Camada 3 ao longo do caminho entre o host local e um servidor de destino
+- [x] o endereço IP do adaptador de rede
+- [x] o gateway padrão
+
+✅ RESPOSTA CORRETA: o endereço IP do adaptador de rede; o gateway padrão
+
+> Está certo. O comando ipconfig/all, quando emitido em uma máquina Windows, exibirá muitas configurações de IP, como o endereço IP de todos os adaptadores de rede ativos, a máscara de sub-rede, o endereço do servidor DNS e o gateway padrão. Use o comando nslookup para determinar o endereço IP associado a um nome de domínio de destino. Use o comando netstat para visualizar todas as sessões TCP/IP estabelecidas para o host local. Use o comando tracert para visualizar os dispositivos da Camada 3 entre o host local e um servidor de destino.
+
+### Pergunta 2
+
+Qual comando um administrador pode usar para verificar a configuração de IP das interfaces em um host Linux?
+
+- [ ] ipconfig/all
+- [x] ifconfig
+- [ ] arp -a
+- [ ] networksetup -getinfo
+
+✅ RESPOSTA CORRETA: ifconfig
+
+> Está certo. Usando a linha de comando do Linux, o administrador de rede pode exibir o status e a configuração de IP das interfaces usando o comando ifconfig.
+
+
+# 37.5 Solucionar Problemas de uma rede
+
+### 37.5.1 Dispositivos de rede como fontes de informações de rede
+
+Ao documentar ou diagnosticar um problema de rede, geralmente é necessário coletar informações diretamente de roteadores e switches. Comandos de rede úteis óbvios incluem ping, traceroute e telnet. Há também muitos comandos show disponíveis para ajudar a verificar a operação de um dispositivo.
+
+A tabela lista alguns dos comandos show mais comuns do Cisco IOS usados para coleta de dados.
+
+|Comando|Descrição|
+|---|---|
+|`show version`|Exibe tempo de atividade, informações de versão e informações de licenciamento para o software e hardware do dispositivo.|
+|`show ip interface [brief]`<br>`show ipv6 interface [brief]`|Exibe todas as opções de configuração definidas em uma interface.<br>Use a palavra-chave **brief** para exibir apenas o status e o endereço IP das interfaces IP.|
+|`show interfaces`|Exibe saída detalhada para cada interface.<br>Para exibir a saída detalhada para apenas uma única interface, inclua o tipo e o número da interface no comando (por exemplo, Gigabit Ethernet 0/0/0).|
+|`show ip route`<br>`show ipv6 route`|Exibe o conteúdo da tabela de roteamento, listando redes diretamente conectadas e redes remotas aprendidas.|
+|`show cdp neighbors detail`|Exibe informações detalhadas sobre dispositivos vizinhos Cisco conectados diretamente.<br>Útil para validar se as camadas 1 e 2 estão operacionais.|
+|`show arp`<br>`show ipv6 neighbors`|Exibe o conteúdo da tabela ARP (IPv4) e da Tabela de vizinhos (IPv6).|
+|`show running-config`|Exibe a configuração atual do dispositivo.|
+|`show vlan`|Exibe o status das VLANs em um switch.|
+|`show port`|Exibe o status das portas em um switch.|
+|`show mac-address table`|Exibe o conteúdo da tabela de endereços MAC do switch.|
+|`show interface status`|Exibe estatísticas e informações de status para interfaces de rede.|
+|`show inventory`|Exibe informações de inventário sobre os componentes específicos em um dispositivo Cisco.|
+|`show switch`|Exibe o status da pilha de switches quando os switches são agrupados usando o Cisco Stackwise.|
+|`show tech-support`|Esse comando é útil para coletar grande quantidade de informações sobre o dispositivo em caso de identificação e solução de problemas.<br>Ele executa vários comandos show que podem ser fornecidos aos representantes de suporte técnico ao relatar um problema.|
+
+Alguns desses comandos **show** podem exigir acesso ao modo EXEC privilegiado.
+
+Como um recurso de segurança, o software Cisco IOS separa o acesso de gerenciamento em dois níveis de privilégio:
+
+- **Modo EXEC do usuário** - Este é o nível de privilégio 1 e indicado por um prompt de dispositivo que termina com um símbolo maior que **(**>) (por exemplo, Router> ou Switch>). Ele fornece acesso limitado a comandos úteis para um técnico ao verificar a operação básica de um dispositivo.
+- **Modo EXEC Privilegiado** – Este é o nível de privilégio 15 e indicado por um prompt que termina com um símbolo de jogo da velha (#) (por exemplo, Router# ou Switch#). É o nível mais alto disponível e só deve ser acessado por um administrador de rede. Nesse modo, todos os comandos do dispositivo estão disponíveis, incluindo a capacidade de configurar ou alterar as as configurações do dispositivo. Use o **comando enable** para entrar no modo EXEC privilegiado.
+
+O Cisco IOS também fornece verificação de sintaxe de comando e ajuda contextual. Se você inserir um comando incorretamente, o IOS identificará onde você cometeu um erro de entrada.
+
+A ajuda contextual permite que o usuário encontre rapidamente as respostas para estas perguntas:
+
+- Quais comandos estão disponíveis em cada modo de comando?
+- Quais comandos começam com caracteres específicos ou grupo de caracteres?
+- Quais argumentos e palavras-chave estão disponíveis para comandos específicos?
+
+Para acessar a ajuda sensível ao contexto, basta inserir um ponto de interrogação (**?**) ao digitar um comando.
+
+O Cisco IOS também não exige que todo o comando, argumento ou palavra-chave seja digitado. A entrada de comando parcial deve ser longa o suficiente para identificar exclusivamente o comando completo. Por exemplo, você pode usar **en** em vez de inserir o comando completo enable.
+
+Para ter certeza de que o comando correto está sendo digitado, a tecla tab também pode ser usada para completar a entrada parcial de um comando, argumento ou palavra-chave.
+
+## 37.5.2 Captura de Pacotes e Análise de Protocolo
+
+Os analisadores de protocolo podem investigar o conteúdo dos pacotes enquanto fluem pela rede. Um analisador de protocolo decodifica as várias camadas de protocolo em um quadro registrado e apresenta essas informações em um formato relativamente fácil de usar.
+
+Como técnico, você pode receber a tarefa de capturar o tráfego de um host específico. Portanto, é importante que você se familiarize com o software para concluir a tarefa atribuída.
+
+A figura mostra uma captura de tela do analisador de protocolo Wireshark.
+
+![[Pasted image 20260702214603.png]]
+
+As informações exibidas por um analisador de protocolo incluem dados de bits da camada física, informações da camada de enlace, protocolos e descrições para cada quadro. A maioria dos analisadores de protocolo pode filtrar o tráfego que atenda a certos critérios, para que todo o tráfego de e para um dispositivo possa ser capturado. Os analisadores de protocolo, como o Wireshark, podem ajudar a identificar e solucionar problemas de desempenho de rede. É importante ter um bom entendimento de TCP/IP e saber como usar um analisador de protocolo para inspecionar informações em cada camada de TCP/IP.
+
+## 37.5.3 Laboratório - Instalar o Wireshark
+
+O Wireshark é um software analisador de protocolo, ou uma aplicação "packet sniffer", usado para solução de problemas de rede, análise, desenvolvimento de software e protocolo, e educação. O Wireshark é usado neste curso para demonstrar conceitos de rede. Neste laboratório, você vai baixar e instalar o Wireshark.
+
+## 37.5.4 Laboratório - Use ferramentas de rede para aprender sobre uma rede
+
+O Wireshark é um software analisador de protocolo, ou "packet sniffer", usado em solução de problemas de rede, análise, desenvolvimento de software e protocolo, e educação. O Wireshark é usado neste curso para demonstrar conceitos de rede. O Nmap é uma ferramenta popular de varredura e mapeamento de rede. Neste laboratório, você usará o Nmap para descobrir hosts em sua rede e, em seguida, usará o Wireshark para capturar o tráfego entre seu computador e outros hosts.
+
+## 37.5.5 Medindo a Taxa de Transferência (Throughput) da rede
+
+Largura de banda e Taxa de Transferência são dois termos comumente usados para descrever a quantidade de tráfego que flui entre dois dispositivos.
+
+Largura de banda é a quantidade teórica de dados que podem ser transmitidos de um dispositivo para outro em um período de tempo. A largura de banda é normalmente medida em número de **bits por segundo**.
+
+Taxa de transferência é a medida do número real de bits por segundo que estão sendo transmitidos pela mídia. A taxa de transferência é sempre menor do que a largura de banda especificada porque o tráfego pode encontrar latência ou atraso durante a transmissão.
+
+A latência pode ser causada por vários problemas, especificamente a distância física entre a origem e o destino. Existem outros fatores também, incluindo o número de dispositivos de rede encontrados entre a origem e o destino. Como os dados atravessam várias redes, eles devem ser processados e encaminhados por switches e roteadores.
+
+Um técnico pode precisar verificar a taxa de transferência de um link para verificar sua operação. Existem muitos sites na internet que podemos usar para fazer isso. Uma pesquisa usando **internet speed test** como palavras chave fornecerá vários sites que medirão a "velocidade" da conexão e o desempenho do seu dispositivo conectado à Internet. Esses sites geralmente usam servidores pré-selecionados e relatam suas "velocidades" de download e upload.
+
+**O iPerf** é uma ferramenta do Windows que pode ser baixada para medir a taxa de transferência entre um cliente e um servidor. O iPerf deve estar em execução em ambos os dispositivos finais. O exemplo a seguir mostra a taxa de transferência entre um cliente e um servidor iPerf público, speedtest.masnet.ec.
+
+```
+37.5.5 Medindo a Taxa de Transferência (Throughput) da rede
+Largura de banda e Taxa de Transferência são dois termos comumente usados para descrever a quantidade de tráfego que flui entre dois dispositivos.
+
+Largura de banda é a quantidade teórica de dados que podem ser transmitidos de um dispositivo para outro em um período de tempo. A largura de banda é normalmente medida em número de bits por segundo.
+
+Taxa de transferência é a medida do número real de bits por segundo que estão sendo transmitidos pela mídia. A taxa de transferência é sempre menor do que a largura de banda especificada porque o tráfego pode encontrar latência ou atraso durante a transmissão.
+
+A latência pode ser causada por vários problemas, especificamente a distância física entre a origem e o destino. Existem outros fatores também, incluindo o número de dispositivos de rede encontrados entre a origem e o destino. Como os dados atravessam várias redes, eles devem ser processados e encaminhados por switches e roteadores.
+
+Um técnico pode precisar verificar a taxa de transferência de um link para verificar sua operação. Existem muitos sites na internet que podemos usar para fazer isso. Uma pesquisa usando internet speed test como palavras chave fornecerá vários sites que medirão a "velocidade" da conexão e o desempenho do seu dispositivo conectado à Internet. Esses sites geralmente usam servidores pré-selecionados e relatam suas "velocidades" de download e upload.
+
+O iPerf é uma ferramenta do Windows que pode ser baixada para medir a taxa de transferência entre um cliente e um servidor. O iPerf deve estar em execução em ambos os dispositivos finais. O exemplo a seguir mostra a taxa de transferência entre um cliente e um servidor iPerf público, speedtest.masnet.ec.
+```
+
+A saída relevante é:
+
+- **Interval**: O intervalo de tempo que o iPerf relata periodicamente a taxa de transferência. Por padrão, o intervalo de tempo é de 1 segundo.
+- **Transfer**: A quantidade de dados transferidos durante cada intervalo de tempo.
+- **Bitrate**: a taxa de transferência medida em cada intervalo de tempo.
+
+
+## 37.5.6 Packet Tracer - Desafio de solução de problemas - Use a documentação para resolver problemas
+
+Nesta atividade do Packet Tracer, você usa a documentação de rede para identificar e corrigir problemas de comunicação de rede.
+
+- Usar várias técnicas e ferramentas para identificar problemas de conectividade.
+- Usar a documentação para orientar os esforços para solução de problemas.
+- Identificar problemas específicos de rede.
+- Implementar soluções para problemas de comunicação em rede.
+- Verificar a operação da rede.
