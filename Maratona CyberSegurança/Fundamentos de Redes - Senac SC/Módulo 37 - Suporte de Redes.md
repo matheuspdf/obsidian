@@ -1617,7 +1617,7 @@ Para verificar a configuração de rede de um host Windows, verifique o status d
 
 Em um host Linux, você pode visualizar as conexões ativas na GUI ou usar o comando ifconfig em um terminal. Além de ping e traceroute, outras ferramentas de linha de comando, como speedtest e ncat (nc), estão disponíveis para teste de rede.
 
-No MacOS, abra Network Preferences > Advanced para obter informações de endereçamento IP. O comando ifconfig também pode ser emitido de um terminal. Outros comandos úteis são networksetup -listallnetworkservices e networksetup -getinfo <network service>. Os comandos do Linux mencionados acima também estão disponíveis no MacOS. A ferramenta de diagnóstico sem fio do MacOS também pode ajudar a resolver problemas de conectividade.
+No MacOS, abra Network Preferences > Advanced para obter informações de endereçamento IP. O comando ifconfig também pode ser emitido de um terminal. Outros comandos úteis são networksetup -listallnetworkservices e networksetup -getinfo < network service >. Os comandos do Linux mencionados acima também estão disponíveis no MacOS. A ferramenta de diagnóstico sem fio do MacOS também pode ajudar a resolver problemas de conectividade.
 
 A rede Apple iOS pode ser verificada acessando as configurações de Wi-Fi. No Android, as informações sobre o endereçamento e as conexões do dispositivo podem ser acessadas em About phone > Status settings. Estão disponíveis aplicativos de terceiros que aprimoram o diagnóstico de redes para Android.
 
@@ -1643,6 +1643,8 @@ O gerenciamento de rede refere-se ao processo de configuração, monitoramento e
 
 Automação de rede é o processo de automatizar a configuração, gerenciamento, teste, implantação e operação de dispositivos físicos e virtuais em uma rede. Tarefas comuns de trabalho intensivo podem ser automatizadas usando scripts e programação de rede. Python é uma linguagem de script popular para automação de rede.
 
+
 ## 37.7.2 Webster - Questões para reflexão
 
 Lara fez um ótimo trabalho criando um guia de solução de problemas para técnicos de help desk. Compartilhar sua experiência de help desk ajudará os novos técnicos a se tornarem mais eficazes rapidamente. A informação foi prática neste módulo? Como estão suas habilidades de diagnóstico? Qual abordagem de solução de problemas funcionaria melhor se um problema estiver relacionado ao cabeamento? Qual abordagem de solução de problemas funcionaria melhor se o problema estivesse relacionado a um aplicativo?
+
