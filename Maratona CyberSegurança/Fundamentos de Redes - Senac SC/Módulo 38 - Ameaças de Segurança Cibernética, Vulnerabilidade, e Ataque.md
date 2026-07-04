@@ -131,3 +131,158 @@ Todos os usuários devem estar cientes e entender as políticas de segurança de
 
 Os dados roubados pelos usuários podem representar uma ameaça financeira significativa para as empresas, tanto em termos dos danos resultantes à sua reputação quanto da responsabilidade legal associada à divulgação de informações confidenciais.
 
+
+### Downloads e mídias não autorizados
+
+Muitas infecções e ataques de rede e dispositivos podem ser rastreados de usuários que baixaram e-mails, fotos, músicas, jogos, aplicativos e vídeos não autorizados em seus computadores, redes ou dispositivos de armazenamento. O uso de mídia não autorizada, como discos rígidos externos e unidades USB, também representa uma ameaça.
+
+
+### Redes privadas virtuais não autorizadas (VPNs)
+
+As VPNs podem ocultar o roubo de informações não autorizadas porque a criptografia normalmente usada para proteger a confidencialidade pode impedir um administrador de rede de rastrear a transmissão de dados (a menos que tenha permissão para fazê-lo).
+
+### Sites não autorizados
+
+O acesso a sites não autorizados pode representar um risco para os dados e dispositivos de um usuário, bem como para a própria organização. Muitas vezes, esses sites solicitam que os usuários baixem scripts ou plug-ins que contenham código malicioso ou adware. Alguns desses sites podem até assumir dispositivos de usuários, como câmeras e aplicativos.
+
+
+### Destruição de sistemas, aplicativos ou dados
+
+A destruição ou sabotagem acidental ou deliberada de sistemas, aplicativos e dados representa um sério risco para todas as organizações. Ativistas, funcionários descontentes e concorrentes do setor podem excluir dados, destruir dispositivos ou tornar dados e sistemas de informação indisponíveis.
+
+
+Tenha sempre em mente que não existem soluções técnicas, controles ou contramedidas que tornem os sistemas de informação mais seguros do que os comportamentos e processos das pessoas que usam esses sistemas.
+
+
+## 38.1.6 Ameaças aos Dispositivos
+
+- Quaisquer dispositivos deixados ligados e sem supervisãorepresentam o risco de alguém obter acesso não autorizado aos recursos de rede.
+- Baixar arquivos, fotos, músicas ou vídeos de fontes não confiáveis pode levar à execução de códigos maliciosos em dispositivos.
+- Os criminosos digitais costumam explorar vulnerabilidades de segurança em softwares instalados nos dispositivos de uma empresa para iniciar um ataque.
+- As equipes de segurança da informação de uma empresa devem tentar manter-se atualizadas com a descoberta diária de novos vírus, worms e outros malwares que representam uma ameaça para seus dispositivos.
+
+- Os usuários que inserem unidades USB, CDs ou DVDs não autorizados correm o risco de introduzir malware ou comprometer os dados armazenados em seus dispositivos.
+- As políticas estão em vigor para proteger a infraestrutura de TI de uma organização. Um usuário pode enfrentar graves consequências por violar essas políticas de propósito.
+- O uso de hardware ou software desatualizado torna os sistemas e os dados de uma empresa mais vulneráveis a ataques.
+
+
+## 38.1.7 Ameaças à rede local
+
+A rede de área local (LAN) é um conjunto de dispositivos, normalmente na mesma área geográfica, conectados por cabos (com fio) ou ondas de ar (sem fio).
+
+Como os usuários podem acessar os sistemas, aplicativos e dados de uma organização a partir do **Domínio da LAN,** é fundamental que ela tenha uma segurança forte e controles de acesso rigorosos.
+
+**Exemplos de ameaças à LAN:**
+
+- Acesso não autorizado a armários de cabeamento, data centers e salas de computadores
+- Acesso não autorizado a sistemas, aplicações e dados
+- Vulnerabilidades do Sistema operacional de rede ou software e atualizações
+- Usuários falsos acesso não autorizado a redes sem fio
+- Explorações de dados em trânsito
+- Ter servidores LAN com hardware ou sistemas operacionais diferentes dificulta o gerenciamento e a solução de problemas
+- Detecção de rede não autorizada e varredura de porta
+- Firewalls mal configurados
+
+## 38.1.8 Ameaças à nuvem privada
+
+O **domínio da nuvem** privada inclui servidores privados, recursos e infraestrutura de TI disponíveis para membros de uma única organização por meio da Internet. Embora muitas empresas achem que seus dados estão mais seguros em uma nuvem privada, esse domínio ainda apresenta ameaças significativas à segurança, incluindo:
+
+- Detecção de rede não autorizada e varredura de porta
+- Acesso não autorizado a recursos
+- Vulnerabilidades no sistema operacional ou software de roteadores, firewalls ou dispositivos de rede
+- Erros de configuração em roteadores,firewalls ou dispositivos de rede
+- Usuários remotos acessando a infraestrutura de uma organização e baixando dados confidenciais
+
+## 38.1.9 Ameaças à nuvem pública
+
+Como um domínio de nuvem privada hospeda recursos de computação para uma única organização, o **domínio de nuvem pública é a** totalidade dos serviços de computação hospedados por uma nuvem, serviço ou provedor de Internet que estão disponíveis ao público e compartilhados entre as organizações.
+
+Existem três modelos de serviços de nuvem pública que as empresas podem optar por usar.
+
+**Selecione as setas para saber mais sobre os serviços de nuvem pública.**
+
+### **Software como Serviço (SaaS)**
+
+Este é um modelo baseado em assinatura que fornece às organizações um software hospedado centralmente e acessado pelos usuários por meio de um navegador da Web, aplicativo ou outro software. Em outras palavras, trata-se de um software que não é armazenado localmente, mas executado na nuvem.
+
+### **Plataforma como um Serviço (PaaS)**
+
+Este modelo baseado em assinatura fornece uma plataforma que permite que uma organização desenvolva, execute e gerencie seus aplicativos no hardware do serviço, usando ferramentas que o serviço fornece. Essa plataforma é acessada pela nuvem pública.
+
+### **Infraestrutura como Serviço (IaaS)**
+
+Esse modelo baseado em assinatura fornece recursos de computação virtual, como hardware, software, servidores, armazenamento e outros componentes de infraestrutura pela Internet. Uma organização comprará acesso a esta infraestrutura e os usará por meio da nuvem pública.
+
+## 38.1.10 Ameaças aos Aplicativos
+
+O **domínio do aplicativo inclui** todos os sistemas, aplicativos e dados críticos usados por uma organização para dar suporte às operações. Cada vez mais, as organizações estão movendo aplicativos como e-mail, monitoramento de segurança e gerenciamento de banco de dados para a nuvem pública.
+
+As ameaças comuns aos aplicativos incluem:
+
+- Alguém obtendo acesso não autorizado a data centers, salas de computadores, armários de fiação ou sistemas
+- Tempo de inatividade do servidor durante períodos de manutenção
+- Vulnerabilidades de software do sistema operacional de rede
+- Perda de dados
+- Vulnerabilidades de desenvolvimento de aplicativos cliente-servidor ou web
+
+Faça a correspondência entre a descrição e termo correto.
+
+|Categoria|Resposta correta|
+|---|---|
+|Dentro do escritório corporativo, os funcionários trabalham usando um desktop, laptop, tablet ou smartphone.|Domínio do dispositivo|
+|Os clientes da corporação têm acesso a um conjunto de módulos de eLearning fornecidos por uma taxa de assinatura.|Provedor de SaaS|
+|A corporação contrata funcionários.|Domínio do usuário|
+|No escritório corporativo, os funcionários se conectam à rede.|Domínio da LAN|
+|O provedor dos módulos de eLearning usa um serviço de nuvem para hospedar os módulos.|Domínio da nuvem pública|
+|Os funcionários obtêm acesso ao escritório corporativo usando um cartão de identificação eletrônico.|Domínio de instalações físicas|
+
+## 38.1.12 Complexidade da Ameaça
+
+  
+
+- **Ameaça persistente avançada (APT)** um ataque contínuo que utiliza táticas elaboradas de espionagem envolvendo múltiplos agentes e malware sofisticado.  
+    Os invasores permanecem indetectáveis por um longo período de tempo, com consequências potencialmente devastadoras. Os APTs normalmente visam governos e organizações de alto nível e geralmente são bem orquestrados e bem financiados.
+
+- Como o nome sugere, **os ataques de algoritmos** aproveitam os algoritmos em um software legítimo para gerar comportamentos não desejados. Por exemplo, algoritmos usados para rastrear e relatar quanta energia um computador consome podem ser usados para selecionar alvos ou acionar alertas falsos. Eles também podem desabilitar um computador forçando-o a usar toda a sua RAM ou sobrecarregando sua unidade central de processamento (CPU).
+
+
+## 38.1.13 Backdoors e Rootkits
+
+Os cibercriminosos também usam muitos tipos diferentes de software malicioso (conhecido como malware) para realizar seus ataques.
+
+Programas de backdoor, como Netbus e Back Orifice, são usados por criminosos digitais para obter acesso não autorizado a um sistema ignorando os procedimentos normais de autenticação.
+
+Os cibercriminosos normalmente têm usuários autorizados, sem que você saiba, executando um programa de ferramenta administrativa remota (RAT) em seu computador que instala um backdoor. O backdoor dá ao criminoso controle administrativo sobre um computador de destino. Backdoors concedem aos cibercriminosos acesso contínuo a um sistema, mesmo que a organização tenha corrigido a vulnerabilidade original usada para atacar o sistema.
+
+Esse malware foi projetado para modificar o sistema operacional para criar um backdoor, que os invasores podem usar para acessar o computador remotamente.
+
+A maioria dos rootkits utiliza as vulnerabilidades do software para escalonar privilégios e modificar arquivos de sistema.
+
+Os Rootkits também podem modificar as ferramentas forenses e de monitoramento do sistema, tornando-os muito difíceis de detectar. Na maioria dos casos, um computador infectado por um rootkit precisa ser apagado e qualquer software necessário reinstalado.
+
+
+## 38.1.14 Inteligência de ameaças e fontes de pesquisa
+
+O United States Computer Emergency Readiness Team (US-CERT) e o Departamento de Segurança Interna dos EUA patrocinam um banco de dados de **vulnerabilidades e exposições comuns (CVE)**. Esses CVEs foram amplamente adotados como uma forma de descrever e fazer referência a vulnerabilidades conhecidas.
+
+Cada entrada do CVE contém um número de identificador padrão, uma breve descrição da vulnerabilidade de segurança e todas as referências importantes aos relatórios de vulnerabilidade relacionados. A lista CVE é mantida por uma organização sem fins lucrativos, a MITRE Corporation, em seu site público.
+
+**Selecione as setas para saber mais sobre algumas outras fontes de inteligência de ameaças.**
+
+### **a Web obscura**
+
+Isso se refere ao conteúdo da Web criptografado que não é indexado pelos mecanismos de pesquisa convencionais e requer software, autorização ou configurações específicas para acesso. Pesquisadores especialistas monitoram a Web obscura em busca de uma nova inteligência de ameaças.
+
+### **Indicador de comprometimento (IOC)**
+
+IOCs, como assinaturas de malware ou nomes de domínio, fornecem evidências de violações de segurança e detalhes sobre elas.
+
+### **Compartilhamento Automatizado de Indicadores (AIS)**
+
+Compartilhamento Automatizado de Indicadores (AIS): capacidade da Agência de Segurança Cibernética e de Infraestrutura (CISA) que permite a troca em tempo real de indicadores de ameaças cibernéticas usando uma linguagem padronizada e estruturada. Structured Threat Information Expression (STIX) e Trusted Automated Exchange of Intelligence Information (TAXII) são padrões usados em AIS.
+
+
+## 38.1.15 Verifique sua compreensão - Ameaças comuns
+
+Combine o termo de segurança cibernética com a respectiva descrição.
+
