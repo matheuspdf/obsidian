@@ -286,3 +286,260 @@ Compartilhamento Automatizado de Indicadores (AIS): capacidade da Agência de Se
 
 Combine o termo de segurança cibernética com a respectiva descrição.
 
+|Categoria|Resposta correta|
+|---|---|
+|ataque backdoor|Este é um tipo de ataque de malware usado por cibercriminosos para obter acesso não autorizado a sistemas, ignorando os procedimentos normais de autenticação, geralmente fazendo com que usuários autorizados executem, sem saber, um programa de ferramenta administrativa remota (RAT) em seus computadores que instala um backdoor.|
+|ataque de rootkit|Este é um tipo de ataque de malware projetado para modificar o sistema operacional para criar uma vulnerabilidade que os invasores podem usar para acessar o computador remotamente e obter acesso a recursos que normalmente não deveriam estar acessíveis (escalonamento de privilégios) e modificar arquivos do sistema.|
+|ataque de algoritmo|Este é um tipo de ataque de malware que gera informações incorporadas em um software legítimo para gerar comportamentos não intencionais. Esse tipo de ataque de malware pode ser usado para selecionar alvos ou disparar alertas falsos. Eles também podem desabilitar um computador forçando-o a usar toda a sua RAM ou sobrecarregando sua unidade central de processamento (CPU).|
+|Ameaças persistentes avançadas|Este é um tipo de ataque de malware que é contínuo e usa táticas de espionagem elaboradas envolvendo vários atores e/ou malware sofisticado para obter acesso à rede do sistema de destino. Normalmente é direcionado a governos e organizações de alto nível e geralmente é bem orquestrado e bem financiado.|
+# 38.2 Disfarce
+
+## 38.2.1 Engenharia Social
+
+A engenharia social é uma estratégia não técnica que tenta manipular indivíduos para realizar ações específicas ou divulgar informações confidenciais.
+
+Em vez de vulnerabilidades de software ou hardware, a engenharia social explora a natureza humana, aproveitando a disposição das pessoas em ajudar ou se aproveitando de suas fraquezas, como ganância ou vaidade.
+
+**Selecione as setas para descobrir mais sobre alguns tipos comuns de ataques de engenharia social.**
+
+### **Pretexting (pré-dialogo)**
+
+Esse tipo de ataque ocorre quando um indivíduo mente para obter acesso a dados privilegiados. Por exemplo, um invasor finge precisar de dados pessoais ou financeiros para confirmar a identidade de uma pessoa.
+
+### **Algo por algo (Quid pro quo)**
+
+Os ataques de contrapartida envolvem uma solicitação de informações pessoais em troca de algo, como um presente. Por exemplo, um e-mail mal-intencionado pode solicitar que você forneça seus dados pessoais confidenciais em troca de férias gratuitas.
+
+### **Fraude de identidade**
+
+É o uso da identidade roubada de uma pessoa para obter bens ou serviços por meio de engano. Por exemplo, alguém adquire suas informações pessoais e tenta solicitar um cartão de crédito em seu nome.
+
+## 38.2.2 Táticas de Engenharia Social
+
+Os criminosos digitais dependem de várias táticas de engenharia social para obter acesso a informações confidenciais.
+
+**Selecione os títulos para descobrir o que são.**
+
+### Autoridade
+
+Os invasores atacam o fato de que as pessoas são mais propensas a obedecer quando instruídas por alguém que consideram uma figura de autoridade.
+
+Por exemplo, um executivo abre o que parece ser um anexo de intimação oficial, mas na verdade é um PDF infectado.
+
+### Intimidação
+
+Os criminosos cibernéticos muitas vezes obrigam uma vítima a agir que compromete a segurança.
+
+A secretária de um executivo recebe um telefonema informando que seu chefe está prestes a fazer uma apresentação importante, mas seus arquivos estão corrompidos. O criminoso ao telefone alega que é culpa da secretária e pressiona a secretária a enviar os arquivos imediatamente ou corre o risco de ser demitida.
+
+### Consenso
+
+Frequentemente chamados de "prova social", os ataques de consenso funcionam porque as pessoas tendem a agir da mesma forma que as outras pessoas à sua volta, pensando que algo deve estar certo se os outros estiverem fazendo isso.
+
+Por exemplo, os cibercriminosos podem publicar uma postagem em mídia social sobre uma falsa oportunidade de negócios e fazer com que dezenas de contas legítimas ou ilegítimas comentem sobre sua validade. Isso encoraja vítimas inocentes a fazer uma compra.
+
+### Escassez
+
+Uma tática de marketing bem conhecida, os ataques de escassez funcionam porque os invasores sabem que as pessoas tendem a agir quando acham que há uma quantidade limitada de algo disponível.
+
+Por exemplo, alguém recebe um e-mail sobre um item de luxo que está sendo vendido por muito pouco dinheiro, mas ele afirma que há apenas um punhado disponível a esse preço, em um esforço para estimular a vítima desavisada a agir. Isso pode estimular a vítima desavisada a agir impulsivamente.
+
+### Urgência
+
+Da mesma forma, as pessoas também tendem a agir quando pensam que há um tempo limitado para isso.
+
+Por exemplo, os criminosos digitais promovem uma oferta falsa de envio por tempo limitado para tentar levar as vítimas a agir rapidamente.
+
+### Familiaridade
+
+As pessoas são mais propensas a fazer o que outra pessoa pede se gostarem dela.
+
+Portanto, os invasores geralmente tentam estabelecer um relacionamento com a vítima para estabelecer um relacionamento. Em outros casos, eles podem clonar o perfil de mídia de um amigo seu para que você pense que está falando com ele.
+
+
+### Confiança
+
+Construir confiança em um relacionamento com a vítima pode exigir mais tempo para se estabelecer.
+
+Por exemplo, um criminoso cibernético disfarçado de especialista em segurança liga para a vítima desavisada para oferecer consultoria. Ao ajudar a vítima, o “especialista em segurança” descobre um “erro grave” que precisa de atenção imediata. A solução oferece ao criminoso digital a oportunidade de violar a segurança da vítima.
+
+
+## 38.2.3 Item de Prática - Cenário de Engenharia Social
+
+Você está investigando um e-mail suspeito que foi enviado a um funcionário que trabalha remotamente Parece que o e-mail foi enviado pelo administrador, pedindo aos funcionários que cliquem em um link para baixar uma rede privada virtual que protegerá a conexão Wi-Fi durante o trabalho em casa. Embora o e-mail pareça legítimo, clicar no link instala malware no dispositivo do funcionário. Que tipo de ataque de engenharia social está sendo usado aqui?
+
+**Qual engenharia social ocorre quando alguém mente para obter acesso a dados privilegiados?**
+
+- [ ] Fraude de identidade
+- [ ] Quid pro quo
+- [x] Pretexting (pré-dialogo)
+- [ ] Phishing
+
+Está certo.
+
+- O pretexto ocorre quando um indivíduo mente para obter acesso a dados privilegiados.
+- Quid pro quo descreve um ataque que envolve uma solicitação de informações em troca de algo, como um presente.
+- A fraude de identidade usa a identidade roubada de uma pessoa para obter dados, bens ou serviços por meio de engano.
+- Phishing é um cibercrime no qual um alvo ou alvos são contatados por e-mail, telefone ou mensagem de texto por alguém que se faz passar por uma instituição legítima para induzir indivíduos a fornecer dados confidenciais, como informações de identificação pessoal, dados bancários e de cartão de crédito e senhas.
+
+## 38.2.4 Shoulder Surfing e Dumpster Diving (Busca de informações na Lixeira)
+
+  
+
+O **Shoulder Surfing** é um ataque simples que envolve observar ou literalmente olhar por cima do ombro de um alvo para obter informações valiosas, como PINs, códigos de acesso ou detalhes de cartão de crédito. Os criminosos nem sempre precisam estar perto de suas vítimas para escapar da onda - eles podem usar binóculos ou câmeras de segurança para obter essas informações.
+
+Esta é uma razão pela qual uma tela de caixa eletrônico só pode ser vista em determinados ângulos. Esses tipos de proteções dificultam muito o Shoulder Surfing.
+
+Você já deve ter ouvido falar da frase: "O lixo de um homem é o tesouro de outro homem". Em nenhum lugar isso é mais verdadeiro do que no mundo do **dumpster diving (mergulho em lixeiras)** – o processo de examinar o lixo de um alvo para ver quais informações foram descartadas. 
+
+É por isso que os documentos que contêm informações confidenciais devem ser triturados ou armazenados em sacos de queima até que possam ser destruídos.
+
+
+## 38.2.5 Falsificação de identidade e boatos
+
+Os criminosos digitais têm muitas outras técnicas de dissimulação para ajudá-los a obter sucesso.
+
+**Selecione as imagens para saber mais.**
+
+**Representação**
+
+A personificação é o ato de fingir ser outra pessoa para induzir alguém a fazer algo que normalmente não faria. Por exemplo, um cibercriminoso se passando por um funcionário da Receita recentemente atacou os contribuintes, dizendo às vítimas que eles deviam dinheiro que deveria ser pago imediatamente por meio de transferência eletrônica - ou correria o risco de ser preso.
+
+Os criminosos também usam a representação para atacar os outros. Por exemplo, eles podem se passar por suas vítimas on-line e publicar em sites ou páginas de mídia social para minar a credibilidade da vítima.
+
+**Farsas**
+
+Um hoax é um ato destinado a enganar ou enganar alguém. Os hoaxes podem causar tanta interrupção quanto uma violação de segurança real.
+
+Por exemplo, uma mensagem que avisa sobre uma ameaça de vírus (inexistente) em um dispositivo e pede que o destinatário compartilhe essas informações com todos que eles conhecem. Esse hoax provoca uma reação do usuário, criando medo desnecessário e comportamento irracional que é perpetuado por e-mail e mídias sociais.
+
+
+
+## 38.2.6 Pegadinhas (Piggybacking) e utilização não autorizada (Tailgating)
+
+Piggybacking ou Tailgating ocorre quando um criminoso segue uma pessoa autorizada para obter entrada física em um local seguro ou em uma área restrita. Os criminosos podem conseguir isso:
+
+- Dar a impressão de ser escoltado para a instalação por uma pessoa autorizada.
+- Juntar-se e fingir ser parte de uma grande multidão que entra na instalação.
+- Visar uma pessoa autorizada que não tem cuidado com as regras da instalação.
+
+Uma maneira de evitar isso é usar dois conjuntos de portas. Isso às vezes é chamado de mantrap e significa que os indivíduos entram por uma porta externa, que deve fechar antes que eles possam ter acesso através de uma porta interna.
+
+
+## 38.2.7 Outros métodos de fraude
+
+Esteja ciente de que os invasores têm muito mais truques na manga para enganar suas vítimas.
+
+**Selecione os títulos para saber mais sobre alguns desses métodos.**
+
+### Fraude da fatura
+
+As faturas falsas são enviadas com o objetivo de receber dinheiro de uma vítima solicitando que ela coloque suas credenciais em uma tela de login falsa. A fatura falsa também pode incluir linguagem urgente ou ameaçadora.
+
+### Ataque do regador
+
+Um ataque watering hole (poço de água) descreve uma exploração na qual um invasor observa ou adivinha quais sites uma empresa usa com mais frequência e infecta um ou mais deles com malware.
+
+### Typosquatting
+
+Esse tipo de ataque depende de erros comuns, como erros de digitação cometidos por indivíduos ao inserir um endereço de site em seu navegador. A URL incorreta levará os indivíduos a um site legítimo de propriedade do invasor, cujo objetivo é coletar informações pessoais ou financeiras.
+
+
+### Adendo
+
+Os invasores podem remover a tag de e-mail “externa” usada pelas empresas para avisar o destinatário de que uma origem externa é originada de um e-mail. Isso leva as pessoas a acreditarem que um e-mail mal-intencionado foi enviado de dentro da empresa.
+
+### Influenciar campanhas
+
+Frequentemente usadas em guerra cibernética, as campanhas de influência são geralmente muito bem coordenadas e combinam vários métodos, como notícias falsas, campanhas de desinformação e publicações em mídias sociais.
+
+## 38.2.8 Verifique sua compreensão - Ataques de engenharia social
+
+Corresponda o termo com a descrição apropriada.
+
+|Categoria|Resposta correta|
+|---|---|
+|Personificação|Um amigo envia uma mensagem de texto para parabenizá-lo por sua nova posição depois de ver sua atualização de status no seu perfil social. Você ainda precisa atualizar essas informações.|
+|Tailgating|Um colega lhe conta que um homem lhes pediu para segurar a porta da frente no caminho para o escritório esta manhã, porque ele havia esquecido sua carteira de identidade. Seu colega nunca tinha visto esse homem antes.|
+|Typosquatting|Um cliente relatou que o malware infectou seu computador depois que ele visitou um site. Investigação mais aprofundada revelou que o cliente acidentalmente digitou incorretamente o endereço do site.|
+
+## 38.2.9 Defendendo-se contra fraudes
+
+As organizações precisam promover a conscientização sobre as táticas de engenharia social e educar adequadamente os funcionários sobre as medidas de prevenção. Aqui estão algumas dicas importantes.
+
+- Nunca divulgue informações confidenciais ou credenciais por e-mail, chat, mensagens de texto, pessoalmente ou por telefone para partes desconhecidas.
+- Resista ao desejo de clicar em e-mails atraentes e links da web.
+- Desconfie de downloads não iniciados ou automáticos.
+- Estabelecer e educar os funcionários sobre as principais políticas de segurança.
+- Incentive os funcionários a assumirem responsabilidade pelos problemas de segurança.
+- Não se submeter à pressão de pessoas desconhecidas.
+
+
+
+## 38.2.10 Vídeo - Técnicas de Exploração de Engenharia Social
+
+Pressione o botao Play para assistir o vídeo.
+
+Este vídeo é uma visão geral do laboratório para técnicas de engenharia social. Este laboratório requer um PC ou algum outro dispositivo com acesso à Internet.
+
+Nem todos os ataques de segurança cibernética vêm de algum invasor aleatório que está invadindo uma rede de um computador que está a milhares de quilômetros de distância. Muitas vezes, os invasores roubam informações pessoais ou organizacionais que adquiriram ao fazer com que alguém lhes concedesse acesso sem saber. Isso é chamado de engenharia social, e isso acontece com mais frequência do que você imagina.
+
+Estes são os objetivos deste laboratório. Na primeira parte, você aprenderá sobre os diferentes tipos de técnicas de engenharia social que são usadas para obter acesso a dados pessoais ou organizacionais. Você verá uma lição interativa sobre engenharia social e responderá perguntas.
+
+Na parte dois, você criará um pôster de conscientização sobre segurança cibernética para incentivar os outros a estarem cientes de ataques de engenharia social.
+
+Esperamos que você goste deste laboratório.
+
+
+## 38.2.11 Laboratório - Técnicas de Exploração de Engenharia Social
+
+Neste laboratório, você completará os seguintes objetivos:
+
+- Parte 1: Técnicas de Exploração de Engenharia Social
+- Parte 2: Crie um pôster de conscientização sobre segurança cibernética
+
+# 38.3 Ataques cibernéticos
+
+## 38.3.1 Malware
+
+Os cibercriminosos usam muitos tipos diferentes de software malicioso, ou malware, para realizar ataques. Malware é qualquer código que pode ser usado para roubar dados, contornar o espaço no-break do controle de acesso ou causar danos, ou comprometer um sistema.
+
+**Selecione os ícones de alfinete para saber mais sobre três dos tipos mais comuns de malware.**
+
+### Vírus
+
+Um vírus é um tipo de programa de computador que, quando executado, se replica e se anexa a outros arquivos, como um programa legítimo, inserindo nele seu próprio código. Alguns vírus são inofensivos, mas outros podem ser destrutivos, como aqueles que modificam ou excluem dados. A maioria dos vírus requer interação do usuário final para iniciar a ativação e pode ser escrito para atuar em uma data ou hora específica.
+
+Os vírus podem se espalhar através de mídia removível, como unidades flash USB, downloads da Internet e anexos de e-mail. O simples ato de abrir um arquivo ou executar um programa específico pode desencadear um vírus. Quando um vírus está ativo, ele geralmente infecta outros programas no computador ou outros computadores na rede. Os vírus sofrem mutações para evitar a detecção.
+
+Por exemplo, o vírus Melissa foi lançado em 1999 e disseminado por e-mail, afetando dezenas de milhares de usuários e causando danos estimados em US $1,2 bilhão.
+
+### Worms
+Um worm é um programa de software malicioso que se replica explorando independentemente vulnerabilidades nas redes. Ao contrário de um vírus, que requer um programa host para ser executado, os worms podem ser executados por si próprios. Além da infecção inicial do host, eles não exigem a participação do usuário e podem se espalhar muito rapidamente pela rede, geralmente diminuindo a velocidade.
+
+Os worms compartilham padrões semelhantes: Eles exploram vulnerabilidades do sistema, têm uma maneira de se propagar e todos contêm código malicioso (carga útil) para causar danos a sistemas ou redes de computadores.
+
+Os worms são responsáveis por alguns dos ataques mais devastadores da Internet. Em 2001, o worm Code Red infectou mais de 300.000 servidores em apenas 19 horas.
+
+
+### Cavalo de Troia
+Um Trojan (Cavalo de Troia) é um malware que realiza operações maliciosas mascarando sua verdadeira intenção. Pode parecer legítimo, mas é, de fato, muito perigoso. Trojans (Cavalos de Troia) exploram os privilégios do usuário que os executa.
+
+Ao contrário dos vírus, os trojans (Cavalos de Troia) não se replicam automaticamente, mas geralmente se ligam a arquivos não executáveis, como arquivos de imagem, áudio ou vídeo, que atuam como um chamariz para prejudicar os sistemas de usuários desavisados.
+
+## 38.3.2 Bombas Lógicas
+
+Uma bomba lógica é um programa malicioso que espera por um gatilho, como uma data especificada ou entrada de banco de dados, para detonar o código malicioso. Até que este evento de disparo aconteça, a bomba lógica permanecerá inativa.
+
+Uma vez ativada, uma bomba lógica implementa um código malicioso que causa danos a um computador de várias maneiras. Ela pode sabotar registros de banco de dados, apagar arquivos e atacar sistemas operacionais ou aplicativos. 
+
+Especialistas em segurança cibernética descobriram recentemente bombas lógicas que atacam e destroem os componentes de hardware em um dispositivo ou servidor, incluindo ventiladores, unidade central de processamento (CPU), memória, discos rígidos e fontes de alimentação. A bomba lógica sobrecarrega esses componentes até que eles superaqueçam ou falhem.
+
+## 38.3.3 Ransomware
+
+Malware projetado para manter um sistema de computador, ou os dados incluídos nele, presos até que o pagamento seja feito.
+
+O ransomware geralmente funciona criptografando os dados para que você não possa acessá-los. Conforme as reividicações do ransomware, assim que o resgate for pago por meio de um sistema de pagamento não rastreável, o cibercriminoso fornecerá um programa que descriptografa os arquivos ou envia um código de desbloqueio. Na realidade, muitas vítimas não têm acesso aos seus dados mesmo após terem pago. 
+
+Algumas versões de ransomware podem tirar proveito de vulnerabilidades específicas do sistema. O ransomware é frequentemente disseminado por e-mails de phishing que o incentivam a baixar um anexo mal-intencionado ou uma vulnerabilidade de software.
+
