@@ -1529,3 +1529,305 @@ O tópico anterior explicou as ameaças da WLAN. O que você pode fazer para pro
 
 **Clique em Reproduzir para ver um vídeo sobre técnicas para proteger WLANs.**
 
+Sinais sem fio podem viajar pelas janelas, paredes, tetos e pisos do seu escritório ou da sua casa. Sem usar medidas de segurança rigorosas, uma rede sem fio pode ser tão aberta como uma tomada de rede com fio na parte externa do seu prédio.
+
+Então, vamos falar sobre algumas das maneiras que podemos proteger as nossas redes locais sem fio. Duas das opções que são da primeira fase sem fio 802.11 seriam usar camuflagem SSID bem como filtragem de endereço MAC.
+
+Alguns pontos de acesso sem fio e roteadores permitem desativar o quadro de beacon SSID, o que significa que, se um usuário sem fio chegar perto o suficiente do seu sinal wireless, ele ainda tem que configurar manualmente o SSID para se conectar à rede.
+
+Mesmo que um cliente sem fio receba um sinal forte o suficiente e possa conhecer o SSID da rede sem fio, ele ainda pode ser permitido manualmente ou impedido de acessar a rede sem fio por causa de seu endereço MAC. Um administrador sem fio pode permitir especificamente ou negar um cliente sem fio de acessar a rede sem fio usando uma lista de aprovados ou negados de endereço (MAC) físico.
+
+Embora a ocultação de SSID e filtragem de endereço MAC vá parar a maioria desses clientes sem fio que não deveriam entrar na sua rede, não vai impedir todos eles. Nossos intrusos astutos podem ainda assim descobrir os SSIDs dos seus pontos de acesso, mesmo se o seu ponto de acesso não for configurado para fazer o broadcast. E também na filtragem de endereço MAC, intrusos astutos podem falsificar seu endereço MAC e ainda ganhar acesso à rede sem fio.
+
+Então, a melhor maneira de realmente proteger uma rede sem fio é usar sistemas de autenticação e de criptografia. Há dois tipos de autenticação que foram introduzidos com o padrão 802.11. Temos autenticação de sistema aberto e chaves compartilhadas.
+
+Com autenticação de sistema aberto, é perfeito quando queremos ter acesso gratuito em um café ou hotel ou até mesmo em uma área remota. Com autenticação aberta, um cliente sem fio pode se conectar facilmente à rede sem fio sem precisar usar uma senha.
+
+Com autenticação de chave compartilhada, temos mecanismos como WEP, WPA, WPA2 e WPA3 para autenticar e também criptografar dados entre os clientes sem fio e o ponto de acesso. A preocupação aqui é que a senha deve ser pré-compartilhada entre ambas as partes para se conectarem à rede.
+
+Dentro da categoria de autenticação com chave compartilhada, nós temos quatro técnicas diferentes disponíveis. Temos WEP, privacidade equivalente com fio. Parece ótimo, mas foi uma das especificações originais 802.11, e foi projetado para proteger dados sem fio usando uma chave estática. O que isso significa: não é muito seguro. O WEP não é mais recomendado e nunca deve ser usado.
+
+O próximo é o WPA, que é o acesso protegido por WiFi (Wi-Fi Protected Access), e WPA foi baseado no padrão WEP original. Garante a segurança usando um algoritmo de criptografia TKIP que é mais forte, mas ainda não é o melhor a usar.
+
+WPA2 é o padrão atual do setor industrial para garantir a segurança de redes sem fio. Isso usa criptografia AES (Advanced Encryption Standard), considerado atualmente o protocolo de criptografia mais forte.
+
+Por último, temos WPA3, que é o mais novo e melhor método de segurança. Não permite protocolos legados desatualizados e usa quadros PMF, Protected Management Frames. Dispositivos com WPA3 ainda não estão disponíveis até o momento no mercado.
+
+Juntamente com nossa autenticação, temos criptografia. Uma criptografia é o nosso método de ser capaz de proteger os dados. Mesmo que um invasor tenha capturado dados criptografados, eles ainda não seriam capazes de decifrá-lo em um período de tempo razoável.
+
+Os padrões WPA, WPA2 usam os seguintes dois protocolos de encriptação: temos TKIP e temos AES. TKIP é usado por WPA e fornece suporte para equipamentos de rede local sem fio legados. Agora, o TKIP abordou as falhas originais do WEP (Equivalência com fio), mas o TKIP ainda não é tão forte quanto o AES. AES é o método de criptografia usado pelo WPA2. É o método preferido porque é um método de criptografia muito mais forte. Agora, quando os dados são criptografados, as pessoas que capturarem literalmente esses dados precisariam quebrar a criptografia para acessar os dados originais.
+
+Então, o que devemos usar para implantar uma LAN sem fio doméstica? Bem, primeiro, vamos usar uma autenticação WPA2. Queremos a autenticação mais forte, que é WPA2 usando criptografia AES. No entanto, temos duas opções para autenticação WPA2: temos Personal e temos Enterprise.
+
+Com a Personal, destinada a autenticar dispositivos com uma chave pré-compartilhada, nossos clientes sem fio — sejam eles tablets ou smartphones ou Blu-ray players ou TVs — vão usar exatamente a mesma senha sem fio que qualquer outro cliente da casa. Não existe nenhum servidor especial necessário para implantar WPA2-Personal.
+
+Com o WPA2-Enterprise, no entanto, é aqui que você tem um servidor RADIUS, o Remote Authentication Dial-In User Service. Este servidor será um pouco mais complicado de configurar, mas ele garante a você uma boa quantidade de segurança. Nesse servidor, você terá múltiplos usuários configurados e esses usuários terão uma combinação de nome de usuário e senha. Este servidor RADIUS seria consultado por qualquer dispositivo de infraestrutura sem fio que um usuário tenta se conectar. Se uma pessoa em seu notebook tenta se conectar à rede sem fio, o ponto de acesso ou roteador sem fio consultaria o servidor RADIUS para garantir que essas credenciais estão corretas.
+
+WPA2-Enterprise foi criado para ambiente de negócios corporativo, mas ainda pode ser realizado em uma casa.
+
+Então, como isso pode ficar? Bem, implantar um RADIUS Setup não é muito louco. É só pegar alguns dos princípios básicos. Quando você faz autenticação em meio corporativo e você tem um servidor RADIUS, nós temos que garantir que nosso ponto de acesso sem fio ou o roteador sem fio pode alcançar o servidor RADIUS. E isso significa que seu ponto de acesso ou roteador sem fio tem que saber o endereço IP do servidor RADIUS. Além disso, como o RADIUS está sendo executado no próprio servidor, nosso ponto de acesso ou roteador sem fio precisa ser capaz de direcionar os números de porta em que o serviço é alcançável nesse servidor RADIUS. As portas mais comuns são 1812 para autenticação RADIUS e 1813 para contabilidade RADIUS, mas também pode operar usando as portas 1645 e 1646.
+
+Além disso, queremos ter certeza de que realmente temos um dispositivo legítimo perguntando se o nome de usuário e senha estão corretos no servidor. E para fazer isso, temos a chave compartilhada. O ponto de acesso ou roteador sem fio terá uma chave compartilhada configurada nele, que será a mesma chave configurada no servidor RADIUS. Conforme solicitado no seu roteador ou ponto de acesso sem fio, ao acessar esse servidor para perguntar sobre contas de usuário e senha, queremos ter certeza de que realmente temos fontes legítimas de solicitação.
+
+Portanto, independentemente de como você implanta uma rede local sem fio, você tem o básico de como mantê-la segura.
+
+Por que você não se conecta? Você não sabe que esta é a sala dos servidores?! Ugh!
+
+## 39.6.8 Ocultação do SSID e filtragem de endereço MAC
+
+Os sinais sem fio podem viajar através de materiais sólidos, como tetos, pisos, paredes, fora de casa ou escritórios. Sem medidas rigorosas de segurança, a instalação de uma WLAN pode ser equivalente a colocar portas Ethernet em qualquer lugar, mesmo fora do escritorio ou casa.
+
+Para lidar com as ameaças de impedir invasores sem fio e proteger dados, dois recursos de segurança anteriores foram usados e ainda estão disponíveis na maioria dos roteadores e pontos de acesso: camuflagem SSID e filtragem de endereço MAC.
+
+**Ocultação do SSID**
+
+Os pontos de acesso e alguns roteadores sem fio permitem que o quadro de sinalização SSID seja desativado, conforme mostrado na figura. Os clientes sem fio devem configurar manualmente o SSID para se conectar à rede.![[Pasted image 20260706213618.png]]
+
+**Filtragem de endereços MAC**
+
+Um administrador pode permitir ou negar manualmente o acesso sem fio dos clientes com base em seu endereço físico de hardware MAC. Na figura, o roteador está configurado para permitir dois endereços MAC. Dispositivos com endereços MAC diferentes não poderão ingressar na WLAN de 2,4 GHz.![[Pasted image 20260706213627.png]]
+
+## 39.6.9 Métodos de Autenticação 802.11
+
+Embora esses dois recursos dissuadem a maioria dos usuários, a realidade é que nem a ocultação do SSID nem a filtragem de endereços MAC impediriam um intruso astuto. Os SSIDs são facilmente descobertos mesmo se os APs não os transmitirem e os endereços MAC podem ser falsificados. A melhor maneira de proteger uma rede sem fio é usar sistemas de autenticação e criptografia.
+
+Dois tipos de autenticação foram introduzidos com o padrão 802.11 original:
+
+- **Autenticação de sistema aberto** - Qualquer cliente sem fio poderá se conectar facilmente. A autenticação de sistema aberto deve ser usada apenas em situações em que a segurança não é uma preocupação, como em locais que fornecem acesso gratuito à internet, como cafés, hotéis e áreas remotas. O cliente sem fio é responsável por fornecer segurança, como por exemplo, usando uma rede virtual privada (VPN) para se conectar de forma segura. As VPNs fornecem serviços de autenticação e criptografia. As VPNs estão além do escopo deste tópico.
+- **A autenticação de chave compartilhada** - Isso fornece mecanismos como WEP, WPA, WPA2 e WPA3 para autenticar e criptografar dados entre um cliente sem fio e um ponto de acesso (AP). No entanto, a senha deve ser pré-compartilhada entre as duas partes para se conectar.
+
+O gráfico a seguir resume esses métodos de autenticação.
+![[Pasted image 20260706213645.png]]
+
+## 39.6.10 Métodos de Autenticação de Chave Compartilhada
+
+Existem quatro técnicas de autenticação de chave compartilhada disponíveis, conforme descrito na tabela. Até que a disponibilidade dos dispositivos WPA3 se torne onipresente, as redes sem fio devem usar o padrão WPA2.
+
+|Método de autenticação|Descrição|
+|---|---|
+|WEP (Wired Equivalent Privacy)|A especificação 802.11 original projetada para proteger os dados usando o método de criptografia Rivest Cipher 4 (RC4) com uma chave estática. No entanto, a chave nunca muda ao trocar pacotes. Isso facilita a invasão. O WEP não é mais recomendado e nunca deve ser usado.|
+|WPA (Wi-Fi Protected Access)|Um padrão da Wi-Fi Alliance que usa WEP, mas protege os dados com o algoritmo de criptografia TKIP (Temporal Key Integrity Protocol) muito mais forte. O TKIP muda a chave para cada pacote, dificultando o trabalho dos hackers.|
+|WPA2|O WPA2 é o padrão atual do setor para proteger redes sem fio. Usa a criptografia AES (Advanced Encryption Standard - Padrão de Criptografia Avançada). O AES é considerado atualmente o protocolo de criptografia mais forte.|
+|WPA3|Esta é a próxima geração de segurança Wi-Fi. Todos os dispositivos habilitados para WPA3 usam os métodos de segurança mais recentes, desaprovam protocolos herdados desatualizados e exigem o uso de quadros de gerenciamento protegidos (PMF). No entanto, os dispositivos com WPA3 ainda não estão disponíveis.|
+
+## 39.6.11 Autenticando um Usuário Doméstico
+
+Os roteadores domésticos geralmente têm duas opções para autenticação: WPA e WPA2. WPA2 é o mais forte dos dois. A figura mostra a opção para selecionar um dos dois métodos de autenticação WPA2:
+
+- **Personal -** Destinado a redes domésticas ou de pequenos escritórios, os usuários autenticam-se usando uma chave pré-compartilhada (PSK). Os clientes sem fio se autenticam com o roteador sem fio usando uma senha pré-compartilhada. Nenhum servidor de autenticação especial é necessário.
+- **Enterprise -** Destinado a redes empresariais, porém requer um servidor de autenticação Remote Authentication Dial-In User Service (RADIUS). Embora seja mais complicado de configurar, ele fornece segurança adicional. O dispositivo deve ser autenticado pelo servidor RADIUS e os usuários devem se autenticar usando o padrão 802.1X, que usa o EAP (Extensible Authentication Protocol) para autenticação.
+
+Na figura, o administrador está configurando o roteador sem fio com autenticação pessoal WPA2 na faixa de 2,4 GHz.![[Pasted image 20260706213735.png]]
+
+## 39.6.12 Métodos de Criptografia
+
+Criptografia é usada para proteger os dados. Se um invasor capturar dados criptografados, não poderá decifrá-los em um período de tempo razoável.
+
+Os padrões WPA e WPA2 usam os seguintes protocolos de criptografia:
+
+- **Temporal Key Integrity Protocol (TKIP) -** O TKIP é o método de criptografia usado pelo WPA. Ele fornece suporte para equipamentos WLAN herdados, abordando as falhas originais associadas ao método de criptografia 802.11 WEP. Ele usa o WEP, mas criptografa a carga útil da camada 2 usando o TKIP e executa um MIC (Message Integrity Check) no pacote criptografado para garantir que a mensagem não seja alterada.
+- **Advanced Encryption Standard (AES) -** AES é o método de criptografia usado pelo WPA2. É o método preferido porque é um método muito mais forte de criptografia. Ele usa o Modo de Cifra de Contador com o Protocolo de Código de Autenticação de Mensagem em Cadeia de Blocos (CCMP - Chaining Message Authentication Code Protocol) que permite que os hosts de destino reconheçam se os bits criptografados e não criptografados foram alterados.
+
+Na figura, o administrador está configurando o roteador sem fio para usar WPA2 com criptografia AES na faixa de 2,4 GHz.![[Pasted image 20260706213746.png]]
+
+## 39.6.13 Autenticação na Empresa
+
+Em redes com requisitos de segurança mais rígidos, é necessária uma autenticação ou login adicional para conceder acesso a clientes sem fio. A opção do modo de segurança corporativa requer um servidor RADIUS de autenticação, autorização e contabilidade (AAA - Authentication, Authorization, and Accounting).
+
+- **Endereço IP do servidor RADIUS -** Este é o endereço acessível do servidor RADIUS.
+- **Números de porta UDP -** As portas UDP oficialmente designadas são 1812 para autenticação RADIUS e 1813 para contabilidade RADIUS, mas também podem operar usando as portas UDP 1645 e 1646, como mostrado na figura.
+- **Chave compartilhada -** Usada para autenticar o ponto de acesso (AP) com o servidor RADIUS.
+
+Na figura, o administrador está configurando o roteador sem fio com autenticação WPA2 Enterprise usando criptografia AES. O endereço IPv4 do servidor RADIUS também é configurado com uma senha forte para ser usada entre o roteador sem fio e o servidor RADIUS.![[Pasted image 20260706213803.png]]
+A chave compartilhada não é um parâmetro que deve ser configurado em um cliente sem fio. É necessário apenas no ponto de acesso para se autenticar com o servidor RADIUS. A autenticação e autorização do usuário são tratadas pelo padrão 802.1X, que fornece uma autenticação centralizada e baseada em servidor dos usuários finais.
+
+O processo de login 802.1X usa o EAP para se comunicar com o servidor AP e RADIUS. O EAP é uma estrutura para autenticar o acesso à rede. Ele pode fornecer um mecanismo de autenticação segura e negociar uma chave privada segura que pode ser usada para uma sessão de criptografia sem fio usando a criptografia TKIP ou AES.
+
+
+## 39.6.14 WPA3
+
+No momento da redação deste artigo, os dispositivos que suportam autenticação WPA3 não estavam disponíveis. No entanto, o WPA2 não é mais considerado seguro. WPA3, se disponível, é o método de autenticação 802.11 recomendado. O WPA3 inclui quatro aplicativos:
+
+- WPA3-Personal (Pessoal)
+- WPA3-Enterprise (Corporativo)
+- Redes abertas
+- Integração da Internet das Coisas (IoT)
+
+### WPA3-Personal (Pessoal)
+
+No WPA2-Personal, os atores de ameaças podem ouvir o “aperto de mão” (handshake) entre um cliente sem fio e o AP e usar um ataque de força bruta para tentar adivinhar o PSK. O WPA3-Personal impede esse ataque usando a autenticação simultânea de iguais (SAE), um recurso especificado no IEEE 802.11-2016. O PSK nunca é exposto, tornando impossível para o atacante adivinhar.
+
+### WPA3-Enterprise (Corporativo)
+
+O WPA3-Enterprise ainda usa autenticação 802.1X / EAP. No entanto, requer o uso de um conjunto criptográfico de 192 bits e elimina a mistura de protocolos de segurança para os padrões 802.11 anteriores. O WPA3-Enterprise adere ao conjunto comercial de algoritmos de segurança nacional (CNSA - Commercial National Security Algorithm), que é comumente usado em redes Wi-Fi de alta segurança.
+
+### Redes abertas
+
+As redes abertas no WPA2 enviam o tráfego do usuário em texto não autenticado e limpo. No WPA3, as redes Wi-Fi abertas ou públicas ainda não usam autenticação. No entanto, eles usam o OWE (Opportunistic Wireless Encryption) para criptografar todo o tráfego sem fio.
+
+### Integração da IoT
+
+Embora o WPA2 tenha incluído o Wi-Fi Protected Setup (WPS) para dispositivos embarcados rapidamente, sem configurá-los primeiro, o WPS é vulnerável a uma variedade de ataques e não é recomendado. Além disso, os dispositivos IoT geralmente são "headless", ou seja, não possuem interface gráfica integrada para configuração e precisam de uma maneira fácil de se conectar à rede sem fio. O Protocolo de provisionamento de dispositivo (DPP - Device Provisioning Protocol) foi projetado para atender a essa necessidade. Cada dispositivo projetado para operar sem tela, teclado e mouse possui uma chave pública codificada diretamente no seu firmware ou hardware. A chave é tipicamente impressa na parte externa do dispositivo ou em sua embalagem como um código de resposta rápida (QR Code). O administrador da rede pode digitalizar o código QR e integrar rapidamente o dispositivo. Embora não faça parte estritamente do padrão WPA3, o DPP substituirá o WPS ao longo do tempo.
+
+## 39.6.15 Verifique sua Compreensão - WLANs Seguras
+
+**Pergunta 1**
+
+Quais são as duas melhores maneiras de garantir a segurança das WLANs? (Escolha duas.)
+
+- [ ] Ocultação do SSID
+- [x] Criptografia
+- [ ] Filtragem de endereços MAC
+- [x] Autenticação
+
+Está certo.
+
+As melhores maneiras de garantir a segurança de uma rede sem fio são usar sistemas de autenticação e criptografia. Nem a ocultação do SSID nem a filtragem de endereços MAC impediriam um intruso astuto.
+
+**Pergunta 2**
+
+Qual método de autenticação NÃO utiliza uma senha compartilhada entre o cliente sem fio e o ponto de acesso (AP)?
+
+- [ ] WPA
+- [ ] WPA2
+- [ ] WPA3
+- [x] Aberto
+- [ ] WEP
+
+Está certo.
+
+WEP, WPA, WPA2 e WPA3 usam uma senha pré-compartilhada entre o cliente sem fio e o ponto de acesso.
+
+**Pergunta 3**
+
+Qual dos seguintes métodos de autenticação não usa uma senha compartilhada entre o cliente sem fio e o ponto de acesso?
+
+- [ ] EAP
+- [x] RC4
+- [ ] AES
+- [ ] TKIP
+
+Está certo.
+
+A especificação 802.11 original foi projetada para proteger os dados usando o método de criptografia Rivest Cipher 4 (RC4) com uma chave estática.
+
+**Pergunta 4**
+
+Qual método de criptografia utiliza o CCMP para reconhecer se os bits criptografados e não criptografados foram alterados?
+
+- [x] AES
+- [ ] TKIP
+- [ ] RC4
+
+Está certo.
+
+O AES usa o Modo de Cifra de Contador com o Protocolo de Código de Autenticação de Mensagem em Cadeia de Blocos (CCMP - Chaining Message Authentication Code Protocol) que permite que os hosts de destino reconheçam se os bits criptografados e não criptografados foram alterados.
+
+**Pergunta 5**
+
+Quais são os dois métodos de autenticação que exigem que o usuário insira uma senha pré-compartilhada? (Escolha duas.)
+
+- [x] WPA Personal (Pessoal)
+- [ ] WPA2 Enterprise (Corporativo)
+- [ ] Aberto
+- [x] WPA2 Personal
+- [ ] WPA Enterprise (Corporativa)
+
+Está certo.
+
+O WPA Personal e o WPA2 Personal usam uma senha pré-compartilhada que os clientes sem fio usam para se autenticar com o AP.
+
+## 39.6.16 Packet Tracer - Configurando Segurança Básica em Redes sem Fios
+
+Nesta atividade, você configurará a segurança sem fio usando o WPA2 Personal.
+
+
+# 39.7 Resumo de Segurança de Rede
+
+## 39.7.1 O que aprendi neste módulo?
+
+### Fundamentos de Segurança
+
+O cubo de segurança cibernética fornece uma maneira útil de pensar sobre a proteção de dados. A primeira dimensão do cubo identifica os objetivos de confidencialidade, integridade e disponibilidade (CIA). A confidencialidade diz respeito à prevenção da divulgação de informações a pessoas não autorizadas. Integridade refere-se à precisão, consistência e confiabilidade dos dados. Os estados dos dados estão em trânsito, em repouso no armazenamento ou em processo. Os pilares da defesa são pessoas, tecnologia e políticas e práticas. Confidencialidade, integridade e disponibilidade também são referidos como a tríade da CIA.
+
+A integridade dos dados garante que os dados não sejam alterados por entidades não autorizadas enquanto são capturados, armazenados, recuperados, atualizados e transferidos. Os métodos usados para garantir a integridade de dados incluem hashing, verificações de validação de dados, verificações de consistência dos dados e controles de acesso.
+
+A disponibilidade refere-se à necessidade de tornar os dados acessíveis a todos os usuários autorizados sempre que eles precisarem. Ataques cibernéticos e falhas de sistema podem desconectar os usuários dos dados de que precisam. A disponibilidade pode ser assegurada pela manutenção adequada do equipamento, mantendo o software e os sistemas atualizados, testando backups e fallbacks, implementando novas tecnologias, monitorando a atividade da rede e analisando vulnerabilidades para detectar ameaças.
+
+### Controle de acesso
+
+Os controles de acesso físico impedem que usuários não autorizados acessem fisicamente redes, dados e equipamentos. Os controles de acesso físico determinam quem, onde e quando as pessoas podem entrar ou sair de uma instalação. Os controles de acesso físico incluem guardas, cercas de perímetro, detectores de movimento, fechaduras de dispositivos e portas trancadas que só podem ser acessadas com cartões magnéticos ou combinações. Medidas adicionais de segurança física são cães de guarda, câmeras de vídeo e alarmes.
+
+Controles de acesso lógico são as soluções de hardware e software usadas para gerenciar o acesso aos recursos e sistemas. Essas soluções baseadas em tecnologia incluem ferramentas e protocolos que os sistemas de computador usam para identificação, autenticação, autorização e contabilidade (AAA). Exemplos desses controles são criptografia, cartões inteligentes com chips embutidos, senhas, biometria, listas de controle de acesso (ACLs), firewalls e sistemas de detecção de intrusão.
+
+Os controles de acesso administrativo são as políticas e procedimentos definidos pelas empresas para implementar e aplicar todos os aspectos de controle de acesso não autorizado. Exemplos são políticas aprovadas, procedimentos definidos, verificações de antecedentes e classificação de dados.
+
+Os controles de acesso administrativo envolvem três serviços de segurança: autenticação, autorização e contabilidade (AAA). A autenticação é a verificação da identidade de cada usuário, para evitar acesso não autorizado. Os serviços de autorização determinam quais recursos os usuários podem acessar, juntamente com as operações que os usuários podem realizar e até mesmo quando eles podem realizá-las. A contabilidade acompanha o que os usuários fazem na rede, como o que acessam, quando acessam e o que fazem com ela. Esta informação é compilada em logs.
+
+A identificação aplica as regras estabelecidas pela política de autorização. Identificadores exclusivos são nomes de usuário e senhas, números de identificação pessoal ou biometria, como impressões digitais, varreduras de retina ou reconhecimento de voz.
+
+A gestão de identidade federada (FIM) refere-se a várias empresas que permitem que seus usuários usem as mesmas credenciais de identificação para acessar as redes de todas as empresas do grupo. Enquanto o FIM oferece conveniência para usuários e administradores, se o sistema for explorado por hackers, eles terão acesso a muitos sistemas ou aplicativos em vez de apenas um.
+
+As políticas de senha ajudam a garantir que as senhas atendam aos requisitos de comprimento e complexidade. As senhas devem ter pelo menos 8 a 10 caracteres. As senhas devem incluir uma combinação de caracteres maiúsculos e minúsculos, números e símbolos.
+
+Combinar outros meios de identidade com senhas, como autenticação multifator, é cada vez mais popular.
+
+A Contabilidade rastreia uma ação de volta a uma pessoa ou processo. A Contabilidade então coleta essas informações e relata os dados de uso. A empresa pode usar esses dados para determinadas finalidades, como auditoria ou cobrança.
+
+### Defesa de sistemas e dispositivos
+
+Uma organização precisa de um bom administrador para configurar sistemas operacionais a fim de se proteger contra ameaças externas. É necessária uma abordagem sistemática para estabelecer procedimentos de monitoramento de segurança, avaliar atualizações de software e instalar atualizações usando um plano documentado. As linhas de base ajudam a indicar o comprometimento do sistema quando o desempenho se desvia significativamente da linha de base.
+
+Ataques de malware sem arquivo são difíceis de detectar e não deixam rastros. Eles podem explorar shells de comando programáveis. Os scripts Python, Bash e Visual Basic for Applications (VBA) podem ser maliciosos.
+
+Para ficar à frente dos cibercriminosos, o software deve ser corrigido proativamente para eliminar vulnerabilidades. Os sistemas operacionais verificam regularmente por patches, mas os administradores devem avaliar os patches antes de instalá-los. Os sistemas automatizados de gerenciamento de patches fornecem aos administradores controle sobre a data e a hora das atualizações e relatórios sobre o status dos sistemas e patches.
+
+A segurança de endpoint baseada em host inclui firewalls baseados em host que podem bloquear tráfego de entrada e saída, sistemas de detecção de intrusão de host (HIDS) que monitoram sistemas e segurança de login e eventos do sistema. Os sistemas de prevenção de intrusões em hosts (HIPS) detectam atividades maliciosas e podem enviar um alarme, registrar a atividade maliciosa, redefinir a conexão e/ou descartar os pacotes. Endpoint detection and response (EDR) é uma solução de segurança integrada que monitora e coleta continuamente dados de dispositivos de ponto de extremidade. As ferramentas de prevenção contra perda de dados (DLP) fornecem uma maneira centralizada de garantir que dados sensíveis não sejam perdidos, utilizados indevidamente ou acessados por usuários não autorizados. Firewalls de próxima geração (NGFW) combinam firewalls tradicionais com outras funções de filtragem de dispositivos de rede.
+
+Os dados podem ser protegidos por meio de criptografia de host pelo Windows Encrypting File System (EFS), que pode criptografar arquivos ou unidades inteiras (criptografia de disco completo – FDE) com BitLocker. O BitLocker requer um Trusted Platform Module (TPM) no BIOS. BitLocker To Go é uma ferramenta que criptografa unidades removíveis.
+
+A integridade de inicialização garante que o sistema seja confiável e não tenha sido alterado enquanto o sistema operacional é carregado. A inicialização segura é um padrão de segurança para garantir que um dispositivo inicialize usando software confiável.
+
+A Apple fornece hardware de sistema e recursos de segurança do macOS que oferecem uma proteção avançada para endpoints. A plataforma de hardware Mac possui recursos de segurança aprimorados, como um processador de segurança especial, integridade de inicialização e um mecanismo de criptografia AES dedicado. A criptografia de armazenamento de dados Apple Data Protection e FileVault é compatível com o mecanismo de criptografia AES de hardware. Os dados biométricos são processados em hardware de segurança, isolando-os do sistema operacional. A Apple também inclui um recurso de localizar meu dispositivo, tecnologia antimalware XProtect, uma ferramenta de remoção de malware (MRT) e Gatekeeper, que garante que somente software Apple autêntico e assinado digitalmente possa ser instalado.
+
+A proteção física de dispositivos inclui o controle de acesso a equipamentos e instalações, usando travas de cabo, fechaduras com chave ou cifra, e inventário e rastreamento de dispositivos com sistemas de identificação por radiofrequência (RFID).
+
+### Proteção Antimalware
+
+Vários dispositivos de segurança de rede são necessários para proteger o perímetro da rede contra acesso externo. Esses dispositivos podem incluir um roteador protegido que fornece serviços de VPN, um firewall de próxima geração, um appliance IPS e um servidor de serviços AAA. No entanto, garantir a segurança de uma LAN interna é quase tão importante quanto garantir a segurança do perímetro da rede externa. Os endpoints e a infraestrutura de rede exigem proteção.
+
+Existem três tipos de programas antimalware: baseado em assinatura, baseado em heurística e baseado em comportamento. A proteção antivírus baseada em host também é conhecida como baseada em agentes. O antivírus baseado em agente é executado em todas as máquinas protegidas. A proteção antivírus sem agente executa verificações em hosts a partir de um sistema centralizado. Firewalls baseados em host restringem as conexões de entrada e saída para conexões iniciadas apenas pelo próprio host. Exemplos incluem Windows Defender Firewall com Segurança Avançada e iptables e TCP Wrappers no Linux.
+
+A proteção de endpoints em uma rede sem fronteiras pode ser realizada usando técnicas baseadas em rede, bem como baseadas em host. Dispositivos e técnicas que implementam proteções de host no nível da rede incluem Cisco Secure Endpoint, Cisco Secure Email, Cisco Umbrella e sistemas de controle e admissão de rede (NAC). Essas tecnologias funcionam em conjunto com sistemas baseados em host para proteger a empresa.
+
+### Firewalls e Proteção contra Intrusões Baseada em Host
+
+Os firewalls resistem a ataques de rede, servem como o único ponto entre redes internas e externas e impõem políticas de controle de acesso. Eles protegem os hosts contra exposição, limpam o fluxo do protocolo e bloqueiam dados maliciosos de servidores e clientes. Os firewalls são ineficazes se mal configurados ou desatualizados. Eles podem tornar as redes lentas e alguns dados não podem ser transmitidos por eles.
+
+Existem vários tipos de firewalls. Firewalls de filtragem de pacotes (stateless) geralmente fazem parte de um firewall de roteador. Permitem ou negam o tráfego baseado na informação da camada 3 e da camada 4. Firewalls com estado são as tecnologias de firewall mais versáteis e mais comuns em uso. Filtragem com estado é uma arquitetura de firewall classificada na camada de rede. Ele também analisa o tráfego na camada 4 da OSI e na camada 5. Um aplicativo gateway firewall (proxy firewall) filtra informações nas Camadas 3, 4, 5 e 7 do modelo de referência OSI. Firewalls de próxima geração (NGFW) vão além dos firewalls stateful. Firewalls transparentes filtram o tráfego entre duas interfaces em ponte. Os firewalls híbridos combinam atributos dos outros tipos de firewall.
+
+Firewalls de filtragem de pacotes geralmente fazem parte de um firewall de roteador. Eles usam regras simples de permissão ou negação, têm baixo impacto no desempenho da rede, são fáceis de implementar e fornecem segurança inicial na camada de rede. Eles são suscetíveis à falsificação de IP, podem não ser eficazes contra pacotes fragmentados e podem usar ACLs complexas que são difíceis de usar e manter. Firewalls stateful são frequentemente o principal meio de defesa, filtrando tráfego indesejado, desnecessário e indesejável. Eles geralmente são mais eficazes do que os firewalls sem estado. No entanto, eles não podem impedir ataques de camada de aplicativo, são menos eficazes contra protocolos sem estado, têm dificuldade em rastrear a negociação de porta dinâmica e não usam autenticação.
+
+Firewalls pessoais baseados em host são programas de software autônomos que controlam o tráfego que entra e sai de um computador. Firewalls baseados em host podem usar um conjunto de políticas predefinidas, ou perfis, para controlar pacotes que entram e saem de um computador. Eles também podem ter regras que podem ser diretamente modificadas ou criadas para controlar o acesso com base em endereços, protocolos e portas. Exemplos incluem Firewalls do Windows Defender, iptables, nftables e TCP Wrappers.
+
+A proteção antimalware consiste em proteção antivírus, adware, phishing e spyware. Alguns softwares antimalware combinam recursos de diferentes tipos.
+
+### Acesso sem fio seguro
+
+Redes sem fio são suscetíveis a uma série de ameaças, incluindo: interceptação de dados, invasores sem fio, ataques de negação de serviço (DoS) e pontos de acesso (APs) falsos. Os ataques DoS podem resultar de dispositivos configurados incorretamente, interferência maliciosa do usuário e interferência acidental. Pontos de acesso (APs) falsos podem ser usados por um atacante para capturar endereços MAC, capturar pacotes de dados, obter acesso a recursos da rede ou lançar um ataque de homem-no-meio (MitM). Em um ataque de homem-no-meio (MitM), o hacker se posiciona entre duas entidades legítimas para ler ou modificar os dados que passam entre as duas partes.
+
+Na camuflagem de SSID, o frame beacon SSID é desabilitado. Para filtragem de endereço MAC, um administrador pode manualmente permitir ou negar o acesso sem fio de clientes com base no endereço MAC físico do hardware deles.
+
+A autenticação de sistema aberto deve ser usada apenas em situações em que a segurança não é uma preocupação. A autenticação de chave compartilhada fornece mecanismos como WEP, WPA, WPA2 e WPA3 para autenticar e criptografar dados entre um cliente sem fio e um ponto de acesso (AP). A autenticação WEP e WPA está desatualizada e insegura. WPA2 é recomendado no mínimo, com WPA3 preferencial quando estiver disponível.
+
+A autenticação pessoal requer a configuração de um nome de usuário e senha pré-compartilhada. A autenticação corporativa requer o uso de um servidor de autenticação RADIUS usando 802.1x com Extensible Authentication Protocol (EAP).
+
+A criptografia protege os dados, tornando-os ilegíveis se interceptados. WPA2 usa Temporal Key Integrity Protocol (TKIP) ou Advanced Encryption Standard (AES).
+
+WPA3, quando disponível, é o método de autenticação 802.11 recomendado. Inclui WPA3-Personal, WPA3-Enterprise, Open Networks e integração de IoT. Redes Wi-Fi abertas ou públicas com WPA3 ainda não utilizam nenhuma forma de autenticação. No entanto, elas usam o OWE (Opportunistic Wireless Encryption) para criptografar todo o tráfego sem fio. Para a integração de dispositivos IoT, o WPA3 utiliza o Protocolo de Provisionamento de Dispositivos (DPP) para integrar de forma segura os dispositivos IoT.
+
+## 39.7.2 Webster – Perguntas para Reflexão
+
+Minha amiga, Lara, tem estado muito ocupada trabalhando na faculdade. Ela criou um guia de solução de problemas para novos técnicos de help desk e, em seguida, trabalhou em uma campanha de conscientização sobre segurança cibernética para educar todos os usuários da faculdade. Por fim, ela ajudou a revisar e desenvolver políticas de segurança para proteger a faculdade e seus usuários.
+
+Como você pode ver, há muitas coisas que um técnico de helpdesk deve saber. Mas isso é emocionante porque sempre há algo novo para aprender. Você pode ser um técnico prático de suporte técnico em uma equipe de um departamento de TI?
