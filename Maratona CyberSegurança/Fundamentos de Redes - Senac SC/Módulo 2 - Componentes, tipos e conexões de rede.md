@@ -1,5 +1,7 @@
 # 2.1 Clientes e Servidores
 ## 2.1.1 Vídeo - Clientes e Servidores
+
+![[2.1.1.mp4#subtitle=anexos/2.1.1.vtt]]
 ### Clientes e Servidores
 
 Em redes modernas, um host pode atuar como **cliente**, **servidor** ou **ambos**. O software instalado no computador determina a sua função.

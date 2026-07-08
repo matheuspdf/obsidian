@@ -1,0 +1,91 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+1
+00:00.110 --> 00:01.540
+<v Educator>Em redes modernas,</v>
+
+2
+00:01.540 --> 00:05.910
+um host pode atuar como cliente, servidor ou ambos.
+
+3
+00:05.910 --> 00:07.920
+O software instalado no computador
+
+4
+00:07.920 --> 00:10.880
+determina a função do computador.
+
+5
+00:10.880 --> 00:13.590
+Servidores são hosts com softwares instalados
+
+6
+00:13.590 --> 00:16.050
+que lhes permite fornecer informações
+
+7
+00:16.050 --> 00:17.679
+para outros hosts na rede,
+
+8
+00:17.679 --> 00:20.090
+como e-mail ou páginas Web.
+
+9
+00:20.090 --> 00:23.090
+Cada serviço de servidor requer um software de servidor separado.
+
+10
+00:23.090 --> 00:26.938
+Os clientes são hosts de computador que possuem softwares instalados
+
+11
+00:26.938 --> 00:29.330
+que permitem que o host solicite
+
+12
+00:29.330 --> 00:32.560
+e exiba as informações obtidas do servidor.
+
+13
+00:32.560 --> 00:35.700
+Um exemplo de software cliente é um navegador, 
+
+14
+00:35.700 --> 00:39.580
+como Chrome, Edge, Safari, ou Firefox.
+
+15
+00:39.580 --> 00:41.229
+Usando o software navegador web,
+
+16
+00:41.229 --> 00:45.120
+o cliente pode solicitar a página Web no servidor.
+
+17
+00:45.120 --> 00:48.399
+O servidor Web responderá com a página Web.
+
+18
+00:48.399 --> 00:50.660
+Outro exemplo é o e-mail.
+
+19
+00:50.660 --> 00:53.100
+Os clientes usamo software cliente,
+
+20
+00:53.100 --> 00:57.020
+como o Microsoft Outlook, para acessar o e-mail no servidor.
+
+21
+00:57.020 --> 00:58.670
+Os clientes podem enviar
+
+22
+00:58.670 --> 01:01.863
+e receber mensagens de e-mail do servidor de e-mail.
+
