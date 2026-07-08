@@ -2,6 +2,8 @@
 
 ## Vídeo - A necessidade da Cibersegurança
 
+![[Vídeo - A necessidade da Cibersegurança.mp4#subtitle=anexos/Vídeo - A necessidade da Cibersegurança.vtt]]
+
 É um fato bem conhecido que as ameaças de segurança cibernética estão em ascensão, como os cibercriminosos procuram explorar quaisquer vulnerabilidades que possam encontrar para roubar informações ou dinheiro. E, no entanto, pesquisas mostram que há uma escassez de profissionais treinados para conter essa tendência. A cibersegurança precisa de você, e você pode escolher entre uma ampla gama de opções de carreira. Não importa para qual trabalho você aspira, seja um administrador de segurança de rede, um oficial de inteligência cibernética, ou um hacker ético, este curso fornece uma base sólida para construir uma carreira de sucesso. É hora de começar a trabalhar.
 
 A empresa de e-learning Apollo continua a crescer e se expandiu. Agora possui uma sede, três filiais localizadas em diferentes cidades, e uma força de trabalho remota com muitos funcionários trabalhando em casa. A internet certamente permitiu a Apollo aproveitar o sucesso, mas também trouxe alguns riscos.
@@ -51,6 +53,7 @@ O comando Sair e Logout removerá as informações de registro para esta cópia 
 
 **Clique em Reproduzir no vídeo para saber como usar os menus e como criar sua primeira rede de Packet Tracer.**
 
+*Transcrição*
 Olá a todos! Bem-vindo ao nosso Começando no Cisco Packet Tracer, vídeo de passo a passo. Neste vídeo, vou mostrar as diferentes características construídas dentro do programa conhecido como Cisco Packet Tracer.
 
 À medida que começamos, vamos destacar alguns dos principais componentes de uso do aplicativo Cisco Packet Tracer. Vamos começar dando uma olhada na barra de ferramentas inferior, no canto inferior esquerdo. Aqui temos uma variedade de diferentes categorias e, em cada categoria, teremos opções abaixo. Por exemplo, a categoria padrão é Dispositivos de rede, selecionada por padrão. Na categoria Dispositivo de Rede, encontraremos a subcategoria de Roteadores. Com Roteadores selecionados, veremos uma variedade de diferentes modelos de roteadores disponíveis para colocarmos em nossa topologia.
@@ -90,7 +93,7 @@ Se quisermos uma visão mais próxima de qual porta estou conectando, sempre pos
 Este é o poder do Cisco Packet Tracer, que utiliza as vistas lógica e física. Pratique e divirta-se usando o Cisco Packet Tracer para todas as suas configurações de rede e para quaisquer cenários que você possa imaginar e construir.
 
 ### Vídeo - Packet Tracer como uma ferramenta de aprendizado adaptativo
-
+*Transcrição*
 E se você pudesse ver dentro de uma rede de pequenas empresas ou na Internet? Talvez você queira configurar uma Internet das Coisas (IoT) para alertá-lo por telefone quando houver um problema no seu ambiente doméstico. O Packet Tracer permitirá que você faça esse teste de rede sem ter o equipamento físico.
 
 Bem-vindo ao Cisco Packet Tracer, o ambiente de simulação que pode ajudá-lo a fazer tudo isso e muito mais. O Packet Tracer permite conectar e configurar dispositivos de rede mesmo que você não tenha acesso ao equipamento físico.

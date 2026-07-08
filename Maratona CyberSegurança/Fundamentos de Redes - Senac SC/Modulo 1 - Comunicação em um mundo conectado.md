@@ -4,6 +4,7 @@
 
 Rick Graziani se apresenta como instrutor de redes de computadores e colaborador da equipe da Cisco Systems responsável pelo desenvolvimento dos cursos da Cisco Network Academy. Ele destaca que, apesar de ser o rosto visível dos vídeos, há uma grande equipe de especialistas dedicados trabalhando nos bastidores.
 
+![[1.1.1.mp4#subtitle=anexos/1.1.1.vtt]]
 ### Analogias para Entender Redes
 
 O instrutor usa duas metáforas para motivar os alunos:
