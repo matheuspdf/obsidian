@@ -104,6 +104,8 @@ Também há muitos dispositivos conectados encontrados fora do seu lar que ofere
 # 1.2 Transmissão de Dados 
 
 ## 1.2.1 Vídeo - Tipos de Dados Pessoais
+
+![[1.2.1.mp4#subtitle=anexos/1.2.1.vtt]]
 ### O que são Dados?
 
 Ouvimos sobre dados o tempo todo, especialmente quando estamos falando de redes de computadores. Você ouve sobre dados que são transmitidos, dados inseridos, dados armazenados, e até sobre _big data_ que existe em algum lugar na nuvem — mas o que exatamente são dados?
