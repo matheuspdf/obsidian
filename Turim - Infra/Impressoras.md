@@ -1,7 +1,7 @@
 
 http://10.11.50.20:8000/rps/
 Usuário: administrator
-Senha: 12345678
+Senha: 1-8
 
 ### Solicitar toner
 
