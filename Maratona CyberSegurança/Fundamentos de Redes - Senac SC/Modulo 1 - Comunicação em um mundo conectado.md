@@ -245,7 +245,7 @@ Em uma inter-rede ou em uma rede com vários segmentos, a taxa de transferência
 Existem muitos testes de velocidade on-line que podem revelar a taxa de transferência de uma conexão com a Internet.
 
 ## 1.3.3 Vídeo - Taxa de transferência
-
+![[1.3.3.mp4#subtitle=anexos/1.3.3.vtt]]
 Transcrição:
 
 A **taxa de transferência** é a quantidade de dados enviados e recebidos em uma conexão, incluindo quaisquer atrasos que possam ocorrer — tanto no envio quanto no recebimento das mensagens.

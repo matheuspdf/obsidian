@@ -1,0 +1,131 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.501 --> 00:07.334
+- Oi.
+
+00:07.334 --> 00:10.204
+Neste vídeo, vamos
+demonstrar a taxa de transferência
+
+00:10.204 --> 00:12.871
+usando o site speedtest.net.
+
+00:13.764 --> 00:16.964
+Existem outros sites que
+fazem algo semelhante.
+
+00:16.964 --> 00:18.131
+Taxa de transferência (Troughput)
+
+00:19.062 --> 00:23.569
+A taxa de transferência é a quantidade
+de dados enviados e recebidos
+
+00:23.569 --> 00:27.907
+em uma conexão, incluindo
+quaisquer atrasos que possam ocorrer.
+
+00:27.907 --> 00:31.131
+Isso inclui atrasos em ambas as direções.
+
+00:31.131 --> 00:34.451
+Pode acontecer, atrasos
+no envio das mensagens ,
+
+00:34.451 --> 00:36.959
+ou no recebimento das mensagens
+
+00:36.959 --> 00:40.418
+Então vamos em frente e dar
+uma olhada usando speedtest.net.
+
+00:40.418 --> 00:44.988
+Vamos seguir em frente
+e clicar em Iniciar teste.
+
+00:44.988 --> 00:47.197
+E como podemos ver vamos
+
+00:47.197 --> 00:49.364
+baixar algumas mensagens.
+
+00:50.585 --> 00:53.750
+Então você vê a velocidade de download.
+
+00:53.750 --> 00:56.964
+Este é o número de bits por segundo
+
+00:56.964 --> 00:59.627
+que está sendo recebido.
+
+00:59.627 --> 01:01.564
+E como veremos daqui a pouco,
+
+01:01.564 --> 01:04.392
+são os milhões de bits por segundo,
+
+01:04.392 --> 01:06.809
+conhecido como megabits por segundo.
+
+01:09.472 --> 01:12.825
+Então vemos a
+velocidade de download, ou a largura de banda,
+
+01:12.825 --> 01:16.992
+é 35,70 megabits por segundo, ou seja
+milhões de bits por segundo.
+
+01:21.437 --> 01:25.649
+A velocidade de upload, ou a largura de banda de upload,
+
+01:25.649 --> 01:29.232
+que mede 35,04
+megabits por segundo.
+
+01:33.293 --> 01:36.126
+35,04 milhões de bits por segundo.
+
+01:38.091 --> 01:41.256
+Ok, podemos ver que nossa velocidade de download
+
+01:41.256 --> 01:45.385
+é um pouco maior, neste
+caso, do que a nossa velocidade de upload.
+
+01:45.385 --> 01:48.000
+Normalmente em casa, você vai experimentar
+
+01:48.004 --> 01:51.834
+que você poderá receber dados,
+
+01:51.834 --> 01:55.834
+receber mensagens, mais rápido  e em
+maior velocidade de download,
+
+01:57.907 --> 02:00.013
+do que você será capaz de carregar.
+
+02:00.013 --> 02:03.096
+Então aqui nós usamos www.speedtest.net.
+
+02:04.353 --> 02:06.210
+Existem outros sites também.
+
+02:06.210 --> 02:08.644
+Eles são sempre uma boa ferramenta para ajudar
+
+02:08.644 --> 02:12.524
+medir o desempenho, a
+quantidade de dados que você pode enviar
+
+02:12.524 --> 02:15.152
+e receber, não apenas pela sua rede,
+
+02:15.152 --> 02:18.201
+mas também através do seu
+fornecedor de serviços de Internet,
+
+02:18.201 --> 02:20.284
+sua conexão com a internet.
+
