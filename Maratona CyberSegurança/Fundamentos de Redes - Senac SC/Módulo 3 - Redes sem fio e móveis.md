@@ -18,6 +18,8 @@ Se você não tem um amigo ou um membro da família como o Shridhar para explica
 # 3.1 Redes Wireless
 
 ## 3.1.1 Vídeo - Tipos de redes sem fio
+
+![[3.1.1.mp4#subtitle=anexos/3.1.1.vtt]]
 ### Redes Móveis e Sem Fio – Visão Geral
 
 **Rede celular** _Canal de voz e dados da operadora_ – Utilizada para chamadas e comunicação entre celulares pela rede da operadora.
@@ -35,6 +37,7 @@ Se você não tem um amigo ou um membro da família como o Shridhar para explica
 
 
 ## 3.1.2 Vídeo - Interações de telefone celular com redes diferentes
+![[3.1.2.mp4#subtitle=anexos/3.1.2.vtt]]
 
 ### Usos do Celular e Suas Redes
 

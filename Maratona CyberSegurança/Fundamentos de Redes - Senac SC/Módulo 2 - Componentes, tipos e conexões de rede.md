@@ -120,6 +120,7 @@ Um único computador pode também executar vários tipos de software cliente. De
 
 ## 2.2.1 Vídeo - Símbolos de infraestrutura de rede
 
+![[2.2.1.mp4#subtitle=anexos/2.2.1.vtt]]
 ### Dispositivos Intermediários
 
 |Símbolo|Dispositivo|
