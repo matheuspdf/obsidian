@@ -1,0 +1,215 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.217 --> 00:08.226
+- Neste vídeo, vamos discutir sobre
+
+00:08.226 --> 00:12.963
+alguns dos equipamentos que
+existem em uma rede doméstica típica.
+
+00:12.963 --> 00:14.499
+A maioria das redes domésticas consiste
+
+00:14.499 --> 00:17.677
+em pelo menos duas redes separadas.
+
+00:17.677 --> 00:19.797
+A primeira rede é a rede pública
+
+00:19.797 --> 00:22.477
+que está vindo do
+provedor de serviços.
+
+00:22.477 --> 00:24.760
+Normalmente em uma casa, isso seria
+
+00:24.760 --> 00:28.230
+um provedor de internet a cabo ou DSL.
+
+00:28.230 --> 00:31.661
+O provedor DSL ou a rede do provedor de cabo
+
+00:31.661 --> 00:35.530
+não usa os mesmos protocolos
+e métodos de transmissão
+
+00:35.530 --> 00:38.189
+usados em uma rede Ethernet.
+
+00:38.189 --> 00:40.963
+Então, uma coisa que você vai ver
+
+00:40.963 --> 00:45.819
+em quase todas as redes domésticas
+é algum tipo de modem.
+
+00:45.819 --> 00:48.200
+E o que o modem faz é converter
+
+00:48.200 --> 00:51.283
+os sinais vindos do provedor,
+
+00:51.283 --> 00:55.670
+no caso deste modem,
+trata-se de um modem de TV a cabo,
+
+00:55.670 --> 00:58.038
+proveniente do provedor de TV a cabo.
+
+00:58.038 --> 01:00.736
+O modem tem entrada para cabo coaxial
+
+01:00.736 --> 01:02.659
+onde se conecta o cabo,
+
+01:02.659 --> 01:05.944
+e também tem uma porta de saída
+
+01:05.944 --> 01:08.944
+que vai para a rede doméstica local.
+
+01:09.990 --> 01:12.982
+Agora, alguns dispositivos de rede doméstica
+
+01:12.982 --> 01:15.227
+vêm com o modem embutido.
+
+01:15.227 --> 01:17.971
+Como você pode ver, este em particular
+
+01:17.971 --> 01:22.176
+tem o conector para a
+o cabo proveniente do provedor se conectar,
+
+01:22.176 --> 01:26.013
+e então as saídas são
+as saídas típicas da LAN
+
+01:26.013 --> 01:30.180
+que você veria em um
+dispositivo de rede doméstica normal.
+
+01:31.515 --> 01:34.536
+Agora, quase todos os dispositivos de rede doméstica
+
+01:34.536 --> 01:36.369
+também fornecem conectividade wireless.
+
+01:37.960 --> 01:41.947
+Então, uma vez que tenhamos nossa conexão
+com o mundo exterior estabelecida,
+
+01:41.947 --> 01:45.675
+temos que conectar
+o provedor de Internet
+
+01:45.675 --> 01:47.521
+à nossa rede doméstica.
+
+01:47.521 --> 01:50.938
+E você notará que neste dispositivo,
+
+01:50.938 --> 01:54.727
+tem uma porta amarela,
+que está marcada como Internet.
+
+01:54.727 --> 01:56.423
+Agora, uma coisa que você notará
+
+01:56.423 --> 01:59.258
+sobre todos os dispositivos de rede doméstica
+
+01:59.258 --> 02:01.466
+de qualquer fornecedor que seja
+
+02:01.466 --> 02:04.688
+é que eles normalmente são
+configurados de maneira muito semelhante.
+
+02:04.688 --> 02:08.922
+Você vai notar neste aqui, que ele tem uma porta de Internet
+
+02:08.922 --> 02:12.272
+e também tem as portas de conectividade LAN.
+
+02:12.272 --> 02:15.522
+Essas portas geralmente são portas de switch.
+
+02:18.029 --> 02:20.248
+Neste, não requer
+
+02:20.248 --> 02:21.712
+a conexão do modem
+
+02:21.712 --> 02:24.224
+porque tem o modem embutido,
+
+02:24.224 --> 02:28.505
+mas também tem as
+mesmas portas LAN de rede
+
+02:28.505 --> 02:30.429
+nas quais você pode conectar dispositivos.
+
+02:30.429 --> 02:34.096
+E tem um
+access point wireless integrado.
+
+02:38.308 --> 02:41.641
+Portas com fio em um dispositivo de rede doméstica,
+
+02:43.018 --> 02:47.731
+e geralmente são
+chamados de roteadores sem fio,
+
+02:47.731 --> 02:50.025
+e o motivo pelo qual
+eles são chamados de roteadores
+
+02:50.025 --> 02:54.170
+é que as portas são separadas
+em duas redes separadas.
+
+02:54.170 --> 02:56.960
+A primeira rede é a rede local.
+
+02:56.960 --> 03:00.301
+Agora, essa rede local
+pode ser cabeada,
+
+03:00.301 --> 03:03.725
+em outras palavras, posso
+conectar um cabo Ethernet
+
+03:03.725 --> 03:06.034
+e conectá-lo a um dispositivo.
+
+03:06.034 --> 03:09.730
+Eu posso colocar minha porta Ethernet padrão,
+
+03:09.730 --> 03:13.485
+e todos esses dispositivos
+estarão na mesma rede.
+
+03:13.485 --> 03:17.293
+Normalmente, em uma rede doméstica,
+os dispositivos sem fio se conectam
+
+03:17.293 --> 03:20.687
+à mesma rede local que as portas com fio.
+
+03:20.687 --> 03:24.136
+Então, se você der uma olhada no endereçamento IP
+
+03:24.136 --> 03:27.449
+da sua rede doméstica, você
+verá que, na maioria dos casos,
+
+03:27.449 --> 03:31.470
+os usuários sem fio recebem um endereço IP
+
+03:31.470 --> 03:35.387
+que está na mesma
+rede que os usuários com fio.
+

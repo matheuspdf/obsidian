@@ -24,6 +24,7 @@ Você já configurou um roteador? Você já pensou em ter comunicações seguras
 # 4.1 Conceitos básicos da rede doméstica
 ## 4.1.1 Vídeo - Configuração típica de rede doméstica
 
+![[4.1.1.mp4#subtitle=anexos/4.1.1.vtt]]
 ### Equipamentos de uma Rede Doméstica
 
 **Modem** – Converte os sinais do provedor (cabo ou DSL) para o formato da rede doméstica. – Possui entrada coaxial (do provedor) e saída para a rede local. – Alguns roteadores já vêm com modem embutido.
