@@ -291,7 +291,7 @@ A figura mostra uma tela de configuração sem fio.
 
 
 ## 4.4.3 Vídeo - Configuração de Roteador e Cliente sem fio
-
+![[4.4.3.mp4#subtitle=anexos/4.3.3.vtt]]
 ### 1. Conectar os dispositivos
 
 **Cabos coaxiais:** – Divisor de cabo → Cable Modem (Port 0) – Divisor de cabo → TV (porta coaxial 2)

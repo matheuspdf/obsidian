@@ -1,0 +1,531 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+1
+00:00.130 --> 00:02.110
+<v Instructor>Nesta atividade do Packet Tracer,</v>
+
+2
+00:02.110 --> 00:05.910
+você desempenha o papel de um aluno que estuda redes.
+
+3
+00:05.910 --> 00:08.030
+Uma amiga pediu para você ajudá-la
+
+4
+00:08.030 --> 00:11.833
+a conectar sua casa ao provedor de serviços de Internet ou ISP.
+
+5
+00:12.770 --> 00:15.090
+O ISP é uma empresa de cabo
+
+6
+00:15.090 --> 00:18.270
+que oferece acesso à TV e à Internet.
+
+7
+00:18.270 --> 00:22.090
+Para ajudá-la, você conectará os dispositivos,
+
+8
+00:22.090 --> 00:24.390
+configurarará o roteador sem fio (Wireless Router)
+
+9
+00:24.390 --> 00:28.300
+irá configurar o endereçamento IP e testar a conectividade.
+
+10
+00:28.300 --> 00:30.120
+Para conectar os dispositivos,
+
+11
+00:30.120 --> 00:33.480
+você vai usar cabos coaxiais e cabos de cobre diretos (straight through)
+
+12
+00:33.480 --> 00:36.003
+Ambos estão aqui no menu de conexões.
+
+13
+00:37.080 --> 00:39.110
+Vamos conectar o divisor de cabo coaxial (cable splitter)
+
+14
+00:39.110 --> 00:41.720
+à TV e ao cable modem.
+
+15
+00:41.720 --> 00:45.540
+Primeiro, conecte o modem a cabo ao divisor de cabo coaxial.
+
+16
+00:45.540 --> 00:49.653
+Selecione um cabo coaxial, clique no divisor de cabo,
+
+17
+00:50.500 --> 00:53.430
+escolha a porta coaxial,
+
+18
+00:53.430 --> 00:56.910
+Clique no Cable Modem e selecione Port 0.
+
+19
+00:56.910 --> 01:00.130
+Em seguida, conecte a TV ao divisor de cabo.
+
+20
+01:00.130 --> 01:04.373
+Selecione outro cabo coaxial e conecte-o à TV,
+
+21
+01:05.290 --> 01:08.363
+e, em seguida, para porta coaxial 2 no divisor de cabo.
+
+22
+01:10.060 --> 01:14.140
+Agora você deve conseguir ligar a TV e ver uma imagem.
+
+23
+01:14.140 --> 01:15.900
+Agora vamos conectar o  cable modem
+
+24
+01:15.900 --> 01:18.010
+ao roteador wireless doméstico
+
+25
+01:18.010 --> 01:21.490
+e o office PC ao roteador wireless doméstico
+
+26
+01:21.490 --> 01:23.620
+Selecione um cabo straight-through de cobre,
+
+27
+01:23.620 --> 01:26.800
+e conecte-o à porta restante do cable modem.
+
+28
+01:26.800 --> 01:29.370
+Conecte a outra extremidade à porta internet
+
+29
+01:29.370 --> 01:31.780
+no  roteador wireless doméstico
+
+30
+01:31.780 --> 01:34.400
+Selecione outro cabo straight-through de cobre,
+
+31
+01:34.400 --> 01:37.410
+e conecte-o à porta fast ethernet 0
+
+32
+01:37.410 --> 01:39.060
+do office PC.
+
+33
+01:39.060 --> 01:42.700
+Conecte a outra extremidade à uma porta gigabit ethernet 1
+
+34
+01:42.700 --> 01:44.600
+no  roteador wireless doméstico
+
+35
+01:44.600 --> 01:48.380
+Vou deixar você conectar o PC do quarto sozinho.
+
+36
+01:48.380 --> 01:50.440
+Para configurar o roteador wireless doméstico
+
+37
+01:50.440 --> 01:52.370
+para conectividade wireless
+
+38
+01:52.370 --> 01:53.870
+você precisará se conectar a ele
+
+39
+01:53.870 --> 01:57.000
+usando o navegador Web no office PC.
+
+40
+01:57.003 --> 02:01.170
+Primeiro, vamos verificar se o office PC tem endereçamento IP.
+
+41
+02:01.170 --> 02:05.200
+Clique no office PC, na guia desktop,
+
+42
+02:05.200 --> 02:06.843
+depois em IP configuration.
+
+43
+02:07.700 --> 02:09.610
+No momento, está definido como estático.
+
+44
+02:09.610 --> 02:13.030
+Clique em DHCP para solicitar automaticamente
+
+45
+02:13.030 --> 02:15.850
+as informações de endereçamento IP de um servidor DHCP,
+
+46
+02:15.850 --> 02:18.170
+o qual é normalmente configurado por padrão
+
+47
+02:18.170 --> 02:20.960
+nas configurações de fábrica do roteador wireless doméstico.
+
+48
+02:20.960 --> 02:24.860
+Se o office PC não receber endereçamento IP imediatamente,
+
+49
+02:24.860 --> 02:28.110
+você pode clicar em  Fast Forward Time para acelerar o processo.
+
+50
+02:28.110 --> 02:30.710
+Anote o endereço do gateway padrão.
+
+51
+02:30.710 --> 02:34.560
+que é 192.168.0.1.
+
+52
+02:34.560 --> 02:38.120
+Ele é o endereço IP do Roteador wireless doméstico.
+
+53
+02:38.120 --> 02:41.913
+Feche a janela IP Configuration e abra o Web Browser.
+
+54
+02:42.900 --> 02:47.020
+Insira o endereço do gateway padrão e clique em Go.
+
+55
+02:47.020 --> 02:48.870
+Roteadores domésticos recém-instalados
+
+56
+02:48.870 --> 02:51.190
+são configuradas com credenciais padrão.
+
+57
+02:51.190 --> 02:54.750
+Por exemplo, aqui está uma lista de todas as senhas padrão
+
+58
+02:54.750 --> 02:56.083
+para roteadores NetGear.
+
+59
+02:57.870 --> 03:00.050
+Para o roteador wireless do packet tracer,
+
+60
+03:00.050 --> 03:03.390
+use admin como nome de usuário e senha.
+
+61
+03:03.390 --> 03:04.730
+Expanda a janela
+
+62
+03:04.730 --> 03:08.240
+para que você possa ver mais da interface de usuário do roteador.
+
+63
+03:08.240 --> 03:10.770
+Observe os menus na parte superior.
+
+64
+03:10.770 --> 03:13.480
+Alguns menus também têm submenus.
+
+65
+03:13.480 --> 03:15.770
+Por exemplo, clique em wireless.
+
+66
+03:15.770 --> 03:17.080
+Há cinco submenus
+
+67
+03:17.080 --> 03:19.500
+para configurar sua rede sem fio.
+
+68
+03:19.500 --> 03:22.200
+Explore todos os menus quando quiser.
+
+69
+03:22.200 --> 03:24.460
+De volta à guia setup,
+
+70
+03:24.460 --> 03:27.033
+vamos limitar o número de usuários a 10.
+
+71
+03:27.950 --> 03:31.860
+Após alterar qualquer configuração, você deve clicar em save settings
+
+72
+03:31.860 --> 03:34.930
+na parte inferior da página para aplicar a alteração.
+
+73
+03:34.930 --> 03:37.760
+Quando você altera as configurações de DHCP em um roteador,
+
+74
+03:37.760 --> 03:40.850
+a partir de um dispositivo que usa esse servidor DHCP,
+
+75
+03:40.850 --> 03:43.080
+você pode perder a conectividade.
+
+76
+03:43.080 --> 03:47.720
+Redigite o endereço IP do roteador para restabelecer a conexão.
+
+77
+03:47.720 --> 03:51.623
+Às vezes, pode ser necessário renovar a configuração de IP.
+
+78
+03:58.930 --> 04:01.810
+Vamos mudar a senha padrão do roteador
+
+79
+04:01.810 --> 04:05.010
+para MyPassword1!
+
+80
+04:05.010 --> 04:08.163
+Você encontrará esses campos no menu administration.
+
+81
+04:12.160 --> 04:13.483
+Clique em Salvar configurações.
+
+82
+04:15.440 --> 04:17.880
+Redigite admin como o nome de usuário
+
+83
+04:17.880 --> 04:22.880
+e a nova senha, MyPassword1! e, em seguida, clique em continuar.
+
+84
+04:24.440 --> 04:26.390
+Agora vamos configurar a rede sem fio
+
+85
+04:26.390 --> 04:28.400
+para os dispositivos wireless.
+
+86
+04:28.400 --> 04:32.140
+Para isso, você ativará um rádio de rede
+
+87
+04:32.140 --> 04:35.040
+para a Rede de 2,4 gigahertz,
+
+88
+04:35.040 --> 04:38.920
+alterar o nome da rede sem fio para MyHome,
+
+89
+04:38.920 --> 04:42.180
+ e configurar a segurança 2WPA personal
+
+90
+04:42.180 --> 04:47.180
+com a frase secreta MyPassphrase1!.
+
+91
+04:47.480 --> 04:51.420
+Você pode encontrar todas essas configurações em submenus em wireless.
+
+92
+04:51.420 --> 04:54.160
+Ative a Rede de 2,4 gigahertz
+
+93
+04:54.160 --> 04:57.420
+e altere o nome da rede para MyHome.
+
+94
+04:57.420 --> 04:59.030
+Clique em Save Settings.
+
+95
+04:59.030 --> 05:01.810
+ Clique no submenu Wireless Security.
+
+96
+05:01.810 --> 05:04.670
+Para o modo de segurança de 2,4 gigahertz,
+
+97
+05:04.670 --> 05:07.160
+Configurei como WPA 2personal
+
+98
+05:07.160 --> 05:12.160
+e entre com a senha MyPassPhrase! 1
+
+99
+05:12.200 --> 05:14.330
+Clique em Save Settings.
+
+100
+05:14.330 --> 05:17.820
+Vamos agora conectar o laptop à rede sem fio.
+
+101
+05:17.820 --> 05:22.820
+Clicque no laptop, guia desktop e depois em PC wireless.
+
+102
+05:24.170 --> 05:28.233
+Clicque na guia connect, e depois no botão connect
+
+103
+05:29.350 --> 05:34.070
+Digite MyPassPhrase1! como a chave pré-compartilhada,
+
+104
+05:34.070 --> 05:35.640
+Em seguida, clique em connect.
+
+105
+05:35.640 --> 05:38.570
+Clique no menu link information para ver a mensagem
+
+106
+05:38.570 --> 05:42.460
+"You have successfully connected to the access point."
+
+107
+05:42.460 --> 05:47.380
+Feche o aplicativo PC Wireless e abra o aplicativo IP Configuration.
+
+108
+05:47.380 --> 05:50.190
+O laptop agora deve ter um endereço IP
+
+109
+05:50.190 --> 05:52.790
+que começa com 192.
+
+110
+05:52.790 --> 05:56.920
+se não tiver, clique Fast Forward Time para acelerar o processo.
+
+111
+05:56.920 --> 06:01.590
+A etapa final é testar a conectividade em todos os dispositivos.
+
+112
+06:01.590 --> 06:04.650
+Vou mostrar como fazer isso no laptop
+
+113
+06:04.650 --> 06:07.690
+e você pode fazer isso no office PC
+
+114
+06:07.690 --> 06:09.550
+e no bedroom PC.
+
+115
+06:09.550 --> 06:11.510
+Feche a janela IP Configuration (Configuração IP).
+
+116
+06:11.510 --> 06:13.550
+e abra o navegador web.
+
+117
+06:13.550 --> 06:18.550
+Digite o endereço skillsforall.srv e clique em Go.
+
+118
+06:19.330 --> 06:21.560
+No Packet Tracer, pode levar algum tempo
+
+119
+06:21.560 --> 06:23.840
+para um novo endereço convergir
+
+120
+06:23.840 --> 06:26.530
+Clique Fast Forward Time para acelerar o processo.
+
+121
+06:26.530 --> 06:28.680
+Você deve receber uma mensagem do servidor
+
+122
+06:28.680 --> 06:31.580
+que diz  welcome to skills for all.
+
+123
+06:31.580 --> 06:36.160
+Neste ponto, sua porcentagem de conclusão deve ser 100%.
+
+124
+06:36.160 --> 06:37.770
+Se não for, clique check results
+
+125
+06:37.770 --> 06:40.700
+para ver quais itens ainda não estão completos.
+
+126
+06:40.700 --> 06:42.610
+Se você quiser adicionar mais dispositivos cabeados
+
+127
+06:42.610 --> 06:44.600
+e dispositivos wireless à rede,
+
+128
+06:44.600 --> 06:46.863
+você os encontrará no menu de dispositivos finais.
+
+129
+06:48.160 --> 06:50.710
+Adicione um tablet ou smartphone.
+
+130
+06:50.710 --> 06:52.360
+Conecte-o, configure-o
+
+131
+06:52.360 --> 06:55.790
+e teste a conectividade com o servidor "skills for all".
+
+132
+06:55.790 --> 06:59.183
+Divirta-se configurando uma rede doméstica no Packet Tracer.
+
