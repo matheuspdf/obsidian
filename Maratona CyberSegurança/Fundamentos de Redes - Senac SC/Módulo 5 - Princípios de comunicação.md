@@ -142,6 +142,7 @@ Rory está estudando os campos dentro de um quadro Ethernet para um próximo tes
 
 ## 5.2.1 Vídeo - Dispositivos em uma bolha
 
+![[5.2.1.mp4#subtitle=anexos/5.2.1.vtt]]
 ### Como os Dispositivos Veem a Rede
 
 #### Diagramas de Topologia

@@ -1,0 +1,266 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:04.160 --> 00:06.690
+- [Narrador] É assim
+que vemos a rede.
+
+00:06.694 --> 00:08.520
+Usando diagramas de topologia,
+
+00:08.520 --> 00:10.680
+podemos ver os dispositivos na rede,
+
+00:10.680 --> 00:15.680
+incluindo dispositivos finais,
+como desktops e servidores,
+
+00:15.720 --> 00:20.650
+e dispositivos intermediários,
+como switches e roteadores.
+
+00:20.650 --> 00:22.980
+Esses diagramas também podem conter
+
+00:22.980 --> 00:25.130
+informações detalhadas sobre um dispositivo,
+
+00:25.130 --> 00:29.830
+como o endereço MAC da
+Ethernet e NIC sem fio,
+
+00:29.830 --> 00:33.540
+Informações sobre
+endereço IP ou protocolo de Internet;
+
+00:33.540 --> 00:35.920
+endereços de gateway padrão,
+
+00:35.920 --> 00:38.480
+e endereços para o servidor DNS.
+
+00:38.480 --> 00:40.870
+By the way, não se
+preocupe com o que estes termos
+
+00:40.870 --> 00:42.850
+e endereços significam agora.
+
+00:42.850 --> 00:46.160
+Tudo isso será explicado
+ao longo deste curso.
+
+00:46.160 --> 00:48.400
+É assim que vemos a rede,
+
+00:48.400 --> 00:51.010
+mas como os dispositivos veem a rede?
+
+00:51.010 --> 00:53.400
+Você pode pensar nisso como todos os dispositivos
+
+00:53.400 --> 00:55.780
+estar em sua própria bolha.
+
+00:55.780 --> 00:58.150
+A única coisa que um dispositivo sabe
+
+00:58.150 --> 01:01.230
+é sua própria informação de endereçamento.
+
+01:01.230 --> 01:05.680
+Em outras palavras, é assim que
+um dispositivo vê a rede.
+
+01:05.680 --> 01:07.580
+Não parece.
+
+01:07.580 --> 01:11.250
+Então, como um dispositivo sabe seu endereço IP
+
+01:11.250 --> 01:13.093
+e a que rede ela pertence?
+
+01:14.003 --> 01:16.850
+Como um dispositivo sabe
+se o dispositivo de destino
+
+01:16.850 --> 01:18.950
+que ele precisa enviar informações para
+
+01:18.950 --> 01:22.400
+está na mesma rede ou em outra rede?
+
+01:22.400 --> 01:24.760
+Se o destino estiver em outra rede,
+
+01:24.760 --> 01:26.300
+e a informação tem que viajar
+
+01:26.300 --> 01:28.150
+através de dispositivos intermediários,
+
+01:28.150 --> 01:32.040
+como o dispositivo de origem
+sabe para onde enviá-lo em seguida?
+
+01:32.040 --> 01:33.560
+Como o dispositivo de origem sabe
+
+01:33.560 --> 01:36.360
+se a informação enviada foi recebida
+
+01:36.360 --> 01:38.760
+ou se ele precisa reenviar qualquer coisa
+
+01:38.760 --> 01:41.840
+que talvez não tenha
+chegado ao destino?
+
+01:41.840 --> 01:45.380
+A resposta a todas essas
+perguntas é protocolos,
+
+01:45.380 --> 01:48.470
+as regras que regem a
+forma como os dispositivos se comunicam.
+
+01:48.470 --> 01:50.640
+A maioria das comunicações de rede estão quebradas
+
+01:50.640 --> 01:52.320
+em unidades de dados menores
+
+01:52.320 --> 01:54.680
+que podemos nos referir como pacotes.
+
+01:54.680 --> 01:56.630
+Quando os pacotes são enviados em uma rede,
+
+01:56.630 --> 01:58.440
+muitos protocolos estão envolvidos
+
+01:58.440 --> 02:00.900
+para ajudá-los a alcançar
+o seu destino final,
+
+02:00.900 --> 02:03.580
+cada um realizando uma tarefa diferente.
+
+02:03.580 --> 02:06.960
+Existem protocolos como
+Ethernet e protocolos sem fio
+
+02:06.960 --> 02:10.220
+que conectam fisicamente
+o dispositivo à rede.
+
+02:10.220 --> 02:13.890
+Os protocolos DHCP e ICMPv6
+
+02:13.890 --> 02:15.990
+fornecer informações sobre endereçamento IP,
+
+02:15.990 --> 02:18.330
+incluindo endereçamento IP que informa
+
+02:18.330 --> 02:21.220
+o dispositivo à qual rede pertence,
+
+02:21.220 --> 02:23.270
+o endereço do gateway padrão
+
+02:23.270 --> 02:25.350
+que informa ao dispositivo para
+onde enviar pacotes
+
+02:25.350 --> 02:28.060
+que estão destinados a outra rede,
+
+02:28.060 --> 02:30.140
+e o endereço do servidor DNS
+
+02:30.140 --> 02:32.160
+para quando um dispositivo sabe o nome de domínio
+
+02:32.160 --> 02:33.490
+do destino,
+
+02:33.490 --> 02:36.520
+mas precisa do endereço IP de destino.
+
+02:36.520 --> 02:39.730
+Por exemplo, quando um
+usuário solicita uma página da Web
+
+02:39.730 --> 02:44.590
+a partir de um servidor web,
+como www.example.com,
+
+02:44.590 --> 02:46.650
+o dispositivo pergunta ao servidor DNS
+
+02:46.650 --> 02:51.650
+para o endereço IP do nome de
+domínio www.example.com.
+
+02:52.260 --> 02:54.520
+IP é usado para entregar o pacote
+
+02:54.520 --> 02:56.580
+a partir da fonte da informação
+
+02:56.580 --> 03:00.400
+para o seu destino final,
+neste caso, o servidor web,
+
+03:00.400 --> 03:02.330
+semelhante ao envio de uma carta.
+
+03:02.330 --> 03:04.590
+O servidor web responderá de volta
+
+03:04.590 --> 03:06.760
+com a página da Web solicitada.
+
+03:06.760 --> 03:10.120
+TCP é um protocolo utilizado
+para garantir a fiabilidade,
+
+03:10.120 --> 03:12.940
+em outras palavras, para
+garantir que todas as informações
+
+03:12.940 --> 03:14.800
+que foi enviado foi recebido,
+
+03:14.800 --> 03:15.910
+tais como as informações
+
+03:15.910 --> 03:18.440
+que compõe a página web solicitada.
+
+03:18.440 --> 03:20.420
+Se algum dos pacotes IP não o fizer
+
+03:20.420 --> 03:23.433
+para o destino, o TCP os reenviará.
+
+03:24.770 --> 03:28.838
+Então, embora vejamos a
+rede assim, lembrem-se:
+
+03:28.838 --> 03:32.290
+é uma combinação de
+muitos protocolos diferentes
+
+03:32.290 --> 03:34.840
+que permitem que os dispositivos
+realmente vejam seu lugar
+
+03:34.840 --> 03:37.130
+na rede e como se comunicar
+
+03:37.130 --> 03:38.723
+com outros dispositivos.
+
