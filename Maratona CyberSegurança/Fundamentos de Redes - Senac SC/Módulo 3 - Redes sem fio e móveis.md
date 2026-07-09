@@ -159,6 +159,8 @@ Os dispositivos móveis são pré-programados para usar uma rede Wi-Fi para Inte
 
 ## 3.2.5 Vídeo - Configuração de Bluetooth em um laptop Windows
 
+![[3.2.5.mp4#subtitle=anexos/3.2.5.vtt]]
+
 **3 formas de acessar as configurações de Bluetooth:**
 
 **1. Central de Ações** – Clicar no ícone no canto inferior direito da tela. – Clicar no botão Bluetooth para ligar/desligar. – Botão direito > "Ir para Configurações" para acessar as configurações completas.
