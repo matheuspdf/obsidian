@@ -229,7 +229,7 @@ A IETF (Internet Engineering Task Force) registra e publica padrões da Internet
 # 5.3 Modelos de comunicação de rede
 
 ## 5.3.1 Vídeo - Protocolos de Rede
-
+![[5.3.1.mp4#subtitle=anexos/5.3.1.vtt]]
 ### Protocolos de Rede
 
 #### O que são Protocolos
@@ -257,7 +257,7 @@ Rege a troca e transferência de HTML (Hypertext Markup Language). É o protocol
 Aprender sobre protocolos de rede fornece uma melhor compreensão de como as redes operam, como implementá-las e configurá-las, e como solucionar problemas em redes.
 
 ## 5.3.2 Vídeo - A pilha de protocolos
-
+![[5.3.2.mp4#subtitle=anexos/5.3.2.vtt]]
 ### Pilha de Protocolos (Protocol Stack)
 
 Comunicações bem-sucedidas requerem o uso de vários protocolos em conjunto. Quando um dispositivo envia uma mensagem, ele utiliza protocolos de diferentes camadas, formando o que é chamado de **Pilha de Protocolos**.

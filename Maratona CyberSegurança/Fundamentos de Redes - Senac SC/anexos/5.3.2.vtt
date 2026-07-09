@@ -1,0 +1,121 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.494 --> 00:08.775
+- Comunicações bem-sucedidas
+requerem o uso
+
+00:08.775 --> 00:10.374
+de vários protocolos.
+
+00:10.374 --> 00:12.473
+Assim, quando um dispositivo envia uma mensagem,
+
+00:12.473 --> 00:16.478
+ele está realmente usando vários protocolos.
+
+00:16.478 --> 00:20.011
+Então aqui temos o que é
+conhecido como "Pilha de Protocolos".
+
+00:20.011 --> 00:24.178
+Neste exemplo aqui estou
+mostrando o modelo TCP/IP,
+
+00:25.715 --> 00:29.107
+que tem diferentes camadas;
+A camada de acesso à rede,
+
+00:29.107 --> 00:33.541
+Camada Internet, Camada de Transporte
+e Camada de Aplicação.
+
+00:33.541 --> 00:36.906
+Assim, quando um dispositivo cria uma mensagem,
+
+00:36.906 --> 00:41.785
+na verdade, ele está usando protocolos
+dessas diferentes camadas.
+
+00:41.785 --> 00:44.716
+Por exemplo, esta mensagem aqui.
+
+00:44.716 --> 00:48.233
+Ela está utilizando na
+camada de acesso à rede,
+
+00:48.233 --> 00:50.066
+o protocolo Ethernet.
+
+00:51.393 --> 00:54.431
+O protocolo Ethernet
+é usado na placa NIC,
+
+00:54.431 --> 00:57.426
+comunicações da placa de interface
+de rede para placa de interface de rede
+
+00:57.426 --> 01:00.960
+na mesma rede.
+
+01:00.960 --> 01:03.362
+O próximo protocolo usado,
+
+01:03.362 --> 01:06.195
+é um protocolo de camada de Internet, IP.
+
+01:07.897 --> 01:11.710
+Pode ser IP versão 4 ou IP versão 6.
+
+01:11.710 --> 01:14.535
+Isso garante que a mensagem seja
+
+01:14.535 --> 01:17.931
+da fonte original
+ao destino final.
+
+01:17.931 --> 01:21.045
+Se essa mensagem
+está ou não na mesma rede
+
+01:21.045 --> 01:24.212
+ou tenha que passar por várias redes.
+
+01:25.133 --> 01:27.818
+Outro protocolo usado é,
+
+01:27.818 --> 01:31.209
+um protocolo da camada de transporte.
+
+01:31.209 --> 01:34.553
+Neste exemplo, estamos usando TCP,
+
+01:34.553 --> 01:36.960
+protocolo de Controle de Transmissão.
+
+01:36.960 --> 01:39.662
+Isso garante que as
+informações, a mensagem,
+
+01:39.662 --> 01:41.329
+chegue lá de forma confiável.
+
+01:43.283 --> 01:46.987
+Então o último protocolo é
+da camada de Aplicação.
+
+01:46.987 --> 01:48.320
+Neste caso, HTTP.
+
+01:49.669 --> 01:53.502
+HTTP rege a troca
+ou transferência de HTML.
+
+01:55.201 --> 01:59.377
+Então, como você pode ver, o envio
+de uma mensagem requer o uso
+
+01:59.377 --> 02:03.210
+de vários protocolos
+da Pilha de Protocolos.
+
