@@ -229,3 +229,113 @@ O **domínio de nuvem privada** inclui quaisquer servidores privados, recursos
 - Sistema operacional de roteador, firewall ou dispositivo de rede ou vulnerabilidades de software.
 - Erros de configuração de roteador, firewall ou dispositivo de rede.
 - Usuários remotos acessando a infraestrutura de uma organização e baixando dados confidenciais.
+
+
+## 1.1.12 Ameaças à Nuvem Pública
+
+Onde um domínio de nuvem privada hospeda recursos de computação para uma única organização, o **domínio de nuvem pública** é a totalidade dos serviços de computação hospedados por uma nuvem, serviço ou provedor de Internet que estão disponíveis ao público e compartilhados entre as organizações.
+
+Existem três modelos de serviços de nuvem pública que as empresas podem optar por usar.
+
+**Selecione as setas para saber mais sobre eles.**
+
+### **Software como Serviço (SaaS)**
+
+Este é um modelo baseado em assinatura que fornece às organizações um software hospedado centralmente e acessado pelos usuários por meio de um navegador da Web, aplicativo ou outro software. Em outras palavras, esse é um software que não é armazenado localmente, mas na nuvem.
+
+### **Plataforma como SERVIÇO (PaaS)**
+
+Este modelo baseado em assinatura fornece uma plataforma que permite que uma organização desenvolva, execute e gerencie seus aplicativos no hardware do serviço, usando ferramentas que o serviço fornece. Essa plataforma é acessada pela nuvem pública.
+
+### **Infraestrutura como Serviço (IaaS)**
+
+Esse modelo baseado em assinatura fornece recursos de computação virtual, como hardware, software, servidores, armazenamento e outros componentes de infraestrutura pela Internet. Uma organização comprará acesso a eles e os usará por meio da nuvem pública.
+
+
+## 1.1.13 Avatar
+
+Enquanto os provedores de serviços de nuvem pública implementam controles de segurança para proteger o ambiente de nuvem, as organizações são responsáveis por proteger seus próprios recursos na nuvem. Portanto, algumas das ameaças mais comuns ao domínio da nuvem pública incluem:
+
+- Violações de dados.
+- Perda ou roubo de propriedade intelectual.
+- Credenciais comprometidas ou seqüestro de conta.
+- Ataques de engenharia social.
+- Violação de conformidade.
+
+
+## 1.1.14 O Que Você Acha?
+
+As ameaças físicas são geralmente negligenciadas quando se considera a segurança digital, mas a segurança física é de fato essencial quando queremos impedir que uma empresa seja vítima de crimes digitais.
+
+Com isso em mente, reserve um tempo para pensar em possíveis ameaças físicas aos escritórios da @ Apollo.
+
+**Escreva alguns exemplos na caixa abaixo e selecione Enviar. Em seguida, selecione Mostrar resposta para revelar alguns exemplos comuns de ameaças ao domínio de instalações físicas de uma empresa e compare sua resposta.**
+
+
+## 1.1.15 Ameaças aos Aplicativos
+
+O **domínio do aplicativo** inclui todos os sistemas, aplicativos e dados críticos usados por uma organização para dar suporte às operações. Cada vez mais, as organizações estão movendo aplicativos como e-mail, monitoramento de segurança e gerenciamento de banco de dados para a nuvem pública.
+
+As ameaças comuns aos aplicativos incluem:
+
+- Alguém obtendo acesso não autorizado a data centers, salas de computadores, armários de fiação ou sistemas.
+- Tempo de inatividade do servidor durante períodos de manutenção.
+- Vulnerabilidades de software do sistema operacional de rede.
+- Perda de dados.
+- Vulnerabilidades de desenvolvimento de aplicativos cliente-servidor ou web.
+
+
+## 1.1.16 Verificador de Domínio
+
+Tudo isso faz você pensar ...
+
+Você sabe que os invasores tentarão aproveitar as vulnerabilidades que existem nos domínios do @ Apollo, mas primeiro você precisa identificar quais são esses domínios.
+
+Você pode completar as frases abaixo selecionando o termo correto em cada um dos menus suspensos? 
+
+**Quando você tiver feito todas as escolhas, selecione Enviar.**
+
+**Funcionários** (Domínio do usuário) obter acesso aos escritórios @Apollo com um cartão de identificação de equipe eletrônico.
+
+(Domínio de instalações físicas). Eles usam um desktop, laptop, tablet ou smartphone (Domínio do dispositivo) para fazer login na rede da @Apollo (domínio LAN).
+
+A @Apollo oferece aos clientes acesso a um conjunto de módulos de eLearning hospedados centralmente por uma taxa de assinatura. É um SaaS provedor, operando em um Pública domínio da nuvem.
+
+|Categoria|Resposta correta|
+|---|---|
+|Cartão de identificação de equipe eletrônico para acesso aos escritórios|Domínio do usuário|
+|Uso de desktop, laptop, tablet ou smartphone|Domínio de instalações físicas|
+|Login na rede da @Apollo|Domínio do dispositivo|
+|Domínio de conexão da rede|Domínio LAN|
+|Módulos de eLearning por taxa de assinatura|SaaS|
+|Domínio operado pelo provedor|Pública|
+
+**Isso mesmo!**
+
+Você identificou corretamente a gama de domínios em jogo no @Apollo.
+
+- Os funcionários da @Apollo têm acesso ao sistema de informações da empresa e fazem parte do **domínio do usuário**.
+- Eles podem entrar em qualquer um dos escritórios da @Apollo usando cartões de identificação de equipe eletrônica. Eles são usados para proteger as instalações da empresa e, portanto, se enquadram no **domínio de instalações físicas**.
+- Qualquer computador desktop, laptop, tablet ou smartphone usado para acessar a rede da @ Apollo faz parte do **domínio do dispositivo**.
+- A rede interna da @ Apollo, que é composta por uma coleção desses e de outros dispositivos, forma o **domínio da LAN**. 
+- O @Apollo é um **provedor de SaaS**, que oferece aos clientes acesso a um conjunto de módulos de eLearning hospedados centralmente por uma taxa de assinatura. 
+- Então, @Apollo opera no **domínio de nuvem pública**.
+
+## 1.1.17 Complexidade da Ameaça
+
+Vulnerabilidades de softwares acontecem como resultado de erros de programação, vulnerabilidades de protocolos  ou má configuração do sistema Os criminosos digitais aproveitam-se dessas vulnerabilidades e estão se tornando cada vez mais sofisticados em seus métodos de ataque.
+
+**Role para baixo para saber mais sobre isso.**
+
+Uma **ameaça avançada persistente (APT)** é um ataque contínuo que usa táticas de espionagem elaboradas envolvendo vários agentes e/ou malware sofisticado para obter acesso e analisar a rede de um alvo.  
+Os invasores operam sob o radar e permanecem sem serem detectados por um longo período, com consequências potencialmente devastadoras. Os APTs normalmente visam governos e organizações de alto nível e geralmente são bem orquestrados e bem financiados.
+
+Como o nome sugere, os **ataques de algoritmos** aproveitam os algoritmos em um software legítimo para gerar comportamentos não desejados. Por exemplo, algoritmos usados para rastrear e relatar quanta energia um computador consome podem ser usados para selecionar alvos ou acionar alertas falsos. Eles também podem desabilitar um computador forçando-o a usar toda a sua RAM ou sobrecarregando sua unidade central de processamento (CPU).
+
+
+## 1.1.18 Avatar
+
+Muitas empresas dependem de dados de inteligência de ameaças para ajudá-las a entender o risco geral, para que possam formular e implementar medidas preventivas e de resposta eficazes.
+
+Alguns desses dados são de código fechado e exigem uma assinatura paga para o acesso. Outros dados são considerados inteligência de código aberto (OSINT) e podem ser acessados de fontes de informação publicamente disponíveis. Na verdade, o compartilhamento de dados de inteligência de ameaças está se tornando cada vez mais popular, com governos, universidades, organizações do setor de saúde e empresas privadas trabalhando juntas para melhorar a segurança de todos.
+
