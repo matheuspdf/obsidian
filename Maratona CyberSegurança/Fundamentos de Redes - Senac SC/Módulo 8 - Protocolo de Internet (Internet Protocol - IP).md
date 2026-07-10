@@ -96,7 +96,7 @@ Quais mensagens você viu após a página Web ter sido carregada?
 # 8.2 A estrutura do endereço IPv4
 
 ## 8.2.1 Video - Estrutura do Endereço IPv4
-
+![[8.2.1.mp4#subtitle=anexos/8.2.1.vtt]]
 Nesta lição vamos falar sobre como o endereçamento IP funciona em um ambiente de várias redes. Originalmente, quando falamos sobre endereçamento IP, todos os dispositivos com os quais estávamos nos comunicando estavam na mesma rede local. Então, como o IP sabe quando um dispositivo está em uma rede diferente?
 
 Basicamente, vamos ver nossa rede dividida aqui. Temos o Departamento de Gestão de Redes, departamento de contabilidade e o Departamento de Vendas. Cada um desses departamentos tem uma estrutura de endereçamento IP que é exclusivo para sua rede local.

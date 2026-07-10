@@ -1,0 +1,248 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.339 --> 00:11.130
+- Neste vídeo vamos
+falar sobre mídia de rede.
+
+00:11.130 --> 00:14.102
+A mídia de rede fornece a conectividade
+
+00:14.102 --> 00:16.238
+e o caminho para as comunicações
+
+00:16.238 --> 00:19.228
+viajarem através de uma rede.
+
+00:19.228 --> 00:22.787
+Nas redes atuais, a
+maioria das conexões
+
+00:22.787 --> 00:26.005
+são feitas sem fio
+que passam pelo ar
+
+00:26.005 --> 00:29.062
+e obviamente não
+tem uma mídia física
+
+00:29.062 --> 00:31.719
+ou com conectividade de cobre.
+
+00:31.719 --> 00:35.902
+O tipo mais comum de
+conectividade em uma rede Ethernet
+
+00:35.902 --> 00:40.069
+está usando par trançado não blindado
+ou UTP .
+
+00:42.162 --> 00:46.572
+O cabeamento de par trançado é composto
+por uma série de fios,
+
+00:46.572 --> 00:50.076
+no caso da maioria dos
+cabos Ethernet, oito fios,
+
+00:50.076 --> 00:54.466
+que são organizados em pares
+e cada par é codificado por cores
+
+00:54.466 --> 00:56.989
+para que você possa ter o mesmo padrão
+
+00:56.989 --> 01:00.008
+em cada extremidade do cabo.
+
+01:00.008 --> 01:03.629
+Os próprios conectores
+fornecem a conectividade de cobre
+
+01:03.629 --> 01:05.336
+entre os dispositivos,
+
+01:05.336 --> 01:07.903
+por exemplo, uma placa de interface de rede
+
+01:07.903 --> 01:12.070
+ou uma porta em um switch ou
+roteador e o cabeamento.
+
+01:13.366 --> 01:16.294
+É muito importante que os
+conectores sejam bem feitos
+
+01:16.294 --> 01:20.858
+e que realmente sejam instalados
+de acordo com padrões específicos.
+
+01:20.858 --> 01:25.677
+Este tipo de conector
+é chamado de conector RJ45
+
+01:25.677 --> 01:29.972
+e funciona para quase
+todos os cabos Ethernet
+
+01:29.972 --> 01:33.419
+que são usados ​​na rede de hoje.
+
+01:33.419 --> 01:36.474
+Além deste tipo de cabeamento,
+
+01:36.474 --> 01:39.474
+também temos cabeamento coaxial de cobre.
+
+01:40.978 --> 01:43.480
+O cabo coaxial deve
+ser familiar para a maioria de vocês
+
+01:43.480 --> 01:47.563
+porque normalmente é
+como a TV a cabo é conectada.
+
+01:48.623 --> 01:52.790
+Neste cabo específico temos
+um conector tipo BNC.
+
+01:53.799 --> 01:57.314
+Também podemos usar conectoresde rosca tipo F
+
+01:57.314 --> 01:59.651
+para conectar o cabo coaxial.
+
+01:59.651 --> 02:02.645
+O cabo coaxial difere significativamente
+
+02:02.645 --> 02:06.181
+do cabo de par trançado
+nesse cabo coaxial
+
+02:06.181 --> 02:09.756
+tem um único núcleo sólido de cobre que atravessa
+
+02:09.756 --> 02:11.691
+todo o comprimento do cabo
+
+02:11.691 --> 02:13.851
+e é através desse núcleo de cobre
+
+02:13.851 --> 02:16.434
+que as comunicações ocorrem.
+
+02:18.167 --> 02:22.064
+Se eu remover o conector
+deste cabo coaxial,
+
+02:22.064 --> 02:26.231
+o núcleo de cobre sólido é
+cercado por um material plástico
+
+02:27.327 --> 02:29.737
+que ajuda a isolá-lo e protegê-lo.
+
+02:29.737 --> 02:33.654
+Também terá uma malha
+de metal que proporciona
+
+02:34.555 --> 02:37.856
+alguma blindagem contra
+interferência eletromagnética.
+
+02:37.856 --> 02:41.687
+Além do
+cabeamento de cobre, na rede atual,
+
+02:41.687 --> 02:46.269
+você costuma ter para longas
+distâncias, cabo de fibra óptica.
+
+02:46.269 --> 02:50.436
+O que estou segurando na minha
+mão está a uma curta distância
+
+02:51.675 --> 02:54.802
+cabo de fibra óptica que
+normalmente seria usado
+
+02:54.802 --> 02:57.881
+para conectar
+equipamentos de rede dentro de um edifício.
+
+02:57.881 --> 03:01.955
+O cabo de fibra óptica é feito
+de vidro ou plástico
+
+03:01.955 --> 03:06.122
+e tem um núcleo sólido que
+é cercado por uma segunda camada
+
+03:08.051 --> 03:11.074
+de vidro ou plástico para
+fornecer a superfície reflexiva
+
+03:11.074 --> 03:13.657
+para transportar os padrões de luz.
+
+03:14.915 --> 03:18.424
+Agora, porque não há cobre aqui
+
+03:18.424 --> 03:22.591
+e porque o cabo de fibra óptica
+transporta apenas ondas de luz,
+
+03:25.329 --> 03:27.627
+você não precisa se preocupar
+com o cabo de fibra óptica
+
+03:27.627 --> 03:31.091
+sendo afetado por
+interferência eletromagnética.
+
+03:31.091 --> 03:35.301
+Essa é uma grande vantagem sobre
+qualquer tipo de cabo de cobre.
+
+03:35.301 --> 03:37.594
+Outra vantagem do uso de fibra óptica
+
+03:37.594 --> 03:41.195
+é que a fibra óptica
+pode transportar os sinais de luz
+
+03:41.195 --> 03:46.100
+para uma distância muito maior
+do que a maioria dos cabos de cobre
+
+03:46.100 --> 03:50.553
+então, se eu tiver uma longa
+distância a percorrer, digamos milhas,
+
+03:50.553 --> 03:54.420
+Provavelmente escolherei uma
+conexão de fibra óptica.
+
+03:54.420 --> 03:58.355
+Porque existem diferentes
+tipos de cabos de fibra óptica
+
+03:58.355 --> 04:00.855
+e diversos tipos de dispositivos
+
+04:01.907 --> 04:05.585
+que conduzem e criam os sinais luminosos,
+
+04:05.585 --> 04:09.033
+fibra óptica pode fazer
+muitas coisas diferentes,
+
+04:09.033 --> 04:11.662
+tem muito mais flexibilidadeque o cabo de cobre
+
+04:11.662 --> 04:15.829
+e tem vários tipos de velocidades
+
+04:16.970 --> 04:20.470
+que cada cabo de fibra óptica suporta.
+

@@ -1,0 +1,197 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.235 --> 00:08.435
+- Nesta lição vamos
+falar sobre como
+
+00:08.435 --> 00:12.602
+O endereçamento IP funciona em um
+ambiente de várias redes.
+
+00:14.715 --> 00:17.072
+Originalmente, quando falamos
+sobre endereçamento IP,
+
+00:17.072 --> 00:20.490
+todos os dispositivos com os quais
+estávamos nos comunicando
+
+00:20.490 --> 00:23.073
+estavam na mesma rede local.
+
+00:23.912 --> 00:25.495
+Então, como o IP sabe
+
+00:27.166 --> 00:30.225
+quando um dispositivo está em uma rede diferente?
+
+00:30.225 --> 00:34.642
+Então, basicamente, vamos ver
+nossa rede dividida aqui.
+
+00:34.642 --> 00:36.953
+Temos o Departamento de Gestão de Redes,
+
+00:36.953 --> 00:38.283
+departamento de contabilidade
+
+00:38.283 --> 00:40.311
+e o Departamento de Vendas.
+
+00:40.311 --> 00:44.478
+Cada um desses departamentos tem
+uma estrutura de endereçamento IP
+
+00:45.758 --> 00:49.341
+que é exclusivo para sua
+rede local.
+
+00:50.477 --> 00:52.060
+Agora, como sabemos
+
+00:53.381 --> 00:55.977
+qual parte do endereço IP
+
+00:55.977 --> 00:59.765
+diferencia as redes.
+
+00:59.765 --> 01:03.848
+Basicamente, todo endereço IP
+tem uma estrutura para ele
+
+01:04.886 --> 01:08.667
+e essa estrutura inclui
+um componente de rede,
+
+01:08.667 --> 01:11.537
+e vamos pegar um
+endereço de rede que está aqui.
+
+01:11.537 --> 01:13.704
+Tem um componente de rede
+
+01:14.849 --> 01:17.182
+e tem um componente host.
+
+01:23.814 --> 01:28.338
+Todos os dispositivos na
+rede local do Departamento de Vendas
+
+01:28.338 --> 01:32.699
+terão que ter os
+mesmos três primeiros octetos
+
+01:32.699 --> 01:35.038
+do seu endereço IP,
+
+01:35.038 --> 01:38.601
+porque esta rede é representada
+
+01:38.601 --> 01:40.018
+pelo 192.168.3.
+
+01:43.181 --> 01:45.886
+Os números de host individuais,
+
+01:45.886 --> 01:47.788
+que são o último octeto,
+
+01:47.788 --> 01:50.285
+terá que ser único.
+
+01:50.285 --> 01:52.104
+Em outras palavras,
+
+01:52.104 --> 01:53.902
+seu computador aqui
+
+01:53.902 --> 01:56.569
+tem o endereço de 192.168.3.10.
+
+01:58.816 --> 02:01.344
+Nenhum outro dispositivo nessa mesma rede
+
+02:01.344 --> 02:03.844
+pode ter o mesmo endereço IP,
+
+02:05.406 --> 02:09.484
+porque cada parte do host deve ser única.
+
+02:09.484 --> 02:11.526
+Assim, em uma rede local,
+
+02:11.526 --> 02:14.489
+a parte da rede tem que ser a mesma
+
+02:14.489 --> 02:17.767
+e a parte do host deve ser única.
+
+02:17.767 --> 02:21.063
+Agora, se passarmos para
+a próxima rede aqui,
+
+02:21.063 --> 02:25.146
+podemos ver que a
+parte da rede é diferente.
+
+02:29.154 --> 02:33.200
+Tínhamos a rede 192.168.3 aqui.
+
+02:33.200 --> 02:36.533
+Temos a rede 192.168.2 aqui.
+
+02:38.026 --> 02:41.595
+Se eu for ao
+Gerenciamento de Rede, onde estou localizado,
+
+02:41.595 --> 02:45.345
+você verá que estou na
+rede 192.168.1.
+
+02:48.353 --> 02:50.371
+É muito importante lembrar
+
+02:50.371 --> 02:52.288
+que se o seu endereço IP
+
+02:53.501 --> 02:55.829
+é tal que sua parte de rede
+
+02:55.829 --> 03:00.439
+não corresponde ao que sua
+rede local está atribuída,
+
+03:00.439 --> 03:02.659
+você não será capaz de se comunicar.
+
+03:02.659 --> 03:07.562
+Então, se eu acidentalmente peguei
+um computador daqui
+
+03:07.562 --> 03:10.194
+e mudei para cá
+
+03:10.194 --> 03:13.199
+e não alterei o endereço IP,
+
+03:13.199 --> 03:17.209
+ele não será capaz de se
+comunicar pela rede IP.
+
+03:17.209 --> 03:18.376
+Então, basicamente,
+
+03:19.775 --> 03:22.553
+para ter uma rede IP,
+
+03:22.553 --> 03:26.873
+a parte de rede do
+endereço deve ser a mesma
+
+03:26.873 --> 03:28.529
+para todos os computadores
+
+03:28.529 --> 03:30.696
+na rede local.
+

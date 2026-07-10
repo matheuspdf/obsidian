@@ -1,0 +1,181 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.438 --> 00:08.431
+- Neste vídeo, vamos apresentar
+
+00:08.431 --> 00:10.707
+os campos de um quadro Ethernet.
+
+00:10.707 --> 00:14.626
+Lembre-se de Ethernet é da
+placa de interface de rede,
+
+00:14.626 --> 00:19.028
+à placa de interface de rede
+, na mesma rede.
+
+00:19.028 --> 00:22.287
+E para mencionar, veja esses
+números abaixo aqui,
+
+00:22.287 --> 00:26.856
+estes são o número de bytes
+para cada um desses campos.
+
+00:26.856 --> 00:30.721
+Se você quiser
+traduzir isso em bits,
+
+00:30.721 --> 00:33.611
+basta multiplicar cada um
+desses números por oito,
+
+00:33.611 --> 00:37.564
+e ele lhe dará o número de bits.
+
+00:37.564 --> 00:40.340
+Assim, o primeiro campo é o preâmbulo.
+
+00:40.340 --> 00:43.961
+Isso é usado apenas para obter sincronização de bits
+
+00:43.961 --> 00:47.708
+entre a placa NIC e a NIC do receptor
+
+00:47.708 --> 00:50.291
+que estão vindo pelo cabo.
+
+00:51.867 --> 00:54.957
+O delimitador de início de quadro , indica
+
+00:54.957 --> 00:58.377
+para a placa de interface de rede receptora
+
+00:58.377 --> 01:01.960
+que, após este
+delimitador de início de quadro ,
+
+01:03.997 --> 01:06.847
+virá a informação real associada
+
+01:06.847 --> 01:08.847
+com o quadro Ethernet.
+
+01:10.626 --> 01:13.926
+Em seguida, temos o endereço MAC de destino.
+
+01:13.926 --> 01:17.017
+O endereço mac de destino
+é o endereço MAC
+
+01:17.017 --> 01:19.934
+do destino nessa rede.
+
+01:20.891 --> 01:24.308
+Então esse é o endereço MAC da placa NIC
+
+01:25.614 --> 01:29.781
+para onde esse quadro Ethernet
+irá.
+
+01:31.478 --> 01:34.700
+O endereço MAC de origem,
+este é o endereço MAC
+
+01:34.700 --> 01:39.018
+do dispositivo que originou
+este quadro Ethernet,
+
+01:39.018 --> 01:42.768
+o endereço MAC da
+placa de interface de rede,
+
+01:42.768 --> 01:46.935
+o NIC Ethernet, que
+originou este quadro Ethernet.
+
+01:48.448 --> 01:51.995
+Em seguida, temos o comprimento, ou campo de tipo.
+
+01:51.995 --> 01:55.138
+Portanto, este campo aqui pode
+ser uma das duas coisas:
+
+01:55.138 --> 01:58.423
+Pode ser o comprimento, e
+esse seria o comprimento
+
+01:58.423 --> 02:01.129
+dos dados, o que
+às vezes chamamos de carga útil,
+
+02:01.129 --> 02:04.962
+quantos bytes estão na porção de dados
+
+02:04.962 --> 02:08.595
+deste quadro Ethernet; ou
+pode ser um campo de tipo
+
+02:08.595 --> 02:11.449
+que diz que tipo de dados são esses,
+
+02:11.449 --> 02:15.366
+este é um pacote IPv4,
+este é um pacote IPv6.
+
+02:18.536 --> 02:21.619
+Em seguida, estão os dados encapsulados reais.
+
+02:22.893 --> 02:25.701
+Este pode ser um pacote IPv4,
+
+02:25.701 --> 02:29.451
+poderia ser um pacote IPv6,
+e então, junto com
+
+02:30.601 --> 02:33.579
+o pacote IPv4, digamos, poderia ser
+
+02:33.579 --> 02:35.286
+outros protocolos também.
+
+02:35.286 --> 02:39.926
+Pode ser todos os dados,
+pode ser o pacote IPv4,
+
+02:39.926 --> 02:44.093
+com o cabeçalho TCP ou
+junto com o cabeçalho HTTP,
+
+02:45.744 --> 02:50.168
+ou qualquer informação que
+tenha sido encapsulada.
+
+02:50.168 --> 02:52.028
+E na verdade a Ethernet não se importa
+
+02:52.028 --> 02:53.457
+que tipo de dados são,
+
+02:53.457 --> 02:56.553
+está apenas entregando esses dados
+
+02:56.553 --> 03:00.636
+da placa de interface
+de rede para a placa de interface de rede.
+
+03:00.636 --> 03:04.803
+Por último, temos o que é conhecido como
+FCS, sequência de verificação de quadros.
+
+03:05.683 --> 03:07.430
+Isso é usado pelo dispositivo receptor
+
+03:07.430 --> 03:09.556
+para fazer alguma verificação de erros, para ter certeza
+
+03:09.556 --> 03:13.723
+que não houve erros ao longo
+do caminho na transmissão.
+

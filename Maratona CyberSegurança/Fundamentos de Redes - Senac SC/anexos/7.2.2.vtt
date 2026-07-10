@@ -1,0 +1,347 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.587 --> 00:08.660
+- Neste vídeo, vamos
+dar uma olhada em como
+
+00:08.660 --> 00:12.644
+um switch constrói sua tabela de endereços MAC.
+
+00:12.644 --> 00:15.495
+Mais uma vez, um switch faz
+sua decisão de encaminhamento
+
+00:15.495 --> 00:19.396
+com base nas informações da camada dois
+, neste caso
+
+00:19.396 --> 00:23.563
+as informações do cabeçalho
+Ethernet do quadro Ethernet.
+
+00:24.849 --> 00:28.703
+Então, vamos dar uma olhada em
+como esse switch constrói
+
+00:28.703 --> 00:31.240
+sua tabela de endereços MAC.
+
+00:31.240 --> 00:35.794
+Nesses quatro hosts,
+abreviei endereços MAC
+
+00:35.794 --> 00:37.461
+AA-AA até DD-DD.
+
+00:39.817 --> 00:43.984
+Então aqui vamos ter H1
+envia um quadro Ethernet para H4
+
+00:45.571 --> 00:48.821
+então o endereço MAC de origem será AA-AA
+
+00:52.553 --> 00:56.183
+o endereço MAC da NIC Ethernet do H1
+
+00:56.183 --> 00:58.921
+e o endereço de destino será aquele
+
+00:58.921 --> 01:01.254
+da NIC Ethernet do H4, DD-DD.
+
+01:06.304 --> 01:10.471
+Ok, então H1 envia esse quadro
+para o switch Ethernet.
+
+01:14.440 --> 01:17.477
+Quando o switch recebe
+qualquer quadro Ethernet,
+
+01:17.477 --> 01:19.393
+a primeira coisa que faz é olhar para
+
+01:19.393 --> 01:21.307
+o endereço MAC de origem e dizer
+
+01:21.307 --> 01:24.133
+"Eu aprendi alguma coisa?"
+
+01:24.133 --> 01:28.146
+O que está olhando, evê isso na porta
+
+01:28.146 --> 01:32.229
+Fast Ethernet 01, é oendereço MAC de origem AA-AA.
+
+01:33.662 --> 01:36.480
+Isso existe em sua tabela?
+
+01:36.480 --> 01:39.247
+E vê, diz não, não
+
+01:39.247 --> 01:43.439
+e porque ainda não
+existe, adiciona este MAC de origem
+
+01:43.439 --> 01:47.272
+a sua porta de entrada fast Ethernet 01.
+
+01:50.619 --> 01:53.119
+Então vamos colocar isso aí.
+
+01:56.117 --> 01:58.864
+Então é assim que o switch
+constrói sua tabela.
+
+01:58.864 --> 02:01.855
+Agora ele quer ir em frente
+e encaminhar o quadro.
+
+02:01.855 --> 02:05.004
+Então agora ele olha para o
+endereço MAC de destino.
+
+02:05.004 --> 02:08.587
+Ele diz "Este endereço MAC está na minha tabela?"
+
+02:08.587 --> 02:12.420
+e como podemos ver, DD-DD
+não está em sua tabela.
+
+02:14.960 --> 02:17.310
+Isso é conhecido como um unicast desconhecido.
+
+02:17.310 --> 02:19.447
+Da perspectiva do
+switch, é como,
+
+02:19.447 --> 02:22.053
+Eu não sabia para onde
+enviá-lo, então o que ele faz
+
+02:22.053 --> 02:25.637
+ele age como os antigos hubs Ethernet.
+
+02:25.637 --> 02:28.887
+Na verdade, ele irá enviá-lo para todas as portas
+
+02:30.046 --> 02:32.129
+exceto a porta de entrada.
+
+02:33.356 --> 02:36.578
+Assim, cada um desses dispositivos
+receberá
+
+02:36.578 --> 02:38.311
+este quadro Ethernet.
+
+02:38.311 --> 02:42.753
+Quando um H2 o recebe,
+em sua placa Ethernet NIC
+
+02:42.753 --> 02:46.920
+compara seu endereço MAC com
+o endereço MAC de destino
+
+02:48.085 --> 02:51.107
+do quadro Ethernet e
+diz "não combinamos".
+
+02:51.107 --> 02:54.844
+Assim, ele ignora o resto do quadro.
+
+02:54.844 --> 02:57.511
+Veja, o H3 faz a mesma coisa.
+
+02:58.725 --> 03:01.418
+Meu endereço MAC não
+corresponde ao endereço MAC
+
+03:01.418 --> 03:05.440
+do MAC de destino, ignore o quadro.
+
+03:05.440 --> 03:08.857
+H4, ao receber este quadro Ethernet,
+
+03:09.891 --> 03:12.488
+sua placa Ethernet NIC diz
+
+03:12.488 --> 03:16.618
+"Sim, esse é o meu
+endereço MAC. Nós combinamos."
+
+03:16.618 --> 03:20.139
+Então ele vai em frente e
+recebe todo o quadro.
+
+03:20.139 --> 03:24.306
+Agora vamos ver o que acontece
+quando o DD envia um quadro Ethernet
+
+03:26.004 --> 03:30.167
+de volta para AA-AA ou H4 envia
+um quadro Ethernet para H1.
+
+03:37.279 --> 03:38.612
+Então, neste caso,
+
+03:39.637 --> 03:41.637
+temos H4 como fonte
+
+03:47.486 --> 03:49.653
+e o destino é H1.
+
+03:53.308 --> 03:57.475
+Agora até agora, esta é a
+tabela de endereços MAC do nosso switch.
+
+03:59.402 --> 04:03.569
+Então H4 envia o
+quadro Ethernet, que é recebido na porta
+
+04:04.725 --> 04:07.869
+fast Ethernet 04 pelo switch.
+
+04:07.869 --> 04:09.465
+Lembre-se, a primeira coisa que um switch faz
+
+04:09.465 --> 04:10.968
+é querer aprender.
+
+04:10.968 --> 04:13.991
+Ele examina o
+endereço MAC de origem e diz
+
+04:13.991 --> 04:16.325
+"Aprendi algo novo?
+
+04:16.325 --> 04:20.348
+"Como recebi este
+endereço MAC de origem na minha porta,
+
+04:20.348 --> 04:24.800
+"fast Ethernet 04. Não está
+na minha tabela de endereços MAC."
+
+04:24.800 --> 04:27.050
+Então ele adiciona o endereço MAC.
+
+04:31.247 --> 04:34.080
+Em seguida, preciso encaminhar o quadro.
+
+04:35.058 --> 04:38.314
+Eu sei onde
+está o endereço MAC de destino?
+
+04:38.314 --> 04:39.339
+Ele olha e diz
+
+04:39.339 --> 04:43.339
+"Sim, eu sei que está na minha
+porta Fast Ethernet 01."
+
+04:45.792 --> 04:49.594
+Então ele vai em frente, neste caso ele sabe
+
+04:49.594 --> 04:53.761
+onde está o endereço MAC de destino
+e pode filtrar
+
+04:56.090 --> 05:00.007
+o quadro e apenas enviá
+-lo para a porta única.
+
+05:01.599 --> 05:05.766
+Assim você pode ver como os switches Ethernet
+constroem suas tabelas,
+
+05:07.397 --> 05:11.564
+aprender sobre onde
+estão os endereços MAC de origem Ethernet,
+
+05:14.381 --> 05:17.913
+e então pode começar a
+filtrar esses quadros
+
+05:17.913 --> 05:19.852
+portas específicas.
+
+05:19.852 --> 05:23.602
+Vamos dar uma olhada final
+aqui em outro quadro
+
+05:26.202 --> 05:30.369
+indo de H1 para H4 e veja
+como as coisas mudaram agora.
+
+05:33.652 --> 05:38.022
+Se H1 tiver outro quadro
+para enviar de volta para H4,
+
+05:38.022 --> 05:40.689
+o endereço MAC de origem é AA-AA,
+
+05:42.969 --> 05:45.969
+o endereço MAC de destino é DD-DD
+
+05:46.874 --> 05:49.412
+e vamos dar uma olhada na diferença
+
+05:49.412 --> 05:52.123
+desde a primeira vez que isso aconteceu.
+
+05:52.123 --> 05:55.259
+O quadro entra no switch, a porta diz
+
+05:55.259 --> 05:58.539
+"Eu sei sobre este endereço MAC de origem
+
+05:58.539 --> 06:01.114
+"em Fast Ethernet 01?"
+
+06:01.114 --> 06:05.446
+Ele diz, "sim, eu aprendi
+sobre isso anteriormente."
+
+06:05.446 --> 06:07.995
+Então, os switches tendem a manter
+essas informações lá
+
+06:07.995 --> 06:10.448
+por cerca de cinco minutos.
+
+06:10.448 --> 06:14.145
+Ele diz tudo bem, eu
+aprendi isso, sem problemas.
+
+06:14.145 --> 06:16.117
+Que tal encaminhar o quadro?
+
+06:16.117 --> 06:17.969
+Para onde vou enviar?
+
+06:17.969 --> 06:20.406
+Então ele olha para o
+endereço MAC de destino e diz
+
+06:20.406 --> 06:24.406
+"Eu sei onde DD-DD
+está? Desta vez, eu sei.
+
+06:26.049 --> 06:29.549
+"Está aqui na porta Fast Ethernet 04."
+
+06:30.692 --> 06:33.515
+Então, em vez de enviar todas as portas
+
+06:33.515 --> 06:38.183
+como fizemos originalmente, quando
+esta informação não estava aqui,
+
+06:38.183 --> 06:41.850
+agora ele pode enviar
+apenas fast Ethernet 04
+
+06:43.218 --> 06:44.718
+a caminho do H4.
+

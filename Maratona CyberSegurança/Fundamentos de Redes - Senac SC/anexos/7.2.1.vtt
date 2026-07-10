@@ -1,0 +1,132 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.392 --> 00:08.248
+- Neste vídeo, vamos dar uma olhada
+
+00:08.248 --> 00:10.648
+como funcionam os switches Ethernet.
+
+00:10.648 --> 00:13.656
+Os switches Ethernet
+operam na camada dois,
+
+00:13.656 --> 00:17.048
+camada de enlace de dados do modelo OSI.
+
+00:17.048 --> 00:19.992
+Isso porque eles tomam
+suas decisões de encaminhamento
+
+00:19.992 --> 00:23.032
+com base nas informações da camada dois,
+
+00:23.032 --> 00:27.199
+as informações do cabeçalho Ethernet,
+do quadro Ethernet.
+
+00:29.027 --> 00:33.197
+Os switches Ethernet possuem tabelas de endereços MAC.
+
+00:33.197 --> 00:35.203
+Neste exemplo, a tabela de endereços MAC
+
+00:35.203 --> 00:37.859
+já está totalmente preenchido.
+
+00:37.859 --> 00:39.917
+Aprenderemos em um vídeo posterior,
+
+00:39.917 --> 00:43.213
+como a tabela de endereços MAC é construída.
+
+00:43.213 --> 00:46.829
+Mas vamos ver como um switch
+usa essa informação.
+
+00:46.829 --> 00:50.579
+Aqui temos quatro hosts,
+H1 a H4.
+
+00:51.757 --> 00:56.403
+Eu tenho em cada host um
+endereço MAC abreviado,
+
+00:56.403 --> 00:59.149
+como AAAA para o host um.
+
+00:59.149 --> 01:02.816
+Esse é o endereço MAC
+de sua NIC Ethernet.
+
+01:03.928 --> 01:08.095
+Então, se H1 vai
+enviar um quadro Ethernet para H4,
+
+01:10.093 --> 01:12.760
+bem, ele constrói um quadro Ethernet
+
+01:13.875 --> 01:17.699
+com o endereço MAC
+de origem o seu próprio endereço MAC.
+
+01:17.699 --> 01:21.449
+Então, no endereço MAC de origem
+, colocaremos AAAA,
+
+01:24.088 --> 01:25.921
+o endereço MAC de H1,
+
+01:27.230 --> 01:31.397
+e o endereço MAC de destino
+será o de H4, DDDD.
+
+01:34.851 --> 01:39.181
+Mais uma vez, estes são apenas
+endereços MAC abreviados.
+
+01:39.181 --> 01:42.848
+Então, este quadro Ethernet
+é encaminhado por H1
+
+01:43.885 --> 01:48.056
+e é recebido no
+switch em sua porta Ethernet,
+
+01:48.056 --> 01:49.973
+Fast Ethernet zero um.
+
+01:51.149 --> 01:55.049
+O switch, aprenderemos mais tarde
+como ele constrói esta tabela,
+
+01:55.049 --> 01:57.613
+mas para encaminhar as informações,
+
+01:57.613 --> 01:59.928
+ele olha para o endereço MAC de destino
+
+01:59.928 --> 02:02.061
+do quadro Ethernet.
+
+02:02.061 --> 02:05.880
+O endereço MAC de destino é DDDD.
+
+02:05.880 --> 02:08.397
+Então, ele olha em sua tabela de endereços MAC
+
+02:08.397 --> 02:12.685
+para esse endereço MAC e aqui está, DDDD,
+
+02:12.685 --> 02:16.518
+que está na porta FA, Fast Ethernet, zero quatro.
+
+02:17.752 --> 02:20.717
+Assim, o switch encaminhará este quadro
+
+02:20.717 --> 02:24.077
+apenas para a Fast Ethernet zero quatro
+
+02:24.077 --> 02:26.077
+em direção ao destino.
+

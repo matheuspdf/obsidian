@@ -19,7 +19,7 @@ Como a comunicação transmite através de uma rede? A resposta é mídia de red
 # 6.1 Tipos de Mídia de Rede
 
 ## 6.1.1 Vídeo - Tipos de Midia de Rede
-
+![[6.1.1.mp4#subtitle=anexos/6.1.1.vtt]]
 ### Mídia de rede
 
 Neste vídeo vamos falar sobre mídia de rede.

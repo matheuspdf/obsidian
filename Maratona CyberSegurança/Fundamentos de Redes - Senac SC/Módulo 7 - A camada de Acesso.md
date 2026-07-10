@@ -20,7 +20,7 @@ Como uma mensagem é entregue? Ao escrever uma carta e colocá-la no envelope, v
 # 7.1 Encapsulamento e o quadro Ethernet
 
 ## 7.1.1 Vídeo - Os campos do quadro Ethernet
-
+![[7.1.1.mp4#subtitle=anexos/7.1.1.vtt]]
 Ethernet é a tecnologia mais usada em redes locais. Os dispositivos usam um NIC (Network Interface Card, placa de interface de rede) Ethernet para acessar a LAN Ethernet. Cada NIC Ethernet tem um endereço único incorporado permanentemente à placa que é conhecido como endereço MAC (Media Access Control). O endereço MAC da origem e do destino são campos em um quadro Ethernet.
 
 #### Vídeo
@@ -228,7 +228,7 @@ O protocolo Ethernet está em qual camada do modelo OSI?
 # 7.2 A Camada de Acesso
 
 ## 7.2.1 Vídeo - Switches Ethernet
-
+![[7.2.1.mp4#subtitle=anexos/7.2.1.vtt]]
 Neste vídeo, vamos dar uma olhada como funcionam os switches Ethernet. Os switches Ethernet operam na camada dois, camada de enlace de dados do modelo OSI. Isso porque eles tomam suas decisões de encaminhamento com base nas informações da camada dois, as informações do cabeçalho Ethernet, do quadro Ethernet.
 
 Os switches Ethernet possuem tabelas de endereços MAC. Neste exemplo, a tabela de endereços MAC já está totalmente preenchido. Aprenderemos em um vídeo posterior como a tabela de endereços MAC é construída. Mas vamos ver como um switch usa essa informação.
@@ -240,7 +240,7 @@ Então, se H1 vai enviar um quadro Ethernet para H4, bem, ele constrói um quadr
 Então, este quadro Ethernet é encaminhado por H1 e é recebido no switch em sua porta Ethernet, Fast Ethernet zero um. O switch, aprenderemos mais tarde como ele constrói esta tabela, mas para encaminhar as informações, ele olha para o endereço MAC de destino do quadro Ethernet. O endereço MAC de destino é DDDD. Então, ele olha em sua tabela de endereços MAC para esse endereço MAC e aqui está, DDDD, que está na porta FA, Fast Ethernet, zero quatro. Assim, o switch encaminhará este quadro apenas para a Fast Ethernet zero quatro em direção ao destino.
 
 ## 7.2.2 Vídeo - Tabela de Endereços MAC
-
+![[7.2.2.mp4#subtitle=anexos/7.2.2.vtt]]
 Neste vídeo, vamos dar uma olhada em como um switch constrói sua tabela de endereços MAC. Mais uma vez, um switch faz sua decisão de encaminhamento com base nas informações da camada dois, neste caso as informações do cabeçalho Ethernet do quadro Ethernet.
 
 Então, vamos dar uma olhada em como esse switch constrói sua tabela de endereços MAC. Nesses quatro hosts, abreviei endereços MAC AA-AA até DD-DD.
