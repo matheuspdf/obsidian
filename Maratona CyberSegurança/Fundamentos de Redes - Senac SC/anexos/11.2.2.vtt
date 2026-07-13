@@ -1,0 +1,241 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:12.283 --> 00:16.153
+- Existem duas maneiras de obter
+um endereço IP em um dispositivo.
+
+00:16.153 --> 00:19.114
+Uma maneira é configurá-lo manualmente,
+
+00:19.114 --> 00:21.505
+ou configurá-lo estaticamente,
+
+00:21.505 --> 00:24.108
+como é chamado no Microsoft Windows.
+
+00:24.108 --> 00:28.421
+E a outra maneira de fazer isso,
+é obtê-lo automaticamente
+
+00:28.421 --> 00:31.386
+de um dispositivo que fornece DHCP.
+
+00:31.386 --> 00:33.759
+Na pequena rede
+aqui que estamos mostrando
+
+00:33.759 --> 00:36.516
+no Packet Tracer, temos três PCs
+
+00:36.516 --> 00:39.349
+conectados a um roteador habilitado para DHCP.
+
+00:40.223 --> 00:43.449
+Basicamente, o que isso é,
+é um dispositivo muito semelhante
+
+00:43.449 --> 00:45.975
+ao que você deva ter em casa.
+
+00:45.975 --> 00:49.142
+Se você olhar aqui no próprio aparelho,
+
+00:50.024 --> 00:54.822
+você notará que este
+dispositivo tem uma porta de switch,
+
+00:54.822 --> 00:59.393
+uma antena para wireless
+e uma conexão com a internet.
+
+00:59.393 --> 01:02.736
+Este tipo de configuração está disponível
+
+01:02.736 --> 01:06.033
+em quase todos os roteadores sem fio domésticos.
+
+01:06.033 --> 01:07.775
+Então, basicamente, o que vamos fazer,
+
+01:07.775 --> 01:10.091
+é que vamos entrar e vamos
+
+01:10.091 --> 01:14.135
+verificar como o DHCP está
+configurado neste dispositivo.
+
+01:14.135 --> 01:17.121
+A maioria dos dispositivos domésticos,
+dispositivos de rede doméstica,
+
+01:17.121 --> 01:21.675
+têm uma interface GUI para
+facilitar a configuração.
+
+01:21.675 --> 01:24.554
+No caso deste
+dispositivo, você pode ver que
+
+01:24.554 --> 01:28.838
+Eu tenho algumas configurações que
+são configurações básicas do roteador.
+
+01:28.838 --> 01:32.421
+Neste roteador, vamos
+habilitar o DHCP
+
+01:34.128 --> 01:38.452
+e como você pode ver por padrão,
+normalmente está habilitado.
+
+01:38.452 --> 01:43.377
+E você pode ver que um endereço IP
+já foi atribuído
+
+01:43.377 --> 01:47.320
+para a interface do roteador
+voltada para a LAN.
+
+01:47.320 --> 01:51.487
+Quando a configuração automática
+é recebida pelos PCs,
+
+01:53.113 --> 01:57.280
+eles verão esse
+endereço como seu gateway padrão.
+
+01:58.150 --> 02:01.233
+Agora, a maneira como o DHCP está configurado,
+
+02:02.647 --> 02:07.081
+é um grupo de endereços
+reservados em uma determinada rede
+
+02:07.081 --> 02:10.248
+para ser entregue aos hosts, um por um.
+
+02:11.091 --> 02:14.411
+Se você olhar aqui nas
+configurações, ele dirá
+
+02:14.411 --> 02:18.328
+que o intervalo DHCP
+começará em 172.16.0.100.
+
+02:22.748 --> 02:25.498
+Então, se salvarmos essa configuração,
+
+02:26.785 --> 02:28.868
+e então vamos para nossos PCs
+
+02:32.302 --> 02:36.469
+e habilitar cada PC para obter
+seu endereço IP via DHCP,
+
+02:37.998 --> 02:41.415
+em vez da configuração estática.
+
+02:44.749 --> 02:47.918
+Então, vamos para a área de trabalho aqui,
+
+02:47.918 --> 02:51.114
+e vamos ver
+nossa configuração de IP,
+
+02:51.114 --> 02:53.496
+e então vamos mudá-lo
+
+02:53.496 --> 02:55.745
+da configuração estática
+
+02:55.745 --> 02:59.276
+para obter seu endereço IP via DHCP.
+
+02:59.276 --> 03:01.727
+E você notará que imediatamente,
+
+03:01.727 --> 03:05.727
+o dispositivo enviou uma
+solicitação para um endereço DHCP
+
+03:06.911 --> 03:10.435
+e recebeu um do servidor DHCP.
+
+03:10.435 --> 03:14.217
+Você notará pelas
+informações que,
+
+03:14.217 --> 03:18.609
+uma vez que este é o primeiro PC
+a ser configurado para DHCP,
+
+03:18.609 --> 03:22.311
+obteve o primeiro endereço disponível.
+
+03:22.311 --> 03:24.811
+Quando olhamos para os outros PCs,
+
+03:27.880 --> 03:30.686
+e vermos suas configurações de IP,
+
+03:30.686 --> 03:34.887
+se os mudarmos para DHCP,
+eles também receberão endereços
+
+03:34.887 --> 03:37.597
+mas não será o mesmo endereço.
+
+03:37.597 --> 03:40.097
+Será o próximo número acima.
+
+03:41.030 --> 03:42.941
+Como temos nossos endereços IP definidos,
+
+03:42.941 --> 03:47.773
+agora podemos sair e testar
+nossa conectividade de rede.
+
+03:47.773 --> 03:49.523
+Então, se eu estiver no PC zero,
+
+03:52.095 --> 03:55.951
+Vou em frente e
+pingar um dos outros PCs.
+
+03:55.951 --> 03:59.451
+Sabemos que como tenho o endereço 100,
+
+04:00.520 --> 04:05.132
+os outros dois dispositivos possuem
+os endereços 101 e 102.
+
+04:05.132 --> 04:09.299
+Então, vamos tentar fazer ping
+nesses dois computadores.
+
+04:18.733 --> 04:22.956
+E como você pode ver, podemos
+alcançar aquele computador 101,
+
+04:22.956 --> 04:25.289
+que é PC1 em nosso diagrama.
+
+04:27.879 --> 04:32.046
+E então vamos tentar
+configurar, quero dizer, fazer ping no PC2.
+
+04:50.143 --> 04:53.560
+E você pode ver que podemos alcançar o PC2 também.
+
+04:53.560 --> 04:58.553
+Então as informações que estavam
+na configuração do roteador
+
+04:58.553 --> 05:01.577
+para DHCP determinou quais endereços IP
+
+05:01.577 --> 05:05.744
+seriam atribuído a todos
+os PCs na rede.
+

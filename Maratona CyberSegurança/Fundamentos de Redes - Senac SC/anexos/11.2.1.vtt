@@ -1,0 +1,201 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.480 --> 00:08.453
+- Oi, nesta aula vamos conversar
+
+00:08.453 --> 00:10.203
+sobre como o DHCP funciona.
+
+00:12.384 --> 00:15.723
+Anteriormente, você aprendeu que
+as atribuições de endereço IP podem
+
+00:15.723 --> 00:19.043
+ser distribuídas de duas
+maneiras, estaticamente, significando
+
+00:19.043 --> 00:21.355
+que alguém realmente
+se senta e configura
+
+00:21.355 --> 00:25.395
+o endereço IP, ou
+dinamicamente, onde o dispositivo
+
+00:25.395 --> 00:28.395
+obtém seu endereço de um servidor DHCP.
+
+00:29.744 --> 00:32.327
+DHCP significa o protocolo que está
+
+00:34.523 --> 00:37.606
+sendo usado para obter esse endereço IP.
+
+00:38.475 --> 00:42.642
+DHCP significa protocolo de configuração de host dinâmico .
+
+00:44.472 --> 00:46.923
+Então, como funciona esse protocolo?
+
+00:46.923 --> 00:49.504
+O protocolo descreve um conjunto de mensagens
+
+00:49.504 --> 00:52.893
+que vão entre o host
+que deseja um endereço IP
+
+00:52.893 --> 00:57.275
+e o servidor DHCP que
+fornece o endereço IP.
+
+00:57.275 --> 01:02.034
+Então, basicamente, o que temos
+é, temos um host
+
+01:02.034 --> 01:05.951
+que envia um pacote
+chamado descoberta de DHCP.
+
+01:09.803 --> 01:13.702
+E o que este pacote está
+fazendo é realmente procurar
+
+01:13.702 --> 01:15.202
+para um servidor DHCP.
+
+01:16.782 --> 01:19.343
+O pacote é um pacote de broadcast,
+
+01:19.343 --> 01:23.030
+e contém o
+endereço MAC do dispositivo
+
+01:23.030 --> 01:26.697
+solicitando o endereço IP
+e é destinado
+
+01:28.253 --> 01:31.223
+para qualquer dispositivo na
+rede que esteja configurado
+
+01:31.223 --> 01:32.890
+para ser um servidor DHCP.
+
+01:34.373 --> 01:37.682
+Que tipo de dispositivos podem ser servidores DHCP?
+
+01:37.682 --> 01:41.213
+Normalmente, em uma
+rede doméstica, o roteador doméstico,
+
+01:41.213 --> 01:43.732
+o roteador sem fio ou o roteador com fio,
+
+01:43.732 --> 01:46.315
+está configurado para fornecer DHCP.
+
+01:47.293 --> 01:51.126
+Em ambientes maiores,
+muitas vezes é um servidor
+
+01:52.382 --> 01:54.424
+que estaria fazendo outras funções,
+
+01:54.424 --> 01:57.602
+como o controle de domínio da Microsoft , ou pode
+
+01:57.602 --> 02:02.493
+ser um servidor LINUX que também
+funciona como um servidor web.
+
+02:02.493 --> 02:06.064
+Então, basicamente, o
+servidor DHCP pode ser um número
+
+02:06.064 --> 02:08.234
+de diferentes tipos de dispositivos.
+
+02:08.234 --> 02:11.384
+Então, quando a descoberta DHCP sai,
+
+02:11.384 --> 02:15.133
+uma vez que é um broadcast,
+qualquer servidor DHCP conectado
+
+02:15.133 --> 02:17.633
+à rede vai ouvir isso.
+
+02:18.835 --> 02:21.252
+O servidor DHCP então responde
+
+02:24.893 --> 02:26.393
+com uma oferta DHCP.
+
+02:34.053 --> 02:37.720
+O pacote de oferta DHCP
+contém um endereço IP
+
+02:38.704 --> 02:42.613
+que o host, o dispositivo individual,
+
+02:42.613 --> 02:45.594
+poderá usar, se aceitar.
+
+02:45.594 --> 02:49.205
+Quando o host recebe
+o pacote de oferta DHCP
+
+02:49.205 --> 02:53.122
+do servidor DHCP que
+contém o endereço IP,
+
+02:56.435 --> 02:59.768
+e aqui está o endereço IP que foi enviado,
+
+03:00.675 --> 03:02.342
+e a máscara de sub-rede,
+
+03:08.093 --> 03:11.343
+bem como o endereço de gateway padrão.
+
+03:18.064 --> 03:21.564
+Uma vez que o host recebe isso, ele envia de volta
+
+03:22.555 --> 03:26.722
+um pacote de solicitação DHCP para
+aceitar a oferta.
+
+03:29.725 --> 03:32.493
+E ele solicitará o endereço IP
+
+03:32.493 --> 03:35.993
+que o servidor enviou, 192.168.1.15.
+
+03:39.355 --> 03:42.855
+O dispositivo irá então pegar esta informação
+
+03:43.901 --> 03:47.401
+e inseri-la em suas configurações de endereço IP.
+
+03:48.861 --> 03:51.712
+E nesse momento, uma vez que o servidor recebe
+
+03:51.712 --> 03:55.081
+a solicitação DHCP, o
+servidor enviará de volta
+
+03:55.081 --> 03:59.803
+uma confirmação de DHCP que
+indicará ao host
+
+03:59.803 --> 04:03.303
+que o servidor está colocando este endereço IP
+
+04:04.910 --> 04:07.981
+em sua tabela associada
+ao endereço MAC
+
+04:07.981 --> 04:10.314
+que foi enviado pelo host.
+

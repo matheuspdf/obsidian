@@ -101,7 +101,7 @@ Qual protocolo é responsável pela atribuição automática de informações de
 # 11.2 Configuração do DHCPv4
 
 ## 11.2.1 Vídeo - Operação do DHCPv4
-
+![[11.2.1.mp4#subtitle=anexos/11.2.1.vtt]]
 Nesta aula vamos conversar sobre como o DHCP funciona.
 
 Anteriormente, você aprendeu que as atribuições de endereço IP podem ser distribuídas de duas maneiras: estaticamente, significando que alguém realmente se senta e configura o endereço IP, ou dinamicamente, onde o dispositivo obtém seu endereço de um servidor DHCP.
@@ -121,7 +121,7 @@ Uma vez que o host recebe isso, ele envia de volta um pacote de **solicitação 
 E nesse momento, uma vez que o servidor recebe a solicitação DHCP, o servidor enviará de volta uma **confirmação de DHCP** que indicará ao host que o servidor está colocando este endereço IP em sua tabela associada ao endereço MAC que foi enviado pelo host.
 
 ## 11.2.2 Vídeo - Configuração do Serviço DHCP
-
+![[11.2.2.mp4#subtitle=anexos/11.2.2.vtt]]
 Existem duas maneiras de obter um endereço IP em um dispositivo. Uma maneira é configurá-lo manualmente, ou configurá-lo estaticamente, como é chamado no Microsoft Windows. A outra maneira é obtê-lo automaticamente de um dispositivo que fornece DHCP.
 
 Na pequena rede mostrada no Packet Tracer, temos três PCs conectados a um roteador habilitado para DHCP. Basicamente, este é um dispositivo muito semelhante ao que você deve ter em casa. O dispositivo tem uma porta de switch, uma antena para wireless e uma conexão com a internet. Este tipo de configuração está disponível em quase todos os roteadores sem fio domésticos.
