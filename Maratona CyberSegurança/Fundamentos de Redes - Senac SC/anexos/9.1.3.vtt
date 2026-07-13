@@ -1,0 +1,59 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.514 --> 00:08.288
+- Neste vídeo, vamos dar uma olhada
+
+00:08.288 --> 00:11.288
+nas transmissões de broadcast.
+
+00:11.288 --> 00:15.455
+Então temos um pacote com o
+endereço IPv4 de origem 172.16.4.1
+
+00:19.460 --> 00:23.627
+e um endereço IPv4 de destino
+de 255.255.255.255.
+
+00:28.912 --> 00:30.188
+Esse é um endereço especial,
+
+00:30.188 --> 00:34.355
+o que significa que é destinado a todos os
+dispositivos da rede.
+
+00:35.923 --> 00:38.722
+É conhecido como broadcast.
+
+00:38.722 --> 00:41.037
+Se olharmos aqui,
+
+00:41.037 --> 00:44.287
+o pacote sai da fonte 172.16.4.1
+
+00:45.902 --> 00:50.069
+e observe que nosso
+switch Ethernet inundou o pacote em
+
+00:50.909 --> 00:55.012
+todas as portas, exceto a porta de entrada.
+
+00:55.012 --> 00:59.724
+E foi recebido por
+todos os dispositivos da rede.
+
+00:59.724 --> 01:02.262
+Agora, quando este roteador
+recebe a transmissão,
+
+01:02.262 --> 01:07.236
+ele não encaminhará o pacote de broadcast
+para outras redes.
+
+01:07.236 --> 01:11.338
+Mas um broadcast significa
+que todos os dispositivos na rede
+
+01:11.338 --> 01:13.755
+receberão o pacote IPv4.
+

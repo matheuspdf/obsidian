@@ -19,7 +19,7 @@ Kishori tem um novo paciente, Divya, que foi internado hoje. Como Srinivas, Divy
 # 9.1 Unicast, broadcast e multicast IPv4
 
 ## 9.1.1 Vídeo - Unicast IPv4
-
+![[9.1.1.mp4#subtitle=anexos/9.1.1.vtt]]
 Neste vídeo, vamos dar uma olhada na transmissão IP unicast. Então aqui temos o HOST 172.16.4.1. Ele vai enviar um pacote unicast — é um pacote onde o endereço IP de destino é destinado a um único dispositivo. E vai enviá-lo para o endereço IP de destino da impressora em 172.16.4.253.
 
 Portanto, o endereço IP de origem é 172.16.4.1 e o endereço IP de destino do pacote é 172.16.4.253. Podemos ver aqui que o pacote vai de um único dispositivo para um único dispositivo, neste caso a impressora. E, a propósito, um endereço IP de origem só pode ser unicast. O que queremos dizer com isso é que um pacote só pode se originar a partir de um único dispositivo. Neste caso, o endereço de destino também é um unicast, o que significa que é destinado apenas a um único dispositivo.
@@ -39,7 +39,7 @@ Os endereços de host unicast IPv4 estão no intervalo de endereços de 1.1.1.1 
 **Observação:** Na animação, observe que a máscara de sub-rede para 255.255.255.0 é representada usando a notação de barra ou / 24. Isso indica que a máscara de sub-rede tem 24 bits. A máscara de sub-rede 255.255.255.0 em binário é 11111111.11111111.11111111.00000000.
 
 ## 9.1.3 Vídeo - Broadcast IPv4
-
+![[9.1.3.mp4#subtitle=anexos/9.1.3.vtt]]
 Neste vídeo, vamos dar uma olhada nas transmissões de broadcast. Então temos um pacote com o endereço IPv4 de origem 172.16.4.1 e um endereço IPv4 de destino de 255.255.255.255.
 
 Esse é um endereço especial, o que significa que é destinado a todos os dispositivos da rede. É conhecido como broadcast. Se olharmos aqui, o pacote sai da fonte 172.16.4.1 e observe que nosso switch Ethernet inundou o pacote em todas as portas, exceto a porta de entrada. E foi recebido por todos os dispositivos da rede.
@@ -62,7 +62,7 @@ Pacotes de transmissão usam recursos na rede e fazem com que todos os hosts rec
 
 
 ## 9.1.5 Vídeo - Multicast IPv4
-
+![[9.1.5.mp4#subtitle=anexos/9.1.5.vtt]]
 Neste vídeo, vamos dar uma olhada nas transmissões de multicast. Então temos um pacote com o endereço IPv4 de origem 172.16.4.1 e um endereço IPv4 de destino de 224.0.0.10.
 
 Esse é um endereço multicast especial. O multicast é diferente do broadcast porque é destinado apenas a um grupo específico de dispositivos que optaram por receber o tráfego multicast. Não é destinado a todos os dispositivos da rede como no broadcast.

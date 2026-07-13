@@ -174,7 +174,8 @@ fe80 : 0000 : 0000 : 0000 : 0123 : 4567 : 89ab: cdef
 
 Os endereços IPv6 têm 128 bits de comprimento e são escritos como uma string de valores hexadecimais. Os endereços IPv6 não diferenciam maiúsculas de minúsculas e podem ser escritos em letras minúsculas ou maiúsculas.
 
-![[Pasted image 20260530234521.png]]
+![[10.2.3.mp4#subtitle=anexos/10.2.3.vtt]]
+
 Cada quatro bits é representado por um único dígito hexadecimal, para um total de 32 valores hexadecimais. Por exemplo, o dígito hexadecimal dois é o equivalente em binário aos quatro bits 0010 0010. Conjuntos de quatro dígitos hexadecimais são separados por dois pontos. Cada dígito hexadecimal tem quatro bits, o que facilita a representação do endereço IPv6 de 128 bits.
 
 Cada conjunto de quatro segmentos hexadecimais às vezes é chamado de hexteto. Quando escrito com todos os 32 dígitos hexadecimais, este é conhecido como formato preferencial, o que não significa que seja sempre a forma preferida de exibir o endereço.
