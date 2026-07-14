@@ -1,0 +1,454 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.486 --> 00:07.951
+- Nesta lição vamos falar sobre
+
+00:07.951 --> 00:11.784
+os dois
+protocolos da camada de transporte, TCP e UDP.
+
+00:13.075 --> 00:15.843
+E eu vou começar com UDP.
+
+00:15.843 --> 00:20.110
+UDP é um protocolo
+usado principalmente em streaming
+
+00:20.110 --> 00:22.443
+ou comunicações em tempo real.
+
+00:23.359 --> 00:26.192
+E a razão pela qual o UDP funciona melhor
+
+00:27.144 --> 00:29.175
+nesses tipos de ambientes
+
+00:29.175 --> 00:33.342
+é que o UDP não está atrelado
+a um monte de sobrecarga.
+
+00:35.069 --> 00:39.174
+Vou explicar isso com
+um pouco mais de detalhes.
+
+00:39.174 --> 00:41.749
+Na camada de transporte,
+
+00:41.749 --> 00:46.654
+o que acontece é que
+as comunicações, ou seja, dados,
+
+00:46.654 --> 00:49.154
+que são uma grande sequência de bits,
+
+00:52.992 --> 00:55.753
+e assim por diante, imagine
+quantos bits existem
+
+00:55.753 --> 00:59.670
+em uma página da Web, em um e-mail
+ou em um filme transmitido.
+
+01:00.828 --> 01:02.578
+E cada um desses
+
+01:04.007 --> 01:05.090
+segmentos de dados
+
+01:06.525 --> 01:09.899
+são movidos para baixo, para a camada de transporte.
+
+01:09.899 --> 01:13.982
+Na camada de transporte,
+eles são divididos em segmentos.
+
+01:16.522 --> 01:19.013
+E cada um desses segmentos recebe
+
+01:19.013 --> 01:21.380
+informações de porta no cabeçalho.
+
+01:21.380 --> 01:24.047
+Então, é a partir de, digamos, uma porta aleatória,
+
+01:25.487 --> 01:29.320
+5105, como origem
+
+01:31.186 --> 01:33.269
+e vamos dizer
+
+01:33.705 --> 01:35.756
+o destino
+
+01:35.756 --> 01:39.256
+é um servidor DNS, então essa seria a porta 53.
+
+01:41.406 --> 01:44.817
+Cada um desses segmentos é rotulado com
+
+01:44.817 --> 01:47.990
+a porta de origem e a porta de destino
+
+01:47.990 --> 01:51.981
+para que eles se tornem parte
+da mesma conversa.
+
+01:51.981 --> 01:56.148
+Agora, quando estes forem
+transmitidos através de uma rede,
+
+01:57.345 --> 01:59.341
+digamos, como a internet
+
+01:59.341 --> 02:03.409
+eles podem não ir todos
+exatamente da mesma maneira.
+
+02:03.409 --> 02:05.931
+Alguns deles podem se perder ao longo do caminho
+
+02:05.931 --> 02:08.212
+ou eles podem ficar fora de ordem.
+
+02:08.212 --> 02:12.484
+Mas em tempo real, por
+exemplo, ouvindo minha voz
+
+02:12.484 --> 02:13.903
+em tempo real,
+
+02:13.903 --> 02:17.227
+se estivéssemos tendo uma conversa por telefone IP
+
+02:17.227 --> 02:19.875
+se um pacote é perdido
+
+02:19.875 --> 02:22.192
+nós provavelmente não perceberíamos isso a menos que
+
+02:22.192 --> 02:24.718
+fosse um longo fluxo de pacotes.
+
+02:24.718 --> 02:28.984
+Então, basicamente, em tempo real,
+nós apenas deixamos que esses pacotes
+
+02:28.984 --> 02:33.739
+tomarem seu caminho da
+origem ao destino
+
+02:33.739 --> 02:37.533
+digamos, o servidor DNS,
+
+02:37.533 --> 02:40.116
+e que a resposta retorne.
+
+02:43.022 --> 02:46.473
+Não estamos tão preocupados
+com alguns pacotes
+
+02:46.473 --> 02:50.059
+sendo perdidos no caminho ou fora de ordem
+
+02:50.059 --> 02:52.211
+quando eles forem recebidos
+
+02:52.211 --> 02:55.508
+porque, em tempo real, isso não vai importar
+
+02:55.508 --> 02:57.507
+porque não vamos
+voltar para resgatar
+
+02:57.507 --> 03:00.519
+essas outras coisas e a demora em esperar
+
+03:00.519 --> 03:04.352
+seria mais disruptivo
+para as comunicações
+
+03:05.236 --> 03:08.251
+do que perder esses poucos pacotes.
+
+03:08.251 --> 03:11.012
+Mas definitivamente existem aplicações
+
+03:11.012 --> 03:14.095
+onde até mesmo perder um único pacote seria
+
+03:15.778 --> 03:17.556
+catastrófico.
+
+03:17.556 --> 03:20.480
+Por exemplo, em uma transferência bancária,
+
+03:20.480 --> 03:25.244
+se estivéssemos enviando milhões
+de dólares pela internet
+
+03:25.244 --> 03:27.725
+e perdemos alguns pacotes que aconteçam de ser
+
+03:27.725 --> 03:30.278
+os que continham
+os números das contas
+
+03:30.278 --> 03:32.528
+seria muito chato
+
+03:33.611 --> 03:37.359
+para as pessoas que perderam suas informações.
+
+03:37.359 --> 03:41.359
+Então, vamos falar agora sobre
+o outro protocolo TCP.
+
+03:43.704 --> 03:46.711
+Quando os networkers falam sobre UDP e TCP
+
+03:46.711 --> 03:50.539
+eles falam sobre eles em
+termos de confiabilidade.
+
+03:50.539 --> 03:53.180
+Por confiabilidade, o que eles querem dizer é que
+
+03:53.180 --> 03:56.031
+se os pacotes forem perdidos em um fluxo UDP
+
+03:56.031 --> 03:57.654
+eles não são retransmitidos
+
+03:57.654 --> 04:00.455
+e não há nenhuma preocupação acontecendo
+
+04:00.455 --> 04:02.937
+sobre se eles chegam ou não lá.
+
+04:02.937 --> 04:03.770
+Mas em TCP
+
+04:05.943 --> 04:07.943
+confiabilidade é construída,
+
+04:09.234 --> 04:12.484
+não em se
+algum pacote é descartado ou não,
+
+04:12.484 --> 04:16.219
+mas no fato de haver
+um mecanismo que garante
+
+04:16.219 --> 04:19.178
+que o menor número
+de pacotes seja descartado
+
+04:19.178 --> 04:22.230
+e em segundo lugar, que se algum for descartado
+
+04:22.230 --> 04:25.646
+eles serão retransmitidos automaticamente.
+
+04:25.646 --> 04:27.559
+Que o aplicativo do usuário final
+
+04:27.559 --> 04:30.082
+não precise se preocupar com isso.
+
+04:30.082 --> 04:30.915
+Então, nas comunicações
+
+04:32.376 --> 04:33.511
+TCP,
+
+04:33.511 --> 04:35.910
+temos uma origem e um destino
+
+04:35.910 --> 04:39.160
+assim como tivemos nas comunicações UDP.
+
+04:40.062 --> 04:43.562
+Mas cada segmento TCP tem um número de sequência
+
+04:46.332 --> 04:47.332
+em adição
+
+04:50.607 --> 04:54.190
+aos números de porta de origem e
+destino.
+
+05:01.752 --> 05:05.376
+Por exemplo, se estivéssemos
+buscando uma página web
+
+05:05.376 --> 05:08.551
+e estivéssemos enviando a solicitação de página Web
+
+05:08.551 --> 05:12.718
+teríamos como origem
+novamente, nosso número de porta aleatório
+
+05:14.609 --> 05:17.006
+e o número da porta de destino
+seria 80
+
+05:17.006 --> 05:20.751
+que é a porta TCP
+atribuída a um servidor web.
+
+05:20.751 --> 05:23.143
+Então teríamos um número de sequência
+
+05:23.143 --> 05:26.393
+atribuído a cada um desses segmentos.
+
+05:28.232 --> 05:32.051
+Isso é para que quando ele for transmitido pela internet
+
+05:32.051 --> 05:33.134
+para o servidor
+
+05:35.348 --> 05:39.746
+que o servidor possa
+receber esses pacotes
+
+05:39.746 --> 05:43.046
+e poder contabilizar de cada um.
+
+05:43.046 --> 05:47.471
+Então, por exemplo, se isso
+é um, dois e três,
+
+05:47.471 --> 05:50.318
+e o servidor pegou todos eles
+
+05:50.318 --> 05:54.579
+enviaria de volta uma confirmação dizendo que
+
+05:54.579 --> 05:57.709
+quer que eu comece a próxima sequência com quatro
+
+05:57.709 --> 06:00.709
+então eu enviaria o próximo conjunto de
+
+06:01.986 --> 06:03.819
+pacotes pelo caminho.
+
+06:05.038 --> 06:08.824
+A comunicação constante ocorre
+entre os dois dispositivos
+
+06:08.824 --> 06:10.893
+e esta é a sobrecarga
+que eu estava falando
+
+06:10.893 --> 06:12.404
+anteriormente.
+
+06:12.404 --> 06:16.571
+A comunicação constante ocorre
+entre os dois dispositivos finais
+
+06:17.450 --> 06:19.617
+a origem e o destino
+
+06:20.543 --> 06:24.375
+para determinar quantos pacotes são enviados
+
+06:24.375 --> 06:27.498
+antes que um reconhecimento retorne.
+
+06:27.498 --> 06:30.431
+Em uma conexão muito confiável
+
+06:30.431 --> 06:34.739
+eventualmente, isso pode se realizar com centenas
+de milhares de pacotes.
+
+06:34.739 --> 06:36.406
+Em comunicações muito pouco
+
+06:38.341 --> 06:39.598
+confiáveis,
+
+06:39.598 --> 06:43.105
+digamos, por exemplo, através do link de satélite
+
+06:43.105 --> 06:45.496
+percorrendo todo o mundo,
+
+06:45.496 --> 06:49.663
+onde há a possibilidade
+de muitos pacotes serem descartados
+
+06:50.507 --> 06:53.552
+a janela de pacotes que sera irá antes
+
+06:53.552 --> 06:57.592
+de uma confirmação
+ficará cada vez menor.
+
+06:57.592 --> 07:00.593
+Isso garante que um
+menor número de pacotes
+
+07:00.593 --> 07:04.903
+na verdade, sejam descartados porque
+estão sendo confirmados
+
+07:04.903 --> 07:08.644
+muito mais frequentemente em
+uma conexão não confiável
+
+07:08.644 --> 07:12.434
+do que estariam em uma
+conexão muito confiável.
+
+07:12.434 --> 07:15.486
+Então a diferença entre TCP e UDP
+
+07:15.486 --> 07:18.319
+é que o TCP tem uma confirmação
+
+07:26.012 --> 07:28.179
+de recebimento dos pacotes.
+
+07:36.261 --> 07:41.258
+E esses números de sequência também
+permitem que o host de destino
+
+07:41.258 --> 07:45.608
+coloquem os pacotes de volta na
+ordem em que foram enviados
+
+07:45.608 --> 07:49.154
+por isso tem tempo para obtê-losna ordem exata.
+
+07:49.154 --> 07:50.487
+No entanto, com UDP
+
+07:51.726 --> 07:53.976
+não há confirmações
+
+08:00.495 --> 08:02.495
+e nem números de sequência.
+
+08:11.846 --> 08:14.782
+Cada protocolo, porém, tem seu lugar
+
+08:14.782 --> 08:17.055
+nas comunicações pela internet
+
+08:17.055 --> 08:18.555
+e muitas vezes é a
+
+08:19.508 --> 08:23.221
+criticidade de cada pacote que está sendo recebido
+
+08:23.221 --> 08:26.554
+que faz a diferença se
+
+08:27.967 --> 08:30.967
+a transmissão será enviada ou não via UDP ou TCP.
+
