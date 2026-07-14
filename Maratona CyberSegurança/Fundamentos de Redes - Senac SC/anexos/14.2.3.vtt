@@ -1,0 +1,321 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.569 --> 00:08.618
+- Nesta próxima parte,
+
+00:08.618 --> 00:11.868
+teremos H1 em 192.168.1.10,
+
+00:13.676 --> 00:15.935
+esse é o endereço IPv4,
+
+00:15.935 --> 00:18.518
+enviar um pacote, e um pacote IPv4,
+
+00:19.850 --> 00:21.933
+para 192.168.2.50, host H3.
+
+00:24.685 --> 00:27.531
+Então, H1, a origem do pacote,
+
+00:27.531 --> 00:29.990
+constrói o pacote IPv4.
+
+00:29.990 --> 00:31.931
+O endereço IPv4 de origem,
+
+00:31.931 --> 00:35.098
+é seu próprio endereço IPv4, 192.168.1.10.
+
+00:36.587 --> 00:41.169
+O endereço IPv4 de destino
+é o destino final,
+
+00:41.169 --> 00:43.419
+o de H3 em 192.168.2.50.
+
+00:46.993 --> 00:49.793
+Agora, H1 precisa determinar,
+
+00:49.793 --> 00:54.283
+o endereço IPv4 de destino
+, o de H3, está
+
+00:54.283 --> 00:56.783
+na mesma rede que eu?
+
+00:59.539 --> 01:03.706
+Agora, mais uma vez, ele conhece seu
+endereço IPv4, 192.168.1.10,
+
+01:04.857 --> 01:07.940
+que está na rede 192.168.1.0.
+
+01:10.115 --> 01:12.718
+Ele analisa o endereço IPv4 de destino,
+
+01:12.718 --> 01:15.577
+usando sua própria máscara de sub-rede.
+
+01:15.577 --> 01:19.939
+Determina que o
+endereço de destino,
+
+01:19.939 --> 01:22.852
+está em outra rede.
+
+01:22.852 --> 01:25.935
+Não está na rede 192.168.1.0,
+
+01:27.075 --> 01:29.742
+está na 192.168.2.0 talvez.
+
+01:32.032 --> 01:35.315
+Tudo o que sabe é que
+não está na minha rede.
+
+01:35.315 --> 01:38.217
+Então, H1 diz, ok, não
+posso enviar este pacote
+
+01:38.217 --> 01:40.592
+diretamente ao dispositivo.
+
+01:40.592 --> 01:44.759
+Eu preciso enviá-lo para o meu
+gateway padrão, o roteador.
+
+01:47.310 --> 01:50.310
+Então, H1 conhece o endereço IPv4 do
+
+01:51.309 --> 01:53.529
+gateway padrão do roteador.
+
+01:53.529 --> 01:56.109
+Como parte das informações de configuração
+
+01:56.109 --> 02:00.489
+todo dispositivo deve ter,
+para alcançar outras redes.
+
+02:00.489 --> 02:04.656
+Então, ele sabe que o endereço IPv4
+do roteador é 192.168.1.1.
+
+02:07.427 --> 02:11.598
+O que ele precisa saber é
+qual é o gateway padrão,
+
+02:11.598 --> 02:14.931
+qual é o endereço MAC desse endereço IPv4?
+
+02:16.489 --> 02:20.089
+Portanto, ele verifica seu cache ARP
+para esse endereço MAC.
+
+02:20.089 --> 02:23.267
+Vamos supor que
+já tenha essa informação
+
+02:23.267 --> 02:24.684
+em seu cache ARP.
+
+02:26.889 --> 02:30.373
+A NIC Ethernet associada
+a esta interface,
+
+02:30.373 --> 02:32.003
+com esta interface do roteador,
+
+02:32.003 --> 02:35.170
+vamos abreviar em 11-11.
+
+02:36.185 --> 02:38.809
+E, novamente, se ele não
+soubesse essa informação,
+
+02:38.809 --> 02:40.180
+ele enviaria uma solicitação ARP, para
+
+02:40.180 --> 02:43.422
+obter uma resposta ARP do roteador.
+
+02:43.422 --> 02:47.589
+Ok, agora este
+quadro Ethernet é enviado de H1
+
+02:51.061 --> 02:52.311
+e é recebido
+
+02:53.827 --> 02:54.994
+pelo roteador.
+
+02:55.907 --> 02:59.545
+O roteador recebe isso, diz
+que sim, esse é o meu destino
+
+02:59.545 --> 03:02.491
+Endereço MAC, este quadro é para mim.
+
+03:02.491 --> 03:05.769
+Então, o que ele faz, é
+realmente remover essa
+
+03:05.769 --> 03:08.102
+informação do cabeçalho Ethernet.
+
+03:11.406 --> 03:13.385
+Agora o roteador vai fazer o seu trabalho
+
+03:13.385 --> 03:16.442
+o que chamamos de encaminhamento de camada 3,
+
+03:16.442 --> 03:18.446
+ele vai fazer o roteamento.
+
+03:18.446 --> 03:22.569
+Ele procura o
+endereço IPv4 de destino do pacote,
+
+03:22.569 --> 03:25.646
+olhando sua tabela de roteamento.
+
+03:25.646 --> 03:26.649
+Então, ele diz, ok,
+
+03:26.649 --> 03:30.316
+este endereço IPv4 de destino
+, 192.168.2.50,
+
+03:32.238 --> 03:36.071
+oh, isso é um membro da
+rede 192.168.2.0
+
+03:37.544 --> 03:39.747
+na minha tabela de roteamento.
+
+03:39.747 --> 03:43.566
+Eu posso alcançar essa rede
+enviando o pacote
+
+03:43.566 --> 03:45.983
+pela Fast-Ethernet 0/2.
+
+03:47.675 --> 03:50.744
+Então, ele quer enviar este pacote
+
+03:50.744 --> 03:52.327
+por esta interface.
+
+03:53.343 --> 03:55.145
+Então, ele vai encapsulá-lo agora,
+
+03:55.145 --> 03:57.145
+em um novo quadro Ethernet.
+
+03:58.366 --> 04:00.489
+Assim, o novo quadro Ethernet
+terá, na verdade, o
+
+04:00.489 --> 04:04.656
+endereço MAC de origem desta
+placa de interface de rede do roteador.
+
+04:06.745 --> 04:10.912
+Na verdade, ele terá o
+endereço MAC de origem de 22-22.
+
+04:12.921 --> 04:17.065
+Lembre-se, a camada Ethernet 2
+é para placa de interface de rede
+
+04:17.065 --> 04:20.158
+para comunicações de placa de interface de rede
+
+04:20.158 --> 04:21.825
+na mesma rede.
+
+04:23.205 --> 04:25.049
+Ok, estamos quase lá.
+
+04:25.049 --> 04:26.846
+A próxima coisa que tem que fazer é,
+
+04:26.846 --> 04:30.889
+ok, oh, o endereço IPv4 de destino,
+
+04:30.889 --> 04:32.624
+que está na minha rede.
+
+04:32.624 --> 04:36.374
+Eu, roteador R1, posso alcançar
+esse dispositivo diretamente.
+
+04:38.067 --> 04:41.484
+Eu preciso saber o endereço MAC associado
+
+04:42.555 --> 04:44.472
+com este endereço IPv4.
+
+04:46.569 --> 04:48.185
+Então adivinhe?
+
+04:48.185 --> 04:52.729
+Na verdade, ele verifica seu próprio
+cache ARP para essas informações
+
+04:52.729 --> 04:56.364
+e vamos supor
+que ele tenha essa informação.
+
+04:56.364 --> 04:59.031
+Que saiba que 192.168.2.50,
+
+05:01.038 --> 05:02.663
+este dispositivo aqui,
+
+05:02.663 --> 05:04.830
+tem o endereço MAC CC-CC.
+
+05:07.289 --> 05:08.926
+Novamente, isso é abreviado
+
+05:08.926 --> 05:12.176
+mas vamos em frente e usar isso, CC-CC.
+
+05:14.904 --> 05:17.583
+Então, agora ele pode enviar este quadro Ethernet
+
+05:17.583 --> 05:21.083
+pela porta Fast Ethernet 0/2.
+
+05:22.900 --> 05:25.400
+Alterne para a frente para H3.
+
+05:26.991 --> 05:30.105
+Ele diz sim, o endereço MAC de destino,
+
+05:30.105 --> 05:34.432
+que está associado ao
+endereço MAC da minha placa NIC.
+
+05:34.432 --> 05:36.521
+Este quadro Ethernet é para mim.
+
+05:36.521 --> 05:38.618
+Ele recebe o pacote,
+
+05:38.618 --> 05:42.785
+ele diz que sim, esse
+endereço IPv4 é meu endereço IPv4,
+
+05:43.782 --> 05:45.843
+recebe o pacote.
+
+05:45.843 --> 05:48.963
+E é assim que um pacote é enviado
+
+05:48.963 --> 05:52.380
+de H1 a H3, em diferentes redes.
+

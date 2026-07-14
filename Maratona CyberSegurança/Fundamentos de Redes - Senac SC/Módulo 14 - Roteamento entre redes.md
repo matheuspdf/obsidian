@@ -142,7 +142,7 @@ Nesse caso, H1 verifica sua tabela ARP. Supondo que tem essa informação em sua
 Agora, H1 pode ir em frente e enviar este quadro Ethernet em direção ao switch, e ele é enviado diretamente para H2.
 
 ## 14.2.3 Vídeo - Mensagens dentro de redes e entre redes - Parte 2
-
+![[14.2.3.mp4#subtitle=anexos/14.2.3.vtt]]
 Nesta próxima parte, teremos H1 em 192.168.1.10 enviando um pacote IPv4 para 192.168.2.50, host H3.
 
 H1, a origem do pacote, constrói o pacote IPv4. O endereço IPv4 de origem é seu próprio endereço IPv4, 192.168.1.10. O endereço IPv4 de destino é o destino final, o de H3 em 192.168.2.50.
