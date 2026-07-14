@@ -21,7 +21,7 @@ Este módulo ajudará a Kishori a entender gateways e NAT. Você quer saber mais
 # 12.1 Limites de rede
 
 ## 12.1.1 Vídeo - Gateways para outras redes
-
+![[12.1.1.mp4#subtitle=anexos/12.1.1.vtt]]
 Nesta lição, falarei sobre gateways e, em particular, gateways padrão.
 
 Então, o que é um gateway? Um gateway, como a palavra indica, é uma maneira de o tráfego sair de uma rede local e ser encaminhado para outras redes remotas. Basicamente, pense no gateway padrão como a porta para fora da sala. Se eu quiser sair para o corredor, vou ter que sair pela porta. Quando um computador deseja enviar uma mensagem de sua rede local, precisa também sair de sua rede local e ser encaminhado para o destino real.
@@ -108,7 +108,7 @@ Para dois hosts, cada um em uma rede diferente, quais das afirmações a seguir 
 # 12.2 Tradução de Endereço de Rede (NAT)
 
 ## 12.2.1 Vídeo - Introdução ao NAT
-
+![[12.2.1.mp4#subtitle=anexos/12.2.1.vtt]]
 Nesta aula vamos conversar sobre como o DHCP funciona.
 
 Anteriormente, você aprendeu que as atribuições de endereço IP podem ser atribuídas de duas maneiras: estaticamente, significando que alguém realmente se senta e configura o endereço IP, ou dinamicamente, onde o dispositivo obtém seu endereço de um servidor DHCP.

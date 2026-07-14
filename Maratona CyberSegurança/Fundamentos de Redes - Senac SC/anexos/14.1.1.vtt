@@ -1,0 +1,343 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.195 --> 00:07.181
+- Nesta lição,
+
+00:07.181 --> 00:08.483
+vamos falar sobre
+
+00:08.483 --> 00:10.297
+como as redes crescem,
+
+00:10.297 --> 00:12.405
+torna-se necessário começar
+
+00:12.405 --> 00:15.807
+a dividí-las de uma
+única grande rede local
+
+00:15.807 --> 00:19.607
+para vários
+segmentos de rede local menores.
+
+00:19.607 --> 00:21.611
+Vamos olhar para a nossa empresa aqui
+
+00:21.611 --> 00:24.194
+que havíamos desenhado no quadro.
+
+00:25.297 --> 00:29.464
+E esta empresa consiste
+em três departamentos principais.
+
+00:30.503 --> 00:32.536
+Temos Gerenciamento de Rede.
+
+00:32.536 --> 00:34.265
+Temos o Departamento de Contabilidade.
+
+00:34.265 --> 00:36.973
+E nós temos o Departamento de Vendas.
+
+00:36.973 --> 00:39.738
+Agora, algumas das razões pelas
+quais você pode dividir
+
+00:39.738 --> 00:42.523
+uma rede em componentes menores.
+
+00:42.523 --> 00:44.014
+O primeiro é
+
+00:44.014 --> 00:47.604
+apenas para limitar a quantidade
+de tráfego de broadcast
+
+00:47.604 --> 00:49.421
+que atravessa a rede.
+
+00:49.421 --> 00:52.289
+Sempre que você gerar um broadcast,
+
+00:52.289 --> 00:55.622
+mesmo que eu esteja
+aqui no Gerenciamento de Rede,
+
+00:55.622 --> 00:58.150
+meu computador e todos os outros dispositivos
+
+00:58.150 --> 01:01.597
+na rede serão forçados a aceitar
+
+01:01.597 --> 01:04.590
+esse broadcast e processá-lo.
+
+01:04.590 --> 01:07.280
+A maioria dos broadcast não contém informações
+
+01:07.280 --> 01:10.425
+que cada dispositivo precisa saber.
+
+01:10.425 --> 01:14.215
+Portanto, há muitos broadcast
+que estão sendo processados
+
+01:14.215 --> 01:17.282
+pelo seu dispositivo que
+eventualmente estão sendo jogados fora
+
+01:17.282 --> 01:19.828
+porque as informações
+contidas nessa transmissão
+
+01:19.828 --> 01:22.205
+realmente não é necessária para nenhum aplicativo
+
+01:22.205 --> 01:24.159
+no seu dispositivo.
+
+01:24.159 --> 01:27.577
+Agora, essa é uma razão pela qual podemos
+
+01:27.577 --> 01:29.470
+querer dividir uma rede,
+
+01:29.470 --> 01:31.453
+é conter transmissões,
+
+01:31.453 --> 01:34.694
+para fazer domínios de broadcast menores.
+
+01:34.694 --> 01:38.000
+E o termo
+domínio de broadcast refere-se à área
+
+01:38.004 --> 01:40.307
+que ouve um broadcast,
+
+01:40.307 --> 01:42.321
+então, no caso desta rede,
+
+01:42.321 --> 01:44.080
+porque todos os dispositivos
+
+01:44.080 --> 01:45.885
+são ligados por switches,
+
+01:45.885 --> 01:48.021
+todos os broadcast seriam ouvidos
+
+01:48.021 --> 01:50.988
+por todos os dispositivos conectados.
+
+01:50.988 --> 01:52.946
+Agora, outra razão pela qual podemos
+
+01:52.946 --> 01:56.662
+desejar dividir nossa rede
+é para fins de segurança.
+
+01:56.662 --> 02:00.345
+Podemos não querer que pessoas
+no Departamento de Vendas
+
+02:00.345 --> 02:03.861
+sejam capazes de ver os dispositivos e servidores
+
+02:03.861 --> 02:05.923
+ou use as impressoras localizadas
+
+02:05.923 --> 02:08.059
+no Departamento de Contabilidade.
+
+02:08.059 --> 02:10.815
+Também podemos não querer que
+o Departamento de Contabilidade
+
+02:10.815 --> 02:14.674
+possa acessar os
+mecanismos de controle da rede
+
+02:14.674 --> 02:17.524
+que estão no Departamento de Gerenciamento de Rede .
+
+02:17.524 --> 02:19.300
+Então essa é outra razão pela qual nós
+
+02:19.300 --> 02:24.257
+podemos querer dividir nossa
+rede em pedaços menores.
+
+02:24.257 --> 02:27.954
+Uma das principais razões
+para querermos dividir a rede
+
+02:27.954 --> 02:32.115
+é dizer, por exemplo, que nosso
+Departamento de Contabilidade está se mudando.
+
+02:32.115 --> 02:34.445
+Eles têm um novo prédio ou um novo escritório
+
+02:34.445 --> 02:36.780
+em um andar diferente
+
+02:36.780 --> 02:39.347
+e eles vão se mudar para fora
+
+02:39.347 --> 02:42.746
+de onde nossa rede local
+pode realmente atendê-los.
+
+02:42.746 --> 02:47.486
+Então, pegar e dividir algo
+por localização geográfica
+
+02:47.486 --> 02:49.403
+exige que façamos os nossos
+
+02:50.415 --> 02:52.915
+segmentos de rede muito menores.
+
+02:54.661 --> 02:57.017
+Então, basicamente, como fazemos isso?
+
+02:57.017 --> 02:58.947
+Como dividimos uma rede
+
+02:58.947 --> 03:01.065
+que é uma grande rede
+
+03:01.065 --> 03:02.732
+em pedaços menores?
+
+03:04.001 --> 03:07.185
+Uma das maneiras que fazemos é com um roteador.
+
+03:07.185 --> 03:08.518
+Em todas as redes,
+
+03:10.860 --> 03:12.552
+a rede local,
+
+03:12.552 --> 03:14.650
+ou seja, a rede que
+pertence ao negócio,
+
+03:14.650 --> 03:17.233
+ou a casa, ou a empresa,
+
+03:18.308 --> 03:22.432
+essa rede é separada
+da internet
+
+03:22.432 --> 03:24.150
+por um roteador.
+
+03:24.150 --> 03:26.488
+Quando você compra sua conexão de rede doméstica,
+
+03:26.488 --> 03:30.374
+seu provedor de serviços coloca
+um roteador em sua casa.
+
+03:30.374 --> 03:32.606
+Isso para que o
+tráfego gerado
+
+03:32.606 --> 03:37.181
+pela sua rede não
+acaba na internet.
+
+03:37.181 --> 03:39.906
+A internet não ficaria feliz com isso.
+
+03:39.906 --> 03:40.989
+Então, basicamente,
+
+03:42.156 --> 03:44.352
+quando adicionamos um roteador,
+
+03:44.352 --> 03:47.335
+o roteador nos permite
+dividir a rede
+
+03:47.335 --> 03:51.535
+e também para dividir os domínios de broadcast.
+
+03:51.535 --> 03:54.035
+Então, se eu fosse inserir roteadores
+
+03:55.998 --> 03:58.165
+neste diagrama de rede,
+
+03:59.523 --> 04:02.023
+deixe-me desenhar alguns roteadores aqui.
+
+04:08.130 --> 04:10.715
+Quando insiro roteadores neste diagrama,
+
+04:10.715 --> 04:14.372
+Agora peguei uma
+rede relativamente grande
+
+04:14.372 --> 04:17.872
+e a dividi em três redes separadas.
+
+04:19.055 --> 04:19.939
+Em um roteador,
+
+04:19.939 --> 04:22.731
+cada interface em um roteador
+
+04:22.731 --> 04:26.723
+conecta e define
+uma rede separada.
+
+04:26.723 --> 04:28.517
+E quando estou falando
+de redes separadas
+
+04:28.517 --> 04:31.633
+estamos falando
+dos ambos domínios de broadcast,
+
+04:31.633 --> 04:34.216
+mas também diferentes redes IP,
+
+04:35.083 --> 04:37.181
+diferentes redes com diferentes
+
+04:37.181 --> 04:41.075
+conjuntos de endereços IP que
+identificam todas as pessoas
+
+04:41.075 --> 04:43.157
+dentro da rede como sendo
+
+04:43.157 --> 04:45.074
+na mesma rede IP.
+
+04:47.395 --> 04:51.562
+Então, basicamente, para recapitular as
+razões pelas quais dividimos uma rede.
+
+04:52.897 --> 04:55.719
+Dividimos a rede por segurança.
+
+04:55.719 --> 04:57.370
+Dividimos a rede porque queremos
+
+04:57.370 --> 05:00.714
+para manter domínios de broadcast menores.
+
+05:00.714 --> 05:03.507
+E dividimos a rede porque podemos
+
+05:03.507 --> 05:06.243
+estar movendo coisas para locais diferentes
+
+05:06.243 --> 05:09.660
+onde uma única grande rede não pode alcançar.
+

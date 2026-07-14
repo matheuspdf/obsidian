@@ -1,0 +1,103 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.579 --> 00:09.617
+- Neste vídeo, veremos
+como um roteador
+
+00:09.617 --> 00:14.360
+encaminha pacotes de uma
+rede para outra rede.
+
+00:14.360 --> 00:18.110
+Portanto, neste exemplo, temos
+Host em 10.0.0.1,
+
+00:19.358 --> 00:22.525
+deseja enviar um pacote para 192.168.1.2,
+
+00:24.930 --> 00:27.339
+que está em outra rede.
+
+00:27.339 --> 00:31.635
+Portanto, o endereço IP de origem
+do pacote será 10.0.0.1,
+
+00:31.635 --> 00:34.333
+o endereço IPv4 de destino do
+
+00:34.333 --> 00:36.583
+pacote será 192.168.1.2.
+
+00:39.205 --> 00:43.038
+Então H1 envia o pacote
+para seu gateway padrão,
+
+00:43.888 --> 00:45.136
+o roteador.
+
+00:45.136 --> 00:47.816
+Agora ele envia para o
+roteador porque sabe--
+
+00:47.816 --> 00:50.304
+H1 sabe que o destino,
+
+00:50.304 --> 00:54.221
+H4 seu endereço IPv4 está
+em uma rede diferente.
+
+00:55.917 --> 00:58.178
+O roteador recebe o pacote,
+
+00:58.178 --> 01:02.378
+e ele procura o
+endereço IPv4 de destino
+
+01:02.378 --> 01:06.048
+do pacote em sua tabela de roteamento.
+
+01:06.048 --> 01:08.798
+Ele percebe que o endereço IPv4,
+
+01:10.374 --> 01:13.437
+o endereço IPv4 de destino,
+
+01:13.437 --> 01:16.937
+192.168.1.2 está na rede 192.168.1.0.
+
+01:21.684 --> 01:25.851
+E essa rede está em sua
+interface Fast Ethernet 02.
+
+01:26.997 --> 01:31.364
+Assim, o roteador irá em frente
+e encaminhará este pacote para fora de sua
+
+01:31.364 --> 01:35.531
+Interface Fast Ethernet 02
+para o destino final.
+
+01:38.405 --> 01:41.915
+Agora, neste caso, H1 tem um pacote para enviar
+
+01:41.915 --> 01:45.915
+para o endereço IPv4 de destino
+255.255.255.255.
+
+01:50.576 --> 01:53.877
+Se você se lembra, isso é
+um endereço de broadcast.
+
+01:53.877 --> 01:58.044
+Assim, uma transmissão será enviada
+para todos os dispositivos em sua rede.
+
+01:59.466 --> 02:02.746
+Você notará que o roteador
+receberá esta transmissão
+
+02:02.746 --> 02:06.913
+mas não encaminhará este
+pacote para outras redes.
+

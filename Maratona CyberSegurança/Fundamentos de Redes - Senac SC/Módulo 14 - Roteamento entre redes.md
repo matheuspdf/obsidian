@@ -22,7 +22,7 @@ Kishori deixa o trabalho durante o dia e começa seu caminho de casa. Sua amiga 
 # 14.1 A necessidade do Roteamento
 
 ## 14.1.1 Vídeo - Dividindo a Rede Local
-
+![[14.1.1.mp4#subtitle=anexos/14.1.1.vtt]]
 Nesta lição, vamos falar sobre como, conforme as redes crescem, torna-se necessário começar a dividi-las de uma única grande rede local para vários segmentos de rede local menores.
 
 Vamos olhar para uma empresa que consiste em três departamentos principais: Gerenciamento de Rede, Departamento de Contabilidade e Departamento de Vendas.
@@ -59,10 +59,7 @@ Sempre que a porção de rede dos endereços IP dos hosts de origem e de destino
 **Clique em Play para ver como são usados os endereços MAC e IP.**
 
 ### Pacote IP Encapsulado em um Quadro Ethernet
-
-![[Pasted image 20260610065242.png]]
-![[Pasted image 20260610065258.png]]
-![[Pasted image 20260610065321.png]]
+![[brave_HcYmVzuVFp.mp4]]
 
 
 ## 14.1.3 Verifique sua compreensão - A necessidade de roteamento
@@ -114,6 +111,7 @@ O que é roteamento?
 
 ## 14.2.1 Vídeo - Encaminhamento de pacotes pelo roteador
 
+![[14.2.1.mp4#subtitle=anexos/14.2.1.vtt]]
 Neste vídeo, veremos como um roteador encaminha pacotes de uma rede para outra rede.
 
 Neste exemplo, temos o Host em 10.0.0.1 que deseja enviar um pacote para 192.168.1.2, que está em outra rede. Portanto, o endereço IP de origem do pacote será 10.0.0.1 e o endereço IPv4 de destino do pacote será 192.168.1.2.
@@ -126,7 +124,7 @@ Agora, neste caso, H1 tem um pacote para enviar para o endereço IPv4 de destino
 
 
 ## 14.2.2 Vídeo - Mensagens dentro de uma rede e entre redes - Parte 1
-
+![[14.2.2.mp4#subtitle=anexos/14.2.2.vtt]]
 Neste vídeo, vamos dar uma olhada em como as mensagens viajam dentro de uma rede e também entre redes.
 
 Nesta primeira parte, temos o host H1 em 192.168.1.10 que vai enviar um pacote para o endereço IPv4 de H2, 192.168.1.20.

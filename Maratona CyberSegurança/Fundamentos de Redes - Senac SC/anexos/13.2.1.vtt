@@ -1,0 +1,63 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.519 --> 00:08.448
+- Neste vídeo, vamos dar uma olhada
+
+00:08.448 --> 00:10.531
+em uma transmissão Ethernet.
+
+00:11.541 --> 00:15.301
+Uma transmissão Ethernet é quando
+o endereço MAC de destino
+
+00:15.301 --> 00:18.801
+é de 48 bits de um, ou em hexadecimal, todos os Fs.
+
+00:21.240 --> 00:22.821
+Então, olhando para a animação aqui,
+
+00:22.821 --> 00:26.988
+temos H1 irá enviar um broadcast
+para todos os outros dispositivos.
+
+00:29.051 --> 00:32.689
+Esta pode ser uma mensagem que seja preciso que todos os dispositivos
+
+00:32.689 --> 00:34.856
+em sua rede recebam.
+
+00:38.011 --> 00:40.269
+Assim, podemos ver que H1 envia o broadcast.
+
+00:40.269 --> 00:43.851
+Quando um switch recebe
+um broadcast Ethernet,
+
+00:43.851 --> 00:47.429
+ele inunda, ou encaminha,
+o quadro Ethernet para
+
+00:47.429 --> 00:50.469
+todas as portas, exceto a porta de entrada.
+
+00:50.469 --> 00:53.760
+O resultado é que todos os
+dispositivos na rede
+
+00:53.760 --> 00:55.800
+receberão a transmissão.
+
+00:55.800 --> 00:57.931
+Se tivermos um roteador na rede,
+
+00:57.931 --> 01:00.509
+ele também receberá a transmissão.
+
+01:00.509 --> 01:03.701
+No entanto, o roteador
+não encaminhará o broadcast
+
+01:03.701 --> 01:05.451
+para outras redes.
+

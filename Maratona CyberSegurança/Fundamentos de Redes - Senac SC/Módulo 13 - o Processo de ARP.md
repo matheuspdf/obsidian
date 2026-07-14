@@ -416,7 +416,7 @@ Quais dois protocolos são usados para determinar o endereço MAC de um endereç
 # 13.2 Contenção de Broadcast
 
 ## 13.2.1 Vídeo - O Broadcast Ethernet
-
+![[13.2.1.mp4#subtitle=anexos/13.2.1.vtt]]
 Neste vídeo, vamos dar uma olhada em uma transmissão Ethernet.
 
 Uma transmissão Ethernet é quando o endereço MAC de destino é de 48 bits de um, ou em hexadecimal, todos os Fs. Olhando para a animação, temos H1 que irá enviar um broadcast para todos os outros dispositivos. Esta pode ser uma mensagem que seja preciso que todos os dispositivos em sua rede recebam.
@@ -446,6 +446,7 @@ O host emissor pode usar um protocolo IPv4 chamado ARP (Address Resolution Proto
 
 ## 13.2.4 Vídeo - ARP (Protocolo de Resolução de Endereços)
 
+![[13.2.4.mp4#subtitle=anexos/13.2.4.vtt]]
 Neste vídeo, vamos apresentar o ARP, Protocolo de Resolução de Endereço.
 
 ARP é usado quando sabemos o endereço IPv4 para onde queremos enviar o pacote, mas o que não sabemos é o endereço MAC Ethernet do dispositivo.

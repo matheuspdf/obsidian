@@ -1,0 +1,263 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.452 --> 00:09.492
+- Nesta lição,
+falarei sobre gateways,
+
+00:09.492 --> 00:12.932
+e, em particular, gateways padrão.
+
+00:12.932 --> 00:15.070
+Então, o que é um gateway?
+
+00:15.070 --> 00:18.153
+Ok, um gateway, como a palavra indica,
+
+00:19.043 --> 00:22.960
+é uma maneira de o tráfego
+sair de uma rede local
+
+00:24.553 --> 00:28.497
+e ser encaminhado para outras redes remotas.
+
+00:28.497 --> 00:31.807
+Então, basicamente, pense
+no gateway padrão
+
+00:31.807 --> 00:34.029
+como a porta para fora da sala.
+
+00:34.029 --> 00:36.448
+Ok, a sala em que estou agora,
+
+00:36.448 --> 00:38.852
+se eu quiser sair para o
+corredor, vou ter
+
+00:38.852 --> 00:41.229
+que sair pela porta.
+
+00:41.229 --> 00:44.569
+Quando um computador deseja
+enviar uma mensagem de sua
+
+00:44.569 --> 00:47.569
+rede local, precisa também
+
+00:48.873 --> 00:51.956
+sair de sua rede local, e sair
+
+00:52.963 --> 00:57.167
+e ser encaminhado para
+o destino real.
+
+00:57.167 --> 01:00.048
+Como aprendemos anteriormente,
+os computadores descobrem
+
+01:00.048 --> 01:02.430
+se um destino está ou não em sua
+
+01:02.430 --> 01:05.892
+rede local
+passando por um processo
+
+01:05.892 --> 01:09.773
+de binário ANDing, que
+leva a máscara de sub-rede
+
+01:09.773 --> 01:13.356
+e faz um AND com o
+endereço IP de destino
+
+01:14.809 --> 01:17.849
+para determinar se a
+parte de rede do endereço
+
+01:17.849 --> 01:20.837
+é exatamente igual à parte da rede
+
+01:20.837 --> 01:22.504
+do host de envio.
+
+01:23.389 --> 01:27.550
+Então, no caso disso não ser verdade,
+
+01:27.550 --> 01:31.717
+o computador precisa realmente
+enviar o pacote para o gateway.
+
+01:32.829 --> 01:37.389
+Aprendemos que todo host
+em uma rede precisa ter,
+
+01:37.389 --> 01:41.892
+no mínimo, um endereço IP
+e uma máscara de sub-rede.
+
+01:41.892 --> 01:45.710
+Agora, se esse host pretende
+falar com destinos
+
+01:45.710 --> 01:48.048
+que não estão em sua rede local,
+
+01:48.048 --> 01:51.389
+também tem que ser
+configurado com o endereço
+
+01:51.389 --> 01:53.306
+de seu gateway padrão.
+
+01:54.847 --> 01:58.073
+Normalmente na rede de hoje,
+o gateway padrão
+
+01:58.073 --> 02:01.972
+configurado em um dispositivo
+é a interface do roteador
+
+02:01.972 --> 02:05.167
+que o tráfego chegaria em primeiro lugar
+
+02:05.167 --> 02:07.250
+seu caminho for a internet.
+
+02:08.449 --> 02:11.849
+Então, basicamente, se olharmos para mim,
+
+02:11.849 --> 02:14.692
+aqui no
+departamento de gerenciamento de rede,
+
+02:14.692 --> 02:17.123
+e se eu estivesse tentando
+acessar um servidor que está fora
+
+02:17.123 --> 02:20.814
+na internet, meu
+tráfego seria basicamente
+
+02:20.814 --> 02:24.669
+viajar através do meu switch e
+
+02:24.669 --> 02:28.669
+terminaria no endereço
+atribuído à interface,
+
+02:29.652 --> 02:32.489
+do roteador mais próxima de mim no
+
+02:32.489 --> 02:34.287
+caminho para a internet.
+
+02:34.287 --> 02:37.070
+Agora, se formos para um host diferente,
+
+02:37.070 --> 02:40.127
+digamos, por exemplo, este
+no departamento de contabilidade,
+
+02:40.127 --> 02:43.567
+e eles estivessem tentando
+acessar exatamente o mesmo servidor,
+
+02:43.567 --> 02:46.649
+seu tráfego passaria
+novamente pelo switch,
+
+02:46.649 --> 02:48.612
+mas eles entrariam no roteador
+
+02:48.612 --> 02:51.088
+em uma interface do roteador diferente.
+
+02:51.088 --> 02:53.807
+Portanto, o gateway padrão configurado em hosts
+
+02:53.807 --> 02:56.889
+no departamento de contabilidade é diferente
+
+02:56.889 --> 02:59.807
+do que meu gateway padrão configurado no meu
+
+02:59.807 --> 03:02.307
+departamento de gerenciamento de rede.
+
+03:03.568 --> 03:07.673
+Uma vez que o host determina que o endereço
+
+03:07.673 --> 03:12.030
+do destino não está
+na mesma rede local,
+
+03:12.030 --> 03:15.613
+o que ele faz é enviar ARPs
+para o endereço MAC
+
+03:16.953 --> 03:19.229
+do gateway padrão.
+
+03:19.229 --> 03:21.593
+Agora, isso é importante
+lembrar, porque um dos
+
+03:21.593 --> 03:24.990
+problemas que você encontra
+em redes com frequência
+
+03:24.990 --> 03:27.652
+é porque um erro pode ser cometido,
+
+03:27.652 --> 03:30.692
+o endereço de gateway padrão não esta
+
+03:30.692 --> 03:33.390
+na mesma rede local.
+
+03:33.390 --> 03:36.607
+Por exemplo, se eu acidentalmente
+
+03:36.607 --> 03:40.024
+configurei isso com 11 em vez de um ...
+
+03:43.193 --> 03:45.993
+Meu computador não
+seria capaz de enviar tráfego
+
+03:45.993 --> 03:49.993
+usando ARP para seu endereço de gateway padrão.
+
+03:49.993 --> 03:51.993
+Então temos que ter muito cuidado quando estamos
+
+03:51.993 --> 03:55.603
+definindo as configurações de rede que temos
+
+03:55.603 --> 04:00.179
+o endereço IP correto,
+as máscaras de sub-rede corretas,
+
+04:00.179 --> 04:02.852
+para que meu computador possa prever com precisão
+
+04:02.852 --> 04:06.809
+quem está em sua própria
+rede local e quem está fora
+
+04:06.809 --> 04:10.270
+a rede local localizada
+em uma rede remota,
+
+04:10.270 --> 04:13.470
+e o endereço de gateway padrão
+para que ele saiba
+
+04:13.470 --> 04:16.750
+para qual roteador enviar
+tráfego para
+
+04:16.750 --> 04:19.167
+fora de sua própria rede local.
+

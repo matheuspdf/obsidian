@@ -1,0 +1,167 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.600 --> 00:08.358
+- Neste vídeo, vamos dar uma olhada
+
+00:08.358 --> 00:12.229
+em como as mensagens viajam dentro de uma rede
+
+00:12.229 --> 00:14.600
+e também entre redes.
+
+00:14.600 --> 00:18.160
+Então, nesta primeira parte, temos o host H1
+
+00:18.160 --> 00:21.316
+em 192.168.1.10
+
+00:22.888 --> 00:26.699
+que vai enviar um pacote para
+o endereço IPv4 de H2,
+
+00:26.699 --> 00:29.452
+192.168.1.20.
+
+00:30.549 --> 00:32.966
+H1, a origem do pacote,
+
+00:33.028 --> 00:36.248
+constrói o pacote IPv4
+
+00:36.248 --> 00:41.415
+com seu próprio endereço como
+fonte, 192.168.1.10,
+
+00:42.066 --> 00:45.387
+e o endereço IPv4 de destino
+
+00:45.387 --> 00:48.780
+de 192.168.1.20.
+
+00:48.780 --> 00:51.679
+Agora, a primeira coisa que H1 precisa determinar
+
+00:51.887 --> 00:55.137
+é : estamos na mesma rede?
+
+00:56.630 --> 00:59.990
+E percebe que
+seu próprio endereço de rede
+
+00:59.990 --> 01:02.489
+é 192.168.1.10
+
+01:03.476 --> 01:06.095
+essa é a rede à qual pertence.
+
+01:06.095 --> 01:10.225
+E ele usa sua
+máscara de sub-rede para fazer isso.
+
+01:10.225 --> 01:13.573
+Em seguida, ele analisa o
+endereço IPv4 de destino,
+
+01:13.573 --> 01:17.323
+usando sua própria
+máscara de sub-rede, H1 determina que
+
+01:18.353 --> 01:22.348
+H2, em 192.168.1.20
+
+01:22.348 --> 01:24.231
+eles estão na mesma rede,
+
+01:24.231 --> 01:27.168
+ambos começam com 192.168.1
+
+01:27.168 --> 01:29.835
+então estamos na mesma rede.
+
+01:31.189 --> 01:34.258
+O que isso significa para H1 é que ele pode enviar
+
+01:34.258 --> 01:37.085
+este pacote diretamente para H2.
+
+01:37.085 --> 01:39.208
+Não precisa enviar através do
+
+01:39.208 --> 01:41.465
+seu gateway padrão, o roteador.
+
+01:41.465 --> 01:43.465
+Ele pode enviá-lo diretamente.
+
+01:44.476 --> 01:47.544
+Então, H1 vai
+construir o quadro Ethernet
+
+01:47.544 --> 01:51.646
+com seu próprio endereço MAC
+de sua NIC Ethernet,
+
+01:51.646 --> 01:53.194
+AA, AA
+
+01:53.194 --> 01:56.111
+como o endereço MAC de origem Ethernet.
+
+01:57.365 --> 02:00.825
+O endereço MAC de destino
+diz: "Ok, posso enviá-lo
+
+02:00.825 --> 02:05.186
+"diretamente para H2 porque
+estamos na mesma rede."
+
+02:05.186 --> 02:08.186
+Então ele diz: "Eu só preciso
+saber o endereço MAC
+
+02:08.186 --> 02:13.108
+"associado ao
+destino, 192.168.1.20"
+
+02:14.557 --> 02:18.178
+Nesse caso, H1 verifica sua tabela ARP.
+
+02:18.178 --> 02:21.626
+E vamos supor que
+tem essa informação
+
+02:21.626 --> 02:23.106
+em sua tabela ARP.
+
+02:23.106 --> 02:26.663
+Ele sabe que 192.168.1.20
+
+02:26.663 --> 02:28.415
+tem o endereço MAC
+
+02:28.415 --> 02:30.925
+BB, BB.
+
+02:30.925 --> 02:32.895
+Se ele não souber disso,
+lembre-se de que ele envia um
+
+02:32.895 --> 02:35.478
+solicitação ARP, obtém uma resposta ARP,
+
+02:36.485 --> 02:38.775
+adiciona à tabela.
+
+02:38.775 --> 02:41.671
+Ok, então agora, H1 pode ir em frente
+
+02:41.671 --> 02:44.004
+e enviar este quadro Ethernet
+
+02:44.971 --> 02:48.601
+em direção ao switch, e ele é enviado
+
+02:48.601 --> 02:51.872
+diretamente para H2.
+

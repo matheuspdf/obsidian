@@ -1,0 +1,157 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.442 --> 00:09.801
+- Neste vídeo, vamos
+apresentar o ARP,
+
+00:09.801 --> 00:12.524
+Protocolo de Resolução de Endereço.
+
+00:12.523 --> 00:16.740
+ARP é usado quando sabemos o endereço IPv4,
+
+00:16.740 --> 00:19.485
+para onde queremos enviar o pacote.
+
+00:19.485 --> 00:20.738
+Mas o que não sabemos,
+
+00:20.738 --> 00:23.821
+é o endereço MAC Ethernet do dispositivo.
+
+00:26.256 --> 00:28.883
+Por exemplo, aqui temos o PC 1,
+
+00:28.883 --> 00:32.800
+que deseja enviar um
+pacote para o destino,
+
+00:34.097 --> 00:36.264
+Endereço IPv4 de 192.168.1.9,
+
+00:37.513 --> 00:39.261
+o servidor FTP.
+
+00:39.261 --> 00:43.094
+O PC 1 conhece o
+endereço IPv4 do servidor FTP.
+
+00:45.668 --> 00:49.334
+Mas o que ele precisa
+saber é seu endereço MAC.
+
+00:49.334 --> 00:53.417
+Porque ele precisa
+encapsular esse pacote IPv4,
+
+00:54.413 --> 00:56.163
+em um quadro Ethernet.
+
+00:57.429 --> 01:02.194
+Então, o que o PC 1 faz é
+olhar primeiro em sua tabela ARP.
+
+01:02.194 --> 01:05.777
+Ele procura o
+endereço IPv4 de 192.168.1.9.
+
+01:09.528 --> 01:12.414
+Se o endereço não estiver em sua tabela ARP,
+
+01:12.414 --> 01:15.081
+ele enviará uma solicitação ARP.
+
+01:16.055 --> 01:20.222
+Assim, a animação mostra o PC 1
+enviando a solicitação ARP.
+
+01:21.314 --> 01:25.522
+Observe que a solicitação ARP
+é uma transmissão Ethernet.
+
+01:25.522 --> 01:28.482
+O que isso significa, é
+quando o switch recebe
+
+01:28.482 --> 01:30.363
+esta transmissão Ethernet,
+
+01:30.363 --> 01:34.280
+esse é um endereço MAC de destino
+de todos os bits 1.
+
+01:36.180 --> 01:39.484
+O switch irá inundar
+o Ethernet com broadcast,
+
+01:39.484 --> 01:44.052
+a solicitação ARP, para todas as portas,
+exceto a porta de entrada.
+
+01:44.052 --> 01:47.681
+O motivo da transmissão
+é que o PC 1 precisa saber
+
+01:47.681 --> 01:51.848
+quem nesta rede tem o
+endereço IPv4, 192.168.1.9.
+
+01:55.465 --> 01:59.722
+Está dizendo: "Ei,
+todo mundo na minha rede,
+
+01:59.722 --> 02:03.305
+quem tiver 192.168.1.9
+como seu endereço IPv4,
+
+02:06.719 --> 02:11.233
+por favor me responda
+com seu endereço MAC".
+
+02:11.233 --> 02:15.263
+Então esta solicitação ARP,
+vai para todos os dispositivos
+
+02:15.263 --> 02:18.892
+na rede. Incluindo o roteador.
+
+02:18.892 --> 02:22.634
+Agora, quando o roteador recebe
+esta transmissão Ethernet,
+
+02:22.634 --> 02:26.052
+ele não o encaminhará para outras redes.
+
+02:26.052 --> 02:29.505
+Assim, a transmissão Ethernet,
+esta solicitação ARP,
+
+02:29.505 --> 02:31.338
+permanece nesta rede.
+
+02:32.823 --> 02:35.593
+Então, como podemos ver, o
+pedido ARP vai para todos
+
+02:35.593 --> 02:39.760
+e o servidor FTP diz:
+"Ei, esse é o meu endereço IPv4
+
+02:41.193 --> 02:45.360
+você está procurando. Vou
+enviar-lhe uma resposta ARP,
+
+02:46.476 --> 02:48.226
+com meu endereço MAC".
+
+02:51.528 --> 02:55.695
+Agora o PC 1 tem o
+endereço mac Ethernet do servidor FTP
+
+02:57.557 --> 03:00.974
+em 192.168.1.9 e agora pode enviar esse pacote
+
+03:02.658 --> 03:05.991
+em um quadro Ethernet, para o servidor FTP.
+
