@@ -24,7 +24,7 @@ Kishori nunca tinha ouvido falar nisso. E você, já? Neste módulo, você compa
 # 15.1 TCP e UDP
 
 ## 15.1.1 Vídeo - Operação do TCP e UDP
-
+![[15.1.1.mp4#subtitle=anexos/15.1.1.vtt]]
 Nesta lição vamos falar sobre os dois protocolos da camada de transporte, TCP e UDP.
 
 Vou começar com UDP. UDP é um protocolo usado principalmente em streaming ou comunicações em tempo real. A razão pela qual o UDP funciona melhor nesses tipos de ambientes é que o UDP não está atrelado a um monte de sobrecarga.
@@ -92,7 +92,7 @@ Verdadeiro ou falso: O User Datagram Protocol (UDP) não usa confirmações para
 # 15.2 Números de porta
 
 ## 15.2.1 Vídeo - Números de porta da camada de transporte
-
+![[15.2.1.mp4#subtitle=anexos/15.2.1.vtt]]
 Nesta lição, vamos falar sobre como os números de porta da camada de transporte são usados para identificar conversas e aplicativos que são o destino e a origem das transmissões.
 
 Vamos falar sobre a configuração de um servidor. Quando configuramos um servidor para fornecer serviços pela rede, carregamos aplicativos nesse servidor. Por exemplo, um aplicativo de servidor web, um aplicativo FTP, ou um aplicativo de transporte de correio. Quando configuramos esses serviços, uma porta é atribuída a eles — uma porta da camada de transporte — ao próprio serviço.

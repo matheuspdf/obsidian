@@ -1,0 +1,278 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.392 --> 00:07.992
+- Nesta lição, vamos
+falar sobre
+
+00:07.992 --> 00:12.024
+como os números de porta da camada de transporte são usados
+
+00:12.024 --> 00:16.355
+para identificar conversas
+e aplicativos que
+
+00:16.355 --> 00:21.069
+são o destino e a
+origem das transmissões.
+
+00:21.069 --> 00:25.709
+Tudo bem, então, vamos falar
+sobre a configuração de um servidor.
+
+00:25.709 --> 00:28.365
+Quando configuramos um servidor,
+para fornecer serviços
+
+00:28.365 --> 00:32.532
+pela rede, carregamos
+aplicativos nesse servidor.
+
+00:33.539 --> 00:38.061
+Por exemplo, um aplicativo de servidor web
+, um aplicativo FTP,
+
+00:38.061 --> 00:41.037
+ou um aplicativo de transporte de correio.
+
+00:41.037 --> 00:43.537
+Quando configuramos esses serviços,
+
+00:45.516 --> 00:49.688
+uma porta é atribuída a eles,
+uma porta da camada de transporte,
+
+00:49.688 --> 00:51.224
+ao próprio serviço.
+
+00:51.224 --> 00:54.391
+Agora, existem alguns serviços padrão.
+
+00:56.182 --> 00:58.849
+Números de porta abaixo de 1024
+
+01:00.312 --> 01:03.145
+são frequentemente chamados de portas bem conhecidas.
+
+01:04.099 --> 01:05.686
+E a razão pela qual elas são chamados de bem conhecidas
+
+01:05.686 --> 01:08.621
+é porque elas são as mais comumente usadas.
+
+01:08.621 --> 01:12.788
+Por exemplo, um servidor web
+escuta comunicações
+
+01:15.960 --> 01:18.456
+endereçadas à porta 80.
+
+01:18.456 --> 01:20.706
+O servidor FTP, à porta 21.
+
+01:23.928 --> 01:26.261
+O servidor de correio, para a porta 25.
+
+01:28.109 --> 01:30.851
+Estas, e muitas outras portas conhecidas,
+
+01:30.851 --> 01:34.680
+são automaticamente
+identificadas pelos clientes.
+
+01:34.680 --> 01:39.501
+Sempre que abrimos um
+navegador Web e digitamos uma URL,
+
+01:39.501 --> 01:44.002
+não precisamos dizer qual
+porta, porque o cliente,
+
+01:44.002 --> 01:47.469
+neste caso o
+navegador web, já sabe
+
+01:47.469 --> 01:50.969
+que os servidores web estão escutando na porta 80,
+
+01:52.056 --> 01:55.639
+para poder responder
+a solicitações de páginas web.
+
+01:57.560 --> 02:00.643
+Então, quando nosso servidor web está escutando,
+
+02:02.083 --> 02:06.456
+isso significa que ele
+tem um buffer configurado,
+
+02:06.456 --> 02:09.389
+que aceitará solicitações
+endereçadas
+
+02:09.389 --> 02:13.056
+ao seu endereço IP e
+também à porta TCP 80.
+
+02:15.363 --> 02:18.754
+Se espera-se que o servidor FTP responda,
+
+02:18.754 --> 02:22.531
+as comunicações serão
+endereçadas à porta 21.
+
+02:22.531 --> 02:26.176
+Isso nos permite ter
+muitos serviços diferentes
+
+02:26.176 --> 02:29.325
+rodando ao mesmo
+tempo no servidor web.
+
+02:29.325 --> 02:32.803
+Então ele pode estar fazendo muitas coisas diferentes.
+
+02:32.803 --> 02:34.636
+Agora, do lado do host.
+
+02:35.480 --> 02:39.647
+As portas do host para TCP e UDP
+são atribuídas dinamicamente
+
+02:41.304 --> 02:43.471
+a partir do intervalo acima de 1024.
+
+02:44.876 --> 02:48.184
+E essas portas são atribuídas aleatoriamente.
+
+02:48.184 --> 02:52.152
+Então, basicamente, seu PC
+escolhe um valor fora do intervalo bem conhecido,
+
+02:52.152 --> 02:55.533
+e o usa como uma porta de origem.
+
+02:55.533 --> 02:58.200
+Digamos que seu navegador Web esteja aberto,
+
+02:59.191 --> 03:02.061
+e você está solicitando uma página web.
+
+03:02.061 --> 03:05.811
+O navegador web
+escolherá uma porta, uma porta TCP.
+
+03:09.240 --> 03:12.365
+Quando o tráfego vai
+para a camada de transporte,
+
+03:12.365 --> 03:15.782
+a porta TCP será a porta de destino 80,
+
+03:19.320 --> 03:23.487
+e a de origem, uma das
+portas atribuídas aleatoriamente.
+
+03:28.472 --> 03:32.055
+Assim, quando as comunicações
+saem do host,
+
+03:33.475 --> 03:35.917
+e vão para o servidor web,
+
+03:35.917 --> 03:40.589
+o servidor web verá
+a porta de destino como 80.
+
+03:40.589 --> 03:45.464
+Então, ele colocará automaticamente
+essa solicitação na fila
+
+03:45.464 --> 03:47.660
+para o servidor web processar.
+
+03:47.660 --> 03:51.327
+Quando o servidor web
+formula sua resposta,
+
+03:52.429 --> 03:56.596
+ele responderá de volta com
+a porta de destino 5305,
+
+04:02.179 --> 04:04.346
+e a porta de origem de 80.
+
+04:07.331 --> 04:10.211
+Então, quando volta para o host,
+
+04:10.211 --> 04:12.759
+o host saberá que
+este é o pedido
+
+04:12.759 --> 04:15.350
+que foi enviado advindo do navegador da web.
+
+04:15.350 --> 04:18.183
+Porque a porta 5305 foi atribuída
+
+04:19.384 --> 04:21.634
+à solicitação do navegador web.
+
+04:23.469 --> 04:26.424
+Portas TCP e UDP na camada de transporte
+
+04:26.424 --> 04:29.389
+são o que permitem que nossos dispositivos tenham
+
+04:29.389 --> 04:32.664
+muitas aplicações diferentes ao mesmo tempo,
+
+04:32.664 --> 04:34.520
+e que estejam todas essas aplicações
+
+04:34.520 --> 04:37.123
+se comunicando simultaneamente.
+
+04:37.123 --> 04:41.290
+Porque, por exemplo, se eu
+também tivesse um cliente FTP rodando,
+
+04:45.016 --> 04:49.667
+Seria possível enviar solicitações FTP
+com um número de porta diferente.
+
+04:49.667 --> 04:52.334
+Então, neste caso, seria destino 21,
+
+04:54.445 --> 04:56.195
+e porta de origem 5307.
+
+05:01.730 --> 05:04.963
+Então, as comunicações
+voltariam para aqui,
+
+05:04.963 --> 05:07.203
+e passariam pelo mesmo processo.
+
+05:07.203 --> 05:10.008
+Veria que a
+porta de destino seria 21.
+
+05:10.008 --> 05:12.898
+Ele iria para a fila
+do servidor FTP.
+
+05:12.898 --> 05:14.947
+E quando a resposta voltasse,
+
+05:14.947 --> 05:19.895
+ela seria endereçado à
+porta de destino 5307.
+
+05:19.895 --> 05:23.010
+Para que o host saiba
+que esse foi o pedido
+
+05:23.010 --> 05:24.677
+do cliente FTP.
+
