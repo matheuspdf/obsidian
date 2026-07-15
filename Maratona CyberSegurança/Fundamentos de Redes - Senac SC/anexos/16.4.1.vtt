@@ -1,0 +1,155 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:12.343 --> 00:14.068
+- Neste vídeo, vamos dar uma olhada
+
+00:14.068 --> 00:15.485
+em HTTP e HTML.
+
+00:17.996 --> 00:21.663
+HTTP significa Hypertext  Transfer Protocol .
+
+00:22.658 --> 00:25.509
+Estas são as regras que
+regem a forma como as informações
+
+00:25.509 --> 00:28.321
+são transmitidas entre o cliente,
+
+00:28.321 --> 00:31.020
+o dispositivo solicitando a página da Web,
+
+00:31.020 --> 00:32.967
+e o servidor web que envia
+
+00:32.967 --> 00:35.980
+a página web de volta para o cliente.
+
+00:35.980 --> 00:39.480
+HTML significa Hypertext Markup Language.
+
+00:40.681 --> 00:42.574
+Esta é a codificação, a informação,
+
+00:42.574 --> 00:46.436
+que na verdade é usada para
+exibir a própria página web.
+
+00:46.436 --> 00:47.917
+Vamos dar uma olhada.
+
+00:47.917 --> 00:49.278
+Então vamos começar com o cliente
+
+00:49.278 --> 00:52.361
+solicitando o site www.cisco.com,
+
+00:54.622 --> 00:57.067
+mas como dissemos anteriormente,
+
+00:57.067 --> 00:58.618
+a rede, a internet,
+
+00:58.618 --> 01:00.246
+não entende nomes,
+
+01:00.246 --> 01:01.670
+não entende nomes de domínio.
+
+01:01.670 --> 01:04.035
+Ela precisa do endereço IP associado
+
+01:04.035 --> 01:05.618
+com www.cisco.com.
+
+01:07.601 --> 01:10.194
+Assim, o usuário, o sistema,
+
+01:10.194 --> 01:13.111
+vai entrar em contato com o servidor DNS.
+
+01:14.286 --> 01:18.773
+O servidor DNS vai
+associar o nome de domínio,
+
+01:18.773 --> 01:19.940
+www.cisco.com,
+
+01:21.396 --> 01:23.151
+com um endereço IP,
+
+01:23.151 --> 01:27.981
+e devolverá esse endereço IP
+ao usuário, ao sistema.
+
+01:27.981 --> 01:31.233
+Agora o sistema poderá entrar em contato com o servidor web,
+
+01:31.233 --> 01:34.316
+www.cisco.com, usando este endereço IP.
+
+01:37.837 --> 01:41.670
+Esta solicitação usa HTTP
+para solicitar a página web.
+
+01:44.099 --> 01:45.474
+Ele é enviado para o servidor web,
+
+01:45.474 --> 01:46.641
+www.cisco.com,
+
+01:48.360 --> 01:51.777
+que usa HTTP para retornar as informações,
+
+01:52.858 --> 01:55.525
+o código HTML, de volta ao usuário.
+
+01:57.365 --> 02:00.197
+Agora o usuário poderá exibir a página web
+
+02:00.197 --> 02:02.614
+www.cisco.com em seu navegador.
+
+02:04.416 --> 02:08.166
+Então aqui podemos ver a página da
+web www.cisco.com.
+
+02:09.966 --> 02:13.328
+Para dar uma olhada no código HTML,
+
+02:13.328 --> 02:16.282
+vamos direto aqui para o menu,
+
+02:16.282 --> 02:17.906
+Desenvolvedor .
+
+02:17.906 --> 02:20.319
+Clique na  fonte da página .
+
+02:20.319 --> 02:24.236
+Esta page source, este
+é o código HTML atual.
+
+02:25.430 --> 02:29.269
+Este código HTML foi baixado
+do servidor web
+
+02:29.269 --> 02:30.352
+www.cisco.com
+
+02:31.996 --> 02:34.438
+ao sistema do cliente
+
+02:34.438 --> 02:36.863
+e exibido em seu navegador.
+
+02:36.863 --> 02:39.268
+O navegador então pega esse código,
+
+02:39.268 --> 02:40.183
+exibe,
+
+02:40.183 --> 02:43.266
+e assim vemos a página web www.cisco.com.
+

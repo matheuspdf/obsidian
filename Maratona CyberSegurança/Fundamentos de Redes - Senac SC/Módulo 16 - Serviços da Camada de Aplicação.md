@@ -44,6 +44,7 @@ Um exemplo de software cliente é um navegador, como Chrome ou FireFox. Um únic
 
 ## 16.1.2 Vídeo - Servidor Web e interações do cliente IP
 
+![[16.1.2.mp4#subtitle=anexos/16.1.2.vtt]]
 **Selecione o botão Reproduzir para assistir o vídeo.**
 
 Nesta lição, vamos discutir como um cliente web e um servidor web usam protocolos IP para interagir.
@@ -85,6 +86,7 @@ Estas são as partes de uma URI, como mostrado na figura:
 
 ## 16.1.4 Vídeo - Tráfego da Web no Packet Tracer
 
+![[16.1.4.mp4#subtitle=anexos/16.1.4.vtt]]
 Neste vídeo, vamos usar o Packet Tracer para ilustrar como uma página web é obtida de um servidor web.
 
 Neste caso, temos um PC que está conectado através de uma nuvem de internet simulada para um servidor web. Esse servidor web está em www.learnip.com, também no endereço IP 172.33.100.50.
@@ -231,7 +233,7 @@ Qual protocolo de aplicação é usado para resolver endereços Web para um ende
 # 16.3 Domain Name System (Sistema de Nomes de Domínios).
 
 ## 16.3.1 Vídeo - Servidores DNS
-
+![[16.3.1.mp4#subtitle=anexos/16.3.1.vtt]]
 **Selecione o botão Reproduzir para assistir o vídeo.**
 
 Neste vídeo, vamos apresentar o servidor DNS. DNS significa servidor de Domain Name System. O servidor DNS é usado para associar um nome de domínio, ou um nome de host, a um endereço IP.
@@ -339,7 +341,7 @@ Você usou corretamente o comando nslookup para verificar o status dos nomes de 
 # 16.4 Clientes e servidores Web
 
 ## 16.4.1 Vídeo - HTTP e HTML
-
+![[16.4.1.mp4#subtitle=anexos/16.4.1.vtt]]
 **Selecione o botão Reproduzir para assistir o vídeo.**
 
 Neste vídeo, vamos dar uma olhada em HTTP e HTML.
@@ -361,14 +363,7 @@ Quando um cliente Web recebe o endereço IP de um servidor Web, o navegador do c
 Quando um cliente Web recebe o endereço IP de um servidor Web, o navegador do cliente usa esse endereço IP e a porta 80 para solicitar serviços da Web. O conteúdo de informações de uma página Web é codificado por meio de linguagens de marcação especializadas. A codificação HyperText Markup Language (HTML) informa ao navegador o modo de formatação da página Web, além de gráficos e fontes a serem usados. HTML é a linguagem mais usada.
 
 Clique em Play na figura para ver uma solicitação de cliente para uma página Web.
-
-![[Pasted image 20260611064306.png]]
-
-![[Pasted image 20260611064330.png]]
-
-![[Pasted image 20260611064345.png]]
-
-![[Pasted image 20260611064407.png]]
+![[brave_LbHlD6koxy.mp4]]
 
 O protocolo HTTP não é um protocolo seguro; as informações podem ser facilmente interceptadas por outros usuários à medida que os dados são enviados pela rede. Para oferecer segurança aos dados, o HTTP pode ser usado com protocolos de transporte seguros. As solicitações de HTTP seguro são enviadas para a porta 443. Essas solicitações usam **https** no endereço do site no navegador, em vez de **http.**
 

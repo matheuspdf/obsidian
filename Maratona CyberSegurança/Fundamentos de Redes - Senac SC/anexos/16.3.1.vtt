@@ -1,0 +1,90 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:06.628 --> 00:07.562
+- Neste vídeo,
+
+00:07.562 --> 00:09.994
+vamos apresentar o servidor DNS.
+
+00:09.994 --> 00:13.657
+DNS significa servidor de Domain Name System.
+
+00:13.657 --> 00:17.401
+O servidor DNS é usado para
+associar um nome de domínio,
+
+00:17.401 --> 00:20.707
+ou um nome de host, a um endereço IP.
+
+00:20.707 --> 00:22.245
+Vamos dar uma olhada.
+
+00:22.245 --> 00:24.969
+Aqui temos um usuário que
+acessa o site
+
+00:24.969 --> 00:26.136
+www.cisco.com.
+
+00:28.322 --> 00:30.067
+No entanto, a rede, a internet,
+
+00:30.067 --> 00:33.490
+não entende
+nomes de domínio como cisco.com.
+
+00:33.490 --> 00:36.240
+Ele só entende endereços IP.
+
+00:37.174 --> 00:41.007
+Portanto, o sistema precisa
+associar um endereço IP
+
+00:41.845 --> 00:43.839
+a este nome de domínio,
+
+00:43.839 --> 00:48.199
+então, neste caso, ele
+irá perguntar a um servidor DNS.
+
+00:48.199 --> 00:51.558
+Então o sistema vai entrar em
+contato com o servidor DNS
+
+00:51.558 --> 00:54.198
+e pedir o endereço IP associado
+
+00:54.198 --> 00:55.781
+a www.cisco.com.
+
+00:58.759 --> 01:01.455
+A consulta, a pergunta,
+
+01:01.455 --> 01:05.172
+sobre este nome de domínio
+vai para o servidor DNS.
+
+01:05.172 --> 01:08.339
+O servidor DNS procura www.cisco.com,
+
+01:09.890 --> 01:12.011
+encontra o endereço IP,
+
+01:12.011 --> 01:15.761
+e, em seguida, retorna esse
+endereço IP para o host.
+
+01:18.374 --> 01:20.671
+O host agora pode usar este endereço IP
+
+01:20.671 --> 01:24.004
+para entrar em contato com o servidor web www.cisco.com,
+
+01:25.334 --> 01:29.236
+e neste caso, baixar
+as informações apropriadas
+
+01:29.236 --> 01:31.236
+para exibir a página web.
+
