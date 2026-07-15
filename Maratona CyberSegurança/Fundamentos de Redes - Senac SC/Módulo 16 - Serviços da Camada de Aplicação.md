@@ -646,7 +646,7 @@ c. Digite **quit** para sair do cliente FTP quando terminar.
 # 16.6 Terminais virtuais
 
 ## 16.6.1 Vídeo - Acesso Remoto com Telnet ou SSH
-
+![[16.6.1.mp4#subtitle=anexos/16.6.1.vtt]]
 Neste vídeo vamos demonstrar como acessar um servidor remotamente usando Telnet ou SSH.
 
 Aqui trouxe um software conhecido como Tera Term, que me permite usar Telnet ou SSH. Telnet e SSH me permitem acessar remotamente um servidor — outro dispositivo — como se eu estivesse realmente sentado em frente àquele dispositivo.
