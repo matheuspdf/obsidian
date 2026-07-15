@@ -1,0 +1,125 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+00:12.811 --> 00:14.944
+- Então aqui vamos
+demonstrar como usar
+
+00:14.942 --> 00:17.440
+um software cliente FTP.
+
+00:17.440 --> 00:20.757
+FTP significa File Transfer Protocol.
+
+00:20.757 --> 00:24.107
+Ele nos permite copiar arquivos facilmente
+
+00:24.107 --> 00:28.139
+de um dispositivo para outro,
+de um dispositivo cliente
+
+00:28.139 --> 00:32.960
+para um servidor ou do
+servidor de volta para o cliente.
+
+00:32.960 --> 00:36.629
+Isso é usado muitas vezes para fazer upload
+
+00:36.629 --> 00:39.851
+das informações da sua página Web para um servidor  Web.
+
+00:39.851 --> 00:41.877
+Então vamos dar uma olhada.
+
+00:41.877 --> 00:44.088
+Aqui no FileZilla onde diz Host,
+
+00:44.088 --> 00:46.588
+vou digitar ftp.cdc.gov.
+
+00:52.099 --> 00:55.516
+Este é um servidor ftp disponível
+
+00:56.883 --> 00:59.262
+que qualquer um pode usar.
+
+00:59.262 --> 01:02.762
+E o nome de usuário será anonymous.
+
+01:04.478 --> 01:06.163
+E não há senha associada
+
+01:06.163 --> 01:07.625
+a este site.
+
+01:07.625 --> 01:10.153
+Normalmente, você terá um nome de usuário
+
+01:10.153 --> 01:12.627
+e senha que está associada
+
+01:12.627 --> 01:15.009
+ao servidor web para que você possa enviar
+
+01:15.009 --> 01:17.619
+e baixar as informações com segurança.
+
+01:17.619 --> 01:21.779
+Ok, vou clicar em Quick Connect.
+
+01:21.779 --> 01:25.609
+E agora estamos conectados
+a este servidor FTP.
+
+01:25.609 --> 01:29.502
+À esquerda aqui está minha
+área de trabalho ou os arquivos
+
+01:29.502 --> 01:30.867
+do meu computador.
+
+01:30.867 --> 01:33.459
+À direita está o site remoto.
+
+01:33.459 --> 01:36.211
+Deixe-me mostrar como é fácil transferir
+
+01:36.211 --> 01:39.571
+um arquivo, neste caso,
+do site remoto,
+
+01:39.571 --> 01:42.904
+o servidor ftp.cdc.gov, para meu host local.
+
+01:46.942 --> 01:49.619
+Então, eu vou descer
+aqui e aqui temos
+
+01:49.619 --> 01:53.171
+uma mensagem de boas-vindas, e
+vou arrastar
+
+01:53.171 --> 01:57.338
+isso para a minha área de trabalho, e
+isso é tudo o que tenho que fazer.
+
+01:58.590 --> 02:01.801
+Ele copiou do servidor remoto
+
+02:01.801 --> 02:03.468
+para minha área de trabalho local.
+
+02:04.841 --> 02:09.008
+E podemos realmente ver essa
+mensagem de boas-vindas aqui.
+
+02:14.590 --> 02:15.518
+E lá vamos nós.
+
+02:15.518 --> 02:18.419
+Aí está o arquivo que
+acabamos de baixar
+
+02:18.419 --> 02:19.836
+de ftp.cdc.gov.
+

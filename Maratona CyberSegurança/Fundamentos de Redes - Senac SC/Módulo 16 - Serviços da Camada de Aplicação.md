@@ -466,7 +466,7 @@ O software de cliente FTP vem incorporado em sistemas operacionais de computador
 ## 16.5.2 Vídeo - Software Cliente FTP
 
 **Selecione o botão Reproduzir para assistir o vídeo.**
-
+![[16.5.2.mp4#subtitle=anexos/16.5.2.vtt]]
 Aqui vamos demonstrar como usar um software cliente FTP. FTP significa File Transfer Protocol. Ele nos permite copiar arquivos facilmente de um dispositivo para outro — de um dispositivo cliente para um servidor ou do servidor de volta para o cliente. Isso é usado muitas vezes para fazer upload das informações da sua página web para um servidor web.
 
 Aqui no FileZilla, onde diz Host, vou digitar ftp.cdc.gov. Este é um servidor FTP disponível que qualquer um pode usar. O nome de usuário será anonymous e não há senha associada a este site. Normalmente, você terá um nome de usuário e senha associados ao servidor web para que você possa enviar e baixar as informações com segurança. Clicando em Quick Connect, agora estamos conectados a este servidor FTP.
