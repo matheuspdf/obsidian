@@ -21,7 +21,7 @@ Você consegue pensar em como usa a nuvem? Quanto você sabe sobre a nuvem e a v
 # 19.1 Nuvem e Serviços de Nuvem
 
 ## 19.1.1 Vídeo - Nuvem e Virtualização
-
+![[19.1.1.mp4#subtitle=anexos/19.1.1.vtt]]
 Em geral, quando falamos de nuvem, estamos falando de três coisas: data centers, computação em nuvem ou serviços em nuvem, e virtualização ou computação virtual.
 
 Embora os data centers possam ser menores, geralmente são grandes instalações que demandam grande quantidade de energia, resfriamento e largura de banda. Apenas organizações muito grandes como Facebook ou Google podem se dar ao luxo de construir seus próprios data centers privados para prestar serviços aos seus usuários. Outras organizações menores alugam espaço em um datacenter. Provedores de serviços em nuvem como Cisco, Amazon Web Services ou Microsoft Azure oferecem seus serviços fora de datacenters.

@@ -13,15 +13,15 @@ Kishori tem mais a aprender antes de se candidatar para a posição mencionada p
 
 **Objetivo do Módulo:** Explicar a função dos serviços comuns da camada de aplicação.
 
-|Título do Tópico|Objetivo do Tópico|
-|---|---|
-|A relação Cliente — Servidor|Explicar a interação entre clientes e servidores.|
-|Network Application Services|Descrever as aplicações comuns de rede.|
-|Domain Name System (Sistema de Nomes de Domínios).|Descrever o DNS.|
-|Clientes e servidores Web|Descrever HTTP e HTML.|
-|Clientes e servidores FTP|Descrever o FTP.|
-|Terminais virtuais|Descrever o Telnet e o SSH.|
-|E-mails e mensagens|Descrever os protocolos de e-mail.|
+| Título do Tópico                                   | Objetivo do Tópico                                |
+| -------------------------------------------------- | ------------------------------------------------- |
+| A relação Cliente — Servidor                       | Explicar a interação entre clientes e servidores. |
+| Network Application Services                       | Descrever as aplicações comuns de rede.           |
+| Domain Name System (Sistema de Nomes de Domínios). | Descrever o DNS.                                  |
+| Clientes e servidores Web                          | Descrever HTTP e HTML.                            |
+| Clientes e servidores FTP                          | Descrever o FTP.                                  |
+| Terminais virtuais                                 | Descrever o Telnet e o SSH.                       |
+| E-mails e mensagens                                | Descrever os protocolos de e-mail.                |
 
 # 16.1 A relação Cliente - Servidor
 

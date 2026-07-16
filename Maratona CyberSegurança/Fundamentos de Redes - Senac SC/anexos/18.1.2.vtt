@@ -1,0 +1,88 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.000
+Neste cenário, temos duas partes em nossa rede.
+
+00:00:04.000 --> 00:00:07.000
+Cada uma com seu próprio caminho para nosso ISP,
+
+00:00:07.000 --> 00:00:09.000
+e a Internet.
+
+00:00:09.000 --> 00:00:11.000
+Pacotes originados no PC um,
+
+00:00:11.000 --> 00:00:14.000
+são encaminhados para o Roteador A,
+
+00:00:14.000 --> 00:00:16.000
+e para o ISP.
+
+00:00:16.000 --> 00:00:18.000
+Enquanto os pacotes provenientes do PC dois,
+
+00:00:18.000 --> 00:00:21.000
+são encaminhados para o Roteador B,
+
+00:00:21.000 --> 00:00:24.000
+e, em seguida, para o mesmo ISP.
+
+00:00:24.000 --> 00:00:28.000
+Mas, o que acontece quando há um problema com o Roteador A,
+
+00:00:28.000 --> 00:00:32.000
+ou com um link usado no caminho para o Roteador A?
+
+00:00:32.000 --> 00:00:34.000
+Pacotes que precisam do roteador A para encaminhá-los
+
+00:00:34.000 --> 00:00:36.000
+para a Internet
+
+00:00:36.000 --> 00:00:37.000
+serão descartados,
+
+00:00:37.000 --> 00:00:41.000
+e não podem mais alcançar o destino final.
+
+00:00:41.000 --> 00:00:42.000
+Uma rede tolerante a falhas,
+
+00:00:42.000 --> 00:00:46.000
+é aquela que pode continuar suas operações, sem interrupção,
+
+00:00:46.000 --> 00:00:49.000
+quando um ou mais componentes da rede falham.
+
+00:00:49.000 --> 00:00:52.000
+Agora instalamos links adicionais em nossa rede,
+
+00:00:52.000 --> 00:00:56.000
+oferecendo múltiplos caminhos para alcançar nosso ISP,
+
+00:00:56.000 --> 00:00:57.000
+e a Internet.
+
+00:00:57.000 --> 00:01:00.000
+Ter vários caminhos para um destino,
+
+00:01:00.000 --> 00:01:01.000
+é conhecido como redundância,
+
+00:01:01.000 --> 00:01:05.000
+que é uma das formas de tornar a rede tolerante a falhas.
+
+00:01:05.000 --> 00:01:06.000
+Se um caminho falhar,
+
+00:01:06.000 --> 00:01:08.000
+os pacotes são automaticamente encaminhados,
+
+00:01:08.000 --> 00:01:11.000
+usando um link diferente.
+
+00:01:11.000 --> 00:01:12.000
+Quanto mais redundância em uma rede,
+
+00:01:12.000 --> 00:01:16.000
+mais tolerante a falhas a rede se torna.

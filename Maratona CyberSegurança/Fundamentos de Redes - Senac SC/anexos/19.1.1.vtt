@@ -1,0 +1,274 @@
+WEBVTT
+
+00:00:03.000 --> 00:00:05.000
+- [Narrador] Em geral, quando falamos de nuvem,
+
+00:00:05.000 --> 00:00:08.000
+estamos falando de três coisas.
+
+00:00:08.000 --> 00:00:12.000
+Data centers, computação em nuvem ou serviços em nuvem,
+
+00:00:12.000 --> 00:00:16.000
+e virtualização ou computação virtual.
+
+00:00:16.000 --> 00:00:18.000
+Embora os data centers possam ser menores,
+
+00:00:18.000 --> 00:00:20.000
+geralmente são grandes instalações
+
+00:00:20.000 --> 00:00:23.000
+que demandam grande quantidade de energia,
+
+00:00:23.000 --> 00:00:26.000
+resfriamento e largura de banda.
+
+00:00:26.000 --> 00:00:29.000
+Apenas organizações muito grandes como Facebook ou Google
+
+00:00:29.000 --> 00:00:32.000
+podem se dar ao luxo de construir seus próprios data centers privados
+
+00:00:32.000 --> 00:00:35.000
+para prestar serviços aos seus usuários.
+
+00:00:35.000 --> 00:00:38.000
+Outras organizações menores alugam espaço
+
+00:00:38.000 --> 00:00:42.000
+em um datacenter.
+
+00:00:42.000 --> 00:00:46.000
+Provedores de serviços em nuvem como Cisco ou Amazon Web Services
+
+00:00:46.000 --> 00:00:50.000
+ou Microsoft Azure oferecem seus serviços
+
+00:00:50.000 --> 00:00:55.000
+fora de datacenters.
+
+00:00:55.000 --> 00:00:58.000
+Existem dois tipos básicos de nuvens.
+
+00:00:58.000 --> 00:01:01.000
+Nuvens públicas e nuvens privadas.
+
+00:01:01.000 --> 00:01:05.000
+Nuvens públicas oferecem serviços e aplicativos
+
+00:01:05.000 --> 00:01:07.000
+à população em geral.
+
+00:01:07.000 --> 00:01:10.000
+Enquanto as nuvens privadas
+
+00:01:10.000 --> 00:01:14.000
+destinam-se a organizações ou entidades específicas
+
+00:01:14.000 --> 00:01:16.000
+como os governos.
+
+00:01:16.000 --> 00:01:21.000
+E são acessados ​​apenas por essas organizações privadas.
+
+00:01:21.000 --> 00:01:25.000
+Existem diferentes categorias de serviços em nuvem.
+
+00:01:25.000 --> 00:01:27.000
+SaaS, ou Software como Serviço,
+
+00:01:27.000 --> 00:01:30.000
+refere-se a software sob demanda
+
+00:01:30.000 --> 00:01:34.000
+ou um modelo de assinatura onde a licença
+
+00:01:34.000 --> 00:01:39.000
+e a entrega do software acontece por meio da nuvem.
+
+00:01:39.000 --> 00:01:43.000
+Você verá isso em coisas como o Office 365
+
+00:01:43.000 --> 00:01:45.000
+ou Adobe Creative Cloud,
+
+00:01:45.000 --> 00:01:48.000
+ou mesmo softwares de jogos de computador
+
+00:01:48.000 --> 00:01:50.000
+em que o acesso ao software
+
+00:01:50.000 --> 00:01:54.000
+acontece normalmente através de um navegador web.
+
+00:01:54.000 --> 00:01:56.000
+O software normalmente não é comprado
+
+00:01:56.000 --> 00:01:59.000
+mas sim alugado.
+
+00:01:59.000 --> 00:02:02.000
+PaaS ou Plataforma como Serviço
+
+00:02:02.000 --> 00:02:04.000
+é onde o provedor de serviços em nuvem
+
+00:02:04.000 --> 00:02:09.000
+fornece a plataforma, como a plataforma Java ou .Net
+
+00:02:09.000 --> 00:02:13.000
+para um desenvolvedor desenvolver um aplicativo ou aplicativo.
+
+00:02:13.000 --> 00:02:16.000
+Isso muitas vezes envolve fornecer bancos de dados
+
+00:02:16.000 --> 00:02:19.000
+e ferramentas para o desenvolvedor
+
+00:02:19.000 --> 00:02:22.000
+para que eles possam desenvolver rapidamente um aplicativo.
+
+00:02:22.000 --> 00:02:25.000
+Infraestrutura como serviço refere-se a
+
+00:02:25.000 --> 00:02:29.000
+virtualização da computação que pode ser fornecida pela internet
+
+00:02:29.000 --> 00:02:30.000
+sob demanda.
+
+00:02:30.000 --> 00:02:33.000
+Isso inclui computação virtual, como
+
+00:02:33.000 --> 00:02:38.000
+servidores virtuais, bem como armazenamento virtualizado
+
+00:02:38.000 --> 00:02:41.000
+e recursos de rede virtualizados
+
+00:02:41.000 --> 00:02:44.000
+que podem ser provisionados, alocados
+
+00:02:44.000 --> 00:02:49.000
+e fornecidos sob demanda com base nas necessidades.
+
+00:02:49.000 --> 00:02:53.000
+A virtualização é a capacidade de abstrair ou separar
+
+00:02:53.000 --> 00:02:57.000
+o sistema operacional do hardware físico.
+
+00:02:57.000 --> 00:02:59.000
+Para criar um computador virtual
+
+00:02:59.000 --> 00:03:02.000
+o hardware físico dedicado
+
+00:03:02.000 --> 00:03:05.000
+precisa ser compartilhado com o computador virtual.
+
+00:03:05.000 --> 00:03:08.000
+Neste slide vemos um computador virtual com Windows 7
+
+00:03:08.000 --> 00:03:12.000
+que está compartilhando os recursos físicos dedicados
+
+00:03:12.000 --> 00:03:14.000
+do computador hospedeiro.
+
+00:03:14.000 --> 00:03:18.000
+Isso é feito através de um hipervisor.
+
+00:03:18.000 --> 00:03:22.000
+Existem dois tipos de hipervisores usados ​​na virtualização.
+
+00:03:22.000 --> 00:03:25.000
+Um hypervisor tipo um, conhecido como hypervisor bare metal,
+
+00:03:25.000 --> 00:03:30.000
+e um hypervisor tipo dois, conhecido como hypervisor hospedado.
+
+00:03:30.000 --> 00:03:33.000
+Um hypervisor bare metal tipo um
+
+00:03:33.000 --> 00:03:36.000
+é um servidor de virtualização.
+
+00:03:36.000 --> 00:03:39.000
+O hipervisor é um sistema operacional
+
+00:03:39.000 --> 00:03:43.000
+que é instalado diretamente no hardware.
+
+00:03:43.000 --> 00:03:46.000
+Depois disso, os computadores virtuais podem ser criados.
+
+00:03:46.000 --> 00:03:50.000
+Existem diferentes tipos de hipervisores tipo um.
+
+00:03:50.000 --> 00:03:53.000
+KVM, Red Hat Enterprise Virtualization,
+
+00:03:53.000 --> 00:03:56.000
+Xen, Citrix XenServer,
+
+00:03:56.000 --> 00:03:58.000
+VMware ESXi,
+
+00:03:58.000 --> 00:04:03.000
+VMware vSphere e Microsoft Hyper-V.
+
+00:04:03.000 --> 00:04:07.000
+Um hypervisor tipo dois é conhecido como hypervisor hospedado.
+
+00:04:07.000 --> 00:04:10.000
+Nesta situação, o hypervisor é um aplicativo
+
+00:04:10.000 --> 00:04:12.000
+ou programa que está instalado
+
+00:04:12.000 --> 00:04:15.000
+no topo do sistema operacional do host.
+
+00:04:15.000 --> 00:04:18.000
+Em outras palavras, você instala o hypervisor
+
+00:04:18.000 --> 00:04:22.000
+como Virtualbox ou VMware Workstation,
+
+00:04:22.000 --> 00:04:24.000
+Parallels, Virtual PC
+
+00:04:24.000 --> 00:04:26.000
+no topo do computador host.
+
+00:04:26.000 --> 00:04:28.000
+Você instala o Virtualbox, digamos
+
+00:04:28.000 --> 00:04:31.000
+no topo do sistema operacional Windows.
+
+00:04:31.000 --> 00:04:36.000
+E então você pode criar computadores virtuais.
+
+00:04:36.000 --> 00:04:38.000
+Além da computação virtual,
+
+00:04:38.000 --> 00:04:41.000
+também podemos virtualizar switching e roteamento.
+
+00:04:41.000 --> 00:04:47.000
+Neste slide podemos ver dois hypervisors VMware ESXi.
+
+00:04:47.000 --> 00:04:50.000
+Os computadores virtuais estão todos conectados em rede
+
+00:04:50.000 --> 00:04:55.000
+com um switch virtual Cisco Nexus 1000V.
+
+00:04:55.000 --> 00:04:59.000
+O switch virtual traz o poder de um switch Cisco
+
+00:04:59.000 --> 00:05:03.000
+para o ambiente de rede virtualizado.

@@ -1,0 +1,250 @@
+WEBVTT
+
+00:00:06.000 --> 00:00:08.000
+- Neste vídeo, vamos ver
+
+00:00:08.000 --> 00:00:11.000
+como obtemos informações sobre os várias
+
+00:00:11.000 --> 00:00:15.000
+placas de interface de rede que estão contidas em nossos PCs.
+
+00:00:15.000 --> 00:00:18.000
+No caso deste laptop, eu tenho tanto uma placa de rede com fio
+
+00:00:18.000 --> 00:00:20.000
+como uma placa de rede sem fio.
+
+00:00:20.000 --> 00:00:24.000
+Para visualizar as propriedades desses dispositivos,
+
+00:00:24.000 --> 00:00:27.000
+Eu preciso ir para a Central de Rede e Compartilhamento.
+
+00:00:27.000 --> 00:00:31.000
+Eu posso fazer isso facilmente indo para o ícone da bandeja do sistema,
+
+00:00:31.000 --> 00:00:36.000
+clicando com o botão direito do mouse e abrindo a Central de Rede e Compartilhamento.
+
+00:00:36.000 --> 00:00:38.000
+Isso traz à tona
+
+00:00:38.000 --> 00:00:43.000
+lista de conexões que tenho atualmente ativas.
+
+00:00:43.000 --> 00:00:46.000
+Como você pode ver, este é o meu computador, e eu tenho
+
+00:00:46.000 --> 00:00:50.000
+várias redes que estão se conectando à Internet.
+
+00:00:50.000 --> 00:00:53.000
+Para ver os adaptadores individuais,
+
+00:00:53.000 --> 00:00:57.000
+Eu preciso ir para as Alterar as Configurações do Adaptador .
+
+00:00:57.000 --> 00:01:00.000
+Como você pode ver, eu tenho uma conexão de área local,
+
+00:01:00.000 --> 00:01:03.000
+que é uma conexão com fio.
+
+00:01:03.000 --> 00:01:05.000
+Você pode ver o fio saindo
+
+00:01:05.000 --> 00:01:07.000
+da parte de trás do meu laptop.
+
+00:01:07.000 --> 00:01:11.000
+E eu também tenho uma conexão de rede sem fio.
+
+00:01:11.000 --> 00:01:14.000
+Para visualizar as propriedades de uma conexão específica,
+
+00:01:14.000 --> 00:01:17.000
+tudo que você precisa fazer é clicar com o botão direito
+
+00:01:17.000 --> 00:01:22.000
+e desça para as propriedades.
+
+00:01:22.000 --> 00:01:25.000
+Existem várias propriedades diferentes
+
+00:01:25.000 --> 00:01:28.000
+que estão associados a um adaptador de rede
+
+00:01:28.000 --> 00:01:30.000
+em um computador Windows.
+
+00:01:30.000 --> 00:01:33.000
+Normalmente, o que mais nos interessa
+
+00:01:33.000 --> 00:01:37.000
+são as configurações para o protocolo de internet.
+
+00:01:37.000 --> 00:01:39.000
+Neste caso, vamos ver
+
+00:01:39.000 --> 00:01:44.000
+as propriedades para o IPv4.
+
+00:01:44.000 --> 00:01:47.000
+Se entrarmos aqui, podemos ver que nosso
+
+00:01:47.000 --> 00:01:51.000
+dispositivo está recebendo seu endereço IP automaticamente.
+
+00:01:51.000 --> 00:01:54.000
+Isso significa que está sendo distribuído por um servidor DHCP,
+
+00:01:54.000 --> 00:02:00.000
+e não foi configurado estaticamente.
+
+00:02:00.000 --> 00:02:05.000
+Se eu sair para ver meu adaptador de rede com fio,
+
+00:02:05.000 --> 00:02:10.000
+faça exatamente a mesma coisa e vá para as propriedades,
+
+00:02:10.000 --> 00:02:14.000
+e escolha IPv4,
+
+00:02:14.000 --> 00:02:16.000
+você pode ver que neste adaptador,
+
+00:02:16.000 --> 00:02:20.000
+meu endereço IP foi configurado estaticamente.
+
+00:02:20.000 --> 00:02:22.000
+Isso significa que um administrador atribuiu o endereço IP
+
+00:02:22.000 --> 00:02:30.000
+para o meu PC especificamente, e foi digitado manualmente.
+
+00:02:30.000 --> 00:02:32.000
+Mais informações podem ser obtidas
+
+00:02:32.000 --> 00:02:35.000
+olhando as informações de status
+
+00:02:35.000 --> 00:02:39.000
+desta conexão específica.
+
+00:02:39.000 --> 00:02:43.000
+Eu posso ver muito brevemente que posso acessar a Internet,
+
+00:02:43.000 --> 00:02:46.000
+e que meu,
+
+00:02:46.000 --> 00:02:49.000
+dispositivo tem um sinal muito bom chegando
+
+00:02:49.000 --> 00:02:52.000
+do ponto de acesso sem fio.
+
+00:02:52.000 --> 00:02:56.000
+Se eu entrar nos detalhes, posso até obter mais informações.
+
+00:02:56.000 --> 00:02:58.000
+Você pode ver aqui os diferentes tipos de conexão
+
+00:02:58.000 --> 00:03:03.000
+para onde estou indo, onde estou pegando meu DNS.
+
+00:03:03.000 --> 00:03:09.000
+E minha configuração DHCP para este adaptador específico
+
+00:03:09.000 --> 00:03:13.000
+expirará na quarta-feira, 14 de dezembro,
+
+00:03:13.000 --> 00:03:16.000
+e terei que renová -lo junto ao servidor DHCP.
+
+00:03:16.000 --> 00:03:20.000
+Você pode obter as informações sobre o endereço MAC,
+
+00:03:20.000 --> 00:03:23.000
+sobre o tipo de conexão e as redes sem fio
+
+00:03:23.000 --> 00:03:25.000
+em que você está conectado.
+
+00:03:25.000 --> 00:03:30.000
+Na conexão de área local, as informações que você obtém
+
+00:03:30.000 --> 00:03:32.000
+é ligeiramente diferente.
+
+00:03:32.000 --> 00:03:34.000
+Diz-lhe agora, que no caso
+
+00:03:34.000 --> 00:03:37.000
+da minha rede cabeada, não estou saindo
+
+00:03:37.000 --> 00:03:40.000
+além do primeiro topo da minha rede
+
+00:03:40.000 --> 00:03:43.000
+e que minha ,
+
+00:03:43.000 --> 00:03:47.000
+minha própria conexão está habilitada
+
+00:03:47.000 --> 00:03:50.000
+e está em 100 megas.
+
+00:03:50.000 --> 00:03:52.000
+Mais uma vez, temos os detalhes onde posso obter
+
+00:03:52.000 --> 00:03:57.000
+meu endereço MAC e também posso ver meu endereço IPv4.
+
+00:03:57.000 --> 00:03:59.000
+E se eu tivesse um endereço IPv6 configurado,
+
+00:03:59.000 --> 00:04:03.000
+também seria exibido.
+
+00:04:03.000 --> 00:04:06.000
+Agora, a maioria dessas informações que você vê
+
+00:04:06.000 --> 00:04:09.000
+no status de informações do driver NIC
+
+00:04:09.000 --> 00:04:16.000
+também pode ser visualizado acessando o prompt de comando,
+
+00:04:16.000 --> 00:04:24.000
+dentro do Windows, e fazendo uma configuração de IP.
+
+00:04:24.000 --> 00:04:27.000
+A configuração de IP tem várias opções.
+
+00:04:27.000 --> 00:04:30.000
+O mais comumente usado é o barra all,
+
+00:04:30.000 --> 00:04:32.000
+que lhe dá muito mais informações
+
+00:04:32.000 --> 00:04:36.000
+sobre como seu dispositivo está configurado.
+
+00:04:36.000 --> 00:04:40.000
+Como você pode ver aqui, aqui estão meus adaptadores
+
+00:04:40.000 --> 00:04:46.000
+que tenho para wireless e também para as conexões cabeadas.
+
+00:04:46.000 --> 00:04:49.000
+É uma prática muito comum ter que encontrar
+
+00:04:49.000 --> 00:04:52.000
+o endereço MAC, o endereço IP e o status atual
+
+00:04:52.000 --> 00:04:56.000
+de um adaptador de PC, então esta é uma habilidade que você obterá
+
+00:04:56.000 --> 00:05:00.000
+praticando bastante

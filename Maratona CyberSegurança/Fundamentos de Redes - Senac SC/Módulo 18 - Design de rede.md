@@ -37,7 +37,7 @@ As redes também suportam uma ampla gama de aplicativos e serviços. Elas devem 
 ## 18.1.2 Vídeo - Tolerância a falhas
 
 **Selecione o botão Reproduzir para assistir ao vídeo.**
-
+![[18.1.2.mp4#subtitle=anexos/18.1.2.vtt]]
 Neste cenário, temos duas partes em nossa rede. Cada uma com seu próprio caminho para nosso ISP e a Internet. Pacotes originados no PC um são encaminhados para o Roteador A e para o ISP. Enquanto os pacotes provenientes do PC dois são encaminhados para o Roteador B e, em seguida, para o mesmo ISP.
 
 Mas, o que acontece quando há um problema com o Roteador A, ou com um link usado no caminho para o Roteador A? Pacotes que precisam do roteador A para encaminhá-los para a Internet serão descartados, e não podem mais alcançar o destino final.
@@ -164,7 +164,7 @@ Os endereços MAC físico e IP lógico são necessários para que um computador 
 ## 18.2.2 Vídeo - Visualizar Informações de Rede em Meus Dispositivos
 
 **Selecione o botão Reproduzir para assistir ao vídeo.**
-
+![[18.2.2.mp4#subtitle=anexos/18.2.2.vtt]]
 Neste vídeo, vamos ver como obtemos informações sobre as várias placas de interface de rede que estão contidas em nossos PCs. No caso deste laptop, há tanto uma placa de rede com fio como uma placa de rede sem fio.
 
 Para visualizar as propriedades desses dispositivos, é preciso ir para a Central de Rede e Compartilhamento. Isso pode ser feito facilmente indo para o ícone da bandeja do sistema, clicando com o botão direito do mouse e abrindo a Central de Rede e Compartilhamento. Isso traz à tona a lista de conexões que estão atualmente ativas.
