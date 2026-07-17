@@ -1,0 +1,364 @@
+WEBVTT
+
+00:00:03.000 --> 00:00:06.000
+- [Instrutor] Todos os dispositivos em uma rede IPv4
+
+00:00:06.000 --> 00:00:09.000
+precisa de um endereço lógico de 32 bits para se comunicar.
+
+00:00:09.000 --> 00:00:12.000
+Este endereço de host IPv4 lógico de 32 bits
+
+00:00:12.000 --> 00:00:16.000
+consiste em uma parte de rede ou ID de rede à esquerda,
+
+00:00:16.000 --> 00:00:20.000
+e uma parte do host ou ID do host à direita.
+
+00:00:20.000 --> 00:00:22.000
+O comprimento destes depende do tamanho da rede.
+
+00:00:22.000 --> 00:00:26.000
+Redes maiores terão uma porção de host mais longa.
+
+00:00:26.000 --> 00:00:30.000
+Uma rede pode ser pensada como uma gama de endereços.
+
+00:00:30.000 --> 00:00:32.000
+Todos os dispositivos na mesma rede
+
+00:00:32.000 --> 00:00:35.000
+têm o mesmo padrão de bits para o ID de rede,
+
+00:00:35.000 --> 00:00:39.000
+mas eles terão um ID de host diferente.
+
+00:00:39.000 --> 00:00:41.000
+Alguns endereços neste intervalo são reservados
+
+00:00:41.000 --> 00:00:43.000
+e ter um nome e significado especiais.
+
+00:00:43.000 --> 00:00:46.000
+Por exemplo, o primeiro endereço no intervalo
+
+00:00:46.000 --> 00:00:48.000
+é usado para identificar a própria rede,
+
+00:00:48.000 --> 00:00:50.000
+e não pode ser atribuído a nenhum host.
+
+00:00:50.000 --> 00:00:53.000
+É referido como o endereço de rede.
+
+00:00:53.000 --> 00:00:55.000
+O último no intervalo é chamado
+
+00:00:55.000 --> 00:00:57.000
+o endereço de difusão, e é usado
+
+00:00:57.000 --> 00:01:01.000
+para enviar uma mensagem a todos os dispositivos na rede de uma só vez.
+
+00:01:01.000 --> 00:01:04.000
+Ele também não pode ser atribuído a nenhum host.
+
+00:01:04.000 --> 00:01:06.000
+Todos os endereços IP entre a rede
+
+00:01:06.000 --> 00:01:09.000
+e os endereços de transmissão compõem o
+
+00:01:09.000 --> 00:01:11.000
+ou intervalo de host válido, e pode ser usado
+
+00:01:11.000 --> 00:01:13.000
+para endereçar os hosts na rede.
+
+00:01:13.000 --> 00:01:17.000
+Vamos dar uma olhada em como esses endereços são determinados.
+
+00:01:17.000 --> 00:01:18.000
+Para encaminhar dados, um dispositivo
+
+00:01:18.000 --> 00:01:21.000
+precisa saber em que rede está.
+
+00:01:21.000 --> 00:01:24.000
+Usando seu endereço IP de host, sua máscara de sub-rede,
+
+00:01:24.000 --> 00:01:26.000
+e um processo chamado binário,
+
+00:01:26.000 --> 00:01:29.000
+um dispositivo pode encontrar o que é chamado de endereço de rede.
+
+00:01:29.000 --> 00:01:31.000
+Este endereço representa uma rede
+
+00:01:31.000 --> 00:01:33.000
+ao qual o host pertence, e será
+
+00:01:33.000 --> 00:01:35.000
+ligeiramente diferente do IP do host.
+
+00:01:35.000 --> 00:01:38.000
+Para fazer isso, o dispositivo compara seu IP de host
+
+00:01:38.000 --> 00:01:41.000
+e sua máscara de sub-rede bit para bit.
+
+00:01:41.000 --> 00:01:44.000
+Se os valores de bit forem ambos binários,
+
+00:01:44.000 --> 00:01:46.000
+o resultado é binário.
+
+00:01:46.000 --> 00:01:48.000
+Se um ou ambos os valores de bit for zero,
+
+00:01:48.000 --> 00:01:51.000
+o resultado é um zero binário.
+
+00:01:51.000 --> 00:01:53.000
+Vamos dar uma olhada em um exemplo.
+
+00:01:53.000 --> 00:01:55.000
+Digamos que temos um PC com um endereço IP de host
+
+00:01:55.000 --> 00:02:02.000
+e uma máscara de sub-rede de 192.160.2.38/24, e usaremos o Anding
+
+00:02:02.000 --> 00:02:04.000
+para localizar o endereço de rede do host.
+
+00:02:04.000 --> 00:02:08.000
+Aqui está o IP do host em binário, aqui está a máscara de sub-rede
+
+00:02:08.000 --> 00:02:12.000
+em binário, se os compararmos bit para bit,
+
+00:02:12.000 --> 00:02:16.000
+podemos ver que um e um resulta em um um,
+
+00:02:16.000 --> 00:02:19.000
+um e um resulta em um um,
+
+00:02:19.000 --> 00:02:22.000
+um zero e um resulta em um zero,
+
+00:02:22.000 --> 00:02:26.000
+um zero e um resulta em um zero,
+
+00:02:26.000 --> 00:02:32.000
+e assim por diante, até que tenhamos comparado todos os 32 bits.
+
+00:02:32.000 --> 00:02:39.000
+Observe que o último octeto é todos zeros binários.
+
+00:02:39.000 --> 00:02:42.000
+Porque estamos usando uma máscara de sub-rede /24,
+
+00:02:42.000 --> 00:02:45.000
+os três primeiros octetos representam a parte da rede,
+
+00:02:45.000 --> 00:02:48.000
+e o último octeto é a parte hospedeira.
+
+00:02:48.000 --> 00:02:52.000
+Endereços de rede sempre terão zeros binários
+
+00:02:52.000 --> 00:02:55.000
+em toda a sua porção de host, por mais tempo que seja.
+
+00:02:55.000 --> 00:02:57.000
+Neste caso, os últimos oito bits.
+
+00:02:57.000 --> 00:03:00.000
+Se convertermos em decimal pontilhado,
+
+00:03:00.000 --> 00:03:01.000
+podemos ver que este host pertence
+
+00:03:01.000 --> 00:03:08.000
+para a rede 192.168.2.0/24.
+
+00:03:08.000 --> 00:03:12.000
+Agora vamos determinar o endereço de transmissão para esta rede,
+
+00:03:12.000 --> 00:03:15.000
+que é usado para enviar uma mensagem
+
+00:03:12.000 --> 00:03:15.000
+para todos os dispositivos na rede de uma só vez.
+
+00:03:15.000 --> 00:03:18.000
+Considerando que o endereço de rede tinha todos os zeros binários
+
+00:03:18.000 --> 00:03:20.000
+na parte do host, o endereço de transmissão
+
+00:03:20.000 --> 00:03:23.000
+terá todos os binários, uma vez que a parte do host
+
+00:03:23.000 --> 00:03:26.000
+neste exemplo é apenas o último octeto.
+
+00:03:26.000 --> 00:03:28.000
+Para determinar o endereço de transmissão,
+
+00:03:28.000 --> 00:03:31.000
+mantemos a parte da rede o mesmo,
+
+00:03:31.000 --> 00:03:34.000
+e altere a parte do host para todos os binários.
+
+00:03:34.000 --> 00:03:44.000
+Isso resulta em um endereço de transmissão de 192.168.2.255.
+
+00:03:44.000 --> 00:03:46.000
+Em seguida, determinaremos os endereços de host utilizáveis
+
+00:03:46.000 --> 00:03:49.000
+que se encontram entre a rede e os endereços de transmissão.
+
+00:03:49.000 --> 00:03:51.000
+O primeiro host utilizável em binário
+
+00:03:51.000 --> 00:03:55.000
+serão todos zeros binários, com um binário
+
+00:03:55.000 --> 00:03:57.000
+no final da parte do host.
+
+00:03:57.000 --> 00:04:00.000
+Convertendo para decimal pontilhado, isso nos diz
+
+00:04:00.000 --> 00:04:06.000
+o primeiro host utilizável nesta rede é 192.168.2.1.
+
+00:04:06.000 --> 00:04:08.000
+Finalmente, determinaremos o último host utilizável,
+
+00:04:08.000 --> 00:04:12.000
+que serão todos os binários com um zero no final,
+
+00:04:12.000 --> 00:04:15.000
+o padrão de bits oposto do primeiro host utilizável.
+
+00:04:15.000 --> 00:04:23.000
+Convertendo para decimal pontilhado, obtemos 192.168.2.254.
+
+00:04:23.000 --> 00:04:24.000
+Vamos recapitular nossos cálculos.
+
+00:04:24.000 --> 00:04:31.000
+Começamos com o endereço IP do host 192.168.2.38/24.
+
+00:04:31.000 --> 00:04:34.000
+Usando o Anding binário, determinamos que este host
+
+00:04:34.000 --> 00:04:39.000
+pertence à rede 192.168.2.0.
+
+00:04:39.000 --> 00:04:42.000
+Mantendo a parte da rede o mesmo,
+
+00:04:42.000 --> 00:04:45.000
+mas colocando todos os binários na parte do hospede,
+
+00:04:45.000 --> 00:04:46.000
+determinamos que o endereço de transmissão
+
+00:04:46.000 --> 00:04:52.000
+para esta rede é 192.168.2.255.
+
+00:04:52.000 --> 00:04:55.000
+Novamente, mantendo a parte da rede a mesma
+
+00:04:55.000 --> 00:04:56.000
+mas alterando a parte do hospede,
+
+00:04:56.000 --> 00:04:58.000
+determinamos que o intervalo de host utilizável
+
+00:04:58.000 --> 00:05:02.000
+para atribuir endereços a dispositivos nesta rede
+
+00:05:02.000 --> 00:05:06.000
+é 192.168.2.1, que é um número acima
+
+00:05:06.000 --> 00:05:12.000
+do endereço de rede e 192.168.2.254,
+
+00:05:12.000 --> 00:05:16.000
+que é um número abaixo do endereço de transmissão.
+
+00:05:16.000 --> 00:05:18.000
+Você pode ver que o nosso endereço IP de host original
+
+00:05:18.000 --> 00:05:20.000
+cai dentro deste intervalo.
+
+00:05:20.000 --> 00:05:24.000
+Coisas a ter em mente ao trabalhar com endereços IPv4,
+
+00:05:24.000 --> 00:05:28.000
+todos os endereços de host IPv4 têm 32 bits de comprimento,
+
+00:05:28.000 --> 00:05:30.000
+uma parte do endereço representa a rede
+
+00:05:30.000 --> 00:05:34.000
+que o hospedeiro pertence, e que começa à esquerda,
+
+00:05:34.000 --> 00:05:37.000
+a parte restante é a parte do hospede,
+
+00:05:37.000 --> 00:05:39.000
+que identifica o host na rede,
+
+00:05:39.000 --> 00:05:41.000
+e há dois endereços reservados especiais
+
+00:05:41.000 --> 00:05:44.000
+em todas as redes que não podem ser atribuídas ao host.
+
+00:05:44.000 --> 00:05:47.000
+Um deles é o endereço de rede, que é o mais baixo
+
+00:05:47.000 --> 00:05:49.000
+no intervalo de endereços, e representa
+
+00:05:49.000 --> 00:05:52.000
+a rede à qual pertencem todos os dispositivos,
+
+00:05:52.000 --> 00:05:54.000
+e o outro é o endereço de transmissão,
+
+00:05:54.000 --> 00:05:56.000
+que é o endereço mais alto no intervalo,
+
+00:05:56.000 --> 00:05:58.000
+e pode ser usado para um grito
+
+00:05:58.000 --> 00:06:02.000
+para todos os dispositivos na rede de uma só vez.
+
+00:06:02.000 --> 00:06:03.000
+Felizmente, existem atalhos que você pode usar
+
+00:06:03.000 --> 00:06:05.000
+para calcular esses endereços sem ter que converter
+
+00:06:05.000 --> 00:06:08.000
+para binários primeiro, mas examinando esses endereços
+
+00:06:08.000 --> 00:06:11.000
+no nível de bits deve ajudá-lo a entender
+
+00:06:11.000 --> 00:06:13.000
+como os dispositivos de rede os interpretam
+
+00:06:13.000 --> 00:06:16.000
+e também como o formato decimal pontilhado é derivado.

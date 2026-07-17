@@ -126,7 +126,7 @@ A operação AND entre um endereço de host IPv4 e uma máscara de sub-rede resu
 ## 23.1.5 Vídeo - Endereços de Rede, Host e Broadcast
 
 **Selecione o botão Reproduzir para assistir ao vídeo.**
-
+![[23.1.5.mp4#subtitle=anexos/23.1.5.vtt]]
 Todos os dispositivos em uma rede IPv4 precisam de um endereço lógico de 32 bits para se comunicar. Este endereço de host IPv4 lógico de 32 bits consiste em uma parte de rede ou ID de rede à esquerda, e uma parte do host ou ID do host à direita. O comprimento destes depende do tamanho da rede. Redes maiores terão uma porção de host mais longa.
 
 Uma rede pode ser pensada como uma gama de endereços. Todos os dispositivos na mesma rede têm o mesmo padrão de bits para o ID de rede, mas eles terão um ID de host diferente.

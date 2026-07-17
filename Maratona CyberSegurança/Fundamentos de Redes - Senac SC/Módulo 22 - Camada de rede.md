@@ -419,7 +419,7 @@ Ao contrário de IPv4, os roteadores não fragmentam os pacotes IPv6 roteados.
 ## 22.3.5 Vídeo - Exemplo de cabeçalhos IPv6 no Wireshark
 
 **Selecione o botão Reproduzir para assistir ao vídeo.**
-
+![[22.3.5.mp4#subtitle=anexos/22.3.5.vtt]]
 Nesta imagem, podemos ver que o pacote destacado é o pacote número 46 e que o endereço de origem, na área da janela de lista de pacotes, é um endereço IPv6 unicast global. Você pode ver isso começando com o `2001:6f8`. O endereço de destino também é um endereço unicast global `2001:6f8:900e` e assim por diante.
 
 Se observarmos o campo de protocolo, vemos que nas camadas superiores este é um pacote TCP e essa é uma tentativa de estabelecer uma comunicação inicial com um servidor web HTTP.

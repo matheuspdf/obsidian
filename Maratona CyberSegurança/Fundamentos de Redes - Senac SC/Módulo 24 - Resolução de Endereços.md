@@ -58,10 +58,7 @@ Cada entrada (linha) da tabela ARP vincula um endereço IPv4 a um endereço MAC.
 Se o dispositivo localizar o endereço IPv4, seu endereço MAC correspondente será usado como endereço MAC de destino no quadro. Se nenhuma entrada for encontrada, o dispositivo enviará uma requisição ARP.
 
 **Clique em reproduzir na figura para ver uma animação da função ARP.**
-
-![[Pasted image 20260619070415.png]]
-![[Pasted image 20260619070440.png]]
-
+![[brave_MDXJtXsyf0.mp4]]
 ## 24.1.3 Vídeo - Operação ARP - Solicitação ARP
 
 Uma solicitação ARP é enviada quando um dispositivo precisa determinar o endereço MAC associado a um endereço IPv4 e não possui uma entrada para o endereço IPv4 em sua tabela ARP.

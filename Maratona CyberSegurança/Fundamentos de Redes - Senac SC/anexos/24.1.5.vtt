@@ -1,0 +1,127 @@
+WEBVTT
+
+00:00:03.000 --> 00:00:07.000
+- [Instrutor] Neste vídeo, o PC-A tem um pacote IP,
+
+00:00:07.000 --> 00:00:12.000
+o endereço IP de origem em si, em 192.168.1.110,
+
+00:00:12.000 --> 00:00:17.000
+e o endereço IP de destino 10.1.1.10,
+
+00:00:17.000 --> 00:00:21.000
+que é um endereço IP em uma rede remota.
+
+00:00:21.000 --> 00:00:23.000
+o endereço MAC de destino será o do
+
+00:00:23.000 --> 00:00:28.000
+Gateway padrão: 192.168.1.1
+
+00:00:28.000 --> 00:00:31.000
+o roteador R1, nesse caso.
+
+00:00:31.000 --> 00:00:37.000
+O PC-A verifica o cache de ARP do endereço IP 192.168.1.1,
+
+00:00:37.000 --> 00:00:40.000
+e não há entrada com um endereço MAC.
+
+00:00:40.000 --> 00:00:46.000
+Ele coloca o pacote em retenção e cria uma solicitação ARP.
+
+00:00:46.000 --> 00:00:53.000
+A solicitação ARP tem o endereço IP do roteador 192.168.1.1,
+
+00:00:53.000 --> 00:00:57.000
+e o endereço MAC é desconhecido.
+
+00:00:57.000 --> 00:00:59.000
+O endereço MAC de destino de uma solicitação ARP
+
+00:00:59.000 --> 00:01:01.000
+é um broadcast,
+
+00:01:01.000 --> 00:01:03.000
+Então ele será enviado para o switch,
+
+00:01:03.000 --> 00:01:05.000
+e o switch enviará por todas as portas,
+
+00:01:05.000 --> 00:01:13.000
+exceto pela porta de entrada.
+
+00:01:13.000 --> 00:01:16.000
+em relação ao endereço IPv4 de destino na solicitação ARP,
+
+00:01:16.000 --> 00:01:19.000
+e percebe que não há correspondência,
+
+00:01:19.000 --> 00:01:22.000
+então esse não é o destino pretendido.
+
+00:01:22.000 --> 00:01:27.000
+O PC-C recebe a solicitação ARP, compara seu próprio endereço IPv4
+
+00:01:27.000 --> 00:01:29.000
+contra o endereço IPv4 de destino,
+
+00:01:29.000 --> 00:01:33.000
+e também não é o destino pretendido.
+
+00:01:33.000 --> 00:01:36.000
+O roteador R1 recebe a solicitação ARP, compara seu
+
+00:01:36.000 --> 00:01:40.000
+endereço IPv4 em relação ao endereço IPv4 de destino,
+
+00:01:40.000 --> 00:01:42.000
+e dessa vez é uma correspondência.
+
+00:01:42.000 --> 00:01:46.000
+É o destino da solicitação ARP.
+
+00:01:46.000 --> 00:01:51.000
+Assim o roteador R1 emitirá uma resposta ARP.
+
+00:01:51.000 --> 00:01:56.000
+Ela incluirá seu próprio endereço MAC, 00-0D,
+
+00:01:56.000 --> 00:02:01.000
+juntamente com seu endereço IPv4.
+
+00:02:01.000 --> 00:02:04.000
+O endereço MAC de destino do ARP responde unicamente
+
+00:02:04.000 --> 00:02:09.000
+direcionado para PC-A.
+
+00:02:09.000 --> 00:02:13.000
+Assim, ele é um endereço MAC de destino de 00-0A,
+
+00:02:13.000 --> 00:02:18.000
+assim o PC-A recebe a resposta ARP.
+
+00:02:18.000 --> 00:02:22.000
+PC-A recebe a resposta do ARP em resposta
+
+00:02:22.000 --> 00:02:26.000
+para sua solicitação ARP vê o endereço IPv4 de destino
+
+00:02:26.000 --> 00:02:31.000
+e o endereço MAC de destino e adiciona-o ao cache ARP.
+
+00:02:31.000 --> 00:02:35.000
+Agora ele tem as informações necessárias para encaminhar o pacote
+
+00:02:35.000 --> 00:02:38.000
+que está em espera.
+
+00:02:38.000 --> 00:02:44.000
+Assim, o endereço MAC de destino agora será 00-0D,
+
+00:02:44.000 --> 00:02:49.000
+o do roteador R1, seu endereço MAC.
+
+00:02:49.000 --> 00:02:52.000
+E agora o PC-A pode encaminhar o quadro
