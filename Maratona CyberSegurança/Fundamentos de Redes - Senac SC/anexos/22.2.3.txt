@@ -1,0 +1,243 @@
+[00:03] - [Instrutor] Eu tenho uma
+captura de tela do meu Wireshark
+
+[00:05] captura de pacotes e você pode
+ver que o segundo pacote
+
+[00:08] que foi capturado foi destacado
+
+[00:11] e depois na janela de detalhes do pacote
+
+[00:14] a informação da camada
+de rede foi expandida
+
+[00:17] para nos mostrar todas as coisas
+que acontecem na camada de rede.
+
+[00:21] Então vamos ver o que está acontecendo
+
+[00:23] neste pacote específico
+que estamos examinando.
+
+[00:25] Podemos ver que antes de tudo,
+
+[00:28] protocolo de camada de rede ou protocolo
+de camada de internet
+
+[00:31] que estamos lidando com era versão protocolo de
+internet 4.
+
+[00:35] IPV 4.
+
+[00:36] Também podemos ver que o endereço IP origem
+
+[00:39] era 192.168.1.109.
+
+[00:42] We can see it also highlighted up here
+
+[00:44] na área da janela da lista de pacotes.
+
+[00:47] E o endereço IP
+de destino era 192.168.1.1.
+
+[00:52] Também podemos ver isso aqui.
+
+[00:54] Podemos ver que na camada superior
+
+[00:56] este é um pacote de protocolo TCP.
+
+[01:00] Mas se limitarmos o nosso investimento
+, apenas os campos IPV 4
+
+[01:04] ou a informação IPV 4,
+
+[01:06] podemos ver os diferentes
+tipos de informações de controle
+
+[01:08] que está contido em todos os pacotes IPV 4.
+
+[01:11] Por exemplo, o número
+da versão, que é 4,
+
+[01:14] identificando isso como um IPV 4,
+em oposição ao pacote IPV 6.
+
+[01:18] O comprimento do cabeçalho ou o
+comprimento do cabeçalho,
+
+[01:21] esse é o tamanho mínimo
+de um cabeçalho IPV4.
+
+[01:24] O campo de serviços diferenciados,
+
+[01:27] que é usado para priorização de pacote
+
+[01:30] e é útil para aplicativos
+como Voice-over IP.
+
+[01:34] O comprimento total do pacote.
+
+[01:36] O número de identificação,
+que é usado para fragmentação.
+
+[01:41] Os sinalizadores, você pode ver que
+o bit DF foi definido,
+
+[01:45] que significa não fragmentar.
+
+[01:47] Este pacote não é grande o suficiente
+
+[01:49] ou não é identificado para fragmentação.
+
+[01:52] Deslocamento de fragmento.
+
+[01:54] O TTL ou tempo de vida,
+que é definido como 128.
+
+[01:58] Toda vez que um pacote é roteado
+de um salto para o próximo,
+
+[02:03] o número TTL é reduzido.
+
+[02:06] Quando o número TTL atinge
+zero, o pacote é descartado.
+
+[02:09] garantindo que os pacotes não circulem
+
+[02:11] na internet para sempre
+em um loop sem fim.
+
+[02:14] O valor TTL também é usado em
+rotas de rastreamento ICMP e pings.
+
+[02:19] O campo de protocolo nos permite
+saber o tipo de informação
+
+[02:23] esperar na vaporização de dados
+do pacote.
+
+[02:25] Um seis identifica a parte de dados
+
+[02:28] deste pacote como sendo um pacote TCP.
+
+[02:32] O campo checksum do cabeçalho,
+
+[02:33] que permite aos roteadores verificar para ver
+
+[02:35] se houver algum erro ou
+inconsistência no cabeçalho IP.
+
+[02:39] Se houver, o pacote será descartado.
+
+[02:42] E, finalmente, os
+endereços IP de origem e destino,
+
+[02:46] qual é a parte mais importante
+do pacote IPV4.
+
+[02:50] Vamos dar uma olhada em mais duas imagens
+
+[02:53] de capturas de pacotes do Wireshark.
+
+[02:54] E veremos algumas
+semelhanças e diferenças.
+
+[02:58] A próxima captura de tela
+nos mostra que agora estamos olhando
+
+[03:01] no oitavo pacote capturado.
+
+[03:04] O endereço IP
+de origem do pacote também é 192.168.1.109
+
+[03:09] e o endereço IP
+de destino é 192.168.1.1,
+
+[03:14] exceto se esse pacote for uma solicitação HTTP GET.
+
+[03:19] Então essa é uma solicitação de um servidor da Web
+
+[03:23] localizada em 192.168.1.1.
+
+[03:27] Você pode ver que a camada de rede
+
+[03:29] ou as informações
+da camada da Internet foram expandidas,
+
+[03:32] que também é protocolo IP versão 4,
+
+[03:36] e que temos informações similares
+
+[03:39] nos diferentes campos.
+
+[03:40] Observe no campo comprimento
+total que este pacote
+
+[03:44] é de 411 bytes, comparado
+ao pacote anterior,
+
+[03:48] que tinha apenas 52 bytes.
+
+[03:50] Você pode dizer que este pacote
+tem muito mais informações
+
+[03:53] ou é um pacote muito maior
+do que o anterior.
+
+[03:57] Se olharmos abaixo as informações
+da versão 4 do protocolo de internet
+
+[04:02] podemos ver as informações
+de TCP e abaixo disso
+
+[04:05] que existe um protocolo de transferência de hipertexto
+
+[04:08] ou informações de protocolo HTTP
+neste pacote também.
+
+[04:13] Vou avançar para o próximo pacote
+
+[04:15] e você pode ver que este pacote
+
+[04:17] é o décimo sexto pacote
+capturado aqui em cima.
+
+[04:20] Também é do host 192.168.1.109
+
+[04:25] para o host 192.168.1.1,
+
+[04:29] exceto que esse é o protocolo ICMP.
+
+[04:32] Você pode ver nas informações
+na janela da lista de baldes
+
+[04:36] que esta é uma solicitação de eco ou ping.
+
+[04:40] Se procurarmos nas informações
+da versão 4 do protocolo de internet
+
+[04:44] na área de detalhes, podemos
+ver algumas pequenas diferenças.
+
+[04:48] A versão ainda é quatro.
+
+[04:50] O tamanho do cabeçalho ainda é de 20 bytes.
+
+[04:53] Mas podemos ver que as
+bandeiras são um pouco diferentes
+
+[04:58] e que o campo de protocolo
+está agora definido como um,
+
+[05:01] indicando que a vaporização
+de dados deste pacote
+
+[05:04] é uma mensagem de protocolo ICMP.
+
+[05:07] Observe que na janela de
+detalhes na parte inferior aqui
+
+[05:11] é uma área expandida para olhar
+
+[05:13] nas informações de cabeçalho
+específicas para ICMP.

@@ -1,0 +1,79 @@
+[00:00] Usando o modelo OSI, vamos dar uma olhada
+
+[00:02] em um exemplo do processo de encapsulamento.
+
+[00:05] Quando um usuário insere uma URL em um navegador da Web,
+
+[00:08] ela se torna parte dos dados que solicitam a página da Web
+
+[00:11] de um servidor web.
+
+[00:13] Esses dados são então enviados
+
+[00:15] para a camada 7 - protocolo da camada de aplicação
+
+[00:17] Nesse caso, HTTPS. O processo HTTPS encapsula os dados
+
+[00:24] com um cabeçalho HTTPS.
+
+[00:26] A PDU ou unidade de dados do protocolo é conhecida como dados.
+
+[00:30] Em seguida, o cabeçalho HTTPS e os dados originais são enviados
+
+[00:34] para a camada 4 - protocolo da camada de transporte.
+
+[00:37] Neste exemplo, TCP.
+
+[00:39] O processo TCP encapsula o cabeçalho HTTPS
+
+[00:43] e os dados originais com um cabeçalho HTTPS.
+
+[00:47] O cabeçalho e os dados HTTPS anteriores se tornam a porção de dados
+
+[00:51] do segmento da camada de transporte
+
+[00:54] Em seguida, o segmento TCP é enviado
+
+[00:56] para a camada 3 - protocolo da camada de rede.
+
+[00:59] Neste exemplo,  IPv4.
+
+[01:02] O processo IPv4 encapsula o cabeçalho TCP e os dados
+
+[01:06] com um cabeçalho TCP, que se torna a porção de dados
+
+[01:10] desse pacote da camada de rede.
+
+[01:12] Em seguida, o pacote IPv4 é enviado
+
+[01:14] para a camada 2 - protocolo da camada de enlace de dados,
+
+[01:16] que normalmente é a Ethernet.
+
+[01:18] O processo Ethernet encapsula o cabeçalho IPv4 e os dados
+
+[01:22] com o cabeçalho Ethernet e o trailer,
+
+[01:24] que se torna a porção de dados
+
+[01:25] desse quadro da camada de enlace de dados.
+
+[01:27] Por fim, o quadro de enlace de dados é enviado
+
+[01:30] para a NIC, ou placa de interface de rede, como bits físicos
+
+[01:34] na mídia com ou sem fio da rede.
+
+[01:37] O protocolo e os dados de cada camada se tornam a porção de dados
+
+[01:41] do próximo protocolo.
+
+[01:42] Cada protocolo aceita o cabeçalho do protocolo anterior nos dados
+
+[01:46] e então encapsula essas informações como dados
+
+[01:48] com um cabeçalho de protocolo adicional.
+
+[01:51] A camada de enlace de dados é a única camada que também acrescenta
+
+[01:54] um trailer Ethernet.

@@ -1,0 +1,169 @@
+WEBVTT
+
+00:00:02.000 --> 00:00:04.000
+- Neste vídeo, PC-A vai enviar
+
+00:00:04.000 --> 00:00:07.000
+um quadro ethernet para PC-B, e
+
+00:00:07.000 --> 00:00:10.000
+PC-B enviará um quadro Ethernet para o PC-A.
+
+00:00:10.000 --> 00:00:14.000
+Vamos examinar como os switches S1 e S2
+
+00:00:14.000 --> 00:00:16.000
+construir suas tabelas de endereços MAC
+
+00:00:16.000 --> 00:00:18.000
+e como eles encaminham quadros
+
+00:00:18.000 --> 00:00:23.000
+com base nas informações dessas tabelas.
+
+00:00:23.000 --> 00:00:27.000
+O PC-A tem um quadro Ethernet para enviar ao PC-B.
+
+00:00:27.000 --> 00:00:30.000
+O endereço MAC de origem do quadro é 00-0A
+
+00:00:30.000 --> 00:00:34.000
+e o de destino é 00-0B.
+
+00:00:34.000 --> 00:00:38.000
+o quadro Ethernet é enviado para o switch S1.
+
+00:00:38.000 --> 00:00:40.000
+S1 recebe o quadro Ethernet
+
+00:00:40.000 --> 00:00:42.000
+examina o endereço MAC de origem,
+
+00:00:42.000 --> 00:00:43.000
+e observa que esse endereço
+
+00:00:43.000 --> 00:00:46.000
+não está na tabela de endereços MAC,
+
+00:00:46.000 --> 00:00:51.000
+então adiciona o endereço MAC e o número da porta de entrada.
+
+00:00:51.000 --> 00:00:55.000
+Em seguida, o switch S1 examina o endereço MAC de destino
+
+00:00:55.000 --> 00:00:58.000
+e observa que este endereço MAC ele não está na tabela,
+
+00:00:58.000 --> 00:01:03.000
+então o envia para todas as portas.
+
+00:01:03.000 --> 00:01:06.000
+O PC-B recebe o quadro Ethernet,
+
+00:01:06.000 --> 00:01:08.000
+compara o endereço MAC de destino
+
+00:01:08.000 --> 00:01:11.000
+contra seu próprio endereço MAC e observa que
+
+00:01:11.000 --> 00:01:16.000
+essa é uma correspondência e recebe o restante do quadro.
+
+00:01:16.000 --> 00:01:18.000
+O quadro Ethernet continua a ser
+
+00:01:18.000 --> 00:01:20.000
+encaminhado para o switch S2.
+
+00:01:20.000 --> 00:01:23.000
+O switch S2 examina o endereço MAC de origem
+
+00:01:23.000 --> 00:01:25.000
+para o quadro e percebe que não está em
+
+00:01:25.000 --> 00:01:29.000
+sua tabela de endereços MAC, então ele adiciona o endereço MAC
+
+00:01:29.000 --> 00:01:33.000
+e a porta de entrada para sua tabela de endereços MAC.
+
+00:01:33.000 --> 00:01:36.000
+Em seguida, o switch S2 examina o endereço MAC de destino,
+
+00:01:36.000 --> 00:01:39.000
+e observa que ele não está na tabela,
+
+00:01:39.000 --> 00:01:43.000
+então o envia para todas as portas.
+
+00:01:43.000 --> 00:01:46.000
+O PC-C recebe o quadro Ethernet
+
+00:01:46.000 --> 00:01:49.000
+e seu endereço MAC não corresponde
+
+00:01:49.000 --> 00:01:52.000
+ao endereço MAC de destino do quadro Ethernet,
+
+00:01:52.000 --> 00:01:55.000
+então não aceita o restante do quadro.
+
+00:01:55.000 --> 00:01:58.000
+O roteador recebe o quadro Ethernet
+
+00:01:58.000 --> 00:02:00.000
+compara o endereço MAC de destino
+
+00:02:00.000 --> 00:02:02.000
+contra seu próprio endereço MAC
+
+00:02:02.000 --> 00:02:04.000
+e percebe que não há correspondência,
+
+00:02:04.000 --> 00:02:08.000
+então não recebe o restante do quadro.
+
+00:02:08.000 --> 00:02:16.000
+Agora, vamos pedir ao PC-B que envie um quadro de volta para o PC-A.
+
+00:02:16.000 --> 00:02:20.000
+O endereço MAC de origem do quadro é 00-0B
+
+00:02:20.000 --> 00:02:24.000
+e o de destino é 00-0A.
+
+00:02:24.000 --> 00:02:27.000
+O PC-B o envia para o switch S1.
+
+00:02:27.000 --> 00:02:31.000
+O S1 observa que o endereço MAC de origem
+
+00:02:31.000 --> 00:02:32.000
+não está na tabela de endereços MAC,
+
+00:02:32.000 --> 00:02:34.000
+por isso adiciona o endereço MAC
+
+00:02:34.000 --> 00:02:37.000
+e o número da porta de entrada.
+
+00:02:37.000 --> 00:02:41.000
+Em seguida, o switch S1 examina o endereço MAC de destino
+
+00:02:41.000 --> 00:02:46.000
+e percebe que o endereço MAC está em sua tabela de endereços MAC.
+
+00:02:46.000 --> 00:02:51.000
+então o envia apenas para a porta 1.
+
+00:02:51.000 --> 00:02:54.000
+O PC-A recebe um quadro Ethernet,
+
+00:02:54.000 --> 00:02:56.000
+compara o endereço MAC de destino
+
+00:02:56.000 --> 00:02:59.000
+contra seu próprio endereço MAC e avisos
+
+00:02:59.000 --> 00:03:02.000
+essa é uma correspondência e recebe o restante do quadro.

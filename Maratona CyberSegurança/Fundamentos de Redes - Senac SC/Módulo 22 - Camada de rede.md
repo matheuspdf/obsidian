@@ -26,7 +26,7 @@ Isso parece muita informação para pessoas como Marcy e Vincent, que não têm 
 ## 22.1.1 Vídeo - Encapsulamento de Dados
 
 **Selecione o botão Reproduzir para assistir ao vídeo.**
-
+![[22.1.1.mp4#subtitle=anexos/22.1.1.vtt]]
 Usando o modelo OSI, vamos dar uma olhada em um exemplo do processo de encapsulamento.
 
 Quando um usuário insere uma URL em um navegador da Web, ela se torna parte dos dados que solicitam a página da Web de um servidor web. Esses dados são então enviados para a camada 7, o protocolo da camada de aplicação — nesse caso, HTTPS. O processo HTTPS encapsula os dados com um cabeçalho HTTPS. A PDU, ou unidade de dados do protocolo, é conhecida como dados.
@@ -246,7 +246,7 @@ Os campos Opções e Preenchimento raramente são usados e estão além do escop
 ## 22.2.3 Vídeo - Exemplo de cabeçalhos IPv4 no Wireshark
 
 **Selecione o botão Reproduzir para assistir ao vídeo.**
-
+![[22.2.3.mp4#subtitle=anexos/22.2.3.vtt]]
 ![](https://www.youtube.com/watch?v=_6-u61V0GGE)
 
 Eu tenho uma captura de tela do Wireshark e você pode ver que o segundo pacote capturado foi destacado. Na janela de detalhes do pacote, a informação da camada de rede foi expandida para nos mostrar todas as coisas que acontecem na camada de rede.

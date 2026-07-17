@@ -658,7 +658,7 @@ Em seguida, PC-A envia outro quadro para PC-D como mostrado na figura. A tabela 
 ![[Pasted image 20260615214024.png]]
 
 ## 21.4.4 Vídeo - Tabelas de endereços MAC em switches conectados
-
+![[21.4.4.mp4#subtitle=anexos/21.4.4.vtt]]
 Um switch pode ter vários endereços MAC associados a uma única porta. Isso é comum quando o switch está conectado a outro switch. O switch terá uma entrada separada na tabela de endereços MAC para cada quadro recebido com um endereço MAC de origem diferente.
 
 Clique em Reproduzir na figura para ver uma demonstração de como dois switches conectados criam tabelas de endereços MAC.
@@ -678,7 +678,7 @@ Agora, vamos pedir ao PC-B que envie um quadro de volta para o PC-A. O endereço
 O PC-A recebe o quadro Ethernet, compara o endereço MAC de destino contra seu próprio endereço MAC, observa que há uma correspondência e recebe o restante do quadro.
 
 ## 21.4.5 Vídeo - Envie o Quadro para o Gateway Padrão
-
+![[21.4.5.mp4#subtitle=anexos/21.4.5.vtt]]
 Quando um dispositivo tem um endereço IP em uma rede remota, o quadro Ethernet não pode ser enviado diretamente para o dispositivo de destino. Em vez disso, o quadro Ethernet é enviado ao endereço MAC do gateway padrão, o roteador.
 
 Clique em Reproduzir na figura para ver uma demonstração de como PCA-A se comunica com o gateway padrão.

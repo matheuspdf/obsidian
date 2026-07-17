@@ -1,0 +1,127 @@
+WEBVTT
+
+00:00:06.000 --> 00:00:08.000
+- Neste vídeo, vamos ver
+
+00:00:08.000 --> 00:00:12.000
+sobre endereçamento Ethernet.
+
+00:00:12.000 --> 00:00:15.000
+Então, em nossa topologia, como você pode ver,
+
+00:00:15.000 --> 00:00:21.000
+temos hosts H1, H2, H3 e H4.
+
+00:00:21.000 --> 00:00:24.000
+H1 tem o endereço MAC de origem,
+
+00:00:24.000 --> 00:00:27.000
+MAC significa controle de acesso ao meio,
+
+00:00:27.000 --> 00:00:32.000
+o endereço MAC de origem de todos os As.
+
+00:00:32.000 --> 00:00:34.000
+Então vamos em frente e começar a animação,
+
+00:00:34.000 --> 00:00:37.000
+e podemos ver que o host H1
+
+00:00:37.000 --> 00:00:40.000
+tem um quadro Ethernet para enviar
+
+00:00:40.000 --> 00:00:44.000
+para o host H3.
+
+00:00:44.000 --> 00:00:49.000
+No quadro Ethernet, há um endereço MAC de destino.
+
+00:00:49.000 --> 00:00:54.000
+Este é o endereço MAC de destino do host H3.
+
+00:00:54.000 --> 00:00:57.000
+Como você pode ver, é tudo Cs.
+
+00:00:57.000 --> 00:01:01.000
+O endereço MAC de origem é o do host A,
+
+00:01:01.000 --> 00:01:05.000
+tudo As.
+
+00:01:05.000 --> 00:01:10.000
+H1 envia esse quadro Ethernet para o switch.
+
+00:01:10.000 --> 00:01:13.000
+Quando o switch recebe este quadro Ethernet,
+
+00:01:13.000 --> 00:01:17.000
+neste caso, ele irá encaminhar o quadro Ethernet
+
+00:01:17.000 --> 00:01:22.000
+para todas as portas, exceto a porta de entrada.
+
+00:01:22.000 --> 00:01:26.000
+Mais tarde, aprenderemos mais sobre como os switches Ethernet
+
+00:01:26.000 --> 00:01:28.000
+pode realmente filtrar os quadros
+
+00:01:28.000 --> 00:01:33.000
+para que eles apenas enviem o quadro para o próprio destino.
+
+00:01:33.000 --> 00:01:36.000
+Vamos aprender sobre isso um pouco mais tarde.
+
+00:01:36.000 --> 00:01:39.000
+Mas como você pode ver, todos os dispositivos
+
+00:01:39.000 --> 00:01:43.000
+na rede recebem o quadro Ethernet.
+
+00:01:43.000 --> 00:01:47.000
+H2 e H4, esses dois hosts,
+
+00:01:47.000 --> 00:01:49.000
+ignoram o quadro Ethernet.
+
+00:01:49.000 --> 00:01:51.000
+porque eles fazem isso?
+
+00:01:51.000 --> 00:01:54.000
+Eles examinam o endereço MAC de destino,
+
+00:01:54.000 --> 00:01:58.000
+todos os Cs, com seu próprio endereço MAC.
+
+00:01:58.000 --> 00:02:02.000
+Na verdade, a placa Ethernet NIC faz isso.
+
+00:02:02.000 --> 00:02:05.000
+Porque não há uma correspondência, a placa Ethernet NIC
+
+00:02:05.000 --> 00:02:08.000
+ignorará o resto do quadro,
+
+00:02:08.000 --> 00:02:12.000
+acabando por não receber esta mensagem
+
+00:02:12.000 --> 00:02:16.000
+H3, sua placa Ethernet NIC,
+
+00:02:16.000 --> 00:02:18.000
+quando recebe este quadro Ethernet,
+
+00:02:18.000 --> 00:02:23.000
+compara o endereço MAC de destino na Ethernet
+
+00:02:23.000 --> 00:02:27.000
+com seu próprio endereço MAC em sua placa NIC.
+
+00:02:27.000 --> 00:02:30.000
+Porque há uma correspondência, vai em frente
+
+00:02:30.000 --> 00:02:32.000
+e recebe o restante do quadro,
+
+00:02:32.000 --> 00:02:35.000
+e a mensagem é processada.

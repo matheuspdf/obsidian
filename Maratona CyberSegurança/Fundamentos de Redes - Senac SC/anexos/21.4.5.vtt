@@ -1,0 +1,169 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:02.000
+- [Instrutor] Neste vídeo,
+
+00:00:02.000 --> 00:00:06.000
+O PC A enviará um pacote para a Internet,
+
+00:00:06.000 --> 00:00:10.000
+pois o endereço IP de destino está em outra rede.
+
+00:00:10.000 --> 00:00:14.000
+Então, nesse caso, o endereço MAC de origem é o do PC A.
+
+00:00:14.000 --> 00:00:20.000
+O endereço MAC de destino é o do roteador de 00-0D.
+
+00:00:20.000 --> 00:00:24.000
+Assim, o quadro Ethernet é enviado para o switch S1.
+
+00:00:24.000 --> 00:00:26.000
+Switch S1 recebe o quadro,
+
+00:00:26.000 --> 00:00:28.000
+examina o endereço MAC de origem,
+
+00:00:28.000 --> 00:00:31.000
+que fica em sua tabela de endereços MAC,
+
+00:00:31.000 --> 00:00:35.000
+Assim, ele apenas atualiza o temporizador de 5 minutos.
+
+00:00:35.000 --> 00:00:38.000
+Ele examina o endereço MAC de destino
+
+00:00:38.000 --> 00:00:40.000
+e porque o endereço MAC de destino não está
+
+00:00:40.000 --> 00:00:43.000
+na Tabela de Endereços MAC do switch S1,
+
+00:00:43.000 --> 00:00:46.000
+ele é enviado por todas as portas.
+
+00:00:46.000 --> 00:00:49.000
+O PC-B recebe o quadro Ethernet,
+
+00:00:49.000 --> 00:00:51.000
+e como o endereço MAC de destino
+
+00:00:51.000 --> 00:00:53.000
+não corresponde a seu próprio endereço MAC,
+
+00:00:53.000 --> 00:00:57.000
+ele não aceita o resto do quadro.
+
+00:00:57.000 --> 00:01:00.000
+O switch S2 recebe o quadro Ethernet,
+
+00:01:00.000 --> 00:01:03.000
+examina o endereço MAC de origem,
+
+00:01:03.000 --> 00:01:05.000
+que fica em sua tabela de endereços MAC,
+
+00:01:05.000 --> 00:01:09.000
+isso também apenas atualiza o temporizador de 5 minutos.
+
+00:01:09.000 --> 00:01:13.000
+Ele examina o endereço MAC de destino do quadro,
+
+00:01:13.000 --> 00:01:15.000
+que não está em sua tabela de endereços MAC
+
+00:01:15.000 --> 00:01:19.000
+então o envia para todas as portas.
+
+00:01:19.000 --> 00:01:23.000
+O PC-C recebe o quadro Ethernet
+
+00:01:23.000 --> 00:01:24.000
+e como o endereço MAC de destino
+
+00:01:24.000 --> 00:01:28.000
+não corresponde a seu próprio endereço MAC,
+
+00:01:28.000 --> 00:01:31.000
+ele não aceita o resto do quadro Ethernet.
+
+00:01:31.000 --> 00:01:34.000
+O roteador recebe o quadro Ethernet
+
+00:01:34.000 --> 00:01:36.000
+e como o endereço MAC de destino
+
+00:01:36.000 --> 00:01:38.000
+corresponde a seu próprio endereço MAC,
+
+00:01:38.000 --> 00:01:41.000
+ele aceita o resto do quadro.
+
+00:01:41.000 --> 00:01:43.000
+Agora vamos olhar para o quadro Ethernet
+
+00:01:43.000 --> 00:01:47.000
+vindo do roteador de volta para PC-A.
+
+00:01:47.000 --> 00:01:50.000
+O endereço IP de origem é o endereço IP
+
+00:01:50.000 --> 00:01:55.000
+na verdade, do dispositivo em uma rede remota.
+
+00:01:55.000 --> 00:02:00.000
+O endereço MAC de origem é o do roteador em 00-0D,
+
+00:02:00.000 --> 00:02:05.000
+portanto, o endereço MAC de destino é o do PC-A.
+
+00:02:05.000 --> 00:02:08.000
+O quadro é encaminhado para o switch S2.
+
+00:02:08.000 --> 00:02:11.000
+O S2 recebe, examina o endereço MAC de origem,
+
+00:02:11.000 --> 00:02:16.000
+que não está em sua tabela de endereços MAC e então o adiciona.
+
+00:02:16.000 --> 00:02:19.000
+Ele então examina o endereço MAC de destino
+
+00:02:19.000 --> 00:02:21.000
+que fica em sua tabela de endereços MAC,
+
+00:02:21.000 --> 00:02:25.000
+então ele o encaminha pela porta 1.
+
+00:02:25.000 --> 00:02:28.000
+O PC-C recebe o quadro Ethernet
+
+00:02:28.000 --> 00:02:29.000
+examina o endereço MAC de origem,
+
+00:02:29.000 --> 00:02:32.000
+que não está em sua tabela de endereços MAC
+
+00:02:32.000 --> 00:02:35.000
+então ele o adiciona à sua tabela de endereços MAC.
+
+00:02:35.000 --> 00:02:38.000
+Ele examina o endereço MAC de destino
+
+00:02:38.000 --> 00:02:41.000
+que fica em sua tabela de endereços MAC,
+
+00:02:41.000 --> 00:02:44.000
+então ele segue em frente e apenas encaminha pela porta 1
+
+00:02:44.000 --> 00:02:47.000
+para PC-A.
+
+00:02:47.000 --> 00:02:51.000
+O PC A examina o endereço MAC de destino
+
+00:02:51.000 --> 00:02:52.000
+e, como corresponde,
+
+00:02:52.000 --> 00:02:55.000
+ele aceita o resto do quadro.
