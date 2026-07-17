@@ -39,7 +39,7 @@ Para facilitar o uso pelas pessoas, os endereços IPv4 são geralmente expressos
 Para ter um conhecimento sólido do endereçamento de rede, é preciso saber lidar com endereçamento binário e ter prática na conversão entre endereços IPv4 binários e decimais com pontos. Esta seção abordará como converter entre os sistemas de numeração de base dois (binário) e base 10 (decimal).
 
 ## 20.1.2 Vídeo - Convertendo entre sistemas de numeração binária e decimal
-
+![[20.1.2.mp4#subtitle=anexos/20.1.2.vtt]]
 Neste vídeo vamos discutir conversão de binário para decimal. Mas antes de fazer isso, vamos dar uma olhada em notação posicional ou valores de lugar.
 
 Tomando o número 2168 como exemplo, podemos ver que os valores de lugar são: o lugar do um, o lugar dos 10, o lugar dos 100, o lugar dos 1000, 10.000, 100.000 e milhões. Estes são os valores de lugar do sistema de número decimal de base 10. Temos o número dois no lugar dos 1000, então temos dois mil; temos um no lugar dos 100, por 100; temos seis no lugar dos 10, por 60; e temos oito no lugar do um, por oito. Efetivamente, temos dois mil, um cem, seis dezenas e oito unidades.
@@ -463,7 +463,7 @@ A topologia de exemplo na figura exibe endereços hexadecimais IPv6.
 
 
 ## 20.2.2 Vídeo — Conversão entre sistemas de numeração hexadecimal e decimal
-
+![[20.2.2.mp4#subtitle=anexos/20.2.2.vtt]]
 Hexadecimal, ou hex para abreviação, é um sistema numérico de base 16. Ele usa 16 símbolos: os números de zero a nove, bem como as letras A a F. Baseia-se em potências de 16.
 
 Se seguirmos o mesmo procedimento usado para converter binário em decimal, podemos escrever os valores de lugar ou notação posicional para o sistema de números hexadecimal também. Considerando os primeiros quatro valores de lugar: 16 elevado a zero é igual a 1; 16 elevado a um é igual a 16; 16 elevado a dois é igual a 256 (16 vezes 16); e 16 elevado a três é igual a 4.096 (16 vezes 16 vezes 16).

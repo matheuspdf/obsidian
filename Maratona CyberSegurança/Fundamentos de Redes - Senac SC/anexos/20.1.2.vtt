@@ -1,0 +1,223 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:03.000
+[Instrutor] Neste vídeo eu vou discutir conversão de binário para decimal.
+
+00:00:03.000 --> 00:00:09.000
+Mas antes de fazer isso, quero dar uma olhada em notação posicional ou valores de lugar.
+
+00:00:09.000 --> 00:00:14.000
+Tenho aqui, o número 2168.
+
+00:00:14.000 --> 00:00:23.000
+Se olharmos para os valores do número 2168, podemos ver os valores do lugar têm o seu lugar, o lugar dos 10, o lugar dos 100,
+
+00:00:23.000 --> 00:00:27.000
+o lugar dos 1000, 10.000, 100.000 e milhões.
+
+00:00:27.000 --> 00:00:32.000
+Estes são os valores de lugar do sistema de número decimal da base 10.
+
+00:00:32.000 --> 00:00:43.000
+Você pode ver que temos o número dois no lugar dos 1000, então temos dois 1000, temos um no lugar dos 100 por 100, temos seis no lugar dos 10 por 60,
+
+00:00:43.000 --> 00:00:45.000
+e temos oito no lugar de um para oito.
+
+00:00:45.000 --> 00:00:55.000
+Então, efetivamente, temos dois mil, um 100, Seis dez por 60, e oito por oito.
+
+00:00:55.000 --> 00:01:01.000
+Agora, quando estamos falando sobre os valores dos locais no sistema de numeração decimal, estamos falando sobre as potências de 10.
+
+00:01:01.000 --> 00:01:12.000
+Você pode ver que o lugar é de 10 a zero, o lugar dos 10, 10 para o primeiro, o lugar dos 100, 10 para os dois, ou 10 vezes 10, que é 100.
+
+00:01:12.000 --> 00:01:18.000
+O lugar dos 1000 é o 10 aos três, ou 10 vezes 10 vezes 10, e assim por diante e assim por diante.
+
+00:01:18.000 --> 00:01:24.000
+Então, você pode ver que os valores das casas são baseados em potências de 10.
+
+00:01:24.000 --> 00:01:38.000
+Se olharmos para o número 2168, então, em formato longo, podemos ver que efetivamente, temos dois mil, um 100, seis dez e oito um.
+
+00:01:38.000 --> 00:01:44.000
+E 2000 mais 100 mais 60 mais oito totais 2168.
+
+00:01:44.000 --> 00:01:49.000
+Esse é o tipo de conta e adição que aprendemos quando somos crianças.
+
+00:01:49.000 --> 00:01:53.000
+O sistema decimal é base 10.
+
+00:01:53.000 --> 00:02:06.000
+É baseado no fato de você ter um poderes de 10, mas mais importante, você tem 10 caracteres ou 10 numerais, neste sistema de contagem, de zero até nove.
+
+00:02:06.000 --> 00:02:13.000
+Isso significa que em cada valor de casa, você pode ter em qualquer lugar do número zero até o número nove.
+
+00:02:13.000 --> 00:02:25.000
+Em outras palavras, se eu tivesse o número 9168, Eu simplesmente substituiria os dois aqui por nove e agora eu tenho nove mil
+
+00:02:25.000 --> 00:02:30.000
+totalizando 9000 no lugar dos 1000.
+
+00:02:30.000 --> 00:02:36.000
+Então, em qualquer um desses valores das casas, Você pode ter o número zero todo o caminho até nove.
+
+00:02:36.000 --> 00:02:40.000
+Esse é o sistema de numeração decimal que utiliza a base 10.
+
+00:02:40.000 --> 00:02:51.000
+Se considerarmos binário e olharmos para ele na mesma luz que decimal, binário é um sistema de dois números base, há apenas dois caracteres, ou dois números, zero e um.
+
+00:02:51.000 --> 00:02:56.000
+Então nos valores das casas, só podemos ter zeros ou uns.
+
+00:02:56.000 --> 00:03:05.000
+Os valores de lugar vão de um, que é dois para o zero, para dois, dois para um, quatro, dois para dois, oito, dois para o três,
+
+00:03:05.000 --> 00:03:08.000
+ou duas vezes duas vezes duas é oito.
+
+00:03:08.000 --> 00:03:19.000
+Duas vezes duas vezes duas vezes duas é 16, que é de dois para o quarto poder, valor de lugar de 16, o lugar dos 32, o lugar dos 64 e o lugar dos 128.
+
+00:03:19.000 --> 00:03:24.000
+Observe que eu estendi a tabela para oito valores de posição.
+
+00:03:24.000 --> 00:03:28.000
+Isso é porque oito bits é um agrupamento importante de números.
+
+00:03:28.000 --> 00:03:31.000
+Oito bits formam um byte no processamento do computador.
+
+00:03:31.000 --> 00:03:37.000
+Então agora eu tenho os valores de posição para, essencialmente, oito bits.
+
+00:03:37.000 --> 00:03:47.000
+Se eu quiser escrever o número 168 em binário, Eu só tenho que encontrar os valores dos locais correspondentes e conecte um ou um zero.
+
+00:03:47.000 --> 00:03:50.000
+Então eu vou para o lugar dos 128 e me pergunto:
+
+00:03:50.000 --> 00:03:54.000
+"preciso de 128 para chegar a 168?" Sim, eu sei.
+
+00:03:54.000 --> 00:03:56.000
+Então vou colocar um ali.
+
+00:03:56.000 --> 00:03:58.000
+Agora, eu preciso de um 64?
+
+00:03:58.000 --> 00:04:09.000
+Eu já tenho um 128, se eu adicionar 64, Eu teria 192, porque 128 mais 64 é 192, Então a resposta é não, então eu coloquei um zero.
+
+00:04:09.000 --> 00:04:11.000
+Ainda tenho 128.
+
+00:04:11.000 --> 00:04:13.000
+Agora, eu preciso de um 32?
+
+00:04:13.000 --> 00:04:19.000
+128 mais 32 é 160, então sim, Eu poderia usar um aqui.
+
+00:04:19.000 --> 00:04:22.000
+Agora tenho 160.
+
+00:04:22.000 --> 00:04:23.000
+Preciso de um 16?
+
+00:04:23.000 --> 00:04:29.000
+Não, isso faria 176, o que iria passar por cima meu alvo número 168.
+
+00:04:29.000 --> 00:04:32.000
+Vou colocar um zero aqui.
+
+00:04:32.000 --> 00:04:34.000
+Que tal um oito?
+
+00:04:34.000 --> 00:04:37.000
+Se somar oito, acertarei o número perfeitamente.
+
+00:04:37.000 --> 00:04:42.000
+128 mais 32 mais oito é 168.
+
+00:04:42.000 --> 00:04:58.000
+Vou seguir com zeros no lugar dos quatro, o lugar dos dois, e o lugar do um, e 168 em binário igual a 10101000.
+
+00:04:58.000 --> 00:05:12.000
+Agora eu tenho um 128, eu tenho um 32, e eu tenho um oito, e 128 mais 32 mais oito é igual a 168.
+
+00:05:12.000 --> 00:05:23.000
+Se analisarmos o slide seguinte, você poderá perceber que agora preciso com a conversão do número 01101101 a decimal.
+
+00:05:23.000 --> 00:05:30.000
+Se eu quiser fazer o caminho oposto, e converter esse número binário para decimal, tudo o que preciso fazer é conectar os valores dos locais.
+
+00:05:30.000 --> 00:05:32.000
+Vou colocar aqui.
+
+00:05:32.000 --> 00:05:44.000
+Zero, um, um, zero, um, um, zero, um, e, em seguida, adicione-o.
+
+00:05:44.000 --> 00:05:48.000
+Eu tenho um 64, e eu tenho um 32.
+
+00:05:48.000 --> 00:05:52.000
+64 mais 32 é 96.
+
+00:05:52.000 --> 00:05:55.000
+Além disso, eu tenho um oito, que faz 104.
+
+00:05:55.000 --> 00:06:02.000
+mais quatro faz 108, mais um faz 109.
+
+00:06:02.000 --> 00:06:08.000
+Este número convertido para o decimal é o número 109.
+
+00:06:08.000 --> 00:06:13.000
+Agora vamos ver um endereço IP completo em binário.
+
+00:06:13.000 --> 00:06:26.000
+Vou para o meu próximo slide, e você pode ver neste próximo slide, agora tenho um endereço IP de 32 bits, quatro octetos ou totais de 32 bits.
+
+00:06:26.000 --> 00:06:35.000
+Se eu quiser converter este endereço IP binário em decimal, tudo o que preciso fazer é contar cada octeto individual.
+
+00:06:35.000 --> 00:06:39.000
+Vamos começar com o primeiro aqui.
+
+00:06:39.000 --> 00:06:54.000
+Podemos ver aquele, um, zero, zero, zero, zero, zero, zero, 128 mais 64 é 192.
+
+00:06:54.000 --> 00:07:02.000
+Agora o próximo octeto tem um, zero, um, zero, um, vamos fazer isso.
+
+00:07:02.000 --> 00:07:09.000
+Zero, um, zero, um, e, em seguida, todos os zeros.
+
+00:07:09.000 --> 00:07:21.000
+Se somarmos os números, 128 mais 32 é 160, mais oito é 168.
+
+00:07:21.000 --> 00:07:28.000
+O próximo octeto é todo zero com um em último lugar, no lugar de um.
+
+00:07:28.000 --> 00:07:34.000
+Isto é fácil, este é o número um.
+
+00:07:34.000 --> 00:07:39.000
+Todos os zeros, e um no lugar do um, torna o número um.
+
+00:07:39.000 --> 00:07:51.000
+E finalmente, temos um número aqui, Colocarei aqui na tabela.
+
+00:07:51.000 --> 00:07:57.000
+E eu tenho o número zero, um, um, zero, zero, um, zero, um.
+
+00:07:57.000 --> 00:08:10.000
+Podemos ver que 64 mais 32, já dissemos, é 96, mais quatro é 100, mais um é 101.
+
+00:08:10.000 --> 00:08:17.000
+Portanto, a conversão deste endereço IP binário em decimal é 192.168.1.101.

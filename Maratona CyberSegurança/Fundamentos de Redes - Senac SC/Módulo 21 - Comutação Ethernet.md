@@ -57,7 +57,7 @@ As primeiras versões da Ethernet eram relativamente lentas, a 10 Mbps. As vers�
 Arraste a barra deslizante na figura pela linha do tempo para ver como os padrões de Ethernet evoluíram ao longo do tempo.
 
 ## 21.1.3 Vídeo - Endereçamento Ethernet
-
+![[21.1.3.mp4#subtitle=anexos/21.1.3.vtt]]
 Neste vídeo, vamos ver sobre endereçamento Ethernet.
 
 Em nossa topologia, temos os hosts H1, H2, H3 e H4. H1 tem o endereço MAC de origem — MAC significa controle de acesso ao meio — composto por todos os As.

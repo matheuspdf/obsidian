@@ -1,0 +1,133 @@
+WEBVTT
+
+00:00:05.000 --> 00:00:13.000
+[Instrutor] Hexadecimal ou hex para abreviação é um sistema numérico de base 16. Ele usa 16 símbolos, os números de zero a nove,
+
+00:00:13.000 --> 00:00:23.000
+bem como as letras A a F. Baseia-se em potências de 16. Se seguirmos o mesmo procedimento usado para converter binário em decima,
+
+00:00:23.000 --> 00:00:30.000
+podemos escrever os valores de lugar ou notação posicional para o sistema de números hexadecimal também.
+
+00:00:30.000 --> 00:00:38.000
+Aqui, consideramos os primeiros quatro valores de lugar Baseia-se em potências de 16. Isto é 16 elevado a zero ou um.
+
+00:00:38.000 --> 00:00:47.000
+Qualquer número elevado a zero é um. Isso é 16 elevado a um ou 16. Este é 16 elevado a dois
+
+00:00:47.000 --> 00:01:00.000
+ou 16 vezes 16, o que equivale a 256. E este é 16 elevado a três ou 16 vezes 16 vezes 16 que equivale a 4.096.
+
+00:01:00.000 --> 00:01:08.000
+Vejamos os equivalentes decimais e binários de cada símbolo hexadecimal. Estes são os equivalentes decimais.
+
+00:01:08.000 --> 00:01:19.000
+Note que o símbolo hexadecimal A é igual a 10, hex B é igual a decimal 11 e assim por diante
+
+00:01:19.000 --> 00:01:26.000
+até chegarmos ao hexadecimal F que é igual a 15 decimal. Aqui estão os equivalentes binários.
+
+00:01:26.000 --> 00:01:34.000
+Note que cada símbolo hexadecimal pode ser usado para representar um número binário de 4 bits. Dado que 8-bits é um grupo binário comum,
+
+00:01:34.000 --> 00:01:42.000
+podemos representar um número binário de 8 bits usando apenas dois símbolos hexadecimal. Neste primeiro exemplo,
+
+00:01:42.000 --> 00:01:51.000
+vamos olhar para converter hexadecimal 2A em decimal. Primeiro, vou escrever a notação posicional para as duas primeiras potências de 16,
+
+00:01:51.000 --> 00:02:01.000
+em seguida, inserir os símbolos hexadecimal abaixo dos valores de lugar correspondentes. Dois embaixo de 16 anos e A embaixo de um.
+
+00:02:01.000 --> 00:02:11.000
+Então vou multiplicar cada símbolo hexadecimal pelo valor do lugar que a sua sob e adicionar os resultados juntos. Então, temos 2 vezes 16
+
+00:02:11.000 --> 00:02:23.000
+mais A vezes um que nos dá duas vezes 16 mais 10 que é o equivalente decimal de A e hexadecimal vezes um
+
+00:02:23.000 --> 00:02:32.000
+que nos dá 32 mais 10 ou 42 em decimal. Multiplicar ou dividir por 16 nem sempre é fácil ao fazer conversões hexadecimais para decimais.
+
+00:02:32.000 --> 00:02:38.000
+Normalmente, é mais fácil converter o hexadecimal para decimal ou valor decimal para binário primeiro
+
+00:02:38.000 --> 00:02:46.000
+e converter esse número binário para decimal, ou hexadecimal para decimal. Vamos converter 197 decimal para hexadecimal.
+
+00:02:46.000 --> 00:02:56.000
+Primeiro, vou começar por converter 197 para um número binário de 8 bits. Aqui, eu tirei os primeiros oito valores de lugar
+
+00:02:56.000 --> 00:03:04.000
+Sistema de numeração binário Precisamos descobrir qual combinação desses valores de lugar adiciona até 197.
+
+00:03:04.000 --> 00:03:14.000
+Começarei escrevendo 197 no lado esquerdo. E começando pela esquerda, se o valor do local for igual ou inferior a este número,
+
+00:03:14.000 --> 00:03:23.000
+Vou colocar um debaixo dele e subtrair. e se for maior, vou colocar um zero sob ele e mover para o próximo valor de lugar.
+
+00:03:23.000 --> 00:03:31.000
+Desde que posso subtrair 128 de 197, Vou colocar um debaixo dele e subtrair. e isso me dá 69.
+
+00:03:31.000 --> 00:03:39.000
+Posso subtrair 64 de 69, então colocarei um abaixo desse. e subtraí-la que me dá cinco.
+
+00:03:39.000 --> 00:03:48.000
+32 é muito grande, então vou colocar um zero debaixo disso. 16 também é muito grande, então isso recebe um zero.
+
+00:03:48.000 --> 00:03:57.000
+8 também é muito grande. Mas quando chegar a quatro, posso subtrair isso, Então eu coloquei um lá e subtraí aqui.
+
+00:03:57.000 --> 00:04:06.000
+Dois é demais, então um zero vai lá. e um é apenas certo, então eu subtrair e resulta em zero.
+
+00:04:06.000 --> 00:04:15.000
+Portanto, decimal 197 é igual a 11000101 binário.
+
+00:04:15.000 --> 00:04:23.000
+Em seguida, vou converter o número binário de 8 bits para decimal dividindo-o primeiro em dois números binários de 4 bits
+
+00:04:23.000 --> 00:04:30.000
+e, em seguida, vou reescrever os primeiros quatro valores de lugar binário acima de cada metade.
+
+00:04:30.000 --> 00:04:39.000
+Então, aqui, eu tenho um, dois, quatro, oito e, em seguida, repita à esquerda, Um, dois, quatro, oito.
+
+00:04:39.000 --> 00:04:46.000
+Então, eu vou converter cada metade para decimal e, em seguida, cada decimal para o seu valor hexadecimal equivalente.
+
+00:04:46.000 --> 00:04:58.000
+No lado esquerdo, temos oito mais quatro que é igual a 12 e no lado direito, obtemos quatro mais um que equivale a cinco.
+
+00:04:58.000 --> 00:05:10.000
+Se convertê-los em hex, 12 decimal é equivalente a C em hexadecimal e cinco decimal equivale a cinco em hexadecimal.
+
+00:05:10.000 --> 00:05:18.000
+Portanto, 197 em decimal é C5 em hexadecimal ou também pode ser escrito com o 0x que o precede
+
+00:05:18.000 --> 00:05:26.000
+para indicar que o que se segue está escrito em hexadecimal. Por último, vejamos a conversão de hexadecimal para decimal,
+
+00:05:26.000 --> 00:05:32.000
+mas desta vez vamos converter para binário primeiro em vez de ir direto para o decimal como eu fiz no primeiro exemplo.
+
+00:05:32.000 --> 00:05:42.000
+Vou converter o hexadecimal 9F para decimal. Primeiro, converta cada símbolo hexadecimal equivalente binário
+
+00:05:42.000 --> 00:05:50.000
+Eu tenho nove hexadecimal que é o mesmo que nove decimal E isso me dá um, zero, zero, um.
+
+00:05:50.000 --> 00:06:00.000
+E então eu tenho hexadecimal F que é equivalente a 15 decimal e isso me dá um, um, um, um, um em binário.
+
+00:06:00.000 --> 00:06:09.000
+Em seguida, vou combiná-los em um número binário de 8 bits. Então, aqui eu tenho os primeiros oito valores de lugar em binário
+
+00:06:09.000 --> 00:06:19.000
+e então eu vou converter para decimal e isso me dá 128 mais 16 mais 8 mais 4
+
+00:06:19.000 --> 00:06:28.000
+mais 2 mais 1 ou 159 em decimal. Muitas vezes, existem várias maneiras para abordar a conversão entre sistemas numéricos.
+
+00:06:28.000 --> 00:06:32.000
+Você deve usar o que funciona melhor para você.
