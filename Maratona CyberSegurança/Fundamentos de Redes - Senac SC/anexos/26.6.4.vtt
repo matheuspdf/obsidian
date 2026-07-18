@@ -1,0 +1,199 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:03.000
+- O gráfico mostrado neste vídeo
+
+00:00:03.000 --> 00:00:07.000
+usa números de segmento em vez de números de sequência.
+
+00:00:07.000 --> 00:00:09.000
+TCP é um protocolo confiável.
+
+00:00:09.000 --> 00:00:12.000
+Ele usa números de sequência e confirmações
+
+00:00:12.000 --> 00:00:15.000
+para oferecer essa confiabilidade.
+
+00:00:15.000 --> 00:00:19.000
+Mas, o que acontece quando os dados são perdidos em trânsito?
+
+00:00:19.000 --> 00:00:21.000
+Como um protocolo confiável,
+
+00:00:21.000 --> 00:00:25.000
+tem que haver um mecanismo para reenviar dados perdidos,
+
+00:00:25.000 --> 00:00:27.000
+para que toda uma parte de dados,
+
+00:00:27.000 --> 00:00:32.000
+como um arquivo, uma imagem ou um vídeo pode ser reconstruído
+
+00:00:32.000 --> 00:00:34.000
+de todos os segmentos.
+
+00:00:34.000 --> 00:00:37.000
+Se observarmos esta animação,
+
+00:00:37.000 --> 00:00:39.000
+poderemos ver esse processo na prática.
+
+00:00:39.000 --> 00:00:41.000
+Pressiono play.
+
+00:00:41.000 --> 00:00:46.000
+O host de origem aqui envia o segmento um e inicia um temporizador.
+
+00:00:46.000 --> 00:00:49.000
+Você pode ver o temporizador correndo.
+
+00:00:49.000 --> 00:00:54.000
+O host de destino recebe o segmento um
+
+00:00:54.000 --> 00:00:56.000
+e, como ele recebeu o segmento um,
+
+00:00:56.000 --> 00:00:58.000
+ele vai enviar uma confirmação.
+
+00:00:58.000 --> 00:01:01.000
+Vejamos o que acontece.
+
+00:01:01.000 --> 00:01:03.000
+Podemos ver que o host de destino
+
+00:01:03.000 --> 00:01:08.000
+recebeu o segmento um, confirmou a entrega
+
+00:01:08.000 --> 00:01:12.000
+e vai enviar um ACK 2, um reconhecimento 2,
+
+00:01:12.000 --> 00:01:13.000
+solicitando o número dois.
+
+00:01:13.000 --> 00:01:15.000
+Por quê?
+
+00:01:15.000 --> 00:01:17.000
+Recebeu 1, por isso envia um pedido de 2,
+
+00:01:17.000 --> 00:01:19.000
+e um segundo ACK.
+
+00:01:19.000 --> 00:01:21.000
+Então, vamos ver isso ser enviado.
+
+00:01:21.000 --> 00:01:23.000
+Muito bem, lá se vai o reconhecimento.
+
+00:01:23.000 --> 00:01:26.000
+A origem recebe a confirmação
+
+00:01:26.000 --> 00:01:29.000
+antes que o temporizador expire e agora pode enviar o segmento dois.
+
+00:01:29.000 --> 00:01:33.000
+Segmento 2, enviado.
+
+00:01:33.000 --> 00:01:36.000
+e como você pode ver, o temporizador foi iniciado.
+
+00:01:36.000 --> 00:01:39.000
+Ele vai esperar receber uma confirmação.
+
+00:01:39.000 --> 00:01:43.000
+Caso não a receba do destino
+
+00:01:43.000 --> 00:01:47.000
+antes que o temporizador expire,
+
+00:01:47.000 --> 00:01:49.000
+ele reenviará o segmento dois.
+
+00:01:49.000 --> 00:01:52.000
+Vamos ver na prática.
+
+00:01:52.000 --> 00:01:57.000
+Você pode ver que o destino ainda não recebeu o segmento dois.
+
+00:01:57.000 --> 00:02:00.000
+Como ainda não recebeu o segmento dois,
+
+00:02:00.000 --> 00:02:03.000
+ele não enviará uma confirmação número três
+
+00:02:03.000 --> 00:02:06.000
+de volta para o dispositivo.
+
+00:02:06.000 --> 00:02:09.000
+Não vai confirmar que recebeu o dois
+
+00:02:09.000 --> 00:02:11.000
+e enviará um ack do três de volta para o host de origem.
+
+00:02:11.000 --> 00:02:14.000
+Vejamos o que acontece.
+
+00:02:14.000 --> 00:02:17.000
+Sem confirmação, o temporizador expira.
+
+00:02:17.000 --> 00:02:20.000
+Você pode ver aqui, o temporizador expira,
+
+00:02:20.000 --> 00:02:22.000
+então o que o host de origem vai fazer?
+
+00:02:22.000 --> 00:02:27.000
+O host de origem retransmitirá ou reenviará o segmento 2,
+
+00:02:27.000 --> 00:02:30.000
+e reinicie o temporizador.
+
+00:02:30.000 --> 00:02:34.000
+Desta vez, a informação foi recebida
+
+00:02:34.000 --> 00:02:36.000
+pelo destino, e agora
+
+00:02:36.000 --> 00:02:38.000
+vai enviar um ACK 3,
+
+00:02:38.000 --> 00:02:40.000
+ou confirmação três,
+
+00:02:40.000 --> 00:02:42.000
+solicitando o próximo bloco de dados,
+
+00:02:42.000 --> 00:02:47.000
+que, nesse caso, seria o número três.
+
+00:02:47.000 --> 00:02:52.000
+A confirmação é recebida antes de o temporizador expirar
+
+00:02:52.000 --> 00:02:54.000
+e o segmento 3 é enviado.
+
+00:02:54.000 --> 00:02:58.000
+O segmento três é recebido, confirmado
+
+00:02:58.000 --> 00:03:02.000
+e um pedido de 4 é enviado em uma confirmação.
+
+00:03:02.000 --> 00:03:03.000
+A confirmação é recebida
+
+00:03:03.000 --> 00:03:05.000
+antes do temporizador expirar,
+
+00:03:05.000 --> 00:03:08.000
+e agora o dispositivo pode enviar o segmento quatro,
+
+00:03:08.000 --> 00:03:11.000
+ou, nesse caso, é o fim da transmissão.
+
+00:03:11.000 --> 00:03:15.000
+A capacidade do TCP de retransmitir os segmentos ausentes,
+
+00:03:15.000 --> 00:03:18.000
+torna as aplicações que usam o protocolo TCP bastante confiáveis.

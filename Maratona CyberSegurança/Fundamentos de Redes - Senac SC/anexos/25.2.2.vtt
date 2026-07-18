@@ -1,0 +1,220 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:03.000
+DHCP, ou Protocolo de Configuração Dinâmica de Host,
+
+00:00:03.000 --> 00:00:05.000
+é um serviço que permite que os dispositivos
+
+00:00:05.000 --> 00:00:08.000
+recebam automaticamente seu endereço IP
+
+00:00:08.000 --> 00:00:12.000
+e outras informações de endereçamento de um servidor DHCP
+
+00:00:12.000 --> 00:00:18.000
+O DHCP está disponível para IPv4 e IPv6.
+
+00:00:18.000 --> 00:00:20.000
+Há algumas diferenças entre os dois,
+
+00:00:20.000 --> 00:00:23.000
+no entanto, o resultado final é muito semelhante.
+
+00:00:23.000 --> 00:00:27.000
+Neste vídeo, vamos nos concentrar no DHCP para IPv, 4
+
+00:00:27.000 --> 00:00:32.000
+usando um roteador doméstico típico como servidor DHCP.
+
+00:00:32.000 --> 00:00:35.000
+Em nossa topologia, vocês podem ver que nosso roteador doméstico
+
+00:00:35.000 --> 00:00:41.000
+tem o endereço IPv 4,192.168.1.1,
+
+00:00:41.000 --> 00:00:45.000
+e também foi habilitado como um servidor DHCP.
+
+00:00:45.000 --> 00:00:48.000
+Em vez de uma única porta para conectar nossos dispositivos locais,
+
+00:00:48.000 --> 00:00:52.000
+a maioria dos roteadores domésticos inclui um switch Ethernet integrado.
+
+00:00:52.000 --> 00:00:55.000
+Dispositivos cliente, como PC um e PC dois
+
+00:00:55.000 --> 00:00:59.000
+receberão normalmente as informações de endereçamento IPv 4
+
+00:00:59.000 --> 00:01:02.000
+de um servidor DHCP.
+
+00:01:02.000 --> 00:01:05.000
+O PC 2 já recebeu suas informações de endereçamento
+
+00:01:05.000 --> 00:01:08.000
+usando o DHCP
+
+00:01:08.000 --> 00:01:11.000
+Ao atribuir automaticamente as informações de endereçamento,
+
+00:01:11.000 --> 00:01:14.000
+o DHCP elimina possíveis problemas
+
+00:01:14.000 --> 00:01:17.000
+devido a erros de configuração manual.
+
+00:01:17.000 --> 00:01:20.000
+No entanto, alguns dispositivos, como uma impressora ou um servidor,
+
+00:01:20.000 --> 00:01:22.000
+provavelmente terão suas 4
+
+00:01:22.000 --> 00:01:25.000
+informações de endereçamento IPv configuradas manualmente
+
+00:01:25.000 --> 00:01:29.000
+Isso é para garantir que esses dispositivos tenham um específico
+
+00:01:29.000 --> 00:01:31.000
+endereço IPv4 .
+
+00:01:31.000 --> 00:01:34.000
+Um servidor DHCP pode ser um computador separado
+
+00:01:34.000 --> 00:01:36.000
+mas, na maioria das redes domésticas,
+
+00:01:36.000 --> 00:01:41.000
+o roteador doméstico local atuará como um servidor DHCP.
+
+00:01:41.000 --> 00:01:44.000
+No nosso cenário, usaremos o roteador doméstico
+
+00:01:44.000 --> 00:01:46.000
+como nosso servidor DHCP.
+
+00:01:46.000 --> 00:01:50.000
+O roteador doméstico tem sido configurado como um servidor DHCP
+
+00:01:50.000 --> 00:01:54.000
+para fornecer informações de endereçamento para os clientes, inclusive.
+
+00:01:54.000 --> 00:01:57.000
+O pool ou o escopo dos endereços IPv, 4
+
+00:01:57.000 --> 00:02:00.000
+normalmente endereços IPv privados, 4
+
+00:02:00.000 --> 00:02:06.000
+cada cliente DHCP receberá um endereço IPv exclusivo 4
+
+00:02:06.000 --> 00:02:07.000
+desse pool.
+
+00:02:07.000 --> 00:02:11.000
+O servidor DHCP controla qual dispositivo recebe
+
+00:02:11.000 --> 00:02:16.000
+qual endereço IPv4, ao associar o endereço IPv4 atribuído
+
+00:02:16.000 --> 00:02:19.000
+ao endereço MAC Ethernet do cliente.
+
+00:02:19.000 --> 00:02:23.000
+Os endereços do gateway padrão, máscara de sub-rede e o servidor DNS,
+
+00:02:23.000 --> 00:02:25.000
+também são distribuídos
+
+00:02:25.000 --> 00:02:28.000
+e serão as mesmas informações para todos os clientes.
+
+00:02:28.000 --> 00:02:32.000
+Como a maioria dos dispositivos clientes, o PC um é habilitado por padrão
+
+00:02:32.000 --> 00:02:39.000
+para obter seu endereço IPv4 automaticamente usando DHCP.
+
+00:02:39.000 --> 00:02:43.000
+O cliente enviará um broadcast Ethernet solicitando IPv4,
+
+00:02:43.000 --> 00:02:46.000
+endereçamento de um servidor DHCP.
+
+00:02:46.000 --> 00:02:49.000
+Após uma breve sequência de mensagens entre o cliente
+
+00:02:49.000 --> 00:02:51.000
+e o servidor DHCP,
+
+00:02:51.000 --> 00:02:54.000
+o servidor atribuirá ao cliente um dos
+
+00:02:54.000 --> 00:02:57.000
+endereços IPv4 disponíveis do pool.
+
+00:02:57.000 --> 00:03:00.000
+Junto com a máscara de sub-rede apropriada,
+
+00:03:00.000 --> 00:03:04.000
+endereço de gateway padrão e endereço do servidor DNS.
+
+00:03:04.000 --> 00:03:08.000
+O PC um agora tem suas informações de endereçamento IPv4.
+
+00:03:08.000 --> 00:03:11.000
+Já que o cliente PC dois
+
+00:03:11.000 --> 00:03:13.000
+já tem o primeiro endereço do pool,
+
+00:03:13.000 --> 00:03:17.000
+o servidor DHCP atribuirá o próximo endereço disponível,
+
+00:03:17.000 --> 00:03:23.000
+192.168.1.100.
+
+00:03:23.000 --> 00:03:25.000
+Note que o endereço do gateway padrão
+
+00:03:25.000 --> 00:03:27.000
+é o endereço do roteador doméstico.
+
+00:03:27.000 --> 00:03:30.000
+O cliente agora tem todas as informações de endereçamento de que precisa
+
+00:03:30.000 --> 00:03:33.000
+para se comunicar corretamente com os dispositivos em sua própria rede,
+
+00:03:33.000 --> 00:03:37.000
+bem como outros dispositivos, inclusive a Internet.
+
+00:03:37.000 --> 00:03:39.000
+Aliás, geralmente é assim que um roteador doméstico
+
+00:03:39.000 --> 00:03:42.000
+recebe informações de endereçamento IPv 4
+
+00:03:42.000 --> 00:03:44.000
+pela interface WAN,
+
+00:03:44.000 --> 00:03:46.000
+a interface que é usada para se conectar ao ISP.
+
+00:03:46.000 --> 00:03:49.000
+Quando o roteador doméstico está ligado,
+
+00:03:49.000 --> 00:03:52.000
+ele atua como um cliente DHCP
+
+00:03:52.000 --> 00:03:55.000
+e recebe seu endereço IPv4 público
+
+00:03:55.000 --> 00:03:58.000
+e outras informações de endereçamento de um,
+
+00:03:58.000 --> 00:04:01.000
+Servidor DHCP do ISP e assim como vimos com nossos PCs clientes, PC um.

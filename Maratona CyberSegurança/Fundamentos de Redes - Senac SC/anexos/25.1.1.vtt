@@ -1,0 +1,247 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.000
+Quando digitamos um nome de domínio
+
+00:00:01.000 --> 00:00:05.000
+como URL, www.cisco.com,
+
+00:00:05.000 --> 00:00:07.000
+como nosso cliente sabe o endereço IP
+
+00:00:07.000 --> 00:00:09.000
+com esse nome de domínio?
+
+00:00:09.000 --> 00:00:13.000
+A resposta está no DNS, o sistema de nome de domínio.
+
+00:00:13.000 --> 00:00:15.000
+O sistema operacional verificará primeiro
+
+00:00:15.000 --> 00:00:17.000
+seu cache de DNS local
+
+00:00:17.000 --> 00:00:20.000
+para ver se ele já tem essas informações,
+
+00:00:20.000 --> 00:00:23.000
+de endereço IP para www.cisco.com.
+
+00:00:23.000 --> 00:00:27.000
+Se a informação não estiver presente no cache do DNS,
+
+00:00:27.000 --> 00:00:28.000
+o cliente enviará uma consulta
+
+00:00:28.000 --> 00:00:32.000
+para o endereço IP do servidor DNS local.
+
+00:00:32.000 --> 00:00:35.000
+O servidor DNS local verificará seu próprio cache DNS
+
+00:00:35.000 --> 00:00:41.000
+para o endereço IP associado a www.cisco.com.
+
+00:00:41.000 --> 00:00:43.000
+Se ele já contiver essas informações,
+
+00:00:43.000 --> 00:00:46.000
+ele enviará uma resposta de volta para o cliente.
+
+00:00:46.000 --> 00:00:50.000
+Caso contrário, ele precisará obter a resposta para o cliente.
+
+00:00:50.000 --> 00:00:52.000
+O servidor DNS local também conhecido
+
+00:00:52.000 --> 00:00:55.000
+como servidor DNS recursivo, buscará uma resposta
+
+00:00:55.000 --> 00:00:59.000
+enviando uma consulta para o servidor de nome DNS raiz .
+
+00:00:59.000 --> 00:01:01.000
+Existem13 servidores de nome raiz
+
+00:01:01.000 --> 00:01:04.000
+operados por12 diferentes empresas,
+
+00:01:04.000 --> 00:01:07.000
+com mais do que 750instâncias de servidores
+
+00:01:07.000 --> 00:01:09.000
+em todo o mundo
+
+00:01:09.000 --> 00:01:11.000
+Servidores de nomes raiz emcaminharão solicitações
+
+00:01:11.000 --> 00:01:14.000
+os servidores de domínio de nível superior apropriados.
+
+00:01:14.000 --> 00:01:19.000
+Um domínio de nível superior ou TLD, é o que segue o ponto final
+
+00:01:19.000 --> 00:01:23.000
+de um nome de domínio como .com ou .org.
+
+00:01:23.000 --> 00:01:26.000
+Existem servidores de domínio de nível superior para cada TLD.
+
+00:01:26.000 --> 00:01:29.000
+Já que nosso cliente está solicitando o endereço IP
+
+00:01:29.000 --> 00:01:32.000
+para um nome de domínio que termina em .com,
+
+00:01:32.000 --> 00:01:35.000
+o servidor de nome raiz fará referência ao servidor DNS local,
+
+00:01:35.000 --> 00:01:37.000
+para .com.
+
+00:01:37.000 --> 00:01:41.000
+Servidor de nome de domínio de nível superior ou servidor TLD.
+
+00:01:41.000 --> 00:01:44.000
+O servidor de nome raiz envia o endereço IP
+
+00:01:44.000 --> 00:01:47.000
+de um dos muitos servidores TLD .com
+
+00:01:47.000 --> 00:01:49.000
+para o servidor DNS local.
+
+00:01:49.000 --> 00:01:52.000
+O servidor DNS local agora adicionará o endereço IP
+
+00:01:52.000 --> 00:01:57.000
+do servidor de TLD .com, para o cache DNS.
+
+00:01:57.000 --> 00:01:59.000
+Normalmente, o servidor DNS local,
+
+00:01:59.000 --> 00:02:03.000
+já terá o endereço IP do servidor TLD .com
+
+00:02:03.000 --> 00:02:04.000
+em seu cache
+
+00:02:04.000 --> 00:02:07.000
+portanto, ele não precisa perguntar ao servidor de nome raiz primeiro.
+
+00:02:07.000 --> 00:02:13.000
+O servidor DNS local agora fará a consulta, ao servidor TLD .com .
+
+00:02:13.000 --> 00:02:16.000
+Os servidores de domínio de nível superior têm conhecimento dos endereços IP
+
+00:02:16.000 --> 00:02:19.000
+de servidores autoritativos.
+
+00:02:19.000 --> 00:02:22.000
+Um servidor autoritativo DNS é o detentor final
+
+00:02:22.000 --> 00:02:24.000
+do endereço IP do domínio
+
+00:02:24.000 --> 00:02:26.000
+que o cliente procura.
+
+00:02:26.000 --> 00:02:27.000
+Neste exemplo,
+
+00:02:27.000 --> 00:02:30.000
+cisco.com é o servidor autoritativo
+
+00:02:30.000 --> 00:02:34.000
+para qualquer domínio que termine em cisco.com.
+
+00:02:34.000 --> 00:02:36.000
+Ele pode ser gerenciado pelo proprietário do domínio,
+
+00:02:36.000 --> 00:02:38.000
+como Cisco Systems,
+
+00:02:38.000 --> 00:02:42.000
+ou por terceiros em nome do proprietário do domínio.
+
+00:02:42.000 --> 00:02:44.000
+A função do servidor TLD .com
+
+00:02:44.000 --> 00:02:46.000
+é oferecer ao servidor DNS local
+
+00:02:46.000 --> 00:02:51.000
+o endereço IP do servidor autoritativo da cisco.com.
+
+00:02:51.000 --> 00:02:54.000
+Estamos finalmente no último servidor da nossa hierarquia,
+
+00:02:54.000 --> 00:02:56.000
+o servidor autoritativo.
+
+00:02:56.000 --> 00:02:59.000
+O servidor DNS local agora tem o endereço IP
+
+00:02:59.000 --> 00:03:02.000
+do servidor autoritativo da cisco.com,
+
+00:03:02.000 --> 00:03:05.000
+e envia uma consulta para o servidor cisco.com,
+
+00:03:05.000 --> 00:03:09.000
+questionando o endereço IP para www.cisco.com,
+
+00:03:09.000 --> 00:03:13.000
+que é o nome de domínio solicitado pelo cliente.
+
+00:03:13.000 --> 00:03:15.000
+O servidor autoritativo da cisco.com
+
+00:03:15.000 --> 00:03:17.000
+contém todos os endereços IP
+
+00:03:17.000 --> 00:03:24.000
+para qualquer domínio que termina em cisco.com, inclusive www.cisco.com.
+
+00:03:24.000 --> 00:03:26.000
+O servidor autoritativo da cisco.com
+
+00:03:26.000 --> 00:03:30.000
+envia o endereço IP que responde por www.cisco.com.
+
+00:03:30.000 --> 00:03:32.000
+para o servidor DNS local.
+
+00:03:32.000 --> 00:03:35.000
+O servidor DNS local adiciona essas informações
+
+00:03:35.000 --> 00:03:40.000
+ao cache de DNS e agora tem o que precisa para o cliente.
+
+00:03:40.000 --> 00:03:43.000
+O servidor DNS local agora pode responder à consulta do cliente
+
+00:03:43.000 --> 00:03:47.000
+com o endereço IP de www.cisco.com.
+
+00:03:47.000 --> 00:03:49.000
+O cliente adiciona o endereço IP
+
+00:03:49.000 --> 00:03:53.000
+de www.cisco.com no cache DNS,
+
+00:03:53.000 --> 00:03:57.000
+e agora tem o endereço IP necessário para enviar um pacote IP
+
+00:03:57.000 --> 00:04:02.000
+para o servidor da web da www.cisco.com
+
+00:04:02.000 --> 00:04:04.000
+E aqui está outra visão de quem estava envolvido
+
+00:04:04.000 --> 00:04:08.000
+em resolver nosso nome de domínio www.cisco.com
+
+00:04:08.000 --> 00:04:11.000
+para um endereço IP.

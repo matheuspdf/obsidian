@@ -1,0 +1,217 @@
+WEBVTT
+
+00:00:04.000 --> 00:00:07.000
+- [Speaker] Este vídeo mostra um exemplo simplificado
+
+00:00:07.000 --> 00:00:10.000
+de operações TCP.
+
+00:00:10.000 --> 00:00:13.000
+Não é necessariamente uma representação realista.
+
+00:00:13.000 --> 00:00:16.000
+O TCP é um protocolo orientado a conexão.
+
+00:00:16.000 --> 00:00:19.000
+em que uma conexão é estabelecida primeiro
+
+00:00:19.000 --> 00:00:22.000
+usando um handshake triplo antes de enviar os dados.
+
+00:00:22.000 --> 00:00:25.000
+Outra característica do TCP
+
+00:00:25.000 --> 00:00:27.000
+é que ele é um protocolo confiável.
+
+00:00:27.000 --> 00:00:31.000
+Duas coisas que o tornam confiável são sequências de números
+
+00:00:31.000 --> 00:00:32.000
+e reconhecimentos
+
+00:00:32.000 --> 00:00:36.000
+Cada segmento TCP que é enviado em uma conversação TCP
+
+00:00:36.000 --> 00:00:38.000
+obtém um número de sequência.
+
+00:00:38.000 --> 00:00:41.000
+Assim, cada byte de dados é numerado
+
+00:00:41.000 --> 00:00:43.000
+basicamente em uma lista sequencial.
+
+00:00:43.000 --> 00:00:46.000
+Isso permite que um host de destino recrie os dados
+
+00:00:46.000 --> 00:00:49.000
+de segmentos numerados em ordem.
+
+00:00:49.000 --> 00:00:53.000
+Se os dados chegarem fora de ordem ao destino,
+
+00:00:53.000 --> 00:00:56.000
+eles poderão ser colocados juntos na ordem certa
+
+00:00:56.000 --> 00:00:59.000
+graças aos números de sequência.
+
+00:00:59.000 --> 00:01:03.000
+Os agradecimentos entram em jogo ajudando o remetente a saber
+
+00:01:03.000 --> 00:01:08.000
+que os dados que estão sendo enviados estão realmente sendo recebidos.
+
+00:01:08.000 --> 00:01:12.000
+A forma que isso funciona é que o host emissor envia seguimentos TCP
+
+00:01:12.000 --> 00:01:16.000
+em bytes, e o host receptor reconhece bytes recebidos
+
+00:01:16.000 --> 00:01:19.000
+enviando confirmações.
+
+00:01:19.000 --> 00:01:20.000
+Há um limite na quantidade de dados
+
+00:01:20.000 --> 00:01:23.000
+que o host de origem pode enviar antes de receber
+
+00:01:23.000 --> 00:01:26.000
+uma confirmação do receptor.
+
+00:01:26.000 --> 00:01:28.000
+Essa quantidade é chamada de tamanho de janela.
+
+00:01:28.000 --> 00:01:31.000
+O tamanho da janela é o número total de bytes
+
+00:01:31.000 --> 00:01:35.000
+enviados em segmentos TCP que podem ser enviados
+
+00:01:35.000 --> 00:01:37.000
+antes de receber uma confirmação.
+
+00:01:37.000 --> 00:01:41.000
+Usando o dimensionamento de janela TCP , os computadores conseguirão
+
+00:01:41.000 --> 00:01:45.000
+chegar a tamanhos maiores de até um gigabyte.
+
+00:01:45.000 --> 00:01:49.000
+Assim, conforme o host emissor envia bytes de dados em segmentos TCP,
+
+00:01:49.000 --> 00:01:54.000
+o host receptor retorna as confirmações assim que processa
+
+00:01:54.000 --> 00:01:58.000
+bytes recebidos e libera os buffers.
+
+00:01:58.000 --> 00:02:01.000
+Podemos ver uma demonstração disso neste gráfico.
+
+00:02:01.000 --> 00:02:04.000
+Vamos começar lendo a mensagem
+
+00:02:04.000 --> 00:02:06.000
+do host emissor aqui.
+
+00:02:06.000 --> 00:02:10.000
+Comece com o byte de número 1 , eu estou enviando 10 bytes.
+
+00:02:10.000 --> 00:02:15.000
+Neste cenário, o tamanho da janela é de 10 bytes.
+
+00:02:15.000 --> 00:02:18.000
+Na realidade, o tamanho da janela , seria bem maior
+
+00:02:18.000 --> 00:02:21.000
+que 10 bytes, já que hoje os tamanhos de janela normalmente
+
+00:02:21.000 --> 00:02:23.000
+são de 16 megabytes ou mais.
+
+00:02:23.000 --> 00:02:28.000
+Mas isso funciona bem neste exemplo.
+
+00:02:28.000 --> 00:02:30.000
+O host está enviando 10 bytes,
+
+00:02:30.000 --> 00:02:32.000
+começando com o byte número um.
+
+00:02:32.000 --> 00:02:35.000
+O host receptor, o servidor aqui, diz:
+
+00:02:35.000 --> 00:02:39.000
+Recebi 10 bytes começando com o byte nº 1.
+
+00:02:39.000 --> 00:02:42.000
+Espero o byte nº 11 em seguida.
+
+00:02:42.000 --> 00:02:45.000
+Esta é a confirmação.
+
+00:02:45.000 --> 00:02:48.000
+O servidor confirma o recebimento de 10 bytes
+
+00:02:48.000 --> 00:02:52.000
+e agora está esperando o byte número 11.
+
+00:02:52.000 --> 00:02:56.000
+Se olharmos para baixo, podemos ver que neste segmento
+
+00:02:56.000 --> 00:03:01.000
+começando com a seqüência número um, 10 bytes foram enviados.
+
+00:03:01.000 --> 00:03:05.000
+O receptor envia um ack 11
+
+00:03:05.000 --> 00:03:08.000
+Começando com um, 10 bytes foram enviados,
+
+00:03:08.000 --> 00:03:12.000
+então o próximo número de sequência esperado é um 11.
+
+00:03:12.000 --> 00:03:17.000
+Esta confirmação é enviada de volta ao host de origem.
+
+00:03:17.000 --> 00:03:21.000
+Agora, o host de origem envia mais 10 bytes
+
+00:03:21.000 --> 00:03:24.000
+começando com o número de sequência 11.
+
+00:03:24.000 --> 00:03:28.000
+Se fôssemos perguntar a nós mesmos, qual seria a próxima ACK
+
+00:03:28.000 --> 00:03:33.000
+que o servidor enviaria de volta ao host de origem?
+
+00:03:33.000 --> 00:03:34.000
+Teríamos que nos perguntar:
+
+00:03:34.000 --> 00:03:37.000
+Qual o último número de sequência enviado?
+
+00:03:37.000 --> 00:03:41.000
+Começando com 11, 10 bytes foram enviados,
+
+00:03:41.000 --> 00:03:44.000
+então, o último número de sequência enviado, foi 20.
+
+00:03:44.000 --> 00:03:48.000
+Então o ack. seria um ack 21
+
+00:03:48.000 --> 00:03:52.000
+Esse é o próximo número de sequência esperado.
+
+00:03:52.000 --> 00:03:56.000
+Você pode ver como númeors sequenciais e reconhecimentos
+
+00:03:56.000 --> 00:04:01.000
+incluindo o tamanho da janela, tornam o TCP um protocolo
+
+00:04:01.000 --> 00:04:04.000
+muito ordenado e confiável
