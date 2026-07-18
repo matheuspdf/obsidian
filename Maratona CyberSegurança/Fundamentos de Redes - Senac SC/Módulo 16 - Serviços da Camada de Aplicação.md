@@ -105,61 +105,14 @@ Quando o servidor web responde, o servidor recebe a solicitação que recebeu do
 
 
 ## 16.1.5 Packet Tracer - A interação do cliente
-### Packet Tracer - A interação do cliente
 
-### Objetivos
+Nesta atividade, você observará a interação de cliente entre o servidor e o PC.
 
-Observar a interação de cliente entre o servidor e o PC.
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/16.1.5.html|Instruções]]
+> - 📥 [[anexos/16.1.5.pka|Abrir no Packet Tracer]]
 
-### Histórico/Cenário
-
-Clientes, como PCs desktops, solicitam serviços dos servidores. O ambiente do laboratório, com PCs e servidores, suporta uma grande variedade de serviços. Em um ambiente simulado, o número de serviços é limitado. O Packet Tracer permite a adição de servidores de rede que suportam DHCP, DNS, HTTP e TFTP. O Packet Tracer também suporta a adição de PCs simulados que podem solicitar esses serviços. Essa atividade usa uma rede simples com um PC conectado diretamente a um servidor configurado para fornecer serviços DNS e hospedar uma página Web através de um servidor HTTP. Essa atividade rastreará o fluxo de tráfego que ocorre quando uma página da Web é solicitada, como o endereço IP da página da Web é resolvido e como a página da Web é disponibilizada.
-
-### Instruções
-
-## Parte 1: Entre no modo de simulação.
-
-Quando o Packet Tracer inicia, ele apresenta uma visão lógica da rede em modo de tempo real.
-
-Clique em **Simulation Mode** para entrar no modo de simulação. O ícone  simulation mode está localizado no canto inferior direito do logical workplace.
-
-## Parte 2: Defina os Filtros da Lista de Eventos.
-
-No simulation mode, o padrão é capturar todos os eventos. Você usará os filtros somente para capturar os eventos de DNS e HTTP.
-
-a.  Na seção **Event List Filters**, clique em **Show All/None** para desmarcar todas as seleções.
-
-b.  Clique em **Edit Filters**. Na guia IPv4, selecione **DNS**. Na guia Misc, selecione **HTTP**. Feche a janela quando terminar. Os **Event List Filters** mostram o DNS e o HTTP como os únicos eventos visíveis.
-
-## Parte 3: Solicite uma página Web em um PC.
-
-Você abrirá um navegador da Web simulado no PC e solicitará uma página Web do servidor.
-
-a.  Clique em **PC**. Clique na guia **Desktop** e no **Web Browser**.
-
-b.  Um navegador da Web simulado será aberto. Digite **www.example.com** na caixa da URL e clique no botão **Go** à direita. Minimize a janela do PC.
-
-## Parte 4: Execute a simulação.
-
-a.  Na seção **Play Controls** do **Simulation Panel**, clique **Play**. A troca entre o PC e o servidor é animada e os eventos são adicionados na **Event List**.
-
-Esses eventos representam a solicitação do PC pela resolução da URL para um endereço IP, o fornecimento do endereço IP pelo servidor, a solicitação do PC pela a página Web, o servidor enviando a página Web em dois segmentos e o reconhecimento do PC sobre a página Web.
-
-b.  Clique em **View Previous Event** (Visualizar Evento Anterior) para continuar quando o buffer estiver completo.
-
-## Parte 5: Acesse uma PDU específica.
-
-a.  Restaure a janela simulada do PC. Observe que há uma página Web em exibição no Navegador da Web. Minimize a janela simulada do navegador.
-
-b.  Na seção **Simulation Panel Event List**, a última coluna contém uma caixa colorida que fornece acesso a informações detalhadas sobre um evento. Clique na caixa colorida na primeira linha para o primeiro evento. A janela **PDU Information** (janela de Informações da PDU) será aberta.
-
-## Parte 6: Examine o conteúdo da janela de Informações da PDU.
-
-A primeira guia na janela de informações da PDU contém informações sobre a PDU de entrada e/ou de saída com base no modelo OSI. Clique em **Next Layer >>** repetidamente para percorrer as camadas de inbound e outbound e leia a descrição na caixa abaixo das camadas para obter uma visão geral de como a troca funciona.
-
-Examine as informações da PDU quanto aos outros eventos para ter um resumo de todo o processo de troca.
-
-
+---
 # 16.2 Serviços de Aplicação de Rede
 
 Quais são os serviços de internet mais comuns que você usa regularmente? Para a maioria das pessoas, a lista inclui serviços como pesquisas na Internet, sites de mídia social, transmissão de áudio e vídeo, sites de lojas on-line, e-mail e mensagens. Cada um desses serviços depende de protocolos, do conjunto de protocolos TCP/IP, para comunicar de forma confiável as informações entre os clientes e os servidores.
@@ -373,81 +326,11 @@ Existem muitos servidores web e clientes web diferentes disponíveis. Os padrõe
 
 Nesta atividade, você observará as solicitações Web que ocorrem quando um navegador solicita páginas Web de um servidor.
 
-Packet Tracer - Observando solicitações Web
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/16.4.3.html|Instruções]]
+> - 📥 [[anexos/16.4.3.pka|Abrir no Packet Tracer]]
 
-## Objetivos
-
-Visualizar o tráfego cliente/servidor enviado de um PC para um servidor Web ao solicitar serviços da Web.
-
-## Instruções
-
-## Parte 1: Verificar a conectividade com o servidor Web.
-
-a.  Clique em **External Client** e accesse o **Command Prompt** da guia **Desktop**.
-
-b.  Use o comando **ping** para alcançar a URL **ciscolearn.web.com**.
-
-PC> **ping ciscolearn.web.com**
-
-Observe que o endereço IP está incluído na saída do ping. O endereço é obtido por meio do servidor DNS que resolve o nome do domínio ciscolearn.web.com. Todo o tráfego enaminhado em uma rede usa as informações do endereço IP de origem e destino.
-
-c.   Feche   a janela do Prompt de Comando, mas deixe a janela do desktop do External Client aberta.
-
-## Parte 2: Conecte-se ao servidor Web.
-
-a.  Na janela Desktop, acesse o **Web Browser**.
-
-b.  Em URL, digite **ciscolearn.web.com**.
-
-Certifique-se de ler a página da Web exibida. Deixe esta página aberta.
-
-c.  Minimize a janela do External Client, mas não a feche.
-
-## Parte 3: Visualize o código HTML.
-
-a.  Na topologia lógica, clique no servidor **ciscolearn.web.com**.
-
-b.  Clique na guia **Services**> guia **HTTP**. Depois, ao lado do arquivo **index.html**, clique em **(edit)**.
-
-c.  Compare o código de marcação HTML no servidor que cria a página de exibição do navegador Web no External Client. Isso poderá exigir que você maximize novamente a janela External Client se ela foi reduzida quando você abriu a janela do servidor.
-
-d.  Feche as janelas do servidor Web e do External Client.
-
-## Parte 4: Observe o tráfego entre o cliente e o servidor Web.
-
-a.  Entre no Modo de Simulação clicando na guia **Simulation** no canto inferior direito.
-
-b.  Clique duas vezes no  Simulation Panel para destacá-lo da janela PT. Isso permite que você mova o  Simulation Panel para visualizar toda a topologia de rede.
-
-c.  Visualize o tráfego ao criar uma PDU complexa no Modo de Simulação.
-
-1)  Em **Simulation Panel**, selecione **Edit Filters**.
-
-2)  Clique na guia Misc para verificar se apenas as caixas de TCP e HTTP estão selecionadas.
-
-3)  Adicione uma PDU complexa ao clicar no envelope aberto localizado acima do ícone do Modo de Simulação.
-
-4)  Clique em **External Client** para especificá-lo como a origem. A janela **Create Complex PDU** será exibida.
-
-d.  Especifique as configurações de **Complex PDU** ao alterar o seguinte na janela de PDU Complexa:
-
-1)  Em PDU Settings, Select Application deve estar setado para **HTTP**.
-
-2)  Clique no servidor **ciscolearn.web.com** para especificá-lo como o dispositivo de destino. Observe que o endereço IP do servidor web será exibido na caixa de destino na janela da PDU complexa
-
-3)  Em Starting Source Port, insira **1000**.
-
-4)  Em Simulation Settings, selecione Periodic Interval e digite **120** seconds.
-
-e.  Crie a PDU ao clicar na caixa **Create PDU** na janela **Create Complex PDU**.
-
-1)  Observe o fluxo de tráfego clicando em **Play** no simulation panel. Acelere a animação com o controle deslizante.
-
-Quando a janela Buffer Full aparecer, clique em **View Previous Events** para fechar a janela.
-
-2)  Percorra a Lista de Eventos. Observe o número de pacotes que trafegaram da origem para o destino. HTTP é um protocolo TCP, o que exige o estabelecimento da conexão e o reconhecimento do recebimento de pacotes, aumentando consideravelmente o volume da sobrecarga de tráfego.
-
-
+---
 # 16.5 Clientes e servidores FTP
 
 ## 16.5.1 Protocolo FTP

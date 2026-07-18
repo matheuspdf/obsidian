@@ -1,0 +1,1701 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 1rem;
+      }
+      ol,
+      ul {
+        margin-bottom: 0in;
+      }
+      table {
+        margin-top: 1rem;
+        border: 1px solid gray;
+        width: 7in;
+        border-collapse: collapse;
+      }
+
+      table > thead > tr > .openTableTextBox__table-header-data {
+        text-align: center;
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0in;
+        text-align: center;
+        line-height: 115%;
+        page-break-after: avoid;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        background: #dbe5f1;
+        padding: 0.5rem;
+      }
+      .openTableTextBox__answerText
+        table
+        > thead
+        > tr
+        > .openTableTextBox__table-header-data {
+        background: #f2dbdb !important;
+      }
+      .openTextBox__textArea-container {
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        width: 50%;
+      }
+      .openTableTextBox__fieldset {
+        padding: 5px;
+      }
+      td {
+        margin-top: 3pt;
+        margin-right: 0in;
+        margin-bottom: 3pt;
+        margin-left: 0in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        width: 98.85pt;
+        border: solid windowtext 1pt;
+        border-top: none;
+        padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+      }
+      textarea {
+        width: 100%;
+      }
+      .answergray {
+        padding: 0.2rem;
+      }
+
+      .openTableTextBox__widget {
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.25in;
+      }
+
+      .show-answer,
+      .hide-answer {
+        padding: 0.5rem 1rem;
+        background-color: #3d692b;
+        color: #fff;
+        border: 0px;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .openTextBoxController__button-container {
+        display: flex;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .openTextBoxController__button-container .btn-text {
+        margin: 10px;
+      }
+
+      .btn-text {
+        border: 0px;
+        padding: 0.5rem 1rem;
+        background-color: #3d692b;
+        color: #fff;
+        border-radius: 0;
+        cursor: pointer;
+      }
+
+      .u-display-none {
+        display: none;
+      }
+      .openTextBox__postText, openTableTextBox__postText {
+        margin-top: 0.5rem;
+      }
+      .edit-comment {
+        display: none;
+      }
+      .js-heading-inner {
+        display: none;
+      }
+      .block__title-inner,
+      .article__title-inner {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+      }
+      h2{
+        font-size: 1.25em;
+      }
+      h3{
+        font-size: 1.125em;
+      }
+      .table
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > th {
+        border: solid windowtext 1pt;
+      }
+      table tbody tr th, table thead tr th{
+        border: solid windowtext 1pt;
+        background-color: #d6d8dc;
+      }
+      .openTableTextBox__answerText
+        table
+        > thead
+        > tr
+        > .openTableTextBox__table-header-data {
+        background: #f2dbdb !important;
+      }
+      .command-output > .table-inner > .table-wrapper > .table-widget > table,
+      .command-output
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > td,
+      .command-output
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > th {
+        border: none !important;
+        text-align: right !important;
+      }
+      .simple-table > .table-inner > .table-wrapper{
+        margin-left: 1.5rem;
+      }
+      .openTextBox__widget {
+        margin-left: 1.5rem;
+      }
+      img {
+        width: 30%;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+      .answergray {
+        background-color: #ccc;
+      }
+      .openTableTextBox__widget > .answergray {
+        background-color: #fff !important;
+      }
+      li > ul,ol > li{
+        margin-left: 0px !important;
+      }
+      img {
+        width: 30%;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+      
+      .component__title{
+        font-family: inherit;
+        font-size: 1.65em;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      .component__body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .accessibility-completion-indicator{
+        display: none;
+      }
+
+      .check__hidden {
+        display: none;
+      }
+
+      .check__button {
+        border: none;
+        border-radius: 6px !important;
+        background-color: #6abf4b;
+        color: #fff;
+        min-width: 100px;
+        margin: 0.625rem 0;
+        padding: 0.7rem;
+      }
+
+      .check__widget .check__solution .DevConfigGray {
+        background-color: rgb(214,216,220);
+        font-weight: bold;
+      }
+
+      .check-inner .check__widget .check__solution .DevConfigs {
+        margin: 0px;
+        line-height: 115%;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .check__solution  {
+        line-height: 1.5;
+      }
+      .mcq__inner .mcq__widget .mcq__widget-inner {
+        margin-block: 1rem;
+      }
+      .mcq__inner .mcq__widget .mcq__item {
+        display: flex;
+        gap: 0.2rem;
+      }
+      .mcq__inner .mcq__widget .mcq__item .mcq__item-label .mcq__item-text .screenReader-position-text{
+        display: none;
+      }
+      .opentabletextbox-inner .opentabletextBox__widget .openTableTextBox__answerText.answergray {
+        background-color: transparent;
+      }
+      .openTextBox__inner .openTextBox__widget .answergray.is-graphic-in-openTextBox{
+        background-color: transparent;
+      }
+      .openTextBox__inner .openTextBox__widget .answergray.is-graphic-in-openTextBox img{
+        margin-block: 1rem;
+        margin-left: initial;
+      }
+      .component__content .component__body-inner .pageTracer-h4-title-hide {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        font-size: 0px;
+        color: rgb(var(--neutral-2));
+        font-weight: normal;
+      }
+      .table-inner .table__widget table tr.TableHeading th, .table-inner .table__widget table tr.TableHeading td, .table-inner .table__widget table tr td.TableHeading, .opentabletextbox-table thead tr.TableHeading th, .opentabletextbox-table tbody tr.TableHeading td, .opentabletextbox-table tbody tr td.TableHeading {
+        background-color: #d6d8dc;
+        text-align: center;
+        font-weight: bold;
+      }
+      .component__content .component__body-inner .CMD, .component__content .component__body-inner .CMDOutput, .component__content .component__body-inner .CMDOutput__table{
+        margin-top: 4px;
+        margin-inline-end: 0px;
+        margin-bottom: 4px;
+        margin-inline-start: 30px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      [dir="rtl"] .component__content .component__body-inner .CMDOutput__table span {
+        direction: ltr;
+        display: inline-block;
+      }
+      .openTextBox__inner .openTextBox__widget .CMD, .openTextBox__inner .openTextBox__widget .CMDOutput{
+        margin-top: 4px;
+        margin-inline-end: 0px;
+        margin-bottom: 4px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .openTextBox__inner .openTextBox__widget .DnTbold, .openTextBox__inner .openTextBox__widget .BodyTextL25Bold, .component__content .component__body-inner .BodyTextL25Bold, .component__content .component__body-inner .DnTbold, .table-inner .table__widget table tr .DnTbold {
+        font-weight: bold;
+      }
+      .component__content .component__body-inner .SubStepNum {
+        text-indent: -25.5px;
+        margin-inline-start: 50px;
+      }
+      .component__content .component__body-inner .BodyTextL50 {
+        margin-inline-start: 30px;
+      }
+      .component__content .component__body-inner .Bulletlevel1 {
+        text-indent: -19px;
+        margin-inline-start: 48px;
+      }
+      .component__content .component__body-inner .Bulletlevel2 {
+          text-indent: -19px;
+          margin-inline-start: 72px;
+      }
+      .openTextBox__inner .openTextBox__widget .ReflectionQ, .component__content .component__body-inner .SubStepAlpha {
+          text-indent: -25.5px;
+          margin-inline-start: 30px;
+      }
+    </style>
+
+</head><body><!---->
+            <div class="article e9250714-a81a-485f-8337-d9ad6f31fee7 remove-padding-top remove-padding-bottom is-complete ">
+                <div class="article__inner">
+                <div class=" no-adaptive-scroll">
+                    <!--?lit$612062429$-->
+                        <div class=""> 
+                            <base-view type="article" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="article__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="article__header ">
+          <div class="article__header-inner ">
+            <!--?lit$612062429$-->
+      <div class="article__title ">
+        <!--?lit$612062429$--><heading-view aria-hidden="true" id="e9250714-a81a-485f-8337-d9ad6f31fee7-heading-view" headingtitle="Packet Tracer - Criaando uma LAN" modelid="e9250714-a81a-485f-8337-d9ad6f31fee7" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="js-heading is-complete">
+        <div class="js-heading-inner" role="heading" id="article-heading" aria-level="2">
+        <span class="aria-label"> <!--?lit$612062429$-->Concluída &nbsp;<!--?lit$612062429$-->Packet Tracer - Criaando uma LAN</span>
+        </div>
+      </div>
+    </heading-view>
+        <div tabindex="0" role="heading" class="article__title-inner " aria-level="2">
+          <span class="accessibility-completion-indicator"><!--?lit$612062429$-->Concluída </span>
+          <!--?lit$612062429$-->Packet Tracer - Criaando uma LAN
+        </div>
+      </div>
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                            <div class="block__container " style="">
+                                <!--?lit$612062429$--><!---->
+                                    <block-view modelid="c0412bed-4655-4cee-879e-c6e37320584a" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="c0412bed-4655-4cee-879e-c6e37320584a" class="c0412bed-4655-4cee-879e-c6e37320584a block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="c0412bed-4655-4cee-879e-c6e37320584a" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><text-view modelid="4b39013a-e3bc-4fa3-8988-34905c98cbf2" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="4b39013a-e3bc-4fa3-8988-34905c98cbf2" class="component text 4b39013a-e3bc-4fa3-8988-34905c98cbf2  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$612062429$--><h2><span lang="PT-BR">Tabela de Endereçamento</span></h2></div>
+        </div>
+      </div>
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="651b7429-7e4f-424c-904e-0e8b7a570a5d" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="651b7429-7e4f-424c-904e-0e8b7a570a5d" class="651b7429-7e4f-424c-904e-0e8b7a570a5d block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="651b7429-7e4f-424c-904e-0e8b7a570a5d" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><table-view modelid="7bebb192-7842-45f3-9026-6eaddb8560ca" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+        <div class="table-inner component__inner"> 
+            <div data-socialgoodpulse-id="7bebb192-7842-45f3-9026-6eaddb8560ca" class="component table 7bebb192-7842-45f3-9026-6eaddb8560ca  is-full is-complete  ">
+                <div class="component__header-container">
+                    <div data-socialgoodpulse-id="7bebb192-7842-45f3-9026-6eaddb8560ca" class="table ">
+                        <base-view type="component" lowercase_component="table" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header table__header">
+          <div class="component__header-inner table__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                    </div>
+                </div>
+
+
+                <div class="component__widget table__widget">
+                <!--?lit$612062429$-->
+                <table tabindex="0" style="min-width: 800px" aria-labelledby="table-caption-7bebb192-7842-45f3-9026-6eaddb8560ca">
+                <!--?lit$612062429$--><!---->
+                    <tbody><tr class="table-row nth-child-0 ">
+                    <!--?lit$612062429$--><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-0 ">
+                <!--?lit$612062429$--><p class="TableHeading"><span lang="PT-BR">Dispositivo</span></p>
+                <!--?lit$612062429$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-1 ">
+                <!--?lit$612062429$--><p class="TableHeading"><span lang="PT-BR" style="color:black">Interface/Porta</span></p>
+                <!--?lit$612062429$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-2 ">
+                <!--?lit$612062429$--><p class="TableHeading"><span lang="PT-BR" style="color:black">Endereço IPv4</span></p>
+                <!--?lit$612062429$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-3 ">
+                <!--?lit$612062429$--><p class="TableHeading"><span lang="PT-BR" style="color:black">Máscara de sub-rede</span></p>
+                <!--?lit$612062429$-->
+            </th>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-1 ">
+                    <!--?lit$612062429$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="200">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">Admin PC</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">NIC</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">DHCP</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">N/D</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-2 ">
+                    <!--?lit$612062429$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="200">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">Manager PC</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">NIC</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">DHCP</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">N/D</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-3 ">
+                    <!--?lit$612062429$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="200">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">Printer</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">NIC</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">192.168.1.100</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">255.255.255.0</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-4 ">
+                    <!--?lit$612062429$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="200">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">www.cisco.pt</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">NIC</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">209.165.200.225</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">N/D</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!---->
+                </tbody></table>
+                </div>
+            </div>
+        <div>
+        </div>
+        </div></div></table-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="7f31fe9e-a13f-443a-8fad-7ac9f5fda15f" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="7f31fe9e-a13f-443a-8fad-7ac9f5fda15f" class="7f31fe9e-a13f-443a-8fad-7ac9f5fda15f block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="7f31fe9e-a13f-443a-8fad-7ac9f5fda15f" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><text-view modelid="e5d7d00c-beed-4761-ad8a-bf211572e2a8" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="e5d7d00c-beed-4761-ad8a-bf211572e2a8" class="component text e5d7d00c-beed-4761-ad8a-bf211572e2a8  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$612062429$--><h2><span lang="PT-BR">Objetivos</span></h2> <p class="Bulletlevel1"><span lang="PT-BR" style="font-size: 7.0pt;font-family:Webdings">=</span><span>&nbsp;&nbsp;</span><span lang="PT-BR">Conectar hosts e dispositivos de rede</span></p> <p class="Bulletlevel1"><span lang="PT-BR" style="font-size:7.0pt;font-family:Webdings">=</span><span>&nbsp;&nbsp;</span><span lang="PT-BR">Configurar dispositivos com endereçamento IPv4</span></p> <p class="Bulletlevel1"><span lang="PT-BR" style="font-size:7.0pt;font-family:Webdings">=</span><span>&nbsp;&nbsp;</span><span lang="PT-BR">Verificar a configuração do dispositivo final e a conectividade</span></p> <p class="Bulletlevel1"><span lang="PT-BR" style="font-size:7.0pt;font-family:Webdings">=</span><span>&nbsp;&nbsp;</span><span lang="PT-BR">Usar os comandos de rede para exibir informações de host</span></p> <h2><span lang="PT-BR">Histórico/Cenário</span></h2> <p class="BodyTextL25"><span lang="PT-BR">Uma nova filial está sendo aberta e pediram para você configurar a LAN. Os dispositivos de rede já estão configurados, mas você precisa conectá-los aos hosts. Você também precisa configurar o endereçamento IPv4 dos dispositivos finais e verificar se eles podem alcançar recursos locais e remotos.</span></p> <h2><span lang="PT-BR">Instruções</span></h2> <h2><span lang="PT-BR">Parte 1: </span><span lang="PT-BR">Conectar dispositivos de rede e hosts</span></h2> <h3><span lang="PT-BR">Etapa 1: </span><span lang="PT-BR">Ligue os dispositivos finais e o Office Router.</span></h3> <p class="SubStepAlpha"><span lang="PT-BR">a.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Clique em cada dispositivo e abra a guia Physical. <b>Nota</b>: Não há chave de alimentação no modelo de switch usado nesta atividade.</span></p> <p class="SubStepAlpha"><span lang="PT-BR">b.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Localize o&nbsp; botão liga / desliga de cada dispositivo na janela de exibição de dispositivos físicos. </span></p> <p class="SubStepAlpha"><span lang="PT-BR">c.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Clique no botão liga / desliga para ligar o dispositivo. Você deverá ver uma luz verde perto do botão liga/desliga indicando que o dispositivo está ligado.</span></p> <h3><span lang="PT-BR">Etapa 2: </span><span lang="PT-BR">Conecte os dispositivos finais.</span></h3> <p class="BodyTextL25"><span lang="PT-BR">Use a tabela e as instruções para conectar os dispositivos de rede e hosts para criar a rede física.</span></p> <p class="BodyTextL25Bold"><span lang="PT-BR">Tabela de conexões</span></p></div>
+        </div>
+      </div>
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="bf04cd89-b61d-42c7-94d6-b906a65159dc" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="bf04cd89-b61d-42c7-94d6-b906a65159dc" class="bf04cd89-b61d-42c7-94d6-b906a65159dc block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="bf04cd89-b61d-42c7-94d6-b906a65159dc" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><table-view modelid="c78163bc-1e9d-4aeb-b88b-c0257538ed2f" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+        <div class="table-inner component__inner"> 
+            <div data-socialgoodpulse-id="c78163bc-1e9d-4aeb-b88b-c0257538ed2f" class="component table c78163bc-1e9d-4aeb-b88b-c0257538ed2f  is-full is-complete  ">
+                <div class="component__header-container">
+                    <div data-socialgoodpulse-id="c78163bc-1e9d-4aeb-b88b-c0257538ed2f" class="table ">
+                        <base-view type="component" lowercase_component="table" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header table__header">
+          <div class="component__header-inner table__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                    </div>
+                </div>
+
+
+                <div class="component__widget table__widget">
+                <!--?lit$612062429$-->
+                <table tabindex="0" style="min-width: 800px" aria-labelledby="table-caption-c78163bc-1e9d-4aeb-b88b-c0257538ed2f">
+                <!--?lit$612062429$--><!---->
+                    <tbody><tr class="table-row nth-child-0 ">
+                    <!--?lit$612062429$--><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-0 ">
+                <!--?lit$612062429$--><p class="TableHeading"><span lang="PT-BR">Dispositivo</span></p>
+                <!--?lit$612062429$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-1 ">
+                <!--?lit$612062429$--><p class="TableHeading"><span lang="PT-BR" style="color:black">Interface/Porta</span></p>
+                <!--?lit$612062429$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-2 ">
+                <!--?lit$612062429$--><p class="TableHeading"><span lang="PT-BR" style="color:black">Conectado ao dispositivo</span></p>
+                <!--?lit$612062429$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-3 ">
+                <!--?lit$612062429$--><p class="TableHeading"><span lang="PT-BR" style="color:black">Conecção Interface/Porta</span></p>
+                <!--?lit$612062429$-->
+            </th>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-1 ">
+                    <!--?lit$612062429$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="200">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">Office Router</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">G0/0</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">ISP1</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">G0/0</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-2 ">
+                    <!--?lit$612062429$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="200">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">Office Router</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">G0/1</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">Switch</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">G0/1</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-3 ">
+                    <!--?lit$612062429$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="200">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">Admin PC</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">NIC (F/0)</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">Switch</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">F0/1</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-4 ">
+                    <!--?lit$612062429$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="200">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">Manager PC</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">NIC (F/0)</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">Switch</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">F0/2</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-5 ">
+                    <!--?lit$612062429$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="200">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">Printer</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">NIC (F/0)</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">Switch</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$612062429$--><p class="TableText"><span lang="PT-BR">F0/24</span></p>
+                <!--?lit$612062429$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!---->
+                </tbody></table>
+                </div>
+            </div>
+        <div>
+        </div>
+        </div></div></table-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="05cfe744-4691-4272-aaa3-b3294bba2574" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="05cfe744-4691-4272-aaa3-b3294bba2574" class="05cfe744-4691-4272-aaa3-b3294bba2574 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="05cfe744-4691-4272-aaa3-b3294bba2574" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><text-view modelid="fc7fb02b-d020-44ca-ba3b-50c34f6f782b" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="fc7fb02b-d020-44ca-ba3b-50c34f6f782b" class="component text fc7fb02b-d020-44ca-ba3b-50c34f6f782b  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$612062429$--><p class="BodyTextL25"><b><span lang="PT-BR">Nota:</span></b><span lang="PT-BR"> Na tabela acima, as interfaces designadas com <b>G</b> são interfaces GigabitEthernet. As interfaces designadas com <b>F</b> são interfaces FastEthernet.</span></p> <p class="SubStepAlpha"><span lang="PT-BR">a.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Conecte os dispositivos de rede de acordo com as informações na <b>Tabela de conexões</b> usando cabos Ethernet copper straight-through . Para a conexão da Internet com o Office Router, selecione o dispositivo e a porta nos menus suspensos que aparecem quando você clica na nuvem com a ferramenta de conexões selecionada.</span></p> <p class="SubStepAlpha"><span lang="PT-BR">b.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Conecte os dois PCs e a impressora ao switch do escritório de acordo com as informações na tabela de conexões. Use cabos copper straight-through (diretos)</span></p> <p class="SubStepAlpha"><span lang="PT-BR">c.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Você verá luzes de link verdes em todas as conexões após um breve intervalo de tempo.</span></p> <h2><span lang="PT-BR">Parte 2: </span><span lang="PT-BR">Configurar dispositivos com endereçamento IPv4</span></h2> <h3><span lang="PT-BR">Etapa 1: </span><span lang="PT-BR">Configure os hosts com as informações de endereçamento.</span></h3> <p class="SubStepAlpha"><span lang="PT-BR">a.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Os PCs Admin e Manager devem receber as informações de endereçamento IP via DHCP. O Office Router foi configurado para fornecer endereços IP aos hosts na LAN da filial. Clique nos PCs e vá para as guias Desktop em cada PC. Abra o aplicativo IP Configuration e configure os PCs para receberem seus endereços IP dinamicamente.</span></p> <p class="SubStepAlpha"><span lang="PT-BR">b.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Impressoras e servidores geralmente são configurados manualmente com endereçamento porque outros dispositivos na rede são configurados para acessá-los usando endereços IP. A configuração manual com um endereço estático garantirá que os endereços IP desses dispositivos não sejam alterados.</span></p> <p class="Bulletlevel2"><span lang="PT-BR">1)<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Clique na impressora e abra a guia Config. </span></p> <p class="Bulletlevel2"><span lang="PT-BR">2)<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Clique na interface FastEthernet0 no painel esquerdo.</span></p> <p class="Bulletlevel2"><span lang="PT-BR">3)<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Insira as informações de endereçamento da tabela de endereçamento.</span></p> <p class="SubStepAlpha"><span lang="PT-BR">c.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Como os dois computadores estão na mesma rede, seus endereços IPv4 serão semelhantes, suas máscaras de sub-rede e gateways padrão serão idênticos.</span></p> <h4 class="pageTracer-h4-title-hide"><span lang="PT-BR">Perguntas:</span></h4></div>
+        </div>
+      </div>
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="ee8a1680-82e2-4e15-8342-6e6f1578bc28" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="ee8a1680-82e2-4e15-8342-6e6f1578bc28" class="ee8a1680-82e2-4e15-8342-6e6f1578bc28 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="ee8a1680-82e2-4e15-8342-6e6f1578bc28" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><opentextbox-view modelid="385fcf93-11af-4bfb-b7f6-4b79675dd96f" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+          <div class="component__inner openTextBox__inner">
+            <div data-socialgoodpulse-id="385fcf93-11af-4bfb-b7f6-4b79675dd96f" class="component opentextbox 385fcf93-11af-4bfb-b7f6-4b79675dd96f  is-undefined is-complete  ">
+              <div class="component__header-container">
+                <div data-socialgoodpulse-id="385fcf93-11af-4bfb-b7f6-4b79675dd96f" class="opentabletextbox ">
+                  <base-view type="component" lowercase_component="openTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTextBox__header">
+          <div class="component__header-inner openTextBox__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+              </div>
+                  <div class="component__widget openTextBox__widget question-container">
+                      <!--?lit$612062429$--> <div class="openTextBox__preText"><!--?lit$612062429$--><p class="BodyTextL50"><span lang="PT-BR">Por que você acha que os endereços IPv4 são diferentes, mas as máscaras de sub-rede e os gateways padrão são os mesmos?</span></p></div>                         
+      
+                      <div class="openTextBox__textArea-container">
+                          <fieldset class="openTextBox__fieldset" tabindex="0">
+                          <legend class="openTextBox__legend">
+                            <!--?lit$612062429$--><!--?lit$612062429$-->Área de Resposta<!--?-->
+                          </legend>
+                          <textarea class="openTextBox__textArea" rows="3" name="answerArea" placeholder="Digite suas respostas aqui." aria-label="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                          </fieldset>
+                      </div>
+                      <div tabindex="0" class="openTextBox__answerText answergray  hide">
+                        <!--?lit$612062429$-->
+                      <!--?lit$612062429$--><p class="BodyTextL50Answer"><span class="AnswerGray"><span style=" border:none"><span style="border:none">As respostas vão variar. Cada dispositivo na rede deve ter um identificador exclusivo. O endereço IPv4 é uma maneira de identificar exclusivamente cada host ou dispositivo de rede. O gateway padrão representa a forma de comunicação com dispositivos que NÃO estão na rede local.</span></span></span></p>
+                    </div>
+
+                      <div class="btn__container">                        
+                        <button class="btn-text openTextBox__showButton show-answer show"><!--?lit$612062429$-->Mostrar resposta</button>     
+                        <button class="btn-text openTextBox__hideButton hide-answer hide"><!--?lit$612062429$-->Ocultar resposta</button>                    
+                      </div>
+                      <!--?lit$612062429$--><!--?-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+      </opentextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="d9e0fecd-dfd8-4e05-ae2d-07875849fcf5" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="d9e0fecd-dfd8-4e05-ae2d-07875849fcf5" class="d9e0fecd-dfd8-4e05-ae2d-07875849fcf5 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="d9e0fecd-dfd8-4e05-ae2d-07875849fcf5" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><opentextbox-view modelid="338720e2-da33-425c-86e9-6aa5f1d62e5f" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+          <div class="component__inner openTextBox__inner">
+            <div data-socialgoodpulse-id="338720e2-da33-425c-86e9-6aa5f1d62e5f" class="component opentextbox 338720e2-da33-425c-86e9-6aa5f1d62e5f  is-undefined is-complete  ">
+              <div class="component__header-container">
+                <div data-socialgoodpulse-id="338720e2-da33-425c-86e9-6aa5f1d62e5f" class="opentabletextbox ">
+                  <base-view type="component" lowercase_component="openTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTextBox__header">
+          <div class="component__header-inner openTextBox__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+              </div>
+                  <div class="component__widget openTextBox__widget question-container">
+                      <!--?lit$612062429$--> <div class="openTextBox__preText"><!--?lit$612062429$--><p class="BodyTextL50"><span lang="PT-BR">A impressora não requer um gateway padrão porque só será acessada por hosts na rede local. No entanto, se você precisar configurá-la com um gateway padrão, qual valor a impressora usará? Como você pode determinar isso dos outros dispositivos na rede?</span></p></div>                         
+      
+                      <div class="openTextBox__textArea-container">
+                          <fieldset class="openTextBox__fieldset" tabindex="0">
+                          <legend class="openTextBox__legend">
+                            <!--?lit$612062429$--><!--?lit$612062429$-->Área de Resposta<!--?-->
+                          </legend>
+                          <textarea class="openTextBox__textArea" rows="3" name="answerArea" placeholder="Digite suas respostas aqui." aria-label="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                          </fieldset>
+                      </div>
+                      <div tabindex="0" class="openTextBox__answerText answergray  hide">
+                        <!--?lit$612062429$-->
+                      <!--?lit$612062429$--><p class="BodyTextL50Answer"><span class="AnswerGray"><span style=" border:none"><span style="border:none">Você pode determinar o valor de gateway padrão a ser usado observando os valores com os quais os PCs foram configurados pelo DHCP ou determinando o endereço IP da interface Ethernet do Office Router que está conectada à LAN da filial. </span></span></span></p>
+                    </div>
+
+                      <div class="btn__container">                        
+                        <button class="btn-text openTextBox__showButton show-answer show"><!--?lit$612062429$-->Mostrar resposta</button>     
+                        <button class="btn-text openTextBox__hideButton hide-answer hide"><!--?lit$612062429$-->Ocultar resposta</button>                    
+                      </div>
+                      <!--?lit$612062429$--><!--?-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+      </opentextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="b6018b08-b207-4d4c-a68e-51ed68dbd205" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="b6018b08-b207-4d4c-a68e-51ed68dbd205" class="b6018b08-b207-4d4c-a68e-51ed68dbd205 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="b6018b08-b207-4d4c-a68e-51ed68dbd205" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><text-view modelid="eed260eb-cf97-4446-824b-dc7d02143be8" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="eed260eb-cf97-4446-824b-dc7d02143be8" class="component text eed260eb-cf97-4446-824b-dc7d02143be8  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$612062429$--><h2><span lang="PT-BR">Parte 3: </span><span lang="PT-BR">Verificar a configuração do dispositivo final e a conectividade</span></h2> <h3><span lang="PT-BR">Etapa 1: </span><span lang="PT-BR">Verifique a conectividade entre os dois PCs.</span></h3> <p class="SubStepAlpha"><span lang="PT-BR">a.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Acesse os desktops dos PCs e verifique a configuração de endereçamento IP. Você deverá ver que os PCs receberam endereços IP dinamicamente na rede 192.168.1.0 255.255.255.0. Você também deverá ver que eles receberam endereços para configurar o Gateway padrão e o servidor DNS.</span></p> <p class="SubStepAlpha"><span lang="PT-BR">b.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">No prompt de comando do Admin PC, pingue o endereço IP da impressora. Repita este processo para o Manager PC. Você deverá ver pings bem-sucedidos para cada um. Isso verifica se os PCs e a impressora estão ligados e conectados e endereçados corretamente.</span></p> <h3><span lang="PT-BR">Etapa 2: </span><span lang="PT-BR">Verifique a conectividade com a internet.</span></h3> <p class="BodyTextL25"><span lang="PT-BR">No Desktop dos PCs, abra o navegador Web. Digite o endereço IP do servidor de internet para exibir a página web. Repita o processo, mas conecte usando a URL do servidor.</span></p> <h4 class="pageTracer-h4-title-hide"><span lang="PT-BR">Pergunta:</span></h4></div>
+        </div>
+      </div>
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="cbc204c0-2666-4a17-bc44-304bb7be8b76" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="cbc204c0-2666-4a17-bc44-304bb7be8b76" class="cbc204c0-2666-4a17-bc44-304bb7be8b76 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="cbc204c0-2666-4a17-bc44-304bb7be8b76" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><opentextbox-view modelid="67f0feb3-df1a-48d7-9652-875fccc84ce1" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+          <div class="component__inner openTextBox__inner">
+            <div data-socialgoodpulse-id="67f0feb3-df1a-48d7-9652-875fccc84ce1" class="component opentextbox 67f0feb3-df1a-48d7-9652-875fccc84ce1  is-undefined is-complete  ">
+              <div class="component__header-container">
+                <div data-socialgoodpulse-id="67f0feb3-df1a-48d7-9652-875fccc84ce1" class="opentabletextbox ">
+                  <base-view type="component" lowercase_component="openTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTextBox__header">
+          <div class="component__header-inner openTextBox__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+              </div>
+                  <div class="component__widget openTextBox__widget question-container">
+                      <!--?lit$612062429$--> <div class="openTextBox__preText"><!--?lit$612062429$--><p class="BodyTextL25"><span lang="PT-BR">Se você pode conectar pelo endereço IP, mas não pela URL, qual você acha que é a causa desse problema?</span></p></div>                         
+      
+                      <div class="openTextBox__textArea-container">
+                          <fieldset class="openTextBox__fieldset" tabindex="0">
+                          <legend class="openTextBox__legend">
+                            <!--?lit$612062429$--><!--?lit$612062429$-->Área de Resposta<!--?-->
+                          </legend>
+                          <textarea class="openTextBox__textArea" rows="3" name="answerArea" placeholder="Digite suas respostas aqui." aria-label="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                          </fieldset>
+                      </div>
+                      <div tabindex="0" class="openTextBox__answerText answergray  hide">
+                        <!--?lit$612062429$-->
+                      <!--?lit$612062429$--><p class="BodyTextL50Answer"><span class="AnswerGray"><span style=" border:none"><span style="border:none">Como o DNS é usado para resolver URLs para endereços IP, você pode afirmar com segurança que o servidor DNS não está acessível. Isso pode ser devido a um problema de conectividade de rede ou porque o endereço do servidor DNS configurado nos hosts está ausente ou está incorreto</span></span></span></p>
+                    </div>
+
+                      <div class="btn__container">                        
+                        <button class="btn-text openTextBox__showButton show-answer show"><!--?lit$612062429$-->Mostrar resposta</button>     
+                        <button class="btn-text openTextBox__hideButton hide-answer hide"><!--?lit$612062429$-->Ocultar resposta</button>                    
+                      </div>
+                      <!--?lit$612062429$--><!--?-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+      </opentextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="952864fa-0c7d-4df4-a7c6-ed461a23f553" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="952864fa-0c7d-4df4-a7c6-ed461a23f553" class="952864fa-0c7d-4df4-a7c6-ed461a23f553 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="952864fa-0c7d-4df4-a7c6-ed461a23f553" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><text-view modelid="714b6135-90b9-41b4-94ff-03fb0d00511b" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="714b6135-90b9-41b4-94ff-03fb0d00511b" class="component text 714b6135-90b9-41b4-94ff-03fb0d00511b  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$612062429$--><h2><span lang="PT-BR">Parte 4: </span><span lang="PT-BR">Use os comandos de rede para exibir informações de host</span></h2> <p class="BodyTextL25"><span lang="PT-BR">Os comandos de rede disponíveis no prompt de comando em PCs são muito semelhantes aos disponíveis no Windows. Nesta parte da atividade, você usará <b>ipconfig</b> e <b>tracert</b> conhecer melhor a LAN. </span></p> <h3><span lang="PT-BR">Etapa 1: </span><span lang="PT-BR">Use o comando ipconfig.</span></h3> <p class="BodyTextL25"><span lang="PT-BR">O comando <span class="DnTbold">ipconfig</span> exibe detalhes sobre o endereçamento configurado em um host.</span></p> <h4 class="pageTracer-h4-title-hide"><span lang="PT-BR">Pergunta:</span></h4></div>
+        </div>
+      </div>
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="9c0129fb-90dc-402c-81db-87857f45751d" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="9c0129fb-90dc-402c-81db-87857f45751d" class="9c0129fb-90dc-402c-81db-87857f45751d block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="9c0129fb-90dc-402c-81db-87857f45751d" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><opentextbox-view modelid="32a61726-0095-464a-9d24-31c2038743aa" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+          <div class="component__inner openTextBox__inner">
+            <div data-socialgoodpulse-id="32a61726-0095-464a-9d24-31c2038743aa" class="component opentextbox 32a61726-0095-464a-9d24-31c2038743aa  is-undefined is-complete  ">
+              <div class="component__header-container">
+                <div data-socialgoodpulse-id="32a61726-0095-464a-9d24-31c2038743aa" class="opentabletextbox ">
+                  <base-view type="component" lowercase_component="openTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTextBox__header">
+          <div class="component__header-inner openTextBox__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+              </div>
+                  <div class="component__widget openTextBox__widget question-container">
+                      <!--?lit$612062429$--> <div class="openTextBox__preText"><!--?lit$612062429$--><p class="BodyTextL25"><span lang="PT-BR">Abra um prompt de comando em um dos PCs e digite o comando<b> ipconfig</b> e anote as informações retornadas. Agora digite o comando <b>ipconfig /all</b>. Quais informações adicionais são exibidas?</span></p></div>                         
+      
+                      <div class="openTextBox__textArea-container">
+                          <fieldset class="openTextBox__fieldset" tabindex="0">
+                          <legend class="openTextBox__legend">
+                            <!--?lit$612062429$--><!--?lit$612062429$-->Área de Resposta<!--?-->
+                          </legend>
+                          <textarea class="openTextBox__textArea" rows="3" name="answerArea" placeholder="Digite suas respostas aqui." aria-label="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                          </fieldset>
+                      </div>
+                      <div tabindex="0" class="openTextBox__answerText answergray  hide">
+                        <!--?lit$612062429$-->
+                      <!--?lit$612062429$--><p class="BodyTextL50Answer"><span class="AnswerGray"><span style=" border:none"><span style="border:none">O ipconfig /all exibe informações sobre o endereço físico (MAC) da NIC. Ele também exibe os endereços dos servidores DHCP e DNS. No Windows, muitos detalhes adicionais são exibidos. Digite ipconfig /all no prompt de comando de um PC para exibir todas as informações que o Windows exibe com este comando.</span></span></span></p>
+                    </div>
+
+                      <div class="btn__container">                        
+                        <button class="btn-text openTextBox__showButton show-answer show"><!--?lit$612062429$-->Mostrar resposta</button>     
+                        <button class="btn-text openTextBox__hideButton hide-answer hide"><!--?lit$612062429$-->Ocultar resposta</button>                    
+                      </div>
+                      <!--?lit$612062429$--><!--?-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+      </opentextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="3435cca8-a410-40c2-9ca9-e10c344e8cd0" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="3435cca8-a410-40c2-9ca9-e10c344e8cd0" class="3435cca8-a410-40c2-9ca9-e10c344e8cd0 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="3435cca8-a410-40c2-9ca9-e10c344e8cd0" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><text-view modelid="c1d605e8-6a08-4753-9053-6cb3b7d89cd9" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="c1d605e8-6a08-4753-9053-6cb3b7d89cd9" class="component text c1d605e8-6a08-4753-9053-6cb3b7d89cd9  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$612062429$--><h3><span lang="PT-BR">Etapa 2: </span><span lang="PT-BR">Use o comando tracert</span></h3> <p class="BodyTextL25"><span lang="PT-BR">O comando <span class="DnTbold">tracert</span> usa o ICMP para retornar informações sobre os roteadores que são passadas à medida que os pacotes vão do PC de origem para o destino.</span></p> <p class="BodyTextL25"><span lang="PT-BR">Rastreie o caminho para um destino remoto abrindo um dos PCs e digitando <b>tracert</b> seguido da URL do servidor web.</span></p> <h4 class="pageTracer-h4-title-hide"><span lang="PT-BR">Perguntas:</span></h4></div>
+        </div>
+      </div>
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="7b23dc61-80f4-4563-b299-4862db39965d" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="7b23dc61-80f4-4563-b299-4862db39965d" class="7b23dc61-80f4-4563-b299-4862db39965d block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="7b23dc61-80f4-4563-b299-4862db39965d" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><opentextbox-view modelid="52c84abe-9dee-419c-acc8-cb21dd22641a" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+          <div class="component__inner openTextBox__inner">
+            <div data-socialgoodpulse-id="52c84abe-9dee-419c-acc8-cb21dd22641a" class="component opentextbox 52c84abe-9dee-419c-acc8-cb21dd22641a  is-undefined is-complete  ">
+              <div class="component__header-container">
+                <div data-socialgoodpulse-id="52c84abe-9dee-419c-acc8-cb21dd22641a" class="opentabletextbox ">
+                  <base-view type="component" lowercase_component="openTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTextBox__header">
+          <div class="component__header-inner openTextBox__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+              </div>
+                  <div class="component__widget openTextBox__widget question-container">
+                      <!--?lit$612062429$--> <div class="openTextBox__preText"><!--?lit$612062429$--><p class="BodyTextL25"><span lang="PT-BR">Quantos roteadores são atravessados no caminho para o destino? Como esses roteadores são identificados?</span></p></div>                         
+      
+                      <div class="openTextBox__textArea-container">
+                          <fieldset class="openTextBox__fieldset" tabindex="0">
+                          <legend class="openTextBox__legend">
+                            <!--?lit$612062429$--><!--?lit$612062429$-->Área de Resposta<!--?-->
+                          </legend>
+                          <textarea class="openTextBox__textArea" rows="3" name="answerArea" placeholder="Digite suas respostas aqui." aria-label="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                          </fieldset>
+                      </div>
+                      <div tabindex="0" class="openTextBox__answerText answergray  hide">
+                        <!--?lit$612062429$-->
+                      <!--?lit$612062429$--><p class="BodyTextL50Answer"><span class="AnswerGray"><span style=" border:none"><span style="border:none">Dois. Eles são identificados pelos endereços IP das interfaces de entrada dos roteadores. </span></span></span></p>
+                    </div>
+
+                      <div class="btn__container">                        
+                        <button class="btn-text openTextBox__showButton show-answer show"><!--?lit$612062429$-->Mostrar resposta</button>     
+                        <button class="btn-text openTextBox__hideButton hide-answer hide"><!--?lit$612062429$-->Ocultar resposta</button>                    
+                      </div>
+                      <!--?lit$612062429$--><!--?-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+      </opentextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="56b80813-55ef-4523-88d7-52e39afa27c7" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="56b80813-55ef-4523-88d7-52e39afa27c7" class="56b80813-55ef-4523-88d7-52e39afa27c7 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="56b80813-55ef-4523-88d7-52e39afa27c7" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><opentextbox-view modelid="3d0d36c4-f246-49fa-9d60-30cc66137b74" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+          <div class="component__inner openTextBox__inner">
+            <div data-socialgoodpulse-id="3d0d36c4-f246-49fa-9d60-30cc66137b74" class="component opentextbox 3d0d36c4-f246-49fa-9d60-30cc66137b74  is-undefined is-complete  ">
+              <div class="component__header-container">
+                <div data-socialgoodpulse-id="3d0d36c4-f246-49fa-9d60-30cc66137b74" class="opentabletextbox ">
+                  <base-view type="component" lowercase_component="openTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTextBox__header">
+          <div class="component__header-inner openTextBox__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+              </div>
+                  <div class="component__widget openTextBox__widget question-container">
+                      <!--?lit$612062429$--> <div class="openTextBox__preText"><!--?lit$612062429$--><p class="BodyTextL25"><span lang="PT-BR">Onde está localizado o segundo roteador?</span></p></div>                         
+      
+                      <div class="openTextBox__textArea-container">
+                          <fieldset class="openTextBox__fieldset" tabindex="0">
+                          <legend class="openTextBox__legend">
+                            <!--?lit$612062429$--><!--?lit$612062429$-->Área de Resposta<!--?-->
+                          </legend>
+                          <textarea class="openTextBox__textArea" rows="3" name="answerArea" placeholder="Digite suas respostas aqui." aria-label="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                          </fieldset>
+                      </div>
+                      <div tabindex="0" class="openTextBox__answerText answergray  hide">
+                        <!--?lit$612062429$-->
+                      <!--?lit$612062429$--><p class="BodyTextL50Answer"><span class="AnswerGray"><span style=" border:none"><span style="border:none">Está na nuvem da internet. </span></span></span></p>
+                    </div>
+
+                      <div class="btn__container">                        
+                        <button class="btn-text openTextBox__showButton show-answer show"><!--?lit$612062429$-->Mostrar resposta</button>     
+                        <button class="btn-text openTextBox__hideButton hide-answer hide"><!--?lit$612062429$-->Ocultar resposta</button>                    
+                      </div>
+                      <!--?lit$612062429$--><!--?-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+      </opentextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="dd6aff54-2ecf-414d-adc0-bae64cf0eb96" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="dd6aff54-2ecf-414d-adc0-bae64cf0eb96" class="dd6aff54-2ecf-414d-adc0-bae64cf0eb96 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="dd6aff54-2ecf-414d-adc0-bae64cf0eb96" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><text-view modelid="0bf8514e-317e-4c93-ba04-9dd5a91c11da" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="0bf8514e-317e-4c93-ba04-9dd5a91c11da" class="component text 0bf8514e-317e-4c93-ba04-9dd5a91c11da  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$612062429$--><h2><span lang="PT-BR">Reflexão</span></h2></div>
+        </div>
+      </div>
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="e5606208-7b03-4111-82af-d17cfe8dae8d" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 6.25%;"><!---->
+                
+                <div data-socialgoodpulse-id="e5606208-7b03-4111-82af-d17cfe8dae8d" class="e5606208-7b03-4111-82af-d17cfe8dae8d block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="e5606208-7b03-4111-82af-d17cfe8dae8d" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$612062429$--><!----><opentextbox-view modelid="7ee25e56-3503-4684-9cf0-1004fc421341" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+          <div class="component__inner openTextBox__inner">
+            <div data-socialgoodpulse-id="7ee25e56-3503-4684-9cf0-1004fc421341" class="component opentextbox 7ee25e56-3503-4684-9cf0-1004fc421341  is-undefined is-complete  ">
+              <div class="component__header-container">
+                <div data-socialgoodpulse-id="7ee25e56-3503-4684-9cf0-1004fc421341" class="opentabletextbox ">
+                  <base-view type="component" lowercase_component="openTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTextBox__header">
+          <div class="component__header-inner openTextBox__header-inner">
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+            <!--?lit$612062429$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+              </div>
+                  <div class="component__widget openTextBox__widget question-container">
+                      <!--?lit$612062429$--> <div class="openTextBox__preText"><!--?lit$612062429$--><p class="BodyTextL25"><span lang="PT-BR">Considere um pequeno escritório que tenha uma LAN semelhante à que você criou aqui. Qual é o maior desafio das instalações ao configurar a rede em um novo local?</span></p></div>                         
+      
+                      <div class="openTextBox__textArea-container">
+                          <fieldset class="openTextBox__fieldset" tabindex="0">
+                          <legend class="openTextBox__legend">
+                            <!--?lit$612062429$--><!--?lit$612062429$-->Área de Resposta<!--?-->
+                          </legend>
+                          <textarea class="openTextBox__textArea" rows="3" name="answerArea" placeholder="Digite suas respostas aqui." aria-label="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                          </fieldset>
+                      </div>
+                      <div tabindex="0" class="openTextBox__answerText answergray  hide">
+                        <!--?lit$612062429$-->
+                      <!--?lit$612062429$--><p class="BodyTextL50Answer"><span class="AnswerGray"><span style=" border:none"><span style="border:none">A infraestrutura de cabeamento físico. O escritório precisa estar conectado e ter tomadas de comunicação para todos os dispositivos. Além disso, as tomadas precisam estar em locais convenientes. Além disso, as tomadas devem ser conectadas a um local central onde o switch e o roteador estão localizados. O cabeamento físico pode apresentar muitos problemas quando criado em um novo local, no escritório. </span></span></span></p>
+                    </div>
+
+                      <div class="btn__container">                        
+                        <button class="btn-text openTextBox__showButton show-answer show"><!--?lit$612062429$-->Mostrar resposta</button>     
+                        <button class="btn-text openTextBox__hideButton hide-answer hide"><!--?lit$612062429$-->Ocultar resposta</button>                    
+                      </div>
+                      <!--?lit$612062429$--><!--?-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+      </opentextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!---->
+                            </div>
+                        </div>
+                        <!--?lit$612062429$-->
+                    </div>
+                </div>
+            </div>
+        <sgpluse-opentextboxcontroller-view modelid="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+            <div class="openTextBoxController__button-container">
+                <button tabindex="0" class="btn-text showhidebtn openTextBoxController__showButton show-answer show"><!--?lit$612062429$-->Mostrar todas as respostas</button>    
+                <button tabindex="0" class="btn-text showhidebtn openTextBoxController__hideButton hide-answer hide"><!--?lit$612062429$-->Ocultar todas as respostas</button>    
+                <button class="btn-text resetbtn openTextBoxController__resetButton"><!--?lit$612062429$-->Limpar minhas respostas</button>         
+            </div>
+            <!--?lit$612062429$--><hr>
+            <!--?lit$612062429$-->
+                <div class="post-text" tabindex="0">
+                    <!--?lit$612062429$--><span> <span style="padding-right:5px;float:left;font-family:arial;font-size:12px;">© 2017 - 2022 Cisco and/or its affiliates. All rights reserved. Cisco Public </span> </span>
+                </div>
+                   
+        </sgpluse-opentextboxcontroller-view><script></script>
+<script>
+    window.addEventListener("load", function () {
+      console.log("loaded");
+      document?.querySelectorAll(".answergray").forEach(function (ele) {
+        ele.classList.add("u-display-none");
+      });
+      document?.querySelectorAll(".hide-answer").forEach(function (ele) {
+        ele.classList.add("u-display-none");
+      });
+      document?.querySelectorAll(".show-answer").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.nextElementSibling.classList.remove("u-display-none");
+          e.currentTarget
+            .closest(".question-container")
+            ?.querySelectorAll(".answergray")
+            .forEach(function (ele) {
+              ele.classList.remove("u-display-none");
+            });
+          ele.classList.add("u-display-none");
+        });
+      });
+      document?.querySelectorAll(".hide-answer").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.previousElementSibling.classList.remove("u-display-none");
+          e.currentTarget
+            .closest(".question-container")
+            ?.querySelectorAll(".answergray")
+            .forEach(function (ele) {
+              ele.classList.add("u-display-none");
+            });
+          ele.classList.add("u-display-none");
+        });
+      });
+      let event = new Event("click", {
+        bubbles: true,
+        cancelable: true,
+      });
+      document
+        ?.querySelectorAll(".openTextBoxController__showButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            e.currentTarget.nextElementSibling.classList.remove("u-display-none");
+            ele.classList.add("u-display-none");
+            document?.querySelectorAll(".show-answer").forEach(function (ele) {
+              ele?.dispatchEvent(event);
+            });
+          });
+        });
+
+      document
+        ?.querySelectorAll(".openTextBoxController__hideButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            e.currentTarget.previousElementSibling.classList.remove("u-display-none");
+            ele.classList.add("u-display-none");
+            document?.querySelectorAll(".hide-answer").forEach(function (ele) {
+              ele?.dispatchEvent(event);
+            });
+          });
+        });
+
+      document
+        ?.querySelectorAll(".openTextBoxController__resetButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            document?.querySelectorAll("textArea").forEach(function (ele) {
+              ele.value = "";
+            });
+          });
+        });
+
+      document
+      ?.querySelectorAll('textarea')
+      .forEach(function (ele){
+        ele.defaultValue = ele.defaultValue.replace(/<!--.*?-->/g, '');
+      })
+        let checkButtonLabel = "check_button_label_placeHolder";
+        let hideButtonLabel = "hide_button_label_placeHolder";
+        document?.querySelectorAll(".check__button").forEach(function (ele) {
+        let answerBox = document.querySelector(".check__solution")
+        if (!answerBox.classList.contains("check__hidden")) {
+          answerBox.classList.add("check__hidden");
+          ele.innerText = checkButtonLabel;
+        }
+          ele.addEventListener("click", function (e) {
+            if (answerBox.classList.contains("check__hidden")) {
+              answerBox.classList.remove("check__hidden")
+              ele.innerText = hideButtonLabel;
+            } else {
+              answerBox.classList.add("check__hidden")
+              ele.innerText = checkButtonLabel;
+            }
+          })
+        })
+    });
+  </script>
+  </body></html>
