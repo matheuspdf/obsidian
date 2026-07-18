@@ -180,6 +180,8 @@ Um dispositivo final (ou host) é a origem ou o destino de uma mensagem transmit
 
 Clique em Play na figura para ver uma animação dos dados fluindo por uma rede.
 
+![[brave_zmZm0eIfFw.mp4]]
+
 ## 2.2.4 Verifique sua compreensão - Componentes de rede
 
 ### Quiz — Dispositivos e Mídias de Rede
