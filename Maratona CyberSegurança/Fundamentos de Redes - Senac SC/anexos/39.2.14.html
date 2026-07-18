@@ -1,0 +1,1263 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 1rem;
+      }
+      ol,
+      ul {
+        margin-bottom: 0in;
+      }
+      table {
+        margin-top: 1rem;
+        border: 1px solid gray;
+        width: 7in;
+        border-collapse: collapse;
+      }
+
+      table > thead > tr > .openTableTextBox__table-header-data {
+        text-align: center;
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0in;
+        text-align: center;
+        line-height: 115%;
+        page-break-after: avoid;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        background: #dbe5f1;
+        padding: 0.5rem;
+      }
+      .openTableTextBox__answerText
+        table
+        > thead
+        > tr
+        > .openTableTextBox__table-header-data {
+        background: #f2dbdb !important;
+      }
+      .openTextBox__textArea-container {
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        width: 50%;
+      }
+      .openTableTextBox__fieldset {
+        padding: 5px;
+      }
+      td {
+        margin-top: 3pt;
+        margin-right: 0in;
+        margin-bottom: 3pt;
+        margin-left: 0in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        width: 98.85pt;
+        border: solid windowtext 1pt;
+        border-top: none;
+        padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+      }
+      textarea {
+        width: 100%;
+      }
+      .answergray {
+        padding: 0.2rem;
+      }
+
+      .openTableTextBox__widget {
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.25in;
+      }
+
+      .show-answer,
+      .hide-answer {
+        padding: 0.5rem 1rem;
+        background-color: #3d692b;
+        color: #fff;
+        border: 0px;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .openTextBoxController__button-container {
+        display: flex;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .openTextBoxController__button-container .btn-text {
+        margin: 10px;
+      }
+
+      .btn-text {
+        border: 0px;
+        padding: 0.5rem 1rem;
+        background-color: #3d692b;
+        color: #fff;
+        border-radius: 0;
+        cursor: pointer;
+      }
+
+      .u-display-none {
+        display: none;
+      }
+      .openTextBox__postText, openTableTextBox__postText {
+        margin-top: 0.5rem;
+      }
+      .edit-comment {
+        display: none;
+      }
+      .js-heading-inner {
+        display: none;
+      }
+      .block__title-inner,
+      .article__title-inner {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+      }
+      h2{
+        font-size: 1.25em;
+      }
+      h3{
+        font-size: 1.125em;
+      }
+      .table
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > th {
+        border: solid windowtext 1pt;
+      }
+      table tbody tr th, table thead tr th{
+        border: solid windowtext 1pt;
+        background-color: #d6d8dc;
+      }
+      .openTableTextBox__answerText
+        table
+        > thead
+        > tr
+        > .openTableTextBox__table-header-data {
+        background: #f2dbdb !important;
+      }
+      .command-output > .table-inner > .table-wrapper > .table-widget > table,
+      .command-output
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > td,
+      .command-output
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > th {
+        border: none !important;
+        text-align: right !important;
+      }
+      .simple-table > .table-inner > .table-wrapper{
+        margin-left: 1.5rem;
+      }
+      .openTextBox__widget {
+        margin-left: 1.5rem;
+      }
+      img {
+        width: 30%;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+      .answergray {
+        background-color: #ccc;
+      }
+      .openTableTextBox__widget > .answergray {
+        background-color: #fff !important;
+      }
+      li > ul,ol > li{
+        margin-left: 0px !important;
+      }
+      img {
+        width: 30%;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+      
+      .component__title{
+        font-family: inherit;
+        font-size: 1.65em;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      .component__body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .accessibility-completion-indicator{
+        display: none;
+      }
+
+      .check__hidden {
+        display: none;
+      }
+
+      .check__button {
+        border: none;
+        border-radius: 6px !important;
+        background-color: #6abf4b;
+        color: #fff;
+        min-width: 100px;
+        margin: 0.625rem 0;
+        padding: 0.7rem;
+      }
+
+      .check__widget .check__solution .DevConfigGray {
+        background-color: rgb(214,216,220);
+        font-weight: bold;
+      }
+
+      .check-inner .check__widget .check__solution .DevConfigs {
+        margin: 0px;
+        line-height: 115%;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .check__solution  {
+        line-height: 1.5;
+      }
+      .mcq__inner .mcq__widget .mcq__widget-inner {
+        margin-block: 1rem;
+      }
+      .mcq__inner .mcq__widget .mcq__item {
+        display: flex;
+        gap: 0.2rem;
+      }
+      .mcq__inner .mcq__widget .mcq__item .mcq__item-label .mcq__item-text .screenReader-position-text{
+        display: none;
+      }
+      .opentabletextbox-inner .opentabletextBox__widget .openTableTextBox__answerText.answergray {
+        background-color: transparent;
+      }
+      .openTextBox__inner .openTextBox__widget .answergray.is-graphic-in-openTextBox{
+        background-color: transparent;
+      }
+      .openTextBox__inner .openTextBox__widget .answergray.is-graphic-in-openTextBox img{
+        margin-block: 1rem;
+        margin-left: initial;
+      }
+      .component__content .component__body-inner .pageTracer-h4-title-hide {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        font-size: 0px;
+        color: rgb(var(--neutral-2));
+        font-weight: normal;
+      }
+      .table-inner .table__widget table tr.TableHeading th, .table-inner .table__widget table tr.TableHeading td, .table-inner .table__widget table tr td.TableHeading, .opentabletextbox-table thead tr.TableHeading th, .opentabletextbox-table tbody tr.TableHeading td, .opentabletextbox-table tbody tr td.TableHeading {
+        background-color: #d6d8dc;
+        text-align: center;
+        font-weight: bold;
+      }
+      .component__content .component__body-inner .CMD, .component__content .component__body-inner .CMDOutput, .component__content .component__body-inner .CMDOutput__table{
+        margin-top: 4px;
+        margin-inline-end: 0px;
+        margin-bottom: 4px;
+        margin-inline-start: 30px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      [dir="rtl"] .component__content .component__body-inner .CMDOutput__table span {
+        direction: ltr;
+        display: inline-block;
+      }
+      .openTextBox__inner .openTextBox__widget .CMD, .openTextBox__inner .openTextBox__widget .CMDOutput{
+        margin-top: 4px;
+        margin-inline-end: 0px;
+        margin-bottom: 4px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .openTextBox__inner .openTextBox__widget .DnTbold, .openTextBox__inner .openTextBox__widget .BodyTextL25Bold, .component__content .component__body-inner .BodyTextL25Bold, .component__content .component__body-inner .DnTbold, .table-inner .table__widget table tr .DnTbold {
+        font-weight: bold;
+      }
+      .component__content .component__body-inner .SubStepNum {
+        text-indent: -25.5px;
+        margin-inline-start: 50px;
+      }
+      .component__content .component__body-inner .BodyTextL50 {
+        margin-inline-start: 30px;
+      }
+      .component__content .component__body-inner .Bulletlevel1 {
+        text-indent: -19px;
+        margin-inline-start: 48px;
+      }
+      .component__content .component__body-inner .Bulletlevel2 {
+          text-indent: -19px;
+          margin-inline-start: 72px;
+      }
+      .openTextBox__inner .openTextBox__widget .ReflectionQ, .component__content .component__body-inner .SubStepAlpha {
+          text-indent: -25.5px;
+          margin-inline-start: 30px;
+      }
+    </style>
+
+</head><body><!---->
+            <div class="article 63ae75c6142222080491569c remove-padding-top is-complete ">
+                <div class="article__inner">
+                <div class=" no-adaptive-scroll">
+                    <!--?lit$928586212$-->
+                        <div class=""> 
+                            <base-view type="article" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="article__header-wrapper remove-padding-top ">
+        <div class="article__header ">
+          <div class="article__header-inner ">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                            <div class="block__container " style="">
+                                <!--?lit$928586212$--><!---->
+                                    <block-view modelid="63ae75c614222208049156a0" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 10%;"><!---->
+                
+                <div data-socialgoodpulse-id="63ae75c614222208049156a0" class="63ae75c614222208049156a0 block background-color-white remove-padding-bottom remove-padding-top is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63ae75c614222208049156a0" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-padding-bottom remove-padding-top ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$928586212$-->
+      <div class="block__title ">
+        <!--?lit$928586212$--><heading-view aria-hidden="true" id="63ae75c614222208049156a0-heading-view" headingtitle="Packet Tracer - Configure o Controle de Acesso" modelid="63ae75c614222208049156a0" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="js-heading is-complete">
+        <div class="js-heading-inner" role="heading" id="block-heading" aria-level="1">
+        <span class="aria-label"> <!--?lit$928586212$-->Concluída &nbsp;<!--?lit$928586212$-->Packet Tracer - Configure o Controle de Acesso</span>
+        </div>
+      </div>
+    </heading-view>
+        <div tabindex="0" role="heading" class="block__title-inner " aria-level="3">
+          <span class="accessibility-completion-indicator"><!--?lit$928586212$-->Concluída </span>
+          <!--?lit$928586212$-->Packet Tracer - Configure o Controle de Acesso
+        </div>
+      </div>
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$928586212$--><!----><text-view modelid="63ae75c614222208049156a5" class="is-full zoom-graphic-enabled" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="63ae75c614222208049156a5" class="component text 63ae75c614222208049156a5  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$928586212$--><div><h3>Objetivos</h3></div><div><p><strong>Parte 1: Configurar e usar credenciais de autenticação AAA</strong></p><p><strong>Parte 2: Configurar e Verificar Serviços de E-mail</strong></p><p><strong>Parte 3: Configurar e usar serviços de FTP</strong></p></div><div><h3>Histórico / Cenário</h3></div><div><p>Autenticação e autorização são processos de segurança distintos no mundo do gerenciamento de identidade e acesso (IAM). A autenticação usa senhas e outros métodos de identificação para confirmar que os usuários são quem eles dizem ser. Por outro lado, a autorização atribui permissões de usuário aos recursos aos quais o usuário tem permissão. Nesta atividade do Packet Tracer (PT), você configurará a autenticação e a autorização para serviços de rede, incluindo acesso à rede sem fio, e-mail e serviços de FTP.</p><p><strong>Nota</strong>: Esta atividade é executada no modo <strong>físico</strong>. No entanto, se você preferir, pode completá-la também no modo <strong>Lógico</strong>.</p><p><strong>Observação</strong>: a maioria das tarefas nesta atividade é classificada. Clique em <strong>Verificar resultados</strong> a qualquer momento para ver seus <strong>itens de avaliação corretos e incorretos.</strong></p></div></div>
+        </div>
+      </div>
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63ae7af9555b310d7aa502c6" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 10%;"><!---->
+                
+                <div data-socialgoodpulse-id="63ae7af9555b310d7aa502c6" class="63ae7af9555b310d7aa502c6 block background-color-white remove-padding-bottom remove-padding-top is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63ae7af9555b310d7aa502c6" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-padding-bottom remove-padding-top ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$928586212$--><!----><text-view modelid="63ae7af9555b310d7aa502c7" class="is-full zoom-graphic-enabled" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="63ae7af9555b310d7aa502c7" class="component text 63ae7af9555b310d7aa502c7  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$928586212$--><div><div><h3>Instruções</h3></div><div><h3>Parte 1: Configurar e usar credenciais de autenticação AAA</h3></div><div><h4>Passo 1: Configurar contas de usuário no servidor AAA.</h4></div><div><ol style="list-style-type:lower-alpha"><li>Navegue até <strong>a sede</strong> e clique no <strong>Wiring Closet</strong>, que é o gabinete do servidor alto e preto no canto inferior esquerdo.</li><li>No lado direito do <strong>Rack</strong>, clique em <strong>AAA-RADIUS</strong> server &gt; guia <strong>Services</strong> e, em seguida, em <strong>AAA</strong> sob <strong>SERVICES</strong>.</li><li>Ative o serviço AAA.</li><li>Em <strong>Configuração de Usuário</strong>, adicione os seguintes <strong>nomes de usuário / senhas</strong>.<ul><li><strong>user1 / PASSuser1!</strong></li><li><strong>user2 / PASSuser2!</strong></li></ul></li></ol></div><div><h4>Passo 2: Configure a autenticação wireless no HQ-Laptop-1.</h4></div><div><ol style="list-style-type:lower-alpha"><li>Navegue de volta para <strong>HQ</strong> e clique em <strong>HQ-Laptop-1.</strong> Está localizado a duas salas à direita do <strong> Wiring Closet.</strong></li><li>Clique na guia <strong>Config</strong> e, em seguida, em <strong>INTERFACE</strong>, clique em <strong>Wireless0</strong>.</li><li>Na caixa <strong>SSID</strong>, digite <strong>HQ-INT</strong>.</li><li>Na área de <strong>"Autenticação"</strong>, clique em <strong>WPA2</strong>.</li><li>Na caixa <strong>User ID</strong>, digite <strong>"user1"</strong> e na caixa <strong>"Password"</strong>, digite <strong>PASSuser1!</strong>.</li><li>No espaço <strong>"IP Configuration"</strong>, clique em <strong>"DHCP"</strong>. Aguarde alguns momentos para a oferta do DHCP ser aceita, Verifique se o <strong>HQ-Laptop-1</strong> recebeu a configuração de endereço IP e se foi atribuído um endereço na rede 192.168.50.0/24.</li></ol><p><strong>Observação</strong>: Pode ser necessário alternar entre as opções <strong>Static (estático)</strong> e <strong>"DHCP"</strong> para forçar o Packet Tracer a convergir nas suas configurações. Além disso, clique em <strong> Check Results</strong> para garantir que você configurou corretamente o servidor AAA e as configurações sem fio no laptop. Clicar em <strong>"Check Results"</strong> também pode forçar o Packet Tracer a convergir. Se tudo estiver configurado corretamente, prossiga para a configuração do <strong>"HQ-Laptop-2"</strong> e, em seguida, retorne ao <strong>"HQ-Laptop-1"</strong> para verificar sua configuração de IP. Esse problema normalmente é resolvido.</p></div><div><h4>Passo 3: Configure a autenticação wireless no HQ-Laptop-2.</h4></div><div><ol style="list-style-type:lower-alpha"><li>Clique em <strong>"HQ-Laptop-2"</strong>, que está localizado no canto superior direito do <strong> "HQ"</strong>.</li><li>Repita os passos anteriores para configurar as configurações sem fio para <strong>"HQ-Laptop-2"</strong>, usando as credenciais do <strong>"user2"</strong>.</li><li>Verifique se o <strong>"HQ-Laptop-2"</strong> recebeu uma configuração de endereço IP e foi atribuído um endereço na rede 192.168.50.0/24.</li></ol></div></div></div>
+        </div>
+      </div>
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63ae7b94e3064708765c401a" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 10%;"><!---->
+                
+                <div data-socialgoodpulse-id="63ae7b94e3064708765c401a" class="63ae7b94e3064708765c401a block background-color-white remove-padding-bottom remove-padding-top is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63ae7b94e3064708765c401a" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-padding-bottom remove-padding-top ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$928586212$--><!----><table-view modelid="63ae7ba1e183b10deca0302f" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+        <div class="table-inner component__inner"> 
+            <div data-socialgoodpulse-id="63ae7ba1e183b10deca0302f" class="component table 63ae7ba1e183b10deca0302f  is-full is-complete  ">
+                <div class="component__header-container">
+                    <div data-socialgoodpulse-id="63ae7ba1e183b10deca0302f" class="table ">
+                        <base-view type="component" lowercase_component="table" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header table__header">
+          <div class="component__header-inner table__header-inner">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body table__body">
+          <div class="component__body-inner table__body-inner"><!--?lit$928586212$--><div><h3>Parte 2: Configurar e Verificar Serviços de E-mail</h3></div><div><h4>Passo 1: Ativar os serviços de e-mail e configurar contas de usuário de e-mail.</h4></div><div><ol style="list-style-type:lower-alpha"><li>Navegue até o <strong>Armário de Cabeamento</strong>.</li><li>No lado direito do <strong>Rack</strong>, clique em <strong>Mail </strong> server &gt; <strong>guia Service</strong>s e depois em <strong>EMAIL</strong> sob <strong>SERVICES</strong>.</li><li>Ative tanto o serviço <strong>SMTP</strong> quanto o serviço <strong>POP3</strong>.</li><li>Configure o domínio para <strong>mail.cyberhq.com.</strong></li><li>Na seção <strong>"Configuração de Usuários"</strong>, digite os seguintes <strong>nomes de usuário / senhas</strong>. Clique no sinal de adição (<strong>+</strong>) para adicionar cada par.<ul><li><strong>HQuser1 / Cisco123!</strong></li><li><strong>HQuser2 / Cisco123~</strong></li><li><strong>BRuser1 / Cisco123-</strong></li><li><strong>BRuser2 / Cisco123+</strong></li></ul></li></ol></div><div><h4>Passo 2: Configure os clientes de e-mail</h4></div><div><ol style="list-style-type:lower-alpha"><li>Navegue de volta para <strong>"HQ"</strong> e clique em <strong>"PC 1-1"</strong>, que está no canto inferior.</li><li>Clique na guia <strong>Desktop</strong> &gt; <strong>Email</strong>. As <strong>configurações de e-mail</strong> estão abertas.</li><li>Insira as informações a seguir:<ul><li>Seu Nome: <strong>Suk-Yi</strong></li><li>Endereço de e-mail: <strong style="word-wrap: break-word;">HQuser1@mail.cyberhq.com</strong></li><li>Servidor(es) de E-mail de Entrada e Saída: <strong>mail.cyberhq.com</strong></li><li>Nome de Usuário: <strong>HQuser1</strong></li><li>Senha: <strong>Cisco123!</strong></li></ul></li></ol><p>Click em <strong>Salvar</strong>.</p></div></div>
+        </div>
+      </div>
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                    </div>
+                </div>
+
+
+                <div class="component__widget table__widget">
+                <!--?lit$928586212$-->
+                    <!--?lit$928586212$-->Novo título do componente
+                
+                <table tabindex="0" style="min-width: px" aria-labelledby="table-caption-63ae7ba1e183b10deca0302f">
+                <!--?lit$928586212$--><!---->
+                    <tbody><tr class="table-row nth-child-0 ">
+                    <!--?lit$928586212$--><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-0 ">
+                <!--?lit$928586212$--><p>PC/Laptop</p>
+                <!--?lit$928586212$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-1 ">
+                <!--?lit$928586212$--><p>Seu nome</p>
+                <!--?lit$928586212$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-2 ">
+                <!--?lit$928586212$--><p>Endereço de e-mail</p>
+                <!--?lit$928586212$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-3 ">
+                <!--?lit$928586212$--><p>Nome de Usuário</p>
+                <!--?lit$928586212$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-4 ">
+                <!--?lit$928586212$--><p>Senha</p>
+                <!--?lit$928586212$-->
+            </th>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-1 ">
+                    <!--?lit$928586212$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="">
+                <!--?lit$928586212$-->2-3
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$928586212$--> 
+Antiguidade
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$928586212$-->BRuser1@mail.cyberhq.com
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$928586212$-->BRuser1
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-4 " width="">
+                <!--?lit$928586212$-->Cisco123-
+                <!--?lit$928586212$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-2 ">
+                    <!--?lit$928586212$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="">
+                <!--?lit$928586212$-->HQ-Laptop-1
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$928586212$-->Malia
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$928586212$-->BRuser2@mail.cyberhq.com
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$928586212$-->BRuser2
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-4 " width="">
+                <!--?lit$928586212$-->Cisco123+
+                <!--?lit$928586212$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-3 ">
+                    <!--?lit$928586212$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="">
+                <!--?lit$928586212$-->NetAdmin
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$928586212$-->Cisco
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$928586212$-->HQuser2@mail.cyberhq.com
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$928586212$-->HQuser2
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-4 " width="">
+                <!--?lit$928586212$-->Cisco123~
+                <!--?lit$928586212$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!---->
+                </tbody></table>
+                </div>
+            </div>
+        <div>
+        </div>
+        </div></div></table-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63ae7d3f8fc73e0da0810930" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 10%;"><!---->
+                
+                <div data-socialgoodpulse-id="63ae7d3f8fc73e0da0810930" class="63ae7d3f8fc73e0da0810930 block background-color-white remove-padding-bottom remove-padding-top is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63ae7d3f8fc73e0da0810930" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-padding-bottom remove-padding-top ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$928586212$--><!----><text-view modelid="63ae7d3f8fc73e0da0810931" class="is-full zoom-graphic-enabled" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="63ae7d3f8fc73e0da0810931" class="component text 63ae7d3f8fc73e0da0810931  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$928586212$--><div><div><div><div><h3>Passo 3: Enviar um e-mail como Suk-Yi.</h3></div><div><ol style="list-style-type:lower-alpha"><li>No <strong>PC 1-1</strong>, clique em <strong>Compor</strong>.</li><li>Componha um email para Ajulo em <strong style="word-break: break-word;">BRuser1@mail.cyberhq.com</strong>. Insira um assunto e uma mensagem de e-mail de sua escolha. Clique em <strong>Enviar</strong> quando terminar.<p><strong>Observação</strong>: O Packet Tracer pode levar alguns segundos para convergir antes de você ver uma mensagem <strong>"Envio bem-sucedido"</strong> na parte inferior da janela.</p><p><strong>Observção</strong>: O Packet Tracer não classifica esta etapa. Verifique se você completou corretamente esta etapa recebendo o e-mail enviado por Suk-Yi no PC de Ajulo <strong>(PC2-3).</strong></p></li><li>Navegue até o <strong>PC2-3 de Ajulo.</strong> Se necessário, clique na guia <strong>"Desktop" </strong> e depois em <strong>"Email".</strong></li><li>Clique em <strong>"Receber"</strong> e leia o e-mail de Suk-Yi.</li></ol></div></div></div></div></div>
+        </div>
+      </div>
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63ae7d5f555b310d7aa502c9" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 10%;"><!---->
+                
+                <div data-socialgoodpulse-id="63ae7d5f555b310d7aa502c9" class="63ae7d5f555b310d7aa502c9 block background-color-white remove-padding-bottom remove-padding-top is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63ae7d5f555b310d7aa502c9" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-padding-bottom remove-padding-top ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$928586212$--><!----><table-view modelid="63ae7d5f555b310d7aa502ca" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+        <div class="table-inner component__inner"> 
+            <div data-socialgoodpulse-id="63ae7d5f555b310d7aa502ca" class="component table 63ae7d5f555b310d7aa502ca  is-full is-complete  ">
+                <div class="component__header-container">
+                    <div data-socialgoodpulse-id="63ae7d5f555b310d7aa502ca" class="table ">
+                        <base-view type="component" lowercase_component="table" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header table__header">
+          <div class="component__header-inner table__header-inner">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body table__body">
+          <div class="component__body-inner table__body-inner"><!--?lit$928586212$--><div><div><h3>Parte 3: Configurar e usar serviços de FTP</h3></div><div><h4>Passo 1: Ative o serviço FTP.</h4></div><div><ol style="list-style-type:lower-alpha"><li>Navegue até o <strong>Armário de Cabeamento</strong>.</li><li>No lado <strong>direito</strong>, clique em <strong>"FTP server"</strong>, em seguida, na guia <strong>"Services"</strong> e, por fim, em <strong>"FTP"</strong> na seção <strong>"SERVICES"</strong>.</li><li>Ative o serviço de <strong>FTP</strong>.</li></ol></div><div><h4>Etapa 2: Criar as contas de usuário de FTP.</h4></div><div><ol style="list-style-type:lower-alpha"><li>Em <strong>"Configuração de Usuário"</strong>, por favor, insira os seguintes nomes de usuário, senhas e privilégios: Clique em <strong>Add</strong> para adicionar cada usuário.</li></ol><p><strong>Observação</strong>: certifique-se de que o nome de usuário <strong>malia</strong> não inclua a opção <strong>Delete</strong> como um dos privilégios de usuário.</p></div></div></div>
+        </div>
+      </div>
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                    </div>
+                </div>
+
+
+                <div class="component__widget table__widget">
+                <!--?lit$928586212$-->
+                    <!--?lit$928586212$-->Novo título do componente
+                
+                <table tabindex="0" style="min-width: px" aria-labelledby="table-caption-63ae7d5f555b310d7aa502ca">
+                <!--?lit$928586212$--><!---->
+                    <tbody><tr class="table-row nth-child-0 ">
+                    <!--?lit$928586212$--><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-0 ">
+                <!--?lit$928586212$-->Nome de usuário
+                <!--?lit$928586212$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-1 ">
+                <!--?lit$928586212$-->Senha
+                <!--?lit$928586212$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-2 ">
+                <!--?lit$928586212$-->Privilégio de usuário
+                <!--?lit$928586212$-->
+            </th>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-1 ">
+                    <!--?lit$928586212$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="">
+                <!--?lit$928586212$-->sukyi
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$928586212$-->cisco123
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$928586212$-->RWDNL (escrever, ler, excluir, renomear, listar)
+                <!--?lit$928586212$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-2 ">
+                    <!--?lit$928586212$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="">
+                <!--?lit$928586212$-->ajulo
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$928586212$-->cisco321
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$928586212$-->RWDNL (escrever, ler, excluir, renomear, listar)
+                <!--?lit$928586212$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-3 ">
+                    <!--?lit$928586212$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="">
+                <!--?lit$928586212$-->malia
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$928586212$-->cisco123
+                <!--?lit$928586212$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$928586212$-->RWNL (gravação, leitura, renomeação, listar)
+                <!--?lit$928586212$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!---->
+                </tbody></table>
+                </div>
+            </div>
+        <div>
+        </div>
+        </div></div></table-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63ae838f468c7308507cd67c" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 10%;"><!---->
+                
+                <div data-socialgoodpulse-id="63ae838f468c7308507cd67c" class="63ae838f468c7308507cd67c block background-color-white remove-padding-bottom remove-padding-top is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63ae838f468c7308507cd67c" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-padding-bottom remove-padding-top ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$928586212$--><!----><text-view modelid="63ae838f468c7308507cd67d" class="is-full zoom-graphic-enabled" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="63ae838f468c7308507cd67d" class="component text 63ae838f468c7308507cd67d  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$928586212$--><div><div><div><div><ol start="2" style="list-style-type:lower-alpha"><li> Verifique se cada usuário foi criado corretamente e feche o servidor.</li></ol></div><div><h4>Etapa 3: Transferir arquivos entre o Net-Admin e o servidor FTP.</h4></div><div><ol style="list-style-type:lower-alpha"><li> Clique em <strong>Net-Admin</strong> PC e então clique em <strong>Desktop</strong> &gt; <strong>Command Prompt</strong>.</li><li>Digite o comando <strong>"ftp 192.168.75.2"</strong> para fazer login no servidor FTP e, em seguida, autentique com o nome de usuário <strong>"sukyi"</strong> e a senha <strong>"cisco123"</strong>.</li><li> Insira o comando <strong>dir</strong> para listar os arquivos no servidor FTP.</li><li>Utilize o comando <strong>"get"</strong> para baixar o arquivo <strong>"aMessage.txt"</strong>.</li><li>Saia da sessão de FTP.</li><li> Feche o <strong>prompt de comando</strong>, clique em <strong>Text Editor</strong> e em <strong>File </strong> &gt; <strong>Open</strong>. Abra o arquivo baixado <strong>aMessage.txt</strong>. </li></ol></div></div></div></div></div>
+        </div>
+      </div>
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63ae840ae3064708765c4026" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 10%;"><!---->
+                
+                <div data-socialgoodpulse-id="63ae840ae3064708765c4026" class="63ae840ae3064708765c4026 block background-color-white remove-padding-bottom remove-padding-top is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63ae840ae3064708765c4026" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-padding-bottom remove-padding-top ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$928586212$--><!----><opentextbox-view modelid="63ae8419e183b10deca03032" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+          <div class="component__inner openTextBox__inner">
+            <div data-socialgoodpulse-id="63ae8419e183b10deca03032" class="component opentextbox 63ae8419e183b10deca03032  is-full is-complete  ">
+              <div class="component__header-container">
+                <div data-socialgoodpulse-id="63ae8419e183b10deca03032" class="opentabletextbox ">
+                  <base-view type="component" lowercase_component="openTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTextBox__header">
+          <div class="component__header-inner openTextBox__header-inner">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+              </div>
+                  <div class="component__widget openTextBox__widget question-container">
+                      <!--?lit$928586212$--> <div class="openTextBox__preText"><!--?lit$928586212$-->Qual é a mensagem no arquivo?</div>                         
+      
+                      <div class="openTextBox__textArea-container">
+                          <fieldset class="openTextBox__fieldset" tabindex="0">
+                          <legend class="openTextBox__legend">
+                            <!--?lit$928586212$-->Answer Area
+                          </legend>
+                          <textarea class="openTextBox__textArea" rows="3" name="answerArea" placeholder="Digite suas respostas aqui." aria-label="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                          </fieldset>
+                      </div>
+                      <div tabindex="0" class="openTextBox__answerText answergray  hide">
+                        <!--?lit$928586212$-->
+                      <!--?lit$928586212$-->O arquivo de texto terá o seguinte texto: <br> Greetings. Você acessou o servidor FTP.
+                    </div>
+
+                      <div class="btn__container">                        
+                        <button class="btn-text openTextBox__showButton show-answer show"><!--?lit$928586212$-->Mostrar resposta</button>     
+                        <button class="btn-text openTextBox__hideButton hide-answer hide"><!--?lit$928586212$-->Ocultar Resposta</button>                    
+                      </div>
+                      <!--?lit$928586212$--><!--?-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+      </opentextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63ae84aa8fc73e0da0810933" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 10%;"><!---->
+                
+                <div data-socialgoodpulse-id="63ae84aa8fc73e0da0810933" class="63ae84aa8fc73e0da0810933 block background-color-white remove-padding-bottom remove-padding-top is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63ae84aa8fc73e0da0810933" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-padding-bottom remove-padding-top ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$928586212$--><!----><text-view modelid="63ae84aa8fc73e0da0810934" class="is-full zoom-graphic-enabled" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="63ae84aa8fc73e0da0810934" class="component text 63ae84aa8fc73e0da0810934  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$928586212$--><div><ol start="7" style="list-style-type:lower-alpha"><li>Clique <strong>File &gt; New</strong>. Digite uma mensagem de texto de sua escolha.</li><li>Clique em <strong>File</strong> &gt; <strong>Save</strong> e salve o novo arquivo como <strong>aMessage_new.txt</strong>. Feche o <strong>Editor de Text</strong>.</li><li>Clique em <strong>Prompt de comando</strong> e faça login novamente no servidor FTP como usuário <strong>sukyi</strong>.</li><li>Use o comando <strong>put</strong> para fazer upload do arquivo <strong>aMessage_new.txt</strong>.</li><li>Saia da sessão de FTP.</li></ol></div><div><h4>Etapa 4: Verificar se os privilégios de usuário do FTP estão funcionando conforme configurado.</h4></div><div><ol style="list-style-type:lower-alpha"><li>Para retornar ao <strong>HQ</strong> e clicar em <strong>HQ-Laptop-1</strong>, vá até a guia <strong>"Desktop"</strong> e clique em <strong>"Command Prompt"</strong>.</li><li>Faça login no servidor FTP em 192.168.75.2 com o nome de usuário <strong>malia</strong> e a senha <strong>cisco123</strong>.</li><li> Use o comando <strong>delete</strong> para tentar remover o arquivo recém-carregado <strong>aMessage_new.txt</strong>.</li></ol></div></div>
+        </div>
+      </div>
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63ae84e7468c7308507cd67f" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 10%;"><!---->
+                
+                <div data-socialgoodpulse-id="63ae84e7468c7308507cd67f" class="63ae84e7468c7308507cd67f block background-color-white remove-padding-bottom remove-padding-top is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63ae84e7468c7308507cd67f" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-padding-bottom remove-padding-top ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$928586212$--><!----><opentextbox-view modelid="63ae84e7468c7308507cd680" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+          <div class="component__inner openTextBox__inner">
+            <div data-socialgoodpulse-id="63ae84e7468c7308507cd680" class="component opentextbox 63ae84e7468c7308507cd680  is-full is-complete  ">
+              <div class="component__header-container">
+                <div data-socialgoodpulse-id="63ae84e7468c7308507cd680" class="opentabletextbox ">
+                  <base-view type="component" lowercase_component="openTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTextBox__header">
+          <div class="component__header-inner openTextBox__header-inner">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+              </div>
+                  <div class="component__widget openTextBox__widget question-container">
+                      <!--?lit$928586212$--> <div class="openTextBox__preText"><!--?lit$928586212$-->Você conseguiu excluir o arquivo do servidor FTP? Explique.</div>                         
+      
+                      <div class="openTextBox__textArea-container">
+                          <fieldset class="openTextBox__fieldset" tabindex="0">
+                          <legend class="openTextBox__legend">
+                            <!--?lit$928586212$-->Answer Area
+                          </legend>
+                          <textarea class="openTextBox__textArea" rows="3" name="answerArea" placeholder="Digite suas respostas aqui." aria-label="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                          </fieldset>
+                      </div>
+                      <div tabindex="0" class="openTextBox__answerText answergray  hide">
+                        <!--?lit$928586212$-->
+                      <!--?lit$928586212$-->Malia não pode excluir o arquivo porque o usuário não tem permissão para excluir o arquivo.
+                    </div>
+
+                      <div class="btn__container">                        
+                        <button class="btn-text openTextBox__showButton show-answer show"><!--?lit$928586212$-->Mostrar resposta</button>     
+                        <button class="btn-text openTextBox__hideButton hide-answer hide"><!--?lit$928586212$-->Ocultar Resposta</button>                    
+                      </div>
+                      <!--?lit$928586212$--><!--?-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+      </opentextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63ae8525e183b10deca03034" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 10%;"><!---->
+                
+                <div data-socialgoodpulse-id="63ae8525e183b10deca03034" class="63ae8525e183b10deca03034 block background-color-white remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63ae8525e183b10deca03034" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper background-color-white remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$928586212$--><!----><opentextbox-view modelid="63ae8525e183b10deca03035" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+          <div class="component__inner openTextBox__inner">
+            <div data-socialgoodpulse-id="63ae8525e183b10deca03035" class="component opentextbox 63ae8525e183b10deca03035  is-full is-complete  ">
+              <div class="component__header-container">
+                <div data-socialgoodpulse-id="63ae8525e183b10deca03035" class="opentabletextbox ">
+                  <base-view type="component" lowercase_component="openTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTextBox__header">
+          <div class="component__header-inner openTextBox__header-inner">
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body openTextBox__body">
+          <div class="component__body-inner openTextBox__body-inner"><!--?lit$928586212$--><ol start="4" style="list-style-type:lower-alpha"><li>Use o comando <strong>rename</strong> para tentar alterar o nome do arquivo "<strong>aMessage_new.txt</strong> para <strong>aMessage_rename.txt.</strong></li></ol><pre>ftp&gt; <strong>rename aMessage_new.txt aMessage_rename.txt</strong></pre></div>
+        </div>
+      </div>
+            <!--?lit$928586212$-->
+            <!--?lit$928586212$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+              </div>
+                  <div class="component__widget openTextBox__widget question-container">
+                      <!--?lit$928586212$--> <div class="openTextBox__preText"><!--?lit$928586212$-->Você conseguiu renomear o arquivo do servidor FTP?</div>                         
+      
+                      <div class="openTextBox__textArea-container">
+                          <fieldset class="openTextBox__fieldset" tabindex="0">
+                          <legend class="openTextBox__legend">
+                            <!--?lit$928586212$-->Answer Area
+                          </legend>
+                          <textarea class="openTextBox__textArea" rows="3" name="answerArea" placeholder="Digite suas respostas aqui." aria-label="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                          </fieldset>
+                      </div>
+                      <div tabindex="0" class="openTextBox__answerText answergray  hide">
+                        <!--?lit$928586212$-->
+                      <!--?lit$928586212$-->Malia pode renomear o arquivo porque o usuário tem permissão para renomeá-lo.
+                    </div>
+
+                      <div class="btn__container">                        
+                        <button class="btn-text openTextBox__showButton show-answer show"><!--?lit$928586212$-->Mostrar resposta</button>     
+                        <button class="btn-text openTextBox__hideButton hide-answer hide"><!--?lit$928586212$-->Ocultar Resposta</button>                    
+                      </div>
+                      <!--?lit$928586212$--> <div class="openTextBox__postText"> <!--?lit$928586212$--><ol start="5" style="list-style-type: lower-alpha;"><li>Encerre a sessão FTP e feche a janela do <strong> HQ-Laptop-1.</strong></li></ol> </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+      </opentextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!---->
+                            </div>
+                        </div>
+                        <!--?lit$928586212$-->
+                    </div>
+                </div>
+            </div>
+        <sgpluse-opentextboxcontroller-view modelid="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+            <div class="openTextBoxController__button-container">
+                <button tabindex="0" class="btn-text showhidebtn openTextBoxController__showButton show-answer show"><!--?lit$928586212$-->Mostrar todas as respostas</button>    
+                <button tabindex="0" class="btn-text showhidebtn openTextBoxController__hideButton hide-answer hide"><!--?lit$928586212$-->Ocultar todas as respostas</button>    
+                <button class="btn-text resetbtn openTextBoxController__resetButton"><!--?lit$928586212$-->Limpar minhas respostas</button>         
+            </div>
+            <!--?lit$928586212$--><hr>
+            <!--?lit$928586212$-->
+                <div class="post-text" tabindex="0">
+                    <!--?lit$928586212$-->© 2017 - 2022 Cisco and/or its affiliates. All rights reserved. Cisco Public
+                </div>
+                   
+        </sgpluse-opentextboxcontroller-view><script></script>
+<script>
+    window.addEventListener("load", function () {
+      console.log("loaded");
+      document?.querySelectorAll(".answergray").forEach(function (ele) {
+        ele.classList.add("u-display-none");
+      });
+      document?.querySelectorAll(".hide-answer").forEach(function (ele) {
+        ele.classList.add("u-display-none");
+      });
+      document?.querySelectorAll(".show-answer").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.nextElementSibling.classList.remove("u-display-none");
+          e.currentTarget
+            .closest(".question-container")
+            ?.querySelectorAll(".answergray")
+            .forEach(function (ele) {
+              ele.classList.remove("u-display-none");
+            });
+          ele.classList.add("u-display-none");
+        });
+      });
+      document?.querySelectorAll(".hide-answer").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.previousElementSibling.classList.remove("u-display-none");
+          e.currentTarget
+            .closest(".question-container")
+            ?.querySelectorAll(".answergray")
+            .forEach(function (ele) {
+              ele.classList.add("u-display-none");
+            });
+          ele.classList.add("u-display-none");
+        });
+      });
+      let event = new Event("click", {
+        bubbles: true,
+        cancelable: true,
+      });
+      document
+        ?.querySelectorAll(".openTextBoxController__showButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            e.currentTarget.nextElementSibling.classList.remove("u-display-none");
+            ele.classList.add("u-display-none");
+            document?.querySelectorAll(".show-answer").forEach(function (ele) {
+              ele?.dispatchEvent(event);
+            });
+          });
+        });
+
+      document
+        ?.querySelectorAll(".openTextBoxController__hideButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            e.currentTarget.previousElementSibling.classList.remove("u-display-none");
+            ele.classList.add("u-display-none");
+            document?.querySelectorAll(".hide-answer").forEach(function (ele) {
+              ele?.dispatchEvent(event);
+            });
+          });
+        });
+
+      document
+        ?.querySelectorAll(".openTextBoxController__resetButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            document?.querySelectorAll("textArea").forEach(function (ele) {
+              ele.value = "";
+            });
+          });
+        });
+
+      document
+      ?.querySelectorAll('textarea')
+      .forEach(function (ele){
+        ele.defaultValue = ele.defaultValue.replace(/<!--.*?-->/g, '');
+      })
+        let checkButtonLabel = "check_button_label_placeHolder";
+        let hideButtonLabel = "hide_button_label_placeHolder";
+        document?.querySelectorAll(".check__button").forEach(function (ele) {
+        let answerBox = document.querySelector(".check__solution")
+        if (!answerBox.classList.contains("check__hidden")) {
+          answerBox.classList.add("check__hidden");
+          ele.innerText = checkButtonLabel;
+        }
+          ele.addEventListener("click", function (e) {
+            if (answerBox.classList.contains("check__hidden")) {
+              answerBox.classList.remove("check__hidden")
+              ele.innerText = hideButtonLabel;
+            } else {
+              answerBox.classList.add("check__hidden")
+              ele.innerText = checkButtonLabel;
+            }
+          })
+        })
+    });
+  </script>
+  </body></html>

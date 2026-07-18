@@ -584,6 +584,10 @@ Nesta atividade do Packet Tracer, você completará os seguintes objetivos:
 - Parte 2: Configurar e Verificar Serviços de E-mail
 - Parte 3: Configurar e usar serviços de FTP
 
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/39.2.14.html|Instruções]]
+> - 📥 [[anexos/39.2.14.pka|Abrir no Packet Tracer]]
+
 
 # 39.3 Defesa de sistemas e dispositivos
 
