@@ -1751,7 +1751,11 @@ O WPA Personal e o WPA2 Personal usam uma senha pré-compartilhada que os client
 
 Nesta atividade, você configurará a segurança sem fio usando o WPA2 Personal.
 
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/39.6.16.html|Instruções]]
+> - 📥 [[anexos/39.6.16.pka|Abrir no Packet Tracer]]
 
+---
 # 39.7 Resumo de Segurança de Rede
 
 ## 39.7.1 O que aprendi neste módulo?

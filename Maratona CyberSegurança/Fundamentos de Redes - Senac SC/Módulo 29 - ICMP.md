@@ -226,7 +226,11 @@ Nesta atividade, você completará os seguintes objetivos:
 - Testar e Restaurar a conectividade IPv4
 - Testar e Restaurar a Conectividade IPv6
 
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/29.2.6.html|Instruções]]
+> - 📥 [[anexos/29.2.6.pka|Abrir no Packet Tracer]]
 
+---
 ## 29.2.7 Packet Tracer - Use Ping e Traceroute para testar a conectividade de rede
 
 Nesta atividade, você completará os seguintes objetivos:
@@ -235,7 +239,11 @@ Nesta atividade, você completará os seguintes objetivos:
 - Testar a Conectividade Usando Ping
 - Descobrir o Caminho Rastreando a Rota
 
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/29.2.7.html|Instruções]]
+> - 📥 [[anexos/29.2.7.pka|Abrir no Packet Tracer]]
 
+---
 # 29.3 Resumo ICMP
 
 ### 29.3.1 Packet Tracer – Use ICMP para testar e corrigir a conectividade de rede

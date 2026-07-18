@@ -1,4 +1,3 @@
-
 # 24.0 Introdução
 
 ## 24.0.1 Webster - Por que devo fazer este módulo?

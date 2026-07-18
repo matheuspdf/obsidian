@@ -88,6 +88,11 @@ Nesta atividade, você completará os seguintes objetivos:
 - Parte 1: Rede local de descoberta de vizinhos IPv6
 - Parte 2: Rede remota de descoberta de vizinhos IPv6
 
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/34.1.4.html|Instruções]]
+> - 📥 [[anexos/34.1.4.pka|Abrir no Packet Tracer]]
+
+---
 ## 34.1.5 Verifique o seu entendimento - Descoberta de Vizinhos
 
 **Verifique sua compreensão sobre Descoberta de Vizinhos escolhendo a resposta correta para as seguintes perguntas.**

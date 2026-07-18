@@ -99,11 +99,6 @@ Neste ponto vamos parar a captura e dar uma olhada em alguns desses pacotes. Se 
 
 Quando o servidor web responde, o servidor recebe a solicitação que recebeu do PC0 e em seguida envia de volta a resposta. Como você pode ver, a resposta é destinada ao PC0 como destino. Este processo continuará à medida que todas as informações relacionadas à página web são transmitidas.
 
-
-
-
-
-
 ## 16.1.5 Packet Tracer - A interação do cliente
 
 Nesta atividade, você observará a interação de cliente entre o servidor e o PC.
@@ -362,170 +357,11 @@ Podemos realmente ver essa mensagem de boas-vindas aqui. Aí está o arquivo que
 
 Nesta atividade, você vai colocar um arquivo em um servidor FTP e obter um arquivo de um servidor FTP
 
-Packet Tracer - Usando serviços FTP
-
-## Tabela de Endereçamento
-
-|Dispositivo|Interface|Endereço IP|Máscara de Sub-Rede|
-|---|---|---|---|
-|Servidor FTP (ftp.pka)|NIC|209.165.200.226|255.255.255.224|
-
-### Objetivos
-
-- Carregamento (upload) de um arquivo para um servidor FTP.
-- Baixar (download de) um arquivo de um servidor FTP.
-
-### Histórico/Cenário
-
-O File Transfer Protocol (FTP) é um aplicativo comumente usado para transferir arquivos entre clientes e servidores na rede. O servidor está configurado para executar o serviço no qual os clientes se conectam, fazem login e transferem arquivos. O FTP usa a porta 21 como a porta de comando do servidor para criar a conexão. O FTP usa a porta 20 para transferência de dados.
-
-Nesta atividade, você vai carregar um arquivo para um servidor FTP. Você também vai baixar um arquivo de um servidor FTP.
-
-### Instruções
-
-### Parte 1: Carregamento (upload) de um arquivo para um servidor FTP.
-
-Nesta parte, você localizará o arquivo **sampleFile.txt** e o carregará em um servidor FTP.
-
-#### Etapa 1: Localize o arquivo.
-
-a. Clique em **PC-A**
-
-b. Clique em **Desktop**.
-
-c. Clique em **Command Prompt**.
-
-d. No prompt, clique em **?** para listar os comandos disponíveis.
-
-e. Insira dir para ver os arquivos no PC. Observe que há um arquivo **sampleFile.txt** no diretório C:.
-
-```
-C:> dir
-Volume in drive C has no label.
-Volume Serial Number is 5E12-4AF3
-Directory of C:
-12/31/1969 17:00 PM 26 sampleFile.txt
-26 bytes 1 File(s)
-```
-
-#### Etapa 2: Conecte o servidor FTP.
-
-a. Efetue FTP para o servidor FTP em **209.165.200.226** ou **ftp.pka**.
-
-```
-C:> ftp 209.165.200.226
-Trying to connect...209.165.200.226
-Connected to 209.165.200.226
-```
-
-b. Entre com username **student** e password **class** para obter accesso.
-
-```
-220- Welcome to PT Ftp server
-Username:student
-331- Username ok, need password
-Password:
-230- Logged in
-(passive mode On)
-```
-
-#### Etapa 3: Carregamento (upload) de um arquivo para um servidor FTP.
-
-a. Digite **?** para ver os comandos disponíveis no cliente ftp.
-
-```
-ftp> ?
-        ?
-        cd
-        delete
-        dir
-        get
-        help
-        passive
-        put
-        pwd
-        quit
-        rename
-ftp>
-```
-
-b. Insira **dir** para ver os arquivos disponíveis no servidor.
-
-```
-ftp> dir
-Listing /ftp directory from 192.168.1.3:
-0 : asa842-k8.bin 5571584
-1 : asa923-k8.bin 30468096
-2 : c1841-advipservicesk9-mz.124-15.T1.bin 33591768
-3 : c1841-ipbase-mz.123-14.T7.bin 13832032
-<output omitted>
-```
-
-c. Digite **put sampleFile.txt** para enviar o arquivo para o servidor.
-
-```
-ftp> put sampleFile.txt
-Writing file sampleFile.txt to 209.165.200.226:
-File transfer in progress...
-[Transfer complete – 26 bytes]
-26 bytes copied in 0.08 secs (325 bytes/sec)
-ftp>
-```
-
-d. Use o comando **dir** novamente para listar o conteúdo do servidor FTP e verificar se o arquivo foi carregado para o servidor FTP.
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/16.5.3.html|Instruções]]
+> - 📥 [[anexos/16.5.3.pka|Abrir no Packet Tracer]]
 
 ---
-
-### Parte 2: Baixar (download de) um arquivo de um servidor FTP.
-
-Você também pode baixar um arquivo de um servidor FTP. Nesta parte, você vai renomear o arquivo **sampleFile.txt** e baixá-lo do servidor FTP.
-
-#### Etapa 1: Renomeie o arquivo no servidor FTP.
-
-a. No prompt **ftp>**, renomeie o arquivo **sampleFile.txt** para **sampleFile_FTP.txt**.
-
-```
-ftp> rename sampleFile.txt sampleFile_FTP.txt
-Renaming sampleFile.txt
-ftp>
-[OK Renamed file successfully from sampleFile.txt to sampleFile_FTP.txt]
-ftp>
-```
-
-b. No prompt **ftp>**, digite **dir** para verificar se o arquivo foi renomeado.
-
-#### Etapa 2: Baixe o arquivo do servidor FTP.
-
-a. Insira o comando **get sampleFile_FTP.txt** para recuperar o arquivo do servidor.
-
-```
-ftp> get sampleFile_FTP.txt
-Reading file sampleFile_FTP.txt from 209.165.200.226:
-File transfer in progress...
-[Transfer complete – 26 bytes]
-26 bytes copied in 0.013 secs (2000 bytes/sec)
-ftp>
-```
-
-b. Digite **quit** para sair do cliente FTP quando terminar.
-
-c. Exiba o conteúdo do diretório no PC novamente para ver o arquivo de imagem do servidor FTP.
-
-#### Etapa 3: Excluindo o arquivo do servidor FTP.
-
-a. Faça login no servidor FTP novamente para excluir o arquivo **sampleFile_FTP.txt**.
-
-b. Insira o comando para excluir o arquivo **sampleFile_FTP.txt** do servidor.
-
-Qual comando você usou para remover o arquivo do servidor FTP?
-
-```
-ftp> delete sampleFile_FTP.txt
-```
-
-c. Digite **quit** para sair do cliente FTP quando terminar.
-
-
 # 16.6 Terminais virtuais
 
 ## 16.6.1 Vídeo - Acesso Remoto com Telnet ou SSH
@@ -571,92 +407,11 @@ A figura ilustra como o SSH é mais seguro que o Telnet. Observe como são clara
 
 Nesta atividade, você estabelecerá uma sessão remota para um roteador usando Telnet e SSH.
 
-Packet Tracer- Uso do Telnet e SSH
-
-## Tabela de Endereçamento
-
-|Dispositivo|Interface|Endereço IP|Máscara de Sub-Rede|
-|---|---|---|---|
-|HQ|G0/0/1|64.100.1.1|255.255.255.0|
-|PC0|NIC|DHCP||
-|PC1|NIC|DHCP||
-
-## Objetivos
-
-Nesta atividade, você estabelecerá uma conexão remota com um roteador usando Telnet e SSH.
-
-=  Verifique a conectividade
-
-=  Acessar um dispositivo remoto
-
-## Instruções
-
-## Parte 1: Verificar a conectividade
-
-Nesta parte, você verificará se o PC tem endereçamento IP e pode pingar o roteador remoto.
-
-### Etapa 1: Verifique o endereço IP em um PC.
-
-a.  Em um PC, clique em **Desktop**. Clique em **Command Prompt**.
-
-b.  No prompt, verifique se o PC possui um endereço IP do DHCP.
-
-#### Pergunta:
-
-Qual comando você usou para verificar se o endereço IP foi obtido por DHCP?
-
-Área de Resposta
-
-ftp> ipconfig
-
-Ocultar resposta
-
-### Etapa 2: Verificar a conectividade com HQ.
-
-Verifique se você consegue pingar o roteador HQ usando o endereço IP listado na tabela de endereçamento.
-
-## Parte 2: Acessar um dispositivo remoto
-
-Nesta parte, você tentará estabelecer uma conexão remota usando Telnet e SSH.
-
-### Etapa 1: Telnet para HQ.
-
-No prompt, digite o comando **telnet 64.100.1.1**.
-
-#### Pergunta:
-
-Deu certo? Qual foi a saída?
-
-Área de Resposta
-
-Não.  
-C:\> telnet 64.100.1.1  
-Trying 64.100.1.1 ...Open  
-  
-[Connection to 64.100.1.1 closed by foreign host]
-
-Ocultar resposta
-
-### Etapa 2: SSH para HQ.
-
-O roteador está configurado corretamente para não permitir acesso não seguro ao Telnet. Você tem que usar o SSH.
-
-No prompt, digite o comando **ssh -l admin 64.100.1.1**. Entre com a senha **class** quando solicitado.
-
-C:> **ssh -l admin 64.100.1.1**
-
-Password:
-
-#### Pergunta:
-
-Qual o prompt após acessar o roteador com sucesso via SSH?
-
-Área de Resposta
-
-HQ#
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/16.6.4.html|Instruções]]
+> - 📥 [[anexos/16.6.4.pka|Abrir no Packet Tracer]]
 
 ---
-
 # 16.7 E-mail e mensagens
 
 ## 16.7.1 Clientes e Servidores de e-mail

@@ -1,0 +1,1538 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 1rem;
+      }
+      ol,
+      ul {
+        margin-bottom: 0in;
+      }
+      table {
+        margin-top: 1rem;
+        border: 1px solid gray;
+        width: 7in;
+        border-collapse: collapse;
+      }
+
+      table > thead > tr > .openTableTextBox__table-header-data {
+        text-align: center;
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0in;
+        text-align: center;
+        line-height: 115%;
+        page-break-after: avoid;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        background: #dbe5f1;
+        padding: 0.5rem;
+      }
+      .openTableTextBox__answerText
+        table
+        > thead
+        > tr
+        > .openTableTextBox__table-header-data {
+        background: #f2dbdb !important;
+      }
+      .openTextBox__textArea-container {
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        width: 50%;
+      }
+      .openTableTextBox__fieldset {
+        padding: 5px;
+      }
+      td {
+        margin-top: 3pt;
+        margin-right: 0in;
+        margin-bottom: 3pt;
+        margin-left: 0in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        width: 98.85pt;
+        border: solid windowtext 1pt;
+        border-top: none;
+        padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+      }
+      textarea {
+        width: 100%;
+      }
+      .answergray {
+        padding: 0.2rem;
+      }
+
+      .openTableTextBox__widget {
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.25in;
+      }
+
+      .show-answer,
+      .hide-answer {
+        padding: 0.5rem 1rem;
+        background-color: #3d692b;
+        color: #fff;
+        border: 0px;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .openTextBoxController__button-container {
+        display: flex;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .openTextBoxController__button-container .btn-text {
+        margin: 10px;
+      }
+
+      .btn-text {
+        border: 0px;
+        padding: 0.5rem 1rem;
+        background-color: #3d692b;
+        color: #fff;
+        border-radius: 0;
+        cursor: pointer;
+      }
+
+      .u-display-none {
+        display: none;
+      }
+      .openTextBox__postText, openTableTextBox__postText {
+        margin-top: 0.5rem;
+      }
+      .edit-comment {
+        display: none;
+      }
+      .js-heading-inner {
+        display: none;
+      }
+      .block__title-inner,
+      .article__title-inner {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+      }
+      h2{
+        font-size: 1.25em;
+      }
+      h3{
+        font-size: 1.125em;
+      }
+      .table
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > th {
+        border: solid windowtext 1pt;
+      }
+      table tbody tr th, table thead tr th{
+        border: solid windowtext 1pt;
+        background-color: #d6d8dc;
+      }
+      .openTableTextBox__answerText
+        table
+        > thead
+        > tr
+        > .openTableTextBox__table-header-data {
+        background: #f2dbdb !important;
+      }
+      .command-output > .table-inner > .table-wrapper > .table-widget > table,
+      .command-output
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > td,
+      .command-output
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > th {
+        border: none !important;
+        text-align: right !important;
+      }
+      .simple-table > .table-inner > .table-wrapper{
+        margin-left: 1.5rem;
+      }
+      .openTextBox__widget {
+        margin-left: 1.5rem;
+      }
+      img {
+        width: 30%;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+      .answergray {
+        background-color: #ccc;
+      }
+      .openTableTextBox__widget > .answergray {
+        background-color: #fff !important;
+      }
+      li > ul,ol > li{
+        margin-left: 0px !important;
+      }
+      img {
+        width: 30%;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+      
+      .component__title{
+        font-family: inherit;
+        font-size: 1.65em;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      .component__body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .accessibility-completion-indicator{
+        display: none;
+      }
+
+      .check__hidden {
+        display: none;
+      }
+
+      .check__button {
+        border: none;
+        border-radius: 6px !important;
+        background-color: #6abf4b;
+        color: #fff;
+        min-width: 100px;
+        margin: 0.625rem 0;
+        padding: 0.7rem;
+      }
+
+      .check__widget .check__solution .DevConfigGray {
+        background-color: rgb(214,216,220);
+        font-weight: bold;
+      }
+
+      .check-inner .check__widget .check__solution .DevConfigs {
+        margin: 0px;
+        line-height: 115%;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .check__solution  {
+        line-height: 1.5;
+      }
+      .mcq__inner .mcq__widget .mcq__widget-inner {
+        margin-block: 1rem;
+      }
+      .mcq__inner .mcq__widget .mcq__item {
+        display: flex;
+        gap: 0.2rem;
+      }
+      .mcq__inner .mcq__widget .mcq__item .mcq__item-label .mcq__item-text .screenReader-position-text{
+        display: none;
+      }
+      .opentabletextbox-inner .opentabletextBox__widget .openTableTextBox__answerText.answergray {
+        background-color: transparent;
+      }
+      .openTextBox__inner .openTextBox__widget .answergray.is-graphic-in-openTextBox{
+        background-color: transparent;
+      }
+      .openTextBox__inner .openTextBox__widget .answergray.is-graphic-in-openTextBox img{
+        margin-block: 1rem;
+        margin-left: initial;
+      }
+      .component__content .component__body-inner .pageTracer-h4-title-hide {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        font-size: 0px;
+        color: rgb(var(--neutral-2));
+        font-weight: normal;
+      }
+      .table-inner .table__widget table tr.TableHeading th, .table-inner .table__widget table tr.TableHeading td, .table-inner .table__widget table tr td.TableHeading, .opentabletextbox-table thead tr.TableHeading th, .opentabletextbox-table tbody tr.TableHeading td, .opentabletextbox-table tbody tr td.TableHeading {
+        background-color: #d6d8dc;
+        text-align: center;
+        font-weight: bold;
+      }
+      .component__content .component__body-inner .CMD, .component__content .component__body-inner .CMDOutput, .component__content .component__body-inner .CMDOutput__table{
+        margin-top: 4px;
+        margin-inline-end: 0px;
+        margin-bottom: 4px;
+        margin-inline-start: 30px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      [dir="rtl"] .component__content .component__body-inner .CMDOutput__table span {
+        direction: ltr;
+        display: inline-block;
+      }
+      .openTextBox__inner .openTextBox__widget .CMD, .openTextBox__inner .openTextBox__widget .CMDOutput{
+        margin-top: 4px;
+        margin-inline-end: 0px;
+        margin-bottom: 4px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .openTextBox__inner .openTextBox__widget .DnTbold, .openTextBox__inner .openTextBox__widget .BodyTextL25Bold, .component__content .component__body-inner .BodyTextL25Bold, .component__content .component__body-inner .DnTbold, .table-inner .table__widget table tr .DnTbold {
+        font-weight: bold;
+      }
+      .component__content .component__body-inner .SubStepNum {
+        text-indent: -25.5px;
+        margin-inline-start: 50px;
+      }
+      .component__content .component__body-inner .BodyTextL50 {
+        margin-inline-start: 30px;
+      }
+      .component__content .component__body-inner .Bulletlevel1 {
+        text-indent: -19px;
+        margin-inline-start: 48px;
+      }
+      .component__content .component__body-inner .Bulletlevel2 {
+          text-indent: -19px;
+          margin-inline-start: 72px;
+      }
+      .openTextBox__inner .openTextBox__widget .ReflectionQ, .component__content .component__body-inner .SubStepAlpha {
+          text-indent: -25.5px;
+          margin-inline-start: 30px;
+      }
+    </style>
+
+</head><body><!---->
+            <div class="article 044fd63b-b41d-49d1-ad99-62c8250937eb remove-padding-top remove-padding-bottom ">
+                <div class="article__inner">
+                <div class=" no-adaptive-scroll">
+                    <!--?lit$8900476824$-->
+                        <div class=""> 
+                            <base-view type="article" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="article__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="article__header ">
+          <div class="article__header-inner ">
+            <!--?lit$8900476824$-->
+      <div class="article__title ">
+        <!--?lit$8900476824$--><heading-view aria-hidden="true" id="044fd63b-b41d-49d1-ad99-62c8250937eb-heading-view" headingtitle="Packet Tracer - Solucionar problemas de gateway padrão" modelid="044fd63b-b41d-49d1-ad99-62c8250937eb" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="js-heading is-incomplete">
+        <div class="js-heading-inner" role="heading" id="article-heading" aria-level="2">
+        <span class="aria-label"> <!--?lit$8900476824$-->Incompleta &nbsp;<!--?lit$8900476824$-->Packet Tracer - Solucionar problemas de gateway padrão</span>
+        </div>
+      </div>
+    </heading-view>
+        <div tabindex="0" role="heading" class="article__title-inner " aria-level="2">
+          <span class="accessibility-completion-indicator"><!--?lit$8900476824$-->Incompleta </span>
+          <!--?lit$8900476824$-->Packet Tracer - Solucionar problemas de gateway padrão
+        </div>
+      </div>
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                            <div class="block__container " style="">
+                                <!--?lit$8900476824$--><!---->
+                                    <block-view modelid="0df4dde4-9f2a-4e6f-83e3-4755721f7368" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 20%;"><!---->
+                
+                <div data-socialgoodpulse-id="0df4dde4-9f2a-4e6f-83e3-4755721f7368" class="0df4dde4-9f2a-4e6f-83e3-4755721f7368 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="0df4dde4-9f2a-4e6f-83e3-4755721f7368" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$8900476824$--><!----><text-view modelid="cdd61927-abcb-4a89-8c19-152e989b4784" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="cdd61927-abcb-4a89-8c19-152e989b4784" class="component text cdd61927-abcb-4a89-8c19-152e989b4784  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$8900476824$--><h2><span lang="PT-BR">Tabela de Endereçamento</span></h2></div>
+        </div>
+      </div>
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="f51e75dc-394a-4595-95a6-50491eb123c8" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 20%;"><!---->
+                
+                <div data-socialgoodpulse-id="f51e75dc-394a-4595-95a6-50491eb123c8" class="f51e75dc-394a-4595-95a6-50491eb123c8 block remove-padding-top remove-padding-bottom ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="f51e75dc-394a-4595-95a6-50491eb123c8" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$8900476824$--><!----><opentabletextbox-view modelid="5a361bfd-6f6c-4c53-bbc6-6809c60625b4" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+      <div class="component">
+        <div class="opentabletextbox-inner component__inner">
+          <div data-socialgoodpulse-id="5a361bfd-6f6c-4c53-bbc6-6809c60625b4" class="component opentabletextbox 5a361bfd-6f6c-4c53-bbc6-6809c60625b4  is-full   ">
+            <div class="component__header-container">
+              <div data-socialgoodpulse-id="5a361bfd-6f6c-4c53-bbc6-6809c60625b4" class="opentabletextbox ">
+                <base-view type="component" lowercase_component="openTableTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTableTextBox__header">
+          <div class="component__header-inner openTableTextBox__header-inner">
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+              </div>
+            </div>
+            <div class="component__widget opentabletextBox__widget question-container ">
+              <div class="openTableTextBox__preText">
+                <!--?lit$8900476824$-->
+              </div>
+              <div class="opentabletextbox-container openTableTextBox__table-container">
+                <table class="opentabletextbox-table" tabindex="0">
+                  <!--?lit$8900476824$-->
+                        <thead class="openTableTextBox__table-header">
+                          <tr>
+                            <!--?lit$8900476824$--><!----><th tabindex="0" scope="col"><!--?lit$8900476824$-->Dispositivo</th><!----><!----><th tabindex="0" scope="col"><!--?lit$8900476824$-->Interface</th><!----><!----><th tabindex="0" scope="col"><!--?lit$8900476824$-->Endereço IP</th><!----><!----><th tabindex="0" scope="col"><!--?lit$8900476824$-->Máscara de Sub-Rede</th><!----><!----><th tabindex="0" scope="col"><!--?lit$8900476824$-->Gateway padrão</th><!---->
+                          </tr>
+                        </thead>
+                  <tbody>
+                    <!--?lit$8900476824$--><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$8900476824$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->R1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->G0/0</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->192.168.10.1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->255.255.255.0</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->N/D</div>
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$8900476824$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->R1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->G0/1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->192.168.11.1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->255.255.255.0</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->N/D</div>
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$8900476824$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->S1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->VLAN 1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->192.168.10.2</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->255.255.255.0</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$8900476824$--><!--?lit$8900476824$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$8900476824$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->S2</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->VLAN 1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->192.168.11.2</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->255.255.255.0</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$8900476824$--><!--?lit$8900476824$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$8900476824$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->PC1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->NIC</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->192.168.10.10</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->255.255.255.0</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$8900476824$--><!--?lit$8900476824$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$8900476824$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->PC2</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->NIC</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->192.168.10.11</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->255.255.255.0</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$8900476824$--><!--?lit$8900476824$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$8900476824$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->PC3</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->NIC</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->192.168.11.10</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->255.255.255.0</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$8900476824$--><!--?lit$8900476824$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$8900476824$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->PC4</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->NIC</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->192.168.11.11</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$--><div><!--?lit$8900476824$-->255.255.255.0</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$8900476824$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$8900476824$--><!--?lit$8900476824$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!---->
+                  </tbody>
+                </table>
+              </div>
+              <div class="openTableTextBox__answerText answergray openTableTextBox__table-container is-full hide">
+                <table class="opentabletextbox-table openTableTextBox__table-inner" tabindex="0">
+                  <!--?lit$8900476824$-->
+                        <thead class="openTableTextBox__table-header">
+                          <tr tabindex="0">
+                            <!--?lit$8900476824$--><!----><th scope="col"><!--?lit$8900476824$-->Dispositivo</th><!----><!----><th scope="col"><!--?lit$8900476824$-->Interface</th><!----><!----><th scope="col"><!--?lit$8900476824$-->Endereço IP</th><!----><!----><th scope="col"><!--?lit$8900476824$-->Máscara de Sub-Rede</th><!----><!----><th scope="col"><!--?lit$8900476824$-->Gateway padrão</th><!---->
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <!--?lit$8900476824$--><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$8900476824$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->R1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->G0/0</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->192.168.10.1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->255.255.255.0</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->N/D</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$8900476824$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->R1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->G0/1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->192.168.11.1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->255.255.255.0</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->N/D</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$8900476824$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->S1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->VLAN 1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->192.168.10.2</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->255.255.255.0</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->192.168.10.1</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$8900476824$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->S2</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->VLAN 1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->192.168.11.2</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->255.255.255.0</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->192.168.11.1</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$8900476824$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->PC1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->NIC</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->192.168.10.10</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->255.255.255.0</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->192.168.10.1</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$8900476824$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->PC2</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->NIC</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->192.168.10.11</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->255.255.255.0</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->192.168.10.1</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$8900476824$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->PC3</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->NIC</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->192.168.11.10</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->255.255.255.0</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->192.168.11.1</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$8900476824$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->PC4</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->NIC</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->192.168.11.11</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->255.255.255.0</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$8900476824$-->192.168.11.1</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!---->
+                      </tbody>
+                </table>
+              </div>
+              <div class="btn__container">
+                <button class="btn-text openTableTextBox__showButton show-answer show"><!--?lit$8900476824$-->Mostrar resposta</button>
+                <button class="btn-text openTableTextBox__showButton hide-answer hide"><!--?lit$8900476824$-->Ocultar resposta</button>
+              </div>
+              <div class="openTableTextBox__postText">
+                <!--?lit$8900476824$-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </opentabletextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="6abad271-87eb-473e-ab57-7a4af482f88b" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 20%;"><!---->
+                
+                <div data-socialgoodpulse-id="6abad271-87eb-473e-ab57-7a4af482f88b" class="6abad271-87eb-473e-ab57-7a4af482f88b block remove-padding-top remove-padding-bottom ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="6abad271-87eb-473e-ab57-7a4af482f88b" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$8900476824$--><!----><text-view modelid="424906e2-65c2-43f8-bb7b-f7db5bf798bf" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="424906e2-65c2-43f8-bb7b-f7db5bf798bf" class="component text 424906e2-65c2-43f8-bb7b-f7db5bf798bf  is-full   ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$8900476824$--><h2><span lang="PT-BR">Objetivos</span></h2> <p class="BodyTextL25Bold"><span lang="PT-BR">Parte 1: Verificar a Documentação de Rede e Isolar Problemas</span></p> <p class="BodyTextL25Bold"><span lang="PT-BR">Parte 2: Implementar, Verificar e Documentar soluções </span></p> <h2><span lang="PT-BR">Histórico</span></h2> <p class="BodyTextL25"><span lang="PT-BR">Para que um dispositivo se comunique passando por várias redes, ele deve ser configurado com um endereço IP, uma máscara de sub-rede e um gateway padrão. O gateway padrão é usado quando o host deseja enviar um pacote a um dispositivo em outra rede. O endereço de gateway padrão geralmente é o endereço da interface do roteador conectada à rede local à qual o host está conectado. Nesta atividade, você concluirá a documentação da rede. Também verificará a documentação de rede testando a conectividade de ponta a ponta, solucionando eventuais problemas. O método de solução de problemas que você vai usar consiste nas seguintes etapas:</span></p> <p class="SubStepAlpha"><span lang="PT-BR">a.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Verificar a documentação de rede e usar testes para isolar problemas.</span></p> <p class="SubStepAlpha"><span lang="PT-BR">b.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Determinar uma solução apropriada para um problema específico.</span></p> <p class="SubStepAlpha"><span lang="PT-BR">c.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Implementar a solução.</span></p> <p class="SubStepAlpha"><span lang="PT-BR">d.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Testar para verificar se o problema foi resolvido.</span></p> <p class="SubStepAlpha"><span lang="PT-BR">e.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Documentar a solução.</span></p> <p class="BodyTextL25"><span lang="PT-BR">Durante seus estudos no CCNA, você encontrará descrições diferentes do método de solução de problemas, bem como diferentes maneiras de testar e documentar problemas e soluções. Isso é intencional. Não há padrão ou modelo definido para a solução de problemas. Cada organização desenvolve processos e padrões exclusivos de documentação (mesmo se esse processo for "não temos nenhum"). No entanto, todas as metodologias eficazes de solução de problemas geralmente incluem as etapas acima.</span></p> <p class="BodyTextL25"><b><span lang="PT-BR">Nota</span></b><span lang="PT-BR">: Se você é especialista em configurações de gateway padrão, essa atividade pode parecer mais envolvida do que deveria. Provavelmente você consegue identificar e resolver todos os problemas de conectividade com mais rapidez do que seguindo estes procedimentos. Entretanto, à medida que você continuar com seus estudos, as redes e os problemas que encontrará se tornarão cada vez mais complexos. Nessas situações, a única maneira eficiente de isolar e resolver problemas é usar uma abordagem metódica como a usada nesta atividade.</span></p> <h2><span lang="PT-BR">Instruções</span></h2> <h2><span lang="PT-BR">Parte 1: </span><span lang="PT-BR">Verificar a Documentação de Rede e Isolar Problemas</span></h2> <p class="BodyTextL25"><span lang="PT-BR">Na Parte 1 desta atividade, você concluirá a documentação e executará testes de conectividade para identificar problemas. Também determinará uma solução apropriada que será implementada na Parte 2.</span></p> <h3><span lang="PT-BR">Etapa 1: </span><span lang="PT-BR">Verifique a documentação de rede e isole todos os problemas.</span></h3> <p class="SubStepAlpha"><span lang="PT-BR">a.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Para poder testar uma rede, você deve ter toda a documentação. Verifique se há alguma informação faltando na <b>Tabela de Endereçamento</b>. Complete a <b>Tabela de Endereçamento</b> preenchendo as informações de gateway padrão que estão faltando para os switches e os PCs. </span></p> <p class="SubStepAlpha"><span lang="PT-BR">b.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Teste a conectividade entre dispositivos da mesma rede. Ao isolar e corrigir todos os problemas de acesso local, você pode testar melhor a conectividade remota com a certeza de que a conectividade local está operacional. </span></p> <p class="BodyTextL50"><span lang="PT-BR">Um plano de verificação pode ser tão simples quanto uma lista de testes de conectividade. Utilize os testes a seguir para verificar a conectividade local e isolar todos os problemas de acesso. O primeiro problema já está documentado, mas você deve executar e verificar a solução durante a Parte 2.</span></p> <p class="BodyTextL25Bold"><span lang="PT-BR">Teste e Verificação da Documentação</span></p></div>
+        </div>
+      </div>
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="d650efff-7165-4f38-8067-b38193e48d82" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 20%;"><!---->
+                
+                <div data-socialgoodpulse-id="d650efff-7165-4f38-8067-b38193e48d82" class="d650efff-7165-4f38-8067-b38193e48d82 block remove-padding-top remove-padding-bottom ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="d650efff-7165-4f38-8067-b38193e48d82" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$8900476824$--><!----><table-view modelid="ee45753c-4939-4e96-bc95-373e12bd9391" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+        <div class="table-inner component__inner"> 
+            <div data-socialgoodpulse-id="ee45753c-4939-4e96-bc95-373e12bd9391" class="component table ee45753c-4939-4e96-bc95-373e12bd9391  is-full   ">
+                <div class="component__header-container">
+                    <div data-socialgoodpulse-id="ee45753c-4939-4e96-bc95-373e12bd9391" class="table ">
+                        <base-view type="component" lowercase_component="table" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header table__header">
+          <div class="component__header-inner table__header-inner">
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                    </div>
+                </div>
+
+
+                <div class="component__widget table__widget">
+                <!--?lit$8900476824$-->
+                <table tabindex="0" style="min-width: 800px" aria-labelledby="table-caption-ee45753c-4939-4e96-bc95-373e12bd9391">
+                <!--?lit$8900476824$--><!---->
+                    <tbody><tr class="table-row nth-child-0 ">
+                    <!--?lit$8900476824$--><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-0 ">
+                <!--?lit$8900476824$--><p class="TableHeading"><span lang="PT-BR">Teste</span></p>
+                <!--?lit$8900476824$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-1 ">
+                <!--?lit$8900476824$--><p class="TableHeading"><span lang="PT-BR">Efetuado com êxito?</span></p>
+                <!--?lit$8900476824$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-2 ">
+                <!--?lit$8900476824$--><p class="TableHeading"><span lang="PT-BR">Problemas</span></p>
+                <!--?lit$8900476824$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-3 ">
+                <!--?lit$8900476824$--><p class="TableHeading"><span lang="PT-BR">Solução</span></p>
+                <!--?lit$8900476824$-->
+            </th>
+        <!----><!---->
+            <th scope="col" tabindex="0" rowspan="1" colspan="1" class="table-data table-heading nth-child-4 ">
+                <!--?lit$8900476824$--><p class="TableHeading"><span lang="PT-BR">Verificado</span></p>
+                <!--?lit$8900476824$-->
+            </th>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-1 ">
+                    <!--?lit$8900476824$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="200">
+                <!--?lit$8900476824$--><p class="TableText"><b><span lang="PT-BR">PC1 a PC2</span></b></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$8900476824$--><p class="TableText"><b><span lang="PT-BR">Não</span></b></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$8900476824$--><p class="TableText"><b><span lang="PT-BR">Endereço IP em PC1</span></b></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$8900476824$--><p class="TableText"><b><span lang="PT-BR">Alterar o endereço IP de PC1</span></b></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-4 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-2 ">
+                    <!--?lit$8900476824$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="200">
+                <!--?lit$8900476824$--><p class="TableText"><span lang="PT-BR">PC1 a S1</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-4 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-3 ">
+                    <!--?lit$8900476824$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="200">
+                <!--?lit$8900476824$--><p class="TableText"><span lang="PT-BR">PC1 a R1</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-4 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-4 ">
+                    <!--?lit$8900476824$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="200">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-4 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!----><!---->
+                    <tr class="table-row nth-child-5 ">
+                    <!--?lit$8900476824$--><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-0 " width="200">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">Em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-1 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-2 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-3 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!----><!---->
+            <td tabindex="0" rowspan="1" colspan="1" class="table-data nth-child-4 " width="">
+                <!--?lit$8900476824$--><p class="ConfigWindow"><span lang="PT-BR">em branco</span></p>
+                <!--?lit$8900476824$-->
+            </td>
+        <!---->
+                   </tr>  
+                    <!---->
+                </tbody></table>
+                </div>
+            </div>
+        <div>
+        </div>
+        </div></div></table-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="1552b6e9-9c4d-4b07-853e-b89cdf5a65b5" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 20%;"><!---->
+                
+                <div data-socialgoodpulse-id="1552b6e9-9c4d-4b07-853e-b89cdf5a65b5" class="1552b6e9-9c4d-4b07-853e-b89cdf5a65b5 block remove-padding-top remove-padding-bottom ">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="1552b6e9-9c4d-4b07-853e-b89cdf5a65b5" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$8900476824$--><!----><text-view modelid="466e637d-20b5-4b97-9073-346f38e1185d" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="466e637d-20b5-4b97-9073-346f38e1185d" class="component text 466e637d-20b5-4b97-9073-346f38e1185d  is-full   ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$8900476824$--><p class="BodyTextL50"><b><span lang="PT-BR">Nota</span></b><span lang="PT-BR">: A tabela é um exemplo; você deve criar seu próprio documento. Você pode usar papel e lápis para desenhar uma tabela ou usar um editor de texto ou uma planilha. Consulte seu instrutor caso precise de orientações adicionais.</span></p> <p class="SubStepAlpha"><span lang="PT-BR">c.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Teste a conectividade com dispositivos remotos (de PC1 a PC4, por exemplo) e documente eventuais problemas. Isso é conhecido como <i>conectividade de ponta a ponta</i>. Significa que todos os dispositivos em uma rede têm conectividade total permitida pela política de rede.</span></p> <p class="BodyTextL50"><b><span lang="PT-BR">Nota</span></b><span lang="PT-BR">: O teste de conectividade remota pode ainda não ser possível, porque você deve primeiro resolver os problemas de conectividade local. Depois de resolver esses problemas, volte a esta etapa e teste a conectividade entre redes.<b></b></span></p> <h3><span lang="PT-BR">Etapa 2: </span><span lang="PT-BR">Determine uma solução apropriada para o problema.</span></h3> <p class="SubStepAlpha"><span lang="PT-BR">a.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Usando seu conhecimento sobre as formas como a rede opera e a capacidade de configuração do seu dispositivo, pesquise a causa do problema. Por exemplo, S1 não é a causa do problema de conectividade entre PC1 e PC2. Os leds dos links estão verdes e nenhuma configuração em S1 impediria o tráfego entre PC1 e PC2. O problema deve ser em PC1, em PC2 ou em ambos.</span></p> <p class="SubStepAlpha"><span lang="PT-BR">b.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Verifique se o endereçamento do dispositivo corresponde à documentação de rede. Por exemplo, a verificação com o comando <b>ipconfig</b> indicou que o endereço IP de PC1 está incorreto.</span></p> <p class="SubStepAlpha"><span lang="PT-BR">c.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Sugira uma solução para resolver o problema e documente-a. Por exemplo, alterar o endereço IP de PC1 para corresponder à documentação.</span></p> <p class="BodyTextL50"><b><span lang="PT-BR">Nota</span></b><span lang="PT-BR">: Geralmente, há mais de uma solução. No entanto, é uma prática recomendada para solução de problemas implementar e verificar uma solução por vez. A implementação de mais de uma solução pode introduzir a outros problemas em um cenário mais complexo.</span></p> <h2><span lang="PT-BR">Parte 2: </span><span lang="PT-BR">Implementar, Verificar e Documentar Soluções</span></h2> <p class="BodyTextL25"><span lang="PT-BR">Na Parte 2 desta atividade, você implementará as soluções que identificou na Parte 1. Em seguida, verificará se a solução funcionou. Talvez você precise retornar à Parte 1 para concluir o isolamento de todos os problemas.</span></p> <h3><span lang="PT-BR">Etapa 1: </span><span lang="PT-BR">Implemente soluções relacionadas a problemas de conectividade.</span></h3> <p class="BodyTextL25"><span lang="PT-BR">Consulte sua documentação na Parte 1. Escolha o primeiro problema e implemente a solução que você sugeriu. Por exemplo, corrija o endereço IP de PC1.</span></p> <h3><span lang="PT-BR">Etapa 2: </span><span lang="PT-BR">Verifique se agora o problema está resolvido.</span></h3> <p class="SubStepAlpha"><span lang="PT-BR">a.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Confira se a sua solução resolveu o problema executando o teste que você usou para identificar o problema. Por exemplo, agora PC1 pode fazer ping em PC2?</span></p> <p class="SubStepAlpha"><span lang="PT-BR">b.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Se o problema estiver resolvido, indique isso na documentação. Por exemplo, na tabela anterior, uma simples marca de verificação na coluna "Verificado" seria suficiente.</span></p> <h3><span lang="PT-BR">Etapa 3: </span><span lang="PT-BR">Verifique se todos os problemas foram resolvidos.</span></h3> <p class="SubStepAlpha"><span lang="PT-BR">a.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Se você ainda tiver um problema pendente com uma solução que não tenha sido implementada, retorne à Parte 2, Etapa 1.</span></p> <p class="SubStepAlpha"><span lang="PT-BR">b.<span>&nbsp;&nbsp;</span></span><span lang="PT-BR">Caso todos os problemas atuais estejam resolvidos, você também resolveu algum problema de conectividade remota (por exemplo, PC1 poder fazer ping em PC4)? Se a resposta for não, retorne à Parte 1, Etapa 1c, para testar a conectividade remota.</span></p></div>
+        </div>
+      </div>
+            <!--?lit$8900476824$-->
+            <!--?lit$8900476824$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!---->
+                            </div>
+                        </div>
+                        <!--?lit$8900476824$-->
+                    </div>
+                </div>
+            </div>
+        <sgpluse-opentextboxcontroller-view modelid="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+            <div class="openTextBoxController__button-container">
+                <button tabindex="0" class="btn-text showhidebtn openTextBoxController__showButton show-answer show"><!--?lit$8900476824$-->Mostrar todas as respostas</button>    
+                <button tabindex="0" class="btn-text showhidebtn openTextBoxController__hideButton hide-answer hide"><!--?lit$8900476824$-->Ocultar todas as respostas</button>    
+                <button class="btn-text resetbtn openTextBoxController__resetButton"><!--?lit$8900476824$-->Limpar minhas respostas</button>         
+            </div>
+            <!--?lit$8900476824$--><hr>
+            <!--?lit$8900476824$-->
+                <div class="post-text" tabindex="0">
+                    <!--?lit$8900476824$--><span> <span style="padding-right:5px;float:left;font-family:arial;font-size:12px;">© 2017 - 2022 Cisco and/or its affiliates. All rights reserved. Cisco Public </span> </span>
+                </div>
+                   
+        </sgpluse-opentextboxcontroller-view><script></script>
+<script>
+    window.addEventListener("load", function () {
+      console.log("loaded");
+      document?.querySelectorAll(".answergray").forEach(function (ele) {
+        ele.classList.add("u-display-none");
+      });
+      document?.querySelectorAll(".hide-answer").forEach(function (ele) {
+        ele.classList.add("u-display-none");
+      });
+      document?.querySelectorAll(".show-answer").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.nextElementSibling.classList.remove("u-display-none");
+          e.currentTarget
+            .closest(".question-container")
+            ?.querySelectorAll(".answergray")
+            .forEach(function (ele) {
+              ele.classList.remove("u-display-none");
+            });
+          ele.classList.add("u-display-none");
+        });
+      });
+      document?.querySelectorAll(".hide-answer").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.previousElementSibling.classList.remove("u-display-none");
+          e.currentTarget
+            .closest(".question-container")
+            ?.querySelectorAll(".answergray")
+            .forEach(function (ele) {
+              ele.classList.add("u-display-none");
+            });
+          ele.classList.add("u-display-none");
+        });
+      });
+      let event = new Event("click", {
+        bubbles: true,
+        cancelable: true,
+      });
+      document
+        ?.querySelectorAll(".openTextBoxController__showButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            e.currentTarget.nextElementSibling.classList.remove("u-display-none");
+            ele.classList.add("u-display-none");
+            document?.querySelectorAll(".show-answer").forEach(function (ele) {
+              ele?.dispatchEvent(event);
+            });
+          });
+        });
+
+      document
+        ?.querySelectorAll(".openTextBoxController__hideButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            e.currentTarget.previousElementSibling.classList.remove("u-display-none");
+            ele.classList.add("u-display-none");
+            document?.querySelectorAll(".hide-answer").forEach(function (ele) {
+              ele?.dispatchEvent(event);
+            });
+          });
+        });
+
+      document
+        ?.querySelectorAll(".openTextBoxController__resetButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            document?.querySelectorAll("textArea").forEach(function (ele) {
+              ele.value = "";
+            });
+          });
+        });
+
+      document
+      ?.querySelectorAll('textarea')
+      .forEach(function (ele){
+        ele.defaultValue = ele.defaultValue.replace(/<!--.*?-->/g, '');
+      })
+        let checkButtonLabel = "check_button_label_placeHolder";
+        let hideButtonLabel = "hide_button_label_placeHolder";
+        document?.querySelectorAll(".check__button").forEach(function (ele) {
+        let answerBox = document.querySelector(".check__solution")
+        if (!answerBox.classList.contains("check__hidden")) {
+          answerBox.classList.add("check__hidden");
+          ele.innerText = checkButtonLabel;
+        }
+          ele.addEventListener("click", function (e) {
+            if (answerBox.classList.contains("check__hidden")) {
+              answerBox.classList.remove("check__hidden")
+              ele.innerText = hideButtonLabel;
+            } else {
+              answerBox.classList.add("check__hidden")
+              ele.innerText = checkButtonLabel;
+            }
+          })
+        })
+    });
+  </script>
+  </body></html>

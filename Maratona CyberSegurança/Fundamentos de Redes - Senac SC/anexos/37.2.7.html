@@ -1,0 +1,1620 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 1rem;
+      }
+      ol,
+      ul {
+        margin-bottom: 0in;
+      }
+      table {
+        margin-top: 1rem;
+        border: 1px solid gray;
+        width: 7in;
+        border-collapse: collapse;
+      }
+
+      table > thead > tr > .openTableTextBox__table-header-data {
+        text-align: center;
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0in;
+        text-align: center;
+        line-height: 115%;
+        page-break-after: avoid;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        background: #dbe5f1;
+        padding: 0.5rem;
+      }
+      .openTableTextBox__answerText
+        table
+        > thead
+        > tr
+        > .openTableTextBox__table-header-data {
+        background: #f2dbdb !important;
+      }
+      .openTextBox__textArea-container {
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        width: 50%;
+      }
+      .openTableTextBox__fieldset {
+        padding: 5px;
+      }
+      td {
+        margin-top: 3pt;
+        margin-right: 0in;
+        margin-bottom: 3pt;
+        margin-left: 0in;
+        font-size: 10pt;
+        font-family: "Arial", sans-serif;
+        width: 98.85pt;
+        border: solid windowtext 1pt;
+        border-top: none;
+        padding: 0.7pt 5.75pt 0.7pt 5.75pt;
+      }
+      textarea {
+        width: 100%;
+      }
+      .answergray {
+        padding: 0.2rem;
+      }
+
+      .openTableTextBox__widget {
+        margin-top: 6pt;
+        margin-right: 0in;
+        margin-bottom: 6pt;
+        margin-left: 0.25in;
+      }
+
+      .show-answer,
+      .hide-answer {
+        padding: 0.5rem 1rem;
+        background-color: #3d692b;
+        color: #fff;
+        border: 0px;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .openTextBoxController__button-container {
+        display: flex;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .openTextBoxController__button-container .btn-text {
+        margin: 10px;
+      }
+
+      .btn-text {
+        border: 0px;
+        padding: 0.5rem 1rem;
+        background-color: #3d692b;
+        color: #fff;
+        border-radius: 0;
+        cursor: pointer;
+      }
+
+      .u-display-none {
+        display: none;
+      }
+      .openTextBox__postText, openTableTextBox__postText {
+        margin-top: 0.5rem;
+      }
+      .edit-comment {
+        display: none;
+      }
+      .js-heading-inner {
+        display: none;
+      }
+      .block__title-inner,
+      .article__title-inner {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+      }
+      h2{
+        font-size: 1.25em;
+      }
+      h3{
+        font-size: 1.125em;
+      }
+      .table
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > th {
+        border: solid windowtext 1pt;
+      }
+      table tbody tr th, table thead tr th{
+        border: solid windowtext 1pt;
+        background-color: #d6d8dc;
+      }
+      .openTableTextBox__answerText
+        table
+        > thead
+        > tr
+        > .openTableTextBox__table-header-data {
+        background: #f2dbdb !important;
+      }
+      .command-output > .table-inner > .table-wrapper > .table-widget > table,
+      .command-output
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > td,
+      .command-output
+        > .table-inner
+        > .table-wrapper
+        > .table-widget
+        > table
+        > tbody
+        > tr
+        > th {
+        border: none !important;
+        text-align: right !important;
+      }
+      .simple-table > .table-inner > .table-wrapper{
+        margin-left: 1.5rem;
+      }
+      .openTextBox__widget {
+        margin-left: 1.5rem;
+      }
+      img {
+        width: 30%;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+      .answergray {
+        background-color: #ccc;
+      }
+      .openTableTextBox__widget > .answergray {
+        background-color: #fff !important;
+      }
+      li > ul,ol > li{
+        margin-left: 0px !important;
+      }
+      img {
+        width: 30%;
+        height: auto;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+      
+      .component__title{
+        font-family: inherit;
+        font-size: 1.65em;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      .component__body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .accessibility-completion-indicator{
+        display: none;
+      }
+
+      .check__hidden {
+        display: none;
+      }
+
+      .check__button {
+        border: none;
+        border-radius: 6px !important;
+        background-color: #6abf4b;
+        color: #fff;
+        min-width: 100px;
+        margin: 0.625rem 0;
+        padding: 0.7rem;
+      }
+
+      .check__widget .check__solution .DevConfigGray {
+        background-color: rgb(214,216,220);
+        font-weight: bold;
+      }
+
+      .check-inner .check__widget .check__solution .DevConfigs {
+        margin: 0px;
+        line-height: 115%;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .check__solution  {
+        line-height: 1.5;
+      }
+      .mcq__inner .mcq__widget .mcq__widget-inner {
+        margin-block: 1rem;
+      }
+      .mcq__inner .mcq__widget .mcq__item {
+        display: flex;
+        gap: 0.2rem;
+      }
+      .mcq__inner .mcq__widget .mcq__item .mcq__item-label .mcq__item-text .screenReader-position-text{
+        display: none;
+      }
+      .opentabletextbox-inner .opentabletextBox__widget .openTableTextBox__answerText.answergray {
+        background-color: transparent;
+      }
+      .openTextBox__inner .openTextBox__widget .answergray.is-graphic-in-openTextBox{
+        background-color: transparent;
+      }
+      .openTextBox__inner .openTextBox__widget .answergray.is-graphic-in-openTextBox img{
+        margin-block: 1rem;
+        margin-left: initial;
+      }
+      .component__content .component__body-inner .pageTracer-h4-title-hide {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        font-size: 0px;
+        color: rgb(var(--neutral-2));
+        font-weight: normal;
+      }
+      .table-inner .table__widget table tr.TableHeading th, .table-inner .table__widget table tr.TableHeading td, .table-inner .table__widget table tr td.TableHeading, .opentabletextbox-table thead tr.TableHeading th, .opentabletextbox-table tbody tr.TableHeading td, .opentabletextbox-table tbody tr td.TableHeading {
+        background-color: #d6d8dc;
+        text-align: center;
+        font-weight: bold;
+      }
+      .component__content .component__body-inner .CMD, .component__content .component__body-inner .CMDOutput, .component__content .component__body-inner .CMDOutput__table{
+        margin-top: 4px;
+        margin-inline-end: 0px;
+        margin-bottom: 4px;
+        margin-inline-start: 30px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      [dir="rtl"] .component__content .component__body-inner .CMDOutput__table span {
+        direction: ltr;
+        display: inline-block;
+      }
+      .openTextBox__inner .openTextBox__widget .CMD, .openTextBox__inner .openTextBox__widget .CMDOutput{
+        margin-top: 4px;
+        margin-inline-end: 0px;
+        margin-bottom: 4px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .openTextBox__inner .openTextBox__widget .DnTbold, .openTextBox__inner .openTextBox__widget .BodyTextL25Bold, .component__content .component__body-inner .BodyTextL25Bold, .component__content .component__body-inner .DnTbold, .table-inner .table__widget table tr .DnTbold {
+        font-weight: bold;
+      }
+      .component__content .component__body-inner .SubStepNum {
+        text-indent: -25.5px;
+        margin-inline-start: 50px;
+      }
+      .component__content .component__body-inner .BodyTextL50 {
+        margin-inline-start: 30px;
+      }
+      .component__content .component__body-inner .Bulletlevel1 {
+        text-indent: -19px;
+        margin-inline-start: 48px;
+      }
+      .component__content .component__body-inner .Bulletlevel2 {
+          text-indent: -19px;
+          margin-inline-start: 72px;
+      }
+      .openTextBox__inner .openTextBox__widget .ReflectionQ, .component__content .component__body-inner .SubStepAlpha {
+          text-indent: -25.5px;
+          margin-inline-start: 30px;
+      }
+    </style>
+
+</head><body><!---->
+            <div class="article 63c5252255ff4004a0200aa11 background-color-white remove-padding-top is-complete ">
+                <div class="article__inner">
+                <div class=" no-adaptive-scroll">
+                    <!--?lit$436201197$-->
+                        <div class=""> 
+                            <base-view type="article" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="article__header-wrapper background-color-white remove-padding-top ">
+        <div class="article__header ">
+          <div class="article__header-inner ">
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                            <div class="block__container " style="">
+                                <!--?lit$436201197$--><!---->
+                                    <block-view modelid="63c5263007fdc30429b7112c" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 16.6667%;"><!---->
+                
+                <div data-socialgoodpulse-id="63c5263007fdc30429b7112c" class="63c5263007fdc30429b7112c block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63c5263007fdc30429b7112c" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$436201197$-->
+      <div class="block__title ">
+        <!--?lit$436201197$--><heading-view aria-hidden="true" id="63c5263007fdc30429b7112c-heading-view" headingtitle="Packet Tracer - Conectar uma rede com base em um diagrama de rede" modelid="63c5263007fdc30429b7112c" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="js-heading is-complete">
+        <div class="js-heading-inner" role="heading" id="block-heading" aria-level="1">
+        <span class="aria-label"> <!--?lit$436201197$-->Concluída &nbsp;<!--?lit$436201197$-->Packet Tracer - Conectar uma rede com base em um diagrama de rede</span>
+        </div>
+      </div>
+    </heading-view>
+        <div tabindex="0" role="heading" class="block__title-inner " aria-level="3">
+          <span class="accessibility-completion-indicator"><!--?lit$436201197$-->Concluída </span>
+          <!--?lit$436201197$-->Packet Tracer - Conectar uma rede com base em um diagrama de rede
+        </div>
+      </div>
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$436201197$--><!----><text-view modelid="63c802e11b421900e812ac" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="63c802e11b421900e812ac" class="component text 63c802e11b421900e812ac  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$436201197$--><h3>Objetivos</h3><p>Nesta atividade, você concluirá uma topologia física com base em um diagrama de rede fornecido.</p><h3>Diagrama de rede</h3></div>
+        </div>
+      </div>
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63c5263007fdc30429b711a1" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 16.6667%;"><!---->
+                
+                <div data-socialgoodpulse-id="63c5263007fdc30429b711a1" class="63c5263007fdc30429b711a1 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63c5263007fdc30429b711a1" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$436201197$--><!----><graphic-view modelid="63c802e11b421900e812a1" class="is-left" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="graphic-inner component__inner">
+            <div data-socialgoodpulse-id="63c802e11b421900e812a1" class="component graphic 63c802e11b421900e812a1  is-left is-complete  ">
+                <div class="component__header-container">
+                    <base-view type="component" lowercase_component="graphic" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header graphic__header">
+          <div class="component__header-inner graphic__header-inner">
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+                <div class="component__widget">
+                    <!--?lit$436201197$-->
+                        <div class="graphic__image-container ">
+                            <img id="graphic__image" aria-hidden="false" tabindex="0" class="graphic__image js-graphic-set-image-src" src="data:image/png; charset=UTF-8;base64,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" data-large="./courses/content/m1/pt-BR/assets/image1.png" data-small="./courses/content/m1/pt-BR/assets/image1.png" alt="nss-1.2.7-lab">
+
+                            <!--?lit$436201197$-->
+
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        </graphic-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63c5263007fdc30429b711a2" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 16.6667%;"><!---->
+                
+                <div data-socialgoodpulse-id="63c5263007fdc30429b711a2" class="63c5263007fdc30429b711a2 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63c5263007fdc30429b711a2" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$436201197$--><!----><opentabletextbox-view modelid="63c802e11b421900e812a2" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+      <div class="component">
+        <div class="opentabletextbox-inner component__inner">
+          <div data-socialgoodpulse-id="63c802e11b421900e812a2" class="component opentabletextbox 63c802e11b421900e812a2  is-full is-complete  ">
+            <div class="component__header-container">
+              <div data-socialgoodpulse-id="63c802e11b421900e812a2" class="opentabletextbox ">
+                <base-view type="component" lowercase_component="openTableTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTableTextBox__header">
+          <div class="component__header-inner openTableTextBox__header-inner">
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body openTableTextBox__body">
+          <div class="component__body-inner openTableTextBox__body-inner"><!--?lit$436201197$--><h3>Instruções</h3><p>Os diagramas de rede são essenciais para visualizar como os dispositivos estão conectados e funcionam juntos. Os diagramas podem atuar como um roteiro ao solucionar problemas e manter a rede.</p><p>Existem dois tipos de diagramas de rede: lógico e físico. Um diagrama lógico de rede mostra como os dispositivos se comunicam entre si e como os dados estão fluindo pela rede. Um diagrama físico de rede é semelhante a uma planta baixa. Ele mostra todos os arranjos físicos da rede, como tipos de cabos, portas, racks de servidores e servidores.</p><h3>Parte 1: Revise o Diagrama Lógico de Rede.</h3><p>Revise o diagrama de rede e registre como os dispositivos estão conectados na Tabela de Dispositivos abaixo.</p><p><strong>Tabela de dispositivos</strong></p></div>
+        </div>
+      </div>
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+              </div>
+            </div>
+            <div class="component__widget opentabletextBox__widget question-container ">
+              <div class="openTableTextBox__preText">
+                <!--?lit$436201197$-->
+              </div>
+              <div class="opentabletextbox-container openTableTextBox__table-container">
+                <table class="opentabletextbox-table" tabindex="0">
+                  <!--?lit$436201197$-->
+                        <thead class="openTableTextBox__table-header">
+                          <tr>
+                            <!--?lit$436201197$--><!----><th tabindex="0" scope="col"><!--?lit$436201197$-->Nome do dispositivo</th><!----><!----><th tabindex="0" scope="col"><!--?lit$436201197$-->Tipo de dispositivo</th><!----><!----><th tabindex="0" scope="col"><!--?lit$436201197$-->Interface Local</th><!----><!----><th tabindex="0" scope="col"><!--?lit$436201197$-->Dispositivo e porta conectados</th><!---->
+                          </tr>
+                        </thead>
+                  <tbody>
+                    <!--?lit$436201197$--><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$436201197$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->R1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->Router / Cisco 4321</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->G0/0/0</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$436201197$--><!--?lit$436201197$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$436201197$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->R1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->Router / Cisco 4321</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->G0/0/1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$436201197$--><!--?lit$436201197$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$436201197$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->S1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->Switch / Catalyst 2960</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->G0/1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$436201197$--><!--?lit$436201197$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$436201197$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->S1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->Switch / Catalyst 2960</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->G0/2</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$436201197$--><!--?lit$436201197$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$436201197$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->S1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->Switch / Catalyst 2960</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->F0/1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$436201197$--><!--?lit$436201197$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$436201197$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->S2</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->Switch / Catalyst 2960</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->G0/1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$436201197$--><!--?lit$436201197$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$436201197$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->S2</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->Switch / Catalyst 2960</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->G0/2</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$436201197$--><!--?lit$436201197$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$436201197$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->S2</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->Switch / Catalyst 2960</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->F0/1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$436201197$--><!--?lit$436201197$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$436201197$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->R2</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->Router / Cisco 4321</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->G0/0/1</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$436201197$--><!--?lit$436201197$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$436201197$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->Servidor Web</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->Servidor</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->Ethernet</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$436201197$--><!--?lit$436201197$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$436201197$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->PC-A</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->PC</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->Ethernet</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$436201197$--><!--?lit$436201197$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!----><!---->
+                        <tr class="openTableTextBox__table-row ">
+                          <!--?lit$436201197$--><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->PC-B</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->PC</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$--><div><!--?lit$436201197$-->Ethernet</div>
+                                </div>
+                              </td>
+                            <!----><!---->
+                              <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                <div class="openTableTextBox__textArea-container">
+                                  <!--?lit$436201197$-->
+                                        <div class="openTableTextBox__textArea-container">
+                                          <fieldset class="openTableTextBox__fieldset">
+                                            <legend class="openTableTextBox__legend">
+                                              <!--?lit$436201197$--><!--?lit$436201197$-->Área de Resposta<!--?-->
+                                            </legend>
+                                            <textarea class="openTableTextBox__textArea" rows="3" name="answerArea" tabindex="0" placeholder="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                                          </fieldset>
+                                        </div>
+                                      
+                                </div>
+                              </td>
+                            <!---->
+                        </tr>
+                      <!---->
+                  </tbody>
+                </table>
+              </div>
+              <div class="openTableTextBox__answerText answergray openTableTextBox__table-container is-full hide">
+                <table class="opentabletextbox-table openTableTextBox__table-inner" tabindex="0">
+                  <!--?lit$436201197$-->
+                        <thead class="openTableTextBox__table-header">
+                          <tr tabindex="0">
+                            <!--?lit$436201197$--><!----><th scope="col"><!--?lit$436201197$-->Nome do dispositivo</th><!----><!----><th scope="col"><!--?lit$436201197$-->Tipo de dispositivo</th><!----><!----><th scope="col"><!--?lit$436201197$-->Interface Local</th><!----><!----><th scope="col"><!--?lit$436201197$-->Dispositivo e porta conectados</th><!---->
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <!--?lit$436201197$--><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$436201197$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->R1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->Router / Cisco 4321</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->G0/0/0</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->Servidor Web Ethernet NIC</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$436201197$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->R1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->Router / Cisco 4321</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->G0/0/1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->S1 G0/1</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$436201197$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->S1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->Switch / Catalyst 2960</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->G0/1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->R1 G0/0/1</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$436201197$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->S1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->Switch / Catalyst 2960</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->G0/2</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->S2 G0/2</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$436201197$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->S1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->Switch / Catalyst 2960</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->F0/1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->PC-A Ethernet NIC</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$436201197$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->S2</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->Switch / Catalyst 2960</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->G0/1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->R2 G0/0/1</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$436201197$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->S2</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->Switch / Catalyst 2960</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->G0/2</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->S1 G0/2</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$436201197$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->S2</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->Switch / Catalyst 2960</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->F0/1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->PC-B Ethernet NIC</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$436201197$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->R2</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->Router / Cisco 4321</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->G0/0/1</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->S2 G0/1</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$436201197$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->Servidor Web</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->Servidor</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->Ethernet</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->R1 G0/0/0</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$436201197$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->PC-A</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->PC</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->Ethernet</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->S1 F0/1</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!----><!---->
+                                <tr class="openTableTextBox__table-row ">
+                                  <!--?lit$436201197$--><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->PC-B</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->PC</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->Ethernet</div>
+                                        </div>
+                                      </td>
+                                    <!----><!---->
+                                      <td tabindex="0" class="openTableTextBox__table-row-data ">
+                                        <div class="openTableTextBox__textArea-container">
+                                          <div><!--?lit$436201197$-->S2 F0/1</div>
+                                        </div>
+                                      </td>
+                                    <!---->
+                                </tr>
+                              <!---->
+                      </tbody>
+                </table>
+              </div>
+              <div class="btn__container">
+                <button class="btn-text openTableTextBox__showButton show-answer show"><!--?lit$436201197$-->Mostrar resposta</button>
+                <button class="btn-text openTableTextBox__showButton hide-answer hide"><!--?lit$436201197$-->Ocultar Resposta</button>
+              </div>
+              <div class="openTableTextBox__postText">
+                <!--?lit$436201197$-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </opentabletextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63c5263007fdc30429b711a3" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 16.6667%;"><!---->
+                
+                <div data-socialgoodpulse-id="63c5263007fdc30429b711a3" class="63c5263007fdc30429b711a3 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63c5263007fdc30429b711a3" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$436201197$--><!----><text-view modelid="63c802e11b421900e812a3" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="63c802e11b421900e812a3" class="component text 63c802e11b421900e812a3  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$436201197$--><h3>Parte 2: Conecte os dispositivos físicos.</h3><p>Agora que você determinou como os dispositivos estão interconectados, pode usar as informações do diagrama de rede para conectar os dispositivos no rack dentro do armário de fiação (wiring closet).</p><p>No Modo Físico no Packet Tracer, você pode praticar a conexão dos dispositivos no rack no armário de fiação.</p><h4>Etapa 1: Determine o tipo de cabo.</h4><p>No diagrama de rede, você determinou que os dispositivos estão conectados via cabos Ethernet do diagrama de rede.</p><p>Na placa de fixação de cabos no armário de fiação principal, existem alguns tipos diferentes de cabos.</p></div>
+        </div>
+      </div>
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63c5263007fdc30429b711a4" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 16.6667%;"><!---->
+                
+                <div data-socialgoodpulse-id="63c5263007fdc30429b711a4" class="63c5263007fdc30429b711a4 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63c5263007fdc30429b711a4" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$436201197$--><!----><opentextbox-view modelid="63c802e11b421900e812a4" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="component">
+          <div class="component__inner openTextBox__inner">
+            <div data-socialgoodpulse-id="63c802e11b421900e812a4" class="component opentextbox 63c802e11b421900e812a4  is-full is-complete  ">
+              <div class="component__header-container">
+                <div data-socialgoodpulse-id="63c802e11b421900e812a4" class="opentabletextbox ">
+                  <base-view type="component" lowercase_component="openTextBox" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header openTextBox__header">
+          <div class="component__header-inner openTextBox__header-inner">
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+              </div>
+                  <div class="component__widget openTextBox__widget question-container">
+                      <!--?lit$436201197$--> <div class="openTextBox__preText"><!--?lit$436201197$-->Qual é a cor dos cabos diretos Ethernet no Packet Tracer?</div>                         
+      
+                      <div class="openTextBox__textArea-container">
+                          <fieldset class="openTextBox__fieldset" tabindex="0">
+                          <legend class="openTextBox__legend">
+                            <!--?lit$436201197$--><!--?lit$436201197$-->Área de Resposta<!--?-->
+                          </legend>
+                          <textarea class="openTextBox__textArea" rows="3" name="answerArea" placeholder="Digite suas respostas aqui." aria-label="Digite suas respostas aqui.">&lt;!----&gt;&lt;!----&gt;</textarea>
+                          </fieldset>
+                      </div>
+                      <div tabindex="0" class="openTextBox__answerText answergray  hide">
+                        <!--?lit$436201197$-->
+                      <!--?lit$436201197$-->Os cabos diretos Ethernet são verdes.
+                    </div>
+
+                      <div class="btn__container">                        
+                        <button class="btn-text openTextBox__showButton show-answer show"><!--?lit$436201197$-->Mostrar resposta</button>     
+                        <button class="btn-text openTextBox__hideButton hide-answer hide"><!--?lit$436201197$-->Ocultar Resposta</button>                    
+                      </div>
+                      <!--?lit$436201197$--><!--?-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+      </opentextbox-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!----><!---->
+                                    <block-view modelid="63c5263007fdc30429b711a5" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="block" style="width: 16.6667%;"><!---->
+                
+                <div data-socialgoodpulse-id="63c5263007fdc30429b711a5" class="63c5263007fdc30429b711a5 block remove-padding-top remove-padding-bottom is-complete">
+                    <div class="block__inner">    
+                    <base-view type="block" modelid="63c5263007fdc30429b711a5" model="[object Object]" customclass="" lowercase_component="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="block__header-wrapper remove-padding-top remove-padding-bottom ">
+        <div class="block__header ">
+          <div class="block__header-inner ">
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                        <div class="component__container">                            
+                                <!--?lit$436201197$--><!----><text-view modelid="63c802e11b421900e812a5" class="is-full" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme" sgpulse-type="component"><!---->
+        <div class="text-inner component__inner">
+            <div class="component__header-container">
+                <div data-socialgoodpulse-id="63c802e11b421900e812a5" class="component text 63c802e11b421900e812a5  is-full is-complete  ">
+                    <base-view type="component" lowercase_component="text" model="[object Object]" customclass="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+      <div class="component__header-wrapper  ">
+        <div class="component__header text__header">
+          <div class="component__header-inner text__header-inner">
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+      <div class="component__content">
+        <div tabindex="0" class="component__body text__body">
+          <div class="component__body-inner text__body-inner"><!--?lit$436201197$--><h4>Etapa 2: Conecte os dispositivos.</h4><p>Usando os cabos Ethernet, conecte os dispositivos no armário de fiação de acordo com o diagrama de rede.</p><p>a.&nbsp;&nbsp;Para conectar o roteador R1 ao servidor Web, selecione um cabo Ethernet da placa peg. O Web Server é o dispositivo grande na parte inferior do rack de equipamentos.</p><p>b.&nbsp;&nbsp;Clique na porta Web Server FastEthernet0 para conectar o cabo Ethernet.</p><p>c.&nbsp;&nbsp;Clique em GigabitEthernet0/0/1 em R1 para concluir a conexão. Você pode ampliar o dispositivo clicando com o botão direito do mouse no dispositivo &gt; selecione Inspecionar frontal. Clique na lupa para ampliar a frente do dispositivo. Você pode verificar se a conexão está ativa quando as luzes do LED da porta estiverem piscando em verde.</p><p>d.&nbsp;&nbsp;Repita o procedimento para todas as outras conexões para concluir a conexão da rede. Observe que os PCs estão localizados na Mesa.</p></div>
+        </div>
+      </div>
+            <!--?lit$436201197$-->
+            <!--?lit$436201197$-->
+          </div>
+        </div>
+      </div>
+    </base-view>
+                </div>
+            </div>
+        </div>
+
+        <!-- div><div class="component__inner"></div></div -->
+        </text-view><!---->
+                            </div>                     
+                    </div>
+                </div>
+            </block-view>
+                                <!---->
+                            </div>
+                        </div>
+                        <!--?lit$436201197$-->
+                    </div>
+                </div>
+            </div>
+        <sgpluse-opentextboxcontroller-view modelid="" is-touch="false" fullscreen="true" device="large" browser="Chrome" os="windows" dir="ltr" location="page" theme="dark" orientation="landscape" themetype="block-base-theme"><!---->
+            <div class="openTextBoxController__button-container">
+                <button tabindex="0" class="btn-text showhidebtn openTextBoxController__showButton show-answer show"><!--?lit$436201197$-->Mostrar todas as respostas</button>    
+                <button tabindex="0" class="btn-text showhidebtn openTextBoxController__hideButton hide-answer hide"><!--?lit$436201197$-->Ocultar todas as respostas</button>    
+                <button class="btn-text resetbtn openTextBoxController__resetButton"><!--?lit$436201197$-->Limpar minhas respostas</button>         
+            </div>
+            <!--?lit$436201197$--><hr>
+            <!--?lit$436201197$-->
+                <div class="post-text" tabindex="0">
+                    <!--?lit$436201197$-->© 2017 - 2022 Cisco and/or its affiliates. All rights reserved. Cisco Public
+                </div>
+                   
+        </sgpluse-opentextboxcontroller-view><script></script>
+<script>
+    window.addEventListener("load", function () {
+      console.log("loaded");
+      document?.querySelectorAll(".answergray").forEach(function (ele) {
+        ele.classList.add("u-display-none");
+      });
+      document?.querySelectorAll(".hide-answer").forEach(function (ele) {
+        ele.classList.add("u-display-none");
+      });
+      document?.querySelectorAll(".show-answer").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.nextElementSibling.classList.remove("u-display-none");
+          e.currentTarget
+            .closest(".question-container")
+            ?.querySelectorAll(".answergray")
+            .forEach(function (ele) {
+              ele.classList.remove("u-display-none");
+            });
+          ele.classList.add("u-display-none");
+        });
+      });
+      document?.querySelectorAll(".hide-answer").forEach(function (ele) {
+        ele.addEventListener("click", function (e) {
+          e.currentTarget.previousElementSibling.classList.remove("u-display-none");
+          e.currentTarget
+            .closest(".question-container")
+            ?.querySelectorAll(".answergray")
+            .forEach(function (ele) {
+              ele.classList.add("u-display-none");
+            });
+          ele.classList.add("u-display-none");
+        });
+      });
+      let event = new Event("click", {
+        bubbles: true,
+        cancelable: true,
+      });
+      document
+        ?.querySelectorAll(".openTextBoxController__showButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            e.currentTarget.nextElementSibling.classList.remove("u-display-none");
+            ele.classList.add("u-display-none");
+            document?.querySelectorAll(".show-answer").forEach(function (ele) {
+              ele?.dispatchEvent(event);
+            });
+          });
+        });
+
+      document
+        ?.querySelectorAll(".openTextBoxController__hideButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            e.currentTarget.previousElementSibling.classList.remove("u-display-none");
+            ele.classList.add("u-display-none");
+            document?.querySelectorAll(".hide-answer").forEach(function (ele) {
+              ele?.dispatchEvent(event);
+            });
+          });
+        });
+
+      document
+        ?.querySelectorAll(".openTextBoxController__resetButton")
+        .forEach(function (ele) {
+          ele.addEventListener("click", function (e) {
+            document?.querySelectorAll("textArea").forEach(function (ele) {
+              ele.value = "";
+            });
+          });
+        });
+
+      document
+      ?.querySelectorAll('textarea')
+      .forEach(function (ele){
+        ele.defaultValue = ele.defaultValue.replace(/<!--.*?-->/g, '');
+      })
+        let checkButtonLabel = "check_button_label_placeHolder";
+        let hideButtonLabel = "hide_button_label_placeHolder";
+        document?.querySelectorAll(".check__button").forEach(function (ele) {
+        let answerBox = document.querySelector(".check__solution")
+        if (!answerBox.classList.contains("check__hidden")) {
+          answerBox.classList.add("check__hidden");
+          ele.innerText = checkButtonLabel;
+        }
+          ele.addEventListener("click", function (e) {
+            if (answerBox.classList.contains("check__hidden")) {
+              answerBox.classList.remove("check__hidden")
+              ele.innerText = hideButtonLabel;
+            } else {
+              answerBox.classList.add("check__hidden")
+              ele.innerText = checkButtonLabel;
+            }
+          })
+        })
+    });
+  </script>
+  </body></html>

@@ -1,4 +1,3 @@
-
 # 8.0 Introdução
 
 ## 8.0.1 Webster - Por que devo fazer este módulo?

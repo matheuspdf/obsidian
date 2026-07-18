@@ -436,6 +436,11 @@ As WLANs modernas incorporam várias tecnologias para ajudar a proteger os dados
 
 Nesta atividade, você receberá um cenário. Você vai determinar o motivo pelo qual um cliente em rede sem fio não consegue se conectar a um roteador sem fio e não pode corrigir o problema.
 
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/36.3.3.html|Instruções]]
+> - 📥 [[anexos/36.3.3.pka|Abrir no Packet Tracer]]
+
+---
 # 36.4 Problemas comuns de conectividade com a Internet
 
 ## 36.4.1 Erros de configuração do servidor DHCP

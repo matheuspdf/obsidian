@@ -418,7 +418,11 @@ O espectro não licenciado está aberto para qualquer um usar. O espectro não l
 
 Nesta atividade, você concluirá uma topologia física com base em um diagrama de rede fornecido.
 
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/37.2.7.html|Instruções]]
+> - 📥 [[anexos/37.2.7.pka|Abrir no Packet Tracer]]
 
+---
 ## 37.2.8 Documentação dos Dispositivos de Rede
 
 A documentação dos dispositivos de rede deve conter registros precisos e atualizados do hardware e software da rede. A documentação deve incluir todas as informações pertinentes sobre os dispositivos de rede.
@@ -576,8 +580,13 @@ O único dispositivo conectado a S2 é o S1. Dessa forma, não há mais disposit
 
 ## 37.2.12 Packet Tracer - Use o CDP para Mapear uma Rede
 
-Um administrador de rede sênior exige que você mapeie a rede da Filial remota e descubra o nome de um switch instalado recentemente e que ainda precisa ter um endereço IPv4 configurado. Sua tarefa é criar um mapa da rede da filial. Para mapear a rede, você usará SSH para acesso remoto e Protocolo de Descoberta da Cisco (Cisco Discovery Protocol ou CDP) para descobrir informações sobre dispositivos de rede vizinhos, como roteadores e switches.
+Um administrador de rede sênior exige que você mapeie a rede da Filial remota e descubra o nome de um switch instalado recentemente e que ainda precisa ter um endereço IPv4 configurado. Sua tarefa é criar um mapa da rede da filial. Para mapear a rede, você usará SSH para acesso remoto e Protocolo de Descoberta da Cisco (Cisco Discovery Protocol ou CDP) para descobrir informações sobre dispositivos de rede vizinhos, como roteadores e stwiches.
 
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/37.2.12.html|Instruções]]
+> - 📥 [[anexos/37.2.12.pka|Abrir no Packet Tracer]]
+
+---
 ## 37.2.13 Packet Tracer - Desafio de Solução de Problemas - Documentar a Rede
 
 Nesta atividade de Tracer de Pacotes, você documentará uma rede que é desconhecida para você.
@@ -591,7 +600,11 @@ Nesta atividade de Tracer de Pacotes, você documentará uma rede que é desconh
 
 **Observação**: Certifique-se de guardar sua documentação. Será necessária para uma atividade mais adiante neste módulo.
 
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/37.2.13.html|Instruções]]
+> - 📥 [[anexos/37.2.13.pka|Abrir no Packet Tracer]]
 
+---
 # 37.3 Central de Ajuda (Help Desk)
 
 ## 37.3.1 A Política de Segurança 
@@ -1333,7 +1346,11 @@ Nesta atividade do Packet Tracer, você usa a documentação de rede para identi
 - Implementar soluções para problemas de comunicação em rede.
 - Verificar a operação da rede.
 
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/37.5.6.html|Instruções]]
+> - 📥 [[anexos/37.5.6.pka|Abrir no Packet Tracer]]
 
+---
 # 37.6 Solucionar problemas de Conectividade Remotamente
 
 ## 37.6.1 Suporte a usuários remotos

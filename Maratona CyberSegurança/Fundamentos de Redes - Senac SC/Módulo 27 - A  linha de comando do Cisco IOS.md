@@ -405,7 +405,11 @@ Nesta atividade do Packet Tracer, você atingirá os seguintes objetivos:
 - Parte 2: Explorar modos EXEC
 - Parte 3: Ajustar o Relógio
 
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/27.2.6.html|Instruções]]
+> - 📥 [[anexos/27.2.6.pka|Abrir no Packet Tracer]]
 
+---
 # 27.3 Exibir Informações do dispositivo
 
 ## 27.3.1 Vídeo - Comandos Show Cisco IOS
@@ -689,9 +693,12 @@ R1#
 
 Nesta atividade, explore alguns comandos **show** do Cisco IOS.
 
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/27.3.3.html|Instruções]]
+> - 📥 [[anexos/27.3.3.pka|Abrir no Packet Tracer]]
 
+---
 # 27.4 Resumo Linha de Comando do Cisco IOS
-
 
 ## 27.4.1 O que aprendi neste módulo?
 

@@ -204,31 +204,11 @@ C:\>
 
 Nesta atividade, você usará o comando ipconfig para identificar a configuração incorreta em um PC.
 
-### Packet Tracer - Usando o comando ipconfig
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/17.1.3.html|Instruções]]
+> - 📥 [[anexos/17.1.3.pka|Abrir no Packet Tracer]]
 
-#### Objetivos
-
-- Use o comando ipconfig para identificar uma configuração incorreta em um PC.
-
-#### Histórico/Cenário
-
-O proprietário de uma pequena empresa não consegue conectar-se à Internet com um dos quatro PCs no escritório. Todos os PCs são configurados com endereçamento IP estático usando a rede 192.168.1.0 /24. Os PCs devem ser capazes de acessar o servidor web [www.cisco.pka](https://www.cisco.pka/). Use o comando ipconfig /all para identificar o PC que está configurado de forma incorreta.
-
-#### Instruções
-
-##### Parte 1: Verificar configurações
-
-a. Acesse o prompt de comando em cada PC e digite o comando ipconfig /all no prompt.
-
-b. Verifique a configuração do endereço IP, da máscara de sub-rede e do gateway padrão para cada PC. Anote essa configuração de IP de cada PC para ajudar a identificar PCs que estão configurados de forma incorreta.
-
-##### Parte 2: Corrija as configurações incorretas
-
-a. Selecione o PC que está configurado incorretamente.
-
-b. Clique na guia Desktop > guia IP Configuration (Configuração de IP) para corrigir a configuração incorreta.
-
-
+---
 ## 17.1.4 O comando ping
 
 Provavelmente, o utilitário de rede mais usado é o ping. A maioria dos dispositivos habilitados para IP oferece suporte a **alguma forma do comando ping** para testar se dispositivos de rede podem ou não ser alcançados através da rede IP.
@@ -364,72 +344,11 @@ C:\>
 
 Nesta atividade, você usará o comando **ping** para identificar uma configuração incorreta em um PC.
 
-### Packet Tracer - Usando o comando ping
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/17.1.6.html|Instruções]]
+> - 📥 [[anexos/17.1.6.pka|Abrir no Packet Tracer]]
 
-#### Objetivos
-
-Use o comando ping para identificar uma configuração incorreta em um PC.
-
-#### Histórico/Cenário
-
-O proprietário de uma pequena empresa sabe que alguns usuários não podem acessar um website. Todos os PCs estão configurados com um endereçamento IP estático. Use o comando ping para identificar o problema.
-
-#### Instruções
-
-##### Parte 1: Verifique a conectividade.
-
-Acesse a guia Desktop > Web Browser de cada PC e digite a URL [www.cisco.pka](https://www.cisco.pka/). Identifique os PCs que estão sem conexão com o servidor Web.
-
-> **Observação:** todos os dispositivos precisam de tempo para concluir o processo de boot. Aguarde até um minuto para receber uma resposta da Web.
-
-**Pergunta:** Quais PCs estão sem conexão com o servidor Web?
-
-**Resposta:** PC2
-
-##### Parte 2: Faça ping no servidor Web a partir do PC com problemas de conectividade.
-
-a. No PC, acesse o Command Prompt na guia Desktop.
-
-b. No prompt, digite ping [www.cisco.pka](https://www.cisco.pka/).
-
-**Pergunta:** O ping retornou alguma resposta? Qual é o endereço IP exibido na resposta, se houver?
-
-**Resposta:** Não houve resposta. Nenhum endereço IP foi exibido na mensagem.
-
-##### Parte 3: Faça ping no servidor Web a partir dos PCs configurados corretamente.
-
-a. No PC, acesse o Command Prompt na guia Desktop.
-
-b. No prompt, digite ping [www.cisco.pka](https://www.cisco.pka/).
-
-**Pergunta:** O ping retornou uma resposta? Qual é o endereço IP retornado, se houver?
-
-**Resposta:** A resposta foi 192.15.2.10 como endereço IP para [www.cisco.pka](https://www.cisco.pka/).
-
-##### Parte 4: Pingue o endereço IP do servidor web a partir de PCs com problemas de conectividade.
-
-a. No PC, acesse o Command Prompt na guia Desktop.
-
-b. Tente acessar o endereço IP do servidor web com o comando ping.
-
-O ping retornou uma resposta? Nesse caso, o PC pode acessar o servidor Web por meio do endereço IP, porém não com o nome de domínio. Isso pode indicar um problema com a configuração do servidor DNS no PC.
-
-##### Parte 5: Compare as informações de servidor DNS nos PCs.
-
-a. Acesse o Command Prompt dos PCs sem problemas.
-
-b. Usando o comando ipconfig /all, examine a configuração do servidor DNS nos PCs sem problemas.
-
-c. Acesse o Command Prompt dos PCs com problemas de conectividade.
-
-d. Usando o comando ipconfig /all, examine a configuração de servidor DNS nos PCs com configurações incorretas. As duas configurações são compatíveis?
-
-##### Parte 6: Faça as alterações de configuração necessárias nos PCs.
-
-a. Navegue até a guia Desktop dos PCs com problemas, faça as alterações de configuração necessárias em IP Configuration.
-
-b. Use o Web Browser da guia Desktop para se conectar a [www.cisco.pka](https://www.cisco.pka/) e verificar se as alterações de configuração resolveram o problema.
-
+---
 # 17.2. Resumo das Network Testing Utilities
 
 ## 17.2.1 O que aprendi neste módulo?

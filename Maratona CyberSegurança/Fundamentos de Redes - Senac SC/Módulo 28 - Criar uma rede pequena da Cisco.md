@@ -1,4 +1,3 @@
-
 # 28.0 Introdução
 
 ## 28.0.1 Webster - Por que devo fazer este módulo?
@@ -150,7 +149,11 @@ Nesta atividade, você completará os seguintes objetivos:
 - Configurar os PCs
 - Configurar a interface de gerenciamento do switch
 
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/28.1.4.html|Instruções]]
+> - 📥 [[anexos/28.1.4.pka|Abrir no Packet Tracer]]
 
+---
 # 28.2 Configurar definições iniciais do roteador
 
 ## 28.2.1 Etapas da Configuração Básica de um Roteador
@@ -527,7 +530,11 @@ Nesta atividade, você completará os seguintes objetivos:
 - Criptografar comunicações
 - Verificar a implementação SSH
 
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/28.3.6.html|Instruções]]
+> - 📥 [[anexos/28.3.6.pka|Abrir no Packet Tracer]]
 
+---
 # 28.4 Configurar o gateway padrão
 
 ## 28.4.1 Gateway padrão em um host
@@ -589,9 +596,11 @@ Você configurou com êxito o gateway padrão no comutador S1.
 
 Esta atividade monitorada do Packet Tracer inclui um sistema de dicas e um tutorial integrado. Você conectará os dispositivos, configurará os PCs, configurará o roteador, configurará o switch e verificará a conectividade de ponta a ponta.
 
-[](https://www.netacad.com/content/ndic/1.0/courses/content/m11/pt-BR/assets/11.4.4-packet-tracer-build-a-switch-and-router-network.pksz)
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/28.4.4.html|Instruções]]
+> - 📥 [[anexos/28.4.4.pka|Abrir no Packet Tracer]]
 
-
+---
 ## 28.4.5 Packet Tracer - Solucionar problemas de gateway padrão
 
 Nesta atividade, você completará os seguintes objetivos:
@@ -599,7 +608,11 @@ Nesta atividade, você completará os seguintes objetivos:
 - Verificar a Documentação de Rede e Isolar Problemas
 - Implementar, Verificar e Documentar Soluções
 
+> [!example]- 🖧 Recursos do Lab
+> - 📄 [[anexos/28.4.5.html|Instruções]]
+> - 📥 [[anexos/28.4.5.pka|Abrir no Packet Tracer]]
 
+---
 # 28.5 Resumo de Construindo uma Rede Cisco Pequena
 
 ## 28.5.1 O que eu aprendi neste módulo?
