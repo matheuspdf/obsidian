@@ -712,6 +712,7 @@ Pesquise na Internet para saber mais sobre as bandeiras PSH e URG.
 
 ## 26.5.5 Vídeo - Aperto de mão de 3 vias TCP
 
+![[26.5.5.mp4#subtitle=anexos/26.5.5.vtt]]
 Eu tenho algumas imagens de uma captura de pacote Wireshark que mostra o processo de um handshake de três vias TCP e a terminação de uma conversação TCP. Vamos analisar essas imagens para ter uma ideia de como está funcionando.
 
 O TCP é um protocolo orientado à conexão, o que significa que uma conexão de ponta a ponta precisa ser estabelecida primeiro antes que os dados possam ser enviados ou recebidos. O handshake triplo de TCP inicia essa conexão. Quando a conexão finalmente precisar ser encerrada — digamos que é uma conexão com um servidor da Web e você fecha o navegador da Web — a conexão é encerrada com dois handshakes de duas vias.
@@ -805,6 +806,7 @@ O processo TCP receptor coloca os dados de um segmento em um buffer receptor. Os
 
 ## 26.6.2 Vídeo - Confiabilidade TCP - Números de Sequência e Reconhecimentos
 
+![[26.6.2.mp4#subtitle=anexos/26.6.2.vtt]]
 Uma das funções do TCP é garantir que cada segmento chegue ao seu destino. Os serviços TCP no host de destino reconhecem os dados que foram recebidos pelo aplicativo de origem.
 
 **Selecione o botão Reproduzir para assistir ao vídeo.**
@@ -852,6 +854,7 @@ O TCP usa temporizadores para saber quanto tempo esperar antes de reenviar um se
 
 ## 26.6.4 Vídeo - Confiabilidade TCP - Perda e Retransmissão de Dados
 
+![[26.6.4.mp4#subtitle=anexos/26.6.4.vtt]]
 O gráfico mostrado neste vídeo usa números de segmento em vez de números de sequência.
 
 O TCP é um protocolo confiável. Ele usa números de sequência e confirmações para oferecer essa confiabilidade. Mas o que acontece quando os dados são perdidos em trânsito? Como um protocolo confiável, tem que haver um mecanismo para reenviar dados perdidos, para que toda uma parte de dados, como um arquivo, uma imagem ou um vídeo, possa ser reconstruída de todos os segmentos.

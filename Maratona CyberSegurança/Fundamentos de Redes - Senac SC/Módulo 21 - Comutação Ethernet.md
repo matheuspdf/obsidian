@@ -658,13 +658,13 @@ Em seguida, PC-A envia outro quadro para PC-D como mostrado na figura. A tabela 
 ![[Pasted image 20260615214024.png]]
 
 ## 21.4.4 Vídeo - Tabelas de endereços MAC em switches conectados
-![[21.4.4.mp4#subtitle=anexos/21.4.4.vtt]]
+
 Um switch pode ter vários endereços MAC associados a uma única porta. Isso é comum quando o switch está conectado a outro switch. O switch terá uma entrada separada na tabela de endereços MAC para cada quadro recebido com um endereço MAC de origem diferente.
 
 Clique em Reproduzir na figura para ver uma demonstração de como dois switches conectados criam tabelas de endereços MAC.
 
 **Selecione o botão Reproduzir para assistir ao vídeo.**
-
+![[21.4.4.mp4#subtitle=anexos/21.4.4.vtt]]
 Neste vídeo, PC-A vai enviar um quadro Ethernet para PC-B, e PC-B enviará um quadro Ethernet para o PC-A. Vamos examinar como os switches S1 e S2 constroem suas tabelas de endereços MAC e como eles encaminham quadros com base nas informações dessas tabelas.
 
 O PC-A tem um quadro Ethernet para enviar ao PC-B. O endereço MAC de origem do quadro é 00-0A e o de destino é 00-0B. O quadro Ethernet é enviado para o switch S1. S1 recebe o quadro Ethernet, examina o endereço MAC de origem, e observa que esse endereço não está na tabela de endereços MAC, então adiciona o endereço MAC e o número da porta de entrada. Em seguida, o switch S1 examina o endereço MAC de destino e observa que este endereço MAC não está na tabela, então o envia para todas as portas.

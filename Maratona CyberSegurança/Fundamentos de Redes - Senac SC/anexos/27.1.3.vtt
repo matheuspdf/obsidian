@@ -1,0 +1,172 @@
+WEBVTT
+
+00:00:04.000 --> 00:00:07.000
+[Alto-falante] Vamos examinar os modos de comando do Cisco IOS,
+
+00:00:07.000 --> 00:00:09.000
+Vou clicar em PC1,
+
+00:00:09.000 --> 00:00:12.000
+clique no programa de emulação de terminal,
+
+00:00:12.000 --> 00:00:15.000
+clique em ok e você pode ver que eu sou apresentado
+
+00:00:15.000 --> 00:00:18.000
+de linha de comando do console.
+
+00:00:18.000 --> 00:00:21.000
+Esse é o Cisco IOS.
+
+00:00:21.000 --> 00:00:23.000
+Vou pressionar enter no meu teclado para começar,
+
+00:00:23.000 --> 00:00:26.000
+Observem o prompt de comando na parte inferior.
+
+00:00:26.000 --> 00:00:29.000
+da tela. O que indica o modo de comando,
+
+00:00:29.000 --> 00:00:30.000
+que eu estou dentro.
+
+00:00:30.000 --> 00:00:32.000
+O Cisco IOS usa diferentes modos de comando
+
+00:00:32.000 --> 00:00:36.000
+para estabelecer vários níveis de privilégio para usuários.
+
+00:00:36.000 --> 00:00:39.000
+e cada modo de comando inclui comandos diferentes.
+
+00:00:39.000 --> 00:00:42.000
+Por exemplo, a chave de palavra, que é
+
+00:00:42.000 --> 00:00:44.000
+o nome padrão do switch
+
+00:00:44.000 --> 00:00:46.000
+com os sinais maiores do que indicados,
+
+00:00:46.000 --> 00:00:49.000
+que estou no modo de aceitação do usuário.
+
+00:00:49.000 --> 00:00:51.000
+Esse modo tem poucos privilégios,
+
+00:00:51.000 --> 00:00:55.000
+com acesso a apenas um número limitado de comandos.
+
+00:00:55.000 --> 00:00:57.000
+Um desses comandos disponíveis neste modo,
+
+00:00:57.000 --> 00:01:00.000
+é o comando Ativar.
+
+00:01:00.000 --> 00:01:03.000
+No cursor intermitente, vou digitar o comando enable
+
+00:01:03.000 --> 00:01:05.000
+e pressione enter, e eu estou agora em
+
+00:01:05.000 --> 00:01:08.000
+modo EXEC com privilégios
+
+00:01:08.000 --> 00:01:10.000
+Isso fica evidente porque o prompt mudou
+
+00:01:10.000 --> 00:01:12.000
+de um sinal maior do que
+
+00:01:12.000 --> 00:01:16.000
+para um hash ou um sinal de libra.
+
+00:01:16.000 --> 00:01:18.000
+O modo EXEC privilegiado oferece mais
+
+00:01:18.000 --> 00:01:21.000
+nível privilegiado para o usuário e
+
+00:01:21.000 --> 00:01:23.000
+mais comandos estão disponíveis.
+
+00:01:23.000 --> 00:01:25.000
+Se eu quiser acessar um nível superior,
+
+00:01:25.000 --> 00:01:28.000
+posso entrar no modo de configuração global.
+
+00:01:28.000 --> 00:01:31.000
+ou modo de config global.
+
+00:01:31.000 --> 00:01:33.000
+Posso alcançar o modo de configuração global,
+
+00:01:33.000 --> 00:01:36.000
+digitando no terminal configure
+
+00:01:36.000 --> 00:01:38.000
+e pressionar Enter.
+
+00:01:38.000 --> 00:01:40.000
+e agora você pode ver
+
+00:01:40.000 --> 00:01:42.000
+o prompt de configuração global.
+
+00:01:42.000 --> 00:01:45.000
+Aqui é onde a maioria das configurações de um
+
+00:01:45.000 --> 00:01:47.000
+de um switch ou roteador são feitas.
+
+00:01:47.000 --> 00:01:50.000
+Existem também alguns modos de configuração
+
+00:01:50.000 --> 00:01:52.000
+como o modo de configuração de interface.
+
+00:01:52.000 --> 00:01:57.000
+Se eu digitar o "interface vlan 1" e pressionar Enter,
+
+00:01:57.000 --> 00:02:00.000
+Sou apresentado com um prompt que indica
+
+00:02:00.000 --> 00:02:05.000
+Agora estou no modo de configuração da interface.
+
+00:02:05.000 --> 00:02:07.000
+Muitos comandos só funcionarão
+
+00:02:07.000 --> 00:02:09.000
+de dentro de determinados modos
+
+00:02:09.000 --> 00:02:11.000
+um erro comum cometido pelos usuários
+
+00:02:11.000 --> 00:02:13.000
+novo para trabalhar com um Cisco IOS
+
+00:02:13.000 --> 00:02:16.000
+está tentando usar comandos de dentro de
+
+00:02:16.000 --> 00:02:17.000
+o modo errado.
+
+00:02:17.000 --> 00:02:19.000
+Se você tiver certeza de que está digitando
+
+00:02:19.000 --> 00:02:21.000
+um comando corretamente, mas você
+
+00:02:21.000 --> 00:02:24.000
+estão continuamente recebendo uma mensagem de erro
+
+00:02:24.000 --> 00:02:25.000
+sempre verifique o seu prompt,
+
+00:02:25.000 --> 00:02:27.000
+para ter certeza de que você está no modo
+
+00:02:27.000 --> 00:02:30.000
+certo.

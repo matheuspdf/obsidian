@@ -194,6 +194,8 @@ As figuras exibem sinalização
 
 **Selecione o botão Reproduzir para assistir o vídeo.**
 
+![[30.2.5.mp4#subtitle=anexos/30.2.5.vtt]]
+
 Largura de banda é a quantidade de dados que podem ser transmitidos e recebidos durante um período específico, medida em bits por segundo. Os bits vão viajar a uma certa velocidade dependendo do meio físico, como a velocidade da luz usada para enviar bits através de cabo de fibra óptica.
 
 Aqui estão um grupo de 10 bits a serem transmitidos. Vamos enviar esses bits usando uma largura de banda de um bit por segundo. Isso significa que a cada segundo, um bit será transmitido. Com 10 bits sendo transmitidos a uma largura de banda de um bit por segundo, está levando 10 segundos para enviar todos os 10 bits. Claro, isso é incrivelmente lento e as redes atuais normalmente enviam e recebem em milhões de bits por segundo, megabits, ou bilhões de bits por segundo, gigabits.

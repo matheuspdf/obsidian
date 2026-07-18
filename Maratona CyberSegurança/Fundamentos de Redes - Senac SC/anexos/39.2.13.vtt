@@ -1,0 +1,481 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.000
+Autenticação e autorização
+
+00:00:02.000 --> 00:00:05.000
+são processos de segurança distintos no mundo da identidade
+
+00:00:05.000 --> 00:00:07.000
+e gerenciamento de acesso
+
+00:00:07.000 --> 00:00:09.000
+Senha de autenticação
+
+00:00:09.000 --> 00:00:12.000
+e outros métodos de identificação para confirmar
+
+00:00:12.000 --> 00:00:14.000
+que os usuários são quem dizem ser.
+
+00:00:14.000 --> 00:00:18.000
+Por outro lado, a autorização atribui permissões de usuário
+
+00:00:18.000 --> 00:00:22.000
+aos recursos que o usuário tem permissão para acessar.
+
+00:00:22.000 --> 00:00:23.000
+nessa atividade tutorada do Packet Tracer.
+
+00:00:23.000 --> 00:00:25.000
+Configure o controle de acesso
+
+00:00:25.000 --> 00:00:27.000
+você irá configurar a autenticação.
+
+00:00:27.000 --> 00:00:29.000
+e autorização para serviços de rede
+
+00:00:29.000 --> 00:00:35.000
+inclusive acesso de rede sem fio, e-mail e serviços de FTP.
+
+00:00:35.000 --> 00:00:37.000
+Esta atividade é aberta e se concentra no modo físico.
+
+00:00:37.000 --> 00:00:43.000
+No entanto, você pode concluí-la no modo lógico.
+
+00:00:43.000 --> 00:00:49.000
+Observe também que a maioria das tarefas nesta atividade é classificada.
+
+00:00:49.000 --> 00:00:51.000
+Vou manter essa janela de classificação no topo
+
+00:00:51.000 --> 00:00:55.000
+para que possamos observar o aumento percentual enquanto concluo as tarefas.
+
+00:00:55.000 --> 00:01:01.000
+Parte 1: configurar e usar credenciais de autenticação AAA.
+
+00:01:01.000 --> 00:01:05.000
+Etapa 1, configurar as contas de usuário no servidor AAA.
+
+00:01:05.000 --> 00:01:09.000
+Navegue até a HQ
+
+00:01:09.000 --> 00:01:10.000
+e, em seguida, clique no armário
+
+00:01:10.000 --> 00:01:13.000
+que é o chassi alto e preto do servidor
+
+00:01:13.000 --> 00:01:15.000
+no canto inferior esquerdo.
+
+00:01:15.000 --> 00:01:19.000
+No rack direito, clique em AAA radius server,
+
+00:01:19.000 --> 00:01:25.000
+Guia Serviços e, em seguida, AAA em Serviços.
+
+00:01:25.000 --> 00:01:29.000
+Ative o serviço AAA.
+
+00:01:29.000 --> 00:01:32.000
+Em 'User setup,' adicione os usuários'User1'
+
+00:01:32.000 --> 00:01:34.000
+e “User2” com
+
+00:01:34.000 --> 00:01:44.000
+a senha especificada nas instruções.
+
+00:01:44.000 --> 00:01:47.000
+Etapa 2 : Para configurar a autenticação do cliente sem fio
+
+00:01:47.000 --> 00:01:50.000
+em HQ-Laptop-1.
+
+00:01:50.000 --> 00:01:55.000
+Volte para HQ e clique em HQ-Laptop-1.
+
+00:01:55.000 --> 00:01:59.000
+Ele está localizado em duas salas à direita do armário de fiação.
+
+00:01:59.000 --> 00:02:02.000
+Clique na guia Config e, depois, clique na interface
+
+00:02:02.000 --> 00:02:05.000
+clique em 'Wireless0.'
+
+00:02:05.000 --> 00:02:11.000
+Na caixa SSID, digite “HQ-INT.”
+
+00:02:11.000 --> 00:02:17.000
+na área de autenticação clique 'WPA2.'
+
+00:02:17.000 --> 00:02:20.000
+na caixa User ID, entre 'User 1' e escreva
+
+00:02:20.000 --> 00:02:28.000
+'passuserone!' na caixa da senha.
+
+00:02:28.000 --> 00:02:32.000
+Na seção Configuração de IP, clique em “DHCP”.
+
+00:02:32.000 --> 00:02:36.000
+Aguarde alguns instantes até que a oferta de DHCP seja aceita.
+
+00:02:36.000 --> 00:02:40.000
+Verifique que HQ-Laptop-1 recebeu endereçamento
+
+00:02:40.000 --> 00:02:42.000
+e foi atribuído um endereço IP.
+
+00:02:42.000 --> 00:02:47.000
+na rede 192.168.50.0/24.
+
+00:02:47.000 --> 00:02:49.000
+Neste ponto, é importante observar
+
+00:02:49.000 --> 00:02:52.000
+o rastreamento de pacotes nem sempre converge rapidamente
+
+00:02:52.000 --> 00:02:55.000
+como estamos configurando o acesso sem fio.
+
+00:02:55.000 --> 00:02:57.000
+Se você estiver tendo problemas
+
+00:02:57.000 --> 00:03:00.000
+consulte a nota nas instruções para esta etapa.
+
+00:03:00.000 --> 00:03:03.000
+Etapa 3 : Para configurar a autenticação do cliente sem fio
+
+00:03:03.000 --> 00:03:07.000
+no HQ laptop 2. clique HQ laptop 2, localizado
+
+00:03:07.000 --> 00:03:11.000
+no canto superior direito de HQ.
+
+00:03:11.000 --> 00:03:14.000
+Repita as etapas anteriores para definir as configurações wireless
+
+00:03:14.000 --> 00:03:32.000
+para HQ laptop 2, use as credenciais 'User 2'.
+
+00:03:32.000 --> 00:03:37.000
+Observe que, às vezes, é necessário alternar entre DHCP
+
+00:03:37.000 --> 00:03:41.000
+e estático para forçar a convergência do DHCP.
+
+00:03:41.000 --> 00:03:45.000
+Veja se no HQ laptop 2 foi recebido endereçamento
+
+00:03:45.000 --> 00:03:53.000
+e atribuído a um endereço na rede 192.168.50.0/24.
+
+00:03:53.000 --> 00:03:57.000
+Parte 2: Configurar e Verificar Serviços de E-mail
+
+00:03:57.000 --> 00:04:00.000
+Passo 1: Ative os serviços de e-mail.
+
+00:04:00.000 --> 00:04:02.000
+e configurar as contas de usuário de e-mail.
+
+00:04:02.000 --> 00:04:05.000
+Navegue para o armário de fiação
+
+00:04:05.000 --> 00:04:10.000
+no rack do lado direito, clique em “Servidor de e-mail”, guia Serviços
+
+00:04:10.000 --> 00:04:15.000
+e depois em “E-mail” em “Serviços”.
+
+00:04:15.000 --> 00:04:21.000
+Ative os serviços SMTP e POP3.
+
+00:04:21.000 --> 00:04:28.000
+Defina o nome de domínio para mail.cyberhq.com.
+
+00:04:28.000 --> 00:04:31.000
+Em Configuração do usuário, digite o nome de usuário e a senha
+
+00:04:31.000 --> 00:04:33.000
+combinações das instruções.
+
+00:04:33.000 --> 00:04:55.000
+Eu os copio aqui para facilitar o acesso.
+
+00:04:55.000 --> 00:04:59.000
+Passo 2: Configure os clientes de e-mail Navegue de volta para HQ
+
+00:04:59.000 --> 00:05:06.000
+e clique em PC1-1, localizado no canto inferior.
+
+00:05:06.000 --> 00:05:10.000
+Clique na guia “Desktop”, “E-mail”. As configurações de e-mail
+
+00:05:10.000 --> 00:05:11.000
+deve abrir.
+
+00:05:11.000 --> 00:05:15.000
+entre sou nome como 'Suk-Yi,' e o email
+
+00:05:15.000 --> 00:05:23.000
+HQuser1@mail.cyberhq.com
+
+00:05:23.000 --> 00:05:26.000
+Nomes de servidor de e-mail de entrada e saída são ambos
+
+00:05:26.000 --> 00:05:33.000
+mail.cyberhq.com.
+
+00:05:33.000 --> 00:05:38.000
+O nome de usuário é "HQuser1."
+
+00:05:38.000 --> 00:05:43.000
+A senha é cisco123
+
+00:05:43.000 --> 00:05:46.000
+Clique em “Salvar”. Use as informações
+
+00:05:46.000 --> 00:05:48.000
+na tabela em suas instruções para configurar o e-mail
+
+00:05:48.000 --> 00:05:53.000
+configurações de 2-3, HQ-Laptop-1 e Net-Admin.
+
+00:05:53.000 --> 00:05:58.000
+Eu tenho essa informação copiada aqui.
+
+00:05:58.000 --> 00:06:31.000
+PC 2-3 está no escritório abaixo da sala de conferência.
+
+00:06:31.000 --> 00:06:49.000
+O PC Net-Admin está no armário de distribuição.
+
+00:06:49.000 --> 00:06:52.000
+A etapa três é enviar um e-mail como Suk-Yi.
+
+00:06:52.000 --> 00:06:58.000
+No PC1-1, clique em “Escrever”
+
+00:06:58.000 --> 00:06:59.000
+Escreva um email
+
+00:06:59.000 --> 00:07:04.000
+para Ajulo em BRuser1@ mail.cyberhq.com
+
+00:07:04.000 --> 00:07:07.000
+Insira um assunto e uma mensagem de e-mail de sua escolha,
+
+00:07:07.000 --> 00:07:18.000
+Clique em “Enviar” quando terminar.
+
+00:07:18.000 --> 00:07:21.000
+Observe que o Packet Tracer pode levar vários segundos para convergir
+
+00:07:21.000 --> 00:07:24.000
+antes de receber a mensagem "Send Success"
+
+00:07:24.000 --> 00:07:25.000
+localizada na parte inferior da janela
+
+00:07:25.000 --> 00:07:28.000
+Observe também que o packet tracer não classifica esta etapa.
+
+00:07:28.000 --> 00:07:31.000
+Verifique se você concluiu esta etapa corretamente
+
+00:07:31.000 --> 00:07:36.000
+verificando se o Ajulo recebeu o e-mail.
+
+00:07:36.000 --> 00:07:41.000
+Navegue até o PC23.
+
+00:07:41.000 --> 00:07:47.000
+Clique em “Receber” e leia o e-mail de Suk-Yi.
+
+00:07:47.000 --> 00:07:51.000
+Parte três: configurar e usar serviços de FTP
+
+00:07:51.000 --> 00:07:54.000
+Ative o serviço FTP.
+
+00:07:54.000 --> 00:07:57.000
+Navegue para o armário de fiação
+
+00:07:57.000 --> 00:08:02.000
+No rack do lado direito, clique em “Servidor FTP”, guia “Serviços”,
+
+00:08:02.000 --> 00:08:06.000
+e depois em “FTP” em “Serviços”.
+
+00:08:06.000 --> 00:08:09.000
+Ative o serviço FTP.
+
+00:08:09.000 --> 00:08:12.000
+A segunda etapa é criar as contas de usuário de FTP.
+
+00:08:12.000 --> 00:08:16.000
+Em Configuração do usuário, digite os nomes de usuário, as senhas,
+
+00:08:16.000 --> 00:08:19.000
+e os privilégios listados nas instruções.
+
+00:08:19.000 --> 00:08:21.000
+Clique em “Adicionar” para adicionar cada usuário.
+
+00:08:21.000 --> 00:08:24.000
+Observe que o nome de usuário “Malia” não
+
+00:08:24.000 --> 00:08:27.000
+incluir os privilégios de exclusão.
+
+00:08:27.000 --> 00:08:50.000
+Tenho as contas de FTP copiadas aqui.
+
+00:08:50.000 --> 00:08:54.000
+Verifique se cada usuário foi criado corretamente e
+
+00:08:54.000 --> 00:08:56.000
+Feche a janela do servidor.
+
+00:08:56.000 --> 00:08:59.000
+Etapa 3: Transferir arquivos entre Net-Admin
+
+00:08:59.000 --> 00:09:03.000
+e o servidor FTP Clique em “Net-Admin PC”
+
+00:09:03.000 --> 00:09:08.000
+clique guia Área de trabalho, clique em Command Prompt.
+
+00:09:08.000 --> 00:09:13.000
+Insira o comando FTP 192.168.75.2
+
+00:09:13.000 --> 00:09:16.000
+para logar no servidor de FTP
+
+00:09:16.000 --> 00:09:19.000
+E depois autenticar com o nome de usuário 'sukyi' e a senha
+
+00:09:19.000 --> 00:09:25.000
+cisco123.
+
+00:09:25.000 --> 00:09:29.000
+Insira o comando dir para listar os arquivos no servidor FTP.
+
+00:09:29.000 --> 00:09:34.000
+Use o comando 'get' para baixar o arquivo 'amessage.txt.'
+
+00:09:34.000 --> 00:09:36.000
+Saia da sessão de FTP.
+
+00:09:36.000 --> 00:09:39.000
+Feche o prompt de comando, clique em editor de texto,
+
+00:09:39.000 --> 00:09:43.000
+e, em seguida, em “Abrir arquivo”.
+
+00:09:43.000 --> 00:09:49.000
+Abra o arquivo baixado, 'amessage.txt.'
+
+00:09:49.000 --> 00:09:51.000
+"Saudações. Você conseguiu
+
+00:09:51.000 --> 00:09:53.000
+acesse o servidor de FTP
+
+00:09:53.000 --> 00:09:58.000
+Clique em “File-New”, digite uma mensagem de sua escolha.
+
+00:09:58.000 --> 00:10:02.000
+Clique em “File-Save” e salve a nova mensagem
+
+00:10:02.000 --> 00:10:07.000
+como "amessage_new.txt".
+
+00:10:07.000 --> 00:10:09.000
+Feche o Text Editor (Editor de Texto) quando terminar.
+
+00:10:09.000 --> 00:10:12.000
+clique em Prompt de comando e faça logon novamente no servidor FTP
+
+00:10:12.000 --> 00:10:18.000
+como usuário sukyi.
+
+00:10:18.000 --> 00:10:19.000
+Use o comando 'put' para
+
+00:10:19.000 --> 00:10:25.000
+subir amessage_new.txt.
+
+00:10:25.000 --> 00:10:28.000
+Saia da sessão de FTP.
+
+00:10:28.000 --> 00:10:32.000
+A etapa quatro é verificar se os privilégios de usuário do FTP estão funcionando
+
+00:10:32.000 --> 00:10:33.000
+como configurado.
+
+00:10:33.000 --> 00:10:39.000
+Volte para a HQ e clique em HQLaptop 1.
+
+00:10:39.000 --> 00:10:40.000
+Feche o navegador.
+
+00:10:40.000 --> 00:10:43.000
+Clique em Command Prompt.
+
+00:10:43.000 --> 00:10:48.000
+para logar no servidor de FTP192.168.75.2
+
+00:10:48.000 --> 00:11:00.000
+com o nome de usuário 'malia' e a senha 'cisco123.'
+
+00:11:00.000 --> 00:11:03.000
+Use o comando 'delete' para tentar remover os novos
+
+00:11:03.000 --> 00:11:10.000
+suba o arquivo 'amessage_new.txt.'
+
+00:11:10.000 --> 00:11:12.000
+Observe que a permissão é negada.
+
+00:11:12.000 --> 00:11:16.000
+Lembre-se de que o usuário Malia não tem direitos de exclusão.
+
+00:11:16.000 --> 00:11:19.000
+No entanto, ela tem direitos de renomeação.
+
+00:11:19.000 --> 00:11:22.000
+Use o comando 'rename' para tentar alterar o nome
+
+00:11:22.000 --> 00:11:42.000
+para 'amessage_renamed.txt.'
+
+00:11:42.000 --> 00:11:44.000
+E o arquivo é renomeado com sucesso.
+
+00:11:44.000 --> 00:11:48.000
+Saia da sessão de FTP.
+
+00:11:48.000 --> 00:11:51.000
+e feche o HQ-Laptop1.
+
+00:11:51.000 --> 00:11:52.000
+Isso termina essa atividade do Packet Tracer
+
+00:11:52.000 --> 00:11:56.000
+Configure o controle de acesso Você também pode verificar
+
+00:11:56.000 --> 00:11:58.000
+que você concluiu na atividade
+
+00:11:58.000 --> 00:12:01.000
+ao olhar para “Verificar resultados”.

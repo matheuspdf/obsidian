@@ -1,0 +1,133 @@
+WEBVTT
+
+00:00:12.000 --> 00:00:14.000
+- Neste vídeo, vamos observar
+
+00:00:14.000 --> 00:00:17.000
+como configurar inicialmente o switch.
+
+00:00:17.000 --> 00:00:20.000
+Ou quando temos acesso físico ao switch,
+
+00:00:20.000 --> 00:00:23.000
+para configurá-lo.
+
+00:00:23.000 --> 00:00:25.000
+Então, eu tenho minha máquina Windows10 aqui,
+
+00:00:25.000 --> 00:00:28.000
+e eu estou rodando algum em algum lugar chamado Tera Term.
+
+00:00:28.000 --> 00:00:32.000
+É conhecido como um software de emulação de terminal .
+
+00:00:32.000 --> 00:00:34.000
+Existem outros disponíveis,
+
+00:00:34.000 --> 00:00:36.000
+mas vou usar o Tera Term.
+
+00:00:36.000 --> 00:00:40.000
+Então, eu já estou fisicamente conectado ao switch,
+
+00:00:40.000 --> 00:00:46.000
+usando o cabo USB conectado ao cabo serial rollover.
+
+00:00:46.000 --> 00:00:49.000
+Conectado à porta de console do switch.
+
+00:00:49.000 --> 00:00:54.000
+Vou seguir em frente e clicar duas vezes em Tera Term.
+
+00:00:54.000 --> 00:00:57.000
+Então, eu vou escolher a conexão serial.
+
+00:00:57.000 --> 00:01:02.000
+E como estou usando minha porta USB,
+
+00:01:02.000 --> 00:01:07.000
+Escolherei COM3, conexão de porta de comunicação USB para Serial.
+
+00:01:07.000 --> 00:01:10.000
+e clicar em Ok.
+
+00:01:10.000 --> 00:01:14.000
+Agora, para que possamos ver isso um pouco mais fácil,
+
+00:01:14.000 --> 00:01:19.000
+Vou passar aqui para Setup, Fonte e eu vou
+
+00:01:19.000 --> 00:01:24.000
+para ter certeza de que podemos ver isso um pouco mais fácil.
+
+00:01:24.000 --> 00:01:27.000
+Aqui vamos nós.
+
+00:01:27.000 --> 00:01:30.000
+Agora observe que não estou vendo nenhum tipo de prompt.
+
+00:01:30.000 --> 00:01:34.000
+Bem, isso porque o switch já inicializou,
+
+00:01:34.000 --> 00:01:38.000
+e está esperando por algum tipo de interação minha.
+
+00:01:38.000 --> 00:01:41.000
+Na verdade, ele já forneceu saída, mas ainda não o vi
+
+00:01:41.000 --> 00:01:43.000
+porque a Tera Term não havia iniciado.
+
+00:01:43.000 --> 00:01:45.000
+Então, vou pressionar Enter.
+
+00:01:45.000 --> 00:01:47.000
+Ah, lá vamos nós.
+
+00:01:47.000 --> 00:01:48.000
+Ele diz,
+
+00:01:48.000 --> 00:01:53.000
+"Deseja entrar na caixa de diálogo de configuração inicial?"
+
+00:01:53.000 --> 00:01:56.000
+Sempre diga não a isso.
+
+00:01:56.000 --> 00:02:00.000
+Se você responder que sim, isso fará uma série de perguntas que,
+
+00:02:00.000 --> 00:02:03.000
+para ser sincero, vai confundir você.
+
+00:02:03.000 --> 00:02:06.000
+Usar a interface de linha de comando é muito mais fácil
+
+00:02:06.000 --> 00:02:09.000
+para configurar o switch ou o roteador.
+
+00:02:09.000 --> 00:02:11.000
+Então, vou digitar "n" para não.
+
+00:02:11.000 --> 00:02:14.000
+Se você digitar acidentalmente sim ou começar,
+
+00:02:14.000 --> 00:02:17.000
+se você digitar yes e começar a fazer isso, e você decidir
+
+00:02:17.000 --> 00:02:21.000
+que quer sair desse modo, basta pressionar Ctrl C.
+
+00:02:21.000 --> 00:02:22.000
+Como podem ver, estou
+
+00:02:22.000 --> 00:02:26.000
+no prompt do switch com mais de um símbolo.
+
+00:02:26.000 --> 00:02:31.000
+Estou agora no Cisco iOS inter-network
+
+00:02:31.000 --> 00:02:35.000
+Operating System, linha de comando do sistema operacional e posso começar
+
+00:02:35.000 --> 00:02:38.000
+a configurar o switch neste momento.

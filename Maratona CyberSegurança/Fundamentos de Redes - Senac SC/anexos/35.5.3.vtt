@@ -1,0 +1,268 @@
+WEBVTT
+
+00:00:04.000 --> 00:00:06.000
+- Vamos percorrer o processo de inicialização do roteador.
+
+00:00:06.000 --> 00:00:08.000
+Como você pode ver, tenho uma conexão de console
+
+00:00:08.000 --> 00:00:11.000
+usando o Tera Term para um roteador Cisco.
+
+00:00:11.000 --> 00:00:14.000
+Há três etapas principais.
+
+00:00:14.000 --> 00:00:18.000
+Na primeira fase, o roteador executa o programa Power On Self Test,
+
+00:00:18.000 --> 00:00:20.000
+ou POST.
+
+00:00:20.000 --> 00:00:24.000
+Localizado na memória somente leitura, ou ROM,
+
+00:00:24.000 --> 00:00:27.000
+o Power On Self Test verifica se há erros no hardware,
+
+00:00:27.000 --> 00:00:32.000
+como a CPU, a DRAM e a NVRAM.
+
+00:00:32.000 --> 00:00:35.000
+Após o POSTs do sistema,
+
+00:00:35.000 --> 00:00:38.000
+o roteador, executa o programa bootstrap.
+
+00:00:38.000 --> 00:00:42.000
+O programa de bootstrap localizado na ROM.
+
+00:00:42.000 --> 00:00:44.000
+Este é o final da primeira etapa.
+
+00:00:44.000 --> 00:00:46.000
+O objetivo do programa de bootstrap
+
+00:00:46.000 --> 00:00:49.000
+é localizar e carregar o software Cisco IOS.
+
+00:00:49.000 --> 00:00:53.000
+O IOS é o sistema operacional da Cisco para o roteador.
+
+00:00:53.000 --> 00:00:57.000
+O Cisco IOS está localizado, por padrão
+
+00:00:57.000 --> 00:00:59.000
+na memória flash.
+
+00:00:59.000 --> 00:01:03.000
+Se o arquivo de imagem do não é encontrado na memória flash
+
+00:01:03.000 --> 00:01:05.000
+e então carregado na RAM,
+
+00:01:05.000 --> 00:01:09.000
+o roteador buscará por um servidor TFTP na rede
+
+00:01:09.000 --> 00:01:12.000
+para ver se é possível localizar outra imagem IOS.
+
+00:01:12.000 --> 00:01:15.000
+Depois que o for totalmente carregado,
+
+00:01:15.000 --> 00:01:18.000
+o roteador carregará o arquivo de configuração,
+
+00:01:18.000 --> 00:01:20.000
+conhecido como arquivo de configuração de inicialização.
+
+00:01:20.000 --> 00:01:22.000
+Esse arquivo contém
+
+00:01:22.000 --> 00:01:24.000
+todas as configurações definidas no roteador,
+
+00:01:24.000 --> 00:01:28.000
+como o nome do host e os endereços IP das interface do host.
+
+00:01:28.000 --> 00:01:30.000
+O arquivo de configuração está localizado
+
+00:01:30.000 --> 00:01:34.000
+na RAM não volátil, ou NVRAM, no roteador.
+
+00:01:34.000 --> 00:01:37.000
+Se o roteador não conseguir encontrar configuração de inicialização
+
+00:01:37.000 --> 00:01:39.000
+na memória NVRAM,
+
+00:01:39.000 --> 00:01:42.000
+ele também buscará por um servidor TFTP na rede
+
+00:01:42.000 --> 00:01:45.000
+para ver se consegue encontrar um arquivo de configuração.
+
+00:01:45.000 --> 00:01:47.000
+Se um arquivo de configuração não é localizado
+
+00:01:47.000 --> 00:01:49.000
+em qualquer servidor TFTP,
+
+00:01:49.000 --> 00:01:51.000
+então o roteador entrará no modo de configuração,
+
+00:01:51.000 --> 00:01:56.000
+que é um assistente de configuração destinado à configuração inicial.
+
+00:01:56.000 --> 00:01:59.000
+Vamos observar o processo em ação.
+
+00:01:59.000 --> 00:02:01.000
+Voltarei para minha conexão de console Tera Term
+
+00:02:01.000 --> 00:02:04.000
+e pressionarei Enter.
+
+00:02:04.000 --> 00:02:06.000
+Você pode ver que eu agora tenho uma conexão de console
+
+00:02:06.000 --> 00:02:07.000
+com o roteador.
+
+00:02:07.000 --> 00:02:12.000
+Digitarei "enable" para entrar no modo de usuário privilegiado
+
+00:02:12.000 --> 00:02:15.000
+e digitarei "reload."
+
+00:02:15.000 --> 00:02:16.000
+Isso reinicializará o roteador,
+
+00:02:16.000 --> 00:02:20.000
+e poderemos ver o processo de inicialização em ação.
+
+00:02:20.000 --> 00:02:21.000
+Vou pressionar Enter.
+
+00:02:21.000 --> 00:02:23.000
+E "proceed with reload?"
+
+00:02:23.000 --> 00:02:28.000
+Vou pressionar Enter para confirmar.
+
+00:02:28.000 --> 00:02:29.000
+Tudo bem, e você poderá ver que o
+
+00:02:29.000 --> 00:02:31.000
+sistema encontrou o bootstrap.
+
+00:02:31.000 --> 00:02:33.000
+O sistema foi reinicializado.
+
+00:02:33.000 --> 00:02:35.000
+"System Bootstrap, Version 15."
+
+00:02:35.000 --> 00:02:37.000
+Você pode ver aqui.
+
+00:02:37.000 --> 00:02:40.000
+Então o sistema já executou o POST
+
+00:02:40.000 --> 00:02:42.000
+e agora encontrou o bootstrap.
+
+00:02:42.000 --> 00:02:44.000
+Está localizado na memória.
+
+00:02:44.000 --> 00:02:48.000
+Você pode ver que há 512 512 megabytes de memória.
+
+00:02:48.000 --> 00:02:49.000
+Há um slot DIMM
+
+00:02:49.000 --> 00:02:52.000
+que não tem nenhuma memória expandida.
+
+00:02:52.000 --> 00:02:56.000
+Você pode ver que o sistema encontrou o ROMmon,
+
+00:02:56.000 --> 00:03:01.000
+ou Modo de monitor ROM, um subconjunto de recuperação IOS.
+
+00:03:01.000 --> 00:03:02.000
+que está localizado na memória ROM
+
+00:03:02.000 --> 00:03:06.000
+caso um IOS não seja encontrado.
+
+00:03:06.000 --> 00:03:08.000
+Você poderá ver que o programa de bootstrap
+
+00:03:08.000 --> 00:03:11.000
+agora encontrou o arquivo de imagem IOS
+
+00:03:11.000 --> 00:03:14.000
+e está descompactando a imagem IOS.
+
+00:03:14.000 --> 00:03:17.000
+Você pode comprovar isto pela presença
+
+00:03:17.000 --> 00:03:22.000
+de caracteres hash.
+
+00:03:22.000 --> 00:03:24.000
+Está terminando o processo de inicialização.
+
+00:03:24.000 --> 00:03:29.000
+Ele agora reconhece que estamos com o software Cisco IOS em execução,
+
+00:03:29.000 --> 00:03:36.000
+version 15.2, subrelease 3.
+
+00:03:36.000 --> 00:03:41.000
+Na parte inferior aqui, você pode ver que a memória,
+
+00:03:41.000 --> 00:03:45.000
+a memória flash no roteador foi reconhecida.
+
+00:03:45.000 --> 00:03:48.000
+E a configuração está sendo carregada agora.
+
+00:03:48.000 --> 00:03:51.000
+Agora, com esse roteador, configurei uma interface,
+
+00:03:51.000 --> 00:03:55.000
+e essa é a interface Gigabit0//0 interface.
+
+00:03:55.000 --> 00:04:01.000
+Se observarmos aqui -- rolarei um pouco para cima--
+
+00:04:01.000 --> 00:04:03.000
+vocês podem ver que a interface GigabitEthernet 0/0
+
+00:04:03.000 --> 00:04:05.000
+mudou seu status para ativa.
+
+00:04:05.000 --> 00:04:08.000
+Isto é porque eu a configurei.
+
+00:04:08.000 --> 00:04:09.000
+Então, sabemos, nesse momento,
+
+00:04:09.000 --> 00:04:11.000
+que a configuração foi carregada,
+
+00:04:11.000 --> 00:04:13.000
+e é isso que vemos na saída
+
+00:04:13.000 --> 00:04:15.000
+do roteador aqui.
+
+00:04:15.000 --> 00:04:18.000
+No final, agora, o roteador terminou de inicializar,
+
+00:04:18.000 --> 00:04:20.000
+e posso pressionar Enter.
+
+00:04:20.000 --> 00:04:23.000
+O primeiro que aparece é o prompt de comando.

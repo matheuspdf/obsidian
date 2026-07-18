@@ -23,7 +23,7 @@ Então, dada a importância desse assunto, vamos começar!
 # 34.1 Operação de descoberta de vizinho
 
 ## 34.1.1 Vídeo - Descoberta de Vizinhos IPv6
-
+![[34.1.1.mp4#subtitle=anexos/34.1.1.vtt]]
 Se sua rede estiver usando o protocolo de comunicação IPv6, o protocolo de descoberta de vizinhos, ou ND, é o que você precisa para corresponder endereços IPv6 a endereços MAC. Este tópico explica como o ND funciona.
 
 **Pressione o botão Reproduzir para ver uma demonstração do IPv6 Neighbor Discovery.**

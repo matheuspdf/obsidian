@@ -33,10 +33,7 @@ Os tipos de mensagens ICMP e os motivos pelos quais são enviadas são extensos.
 ## 29.1.2 Acessibilidade do Host
 
 Uma mensagem de eco ICMP pode ser usada para testar a capacidade de acesso de um host em uma rede IP. O host local envia uma solicitação de eco ICMP (ICMP Echo Request) para um host. Se o host estiver disponível, o host de destino enviará uma resposta de eco (Echo Reply). Na figura, clique em Reproduzir para ver uma animação de solicitação de eco/resposta de eco ICMP. Esse uso das mensagens de eco ICMP é a base do utilitário **ping**.
-
-![[Pasted image 20260625073736.png]]
-![[Pasted image 20260625073811.png]]
-
+![[brave_uigG1Fnut7.mp4]]
 ## 29.1.3 Destino ou Serviço Inacessível
 
 Quando um host ou um gateway recebe um pacote que não pode entregar, ele pode usar uma mensagem ICMP de destino inalcançável para notificar à origem que o destino ou o serviço está inalcançável. A mensagem conterá um código que indica por que não foi possível entregar o pacote.

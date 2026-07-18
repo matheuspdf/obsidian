@@ -63,20 +63,7 @@ Diferentemente da camada de transporte (OSI Layer 4), que gerencia o transporte 
 
 **Clique em Reproduzir na figura para ver uma animação que demonstra a troca de dados.**
 
-![[Pasted image 20260617064822.png]]
-
-![[Pasted image 20260617064840.png]]
-
-![[Pasted image 20260617064859.png]]
-
-![[Pasted image 20260617064925.png]]
-
-![[Pasted image 20260617064946.png]]
-
-![[Pasted image 20260617065016.png]]
-
-![[Pasted image 20260617065046.png]]
-
+![[brave_8PcDglYMsQ.mp4]]
 ## 22.1.3 Encapsulamento IP
 
 O IP encapsula o segmento da camada de transporte (a camada logo acima da camada de rede) ou outros dados adicionando um cabeçalho IP. O cabeçalho IP é usado para entregar o pacote ao host de destino.

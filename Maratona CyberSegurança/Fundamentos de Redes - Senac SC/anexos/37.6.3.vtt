@@ -1,0 +1,1155 @@
+WEBVTT
+X-TIMESTAMP-MAP=LOCAL:00:00:00.000,MPEGTS:0
+
+1
+00:03.331 --> 00:04.220
+<v Instructor>Você já desejou</v>
+
+2
+00:04.220 --> 00:05.330
+você poderia ter um segundo par de olhos
+
+3
+00:05.330 --> 00:07.470
+dê uma olhada em algo que você vê na tela?
+
+4
+00:07.470 --> 00:09.240
+Bem, é esse vídeo, estamos aqui para conversar
+
+5
+00:09.240 --> 00:11.470
+sobre desktop remoto e assistência remota
+
+6
+00:11.470 --> 00:13.690
+aqui no Windows 10, então isso vai ser divertido,
+
+7
+00:13.690 --> 00:14.940
+porque vamos realmente fazer isso
+
+8
+00:14.940 --> 00:17.128
+e não apenas falar sobre isso, então para começar,
+
+9
+00:17.128 --> 00:17.961
+uma das primeiras coisas que queremos fazer
+
+10
+00:17.961 --> 00:20.350
+é ir para a área de trabalho remota.
+
+11
+00:20.350 --> 00:21.750
+E isso vai estar dentro do nosso,
+
+12
+00:21.750 --> 00:23.330
+clique com o botão direito em nosso botão iniciar,
+
+13
+00:23.330 --> 00:25.000
+e vamos direto para as configurações.
+
+14
+00:25.004 --> 00:26.490
+Nós vamos expandir, bem aí.
+
+15
+00:26.490 --> 00:28.640
+Poderíamos ter clicado em iniciar e digitado as configurações
+
+16
+00:28.640 --> 00:30.460
+e descobri dessa forma, mas estamos fazendo
+
+17
+00:30.460 --> 00:33.030
+clique com o botão direito em iniciar e o botão esquerdo em configurações.
+
+18
+00:33.030 --> 00:34.850
+Agora, dentro das configurações, o que vamos abordar
+
+19
+00:34.850 --> 00:37.540
+é o sistema, e dentro do sistema,
+
+20
+00:37.540 --> 00:39.940
+é aqui que vamos rolar até o final
+
+21
+00:39.940 --> 00:42.840
+no lado esquerdo, e aqui encontramos a área de trabalho remota.
+
+22
+00:42.840 --> 00:45.030
+Vou prosseguir e clicar em área de trabalho remota,
+
+23
+00:45.030 --> 00:47.100
+e o que vemos aqui é que, por padrão,
+
+24
+00:47.100 --> 00:50.670
+a área de trabalho remota está desativada no Windows 10.
+
+25
+00:50.670 --> 00:52.420
+Agora, com a área de trabalho remota desligada,
+
+26
+00:52.420 --> 00:55.210
+isso significa que usuários remotos não podem acessar nosso sistema.
+
+27
+00:55.210 --> 00:58.110
+Agora, se quisermos permitir que um usuário remoto
+
+28
+00:58.110 --> 01:01.130
+para se conectar ao nosso computador através da rede,
+
+29
+01:01.130 --> 01:05.710
+e obter acesso ao nosso sistema e ser literalmente nós
+
+30
+01:05.710 --> 01:08.110
+no sistema, podemos utilizar este controle deslizante
+
+31
+01:08.110 --> 01:11.210
+à direita e diz tem certeza?
+
+32
+01:11.210 --> 01:13.460
+Você e os usuários selecionados nas contas de usuário
+
+33
+01:13.460 --> 01:15.330
+será capaz de se conectar a esta máquina remotamente.
+
+34
+01:15.330 --> 01:17.190
+E vou clicar em confirmar.
+
+35
+01:17.190 --> 01:19.090
+Agora deixe-me conversar um pouco mais sobre isso.
+
+36
+01:19.090 --> 01:20.540
+Quando você liga a área de trabalho remota,
+
+37
+01:20.540 --> 01:22.950
+alguém agora pode se conectar remotamente à sua máquina,
+
+38
+01:22.950 --> 01:26.140
+e quando eles se conectarem a ele, eles vão autenticar
+
+39
+01:26.140 --> 01:29.330
+utilizando sua combinação de nome de usuário e senha.
+
+40
+01:29.330 --> 01:30.320
+Bem, e se eu não quiser divulgar
+
+41
+01:30.320 --> 01:31.920
+meu nome de usuário e senha?
+
+42
+01:31.920 --> 01:35.070
+Então um usuário remoto teria que ter seu próprio
+
+43
+01:35.070 --> 01:38.150
+nome de usuário e senha em sua máquina.
+
+44
+01:38.150 --> 01:39.150
+O que significa que você teria que criar
+
+45
+01:39.150 --> 01:40.970
+uma conta de usuário para eles em sua máquina.
+
+46
+01:40.970 --> 01:42.810
+Então, se você quiser cinco usuários diferentes
+
+47
+01:42.810 --> 01:44.560
+ser capaz de acessar remotamente sua caixa
+
+48
+01:44.560 --> 01:47.520
+usando seu próprio nome de usuário e senha,
+
+49
+01:47.520 --> 01:49.890
+eles precisariam de cinco contas, é o que isso significa.
+
+50
+01:49.890 --> 01:51.240
+Caso contrário, você está compartilhando seu nome de usuário
+
+51
+01:51.240 --> 01:52.940
+e senha para que eles tenham acesso.
+
+52
+01:52.940 --> 01:54.560
+Portanto, esta é uma área de trabalho remota, e há
+
+53
+01:54.560 --> 01:57.030
+algumas configurações que podemos modificar aqui,
+
+54
+01:57.030 --> 01:58.430
+por exemplo, há configurações de energia
+
+55
+01:58.430 --> 02:00.500
+que podemos ver, que é apenas mostrar as configurações,
+
+56
+02:00.500 --> 02:02.340
+fala sobre energia e modo suspenso,
+
+57
+02:02.340 --> 02:03.900
+não queremos que nosso PC durma
+
+58
+02:03.900 --> 02:06.400
+e não poder acessá-lo remotamente.
+
+59
+02:06.400 --> 02:08.780
+Além disso, tornar nossa máquina detectável em nossa rede
+
+60
+02:08.780 --> 02:11.030
+para que as pessoas possam ver, temos configurações aqui
+
+61
+02:11.030 --> 02:13.640
+que vimos anteriormente em nossas configurações de rede,
+
+62
+02:13.640 --> 02:16.320
+e é aqui que encontramos coisas para compartilhamento de arquivos de rede,
+
+63
+02:16.320 --> 02:19.040
+bem como a ideia de compartilhamento protegido por senha.
+
+64
+02:19.040 --> 02:21.530
+Portanto, esses são atendidos por padrão.
+
+65
+02:21.530 --> 02:22.920
+Agora vamos rolar para baixo aqui
+
+66
+02:22.920 --> 02:25.820
+para configurações de área de trabalho remota, e o que podemos ver aqui é
+
+67
+02:25.820 --> 02:28.470
+o nome que as pessoas vão almejar
+
+68
+02:28.470 --> 02:30.860
+quando eles usam a área de trabalho remota como uma ferramenta
+
+69
+02:30.860 --> 02:33.380
+no computador deles, será o nome do PC
+
+70
+02:33.380 --> 02:37.020
+de StudentPC_1, esse é o nome do meu computador
+
+71
+02:37.020 --> 02:38.890
+que estamos no momento, que nós
+
+72
+02:38.890 --> 02:42.000
+apenas permitiu que as pessoas se conectassem.
+
+73
+02:42.002 --> 02:45.150
+Lá embaixo, contas de usuários, eu estava falando sobre isso,
+
+74
+02:45.150 --> 02:48.570
+Abaixo, contas de usuários, eu estava falando sobre isso,
+
+75
+02:48.570 --> 02:51.070
+Por padrão, o usuário que pode acessá-lo
+
+76
+02:51.070 --> 02:53.520
+é o nome de usuário do aluno, com o
+
+77
+02:53.520 --> 02:56.090
+senha para a conta do aluno.
+
+78
+02:56.090 --> 02:57.610
+Agora, se você quiser adicionar outras pessoas
+
+79
+02:57.610 --> 03:00.820
+para poder acessá-lo, clicaríamos em adicionar,
+
+80
+03:00.820 --> 03:03.170
+e agora aqui dentro, poderíamos digitar
+
+81
+03:03.170 --> 03:05.720
+os diferentes nomes de usuário ou grupo de usuários
+
+82
+03:05.720 --> 03:08.610
+que seriam capazes de acessar remotamente nossa máquina.
+
+83
+03:08.610 --> 03:11.160
+Você os coloca aqui, e então selecionaremos OK.
+
+84
+03:12.090 --> 03:14.740
+Agora, continuando em frente, na parte inferior,
+
+85
+03:14.740 --> 03:17.570
+além de contas de usuário que podem ter acesso remoto,
+
+86
+03:17.570 --> 03:19.550
+se você não sabe nem como usar a área de trabalho remota
+
+87
+03:19.550 --> 03:21.780
+de uma máquina remota e usá-la como uma ferramenta,
+
+88
+03:21.780 --> 03:23.500
+há muitos links aqui para obter ajuda.
+
+89
+03:23.500 --> 03:25.640
+E o Windows faz um ótimo trabalho para isso.
+
+90
+03:25.640 --> 03:27.290
+Então, o que queremos tentar agora,
+
+91
+03:27.290 --> 03:29.880
+é que queremos tentar acessar remotamente este computador.
+
+92
+03:29.880 --> 03:32.080
+Mas tenho que fazer algo primeiro.
+
+93
+03:32.080 --> 03:33.410
+Para acessar remotamente,
+
+94
+03:33.410 --> 03:35.310
+as pessoas vão precisar de um nome de usuário e senha,
+
+95
+03:35.310 --> 03:39.310
+e se eu verificar minha conta de estudante aqui,
+
+96
+03:39.310 --> 03:42.270
+alterar as configurações da conta na minha máquina,
+
+97
+03:42.270 --> 03:44.400
+o que poderemos ver é que não tenho uma senha.
+
+98
+03:44.400 --> 03:47.720
+Portanto, as opções de login da conta de estudante,
+
+99
+03:47.720 --> 03:49.500
+minha conta não tem uma senha,
+
+100
+03:49.500 --> 03:51.350
+vou adicionar uma senha para que possamos realmente
+
+101
+03:51.350 --> 03:54.410
+acessar remotamente esta máquina usando uma área de trabalho remota.
+
+102
+03:54.410 --> 03:56.780
+123
+
+103
+03:56.780 --> 04:00.780
+porque isso é incrível, e a dica vai ser você sabe disso.
+
+104
+04:00.780 --> 04:03.580
+123
+
+105
+04:03.580 --> 04:06.160
+vamos utilizar isso com a conta de usuário do aluno,
+
+106
+04:06.160 --> 04:08.610
+para acessar remotamente esta máquina.
+
+107
+04:08.610 --> 04:10.180
+Então, vamos tentar, vou carregar
+
+108
+04:10.180 --> 04:11.780
+um sistema operacional diferente.
+
+109
+04:13.090 --> 04:14.867
+Então, aqui estamos no Windows 7, vou seguir em frente
+
+110
+04:14.867 --> 04:17.940
+e clicar em iniciar, e vamos usar a área de trabalho remota,
+
+111
+04:17.940 --> 04:20.440
+e aqui está a conexão de área de trabalho remota,
+
+112
+04:20.440 --> 04:22.180
+e então o que farei é digitar
+
+113
+04:22.180 --> 04:24.062
+o nome do computador que desejo acessar,
+
+114
+04:24.062 --> 04:27.770
+StudentPC_ 1e clicarei em conectar.
+
+115
+04:27.770 --> 04:29.240
+Agora, quando clico em conectar, diz ooh,
+
+116
+04:29.240 --> 04:30.990
+você quer se conectar, tudo bem, você vai usar
+
+117
+04:30.990 --> 04:33.590
+a conta do usuário de aluno, mas qual é a senha
+
+118
+04:33.590 --> 04:35.310
+para essa conta na outra máquina?
+
+119
+04:35.310 --> 04:40.150
+E isso é Cisco123, e eu irei em frente e clicarei em OK.
+
+120
+04:40.150 --> 04:42.350
+E o que vai acontecer aqui é que minha máquina Windows 7
+
+121
+04:42.350 --> 04:45.010
+vai se conectar remotamente à outra máquina
+
+122
+04:45.010 --> 04:49.320
+de StudentPC_1, e terei controle total e absoluto
+
+123
+04:49.320 --> 04:52.210
+dessa máquina usando essa conta de usuário.
+
+124
+04:52.210 --> 04:54.570
+Diz que você deseja verificar, sim,
+
+125
+04:54.570 --> 04:56.430
+vamos verificar com um certificado,
+
+126
+04:56.430 --> 04:58.190
+está apenas falando sobre autenticação de certificado
+
+127
+04:58.190 --> 05:00.983
+e autoridade, e agora a conexão será realizada.
+
+128
+05:03.710 --> 05:05.750
+Então, aqui estamos nós com acesso remoto
+
+129
+05:05.750 --> 05:07.110
+na outra máquina neste momento.
+
+130
+05:07.110 --> 05:09.380
+Estamos remotos e deixe-me mudar de vista
+
+131
+05:09.380 --> 05:11.180
+para que você possa ver o topo da minha janela.
+
+132
+05:12.290 --> 05:13.900
+E no topo da minha janela, você pode ver aqui
+
+133
+05:13.900 --> 05:16.280
+que na minha máquina Windows 7, estamos conectados
+
+134
+05:16.280 --> 05:18.840
+à StudentPC_1, e com o que foi dito
+
+135
+05:18.840 --> 05:22.400
+Eu posso apenas minimizar, e estou de volta
+
+136
+05:22.400 --> 05:24.696
+minha máquina cliente Windows, ou Windows 7,
+
+137
+05:24.696 --> 05:26.120
+e eu poderia trazê-lo de volta, e estou de volta
+
+138
+05:26.120 --> 05:30.273
+na conexão de área de trabalho remota para o StudentPC_1.
+
+139
+05:30.273 --> 05:32.733
+Vou mudar minha janela novamente e continuar.
+
+140
+05:34.630 --> 05:36.140
+Então, na máquina Windows 7,
+
+141
+05:36.140 --> 05:38.990
+Eu literalmente assumi a caixa do Windows 10,
+
+142
+05:38.990 --> 05:40.560
+e o que é realmente importante observar sobre isso,
+
+143
+05:40.560 --> 05:42.400
+se eu for dar uma olhada no Windows 10
+
+144
+05:42.400 --> 05:44.250
+sistema novamente, como é?
+
+145
+05:45.820 --> 05:48.850
+Na máquina Windows 10, ele está desconectado.
+
+146
+05:48.850 --> 05:51.270
+Quando o usuário remoto conectado à nossa máquina
+
+147
+05:51.270 --> 05:53.920
+com a conta de estudante, nossa conta corrente
+
+148
+05:53.920 --> 05:55.820
+que estávamos usando, que era a conta do aluno
+
+149
+05:55.820 --> 05:59.370
+foi desconectada, e se eu entrar do meu lado
+
+150
+05:59.370 --> 06:02.730
+na minha conta aqui na caixa do Windows10,
+
+151
+06:02.730 --> 06:03.680
+vamos dar uma olhada no que aconteceu a
+
+152
+06:03.680 --> 06:06.183
+sessão remota na caixa do Windows7.
+
+153
+06:08.150 --> 06:11.320
+Dê uma olhada, uma vez que o usuário no computador Windows 10
+
+154
+06:11.320 --> 06:13.800
+se logou novamente no lado deles,
+
+155
+06:13.800 --> 06:15.940
+fomos desconectados de nossa sessão remota.
+
+156
+06:15.940 --> 06:19.610
+Vá em frente e clique em OK, e estamos de volta aqui no Windows 7.
+
+157
+06:19.610 --> 06:22.140
+Então essa é a área de trabalho remota, e agora temos mais um item
+
+158
+06:22.140 --> 06:25.540
+para discutir, e isso vai ser assistência remota.
+
+159
+06:25.540 --> 06:27.680
+Então, estamos de volta ao nosso cliente Windows 10,
+
+160
+06:27.680 --> 06:29.800
+e agora vamos falar de assistência remota.
+
+161
+06:29.800 --> 06:32.010
+Agora primeiro, para entrar nas configurações de assistência remota
+
+162
+06:32.010 --> 06:33.780
+o que vamos fazer é ir em frente
+
+163
+06:33.780 --> 06:38.030
+e clicar em iniciar, e vamos para o PC.
+
+164
+06:38.030 --> 06:41.220
+E com o PC, vamos passar para nossas propriedades.
+
+165
+06:41.220 --> 06:43.690
+Agora, quando clicamos nas propriedades deste PC,
+
+166
+06:43.690 --> 06:45.480
+isso vai abrir uma nova janela para nós.
+
+167
+06:45.480 --> 06:47.580
+Queremos ir, fica do lado esquerdo aqui,
+
+168
+06:47.580 --> 06:49.610
+e é chamado de configurações remotas.
+
+169
+06:49.610 --> 06:51.810
+Entramos no nosso link de configurações remotas,
+
+170
+06:51.810 --> 06:54.070
+o que veremos quando eu redimensionar minha janela,
+
+171
+06:54.070 --> 06:55.920
+é que temos a assistência remota aqui,
+
+172
+06:55.920 --> 06:57.810
+que está definido para permitir assistência remota
+
+173
+06:57.810 --> 07:00.200
+conexões a este  computador, isso é ótimo.
+
+174
+07:00.200 --> 07:04.120
+Incrível, então isso significa que as pessoas que oferecemos
+
+175
+07:04.120 --> 07:06.890
+um arquivo especial conhecido como convite,
+
+176
+07:06.890 --> 07:10.780
+pode usar esse arquivo e uma senha para se conectar a nós.
+
+177
+07:10.780 --> 07:12.600
+Isso é diferente da área de trabalho remota,
+
+178
+07:12.600 --> 07:14.190
+porque desktop remoto, estamos literalmente
+
+179
+07:14.190 --> 07:16.300
+ativando um serviço que qualquer pessoa a qualquer momento
+
+180
+07:16.300 --> 07:19.090
+podem por conta própria iniciar uma conexão
+
+181
+07:19.090 --> 07:21.090
+e assumir nosso computador e usá-lo.
+
+182
+07:21.090 --> 07:22.700
+Apenas remotamente, o que é ótimo.
+
+183
+07:22.700 --> 07:25.670
+Com a área de trabalho remota, as pessoas podem iniciar por conta própria.
+
+184
+07:25.670 --> 07:28.640
+Com assistência remota, temos que fornecê-los
+
+185
+07:28.640 --> 07:31.490
+um arquivo e uma senha para acessar nossa máquina.
+
+186
+07:31.490 --> 07:33.420
+Então, como vamos fazer isso?
+
+187
+07:33.420 --> 07:35.710
+Bem, não é nem um pouco difícil.
+
+188
+07:35.710 --> 07:37.760
+Agora que temos conexões de assistência remota
+
+189
+07:37.760 --> 07:41.112
+sendo selecionado, posso ir em frente e clicar em avançar aqui,
+
+190
+07:41.112 --> 07:42.160
+e o que podemos dar uma olhada
+
+191
+07:42.160 --> 07:44.570
+é uma de nossas configurações reais para isso.
+
+192
+07:44.570 --> 07:47.030
+Sim, nosso computador pode ser controlado remotamente.
+
+193
+07:47.030 --> 07:50.280
+Além disso, por quanto tempo podemos criar um convite
+
+194
+07:50.280 --> 07:52.430
+e fornecer alguém para ficar aberto?
+
+195
+07:52.430 --> 07:54.810
+Bem, o padrão aqui é de seis horas, então vamos deixá-lo
+
+196
+07:54.810 --> 07:57.010
+no padrão de seis horas, e o que queremos
+
+197
+07:57.010 --> 08:00.960
+fazer agora é criar um convite de assistência remota.
+
+198
+08:00.960 --> 08:03.080
+Para fazer isso, clico no meu botão iniciar,
+
+199
+08:03.080 --> 08:05.980
+e vamos digitar assistência remota aqui.
+
+200
+08:05.980 --> 08:07.660
+E quando digitamos assistência remota,
+
+201
+08:07.660 --> 08:10.030
+o que teremos é permitir convites de assistência remota
+
+202
+08:10.030 --> 08:12.310
+a ser enviado deste computador.
+
+203
+08:12.310 --> 08:14.050
+Ok, e nas configurações,
+
+204
+08:14.050 --> 08:16.350
+convide alguém para se conectar ao seu PC
+
+205
+08:16.350 --> 08:18.653
+e te ajudar, vou clicar nisso.
+
+206
+08:19.720 --> 08:22.430
+Quando clico nele, obtemos  esta janela de assistência remota.
+
+207
+08:22.430 --> 08:24.640
+E aqui podemos ir em frente  e ajudar outra pessoa
+
+208
+08:24.640 --> 08:28.150
+quem nos convidou com  um arquivo, ou podemos usar
+
+209
+08:28.150 --> 08:30.620
+convidar alguém, então clicarei no primeiro,
+
+210
+08:30.620 --> 08:34.300
+Quero convidar outra pessoa para me ajudar remotamente.
+
+211
+08:34.300 --> 08:36.540
+Quando eu clico nisso, há três opções aqui.
+
+212
+08:36.540 --> 08:38.690
+Dois deles estão esmaecidos, a primeira opção
+
+213
+08:38.690 --> 08:41.810
+é que posso salvar o convite como um arquivo na minha máquina.
+
+214
+08:41.810 --> 08:44.410
+Então terei que enviar esse arquivo para outra pessoa.
+
+215
+08:44.410 --> 08:45.840
+Por meio de um anexo de e-mail,
+
+216
+08:45.840 --> 08:48.340
+unidade flash, compartilhamento de arquivos, o que quiser.
+
+217
+08:48.340 --> 08:49.430
+As outras opções estão esmaecidas,
+
+218
+08:49.430 --> 08:51.230
+porque não posso selecioná-los neste momento,
+
+219
+08:51.230 --> 08:53.180
+mas se eu tivesse um programa de e-mail instalado
+
+220
+08:53.180 --> 08:55.720
+na minha máquina, poderia enviá-lo automaticamente
+
+221
+08:55.720 --> 08:59.490
+para um alvo remoto ou com um aplicativo Easy Connect
+
+222
+08:59.490 --> 09:02.500
+da loja do Windows, eu poderia usar isso também.
+
+223
+09:02.500 --> 09:04.420
+Vou fazer a opção padrão
+
+224
+09:04.420 --> 09:06.860
+de salvar o convite como um arquivo.
+
+225
+09:06.860 --> 09:08.620
+Quando eu clicar nele, ele me perguntará onde colocá-lo,
+
+226
+09:08.620 --> 09:10.820
+Vou apenas jogá-lo no meu desktop,
+
+227
+09:10.820 --> 09:13.760
+e agora meu arquivo de convite será salvo
+
+228
+09:13.760 --> 09:16.580
+para a minha área de trabalho da minha máquina Windows10.
+
+229
+09:16.580 --> 09:19.330
+O arquivo salvo na minha máquina, também tenho uma nova janela
+
+230
+09:19.330 --> 09:20.840
+que aparece, diz por favor certifique-se
+
+231
+09:20.840 --> 09:24.130
+você dá esta senha para o outro usuário
+
+232
+09:24.130 --> 09:28.670
+para acessar sua máquina junto com esse arquivo de convite.
+
+233
+09:28.670 --> 09:30.890
+Então, vamos para a máquina Windows 7,
+
+234
+09:30.890 --> 09:34.480
+e vamos usar este arquivo e esta senha
+
+235
+09:34.480 --> 09:37.623
+para assistir remotamente a caixa do Windows 10.
+
+236
+09:39.003 --> 09:40.610
+Então estamos na caixa do Windows 7,
+
+237
+09:40.610 --> 09:42.380
+Eu mudei aquele arquivo de convite
+
+238
+09:42.380 --> 09:44.340
+para a área de trabalho, e o que posso fazer
+
+239
+09:44.340 --> 09:46.330
+posso clicar duas vezes no arquivo de convite,
+
+240
+09:46.330 --> 09:49.560
+diz, ah, qual é a senha para conectar?
+
+241
+09:49.560 --> 09:50.980
+Bem, essa senha vai ser
+
+242
+09:50.980 --> 09:53.830
+aquela grande e musculosa que vimos originalmente,
+
+243
+09:53.830 --> 09:56.790
+que é 92252M92W2MXD5M2X, que é uma loucura,
+
+244
+09:59.930 --> 10:01.590
+mas é bom, é uma boa segurança.
+
+245
+10:01.590 --> 10:02.690
+Vá em frente e clique em OK.
+
+246
+10:03.670 --> 10:05.240
+A partir daí, o que veremos está de volta
+
+247
+10:05.240 --> 10:07.570
+no Windows 10, deixe-me voltar novamente.
+
+248
+10:07.570 --> 10:09.210
+Aqui estamos nós, minha caixa do Windows 10, diz,
+
+249
+10:09.210 --> 10:12.250
+você permitiria que o aluno se conectasse à sua máquina?
+
+250
+10:12.250 --> 10:15.270
+Eu vou dizer sim, vá em frente, e você tipo,
+
+251
+10:15.270 --> 10:16.890
+ei eu não fui desconectado desta vez
+
+252
+10:16.890 --> 10:19.220
+como a área de trabalho remota, nós desconectamos,
+
+253
+10:19.220 --> 10:21.860
+mas agora diz que a pessoa a lhe ajudar agora pode ver sua área de trabalho.
+
+254
+10:21.860 --> 10:24.500
+Bem, isso é legal, posso pausar a habilidade
+
+255
+10:24.500 --> 10:26.660
+para o meu ajudante ver, ha, eles não podem ver mais,
+
+256
+10:26.660 --> 10:29.700
+ou continue, agora meu ajudante pode ver a área de trabalho novamente,
+
+257
+10:29.700 --> 10:32.050
+Eu posso abrir uma janela de bate-papo onde  podemos bater um papo para a frente e para trás,
+
+258
+10:32.050 --> 10:35.470
+eu e meu ajudante, então, mesmo na área de configurações aqui,
+
+259
+10:35.470 --> 10:37.120
+temos algumas opções que podemos dar uma olhada,
+
+260
+10:37.120 --> 10:39.960
+como uso de largura de banda, salvando um registro,
+
+261
+10:39.960 --> 10:43.310
+você tem informações aqui que você pode personalizar, o que é ótimo.
+
+262
+10:43.310 --> 10:44.920
+Nós vamos voltar na máquina Windows 7
+
+263
+10:44.920 --> 10:47.420
+para ver o que estão vendo e continuaremos.
+
+264
+10:47.420 --> 10:50.110
+Ok, isso é legal, então na máquina Windows 7,
+
+265
+10:50.110 --> 10:51.747
+temos esta janela de assistência remota que está aberta,
+
+266
+10:51.747 --> 10:54.020
+e diz que estamos ajudando a conta do aluno
+
+267
+10:54.020 --> 10:55.810
+na outra máquina, e o que podemos fazer
+
+268
+10:55.810 --> 10:57.830
+é personalizar nosso tamanho aqui, e como vimos
+
+269
+10:57.830 --> 10:59.360
+na outra máquina, o Windows 10,
+
+270
+10:59.360 --> 11:02.210
+temos coisas como chat e também configurações.
+
+271
+11:02.210 --> 11:04.500
+Não consigo clicar em nada, esta não é uma área de trabalho remota.
+
+272
+11:04.500 --> 11:06.800
+Eu não tenho acesso ao controle.
+
+273
+11:06.800 --> 11:08.930
+Se eu quiser solicitar o controle, posso ir em frente
+
+274
+11:08.930 --> 11:11.660
+e clique em solicitar controle, e ele aparecerá
+
+275
+11:11.660 --> 11:14.350
+na máquina Windows 10, ainda não consigo clicar,
+
+276
+11:14.350 --> 11:15.220
+e na máquina Windows 10 diz
+
+277
+11:15.220 --> 11:18.710
+você quer dar a essa pessoa o controle de sua máquina?
+
+278
+11:18.710 --> 11:20.380
+porque agora eles podem apenas visualizar,
+
+279
+11:20.380 --> 11:22.110
+e se eu fosse para o cliente Windows 10,
+
+280
+11:22.110 --> 11:25.100
+Eu seria capaz de permitir que este usuário do Windows 7
+
+281
+11:25.100 --> 11:26.870
+controlasse remotamente minha máquina.
+
+282
+11:26.870 --> 11:28.860
+Então essa é a diferença entre assistência remota
+
+283
+11:28.860 --> 11:32.120
+e desktop remoto, ambos usam um protocolo criptografado
+
+284
+11:32.120 --> 11:35.470
+em toda a rede para permitir esse tipo de acesso e controle.
+
+285
+11:35.470 --> 11:38.260
+Obrigado por ver, personalizar, praticar e brincar
+
+286
+11:38.260 --> 11:40.370
+com seus próprios desktops remotos e remotos
+
+287
+11:40.370 --> 11:43.480
+Configurações de assistência do Windows e divirta-se
+
+288
+11:43.480 --> 11:45.153
+e se tornar esse profissional de TI.
+

@@ -1,0 +1,400 @@
+WEBVTT
+
+00:00:03.000 --> 00:00:05.000
+- O Suporte a teclas de atalho e atalhos faz
+
+00:00:05.000 --> 00:00:08.000
+o Cisco IOS ser extremamente eficiente.
+
+00:00:08.000 --> 00:00:11.000
+Fazendo uso deles você vai economizar muito tempo
+
+00:00:11.000 --> 00:00:13.000
+quando você está configurando dispositivos.
+
+00:00:13.000 --> 00:00:15.000
+Eu tenho uma conexão de console com um switch,
+
+00:00:15.000 --> 00:00:18.000
+no entanto, em vez de usar o programa de emulação de terminal
+
+00:00:18.000 --> 00:00:21.000
+para entrar na console, desta vez vou clicar diretamente
+
+00:00:21.000 --> 00:00:26.000
+no switch ir para a aba CLI.
+
+00:00:26.000 --> 00:00:27.000
+Se pressionar Enter,
+
+00:00:27.000 --> 00:00:30.000
+Sou levado para a Interface de Linha de Comando.
+
+00:00:30.000 --> 00:00:32.000
+Este é um atalho conveniente para a CLI
+
+00:00:32.000 --> 00:00:35.000
+disponível para você no Packet Tracer.
+
+00:00:35.000 --> 00:00:37.000
+A primeira tecla de atalho sobre a qual falarei
+
+00:00:37.000 --> 00:00:39.000
+é a tecla Tab, ou conclusão de Tab,
+
+00:00:39.000 --> 00:00:42.000
+para completar automaticamente seus comandos.
+
+00:00:42.000 --> 00:00:44.000
+Você pode usar assim.
+
+00:00:44.000 --> 00:00:46.000
+Para chegar ao Modo EXEC Privilegiado,
+
+00:00:46.000 --> 00:00:48.000
+Eu normalmente digitaria o comando Enable.
+
+00:00:48.000 --> 00:00:51.000
+Com o preenchimento Tab, você simplesmente digita
+
+00:00:51.000 --> 00:00:53.000
+as primeiras letras do comando,
+
+00:00:53.000 --> 00:00:55.000
+neste caso EN,
+
+00:00:55.000 --> 00:00:58.000
+e pressione a tecla Tab no seu teclado
+
+00:00:58.000 --> 00:01:01.000
+e o comando é concluído automaticamente para você.
+
+00:01:01.000 --> 00:01:03.000
+Isso é muito útil.
+
+00:01:03.000 --> 00:01:05.000
+Isso funcionará se apenas um comando começar
+
+00:01:05.000 --> 00:01:07.000
+com as letras EN.
+
+00:01:07.000 --> 00:01:11.000
+Por exemplo, se eu quiser colocar o comando configure
+
+00:01:11.000 --> 00:01:12.000
+para configurar o terminal,
+
+00:01:12.000 --> 00:01:15.000
+e eu digito CON e pressiono Tab,
+
+00:01:15.000 --> 00:01:17.000
+não funciona.
+
+00:01:17.000 --> 00:01:19.000
+O comando não foi concluído.
+
+00:01:19.000 --> 00:01:22.000
+Isso porque se eu colocar um ponto de interrogação,
+
+00:01:22.000 --> 00:01:25.000
+você pode ver que há mais de um comando começando
+
+00:01:25.000 --> 00:01:29.000
+com as letras CON no Modo EXEC Privilegiado.
+
+00:01:29.000 --> 00:01:31.000
+Se eu quiser usar o preenchimento via Tab,
+
+00:01:31.000 --> 00:01:34.000
+Vou precisar digitar CONF
+
+00:01:34.000 --> 00:01:36.000
+e pressione a tecla Tab.
+
+00:01:36.000 --> 00:01:39.000
+Você pode ver que o comando foi completado.
+
+00:01:39.000 --> 00:01:41.000
+Para terminal, tudo o que preciso fazer
+
+00:01:41.000 --> 00:01:43.000
+é digitar a letra T
+
+00:01:43.000 --> 00:01:47.000
+e pressione a tecla Tab, pois há apenas um argumento
+
+00:01:47.000 --> 00:01:50.000
+ou comando secundário que segue configure
+
+00:01:50.000 --> 00:01:52.000
+e começa com a letra T.
+
+00:01:52.000 --> 00:01:55.000
+Assim, o switch sabe que o comando que eu quero é "terminal".
+
+00:01:55.000 --> 00:01:59.000
+Ainda melhor do que usar a tecla Tab é a abreviatura do comando.
+
+00:01:59.000 --> 00:02:01.000
+Com abreviatura de comandos, em vez de pressionar a tecla Tab
+
+00:02:01.000 --> 00:02:03.000
+para completar o comando,
+
+00:02:03.000 --> 00:02:06.000
+você simplesmente usa as primeiras letras do comando
+
+00:02:06.000 --> 00:02:08.000
+e o IOS aceitará o comando abreviado
+
+00:02:08.000 --> 00:02:10.000
+sem pressionar a tecla Tab.
+
+00:02:10.000 --> 00:02:12.000
+Isso é extremamente útil.
+
+00:02:12.000 --> 00:02:15.000
+Por exemplo, em vez de digitar o comando,
+
+00:02:15.000 --> 00:02:18.000
+"interface fast ethernet 0/1"
+
+00:02:18.000 --> 00:02:20.000
+que é um comando muito longo para digitar,
+
+00:02:20.000 --> 00:02:23.000
+Eu posso encurtar o comando para apenas INT,
+
+00:02:23.000 --> 00:02:25.000
+que é abreviação de interface,
+
+00:02:25.000 --> 00:02:28.000
+F, abreviação de fast ethernet,
+
+00:02:28.000 --> 00:02:31.000
+e "0/1" e pressione Enter.
+
+00:02:31.000 --> 00:02:33.000
+O IOS sabe automaticamente o comando que eu quero
+
+00:02:33.000 --> 00:02:35.000
+e o executa.
+
+00:02:35.000 --> 00:02:36.000
+No entanto, você não o verá a exibição do comando
+
+00:02:36.000 --> 00:02:38.000
+como você faz com o preenchimento Tab.
+
+00:02:38.000 --> 00:02:40.000
+A abreviatura de comandos pode torná-lo
+
+00:02:40.000 --> 00:02:43.000
+ainda mais eficiente na configuração de dispositivos.
+
+00:02:43.000 --> 00:02:46.000
+Às vezes é necessário repetir comandos.
+
+00:02:46.000 --> 00:02:48.000
+A maneira mais rápida de fazer isso é navegar pelo
+
+00:02:48.000 --> 00:02:50.000
+seu histórico de comandos usando
+
+00:02:50.000 --> 00:02:53.000
+as teclas de seta para cima e seta para baixo.
+
+00:02:53.000 --> 00:02:57.000
+Se eu digitar "end" no meu teclado e pressionar Enter,
+
+00:02:57.000 --> 00:03:00.000
+para voltar ao Modo EXEC Privilegiado,
+
+00:03:00.000 --> 00:03:03.000
+e então eu pressionar minha tecla de seta para cima,
+
+00:03:03.000 --> 00:03:05.000
+você pode ver que existem dois comandos
+
+00:03:05.000 --> 00:03:07.000
+no meu histórico de comandos.
+
+00:03:07.000 --> 00:03:10.000
+Pressionar a tecla de seta para baixo irá
+
+00:03:10.000 --> 00:03:12.000
+levar-me para a frente no meu histórico de comandos.
+
+00:03:12.000 --> 00:03:16.000
+Isso é muito útil para comandos que são usados ​​repetidamente.
+
+00:03:16.000 --> 00:03:18.000
+Vamos dar uma olhada em algumas teclas de atalho.
+
+00:03:18.000 --> 00:03:22.000
+Ambos CTRL+Z e CTRL+C terão a função de voltar
+
+00:03:22.000 --> 00:03:24.000
+para o Modo EXEC Privilegiado.
+
+00:03:24.000 --> 00:03:27.000
+Se eu pressionar CTRL+ Z,
+
+00:03:27.000 --> 00:03:29.000
+e pressionar Enter,
+
+00:03:29.000 --> 00:03:32.000
+você pode ver que estou de volta ao prompt do EXEC Privilegiado.
+
+00:03:32.000 --> 00:03:34.000
+CTRL + C fará o mesmo
+
+00:03:34.000 --> 00:03:37.000
+e também pode ser usado para abortar certos comandos.
+
+00:03:37.000 --> 00:03:42.000
+Por exemplo, se eu digitar CONF e T,
+
+00:03:42.000 --> 00:03:44.000
+e depois mudar de ideia,
+
+00:03:44.000 --> 00:03:47.000
+Eu posso pressionar Control + C
+
+00:03:47.000 --> 00:03:49.000
+e o comando é abortado.
+
+00:03:49.000 --> 00:03:53.000
+CTRL + A irá levar o cursor para o início de uma linha.
+
+00:03:53.000 --> 00:03:56.000
+vou digitar configurar
+
+00:03:56.000 --> 00:03:58.000
+e, em seguida, pressione CTRL + A
+
+00:03:58.000 --> 00:04:01.000
+e você pode ver que o cursor piscando agora está de volta
+
+00:04:01.000 --> 00:04:03.000
+para o início da linha.
+
+00:04:03.000 --> 00:04:05.000
+Se eu pressionar CTRL + E,
+
+00:04:05.000 --> 00:04:07.000
+o cursor salta para o final da linha.
+
+00:04:07.000 --> 00:04:12.000
+CTRL + Shift + 6 é outra combinação de teclas útil.
+
+00:04:12.000 --> 00:04:15.000
+Esta sequência interromperá a execução de um comando
+
+00:04:15.000 --> 00:04:18.000
+após o comando já ter sido inserido.
+
+00:04:18.000 --> 00:04:19.000
+Digamos, por exemplo,
+
+00:04:19.000 --> 00:04:24.000
+digitei errado o comando configure
+
+00:04:24.000 --> 00:04:27.000
+e pressione Enter no meu teclado.
+
+00:04:27.000 --> 00:04:29.000
+O IOS está tentando traduzir as letras
+
+00:04:29.000 --> 00:04:32.000
+que digitei em um endereço IP.
+
+00:04:32.000 --> 00:04:33.000
+Em vez de ficar preso nesta situação,
+
+00:04:33.000 --> 00:04:37.000
+Eu posso simplesmente pressionar CTRL + Shift + 6
+
+00:04:37.000 --> 00:04:39.000
+e o comando é abortado.
+
+00:04:39.000 --> 00:04:41.000
+Por último, pode haver momentos em que você está trabalhando
+
+00:04:41.000 --> 00:04:43.000
+na CLI de um dispositivo
+
+00:04:43.000 --> 00:04:46.000
+e ocorre um evento que gera uma mensagem
+
+00:04:46.000 --> 00:04:48.000
+interrompendo o comando que você está digitando.
+
+00:04:48.000 --> 00:04:51.000
+Isso pode ser muito irritante.
+
+00:04:51.000 --> 00:04:55.000
+Se isso ocorrer, pressione CTRL + R no teclado
+
+00:04:55.000 --> 00:04:57.000
+para retornar ao prompt onde o comando parcial
+
+00:04:57.000 --> 00:05:01.000
+será exibido permitindo que você termine de digitar.
+
+00:05:01.000 --> 00:05:03.000
+Esta sequência não é suportada no momento
+
+00:05:03.000 --> 00:05:05.000
+nesta versão do Packet Tracer.
+
+00:05:05.000 --> 00:05:08.000
+Vou simular o uso dessas teclas de atalho
+
+00:05:08.000 --> 00:05:10.000
+entrando na console de um switch físico
+
+00:05:10.000 --> 00:05:12.000
+e desligar uma interface no switch
+
+00:05:12.000 --> 00:05:16.000
+enquanto estou digitando um comando.
+
+00:05:16.000 --> 00:05:19.000
+Vou pressionar Enter e digitar "enable"
+
+00:05:19.000 --> 00:05:22.000
+para chegar ao Modo EXEC Privilegiado
+
+00:05:22.000 --> 00:05:26.000
+e então entrarei no modo de configuração global.
+
+00:05:26.000 --> 00:05:30.000
+Digamos que eu queira entrar na interface g 0/1.
+
+00:05:30.000 --> 00:05:33.000
+Vou começar a digitar o comando,
+
+00:05:33.000 --> 00:05:38.000
+e agora vou desligar uma interface.
+
+00:05:38.000 --> 00:05:40.000
+Você pode ver a mensagem exibida na tela.
+
+00:05:40.000 --> 00:05:43.000
+Se eu simplesmente pressionar Control + R,
+
+00:05:43.000 --> 00:05:46.000
+Volto de onde parei,
+
+00:05:46.000 --> 00:05:48.000
+e eu posso continuar digitando.
+
+00:05:48.000 --> 00:05:51.000
+Então é isso.
+
+00:05:51.000 --> 00:05:53.000
+Usar teclas de atalho e atalhos é uma ótima maneira
+
+00:05:53.000 --> 00:05:56.000
+para economizar seu tempo ao trabalhar com o Cisco IOS.

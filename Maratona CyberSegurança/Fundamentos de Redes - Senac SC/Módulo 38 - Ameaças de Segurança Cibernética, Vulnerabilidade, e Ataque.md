@@ -480,6 +480,8 @@ As organizações precisam promover a conscientização sobre as táticas de eng
 
 Pressione o botao Play para assistir o vídeo.
 
+![[38.2.10.mp4#subtitle=anexos/38.2.10.vtt]]
+
 Este vídeo é uma visão geral do laboratório para técnicas de engenharia social. Este laboratório requer um PC ou algum outro dispositivo com acesso à Internet.
 
 Nem todos os ataques de segurança cibernética vêm de algum invasor aleatório que está invadindo uma rede de um computador que está a milhares de quilômetros de distância. Muitas vezes, os invasores roubam informações pessoais ou organizacionais que adquiriram ao fazer com que alguém lhes concedesse acesso sem saber. Isso é chamado de engenharia social, e isso acontece com mais frequência do que você imagina.

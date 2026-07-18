@@ -1,0 +1,181 @@
+WEBVTT
+
+00:00:06.000 --> 00:00:09.000
+- Neste vídeo, vamos dar uma olhada em alguns dos
+
+00:00:09.000 --> 00:00:14.000
+comandos show básicos em um roteador Cisco IOS.
+
+00:00:14.000 --> 00:00:19.000
+Este primeiro comando é show running-config.
+
+00:00:19.000 --> 00:00:22.000
+O que este comando nos mostra é
+
+00:00:22.000 --> 00:00:26.000
+a configuração atual neste roteador.
+
+00:00:26.000 --> 00:00:28.000
+Então isso inclui todos os comandos
+
+00:00:28.000 --> 00:00:32.000
+que foram configurados neste roteador.
+
+00:00:32.000 --> 00:00:36.000
+Por exemplo, temos o nome de host R1.
+
+00:00:36.000 --> 00:00:40.000
+Isso nos dá este prompt, R1.
+
+00:00:40.000 --> 00:00:42.000
+Temos uma senha do EXEC privilegiado.
+
+00:00:42.000 --> 00:00:45.000
+Aqui está a configuração da interface
+
+00:00:45.000 --> 00:00:50.000
+para FastEthernet 0/0 e o endereço IPv4.
+
+00:00:50.000 --> 00:00:54.000
+Rolando para baixo, podemos ver algumas outras configurações
+
+00:00:54.000 --> 00:00:55.000
+neste roteador.
+
+00:00:55.000 --> 00:01:01.000
+A configuração da interface para a interface serial0/0/0.
+
+00:01:01.000 --> 00:01:05.000
+Sua máscara de sub-rede do endereço IPv4.
+
+00:01:05.000 --> 00:01:08.000
+Também podemos ver que este roteador foi configurado para usar
+
+00:01:08.000 --> 00:01:14.000
+o protocolo de roteamento RIP.
+
+00:01:14.000 --> 00:01:18.000
+Também podemos ver que a porta do console foi configurada
+
+00:01:18.000 --> 00:01:22.000
+com uma senha, e também configuramos o VTY
+
+00:01:22.000 --> 00:01:27.000
+Virtual Terminal Telnet Access para este dispositivo.
+
+00:01:27.000 --> 00:01:31.000
+O comando show interfaces nos mostrará esta informação ou
+
+00:01:31.000 --> 00:01:36.000
+informações semelhantes para todas as interfaces neste roteador.
+
+00:01:36.000 --> 00:01:41.000
+O comando show arp mostra a tabela arp para este roteador.
+
+00:01:41.000 --> 00:01:43.000
+Neste caso, está nos mostrando a tabela arp para a
+
+00:01:43.000 --> 00:01:47.000
+Porta FastEthernet0/0.
+
+00:01:47.000 --> 00:01:50.000
+Se este roteador tiver mais de uma porta Ethernet,
+
+00:01:50.000 --> 00:01:54.000
+ele nos mostraria as entradas arp para cada uma das
+
+00:01:54.000 --> 00:01:57.000
+Portas Ethernet que foram conectadas a este roteador.
+
+00:01:57.000 --> 00:02:01.000
+O comando show IP Route exibe a tabela de roteamento
+
+00:02:01.000 --> 00:02:04.000
+neste roteador.
+
+00:02:04.000 --> 00:02:08.000
+A informação que irá mostrar é de qualquer interface
+
+00:02:08.000 --> 00:02:09.000
+diretamente conectada.
+
+00:02:09.000 --> 00:02:11.000
+Podemos ver isso com um "C".
+
+00:02:11.000 --> 00:02:15.000
+Estas são as interfaces neste roteador onde o roteador
+
+00:02:15.000 --> 00:02:19.000
+tem um endereço IPv4 nessa interface
+
+00:02:19.000 --> 00:02:24.000
+e assim estão diretamente conectadas a essa rede.
+
+00:02:24.000 --> 00:02:25.000
+Também vemos "R" aqui.
+
+00:02:25.000 --> 00:02:30.000
+"R" significa RIP, Routing Information Protocol.
+
+00:02:30.000 --> 00:02:34.000
+RIP é um protocolo de roteamento dinâmico.
+
+00:02:34.000 --> 00:02:37.000
+O roteador aprendeu essa rota dinamicamente,
+
+00:02:37.000 --> 00:02:40.000
+automaticamente de outro roteador.
+
+00:02:40.000 --> 00:02:45.000
+O comando show protocolos mostra informações
+
+00:02:45.000 --> 00:02:47.000
+globais e específicas para
+
+00:02:47.000 --> 00:02:51.000
+qualquer uma de nossas interfaces de camada 3.
+
+00:02:51.000 --> 00:02:54.000
+O comando show version exibe
+
+00:02:54.000 --> 00:02:56.000
+informações sobre o sistema operacional
+
+00:02:56.000 --> 00:02:59.000
+e algumas informações de hardware sobre este roteador.
+
+00:02:59.000 --> 00:03:04.000
+Por exemplo, ele exibe a versão do sistema operacional.
+
+00:03:04.000 --> 00:03:05.000
+Neste caso 12.4.
+
+00:03:05.000 --> 00:03:11.000
+Ele também exibe sobre as interfaces neste roteador
+
+00:03:11.000 --> 00:03:15.000
+e outras informações também, como a quantidade de NVRAM,
+
+00:03:15.000 --> 00:03:19.000
+memória e outros tipos de informação.
+
+00:03:19.000 --> 00:03:22.000
+Esses comandos e muitos outros podem ser usados ​​para ajudar a verificar
+
+00:03:22.000 --> 00:03:25.000
+e solucionar problemas de operações de rede.
+
+00:03:25.000 --> 00:03:27.000
+Existem diferentes variações
+
+00:03:27.000 --> 00:03:29.000
+para cada um desses comandos.
+
+00:03:29.000 --> 00:03:33.000
+À medida que você desenvolve mais habilidades com o uso do sistema operacional,
+
+00:03:33.000 --> 00:03:36.000
+você aprenderá a usar e interpretar a saída
+
+00:03:36.000 --> 00:03:39.000
+desses comandos show.

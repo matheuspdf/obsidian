@@ -22,7 +22,7 @@ Você consegue explicar como os serviços DNS e DCHP operam? Aposto que este mó
 # 25.1 Serviços DNS
 
 ## 25.1.1 Vídeo - Serviço de Nome de Domínio
-
+![[25.1.1.mp4#subtitle=anexos/25.1.1.vtt]]
 Quando digitamos um nome de domínio como URL, `www.cisco.com`, como nosso cliente sabe o endereço IP com esse nome de domínio? A resposta está no DNS, o sistema de nome de domínio.
 
 O sistema operacional verificará primeiro seu cache de DNS local para ver se ele já tem essas informações, de endereço IP para `www.cisco.com`. Se a informação não estiver presente no cache do DNS, o cliente enviará uma consulta para o endereço IP do servidor DNS local.
@@ -268,7 +268,7 @@ Como a figura mostra, diversos tipos de dispositivos podem ser servidores DHCP. 
 O DHCP para IPv6 (DHCPv6) fornece serviços semelhantes para clientes IPv6. Uma diferença importante é que o DHCPv6 não fornece o endereço do gateway padrão. Isso só pode ser obtido dinamicamente a partir da mensagem Anúncio do roteador do roteador.
 
 ## 25.2.2 Vídeo - Operação do DHCP em um roteador doméstico
-
+![[25.2.2.mp4#subtitle=anexos/25.2.2.vtt]]
 DHCP, ou Protocolo de Configuração Dinâmica de Host, é um serviço que permite que os dispositivos recebam automaticamente seu endereço IP e outras informações de endereçamento de um servidor DHCP. O DHCP está disponível para IPv4 e IPv6. Há algumas diferenças entre os dois, no entanto, o resultado final é muito semelhante. Neste vídeo, vamos nos concentrar no DHCP para IPv4, usando um roteador doméstico típico como servidor DHCP.
 
 Em nossa topologia, vocês podem ver que nosso roteador doméstico tem o endereço IPv4 `192.168.1.1`, e também foi habilitado como um servidor DHCP. Em vez de uma única porta para conectar nossos dispositivos locais, a maioria dos roteadores domésticos inclui um switch Ethernet integrado. Dispositivos cliente, como PC 1 e PC 2, receberão normalmente as informações de endereçamento IPv4 de um servidor DHCP. O PC 2 já recebeu suas informações de endereçamento usando o DHCP.

@@ -355,6 +355,8 @@ Você configurou com êxito as GUAs IPv6 nas interfaces do roteador R1.
 
 ## 33.3.1 Vídeo - Mensagens RS e RA
 
+![[33.3.1.mp4#subtitle=anexos/33.3.1.vtt]]
+
 Para entender melhor o endereçamento dinâmico para IPv6, vamos dar uma olhada no DHCP para IPv4.
 
 PC1 e PC2 receberam informações de endereçamento IPv4 de um servidor DHCP. A maioria dessas informações, inclusive a máscara de sub-rede, o endereço de gateway padrão e o endereço do servidor DNS não são exclusivos e é a mesma informação enviada a todos os clientes. Esta informação é considerada stateless. Isso significa que um servidor DHCP não está mantendo o estado ou guardando um registro de quem recebe essas informações.

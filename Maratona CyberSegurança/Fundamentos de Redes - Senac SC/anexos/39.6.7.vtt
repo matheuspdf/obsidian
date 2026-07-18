@@ -1,0 +1,493 @@
+WEBVTT
+
+00:00:03.000 --> 00:00:06.000
+- Sinais sem fio podem viajar pelas janelas,
+
+00:00:06.000 --> 00:00:08.000
+paredes, tetos e pisos
+
+00:00:08.000 --> 00:00:11.000
+do seu escritório ou da sua casa.
+
+00:00:11.000 --> 00:00:13.000
+Sem usar medidas de segurança rigorosas,
+
+00:00:13.000 --> 00:00:15.000
+uma rede sem fio pode ser tão aberta
+
+00:00:15.000 --> 00:00:19.000
+como uma tomada de rede com fio na parte externa do seu prédio.
+
+00:00:19.000 --> 00:00:20.000
+Então, vamos falar sobre algumas das maneiras
+
+00:00:20.000 --> 00:00:23.000
+que podemos proteger as nossas redes locais sem fio.
+
+00:00:23.000 --> 00:00:24.000
+Duas das opções que são da
+
+00:00:24.000 --> 00:00:29.000
+a primeira fase sem fio 802.11 seria usando camuflagem SSID
+
+00:00:29.000 --> 00:00:32.000
+bem como filtragem de endereço MAC.
+
+00:00:32.000 --> 00:00:34.000
+Alguns pontos de acessos sem fio e roteadores
+
+00:00:34.000 --> 00:00:37.000
+permitem desativar o quadro de beacon SSID
+
+00:00:37.000 --> 00:00:40.000
+o que significa que, se um usuário sem fio acontece de
+
+00:00:40.000 --> 00:00:42.000
+chegar perto o suficiente do seu sinal wireless,
+
+00:00:42.000 --> 00:00:45.000
+eles ainda têm que configurar manualmente o SSID
+
+00:00:45.000 --> 00:00:49.000
+para se conectar à rede.
+
+00:00:49.000 --> 00:00:51.000
+Mesmo que um cliente sem fio
+
+00:00:51.000 --> 00:00:52.000
+recebe um sinal forte o suficiente
+
+00:00:52.000 --> 00:00:55.000
+e pode conhecer o SSID da rede sem fio,
+
+00:00:55.000 --> 00:00:57.000
+ele ainda pode ser permitido manualmente
+
+00:00:57.000 --> 00:01:00.000
+ou impedido de acessar a rede sem fio
+
+00:01:00.000 --> 00:01:02.000
+por causa de seu endereço MAC.
+
+00:01:02.000 --> 00:01:05.000
+Um administrador sem fio pode permitir especificamente
+
+00:01:05.000 --> 00:01:07.000
+ou negar um cliente sem fio
+
+00:01:07.000 --> 00:01:09.000
+de acessar a rede sem fio
+
+00:01:09.000 --> 00:01:12.000
+usando uma lista de aprovados ou negados
+
+00:01:12.000 --> 00:01:16.000
+endereço (MAC) físico
+
+00:01:16.000 --> 00:01:18.000
+Embora a ocultação de SSID e filtragem de endereço MAC
+
+00:01:18.000 --> 00:01:20.000
+vai parar a maioria desses clientes sem fio
+
+00:01:20.000 --> 00:01:23.000
+que não deveriam entrar na sua rede,
+
+00:01:23.000 --> 00:01:24.000
+não vai impedir todos eles.
+
+00:01:24.000 --> 00:01:27.000
+Nossos intrusos astutos podem ainda assim descobrir
+
+00:01:27.000 --> 00:01:30.000
+os SSIDs dos seus pontos de acesso
+
+00:01:30.000 --> 00:01:32.000
+mesmo se o seu ponto de acesso não for configurado para fazer o broadcast.
+
+00:01:32.000 --> 00:01:34.000
+E também filtragem de endereço MAC.
+
+00:01:34.000 --> 00:01:37.000
+Intrusos astutos podem falsificar seu endereço MAC
+
+00:01:37.000 --> 00:01:39.000
+e ainda ganhar acesso à rede sem fio.
+
+00:01:39.000 --> 00:01:42.000
+Então, a melhor maneira de realmente proteger uma rede sem fio
+
+00:01:42.000 --> 00:01:44.000
+é usar sistemas autenticação e de criptografia.
+
+00:01:44.000 --> 00:01:46.000
+Há dois tipos de autenticação
+
+00:01:46.000 --> 00:01:48.000
+que foram introduzidos com o padrão 802.11.
+
+00:01:48.000 --> 00:01:52.000
+Temos autenticação de sistema aberto e chaves compartilhadas.
+
+00:01:52.000 --> 00:01:53.000
+Com autenticação de sistema aberto,
+
+00:01:53.000 --> 00:01:56.000
+é perfeito quando queremos ter acesso gratuito em
+
+00:01:56.000 --> 00:02:00.000
+um café ou hotel ou até mesmo em uma area remota.
+
+00:02:00.000 --> 00:02:02.000
+Com autenticação aberta, um cliente sem fio
+
+00:02:02.000 --> 00:02:04.000
+pode se conectar facilmente à rede sem fio
+
+00:02:04.000 --> 00:02:06.000
+sem precisar usar uma senha.
+
+00:02:06.000 --> 00:02:08.000
+Com autenticação de chave compartilhada,
+
+00:02:08.000 --> 00:02:13.000
+temos mecanismos como WEP, WPA, WPA2, e WPA3
+
+00:02:13.000 --> 00:02:16.000
+para autenticar e também criptografar dados
+
+00:02:16.000 --> 00:02:19.000
+entre os clientes sem fio e o ponto de acesso.
+
+00:02:19.000 --> 00:02:22.000
+A preocupação aqui é que a senha deve ser pré-compartilhada
+
+00:02:22.000 --> 00:02:26.000
+entre ambas as partes para se conectarem a rede
+
+00:02:26.000 --> 00:02:29.000
+Dentro da categoria de autenticação com chave compartilhada,
+
+00:02:29.000 --> 00:02:32.000
+nós temos quatro técnicas diferentes disponíveis.
+
+00:02:32.000 --> 00:02:35.000
+Temos WEP, privacidade equivalente com fio.
+
+00:02:35.000 --> 00:02:37.000
+Parece ótimo, mas foi um dos originais
+
+00:02:37.000 --> 00:02:41.000
+das especificação 802.11 , e foi projetado
+
+00:02:41.000 --> 00:02:44.000
+para proteger dados sem fio usando uma chave estática..
+
+00:02:44.000 --> 00:02:46.000
+O que isso significa: não é muito seguro,
+
+00:02:46.000 --> 00:02:50.000
+O WEP não é mais recomendado e nunca deve ser usado..
+
+00:02:50.000 --> 00:02:54.000
+O próximo é o WPA, que é o acesso protegido por WiFi. (Wifi Protected Access).
+
+00:02:54.000 --> 00:02:56.000
+e WPA foi baseado
+
+00:02:56.000 --> 00:02:58.000
+no padrão WEP original.
+
+00:02:58.000 --> 00:03:01.000
+Garante a segurança usando um algoritmo de criptografia TKIP que é mais forte
+
+00:03:01.000 --> 00:03:04.000
+mas ainda não é o melhor a usar.
+
+00:03:04.000 --> 00:03:07.000
+WPA2 é o padrão atual do setor industrial
+
+00:03:07.000 --> 00:03:09.000
+para garantir a segurança de redes sem fio.
+
+00:03:09.000 --> 00:03:13.000
+Isso usa criptografia AES, (Advanced Encryption Standard).
+
+00:03:13.000 --> 00:03:16.000
+considerado atualmente o protocolo de criptografia mais forte..
+
+00:03:16.000 --> 00:03:19.000
+Por último temos WPA3, que é o mais novo
+
+00:03:19.000 --> 00:03:21.000
+e melhor método de segurança.
+
+00:03:21.000 --> 00:03:23.000
+Não permite protocolos legados desatualizados
+
+00:03:23.000 --> 00:03:27.000
+e usa quadros PMF , Protected Management Frames.
+
+00:03:27.000 --> 00:03:30.000
+Dispositivos com WPA3, ainda não estão disponíveis
+
+00:03:30.000 --> 00:03:33.000
+até o momento no mercado.
+
+00:03:33.000 --> 00:03:36.000
+Juntamente com nossa autenticação, , temos criptografia.
+
+00:03:36.000 --> 00:03:37.000
+Uma criptografia é o nosso método
+
+00:03:37.000 --> 00:03:39.000
+de ser capaz de proteger os dados.
+
+00:03:39.000 --> 00:03:43.000
+Mesmo que um invasor tenha capturado dados criptografados,
+
+00:03:43.000 --> 00:03:44.000
+eles ainda não seriam capazes de decifrá-lo
+
+00:03:44.000 --> 00:03:47.000
+em um período de tempo razoável.
+
+00:03:47.000 --> 00:03:50.000
+Os padrões WPA, WPA2 usam os seguintes
+
+00:03:50.000 --> 00:03:51.000
+dois protocolos de encriptação
+
+00:03:51.000 --> 00:03:54.000
+Temos TKIP e temos AES.
+
+00:03:54.000 --> 00:03:56.000
+TKIP é usado por WPA e fornece suporte para
+
+00:03:56.000 --> 00:04:00.000
+para equipamentos de rede local sem fio legados.
+
+00:04:00.000 --> 00:04:03.000
+Agora, o TKIP abordou as falhas originais do WEP,
+
+00:04:03.000 --> 00:04:08.000
+Equivalência com fio, mas o TKIP ainda não é tão forte quanto o AES.
+
+00:04:08.000 --> 00:04:12.000
+AES é o método de criptografia usado pelo WPA2.
+
+00:04:12.000 --> 00:04:13.000
+É o método preferido
+
+00:04:13.000 --> 00:04:16.000
+porque é um método de criptografia muito mais forte.
+
+00:04:16.000 --> 00:04:17.000
+Agora, quando os dados são criptografados,
+
+00:04:17.000 --> 00:04:20.000
+as pessoas teriam capturado literalmente esses dados
+
+00:04:20.000 --> 00:04:22.000
+e quebrar a criptografia
+
+00:04:22.000 --> 00:04:24.000
+para acessar os dados originais.
+
+00:04:24.000 --> 00:04:28.000
+Então, o que devemos usar para implantar uma LAN sem fio doméstico?
+
+00:04:28.000 --> 00:04:31.000
+Bem, primeiro, vamos usar uma autenticação WPA2.
+
+00:04:31.000 --> 00:04:32.000
+Queremos a autenticação mais forte
+
+00:04:32.000 --> 00:04:35.000
+que é WPA2 usando criptografia AES.
+
+00:04:35.000 --> 00:04:39.000
+No entanto, temos duas opções para autenticação WPA2.
+
+00:04:39.000 --> 00:04:42.000
+Temos Personal e temos Enterprise
+
+00:04:42.000 --> 00:04:44.000
+Com a Personal, destinado a autenticar
+
+00:04:44.000 --> 00:04:47.000
+dispositivos com uma chave pré-compartilhada.
+
+00:04:47.000 --> 00:04:49.000
+Nossos clientes sem fio, sejam eles tablets
+
+00:04:49.000 --> 00:04:53.000
+ou smartphones ou Blu-ray players ou TVs,
+
+00:04:53.000 --> 00:04:55.000
+vão sar exatamente a mesma senha sem fio
+
+00:04:55.000 --> 00:04:57.000
+que qualquer outro cliente da casa
+
+00:04:57.000 --> 00:05:02.000
+Não existe nenhum servidor especial necessário para implantar WPA2-Personal.
+
+00:05:02.000 --> 00:05:04.000
+Com o WPA2-Enterprise, no entanto,
+
+00:05:04.000 --> 00:05:06.000
+é aqui que você tem um servidor RADIUS,
+
+00:05:06.000 --> 00:05:10.000
+a Remote Authentication Dial-In User Service .
+
+00:05:10.000 --> 00:05:12.000
+Este servidor será um pouco mais complicado de configurar,
+
+00:05:12.000 --> 00:05:15.000
+mas ele garante a você uma boa quantidade de segurança.
+
+00:05:15.000 --> 00:05:18.000
+Nesse servidor, você terá multiplos usuários configurados
+
+00:05:18.000 --> 00:05:20.000
+e esses usuários terão
+
+00:05:20.000 --> 00:05:22.000
+uma combinação de nome de usuário e senha.
+
+00:05:22.000 --> 00:05:25.000
+Este servidor RADIUS seria consultado
+
+00:05:25.000 --> 00:05:28.000
+por qualquer dispositivo de infraestrutura sem fio
+
+00:05:28.000 --> 00:05:30.000
+que um usuário tenta se conectar.
+
+00:05:30.000 --> 00:05:31.000
+Se um pessoa em seu notebook
+
+00:05:31.000 --> 00:05:33.000
+tenta se conectar à rede sem fio,
+
+00:05:33.000 --> 00:05:35.000
+o ponto de acesso ou roteador sem fio
+
+00:05:35.000 --> 00:05:36.000
+consultaria o servidor RADIUS
+
+00:05:36.000 --> 00:05:39.000
+para garantir que essas credenciais estão corretas.
+
+00:05:39.000 --> 00:05:41.000
+WPA2-Enterprise foi criado
+
+00:05:41.000 --> 00:05:43.000
+para ambiente de negócios corporativo,
+
+00:05:43.000 --> 00:05:46.000
+mas ainda pode ser realizado em uma casa.
+
+00:05:46.000 --> 00:05:48.000
+Então, como isso pode ficar?
+
+00:05:48.000 --> 00:05:51.000
+Bem, implantar um RADIUS Setup não é muito louco..
+
+00:05:51.000 --> 00:05:52.000
+É só pegar alguns dos princípios básicos.
+
+00:05:52.000 --> 00:05:54.000
+Quando você faz autenticação em meio corporativo
+
+00:05:54.000 --> 00:05:56.000
+e você tem um servidor RADIUS,
+
+00:05:56.000 --> 00:05:58.000
+nós temos que garantir que nosso ponto de acesso sem fio
+
+00:05:58.000 --> 00:06:01.000
+ou o roteador sem fio pode alcançar o servidor RADIUS.
+
+00:06:01.000 --> 00:06:03.000
+E isso significa que seu ponto de acesso ou roteador sem fio
+
+00:06:03.000 --> 00:06:06.000
+tem que saber o endereço IP do servidor RADIUS.
+
+00:06:06.000 --> 00:06:10.000
+Além disso, como o RADIUS está sendo executado no próprio servidor,
+
+00:06:10.000 --> 00:06:11.000
+nosso ponto de acesso ou roteador sem fio
+
+00:06:11.000 --> 00:06:14.000
+precisa ser capaz de direcionar os números de porta
+
+00:06:14.000 --> 00:06:17.000
+em que o serviço é alcansável nesse servidor RADIUS.
+
+00:06:17.000 --> 00:06:20.000
+As portas mais comuns são 1812 para autenficação RADIUS
+
+00:06:20.000 --> 00:06:23.000
+e 1813 para contabilidade RADIUS,
+
+00:06:23.000 --> 00:06:28.000
+mas também pode operar usando as portas 1645 e 1646.
+
+00:06:28.000 --> 00:06:29.000
+Além disso, queremos ter certeza
+
+00:06:29.000 --> 00:06:32.000
+que nós realmente temos um dispositivo legítimo
+
+00:06:32.000 --> 00:06:34.000
+perguntando se o nome de usuário e senha estão corretos
+
+00:06:34.000 --> 00:06:36.000
+no servidor.
+
+00:06:36.000 --> 00:06:37.000
+E para fazer isso, temos a chave compartilhada.
+
+00:06:37.000 --> 00:06:39.000
+O ponto de acesso ou roteador sem fio
+
+00:06:39.000 --> 00:06:41.000
+terá uma chave compartilhada configurada nele
+
+00:06:41.000 --> 00:06:45.000
+que será a mesma chave configurada no servidor RADIUS
+
+00:06:45.000 --> 00:06:47.000
+Conforme solicitado no seu roteador ou ponto de acesso sem fio
+
+00:06:47.000 --> 00:06:51.000
+acesse esse servidor para perguntar sobre contas de usuário e senha,
+
+00:06:51.000 --> 00:06:52.000
+queremos ter certeza de que realmente temos
+
+00:06:52.000 --> 00:06:55.000
+fontes legítimas de solicitação.
+
+00:06:55.000 --> 00:06:56.000
+Portanto, independentemente de como você implanta
+
+00:06:56.000 --> 00:06:58.000
+uma rede local sem fio,
+
+00:06:58.000 --> 00:07:02.000
+você tem o básico de como mantê-la segura.
+
+00:07:02.000 --> 00:07:03.000
+Por que você não se conecta?
+
+00:07:03.000 --> 00:07:05.000
+Você não sabe que esta é a sala dos servidores?!
+
+00:07:05.000 --> 00:07:08.000
+Ugh!

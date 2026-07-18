@@ -60,7 +60,7 @@ Se o dispositivo localizar o endereço IPv4, seu endereço MAC correspondente se
 **Clique em reproduzir na figura para ver uma animação da função ARP.**
 ![[brave_MDXJtXsyf0.mp4]]
 ## 24.1.3 Vídeo - Operação ARP - Solicitação ARP
-
+![[24.1.3.mp4#subtitle=anexos/24.1.3.vtt]]
 Uma solicitação ARP é enviada quando um dispositivo precisa determinar o endereço MAC associado a um endereço IPv4 e não possui uma entrada para o endereço IPv4 em sua tabela ARP.
 
 As mensagens do ARP são encapsuladas diretamente em um quadro Ethernet. Não há cabeçalho IPv4. A requisição ARP é encapsulada em um quadro Ethernet usando as seguintes informações de cabeçalho:
@@ -95,7 +95,7 @@ O PC-C recebe a solicitação ARP, compara seu endereço IPv4 em relação ao en
 
 
 ## 24.1.4 Vídeo - Operação do ARP - Resposta do ARP
-
+![[24.1.4.mp4#subtitle=anexos/24.1.4.vtt]]
 Somente o dispositivo com o endereço IPv4 de destino associado à solicitação ARP responderá com uma resposta ARP. A resposta de ARP é encapsulada em um quadro Ethernet com as seguintes informações de cabeçalho:
 
 - **Endereço MAC de destino** - Este é o endereço MAC do remetente da solicitação ARP.
@@ -129,6 +129,7 @@ PC-A agora pode encaminhar este pacote no quadro ethernet apropriado para PC-C.
 
 ## 24.1.5 Vídeo - Função ARP nas comunicações remotas
 
+![[24.1.5.mp4#subtitle=anexos/24.1.5.vtt]]
 Quando o endereço IPv4 destino não está na mesma rede que o endereço IPv4 origem, o dispositivo de origem precisa enviar o quadro para o gateway padrão. Essa é a interface do roteador local. Sempre que um dispositivo de origem tiver um pacote com um endereço IPv4 em outra rede, ele encapsulará esse pacote em um quadro usando o endereço MAC de destino do roteador.
 
 O endereço IPv4 do gateway padrão é armazenado na configuração IPv4 dos hosts. Quando um host cria um pacote para um destino, ele compara o endereço IPv4 destino e seu próprio endereço IPv4 para determinar se os dois endereços IPv4 estão localizados na mesma rede de Camada 3. Se o host de destino não estiver na mesma rede, a origem usará a tabela ARP para obter uma entrada com o endereço IPv4 do gateway padrão. Se não houver uma entrada, ela usará o processo de ARP para determinar um endereço MAC do gateway padrão.

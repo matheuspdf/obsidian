@@ -1,0 +1,193 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.000
+Para entender melhor o endereçamento dinâmico
+
+00:00:02.000 --> 00:00:07.000
+para IPV6, vamos dar uma olhada no DHCP para IPV4.
+
+00:00:07.000 --> 00:00:11.000
+PC1 e PC2 receberam IPV4
+
+00:00:11.000 --> 00:00:15.000
+informações de endereçamento de um servidor DHCP.
+
+00:00:15.000 --> 00:00:18.000
+A maioria dessas informações, inclusive a máscara de sub-rede,
+
+00:00:18.000 --> 00:00:23.000
+o endereço de gateway padrão e o endereço do servidor DNS não são exclusivos
+
+00:00:23.000 --> 00:00:26.000
+e é a mesma informação enviada a todos os clientes.
+
+00:00:26.000 --> 00:00:30.000
+Esta informação é considerada stateless.
+
+00:00:30.000 --> 00:00:34.000
+Isso significa que um servidor DHCP não está mantendo o estado
+
+00:00:34.000 --> 00:00:39.000
+ou guardando um registro de quem recebe essas informações.
+
+00:00:39.000 --> 00:00:43.000
+Entretanto, os endereços IPV4 de cada dispositivo são atribuídos
+
+00:00:43.000 --> 00:00:46.000
+a partir de um pool, com cada dispositivo obtendo um
+
+00:00:46.000 --> 00:00:49.000
+endereço IPV4 exclusivo
+
+00:00:49.000 --> 00:00:52.000
+Essas informações são consideradas stateful.
+
+00:00:52.000 --> 00:00:55.000
+O servidor DHCP está mantendo o estado,
+
+00:00:55.000 --> 00:00:58.000
+está mantendo um registro de qual dispositivo recebe
+
+00:00:58.000 --> 00:01:01.000
+qual endereço IPV.4
+
+00:01:01.000 --> 00:01:06.000
+No caso de DHCP para IPV4, o servidor mantém um registro
+
+00:01:06.000 --> 00:01:09.000
+de qual dispositivo que recebeu o endereço,
+
+00:01:09.000 --> 00:01:13.000
+com base no endereço ethernet Mac do cliente.
+
+00:01:13.000 --> 00:01:17.000
+Observe que, embora cada endereço IPV4 seja exclusivo,
+
+00:01:17.000 --> 00:01:21.000
+a parte de rede dos endereços é a mesma.
+
+00:01:21.000 --> 00:01:27.000
+É apenas a parte do host que torna cada endereço único
+
+00:01:27.000 --> 00:01:34.000
+o endereçamento dinâmico com IPV6 usa uma mensagem ICMPV6
+
+00:01:34.000 --> 00:01:37.000
+de anúncio de roteador (RA) que informa aos clientes
+
+00:01:37.000 --> 00:01:42.000
+como obter dinamicamente as informações de endereçamento IPV6.
+
+00:01:42.000 --> 00:01:46.000
+Um roteador IPV6 envia mensagens de anúncio de roteador
+
+00:01:46.000 --> 00:01:51.000
+200
+
+00:01:51.000 --> 00:01:55.000
+Uma mensagem RA também pode ser enviada sempre que o roteador recebe
+
+00:01:55.000 --> 00:02:00.000
+uma mensagem de solicitação do roteador (RS) de um dispositivo.
+
+00:02:00.000 --> 00:02:03.000
+Vamos dar uma olhada na mensagem de RA.
+
+00:02:03.000 --> 00:02:07.000
+Uma mensagem de anúncio do roteador é enviada para todos os 6
+
+00:02:07.000 --> 00:02:13.000
+Dispositivos IPV6 Endereço Multicast ff:02:1.
+
+00:02:13.000 --> 00:02:17.000
+6
+
+00:02:17.000 --> 00:02:20.000
+é o endereço local do link do roteador.
+
+00:02:20.000 --> 00:02:24.000
+80:1.
+
+00:02:24.000 --> 00:02:28.000
+A mensagem RA inclui o prefixo de rede
+
+00:02:28.000 --> 00:02:29.000
+e o comprimento do prefixo
+
+00:02:29.000 --> 00:02:33.000
+Esse é o mesmo prefixo de rede
+
+00:02:33.000 --> 00:02:36.000
+do endereço unicast global dos roteadores nesta interface.
+
+00:02:36.000 --> 00:02:41.000
+Um endereço de servidor DNS e um ou mais dos seguintes
+
+00:02:41.000 --> 00:02:44.000
+flags de configuração ativados
+
+00:02:44.000 --> 00:02:49.000
+Ambos PC1 e o PC2 receberam a mensagem RA.
+
+00:02:49.000 --> 00:02:52.000
+O prefixo da rede e o comprimento do prefixo
+
+00:02:52.000 --> 00:02:55.000
+indicam o endereço de rede.
+
+00:02:55.000 --> 00:02:58.000
+6
+
+00:02:58.000 --> 00:03:01.000
+seus endereços de gateway padrão.
+
+00:03:01.000 --> 00:03:06.000
+O endereço de um ou mais servidores DNS é normalmente incluído
+
+00:03:06.000 --> 00:03:08.000
+na mensagem RA.
+
+00:03:08.000 --> 00:03:12.000
+E, neste exemplo, a mensagem RA tem apenas o flag A
+
+00:03:12.000 --> 00:03:14.000
+ativado.
+
+00:03:14.000 --> 00:03:18.000
+Isso significa que nossos dispositivos usarão SLAAC
+
+00:03:18.000 --> 00:03:20.000
+Stateless Address Autoconfiguration
+
+00:03:20.000 --> 00:03:25.000
+para seus endereços IPV6 unicast global
+
+00:03:25.000 --> 00:03:30.000
+1
+
+00:03:30.000 --> 00:03:33.000
+e cria aleatoriamente sua própria ID de interface.
+
+00:03:33.000 --> 00:03:35.000
+A parte do host do endereço.
+
+00:03:35.000 --> 00:03:41.000
+A ID de interface está indicado em vermelho, PC2 faz o mesmo.
+
+00:03:41.000 --> 00:03:46.000
+Observe que todas as informações de endereço obtidas pelo PC 1
+
+00:03:46.000 --> 00:03:48.000
+2
+
+00:03:48.000 --> 00:03:51.000
+Não há servidor algum controlando qual dispositivo
+
+00:03:51.000 --> 00:03:54.000
+recebeu qual endereço.
+
+00:03:54.000 --> 00:03:58.000
+Nesse caso, significando que um servidor DHCP stateful
+
+00:03:58.000 --> 00:04:01.000
+não é obrigatório.

@@ -1,0 +1,217 @@
+WEBVTT
+
+00:00:04.000 --> 00:00:05.000
+- [Instrutor] Vamos olhar para os comandos que são usados
+
+00:00:05.000 --> 00:00:08.000
+para alternar entre os diferentes modos de comando do iOS.
+
+00:00:08.000 --> 00:00:13.000
+Veremos o comando enable , o comando disable,
+
+00:00:13.000 --> 00:00:19.000
+configurar terminal, sair e usar Ctrl+Z no teclado,
+
+00:00:19.000 --> 00:00:21.000
+mais alguns comandos para inserir diferentes
+
+00:00:21.000 --> 00:00:23.000
+modos de subconfiguração.
+
+00:00:23.000 --> 00:00:25.000
+Eu tenho uma conexão de console com um switch,
+
+00:00:25.000 --> 00:00:30.000
+então eu vou clicar no PC um, e pressione Enter.
+
+00:00:30.000 --> 00:00:32.000
+E isso me leva ao modo User EXEC.
+
+00:00:32.000 --> 00:00:36.000
+Observe o prompt no canto inferior esquerdo da tela.
+
+00:00:36.000 --> 00:00:40.000
+Para inserir o modo EXEC privilegiado, digite enable.
+
+00:00:40.000 --> 00:00:43.000
+Se eu quiser retornar ao modo EXEC do usuário,
+
+00:00:43.000 --> 00:00:46.000
+Posso digitar desativar.
+
+00:00:46.000 --> 00:00:49.000
+Digitarei enable para retornar ao modo EXEC Privilegiado.
+
+00:00:49.000 --> 00:00:53.000
+Para configurar o switch, eu preciso primeiro
+
+00:00:53.000 --> 00:00:56.000
+acesse o modo de Configuração Global ou Configuração Global.
+
+00:00:56.000 --> 00:01:01.000
+Vou digitar o terminal de configuração.
+
+00:01:01.000 --> 00:01:02.000
+E você pode ver agora
+
+00:01:02.000 --> 00:01:05.000
+que estou no prompt de Configuração Global.
+
+00:01:05.000 --> 00:01:09.000
+Posso digitar exit e pressionar Enter
+
+00:01:09.000 --> 00:01:12.000
+para retornar ao modo EXEC privilegiado.
+
+00:01:12.000 --> 00:01:14.000
+Se eu digitar exit novamente,
+
+00:01:14.000 --> 00:01:17.000
+Vou deixar a ligação do meu console toda junta.
+
+00:01:17.000 --> 00:01:20.000
+Para entrar novamente no switch e obter uma interface de linha de comando,
+
+00:01:20.000 --> 00:01:23.000
+Eu tenho que pressionar Enter no meu teclado,
+
+00:01:23.000 --> 00:01:24.000
+e agora eu sou trazido de volta
+
+00:01:24.000 --> 00:01:26.000
+para a conexão do console com o switch.
+
+00:01:26.000 --> 00:01:29.000
+Vou digitar enable e pressionar Enter,
+
+00:01:29.000 --> 00:01:32.000
+e, em seguida, config t curto para configurar o terminal,
+
+00:01:32.000 --> 00:01:35.000
+e agora estou de volta ao modo de configuração global.
+
+00:01:35.000 --> 00:01:38.000
+Vamos entrar em um dos modos de sub-configuração.
+
+00:01:38.000 --> 00:01:42.000
+Vou digitar console de linha zero
+
+00:01:42.000 --> 00:01:46.000
+para acessar a interface de gerenciamento da porta do console.
+
+00:01:46.000 --> 00:01:50.000
+Agora que estou em um modo de sub-configuração, se eu digitar exit,
+
+00:01:50.000 --> 00:01:53.000
+Voltei ao modo de configuração global.
+
+00:01:53.000 --> 00:01:59.000
+Desta vez, vou digitar vty zero space 15,
+
+00:01:59.000 --> 00:02:02.000
+para minhas interfaces de gerenciamento de Terminal Virtual .
+
+00:02:02.000 --> 00:02:04.000
+Estes são usados para acesso administrativo remoto
+
+00:02:04.000 --> 00:02:05.000
+para o switch.
+
+00:02:05.000 --> 00:02:06.000
+Posso me mover diretamente.
+
+00:02:06.000 --> 00:02:09.000
+de um modo de subconfiguração para outro.
+
+00:02:09.000 --> 00:02:12.000
+Observe se eu digitar
+
+00:02:12.000 --> 00:02:16.000
+interface vlan one e pressione Enter,
+
+00:02:16.000 --> 00:02:20.000
+que meu prompt foi alterado do modo de configuração de linha
+
+00:02:20.000 --> 00:02:23.000
+para o modo de configuração da interface.
+
+00:02:23.000 --> 00:02:26.000
+A partir daqui, também posso inserir interfaces diferentes,
+
+00:02:26.000 --> 00:02:33.000
+como interface fastethernet
+
+00:02:33.000 --> 00:02:35.000
+zero barra um,
+
+00:02:35.000 --> 00:02:37.000
+e desde que eu não veja uma mensagem de erro
+
+00:02:37.000 --> 00:02:39.000
+que eu digitei no comando inválido,
+
+00:02:39.000 --> 00:02:43.000
+Estou no modo Interface Config para fastethernet 01.
+
+00:02:43.000 --> 00:02:48.000
+Eu também posso mover diretamente para o console de linha zero.
+
+00:02:48.000 --> 00:02:50.000
+Comandos que normalmente são executados no modo Configuração Global
+
+00:02:50.000 --> 00:02:51.000
+também pode ser executado
+
+00:02:51.000 --> 00:02:54.000
+de qualquer um dos modos de subconfiguração também.
+
+00:02:54.000 --> 00:02:58.000
+Se eu quiser sair de todos os modos de sub-configuração
+
+00:02:58.000 --> 00:03:01.000
+e retornar ao modo EXEC privilegiado,
+
+00:03:01.000 --> 00:03:06.000
+Posso usar o comando end ou pressionar Ctrl+Z no meu teclado.
+
+00:03:06.000 --> 00:03:07.000
+Vamos tentar.
+
+00:03:07.000 --> 00:03:10.000
+Vou digitar end, pressione Enter+Enter novamente.
+
+00:03:10.000 --> 00:03:12.000
+E você pode ver agora que eu voltei
+
+00:03:12.000 --> 00:03:15.000
+todo o caminho de volta ao modo Privileged EXEC.
+
+00:03:15.000 --> 00:03:18.000
+Voltarei ao modo de configuração global.
+
+00:03:18.000 --> 00:03:22.000
+E depois na linha do console zero.
+
+00:03:22.000 --> 00:03:27.000
+E desta vez, vou manter pressionada a tecla Ctrl e pressionar z.
+
+00:03:27.000 --> 00:03:30.000
+E se eu pressionar Enter, você pode ver que eu sou trazido
+
+00:03:30.000 --> 00:03:33.000
+todo o caminho de volta ao modo Privileged EXEC.
+
+00:03:33.000 --> 00:03:36.000
+Se eu estiver no modo de configuração global,
+
+00:03:36.000 --> 00:03:39.000
+e eu digito end, e pressione Enter,
+
+00:03:39.000 --> 00:03:42.000
+Também sou levado de volta ao modo EXEC Privilegiado.
+
+00:03:42.000 --> 00:03:45.000
+Aprender a navegar de forma eficiente entre
+
+00:03:45.000 --> 00:03:48.000
+os diferentes modos de comando irá poupar muito tempo.

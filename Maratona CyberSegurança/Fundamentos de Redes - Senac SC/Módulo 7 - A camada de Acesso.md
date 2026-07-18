@@ -58,6 +58,7 @@ Um exemplo comum de exigir o uso de formato correto nas comunicações humanas �
 Um envelope tem o endereço do remetente e do destinatário, cada um localizado no local apropriado do envelope. Se o endereço de destino e a formatação não estiverem corretos, a carta não será entregue.
 
 O processo de colocar um formato de mensagem (a carta) em outro formato de mensagem (o envelope) é chamado encapsulamento. O desencapsulamento ocorre quando o processo é invertido pelo destinatário e a carta é retirada do envelope.
+![[brave_PWuJbbPo7Q.mp4]]
 
 **Envelope:**
 ```

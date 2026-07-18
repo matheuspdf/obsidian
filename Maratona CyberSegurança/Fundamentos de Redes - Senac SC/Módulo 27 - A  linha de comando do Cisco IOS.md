@@ -60,7 +60,7 @@ A tabela resume os dois modos e exibe os prompts da CLI padrão de um switch e r
 |Modo EXEC privilegiado|O modo permite acesso a todos os comandos e recursos. O usuário pode utilizar qualquer comando de monitoramento e executar comandos de configuração e gerenciamento.|`Switch#` `Router#`|
 
 ## 27.1.3 Vídeo - Modos de Comando Primário da CLI do IOS
-
+![[27.1.3.mp4#subtitle=anexos/27.1.3.vtt]]
 Vamos examinar os modos de comando do Cisco IOS. Vou clicar em PC1, clicar no programa de emulação de terminal, clicar em ok e você pode ver que sou apresentado à linha de comando do console. Esse é o Cisco IOS.
 
 Vou pressionar enter no meu teclado para começar. Observem o prompt de comando na parte inferior da tela. Ele indica o modo de comando em que estou.
@@ -76,7 +76,7 @@ Existem também alguns modos de configuração adicionais, como o modo de config
 Muitos comandos só funcionarão de dentro de determinados modos. Um erro comum cometido pelos usuários novos para trabalhar com o Cisco IOS está tentando usar comandos de dentro do modo errado. Se você tiver certeza de que está digitando um comando corretamente, mas continua recebendo uma mensagem de erro, sempre verifique o seu prompt para ter certeza de que você está no modo certo.
 
 ## 27.1.4 Vídeo - Navegar entre os modos IOS
-
+![[27.1.4.mp4#subtitle=anexos/27.1.4.vtt]]
 Vamos olhar para os comandos que são usados para alternar entre os diferentes modos de comando do IOS. Veremos o comando `enable`, o comando `disable`, `configure terminal`, `exit` e usar `Ctrl+Z` no teclado, mais alguns comandos para inserir diferentes modos de subconfiguração.
 
 Eu tenho uma conexão de console com um switch, então vou clicar no PC 1 e pressionar Enter. Isso me leva ao modo User EXEC. Observe o prompt no canto inferior esquerdo da tela.
@@ -310,6 +310,7 @@ A Referência de Comandos do Cisco IOS é a fonte definitiva de informações pa
 
 ## 27.2.3 Vídeo - Ajuda Sensível ao Contexto e Verificação da Sintaxe do Comando
 
+![[27.2.3.mp4#subtitle=anexos/27.2.3.vtt]]
 O comando de ajuda do Cisco IOS é acessado com um ponto de interrogação (`?`). O comando help é sensível ao contexto, então como e onde usar a interrogação é importante.
 
 Por exemplo, digamos que eu queira uma lista de todos os comandos que estão disponíveis para mim no modo user-exec. Basta digitar uma interrogação e receberei os comandos que estão disponíveis no modo EXEC do usuário. Basta digitar `enable` e entro no modo EXEC privilegiado. Se eu inserir um ponto de interrogação, receberei os comandos que estão disponíveis no modo privileged-exec. Pressionarei a barra de espaço para ir à próxima página dos resultados.
@@ -375,6 +376,7 @@ Esta tabela lista os comandos usados para sair de uma operação.
 
 ## 27.2.5 Vídeo - Teclas de Atalho e Atalhos
 
+![[27.2.5.mp4#subtitle=anexos/27.2.5.vtt]]
 O suporte a teclas de atalho faz o Cisco IOS ser extremamente eficiente. Fazendo uso deles você vai economizar muito tempo quando você está configurando dispositivos.
 
 A primeira tecla de atalho é a tecla **Tab**, ou conclusão de Tab, para completar automaticamente seus comandos. Para chegar ao Modo EXEC Privilegiado, eu normalmente digitaria o comando `enable`. Com o preenchimento Tab, você simplesmente digita as primeiras letras do comando, neste caso `EN`, e pressione a tecla Tab no seu teclado e o comando é concluído automaticamente para você. Isso funcionará se apenas um comando começar com as letras digitadas.
@@ -408,6 +410,7 @@ Nesta atividade do Packet Tracer, você atingirá os seguintes objetivos:
 
 ## 27.3.1 Vídeo - Comandos Show Cisco IOS
 
+![[27.3.1.mp4#subtitle=anexos/27.3.1.vtt]]
 Neste vídeo, vamos dar uma olhada em alguns dos comandos show básicos em um roteador Cisco IOS.
 
 O primeiro comando é `show running-config`. O que este comando nos mostra é a configuração atual neste roteador — todos os comandos que foram configurados neste roteador. Por exemplo, temos o nome de host `R1`, uma senha do EXEC privilegiado, a configuração da interface para `FastEthernet 0/0` e o endereço IPv4. Rolando para baixo, podemos ver outras configurações, como a configuração da interface para `serial0/0/0`, sua máscara de sub-rede e o endereço IPv4. Também podemos ver que este roteador foi configurado para usar o protocolo de roteamento RIP, que a porta do console foi configurada com uma senha, e que o VTY — Virtual Terminal Telnet Access — foi configurado para este dispositivo.

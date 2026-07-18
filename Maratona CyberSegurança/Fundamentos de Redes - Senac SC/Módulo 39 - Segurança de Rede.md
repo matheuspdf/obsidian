@@ -443,6 +443,8 @@ Impressão digital, PIN e chave de segurança seriam a combinação de autentica
 
 **Pressione o botao Play para assistir o vídeo.**
 
+![[39.2.13.mp4#subtitle=anexos/39.2.13.vtt]]
+
 **Autenticação e autorização** são processos de segurança distintos no mundo da identidade e gerenciamento de acesso. A autenticação usa senha e outros métodos de identificação para confirmar que os usuários são quem dizem ser. Por outro lado, a autorização atribui permissões de usuário aos recursos que o usuário tem permissão para acessar.
 
 Nessa atividade tutorada do Packet Tracer, **Configure o controle de acesso**, você irá configurar a autenticação e autorização para serviços de rede, inclusive acesso de rede sem fio, e-mail e serviços de FTP.
@@ -1403,6 +1405,8 @@ As redes sem fio estão crescendo rapidamente. É importante entender as vulnera
 
 **Clique em Reproduzir para ver um vídeo sobre ameaças às WLANs.**
 
+![[39.6.1.mp4#subtitle=anexos/39.6.1.vtt]]
+
 À medida que mergulhamos nas redes locais sem fio, precisamos descrever as ameaças às nossas LANs sem fio. E, para começar, uma LAN sem fio é praticamente aberta para qualquer pessoa dentro da área de um ponto de acesso. E se eles tiverem as credenciais apropriadas para associar com esse ponto de acesso, eles estão na rede.
 
 Agora, esses ataques podem ser gerados por pessoas de fora, funcionários descontentes, mesmo sem querer por funcionários dentro da sua empresa, e eles nem precisam entrar fisicamente no local de trabalho para obter acesso à rede local sem fio.
@@ -1528,6 +1532,8 @@ Um ataque de "AP gêmeo do mal" é um ataque MITM sem fio popular, em que um inv
 O tópico anterior explicou as ameaças da WLAN. O que você pode fazer para proteger a WLAN?
 
 **Clique em Reproduzir para ver um vídeo sobre técnicas para proteger WLANs.**
+
+![[39.6.7.mp4#subtitle=anexos/39.6.7.vtt]]
 
 Sinais sem fio podem viajar pelas janelas, paredes, tetos e pisos do seu escritório ou da sua casa. Sem usar medidas de segurança rigorosas, uma rede sem fio pode ser tão aberta como uma tomada de rede com fio na parte externa do seu prédio.
 

@@ -1,0 +1,91 @@
+WEBVTT
+
+00:00:06.000 --> 00:00:08.000
+- Neste vídeo, vamos dar uma olhada
+
+00:00:08.000 --> 00:00:12.000
+nos componentes de um switch Ethernet.
+
+00:00:12.000 --> 00:00:14.000
+Atrás do switch, temos o cabo de alimentação
+
+00:00:14.000 --> 00:00:18.000
+que se conecta à fonte de alimentação.
+
+00:00:18.000 --> 00:00:21.000
+Na frente, temos algumas luzes.
+
+00:00:21.000 --> 00:00:24.000
+Essas são os LEDs do sistema, informam
+
+00:00:24.000 --> 00:00:26.000
+se temos energia no switch
+
+00:00:26.000 --> 00:00:30.000
+e algumas outras informações de status.
+
+00:00:30.000 --> 00:00:34.000
+Temos algumas portas por aqui, que são as portas Ethernet.
+
+00:00:34.000 --> 00:00:38.000
+É aqui que conectamos os sistemas de usuário final,
+
+00:00:38.000 --> 00:00:40.000
+os computadores e os laptops.
+
+00:00:40.000 --> 00:00:43.000
+Aqui conectamos roteadores ao switch,
+
+00:00:43.000 --> 00:00:47.000
+podemos conectar outro switch a esse switch,
+
+00:00:47.000 --> 00:00:51.000
+impressoras, etc.
+
+00:00:51.000 --> 00:00:54.000
+Por aqui, no canto, temos
+
+00:00:54.000 --> 00:00:57.000
+o que é conhecido como a porta de console.
+
+00:00:57.000 --> 00:00:59.000
+Então, conectado ao meu computador, tenho um,
+
+00:00:59.000 --> 00:01:04.000
+o que é conhecido como um cabo de console ou um cabo rollover.
+
+00:01:04.000 --> 00:01:06.000
+Este cabo aqui está conectado
+
+00:01:06.000 --> 00:01:10.000
+à porta USB do meu computador.
+
+00:01:10.000 --> 00:01:12.000
+Antigamente, costumávamos conectar esses cabos
+
+00:01:12.000 --> 00:01:19.000
+em portas seriais, então eu tenho um conversor USB para serial
+
+00:01:19.000 --> 00:01:26.000
+que conecta o cabo de rollover à minha porta USB.
+
+00:01:26.000 --> 00:01:29.000
+E tudo o que preciso fazer é conectar
+
+00:01:29.000 --> 00:01:35.000
+esse cabo de console na porta do console.
+
+00:01:35.000 --> 00:01:38.000
+Isso permitirá que eu faça a configuração inicial
+
+00:01:38.000 --> 00:01:42.000
+do switch, ou quando quiser configurar o switch,
+
+00:01:42.000 --> 00:01:46.000
+sem precisar de qualquer tipo de acesso à rede.
+
+00:01:46.000 --> 00:01:50.000
+Apenas o acesso físico ao switch permite
+
+00:01:50.000 --> 00:01:53.000
+configurar o switch.

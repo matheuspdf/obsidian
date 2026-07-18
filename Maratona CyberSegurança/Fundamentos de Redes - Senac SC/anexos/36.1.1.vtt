@@ -1,0 +1,163 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.000
+Uma das melhores maneiras de aprender
+
+00:00:01.000 --> 00:00:05.000
+e entender qualquer tópico é solucionar problemas.
+
+00:00:05.000 --> 00:00:06.000
+Para um profissional de rede
+
+00:00:06.000 --> 00:00:08.000
+em qualquer nível, a solução de problemas é uma oportunidade
+
+00:00:08.000 --> 00:00:11.000
+para aprofundar os protocolos
+
+00:00:11.000 --> 00:00:13.000
+e tecnologias envolvidas na
+
+00:00:13.000 --> 00:00:15.000
+tentativa de resolver o problema.
+
+00:00:15.000 --> 00:00:18.000
+As configurações incorretas e os erros de cabeamento acontecem.
+
+00:00:18.000 --> 00:00:20.000
+Mas esses tipos de erros geralmente são
+
+00:00:20.000 --> 00:00:23.000
+detectados logo no início durante a verificação.
+
+00:00:23.000 --> 00:00:25.000
+Encontrar o problema normalmente envolve
+
+00:00:25.000 --> 00:00:29.000
+uma abordagem sistemática para encontrar a origem do problema.
+
+00:00:29.000 --> 00:00:31.000
+Isso inclui descobrir quais dispositivos
+
+00:00:31.000 --> 00:00:32.000
+podem comunicar-se entre si,
+
+00:00:32.000 --> 00:00:35.000
+e quais não podem.
+
+00:00:35.000 --> 00:00:38.000
+Por exemplo, e se o usuário do PC 1
+
+00:00:38.000 --> 00:00:40.000
+submeter um tíquete de suporte que
+
+00:00:40.000 --> 00:00:42.000
+ele não consegue mais acessar dispositivos
+
+00:00:42.000 --> 00:00:46.000
+na Internet, como www.example.com.
+
+00:00:46.000 --> 00:00:49.000
+Há várias coisas que podemos fazer para isolar
+
+00:00:49.000 --> 00:00:52.000
+o problema, além de entrar em contato com outros usuários
+
+00:00:52.000 --> 00:00:55.000
+para ver se estão enfrentando problemas semelhantes.
+
+00:00:55.000 --> 00:00:59.000
+Mas vamos ver o que podemos fazer com o PC1.
+
+00:00:59.000 --> 00:01:02.000
+Usamos o comando IP config no PC 1
+
+00:01:02.000 --> 00:01:05.000
+para verificar as informações de 4endereçamento IP
+
+00:01:05.000 --> 00:01:07.000
+é o que esperamos ver.
+
+00:01:07.000 --> 00:01:10.000
+Tudo funciona bem.
+
+00:01:10.000 --> 00:01:14.000
+Em seguida, vamos ver se um PC pode alcançar outros dispositivos
+
+00:01:14.000 --> 00:01:16.000
+no mesmo switch.
+
+00:01:16.000 --> 00:01:21.000
+Do PC um, fazemos ping no endereço IPv4 do PC dois
+
+00:01:21.000 --> 00:01:24.000
+e descobrir que os pings são bem-sucedidos.
+
+00:01:24.000 --> 00:01:27.000
+Em seguida, tentamos fazer o ping do endereço IPv 4
+
+00:01:27.000 --> 00:01:33.000
+para seu default gateway, o roteador. 192.168.1.1
+
+00:01:33.000 --> 00:01:37.000
+esses pings são malsucedidos.
+
+00:01:37.000 --> 00:01:39.000
+Tentamos fazer o ping para outros dispositivos em nossa rede
+
+00:01:39.000 --> 00:01:42.000
+como os servidores DNS e DHCP
+
+00:01:42.000 --> 00:01:47.000
+e isso também prova ser malsucedido.
+
+00:01:47.000 --> 00:01:49.000
+Ao fazer alguns testes adicionais, notamos que
+
+00:01:49.000 --> 00:01:52.000
+nenhum dos dispositivos no switch pode alcançar dispositivos
+
+00:01:52.000 --> 00:01:56.000
+no switch 2 ou acesse a Internet.
+
+00:01:56.000 --> 00:01:59.000
+Entretanto, os dispositivos no switch dois podem alcançar
+
+00:01:59.000 --> 00:02:01.000
+Internet, mas não conseguem se comunicar
+
+00:02:01.000 --> 00:02:05.000
+com dispositivos no switch 1.
+
+00:02:05.000 --> 00:02:08.000
+Parece que nosso problema está entre
+
+00:02:08.000 --> 00:02:10.000
+switch um e switch dois.
+
+00:02:10.000 --> 00:02:12.000
+Fazendo alguma investigação adicional,
+
+00:02:12.000 --> 00:02:14.000
+determinamos que o problema é
+
+00:02:14.000 --> 00:02:17.000
+uma porta com defeito no switch usada para conectar
+
+00:02:17.000 --> 00:02:19.000
+switch 1 ao switch dois.
+
+00:02:19.000 --> 00:02:21.000
+Movendo o cabo para outra porta
+
+00:02:21.000 --> 00:02:23.000
+no switch 1 corrige o problema
+
+00:02:23.000 --> 00:02:26.000
+e a acessibilidade total é restaurada.
+
+00:02:26.000 --> 00:02:28.000
+Marcamos a porta como defeituosa
+
+00:02:28.000 --> 00:02:31.000
+e atualizamos o tíquete de suporte.

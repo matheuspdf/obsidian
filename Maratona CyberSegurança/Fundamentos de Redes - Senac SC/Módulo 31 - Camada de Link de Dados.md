@@ -55,6 +55,8 @@ A próxima figura exibe um exemplo de **topologia lógica** para a mesma rede.
 
 **Selecione o botão Reproduzir para assistir o vídeo.**
 
+![[31.1.2.mp4#subtitle=anexos/31.1.2vtt]]
+
 Existem vários tipos de diagramas de rede. Um dos diagramas mais comuns e um dos mais úteis é o diagrama de topologia lógica, que estamos mostrando aqui.
 
 A maioria dos diagramas de rede incluirá muitos dos mesmos dispositivos e algumas das mesmas informações. Um diagrama de topologia lógica se concentra no fluxo de informações, inclusive endereçamento. A topologia aqui está mostrando apenas um exemplo de algumas das informações relevantes que você pode ver neste tipo de diagrama. Estão incluídos neste diagrama os dispositivos de rede tais como switches, roteadores, firewalls. Normalmente, os dispositivos do cliente não estão incluídos. Em vez disso, eles estão representados usando um único switch Ethernet.

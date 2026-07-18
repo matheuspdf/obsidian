@@ -1,0 +1,154 @@
+WEBVTT
+
+00:00:06.000 --> 00:00:08.000
+- Neste vídeo, vamos explorar alguns
+
+00:00:08.000 --> 00:00:14.000
+dos componentes de um roteador1941 da Cisco.
+
+00:00:14.000 --> 00:00:16.000
+Vou virar o roteador para trás,
+
+00:00:16.000 --> 00:00:18.000
+porque facilita muito a visualização
+
+00:00:18.000 --> 00:00:20.000
+dos diferentes componentes.
+
+00:00:20.000 --> 00:00:22.000
+A primeira coisa que você vai notar é
+
+00:00:22.000 --> 00:00:24.000
+significativamente diferentes dos switches,
+
+00:00:24.000 --> 00:00:27.000
+e o motivo é que o switch tinha muitas
+
+00:00:27.000 --> 00:00:30.000
+portas Ethernet, pois o switch fornece a
+
+00:00:30.000 --> 00:00:34.000
+conectividade com os dispositivos da camada de acesso.
+
+00:00:34.000 --> 00:00:38.000
+Agora, um roteador conecta apenas redes individuais,
+
+00:00:38.000 --> 00:00:41.000
+então o roteador tem muito menos portas.
+
+00:00:41.000 --> 00:00:47.000
+Então vamos observar algumas delas.
+
+00:00:47.000 --> 00:00:49.000
+O que você pode ver aqui é a cor amarela revestida
+
+00:00:49.000 --> 00:00:51.000
+das portas Ethernet.
+
+00:00:51.000 --> 00:00:55.000
+Aqui, elas são chamadas de interfaces Ethernet.
+
+00:00:55.000 --> 00:01:00.000
+E, nesse caso, elas fornecem conectividade gigabit.
+
+00:01:00.000 --> 00:01:03.000
+Então, vocês podem ver que há duas interfaces amarelas,
+
+00:01:03.000 --> 00:01:07.000
+Gigabit Ethernet no roteador.
+
+00:01:07.000 --> 00:01:12.000
+Você também verá uma interface revestida de cor azul,
+
+00:01:12.000 --> 00:01:15.000
+que fornece a conexão serial para o
+
+00:01:15.000 --> 00:01:16.000
+para o cabo de console.
+
+00:01:16.000 --> 00:01:19.000
+O cabo do console oferece conectividade entre
+
+00:01:19.000 --> 00:01:23.000
+o laptop ou o computador e o dispositivo de rede
+
+00:01:23.000 --> 00:01:27.000
+para que você tenha um canal através do qual
+
+00:01:27.000 --> 00:01:31.000
+comunicar-se com o dispositivo para as configurações iniciais.
+
+00:01:31.000 --> 00:01:34.000
+Você também vai notar que há uma mini USB
+
+00:01:34.000 --> 00:01:37.000
+que você pode usar como um cabo de console e
+
+00:01:37.000 --> 00:01:41.000
+também algumas portas USB que você pode usar
+
+00:01:41.000 --> 00:01:47.000
+como um armazenamento adcional.
+
+00:01:47.000 --> 00:01:49.000
+Caso contrário, algumas coisas são muito semelhantes
+
+00:01:49.000 --> 00:01:50.000
+com o switch.
+
+00:01:50.000 --> 00:01:52.000
+Você tem uma conexão de cabo de alimentação,
+
+00:01:52.000 --> 00:01:55.000
+agora um roteador você também tem um interruptor de liga e desliga.
+
+00:01:55.000 --> 00:01:58.000
+Muitos switches vêm automaticamente para que, quando
+
+00:01:58.000 --> 00:02:03.000
+você os conecte em uma fonte de alimentação, eles automaticamente são ligados
+
+00:02:03.000 --> 00:02:05.000
+e a única maneira que você consegue fisicamente
+
+00:02:05.000 --> 00:02:08.000
+desligalos é desconectando o cabo.
+
+00:02:08.000 --> 00:02:12.000
+Agora, em um roteador, ele tem um botão liga/desliga,
+
+00:02:12.000 --> 00:02:16.000
+então você tem que ter cuidado quando conectá-lo
+
+00:02:16.000 --> 00:02:18.000
+para você realmente ligar o dispositivo.
+
+00:02:18.000 --> 00:02:20.000
+Então, basicamente, esses são os componentes de
+
+00:02:20.000 --> 00:02:23.000
+um roteador, assim que saem da caixa.
+
+00:02:23.000 --> 00:02:25.000
+Agora você também vai notar que o roteador
+
+00:02:25.000 --> 00:02:26.000
+algo que o switch não tem,
+
+00:02:26.000 --> 00:02:31.000
+tem slots de expansão e, neste roteador,
+
+00:02:31.000 --> 00:02:34.000
+você vai notar que existem três slots
+
+00:02:34.000 --> 00:02:37.000
+em que é possível colocar peças adicionais
+
+00:02:37.000 --> 00:02:39.000
+do equipamento.
+
+00:02:39.000 --> 00:02:41.000
+Basicamente, são os componentes de um
+
+00:02:41.000 --> 00:02:44.000
+roteador 1941Cisco.

@@ -1,0 +1,391 @@
+WEBVTT
+
+00:00:04.000 --> 00:00:07.000
+- [Instrutor] À medida que mergulhamos nas redes locais sem fio,
+
+00:00:07.000 --> 00:00:10.000
+precisamos descrever as ameaças às nossas LANs sem fio.
+
+00:00:10.000 --> 00:00:12.000
+E, para começar, uma LAN sem fio é praticamente aberta
+
+00:00:12.000 --> 00:00:15.000
+para qualquer pessoa dentro da área de um ponto de acesso.
+
+00:00:15.000 --> 00:00:17.000
+E se eles tiverem as credenciais apropriadas para associar
+
+00:00:17.000 --> 00:00:21.000
+com esse ponto de acesso, eles estão na rede.
+
+00:00:21.000 --> 00:00:24.000
+Agora, esses ataques podem ser gerados por pessoas de fora,
+
+00:00:24.000 --> 00:00:27.000
+funcionários descontentes, mesmo sem querer
+
+00:00:27.000 --> 00:00:29.000
+por funcionários dentro da sua empresa,
+
+00:00:29.000 --> 00:00:32.000
+e eles nem precisam entrar fisicamente no local de trabalho
+
+00:00:32.000 --> 00:00:35.000
+para obter acesso à rede local sem fio.
+
+00:00:35.000 --> 00:00:37.000
+Existem muitos tipos diferentes de ataques sem fio
+
+00:00:37.000 --> 00:00:40.000
+isso pode acontecer, sendo um deles a interceptação de dados.
+
+00:00:40.000 --> 00:00:43.000
+Seus dados sem fio, eles devem ser criptografados o tempo todo
+
+00:00:43.000 --> 00:00:46.000
+para impedir que seja lido pelos bisbilhoteiros,
+
+00:00:46.000 --> 00:00:49.000
+pessoas que não deveriam ter acesso a esses dados.
+
+00:00:49.000 --> 00:00:51.000
+Intrusos sem fio são usuários não autorizados
+
+00:00:51.000 --> 00:00:54.000
+que estão tentando acessar recursos de rede,
+
+00:00:54.000 --> 00:00:55.000
+E sabe de uma coisa?
+
+00:00:55.000 --> 00:00:58.000
+Eles podem ser dissuadidos usando a autenticação.
+
+00:00:58.000 --> 00:01:01.000
+O ataque de negação de serviço é um pouco mais difícil.
+
+00:01:01.000 --> 00:01:02.000
+Eles tentam acessar
+
+00:01:02.000 --> 00:01:04.000
+serviços de rede local sem fio,
+
+00:01:04.000 --> 00:01:08.000
+depois comprometa-os acidentalmente ou de propósito.
+
+00:01:08.000 --> 00:01:10.000
+Também temos nossos APs desonestos,
+
+00:01:10.000 --> 00:01:12.000
+que são pontos de acesso não autorizados
+
+00:01:12.000 --> 00:01:15.000
+que são instalados por um usuário bem-intencionado,
+
+00:01:15.000 --> 00:01:17.000
+alguém só queria ter uma rede sem fio extra
+
+00:01:17.000 --> 00:01:21.000
+por perto ou instalado para fins maliciosos,
+
+00:01:21.000 --> 00:01:24.000
+e eles querem poder interceptar o tráfego das pessoas.
+
+00:01:24.000 --> 00:01:25.000
+Usando software de gerenciamento,
+
+00:01:25.000 --> 00:01:29.000
+devemos ser capazes de detectar esses pontos de acesso não autorizados.
+
+00:01:29.000 --> 00:01:31.000
+Como os ataques de negação de serviço acontecem sem fio?
+
+00:01:31.000 --> 00:01:33.000
+Bem, eles podem acontecer por causa de coisas
+
+00:01:33.000 --> 00:01:35.000
+como dispositivos configurados incorretamente.
+
+00:01:35.000 --> 00:01:39.000
+Erros de configuração podem desativar uma rede sem fio.
+
+00:01:39.000 --> 00:01:41.000
+Por exemplo, um administrador, ele poderia acidentalmente
+
+00:01:41.000 --> 00:01:43.000
+desabilite isso sobre o botão desativar.
+
+00:01:43.000 --> 00:01:46.000
+Ou mesmo um invasor com privilégios administrativos
+
+00:01:46.000 --> 00:01:50.000
+intencionalmente pode desativar a rede local sem fio.
+
+00:01:50.000 --> 00:01:52.000
+Agora, outro ataque de DoS é onde um usuário mal-intencionado
+
+00:01:52.000 --> 00:01:56.000
+interfere intencionalmente na comunicação sem fio.
+
+00:01:56.000 --> 00:01:59.000
+O que isso significa é que um usuário mal-intencionado tem uma meta,
+
+00:01:59.000 --> 00:02:02.000
+e seu objetivo é sobrecarregar o ponto de acesso sem fio
+
+00:02:02.000 --> 00:02:06.000
+a um ponto em que nenhum dispositivo legítimo possa acessá-lo.
+
+00:02:06.000 --> 00:02:09.000
+Existem ferramentas para dispositivos móveis para isso,
+
+00:02:09.000 --> 00:02:12.000
+bem como ferramentas específicas de bloqueio de radiofrequência.
+
+00:02:12.000 --> 00:02:15.000
+Interferência acidental, todos sabemos que isso pode acontecer.
+
+00:02:15.000 --> 00:02:17.000
+Nossas redes locais sem fio,
+
+00:02:17.000 --> 00:02:20.000
+eles são propensos a interferências de outros dispositivos sem fio.
+
+00:02:20.000 --> 00:02:22.000
+Esses dispositivos podem ser coisas como fornos de microondas,
+
+00:02:22.000 --> 00:02:26.000
+monitores de bebê, telefones sem fio e muito mais.
+
+00:02:26.000 --> 00:02:29.000
+A frequência de rádio de 2.4 gigahertz,
+
+00:02:29.000 --> 00:02:32.000
+essa é a banda sem fio mais propensa a interferências.
+
+00:02:32.000 --> 00:02:36.000
+Então, como minimizamos esse risco de negação de serviço?
+
+00:02:36.000 --> 00:02:37.000
+Bem, vamos fortalecer nossos dispositivos
+
+00:02:37.000 --> 00:02:39.000
+e manter nossas senhas seguras.
+
+00:02:39.000 --> 00:02:40.000
+Nós vamos usar backups
+
+00:02:40.000 --> 00:02:43.000
+para voltar a ficar online o mais rápido possível.
+
+00:02:43.000 --> 00:02:46.000
+E também quaisquer alterações que estavam sendo implementadas em nossa rede,
+
+00:02:46.000 --> 00:02:48.000
+eles sempre devem ser feitos fora do horário comercial,
+
+00:02:48.000 --> 00:02:51.000
+não durante o período de nosso ambiente de produção.
+
+00:02:51.000 --> 00:02:53.000
+Muita dessa interferência que pode acontecer,
+
+00:02:53.000 --> 00:02:55.000
+como mencionado, está na banda de 2.4 gigahertz,
+
+00:02:55.000 --> 00:02:58.000
+então vamos mudar nossos dispositivo para a banda de cinco gigahertz,
+
+00:02:58.000 --> 00:03:00.000
+Se for possível.
+
+00:03:00.000 --> 00:03:02.000
+Pontos de acesso não autorizados são prejudiciais
+
+00:03:02.000 --> 00:03:04.000
+à segurança da rede com fio.
+
+00:03:04.000 --> 00:03:07.000
+Um ponto de acesso não autorizado é um ponto de acesso ou um roteador sem fio
+
+00:03:07.000 --> 00:03:10.000
+que foi conectado a uma rede corporativa
+
+00:03:10.000 --> 00:03:14.000
+sem a autorização explícita da empresa.
+
+00:03:14.000 --> 00:03:16.000
+Isso é totalmente contrário à política da empresa.
+
+00:03:16.000 --> 00:03:19.000
+Qualquer pessoa com acesso às instalações físicas
+
+00:03:19.000 --> 00:03:22.000
+pode instalar um roteador sem fio muito barato
+
+00:03:22.000 --> 00:03:25.000
+ou ponto de acesso e permitir-se acessar
+
+00:03:25.000 --> 00:03:28.000
+ao recurso de rede de fio seguro.
+
+00:03:28.000 --> 00:03:29.000
+Uma vez conectados, esses APs não autorizados
+
+00:03:29.000 --> 00:03:32.000
+pode ser usado por um invasor para capturar endereços MAC,
+
+00:03:32.000 --> 00:03:34.000
+para capturar pacotes de dados,
+
+00:03:34.000 --> 00:03:37.000
+e até mesmo obter acesso a recursos de rede com fio.
+
+00:03:37.000 --> 00:03:38.000
+Eles poderiam ser usados para lançar
+
+00:03:38.000 --> 00:03:41.000
+ataques man-in-the-middle também.
+
+00:03:41.000 --> 00:03:43.000
+Para impedir a instalação desses pontos de acesso não autorizados,
+
+00:03:43.000 --> 00:03:46.000
+as organizações precisam configurar controladores de LAN sem fio
+
+00:03:46.000 --> 00:03:49.000
+com políticas de AP não autorizadas, eles também devem
+
+00:03:49.000 --> 00:03:51.000
+usar software de monitoramento para monitorar ativamente
+
+00:03:51.000 --> 00:03:56.000
+o espectro de rádio para pontos de acesso não autorizados.
+
+00:03:56.000 --> 00:03:58.000
+Com um ataque man-in-the-middle,
+
+00:03:58.000 --> 00:03:59.000
+um hacker está em uma posição entre
+
+00:03:59.000 --> 00:04:02.000
+entre duas entidades legítimas
+
+00:04:02.000 --> 00:04:04.000
+para ler ou modificar os dados
+
+00:04:04.000 --> 00:04:07.000
+que passam entre essas duas entidades.
+
+00:04:07.000 --> 00:04:08.000
+Agora há muitas maneiras
+
+00:04:08.000 --> 00:04:10.000
+que um ataque man-in-middle pode ser criado.
+
+00:04:10.000 --> 00:04:13.000
+Uma maneira popular é usar o ataque maligno de pontos de acesso duplos.
+
+00:04:13.000 --> 00:04:15.000
+E é aqui que um invasor irá introduzir
+
+00:04:15.000 --> 00:04:17.000
+um ponto de acesso não autorizado.
+
+00:04:17.000 --> 00:04:19.000
+Ele vai configurar o ponto de acesso não autorizado
+
+00:04:19.000 --> 00:04:21.000
+com o mesmo SSID sem fio
+
+00:04:21.000 --> 00:04:24.000
+como um ponto de acesso real legítimo nas proximidades.
+
+00:04:24.000 --> 00:04:27.000
+Locais que oferecem Wi-Fi gratuito, como algumas cafeterias,
+
+00:04:27.000 --> 00:04:30.000
+e aeroportos e restaurantes, são locais populares
+
+00:04:30.000 --> 00:04:32.000
+para que esse tipo de ataque ocorra
+
+00:04:32.000 --> 00:04:35.000
+porque eles geralmente têm autenticação aberta.
+
+00:04:35.000 --> 00:04:38.000
+Com autenticação aberta, uma senha não é necessária
+
+00:04:38.000 --> 00:04:41.000
+quando você vai acessar a rede sem fio.
+
+00:04:41.000 --> 00:04:44.000
+Agora, conectar redes sem fio veria dois pontos de acesso
+
+00:04:44.000 --> 00:04:46.000
+oferecendo acesso sem fio.
+
+00:04:46.000 --> 00:04:48.000
+As pessoas perto do ponto de acesso não autorizado
+
+00:04:48.000 --> 00:04:51.000
+encontraria o sinal mais forte e provavelmente se conectaria a ele.
+
+00:04:51.000 --> 00:04:52.000
+Depois que o tráfego do usuário
+
+00:04:52.000 --> 00:04:54.000
+é enviado através do ponto de acesso não autorizado,
+
+00:04:54.000 --> 00:04:57.000
+esses dados são capturados e geralmente são encaminhados
+
+00:04:57.000 --> 00:04:59.000
+ao ponto de acesso legítimo.
+
+00:04:59.000 --> 00:05:02.000
+O tráfego retornando desse ponto de acesso legítimo
+
+00:05:02.000 --> 00:05:04.000
+será enviado de volta ao ponto de acesso não autorizado.
+
+00:05:04.000 --> 00:05:07.000
+Será capturado pelo usuário mal-intencionado
+
+00:05:07.000 --> 00:05:10.000
+e encaminhado para esse usuário pobre e inocente.
+
+00:05:10.000 --> 00:05:13.000
+Isso permite que os invasores roubem senhas de usuários,
+
+00:05:13.000 --> 00:05:15.000
+para pegar informações pessoais,
+
+00:05:15.000 --> 00:05:19.000
+e até obter acesso ao dispositivo do usuário.
+
+00:05:19.000 --> 00:05:20.000
+Defendendo desses ataques man-in-the-middle
+
+00:05:20.000 --> 00:05:22.000
+depende da sofisticação
+
+00:05:22.000 --> 00:05:25.000
+da sua infraestrutura de rede local sem fio
+
+00:05:25.000 --> 00:05:28.000
+e também a vigilância que você usa para monitorar a atividade
+
+00:05:28.000 --> 00:05:30.000
+nessas redes locais sem fio.
+
+00:05:30.000 --> 00:05:33.000
+Tudo começa com a identificação de dispositivos legítimos
+
+00:05:33.000 --> 00:05:35.000
+na rede e depois de ter
+
+00:05:35.000 --> 00:05:37.000
+sendo conhecidos dispositivos legítimos, a rede pode ser monitorada
+
+00:05:37.000 --> 00:05:40.000
+para qualquer coisa que pareça anormal.

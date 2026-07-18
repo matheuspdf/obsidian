@@ -1,0 +1,103 @@
+WEBVTT
+
+00:00:06.000 --> 00:00:08.000
+- Neste vídeo, vamos dar uma olhada
+
+00:00:08.000 --> 00:00:13.000
+no gerenciamento remoto fora da rede(out-of-band) e gerenciamento via rede (in-band).
+
+00:00:13.000 --> 00:00:16.000
+O gerenciamento fora da rede requer que o computador
+
+00:00:16.000 --> 00:00:18.000
+esteja diretamente conectado.
+
+00:00:18.000 --> 00:00:21.000
+à porta de console do dispositivo.
+
+00:00:21.000 --> 00:00:23.000
+Nesse caso, um switch Ethernet.
+
+00:00:23.000 --> 00:00:26.000
+Também pode ser um roteador.
+
+00:00:26.000 --> 00:00:30.000
+Isso permite que o técnico acesse o dispositivo
+
+00:00:30.000 --> 00:00:33.000
+sem ter qualquer tipo de conexão de rede.
+
+00:00:33.000 --> 00:00:37.000
+Isso pode ser para configurar o dispositivo inicialmente,
+
+00:00:37.000 --> 00:00:40.000
+ou pode ser na solução de problemas do dispositivo,
+
+00:00:40.000 --> 00:00:43.000
+ou quando quiser configurar o dispositivo
+
+00:00:43.000 --> 00:00:48.000
+sem ter ou precisar de uma conexão de rede.
+
+00:00:48.000 --> 00:00:51.000
+O gerenciamento em rede significa simplesmente que queremos ser capazes de
+
+00:00:51.000 --> 00:00:55.000
+acessar remotamente o dispositivo pela rede.
+
+00:00:55.000 --> 00:00:57.000
+Nesse caso, nosso switch Ethernet.
+
+00:00:57.000 --> 00:00:59.000
+Então, tanto nosso switch Ethernet
+
+00:00:59.000 --> 00:01:02.000
+quanto o dispositivo que estamos usando para acessá-lo
+
+00:01:02.000 --> 00:01:04.000
+devem ser capazes de se comunicar um com o outro
+
+00:01:04.000 --> 00:01:06.000
+através da rede.
+
+00:01:06.000 --> 00:01:11.000
+Podemos acessar e configurar o dispositivo remotamente
+
+00:01:11.000 --> 00:01:13.000
+usando Telnet,
+
+00:01:13.000 --> 00:01:14.000
+SSH,
+
+00:01:14.000 --> 00:01:16.000
+O SSH é muito melhor,
+
+00:01:16.000 --> 00:01:18.000
+e mais seguro que o Telnet,
+
+00:01:18.000 --> 00:01:20.000
+ou HTTP,
+
+00:01:20.000 --> 00:01:22.000
+ou HTTPS.
+
+00:01:22.000 --> 00:01:25.000
+Então, essas são as duas maneiras pelas quais podemos acessar um dispositivo.
+
+00:01:25.000 --> 00:01:27.000
+Ou gerenciamento fora da rede,
+
+00:01:27.000 --> 00:01:29.000
+onde temos que ter conectividade física
+
+00:01:29.000 --> 00:01:33.000
+ao dispositivo, mas não há conectividade de rede,
+
+00:01:33.000 --> 00:01:35.000
+ou gerenciamento pela rede,
+
+00:01:35.000 --> 00:01:39.000
+onde podemos acessar o dispositivo remotamente,
+
+00:01:39.000 --> 00:01:42.000
+mas precisamos ter conectividade de rede com o dispositivo.

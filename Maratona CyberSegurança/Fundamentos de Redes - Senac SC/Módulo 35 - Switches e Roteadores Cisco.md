@@ -81,6 +81,8 @@ Muitos switches básicos baratos não são configuráveis. Um switch gerenciado 
 
 **Selecione o botão Reproduzir para assistir o vídeo.**
 
+![[35.1.3.mp4#subtitle=anexos/35.1.3.vtt]]
+
 Neste vídeo, vamos dar uma olhada nos componentes de um switch Ethernet.
 
 Atrás do switch, temos o cabo de alimentação que se conecta à fonte de alimentação. Na frente, temos algumas luzes. Essas são os LEDs do sistema, informam se temos energia no switch e algumas outras informações de status.
@@ -94,6 +96,8 @@ E tudo o que preciso fazer é conectar esse cabo de console na porta do console.
 ## 35.1.4 Vídeo - Componentes de um Switch LAN - Parte 2
 
 **Selecione o botão Reproduzir para assistir o vídeo.**
+
+![[35.1.4.mp4#subtitle=anexos/35.1.4.vtt]]
 
 Neste vídeo, vamos observar como configurar inicialmente o switch, ou quando temos acesso físico ao switch, para configurá-lo.
 
@@ -443,6 +447,8 @@ Alguns modelos de switch Cisco não têm um chave liga / desliga, como o switch 
 
 **Selecione o botão Reproduzir para assistir o vídeo.**
 
+![[35.3.2.mp4#subtitle=anexos/35.3.2.vtt]]
+
 Neste vídeo, vamos dar uma olhada no gerenciamento remoto fora da rede (out-of-band) e gerenciamento via rede (in-band). O gerenciamento fora da rede requer que o computador esteja diretamente conectado à porta de console do dispositivo. Nesse caso, um switch Ethernet. Também pode ser um roteador. Isso permite que o técnico acesse o dispositivo sem ter qualquer tipo de conexão de rede. Isso pode ser para configurar o dispositivo inicialmente, ou pode ser na solução de problemas do dispositivo, ou quando quiser configurar o dispositivo sem ter ou precisar de uma conexão de rede.
 
 O gerenciamento em rede significa simplesmente que queremos ser capazes de acessar remotamente o dispositivo pela rede. Nesse caso, nosso switch Ethernet. Então, tanto nosso switch Ethernet quanto o dispositivo que estamos usando para acessá-lo devem ser capazes de se comunicar um com o outro através da rede. Podemos acessar e configurar o dispositivo remotamente usando Telnet, SSH, o SSH é muito melhor, e mais seguro que o Telnet, ou HTTP, ou HTTPS.
@@ -538,6 +544,8 @@ Onde o arquivo de imagem do IOS normalmente é armazenado?
 ## 35.4.1 Vídeo - Componentes do roteador Cisco
 
 **Selecione o botão Reproduzir para assistir o vídeo.**
+
+![[35.4.1.mp4#subtitle=anexos/35.4.1.vtt]]
 
 Neste vídeo, vamos explorar alguns dos componentes de um roteador 1941 da Cisco. Vou virar o roteador para trás, porque facilita muito a visualização dos diferentes componentes.
 
@@ -717,6 +725,8 @@ Além dessas portas de gerenciamento, os roteadores também têm interfaces de r
 ## 35.5.3 Vídeo - O processo de inicialização do roteador Cisco
 
 **Selecione o botão Reproduzir para assistir o vídeo.**
+
+![[35.5.3.mp4#subtitle=anexos/35.5.3.vtt]]
 
 Vamos percorrer o processo de inicialização do roteador. Como você pode ver, tenho uma conexão de console usando o Tera Term para um roteador Cisco. Há três etapas principais.
 

@@ -1,0 +1,253 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:03.000
+- O comando de ajuda do CISCO IOS,
+
+00:00:03.000 --> 00:00:06.000
+é acessado com um ponto de interrogação.
+
+00:00:06.000 --> 00:00:08.000
+O comando help é sensível ao contexto,
+
+00:00:08.000 --> 00:00:14.000
+então como e onde usar a interrogação é importante.
+
+00:00:14.000 --> 00:00:18.000
+Por exemplo, digamos que eu queira uma lista de todos os comandos
+
+00:00:18.000 --> 00:00:20.000
+que estão disponíveis para mim no modo user-exec.
+
+00:00:20.000 --> 00:00:22.000
+Basta digitar uma interrogação
+
+00:00:22.000 --> 00:00:25.000
+e receberei os comandos que estão disponíveis
+
+00:00:25.000 --> 00:00:27.000
+no modo exato do usuário.
+
+00:00:27.000 --> 00:00:29.000
+basta digitar "enable".
+
+00:00:29.000 --> 00:00:31.000
+e entro no modo EXEC privilegiado.
+
+00:00:31.000 --> 00:00:33.000
+e inserir um ponto de interrogação,
+
+00:00:33.000 --> 00:00:35.000
+Receberei os comandos que estão disponíveis para mim,
+
+00:00:35.000 --> 00:00:37.000
+no modo priviledged-exec.
+
+00:00:37.000 --> 00:00:41.000
+Pressionarei a barra de espaço para ir à próxima página dos resultados.
+
+00:00:41.000 --> 00:00:42.000
+Um conjunto diferente de comandos
+
+00:00:42.000 --> 00:00:44.000
+está disponível para o usuário
+
+00:00:44.000 --> 00:00:46.000
+Em modo de configuração global:
+
+00:00:46.000 --> 00:00:48.000
+Basta acessar o modo de configuração global
+
+00:00:48.000 --> 00:00:49.000
+e inserir um ponto de interrogação,
+
+00:00:49.000 --> 00:00:53.000
+para receber um conjunto diferente de comandos
+
+00:00:53.000 --> 00:00:56.000
+disponibilizados nesse modo de comando.
+
+00:00:56.000 --> 00:01:00.000
+Há outros usos para o comando help também.
+
+00:01:00.000 --> 00:01:02.000
+Digamos que eu não queira uma lista
+
+00:01:02.000 --> 00:01:05.000
+de todos os comandos disponíveis,
+
+00:01:05.000 --> 00:01:08.000
+e eu só quero ajuda para terminar um comando em particular.
+
+00:01:08.000 --> 00:01:10.000
+Por exemplo, digamos que
+
+00:01:10.000 --> 00:01:12.000
+Estou colocando na interface de comando
+
+00:01:12.000 --> 00:01:15.000
+mas esqueci o nome completo do comando.
+
+00:01:15.000 --> 00:01:20.000
+Digitei I-N e preciso de ajuda para concluir o comando.
+
+00:01:20.000 --> 00:01:22.000
+Posso colocar em parte do comando,
+
+00:01:22.000 --> 00:01:24.000
+e inserir um ponto de interrogação,
+
+00:01:24.000 --> 00:01:26.000
+para receber ajuda para completá-lo.
+
+00:01:26.000 --> 00:01:30.000
+Eu digitei "in" e a interrogação
+
+00:01:30.000 --> 00:01:33.000
+e o comando de ajuda retornou
+
+00:01:33.000 --> 00:01:36.000
+que o comando que eu procuro é interface.
+
+00:01:36.000 --> 00:01:40.000
+Também posso usar o comando de ajuda em outro contexto.
+
+00:01:40.000 --> 00:01:44.000
+Agora que sei que o comando é interface,
+
+00:01:44.000 --> 00:01:48.000
+digamos que eu não saiba qual é o próximo parâmetro
+
+00:01:48.000 --> 00:01:53.000
+ou argumento que acompanha o comando interface.
+
+00:01:53.000 --> 00:01:56.000
+Nesse caso, devo inserir um espaço e uma interrogação
+
+00:01:56.000 --> 00:02:00.000
+e ele vai me dizer, o próximo parâmetro ou argumento,
+
+00:02:00.000 --> 00:02:03.000
+ou argumento exigido pelo comando interface.
+
+00:02:03.000 --> 00:02:05.000
+Agora sei que a próxima parte do comando
+
+00:02:05.000 --> 00:02:08.000
+pode ser o nome da interface,
+
+00:02:08.000 --> 00:02:11.000
+como Ethernet, FastEthernet, GigabitEthernet,
+
+00:02:11.000 --> 00:02:15.000
+ou talvez seja vlan ou range.
+
+00:02:15.000 --> 00:02:19.000
+Um comando relacionado ao de ajuda é o verificador de sintaxe.
+
+00:02:19.000 --> 00:02:20.000
+O comando verificador de sintaxe
+
+00:02:20.000 --> 00:02:23.000
+me avisará quando eu tiver um problema
+
+00:02:23.000 --> 00:02:25.000
+com um comando inserido.
+
+00:02:25.000 --> 00:02:27.000
+Por exemplo, podemos ver aqui
+
+00:02:27.000 --> 00:02:29.000
+que a próxima parte deste comando
+
+00:02:29.000 --> 00:02:32.000
+seria um desses argumentos aqui.
+
+00:02:32.000 --> 00:02:35.000
+Digamos que eu errei e digite o número 33
+
+00:02:35.000 --> 00:02:39.000
+em vez de vlan ou range e pressione Enter.
+
+00:02:39.000 --> 00:02:43.000
+Observe que o verificador de sintaxe de comandos me informou
+
+00:02:43.000 --> 00:02:46.000
+que começando no número três,
+
+00:02:46.000 --> 00:02:48.000
+Fiz uma entrada inválida.
+
+00:02:48.000 --> 00:02:51.000
+Isso é extremamente útil porque me ajuda
+
+00:02:51.000 --> 00:02:53.000
+para isolar onde está o problema
+
+00:02:53.000 --> 00:02:56.000
+com o comando específico que eu inseri.
+
+00:02:56.000 --> 00:02:58.000
+Isso pode funcionar em diferentes contextos também.
+
+00:02:58.000 --> 00:03:01.000
+Por exemplo, digamos que eu insira
+
+00:03:01.000 --> 00:03:06.000
+apenas a letra I em vez de interface e pressione Enter.
+
+00:03:06.000 --> 00:03:08.000
+O verificador de sintaxe informa
+
+00:03:08.000 --> 00:03:12.000
+que a letra "i" é um comando ambíguo.
+
+00:03:12.000 --> 00:03:15.000
+A razão é que, se eu digitar I,
+
+00:03:15.000 --> 00:03:16.000
+e um ponto de interrogação
+
+00:03:16.000 --> 00:03:19.000
+na verdade, existem dois comandos que começam com a letra I
+
+00:03:19.000 --> 00:03:22.000
+Em modo de configuração global:
+
+00:03:22.000 --> 00:03:24.000
+o comando "interface" e o comando "ip".
+
+00:03:24.000 --> 00:03:27.000
+O terceiro exemplo do verificador de sintaxe
+
+00:03:27.000 --> 00:03:31.000
+é que, ao digitar "interface" e pressionar Enter,
+
+00:03:31.000 --> 00:03:34.000
+E o verificador de sintaxe de comando me informou
+
+00:03:34.000 --> 00:03:36.000
+que o comando está incompleto.
+
+00:03:36.000 --> 00:03:40.000
+Para solucionar esse problema, basta reinserir "interface",
+
+00:03:40.000 --> 00:03:42.000
+um espaço e um ponto de interrogação
+
+00:03:42.000 --> 00:03:45.000
+e recebo o próximo conjunto de opções
+
+00:03:45.000 --> 00:03:47.000
+que eu preciso terminar este comando.
+
+00:03:47.000 --> 00:03:51.000
+Você pode ver como o comando help é muito útil
+
+00:03:51.000 --> 00:03:54.000
+ao aprender os diferentes comandos que estão disponíveis para você
+
+00:03:54.000 --> 00:03:56.000
+bem como o contexto correto
+
+00:03:56.000 --> 00:03:59.000
+e uso dos diferentes comandos.

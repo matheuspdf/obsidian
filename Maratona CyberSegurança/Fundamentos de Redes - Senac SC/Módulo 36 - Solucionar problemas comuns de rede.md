@@ -28,6 +28,8 @@ Vamos fazer isso juntos!
 
 **Selecione o botão Reproduzir para assistir o vídeo.**
 
+![[36.1.1.mp4#subtitle=anexos/36.1.1.vtt]]
+
 Uma das melhores maneiras de aprender e entender qualquer tópico é solucionar problemas. Para um profissional de rede em qualquer nível, a solução de problemas é uma oportunidade para aprofundar os protocolos e tecnologias envolvidas na tentativa de resolver o problema. As configurações incorretas e os erros de cabeamento acontecem. Mas esses tipos de erros geralmente são detectados logo no início durante a verificação. Encontrar o problema normalmente envolve uma abordagem sistemática para encontrar a origem do problema. Isso inclui descobrir quais dispositivos podem comunicar-se entre si, e quais não podem.
 
 Por exemplo, e se o usuário do PC 1 submeter um tíquete de suporte que ele não consegue mais acessar dispositivos na Internet, como www.example.com. Há várias coisas que podemos fazer para isolar o problema, além de entrar em contato com outros usuários para ver se estão enfrentando problemas semelhantes. Mas vamos ver o que podemos fazer com o PC1.

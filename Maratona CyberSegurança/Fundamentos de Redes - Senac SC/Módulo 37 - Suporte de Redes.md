@@ -787,6 +787,8 @@ Dicas para usar a escuta ativa com um cliente
 
 Selecione **Reproduzir** para ver o vídeo.
 
+![[37.3.7.mp4#subtitle=anexos/37.3.7.vtt]]
+
 **Chamada 1**
 
 - Obrigado por ligar para o suporte ao cliente. Meu nome é Lee. Em que posso ajudar você?
@@ -1389,6 +1391,8 @@ Outros sistemas operacionais também podem executar essas funções. Por exemplo
 
 Selecione **Play** para ver o vídeo.
 
+![[37.6.3.mp4#subtitle=anexos/37.6.3.vtt]]
+
 Você já desejou você poderia ter um segundo par de olhos dê uma olhada em algo que você vê na tela? Bem, é esse vídeo, estamos aqui para conversar sobre desktop remoto e assistência remota aqui no Windows 10, então isso vai ser divertido, porque vamos realmente fazer isso e não apenas falar sobre isso, então para começar, uma das primeiras coisas que queremos fazer é ir para a área de trabalho remota.
 
 E isso vai estar dentro do nosso, clique com o botão direito em nosso botão iniciar, e vamos direto para as configurações. Nós vamos expandir, bem aí. Poderíamos ter clicado em iniciar e digitado as configurações e descobri dessa forma, mas estamos fazendo clique com o botão direito em iniciar e o botão esquerdo em configurações. Agora, dentro das configurações, o que vamos abordar é o sistema, e dentro do sistema, é aqui que vamos rolar até o final no lado esquerdo, e aqui encontramos a área de trabalho remota.
@@ -1496,6 +1500,8 @@ Cisco Meraki é uma plataforma líder de gerenciamento de rede baseada em nuvem 
 Este vídeo explora brevemente o gerenciamento de rede, incluindo o gerenciamento de rede em nuvem e o Cisco Nexus Dashboard.
 
 Selecione **Play** para ver o vídeo.
+
+![[37.6.6.mp4#subtitle=anexos/37.6.6.vtt]]
 
 O que é gerenciamento de rede e como ele pode ajudá-lo a alcançar seus objetivos de negócios corporativos?
 

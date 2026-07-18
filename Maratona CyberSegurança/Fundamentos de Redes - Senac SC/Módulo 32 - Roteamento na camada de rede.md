@@ -250,6 +250,8 @@ R1, R2 e R3 estão usando o protocolo de roteamento dinâmico OSPF. Se houver um
 
 ## 32.2.5 Vídeo - Tabela de roteamento do roteador IPv4
 
+![[32.2.5.mp4#subtitle=anexos/32.2.5.vtt]]
+
 Ao contrário de uma tabela de roteamento de computadores host, não há títulos de coluna que identifiquem as informações contidas na tabela de roteamento de um roteador. É importante compreender o significado dos diferentes itens incluídos em cada entrada da tabela de roteamento.
 
 **Clique em Reproduzir para ver uma introdução à tabela de roteamento IPv4.**

@@ -1,0 +1,328 @@
+WEBVTT
+
+00:00:03.000 --> 00:00:05.000
+- [Instrutor] Neste vídeo vamos discutir o processo
+
+00:00:05.000 --> 00:00:08.000
+de como o IPv6 executa a resolução de endereços
+
+00:00:08.000 --> 00:00:11.000
+Solicitação de Vizinho ICPMv6
+
+00:00:11.000 --> 00:00:14.000
+e mensagens de anúncio vizinho.
+
+00:00:14.000 --> 00:00:17.000
+Isso é semelhante ao processo ARP usado pelo IPv4,
+
+00:00:17.000 --> 00:00:20.000
+mas tem certas vantagens que veremos em um momento.
+
+00:00:20.000 --> 00:00:24.000
+O Host A tem um pacote para enviar ao Host C.
+
+00:00:24.000 --> 00:00:27.000
+Host A é determinado que o endereço IPv6 de destino
+
+00:00:27.000 --> 00:00:30.000
+está na mesma rede que o host A.
+
+00:00:30.000 --> 00:00:33.000
+O Host A conhece o endereço IPv6 de destino,
+
+00:00:33.000 --> 00:00:36.000
+mas precisa do endereço MAC de destino associado
+
+00:00:36.000 --> 00:00:39.000
+para que ele possa encapsular o pacote IPv6
+
+00:00:39.000 --> 00:00:42.000
+em um quadro ethernet para enviar diretamente para o Host C.
+
+00:00:42.000 --> 00:00:44.000
+O host A examina seu cache vizinho
+
+00:00:44.000 --> 00:00:46.000
+para ver se existe uma entrada
+
+00:00:46.000 --> 00:00:49.000
+para este endereço IPv6 de destino.
+
+00:00:49.000 --> 00:00:50.000
+Semelhante a uma tabela ARP,
+
+00:00:50.000 --> 00:00:54.000
+o cache vizinho mapeia endereços IPv6 para endereços MAC.
+
+00:00:54.000 --> 00:00:57.000
+Por uma questão de simplicidade, os endereços MAC são mostrados aqui
+
+00:00:57.000 --> 00:01:01.000
+como quatro símbolos hexadecimal em vez dos 12 habituais.
+
+00:01:01.000 --> 00:01:04.000
+Como podemos ver, não há nenhuma entrada MAC associada
+
+00:01:04.000 --> 00:01:08.000
+com este endereço IPv6.
+
+00:01:08.000 --> 00:01:11.000
+O pacote IPv6 é colocado em espera.
+
+00:01:11.000 --> 00:01:16.000
+E o Host A cria uma mensagem de solicitação de vizinho ICMPv6.
+
+00:01:16.000 --> 00:01:18.000
+Isso é semelhante a uma solicitação ARP
+
+00:01:18.000 --> 00:01:21.000
+usado para resolução de endereços IPv4.
+
+00:01:21.000 --> 00:01:24.000
+Uma diferença significativa é que as mensagens ARP
+
+00:01:24.000 --> 00:01:29.000
+são enviados diretamente através de ethernet, IPv4 não está envolvido.
+
+00:01:29.000 --> 00:01:31.000
+O processo de resolução de endereços IPv6
+
+00:01:31.000 --> 00:01:37.000
+usa ICMPv6 que é então encapsulado em um cabeçalho IPv6, o
+
+00:01:37.000 --> 00:01:42.000
+e, em seguida, encapsulado em um cabeçalho ethernet e trailer.
+
+00:01:42.000 --> 00:01:45.000
+O cabeçalho de solicitação de vizinho ICMPv6
+
+00:01:45.000 --> 00:01:48.000
+inclui o endereço IPv6 de destino,
+
+00:01:48.000 --> 00:01:51.000
+que é o mesmo endereço IPv6 de destino
+
+00:01:51.000 --> 00:01:53.000
+no pacote que está em espera.
+
+00:01:53.000 --> 00:01:57.000
+O endereço IPv6 de destino é mapeado para um IPv6 especial
+
+00:01:57.000 --> 00:02:01.000
+endereço multicast de nó solicitado, que é então mapeado
+
+00:02:01.000 --> 00:02:04.000
+para um endereço MAC multicast ethernet especial .
+
+00:02:04.000 --> 00:02:07.000
+Este processo de mapeamento contém uma parte significativa
+
+00:02:07.000 --> 00:02:10.000
+do endereço IPv6 de destino.
+
+00:02:10.000 --> 00:02:13.000
+Isso permite que as NICs ethernet em cada dispositivo
+
+00:02:13.000 --> 00:02:15.000
+que recebe esse quadro,
+
+00:02:15.000 --> 00:02:19.000
+para determinar se deve ou não aceitar e processar o quadro.
+
+00:02:19.000 --> 00:02:20.000
+É aqui que vemos uma vantagem
+
+00:02:20.000 --> 00:02:25.000
+da descoberta de vizinhos ICMPv6 sobre ARP para IPv4.
+
+00:02:25.000 --> 00:02:27.000
+Uma vez que o ARP usa um endereço de broadcast,
+
+00:02:27.000 --> 00:02:30.000
+todos os dispositivos na rede local
+
+00:02:30.000 --> 00:02:33.000
+deve processar pelo menos parcialmente uma solicitação ARP.
+
+00:02:33.000 --> 00:02:36.000
+A mensagem de solicitação de vizinho ICMPv6
+
+00:02:36.000 --> 00:02:40.000
+é encaminhado pelo Host A e recebido pelo switch.
+
+00:02:40.000 --> 00:02:43.000
+O switch inundará o quadro de multicast ethernet
+
+00:02:43.000 --> 00:02:47.000
+todas as portas, exceto a porta de entrada.
+
+00:02:47.000 --> 00:02:50.000
+O host B recebe o quadro Ethernet.
+
+00:02:50.000 --> 00:02:54.000
+A placa de rede Ethernet do host B examina o endereço MAC de destino.
+
+00:02:54.000 --> 00:02:57.000
+A NIC ethernet aceitará quadros
+
+00:02:57.000 --> 00:02:59.000
+cujo endereço MAC de destino
+
+00:02:59.000 --> 00:03:01.000
+corresponde ao endereço MAC na NIC,
+
+00:03:01.000 --> 00:03:05.000
+é um endereço MAC de broadcast ou um endereço MAC multicast
+
+00:03:05.000 --> 00:03:08.000
+que mapeia para um de seus endereços IPv6.
+
+00:03:08.000 --> 00:03:11.000
+Neste caso, o endereço MAC multicast
+
+00:03:11.000 --> 00:03:13.000
+não corresponde a nenhum destes
+
+00:03:13.000 --> 00:03:16.000
+de modo que a NIC do Host B ignora o restante do quadro
+
+00:03:16.000 --> 00:03:19.000
+sem ter que passá-lo para um processo de nível superior
+
+00:03:19.000 --> 00:03:21.000
+para fazer essa determinação.
+
+00:03:21.000 --> 00:03:26.000
+Novamente, essa é uma vantagem sobre o ARP para IPv4.
+
+00:03:26.000 --> 00:03:30.000
+O roteador R1 recebe o quadro em sua interface LAN.
+
+00:03:30.000 --> 00:03:34.000
+Um processo semelhante ocorre na interface do R1.
+
+00:03:34.000 --> 00:03:36.000
+A placa de rede ethernet ignora o quadro
+
+00:03:36.000 --> 00:03:38.000
+porque a multicast de destino para o endereço MAC
+
+00:03:38.000 --> 00:03:43.000
+não mapeia para nenhum dos seus endereços IPv6.
+
+00:03:43.000 --> 00:03:46.000
+Mensagens de solicitação de vizinhos ICMPv6
+
+00:03:46.000 --> 00:03:49.000
+não são encaminhados pelo roteador.
+
+00:03:49.000 --> 00:03:52.000
+Isso ocorre porque o endereço multicast do nó solicitado
+
+00:03:52.000 --> 00:03:57.000
+no cabeçalho IPv6 é definido com o escopo local do link, o
+
+00:03:57.000 --> 00:03:59.000
+que diz ao roteador para não encaminhar esses pacotes
+
+00:03:59.000 --> 00:04:03.000
+fora do link ou da rede local.
+
+00:04:03.000 --> 00:04:05.000
+O host C recebe o quadro Ethernet.
+
+00:04:05.000 --> 00:04:09.000
+Desta vez, o endereço MAC de multicast ethernet
+
+00:04:09.000 --> 00:04:12.000
+corresponde a um endereço MAC associado ao Host C,
+
+00:04:12.000 --> 00:04:13.000
+especificamente o mapeado
+
+00:04:13.000 --> 00:04:19.000
+para o endereço multicast do nó solicitado Ipv6 do Host C.
+
+00:04:19.000 --> 00:04:21.000
+Portanto, o Host C aceita o quadro
+
+00:04:21.000 --> 00:04:25.000
+e o transmite para seu processo IPv6,
+
+00:04:25.000 --> 00:04:29.000
+e, em seguida, seu processo ICMPv6.
+
+00:04:29.000 --> 00:04:33.000
+O endereço IPv6 de destino no cabeçalho ICMPv6
+
+00:04:33.000 --> 00:04:38.000
+corresponde ao seu próprio endereço unicast global IPv6.
+
+00:04:38.000 --> 00:04:40.000
+Então o Host C sabe que é o alvo
+
+00:04:40.000 --> 00:04:42.000
+desta mensagem de solicitação de vizinho.
+
+00:04:42.000 --> 00:04:46.000
+Antes de responder, o Host C adiciona o IPv6
+
+00:04:46.000 --> 00:04:50.000
+e endereço MAC do Host A para seu próprio cache vizinho.
+
+00:04:50.000 --> 00:04:55.000
+Portanto, ele pode retornar uma mensagem de anúncio vizinho .
+
+00:04:55.000 --> 00:05:00.000
+O Host C responde com uma mensagem de anúncio do vizinho ICMPv6
+
+00:05:00.000 --> 00:05:05.000
+enviado como uma mensagem unicast ethernet diretamente para o Host A.
+
+00:05:05.000 --> 00:05:11.000
+O cabeçalho ICMPv6 inclui o endereço IPv6 do Host C,
+
+00:05:11.000 --> 00:05:13.000
+que o Host A já sabia,
+
+00:05:13.000 --> 00:05:17.000
+e o endereço MAC associado que o host A estava solicitando.
+
+00:05:17.000 --> 00:05:19.000
+O host A recebe o quadro Ethernet,
+
+00:05:19.000 --> 00:05:23.000
+examina o endereço IPv6 e o endereço MAC
+
+00:05:23.000 --> 00:05:28.000
+no cabeçalho ICMPv6 e o adiciona ao cache vizinho.
+
+00:05:28.000 --> 00:05:33.000
+O Host A agora pode tirar o pacote IPv6 da espera.
+
+00:05:33.000 --> 00:05:36.000
+O Host A atualiza o endereço MAC de destino
+
+00:05:36.000 --> 00:05:38.000
+com o endereço associado
+
+00:05:38.000 --> 00:05:41.000
+com o endereço IPv6 de destino,
+
+00:05:41.000 --> 00:05:46.000
+e encaminha o quadro e o pacote IPv6 para o Host C.
+
+00:05:46.000 --> 00:05:48.000
+Agora, se o endereço IPv6 de destino
+
+00:05:48.000 --> 00:05:50.000
+estava em uma rede diferente,
+
+00:05:50.000 --> 00:05:53.000
+este mesmo processo ocorreria para descobrir
+
+00:05:53.000 --> 00:05:55.000
+o endereço MAC do gateway padrão.
+
+00:05:55.000 --> 00:05:58.000
+que mapearia para o endereço local do link IPv6 da R1 nesta LAN.

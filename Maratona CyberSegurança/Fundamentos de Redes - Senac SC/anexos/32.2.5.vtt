@@ -1,0 +1,292 @@
+WEBVTT
+
+00:00:02.000 --> 00:00:03.000
+- [Instrutor] Um roteador usa informações
+
+00:00:03.000 --> 00:00:06.000
+em sua tabela de roteamento para encaminhar pacotes.
+
+00:00:06.000 --> 00:00:08.000
+Uma tabela de roteamento exibe entradas listando
+
+00:00:08.000 --> 00:00:11.000
+todas as redes que um roteador está ciente.
+
+00:00:11.000 --> 00:00:13.000
+E o melhor caminho para alcançá-los.
+
+00:00:13.000 --> 00:00:16.000
+É muito importante poder ler
+
+00:00:16.000 --> 00:00:19.000
+e compreender as entradas em uma tabela de roteamento.
+
+00:00:19.000 --> 00:00:21.000
+Nesta demonstração, vamos dar uma olhada
+
+00:00:21.000 --> 00:00:24.000
+em nossa tabela de roteadores IPV4 em detalhes.
+
+00:00:24.000 --> 00:00:27.000
+Mas primeiro, vamos examinar a topologia da rede.
+
+00:00:27.000 --> 00:00:32.000
+Ele realmente consiste em cinco redes separadas, ou sub-redes.
+
+00:00:32.000 --> 00:00:38.000
+Existem quatro LANs para conectá-la a cada roteador.
+
+00:00:38.000 --> 00:00:42.000
+E uma conexão WAN entre os dois roteadores.
+
+00:00:42.000 --> 00:00:47.000
+Se olharmos para R1 ele tem três redes diretamente conectadas.
+
+00:00:47.000 --> 00:00:52.000
+network 192.168.1.0
+
+00:00:52.000 --> 00:00:58.000
+conectado à interfase G0/0/0.
+
+00:00:58.000 --> 00:01:03.000
+network 192.168.2.0
+
+00:01:03.000 --> 00:01:08.000
+conectado à interfase G0/0/1 e à rede
+
+00:01:08.000 --> 00:01:15.000
+209.165.200.224
+
+00:01:15.000 --> 00:01:20.000
+conectado à interfase S0/1/0.
+
+00:01:20.000 --> 00:01:24.000
+LANs R2 não estão diretamente conectadas ao R1,
+
+00:01:24.000 --> 00:01:27.000
+portanto, eles são considerados redes remotas
+
+00:01:27.000 --> 00:01:29.000
+no que diz respeito a R1.
+
+00:01:29.000 --> 00:01:31.000
+A fim de encaminhar dados para redes remotas,
+
+00:01:31.000 --> 00:01:33.000
+um roteador precisa aprender sobre eles primeiro
+
+00:01:33.000 --> 00:01:36.000
+por meio do uso de roteamento estático ou dinâmico.
+
+00:01:36.000 --> 00:01:39.000
+Neste exemplo, R1 aprendeu sobre eles
+
+00:01:39.000 --> 00:01:42.000
+por meio do protocolo de roteamento dinâmico OSPF
+
+00:01:42.000 --> 00:01:45.000
+que foi configurado em ambos os roteadores.
+
+00:01:45.000 --> 00:01:48.000
+Para visualizar a tabela de roteamento IPV4,
+
+00:01:48.000 --> 00:01:52.000
+Vou clicar no roteador R1 e na guia CLI
+
+00:01:52.000 --> 00:01:55.000
+Vou pressionar ENTER para conectar-se à linha de comando.
+
+00:01:55.000 --> 00:01:59.000
+A partir daqui, digitarei ativar e pressione enter
+
+00:01:59.000 --> 00:02:01.000
+para entrar no modo exec privilegiado.
+
+00:02:01.000 --> 00:02:06.000
+E daqui em diante, emitirei o comando show IP route
+
+00:02:06.000 --> 00:02:08.000
+para visualizar a tabela de roteamento.
+
+00:02:08.000 --> 00:02:10.000
+Se eu pressionar a barra de espaço,
+
+00:02:10.000 --> 00:02:13.000
+Vou ver a saída completa.
+
+00:02:13.000 --> 00:02:16.000
+Na parte superior da saída estão os códigos de letra
+
+00:02:16.000 --> 00:02:20.000
+que indicam como cada rota AKA de rede foi aprendida.
+
+00:02:20.000 --> 00:02:23.000
+Isso é referido como a origem da rota.
+
+00:02:23.000 --> 00:02:27.000
+Por baixo disso, podemos ver as entradas da tabela de roteamento.
+
+00:02:27.000 --> 00:02:32.000
+Estes representam todas as redes que R1 conhece
+
+00:02:32.000 --> 00:02:34.000
+e a melhor maneira de alcançá-los.
+
+00:02:34.000 --> 00:02:38.000
+Vamos examinar ainda mais algumas entradas individuais.
+
+00:02:38.000 --> 00:02:40.000
+Primeiro vamos olhar para a entrada
+
+00:02:40.000 --> 00:02:46.000
+para a rede 192.168.1.0
+
+00:02:46.000 --> 00:02:49.000
+As letras C na frente da entrada
+
+00:02:49.000 --> 00:02:51.000
+é a origem da rota e indica que
+
+00:02:51.000 --> 00:02:56.000
+a fonte desta rota é uma rede diretamente conectada.
+
+00:02:56.000 --> 00:03:01.000
+E você também pode ver isso na entrada aqui.
+
+00:03:01.000 --> 00:03:06.000
+GigabitetherNet0/0/0 é a interface
+
+00:03:06.000 --> 00:03:09.000
+ao qual essa rede está conectada.
+
+00:03:09.000 --> 00:03:15.000
+Agora vamos olhar para a entrada para a rede 10.1.1.0.
+
+00:03:15.000 --> 00:03:19.000
+Esta entrada tem uma origem de rota de O
+
+00:03:19.000 --> 00:03:23.000
+que indica que ele foi aprendido via roteamento OSPF.
+
+00:03:23.000 --> 00:03:25.000
+Após o endereço de rede,
+
+00:03:25.000 --> 00:03:28.000
+você pode ver dois números entre parênteses
+
+00:03:28.000 --> 00:03:30.000
+que são usados pelo roteador para ajudar a determinar
+
+00:03:30.000 --> 00:03:33.000
+o melhor caminho para a rede.
+
+00:03:33.000 --> 00:03:37.000
+O primeiro número é a distância administrativa.
+
+00:03:37.000 --> 00:03:40.000
+O que indica a confiabilidade ou classificação de preferência
+
+00:03:40.000 --> 00:03:42.000
+de uma rota sobre outra.
+
+00:03:42.000 --> 00:03:46.000
+Em seguida é a métrica, outro valor
+
+00:03:46.000 --> 00:03:49.000
+usado pelo roteador para ajudar a determinar o melhor caminho.
+
+00:03:49.000 --> 00:03:52.000
+A métrica pode ser calculadora usando hotcount,
+
+00:03:52.000 --> 00:03:55.000
+largura de banda, ou algum outro fator.
+
+00:03:55.000 --> 00:03:59.000
+Esta rede pode ser acessada através deste próximo endereço superior
+
+00:03:59.000 --> 00:04:03.000
+que representa e interfase no roteador R2.
+
+00:04:03.000 --> 00:04:07.000
+Este é um carimbo de data/hora que nos diz há quanto tempo
+
+00:04:07.000 --> 00:04:11.000
+este roteador recebeu pela última vez uma atualização nesta rota.
+
+00:04:11.000 --> 00:04:14.000
+E Serial0/1/0
+
+00:04:14.000 --> 00:04:17.000
+é a fase exedener em R1
+
+00:04:17.000 --> 00:04:20.000
+através do qual enviar os pacotes.
+
+00:04:20.000 --> 00:04:22.000
+Para efeitos da presente demonstração,
+
+00:04:22.000 --> 00:04:24.000
+você pode ignorar quaisquer entradas que
+
+00:04:24.000 --> 00:04:27.000
+não listam uma fonte de rota no início.
+
+00:04:27.000 --> 00:04:30.000
+Estes são basicamente títulos.
+
+00:04:30.000 --> 00:04:34.000
+Observe também que, para cada rede diretamente conectada,
+
+00:04:34.000 --> 00:04:36.000
+você tem uma entrada abaixo dela
+
+00:04:36.000 --> 00:04:38.000
+com uma fonte de rota de L.
+
+00:04:38.000 --> 00:04:41.000
+L refere-se a uma rota local
+
+00:04:41.000 --> 00:04:46.000
+e basicamente este é o endereço IP da interfase
+
+00:04:46.000 --> 00:04:48.000
+ao qual essa rede está conectada.
+
+00:04:48.000 --> 00:04:51.000
+Esta tabela de arredondamento mostra que R1
+
+00:04:51.000 --> 00:04:55.000
+está ciente de todas as cinco redes presentes na tapologia.
+
+00:04:55.000 --> 00:05:04.000
+Possui três redes diretamente conectadas.
+
+00:05:04.000 --> 00:05:10.000
+Ele tem duas redes que são remotas
+
+00:05:10.000 --> 00:05:13.000
+e foram aprendidos por meio de roteamento OSPF.
+
+00:05:13.000 --> 00:05:17.000
+E por último, se você olhar para a última entrada na tabela,
+
+00:05:17.000 --> 00:05:21.000
+você verá uma rota padrão configurada estaticamente.
+
+00:05:21.000 --> 00:05:24.000
+Esta rota configurada manualmente pode ser usada para encaminhar
+
+00:05:24.000 --> 00:05:27.000
+quaisquer pacotes que não tenham uma entrada específica
+
+00:05:27.000 --> 00:05:29.000
+a tabela de roteamento
+
+00:05:29.000 --> 00:05:31.000
+A finalidade de uma rota estática padrão
+
+00:05:31.000 --> 00:05:34.000
+é para que o roteador não descarte nenhum pacote.
+
+00:05:34.000 --> 00:05:37.000
+Estes são apenas alguns dos conceitos básicos de uma tabela de roteamento IPV4.
