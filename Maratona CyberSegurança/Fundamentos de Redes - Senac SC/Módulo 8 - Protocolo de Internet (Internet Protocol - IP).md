@@ -29,6 +29,9 @@ Um endereço IPv4 é atribuído à conexão de interface de rede de um host. Ess
 
 Cada pacote enviado pela Internet tem um endereço IPv4 de origem e de destino. Essa informação é necessária para os dispositivos de rede garantirem que os dados cheguem ao destino e que as respostas sejam retornadas à origem.
 
+**Clique em Play na figura para ver como os pacotes trafegam na Internet.**
+
+![[brave_zF7svQjuLe.mp4]]
 ## 8.1.2 Octetos e notação decimal com ponto
 
 Os endereços IPv4 têm 32 bits de comprimento. Aqui está um endereço IPv4 em binário:  

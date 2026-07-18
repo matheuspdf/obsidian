@@ -60,60 +60,7 @@ Um envelope tem o endereço do remetente e do destinatário, cada um localizado 
 O processo de colocar um formato de mensagem (a carta) em outro formato de mensagem (o envelope) é chamado encapsulamento. O desencapsulamento ocorre quando o processo é invertido pelo destinatário e a carta é retirada do envelope.
 ![[brave_PWuJbbPo7Q.mp4]]
 
-**Envelope:**
-```
-Remetente:                          
-Rua Pine, Nº 4.085                  
-Ocala, Florida 34471                
-
-
-                    Destinatário
-                    Avenida Principal, Nº 1.400
-                    Canton, Ohio 44203
-```
-**Carta:**
-```
-Prezada Jane,
-
-Acabei de chegar de viagem. Acredito que você queira
-ver minhas fotos.
-
-John
-```
 ---
-**Estrutura da analogia com quadro de rede — 40 bytes**
-
-<table border="1" cellpadding="6" cellspacing="0" style="width:100%; table-layout:fixed; word-wrap:break-word;">
-  <thead>
-    <tr>
-      <th>Endereço de Localização do destinatário (destino)</th>
-      <th>Endereço de localização do remetente (origem)</th>
-      <th>Saudação (indicador do início de mensagem)</th>
-      <th>Identificador do destinatário (destino)</th>
-      <th>Conteúdo da carta (dados encapsulados)</th>
-      <th>Identificador do remetente (origem)</th>
-      <th>Final do quadro (indicador de final de mensagem)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colspan="2"><strong>Endereçamento do Envelope</strong></td>
-      <td colspan="5"><strong>Carta Encapsulada</strong></td>
-    </tr>
-    <tr>
-      <td>Avenida Principal, Nº 1.400<br>Canton, Ohio 44203</td>
-      <td>Rua Pine, Nº 4.085<br>Ocala, Florida 34471</td>
-      <td>Querida</td>
-      <td>Jane</td>
-      <td>Acabei de chegar de viagem. Acredito que você queira ver minhas fotos.</td>
-      <td>John</td>
-      <td>[selos]</td>
-    </tr>
-  </tbody>
-</table>
-
----
-
 ### Rede
 
 Semelhante ao envio de uma carta, uma mensagem enviada por uma rede de computadores segue regras específicas de formato para que ela seja entregue e processada.
@@ -164,7 +111,7 @@ Internet Protocol (IP) é um protocolo com uma função semelhante ao exemplo de
   <text x="590" y="217" text-anchor="end" font-style="italic" fill="white">↕ 40 bytes</text>
 
 </svg>
-
+![[Pasted image 20260717233104.png]]
 ## 7.1.3 Verifique sua compreensão - Encapsulamento e o quadro Ethernet
 
 ### Pergunta 1
