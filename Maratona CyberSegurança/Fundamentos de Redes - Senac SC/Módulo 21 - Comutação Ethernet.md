@@ -56,6 +56,9 @@ As primeiras versões da Ethernet eram relativamente lentas, a 10 Mbps. As vers�
 
 Arraste a barra deslizante na figura pela linha do tempo para ver como os padrões de Ethernet evoluíram ao longo do tempo.
 
+![[brave_9z9DMj1CMV.mp4]]
+
+---
 ## 21.1.3 Vídeo - Endereçamento Ethernet
 ![[21.1.3.mp4#subtitle=anexos/21.1.3.vtt]]
 Neste vídeo, vamos ver sobre endereçamento Ethernet.
@@ -480,7 +483,7 @@ Um endereço MAC de unicast é o endereço exclusivo usado quando um quadro é e
 
 Clique em Reproduzir na animação para ver como um quadro de unicast é processado. Neste exemplo, o endereço MAC de destino e o endereço IP de destino são unicast.
 
-![[Pasted image 20260615213011.png]]
+![[brave_43ZGVgXaoo.mp4]]
 
 No exemplo mostrado na figura, um host com endereço IPv4 192.168.1.5 (origem) requisita uma página Web do servidor no endereço IPv4 192.168.1.200. Para que um pacote unicast seja enviado e recebido, um endereço IP de destino deve estar no cabeçalho do pacote IP. Um endereço MAC de destino correspondente também deve estar presente no cabeçalho do quadro Ethernet. O endereço IP e o endereço MAC se combinam para entregar dados a um host de destino específico.
 
@@ -501,7 +504,7 @@ Se os dados encapsulados forem um pacote de transmissão IPv4, isso significa qu
 
 Clique em Reproduzir na animação para ver como um quadro de broadcast é processado. Neste exemplo, o endereço MAC de destino e o endereço IP de destino são transmissões.
 
-![[Pasted image 20260615213043.png]]
+![[brave_tOnsibqPFL.mp4]]
 
 Como mostrado na animação, o host de origem envia um pacote IPv4 broadcast a todos os dispositivos de sua rede. O endereço IPv4 destino é um endereço de broadcast, 192.168.1.255. Quando o pacote IPv4 broadcast é encapsulado no quadro Ethernet, o endereço MAC de destino é o endereço MAC de broadcast FF-FF-FF-FF-FF-FF em hexadecimal (48 uns em binário).
 
@@ -525,7 +528,7 @@ Assim como nos endereços unicast e broadcast, o endereço IP multicast requer u
 
 Pressione Reproduzir na animação para ver como um quadro multicast é processado. Neste exemplo, o endereço MAC de destino e o endereço IP de destino são multicasts.
 
-![[Pasted image 20260615213115.png]]
+![[brave_eaaytgvbnk.mp4]]
 
 Protocolos de roteamento e outros protocolos de rede usam endereçamento multicast. Aplicativos como software de vídeo e imagem também podem usar endereçamento multicast, embora aplicativos multicast não sejam tão comuns.
 

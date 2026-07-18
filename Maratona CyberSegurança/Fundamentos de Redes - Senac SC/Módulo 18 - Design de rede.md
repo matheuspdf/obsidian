@@ -38,6 +38,7 @@ As redes também suportam uma ampla gama de aplicativos e serviços. Elas devem 
 
 **Selecione o botão Reproduzir para assistir ao vídeo.**
 ![[18.1.2.mp4#subtitle=anexos/18.1.2.vtt]]
+
 Neste cenário, temos duas partes em nossa rede. Cada uma com seu próprio caminho para nosso ISP e a Internet. Pacotes originados no PC um são encaminhados para o Roteador A e para o ISP. Enquanto os pacotes provenientes do PC dois são encaminhados para o Roteador B e, em seguida, para o mesmo ISP.
 
 Mas, o que acontece quando há um problema com o Roteador A, ou com um link usado no caminho para o Roteador A? Pacotes que precisam do roteador A para encaminhá-los para a Internet serão descartados, e não podem mais alcançar o destino final.

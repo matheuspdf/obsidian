@@ -798,12 +798,7 @@ Se o servidor tiver que enviar a mensagem para um servidor diferente, o SMTP tam
 
 Clique em Play na figura para ver como o SMTP é usado para enviar e-mail.
 
-![[Pasted image 20260611065624.png]]![[Pasted image 20260611065647.png]]
-
-![[Pasted image 20260611065749.png]]
-
-![[Pasted image 20260611065804.png]]
-![[Pasted image 20260611065822.png]]
+![[brave_0jvYQjSSuJ.mp4]]
 
 **Protocolo POP (POP3)**
 

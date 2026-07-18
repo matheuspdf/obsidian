@@ -121,14 +121,9 @@ Para manter o estado de uma conversa e rastrear as informações, o TCP deve pri
 
 **Pressione Reproduzir na figura para ver como os segmentos TCP e as confirmações são transmitidos entre o remetente e o destinatário.**
 
-![[Pasted image 20260622064113.png]]
-![[Pasted image 20260622064136.png]]
-![[Pasted image 20260622064155.png]]
-![[Pasted image 20260622064228.png]]
-![[Pasted image 20260622064247.png]]
-![[Pasted image 20260622065441.png]]
-![[Pasted image 20260622065517.png]]
+![[brave_NSPtb9DjWt.mp4]]
 
+---
 ## 26.1.5 Protocolo UDP (User Datagram Protocol)
 
 O UDP é um protocolo de camada de transporte mais simples do que o TCP. Ele não fornece confiabilidade e controle de fluxo, o que significa que requer menos campos de cabeçalho. Como o remetente e os processos UDP receptor não precisam gerenciar confiabilidade e controle de fluxo, isso significa que datagramas UDP podem ser processados mais rápido do que segmentos TCP. O UDP fornece as funções básicas para fornecer datagramas entre os aplicativos apropriados, com muito pouca sobrecarga e verificação de dados.
@@ -143,9 +138,9 @@ O UDP é como colocar uma carta regular, não registrada, no correio. O remetent
 
 **Clique no botão Reproduzir na figura para ver uma animação dos segmentos UDP que estão sendo transmitidos do remetente ao destinatário.**
 
-![[Pasted image 20260622065741.png]]
-![[Pasted image 20260622065841.png]]
+![[brave_jiK8f0NNFK.mp4]]
 
+---
 ## 26.1.6 O Protocolo de Camada de Transporte Certo para a Aplicação Certa
 
 Alguns aplicativos podem tolerar a perda de dados durante a transmissão pela rede, mas atrasos na transmissão são inaceitáveis. Para esses aplicativos, o UDP é a melhor escolha, pois requer menos sobrecarga da rede. O UDP é preferível para aplicativos como Voz sobre IP (VoIP). Agradecimentos e retransmissão atrasariam a entrega e tornariam a conversa por voz inaceitável.

@@ -32,6 +32,8 @@ Transmissão unicast refere-se a um dispositivo que envia uma mensagem para outr
 
 Um pacote unicast tem um endereço IP de destino que é um endereço unicast que vai para um único destinatário. Um endereço IP de origem só pode ser um endereço unicast, porque o pacote só pode originar-se de uma única origem. Isso independentemente de o endereço IP de destino ser unicast, broadcast ou multicast.
 
+![[brave_dPh0f4lNBF.mp4]]
+
 **Observação:** Neste curso, todas as comunicações entre dispositivos são unicast, a menos que especificado de outra forma.
 
 Os endereços de host unicast IPv4 estão no intervalo de endereços de 1.1.1.1 a 223.255.255.255. Contudo, dentro desse intervalo há muitos endereços que já são reservados para fins especiais. Esses endereços para fins especiais serão discutidos mais adiante neste módulo.
@@ -56,11 +58,13 @@ Um pacote de broadcast possui um endereço IP de destino com todos os (1s) na pa
 
 Um pacote de broadcast deve ser processado por todos os dispositivos no mesmo domínio de broadcast. Um domínio de broadcast identifica todos os hosts no mesmo segmento de rede. Um broadcast pode ser direcionado ou limitado. Um broadcast direcionado é enviado para todos os hosts em uma rede específica. Por exemplo, um host na rede 172.16.4.0/24 envia um pacote para 172.16.4.255. Uma broadcast limitado é enviado para 255.255.255.255. Por padrão, os roteadores não encaminham broadcasts.
 
----
+#### Reproduza a animação para ver um exemplo de transmissão broadcast.
+
+![[brave_3wlOF5Fbfy.mp4]]
 
 Pacotes de transmissão usam recursos na rede e fazem com que todos os hosts receptores da rede processem o pacote. Portanto, o tráfego broadcast deve ser limitado para não prejudicar o desempenho da rede ou dos dispositivos. Como os roteadores separam domínios de broadcast, subdividir as redes pode melhorar seu desempenho ao eliminar o excesso de tráfego broadcast.
 
-
+---
 ## 9.1.5 Vídeo - Multicast IPv4
 ![[9.1.5.mp4#subtitle=anexos/9.1.5.vtt]]
 Neste vídeo, vamos dar uma olhada nas transmissões de multicast. Então temos um pacote com o endereço IPv4 de origem 172.16.4.1 e um endereço IPv4 de destino de 224.0.0.10.
@@ -83,12 +87,17 @@ Cada grupo multicast é representado por um único endereço IPv4 multicast de d
 
 Protocolos de roteamento, como OSPF, usam transmissões multicast. Por exemplo, os roteadores habilitados com OSPF se comunicam entre si usando o endereço multicast OSPF reservado 224.0.0.5. Somente dispositivos habilitados com OSPF processarão esses pacotes com 224.0.0.5 como endereço IPv4 de destino. Todos os outros dispositivos ignorarão esses pacotes.
 
+**A animação demonstra clientes aceitando pacotes multicast.**
+
+![[brave_B9C9yXuGL6.mp4]]
+
 ## 9.1.7 Atividade - Unicast, Broadcast ou Multicast
 
 **Instruções:**
 
 Clique em Iniciar para visualizar o endereço de IP de destino. Em seguida, clique no host ou hosts que receberão um pacote com base no tipo de endereço (unicast, broadcast ou multicast). Clique **Verificar** para verificar sua resposta. Clique **Novo Problemar** novamente para obter um novo problema.
 
+![[Pasted image 20260717234014.png]]
 # 9.2 Tipos de endereços IPv4
 
 ## 9.2.1 Endereços IPv4 públicos e privados

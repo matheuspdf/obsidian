@@ -476,10 +476,7 @@ Quando o host emissor tem o endereço MAC do host de destino em sua tabela ARP, 
 
 **Clique em Play na figura para ver uma animação do processo de ARP.**
 
-![[Pasted image 20260609200620.png]]![[Pasted image 20260609200636.png]]
-
-![[Pasted image 20260609200657.png]]
-
+![[brave_RNsZTLDpwv.mp4]]
 ## 13.2.6 Verifique sua compreensão - Contenção de broadcast
 
 **Verifique sua compreensão sobre contenção de broadcast, escolhendo a resposta correta para as seguintes perguntas.**

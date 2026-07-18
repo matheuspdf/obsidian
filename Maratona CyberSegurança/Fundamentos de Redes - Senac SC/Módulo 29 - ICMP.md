@@ -9,10 +9,10 @@ Parabéns! Você chegou ao último módulo deste curso! Meu amigo, Diego, config
 
 **Objetivo do módulo:** Usar várias ferramentas para testar a conectividade de rede.
 
-|Título do Tópico|Objetivo do Tópico|
-|---|---|
-|Mensagens ICMP|Explicar como o protocolo ICMP é usado para testar a conectividade da rede.|
-|Teste de ping e traceroute|Usar utilitários ping e traceroute para testar a conectividade da rede.|
+| Título do Tópico           | Objetivo do Tópico                                                          |
+| -------------------------- | --------------------------------------------------------------------------- |
+| Mensagens ICMP             | Explicar como o protocolo ICMP é usado para testar a conectividade da rede. |
+| Teste de ping e traceroute | Usar utilitários ping e traceroute para testar a conectividade da rede.     |
 
 # 29.1 Mensagens ICMP
 
@@ -194,13 +194,9 @@ Além disso, a funcionalidade do host remoto pode ser verificada. Se o host remo
 
 **Observação**: muitos administradores de rede limitam ou proíbem a entrada de mensagens ICMP na rede corporativa, por isso a falta de uma resposta do **ping** pode ser consequência de restrições de segurança.
 
-![[Pasted image 20260625212915.png]]
-![[Pasted image 20260625212931.png]]![[Pasted image 20260625212955.png]]
-![[Pasted image 20260625213007.png]]
-![[Pasted image 20260625213027.png]]![[Pasted image 20260625213058.png]]
-![[Pasted image 20260625213116.png]]
-![[Pasted image 20260625213154.png]]
+![[brave_oDb51y8eLm.mp4]]
 
+---
 ## 29.2.5 Traceroute - Testar o Caminho
 
 O ping é usado para testar a conectividade entre dois hosts, mas não fornece informações sobre detalhes de dispositivos entre os hosts. Traceroute (**tracert**) é um utilitário que gera uma lista de saltos que foram alcançados com sucesso ao longo do caminho. Essa lista pode dar informações importantes para a verificação e a solução de erros. Se os dados atingirem o destino, o rastreamento listará a interface de cada roteador no caminho entre os hosts. Caso ocorra falha nos dados em algum salto ao longo do caminho, o endereço do último roteador que respondeu ao rastreamento poderá fornecer uma indicação de onde está o problema ou das restrições de segurança que foram encontradas.
