@@ -89,17 +89,17 @@ Reserve de 30 a 45 minutos por dia, de preferência sempre no mesmo horário. Se
 💡 **Conexão com seu trabalho:** é basicamente o que o Action1 faz de forma centralizada e remota no seu `action1-desktop` — entender as ferramentas nativas ajuda a entender os dados que a API te devolve.
 
 ---
-### Resumo — Dia 2 [2.2] Ferramentas de diagnóstico do dispositivo
+#### Resumo — Dia 2 [2.2] Ferramentas de diagnóstico do dispositivo
 
 #### A lógica geral
 
 Três ferramentas nativas do Windows respondem três perguntas diferentes sobre uma máquina:
 
-|Ferramenta|Pergunta que responde|
-|---|---|
-|Gerenciador de Tarefas|"O que está rodando **agora**?"|
-|`msinfo32`|"Qual é a **configuração estática** da máquina?"|
-|Visualizador de Eventos|"O que **aconteceu** (erros, histórico)?"|
+| Ferramenta              | Pergunta que responde                            |
+| ----------------------- | ------------------------------------------------ |
+| Gerenciador de Tarefas  | "O que está rodando **agora**?"                  |
+| `msinfo32`              | "Qual é a **configuração estática** da máquina?" |
+| Visualizador de Eventos | "O que **aconteceu** (erros, histórico)?"        |
 
 Juntas, elas formam o mesmo tipo de "perfil de dispositivo" que uma ferramenta de RMM (Remote Monitoring & Management) — como o **Action1** — coleta via agente e te entrega centralizado pela API.
 
