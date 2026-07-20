@@ -1,0 +1,45 @@
+[00:00] Este vídeo é uma visão geral
+
+[00:01] do laboratório para técnicas de engenharia social.
+
+[00:05] Este laboratório requer um PC
+
+[00:06] ou algum outro dispositivo com acesso à Internet.
+
+[00:09] Nem todos os ataques de segurança cibernética vêm de algum invasor aleatório
+
+[00:13] que está invadindo uma rede
+
+[00:15] de um computador que está a milhares de quilômetros de distância.
+
+[00:17] Muitas vezes, os invasores roubam informações pessoais
+
+[00:19] ou organizacionais que adquiriram
+
+[00:22] ao fazer com que alguém lhes concedesse acesso sem saber.
+
+[00:25] Isso é chamado de engenharia social,
+
+[00:27] e isso acontece com mais frequência do que você imagina.
+
+[00:31] Estes são os objetivos deste laboratório.
+
+[00:33] Na primeira parte, você aprenderá sobre os diferentes tipos
+
+[00:36] de técnicas de engenharia social que são usadas
+
+[00:38] para obter acesso a dados pessoais ou organizacionais.
+
+[00:42] Você verá uma lição interativa
+
+[00:44] sobre engenharia social e responderá perguntas.
+
+[00:47] Na parte dois, você criará
+
+[00:50] um pôster de conscientização sobre segurança cibernética
+
+[00:52] para incentivar os outros a estarem cientes
+
+[00:53] de ataques de engenharia social.
+
+[00:56] Esperamos que você goste deste laboratório.

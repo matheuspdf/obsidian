@@ -362,10 +362,10 @@ As tabelas mostram exemplos de senhas fortes e fracas.
 |bob1967|Nome e data de nascimento do usuário|
 |Blueleaf23|Palavras e números simples|
 
-|Senha Forte|Por que ela é forte?|
-|---|---|
-|b67n42d39c|Combina caracteres alfanuméricos|
-|12^h u4@1p7|Combina caracteres alfanuméricos, símbolos e inclui um espaço|
+| Senha Forte | Por que ela é forte?                                          |
+| ----------- | ------------------------------------------------------------- |
+| b67n42d39c  | Combina caracteres alfanuméricos                              |
+| 12^h u4@1p7 | Combina caracteres alfanuméricos, símbolos e inclui um espaço |
 
 Nos roteadores Cisco, os espaços à esquerda são ignorados em senhas, mas os espaços após o primeiro caractere não são ignorados. Portanto, um método para criar uma senha forte é utilizar a barra de espaço e criar uma frase feita de muitas palavras. Isso se chama frase secreta. Uma frase secreta é geralmente mais fácil de lembrar do que uma senha simples. Também é maior e mais difícil de ser descoberta.
 
