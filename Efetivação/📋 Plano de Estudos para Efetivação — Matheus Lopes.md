@@ -251,9 +251,9 @@ O agente do Action1 faz, de forma **remota e centralizada**, o mesmo levantament
 
 🛠️ **Pratique hoje:**
 
-- [ ] Percorra fisicamente as portas do seu notebook/desktop e nomeie cada uma
-- [ ] Se tiver acesso a uma gaveta de cabos/adaptadores no help desk, identifique cada item
-- [ ] Monte uma tabela simples: porta → uso típico → cabo compatível
+- [x] Percorra fisicamente as portas do seu notebook/desktop e nomeie cada uma
+- [x] Se tiver acesso a uma gaveta de cabos/adaptadores no help desk, identifique cada item
+- [x] Monte uma tabela simples: porta → uso típico → cabo compatível
 
 ⏱️ **Tempo estimado:** 25–35 min
 
