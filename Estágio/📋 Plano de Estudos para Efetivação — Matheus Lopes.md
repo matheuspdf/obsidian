@@ -294,9 +294,9 @@ O agente do Action1 faz, de forma **remota e centralizada**, o mesmo levantament
 
 🛠️ **Pratique hoje:**
 
-- [ ] Procure a documentação oficial da Dell sobre os códigos de LED (branco/laranja) do modelo mais comum na empresa
-- [ ] Revise 2-3 códigos de erro comuns no Gerenciador de Dispositivos
-- [ ] Liste os riscos de um firmware/BIOS update sem necessidade (ex: travar o equipamento se faltar energia no meio)
+- [x] Procure a documentação oficial da Dell sobre os códigos de LED (branco/laranja) do modelo mais comum na empresa
+- [x] Revise 2-3 códigos de erro comuns no Gerenciador de Dispositivos
+- [x] Liste os riscos de um firmware/BIOS update sem necessidade (ex: travar o equipamento se faltar energia no meio)
 
 ⏱️ **Tempo estimado:** 30–40 min
 
@@ -320,10 +320,10 @@ O agente do Action1 faz, de forma **remota e centralizada**, o mesmo levantament
 
 🛠️ **Pratique hoje:**
 
-- [ ] No Entra ID, abra um usuário de teste e confira a quais grupos ele pertence e o que isso libera
-- [ ] Rode `gpupdate /force` na sua máquina e observe o log
-- [ ] Mapeie manualmente uma unidade via caminho UNC (`\\servidor\pasta`)
-- [ ] Revise os métodos de MFA disponíveis no tenant
+- [x] No Entra ID, abra um usuário de teste e confira a quais grupos ele pertence e o que isso libera
+- [x] Rode `gpupdate /force` na sua máquina e observe o log
+- [x] Mapeie manualmente uma unidade via caminho UNC (`\\servidor\pasta`)
+- [x] Revise os métodos de MFA disponíveis no tenant
 
 ⏱️ **Tempo estimado:** 35–45 min
 
@@ -337,9 +337,9 @@ O agente do Action1 faz, de forma **remota e centralizada**, o mesmo levantament
 
 🛠️ **Pratique hoje:**
 
-- [ ] Reinicie o serviço de spooler de impressão (`services.msc` → Print Spooler) e veja o efeito na fila
-- [ ] Revise o passo a passo oficial de troubleshooting do Webex Desk Pro (câmera, áudio, conexão)
-- [ ] Simule a limpeza de uma fila de impressão travada
+- [x] Reinicie o serviço de spooler de impressão (`services.msc` → Print Spooler) e veja o efeito na fila
+- [x] Revise o passo a passo oficial de troubleshooting do Webex Desk Pro (câmera, áudio, conexão)
+- [x] Simule a limpeza de uma fila de impressão travada
 
 ⏱️ **Tempo estimado:** 30 min
 
@@ -385,9 +385,9 @@ O agente do Action1 faz, de forma **remota e centralizada**, o mesmo levantament
 
 🛠️ **Pratique hoje:**
 
-- [ ] Localize como recuperar uma chave do BitLocker via Entra ID/AD
-- [ ] Limpe o cache do navegador no Edge e no Chrome
-- [ ] Explore os recursos de acessibilidade em Configurações (Narrador, alto contraste, etc.)
+- [x] Localize como recuperar uma chave do BitLocker via Entra ID/AD
+- [x] Limpe o cache do navegador no Edge e no Chrome
+- [x] Explore os recursos de acessibilidade em Configurações (Narrador, alto contraste, etc.)
 - [ ] Se tiver uma VM de teste, pratique iniciar em Modo de Segurança (evite numa máquina de produção)
 
 ⏱️ **Tempo estimado:** 35–45 min

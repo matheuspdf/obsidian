@@ -28,6 +28,7 @@ Tudo o que você acessa on-line está localizado em algum lugar da Internet glob
 
 Pense em todas as interações que você faz durante o dia que exigem que você esteja on-line.
 
+![[Pasted image 20260727205914.png]]
 ## 1.1.4 Redes locais
 
 Existem redes locais de diversos tamanhos. Elas podem variar desde redes simples com apenas dois computadores até redes que conectam milhões de dispositivos. As redes instaladas em pequenos escritórios ou em residências e escritórios domésticos são conhecidas como redes SOHO (Pequeno Escritório Doméstico). Redes SOHO compartilhamento recursos, tais como: impressoras, documentos, fotos e músicas, entre alguns computadores locais.
