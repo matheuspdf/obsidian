@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roadmap de Efetivação — Matheus</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg:       #0d1117;
+  --s1:       #161b22;
+  --s2:       #1c2230;
+  --border:   #21262d;
+  --text:     #e6edf3;
+  --muted:    #7d8590;
+  --blue:     #58a6ff;
+  --green:    #3fb950;
+  --yellow:   #d29922;
+  --red:      #f85149;
+  --purple:   #bc8cff;
+  --cyan:     #39c5cf;
+  --font:     'Inter', sans-serif;
+  --mono:     'JetBrains Mono', monospace;
+  --radius:   8px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ── LAYOUT ── */
+.layout { display: flex; min-height: 100vh; }
+
+/* ── SIDEBAR ── */
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: var(--s1);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+.sidebar-logo {
+  padding: 0 1.25rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+.sidebar-logo .title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.sidebar-logo .sub {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.nav-section {
+  padding: 0 .75rem;
+  margin-bottom: .5rem;
+}
+.nav-label {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted);
+  padding: .5rem .5rem .25rem;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: background .12s, color .12s;
+  cursor: pointer;
+}
+.nav-link:hover { background: var(--s2); color: var(--text); }
+.nav-link.active { background: var(--s2); color: var(--blue); }
+.nav-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── MAIN ── */
+.main {
+  flex: 1;
+  padding: 2rem 2.5rem;
+  max-width: 860px;
+}
+
+/* ── HERO ── */
+.hero {
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--blue);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: .6rem;
+}
+.hero h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: .6rem;
+}
+.hero p { color: var(--muted); font-size: 13px; max-width: 540px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 1rem; }
+.chip {
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+.chip.blue   { border-color: rgba(88,166,255,.4); color: var(--blue); }
+.chip.green  { border-color: rgba(63,185,80,.4);  color: var(--green); }
+.chip.yellow { border-color: rgba(210,153,34,.4); color: var(--yellow); }
+.chip.red    { border-color: rgba(248,81,73,.4);  color: var(--red); }
+
+/* ── SECTION ── */
+.section { margin-bottom: 3rem; }
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+.section-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  min-width: 22px;
+}
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+.section-badge {
+  margin-left: auto;
+  font-size: 10px;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.b-blue   { background: rgba(88,166,255,.12); color: var(--blue); }
+.b-green  { background: rgba(63,185,80,.12);  color: var(--green); }
+.b-yellow { background: rgba(210,153,34,.12); color: var(--yellow); }
+.b-red    { background: rgba(248,81,73,.12);  color: var(--red); }
+.b-purple { background: rgba(188,140,255,.12);color: var(--purple); }
+.b-cyan   { background: rgba(57,197,207,.12); color: var(--cyan); }
+
+/* ── DIVIDER ── */
+.divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+/* ── TOPIC BLOCK ── */
+.topic-block {
+  background: var(--s1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: .6rem;
+  overflow: hidden;
+}
+.topic-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: .7rem 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+.topic-header:hover { background: var(--s2); }
+.topic-icon { font-size: 15px; flex-shrink: 0; }
+.topic-name { font-size: 13px; font-weight: 500; flex: 1; }
+.topic-tags { display: flex; gap: 5px; }
+.tag {
+  font-size: 10px;
+  font-family: var(--mono);
+  padding: 1px 7px;
+  border-radius: 4px;
+}
+.chev { color: var(--muted); font-size: 13px; transition: transform .2s; flex-shrink: 0; }
+.topic-block.open .chev { transform: rotate(90deg); }
+.topic-body { display: none; border-top: 1px solid var(--border); }
+.topic-block.open .topic-body { display: block; }
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.topic-col {
+  padding: .9rem 1rem;
+}
+.topic-col:first-child { border-right: 1px solid var(--border); }
+.col-label {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--muted);
+  margin-bottom: .6rem;
+}
+.topic-col ul { list-style: none; }
+.topic-col ul li {
+  font-size: 12.5px;
+  color: var(--text);
+  padding: 3px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.5;
+}
+.topic-col ul li:last-child { border-bottom: none; }
+.topic-col ul li::before {
+  content: '';
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--muted);
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+.network-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--cyan);
+  text-decoration: none;
+  margin-top: 4px;
+}
+.network-link:hover { text-decoration: underline; }
+
+/* ── CALLOUT ── */
+.callout {
+  border-left: 3px solid var(--yellow);
+  background: rgba(210,153,34,.07);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: .65rem 1rem;
+  margin: .75rem 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.callout.blue   { border-color: var(--blue);   background: rgba(88,166,255,.06); }
+.callout.green  { border-color: var(--green);  background: rgba(63,185,80,.06); }
+.callout.red    { border-color: var(--red);    background: rgba(248,81,73,.06); }
+.callout.purple { border-color: var(--purple); background: rgba(188,140,255,.06); }
+
+/* ── RESOURCE TABLE ── */
+.res-table { width: 100%; border-collapse: collapse; }
+.res-table th {
+  text-align: left;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--muted);
+  padding: .4rem .75rem;
+  border-bottom: 1px solid var(--border);
+}
+.res-table td {
+  padding: .55rem .75rem;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.res-table tr:last-child td { border-bottom: none; }
+.res-table tr:hover td { background: var(--s2); }
+.res-name { font-weight: 500; }
+.res-desc { color: var(--muted); font-size: 12px; }
+.res-link { color: var(--blue); text-decoration: none; font-size: 12px; }
+.res-link:hover { text-decoration: underline; }
+.res-tag {
+  font-size: 10px;
+  font-family: var(--mono);
+  padding: 1px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* ── CHECKLIST ── */
+.checklist { display: flex; flex-direction: column; gap: 5px; }
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  background: var(--s1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 7px 11px;
+  cursor: pointer;
+  transition: border-color .12s;
+}
+.check-item:hover { border-color: rgba(88,166,255,.4); }
+.check-item input { margin-top: 2px; accent-color: var(--blue); cursor: pointer; flex-shrink: 0; }
+.check-item label { font-size: 13px; cursor: pointer; line-height: 1.5; }
+.check-item.done label { color: var(--muted); text-decoration: line-through; }
+
+/* ── SCHEDULE ── */
+.schedule {
+  background: var(--s1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.sch-row { display: grid; grid-template-columns: 70px 1fr; }
+.sch-day, .sch-task {
+  padding: 7px 12px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border);
+}
+.sch-row:last-child .sch-day,
+.sch-row:last-child .sch-task { border-bottom: none; }
+.sch-day {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  background: rgba(255,255,255,.02);
+  display: flex;
+  align-items: center;
+}
+.itag {
+  font-size: 10px;
+  font-family: var(--mono);
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+/* ── PRINT / RESPONSIVE ── */
+@media (max-width: 720px) {
+  .sidebar { display: none; }
+  .main { padding: 1.25rem; }
+  .topic-grid { grid-template-columns: 1fr; }
+  .topic-col:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+}
+@media print {
+  .sidebar { display: none; }
+  body { background: #fff; color: #111; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<!-- ── SIDEBAR ── -->
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <div class="title">Roadmap de Efetivação</div>
+    <div class="sub">Matheus · Turim MFO</div>
+  </div>
+  <div class="nav-section">
+    <div class="nav-label">Tópicos</div>
+    <a class="nav-link" href="#bloco1"><span class="nav-dot" style="background:#58a6ff"></span>1. Help desk</a>
+    <a class="nav-link" href="#bloco2"><span class="nav-dot" style="background:#3fb950"></span>2. Hardware</a>
+    <a class="nav-link" href="#bloco3"><span class="nav-dot" style="background:#d29922"></span>3. Redes & acesso</a>
+    <a class="nav-link" href="#bloco4"><span class="nav-dot" style="background:#bc8cff"></span>4. SO & apps</a>
+    <a class="nav-link" href="#bloco5"><span class="nav-dot" style="background:#f85149"></span>5. Segurança</a>
+    <a class="nav-link" href="#bloco6"><span class="nav-dot" style="background:#39c5cf"></span>6. Ferramentas & servidor</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-label">Extras</div>
+    <a class="nav-link" href="#semana">Divisão semanal</a>
+    <a class="nav-link" href="#recursos">Referências</a>
+    <a class="nav-link" href="#checklist">Checklist geral</a>
+  </div>
+</nav>
+
+<!-- ── MAIN ── -->
+<main class="main">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="eyebrow">Roadmap de Efetivação</div>
+    <h1>Tópicos técnicos para<br>ser efetivado na Turim</h1>
+    <p>Guia objetivo com o que estudar, como praticar e onde aprender — organizado pelos 6 blocos da sua lista, com conexões ao roadmap de Network Engineer.</p>
+    <div class="chips">
+      <span class="chip blue">6 blocos temáticos</span>
+      <span class="chip green">Lab prático incluído</span>
+      <span class="chip yellow">Referências gratuitas</span>
+      <span class="chip red">Conexões com roadmap.sh/network-engineer</span>
+    </div>
+  </div>
+
+  <!-- BLOCO 1 -->
+  <div class="section" id="bloco1">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <span class="section-title">Help Desk</span>
+      <span class="section-badge b-blue">Conceitual</span>
+    </div>
+
+    <div class="topic-block open">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🎯</span>
+        <span class="topic-name">1.1 — Conceitos fundamentais</span>
+        <span class="topic-tags"><span class="tag b-blue">teoria</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">O que saber</div>
+            <ul>
+              <li><strong>Queue management:</strong> como organizar e priorizar a fila de chamados</li>
+              <li><strong>SLA:</strong> o que é, como funciona, o que acontece se for violado</li>
+              <li><strong>Time management:</strong> gerir múltiplos chamados simultâneos sem deixar nenhum cair</li>
+            </ul>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Como praticar</div>
+            <ul>
+              <li>Simule chamados reais do dia a dia na Turim: documente problema, passos e resolução</li>
+              <li>Crie um "diário de chamados" pessoal no Obsidian — com o tempo vira sua própria KB</li>
+              <li>Estude os SLAs que a Turim já usa (pergunte ao gestor se existem formais)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">📝</span>
+        <span class="topic-name">1.2 — Documentação de chamados</span>
+        <span class="topic-tags"><span class="tag b-blue">escrita técnica</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">O que saber</div>
+            <ul>
+              <li>Descrever o problema de forma clara, factual e sem ambiguidade</li>
+              <li>Registrar todos os passos de troubleshooting realizados</li>
+              <li>Anotar o resultado de cada passo — inclusive os que não funcionaram</li>
+              <li>Escrever pensando em quem vai ler depois, sem contexto anterior</li>
+            </ul>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Como praticar</div>
+            <ul>
+              <li>Documente o próximo chamado que você atender usando o modelo: <em>Problema → Passos → Resultado → Solução final</em></li>
+              <li>Revise a documentação depois e pergunte: alguém sem contexto entenderia isso?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🔍</span>
+        <span class="topic-name">1.3 — Processo de troubleshooting</span>
+        <span class="topic-tags"><span class="tag b-blue">metodologia</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-col" style="border:none; padding:.9rem 1rem">
+          <div class="col-label">Os 7 passos</div>
+          <ul>
+            <li>1. Definir o problema com precisão</li>
+            <li>2. Coletar informações detalhadas (usuário, máquina, logs)</li>
+            <li>3. Identificar a causa provável</li>
+            <li>4. Elaborar um plano de resolução</li>
+            <li>5. Implementar as mudanças</li>
+            <li>6. Verificar se o problema foi resolvido</li>
+            <li>7. Documentar tudo — inclusive se o problema voltou</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- BLOCO 2 -->
+  <div class="section" id="bloco2">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <span class="section-title">Hardware</span>
+      <span class="section-badge b-green">Prático</span>
+    </div>
+
+    <div class="callout blue">
+      Contexto Turim: frota principal é <strong>Dell OptiPlex 7020 Micro</strong> e <strong>Latitude series</strong>. Priorize o aprendizado com esses modelos.
+    </div>
+
+    <br>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🖥️</span>
+        <span class="topic-name">2.2 — Ferramentas de diagnóstico do dispositivo</span>
+        <span class="topic-tags"><span class="tag b-green">lab</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Ferramentas Windows</div>
+            <ul>
+              <li><strong>msinfo32</strong> — hostname, CPU, RAM, OS, versão de BIOS</li>
+              <li><strong>Task Manager</strong> — processos, CPU/RAM em tempo real, terminar processos travados</li>
+              <li><strong>Event Viewer</strong> — logs de erro, Warning, Critical</li>
+              <li><strong>ipconfig /all</strong> — IPv4, IPv6, MAC, DHCP, DNS</li>
+              <li><strong>WinDBG</strong> — análise de dump de BSOD (stop codes)</li>
+            </ul>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Lab prático</div>
+            <ul>
+              <li>Rode <code>msinfo32</code> e <code>ipconfig /all</code> em uma máquina da Turim e documente tudo</li>
+              <li>Abra o Event Viewer e filtre por erros dos últimos 7 dias — identifique o que é relevante</li>
+              <li>Simule um processo travado no Task Manager e mate-o</li>
+              <li>Analise um arquivo .dmp de BSOD com WinDBG (pode baixar um exemplo online)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🔌</span>
+        <span class="topic-name">2.3 — Portas e cabos</span>
+        <span class="topic-tags"><span class="tag b-green">identificação</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Vídeo & display</div>
+            <ul>
+              <li>HDMI — digital, áudio+vídeo, mais comum</li>
+              <li>DisplayPort — maior largura de banda, monitores profissionais</li>
+              <li>USB-C / Thunderbolt 3/4 — vídeo + dados + carga em um cabo</li>
+              <li>DVI — digital, sem áudio, legado</li>
+              <li>VGA — analógico, legacy, ainda aparece em projetores</li>
+            </ul>
+            <div class="col-label" style="margin-top:.75rem">USB</div>
+            <ul>
+              <li>USB-A — conector padrão retangular</li>
+              <li>USB-B — impressoras e hubs</li>
+              <li>USB-C — reversível, Thunderbolt-compatível</li>
+              <li>Micro USB — dispositivos móveis antigos</li>
+            </ul>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Rede</div>
+            <ul>
+              <li>RJ-45 — conector Ethernet padrão</li>
+              <li>UTP — cabo sem blindagem, uso geral</li>
+              <li>STP — blindado, ambientes com interferência</li>
+            </ul>
+            <div class="col-label" style="margin-top:.75rem">Energia</div>
+            <ul>
+              <li>Desktop — cabo IEC C13 (3 pinos)</li>
+              <li>Notebook — fonte proprietária ou USB-C PD</li>
+              <li>Converters — necessários para conectar portas incompatíveis (ex: HDMI→VGA)</li>
+            </ul>
+            <a class="network-link" href="https://roadmap.sh/network-engineer" target="_blank">↗ Conexão: roadmap.sh → Network Fundamentals → Physical Layer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🔧</span>
+        <span class="topic-name">2.4 — Componentes internos e instalação</span>
+        <span class="topic-tags"><span class="tag b-green">prático</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Componentes</div>
+            <ul>
+              <li><strong>RAM:</strong> DDR4/DDR5 — slots, compatibilidade, dual-channel</li>
+              <li><strong>Armazenamento:</strong> SATA HDD/SSD → mais lento; NVMe M.2 → mais rápido</li>
+              <li><strong>GPU:</strong> slot PCIe x16; verificar requisito de fonte</li>
+              <li><strong>Placa Wi-Fi/Bluetooth:</strong> slot PCIe x1 ou M.2 Key E</li>
+              <li><strong>Motherboard:</strong> socket define compatibilidade de CPU</li>
+            </ul>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Device Manager</div>
+            <ul>
+              <li>Verificar dispositivos com ! amarelo (problema de driver)</li>
+              <li>Atualizar driver: automático via Windows Update ou manual pelo site do fabricante</li>
+              <li>Reverter driver quando uma atualização quebra algo</li>
+              <li>Desativar/reativar dispositivo para "reiniciar" o driver</li>
+              <li><strong>Firmware:</strong> sempre verificar release notes antes de atualizar — risco de brick</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">⚠️</span>
+        <span class="topic-name">2.5 — Troubleshooting de hardware</span>
+        <span class="topic-tags"><span class="tag b-yellow">diagnóstico</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Checklist básico</div>
+            <ul>
+              <li>Cabo de energia conectado e tomada funcionando?</li>
+              <li>Botão de liga/desliga pressionado por tempo suficiente?</li>
+              <li>LEDs de status acesos?</li>
+              <li>Monitor no input correto?</li>
+              <li>Requisitos do app compatíveis com o hardware? (CPU arch, RAM, GPU, disco)</li>
+            </ul>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Dell específico (Turim)</div>
+            <ul>
+              <li><strong>LED branco piscando:</strong> POST OK, aguardando boot</li>
+              <li><strong>LED laranja piscando:</strong> falha de hardware — contar os pulsos para identificar o código de erro</li>
+              <li>Consultar <em>Dell Error Code</em> no site da Dell com o número de pulsos</li>
+              <li>BSOD stop codes → WinDBG ou pesquisar o código (ex: 0x0000003B)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- BLOCO 3 -->
+  <div class="section" id="bloco3">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <span class="section-title">Redes & Acesso</span>
+      <span class="section-badge b-yellow">Fundamentos + Lab</span>
+    </div>
+
+    <div class="callout purple">
+      Este bloco tem a maior sobreposição com o <strong>roadmap.sh/network-engineer</strong>. Os tópicos de DNS, DHCP, IP, comandos de rede e periféricos correspondem diretamente à fase de fundamentos do roadmap.
+    </div>
+
+    <br>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">👤</span>
+        <span class="topic-name">3.1 — Acesso a recursos de rede</span>
+        <span class="topic-tags"><span class="tag b-yellow">AD · Entra ID</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Active Directory & Entra ID</div>
+            <ul>
+              <li>Criar, editar e desativar usuários no AD e Entra ID</li>
+              <li>Grupos de segurança vs grupos de distribuição</li>
+              <li>Verificar membros de grupo para resolver problema de acesso</li>
+              <li>RBAC — verificar permissões atribuídas a um usuário</li>
+              <li>Resetar senha no AD / Entra ID</li>
+              <li>MFA: apps autenticadores (Microsoft Authenticator), SMS, chave FIDO</li>
+            </ul>
+            <a class="network-link" href="https://roadmap.sh/network-engineer" target="_blank">↗ roadmap.sh → Security → Authentication & Authorization</a>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Drives e políticas</div>
+            <ul>
+              <li><strong>Mapear drive SMB:</strong> <code>\\servidor\pasta</code> via Explorador ou <code>net use</code></li>
+              <li><strong>OneDrive:</strong> sincronização, backup de pastas conhecidas</li>
+              <li><strong>gpupdate /force</strong> — forçar política de grupo imediatamente</li>
+              <li>Verificar GPO aplicada com <code>gpresult /h gpo.html</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🖨️</span>
+        <span class="topic-name">3.2 — Periféricos e conectividade</span>
+        <span class="topic-tags"><span class="tag b-yellow">suporte</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Impressoras</div>
+            <ul>
+              <li>Verificar conectividade (USB ou rede — fazer ping no IP da impressora)</li>
+              <li>Carregar papel corretamente (guias de papel ajustadas)</li>
+              <li>Desentupir papel: abrir tampas indicadas, puxar com cuidado sem rasgar</li>
+              <li>Limpar fila de impressão travada: parar serviço Spooler, limpar C:\Windows\System32\spool\PRINTERS, reiniciar serviço</li>
+              <li>Trocar toner: verificar modelo correto, remover lacre antes de instalar</li>
+            </ul>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Outros periféricos</div>
+            <ul>
+              <li><strong>Headphones/Microfone:</strong> verificar dispositivo padrão no painel de som, drivers, mute físico</li>
+              <li><strong>Drives externos:</strong> verificar no Gerenciador de Discos se aparece sem letra</li>
+              <li><strong>Webcam:</strong> permissões de app no Windows, drivers, testar no app Câmera</li>
+              <li><strong>Teclado/mouse:</strong> wired vs wireless — receptor USB, pilhas, pareamento Bluetooth</li>
+              <li><strong>Webex Desk Pro:</strong> verificar rede, conta Webex, atualização de firmware</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🌐</span>
+        <span class="topic-name">3.3 — Conectividade de rede</span>
+        <span class="topic-tags"><span class="tag b-yellow">comandos</span><span class="tag b-purple">roadmap.sh</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Conceitos</div>
+            <ul>
+              <li><strong>DNS:</strong> resolve nome → IP. Testar com <code>nslookup</code></li>
+              <li><strong>DHCP:</strong> distribui IPs automaticamente. APIPA = 169.254.x.x = sem DHCP</li>
+              <li><strong>Gateway padrão:</strong> roteador da rede local — necessário para sair da subnet</li>
+              <li><strong>IP privado:</strong> 10.x, 172.16-31.x, 192.168.x. IP público: o resto</li>
+              <li><strong>WLAN SSID:</strong> nome da rede Wi-Fi. Verificar se está no SSID correto</li>
+              <li><strong>Firewall:</strong> pode bloquear portas — verificar regras quando há falha de acesso</li>
+            </ul>
+            <a class="network-link" href="https://roadmap.sh/network-engineer" target="_blank">↗ roadmap.sh → Networking Fundamentals → TCP/IP, DNS, DHCP, Subnetting</a>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Comandos essenciais</div>
+            <ul>
+              <li><code>ipconfig /all</code> — IP, máscara, gateway, DNS, MAC</li>
+              <li><code>ping &lt;IP&gt;</code> — testa alcançabilidade</li>
+              <li><code>tracert &lt;host&gt;</code> — rastreia o caminho até o destino</li>
+              <li><code>nslookup &lt;domínio&gt;</code> — resolve DNS manualmente</li>
+              <li><code>netstat -an</code> — conexões ativas e portas abertas</li>
+              <li><code>ping6</code> / <code>traceroute6</code> — equivalentes para IPv6</li>
+              <li><code>ipconfig /release</code> + <code>/renew</code> — renovar IP via DHCP</li>
+              <li><code>ipconfig /flushdns</code> — limpar cache DNS local</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- BLOCO 4 -->
+  <div class="section" id="bloco4">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <span class="section-title">Sistema Operacional & Apps</span>
+      <span class="section-badge b-purple">Windows + Mobile + Cloud</span>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🪟</span>
+        <span class="topic-name">4.1 — Problemas de Windows</span>
+        <span class="topic-tags"><span class="tag b-purple">lab</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Display & sistema</div>
+            <ul>
+              <li>Configurar resolução, escala e múltiplos monitores</li>
+              <li>BitLocker: o que é, como pegar a recovery key (Entra ID / MBAM), situações de bloqueio</li>
+              <li>Windows Update: verificar, instalar, pausar, resolver falha de update</li>
+              <li>Limpar cache do browser (Ctrl+Shift+Del) — resolve muitos problemas de acesso a sistemas web</li>
+              <li>Task Manager: terminar processo travado (kill process)</li>
+            </ul>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Boot & recuperação</div>
+            <ul>
+              <li>Sequência de boot: BIOS/UEFI → Bootloader → Windows</li>
+              <li>Modo seguro: F8 ou <code>msconfig</code> → Boot → Safe Boot</li>
+              <li>Gerenciamento de energia: planos de energia, hibernação vs sleep</li>
+              <li>Acessibilidade: Narrador, Lupa, Alto Contraste, Teclado na Tela</li>
+              <li>OneDrive: backup de Documentos/Desktop/Imagens, restaurar versão anterior</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">📱</span>
+        <span class="topic-name">4.3 — Dispositivos móveis</span>
+        <span class="topic-tags"><span class="tag b-purple">MDM</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Suporte básico</div>
+            <ul>
+              <li>Reiniciar dispositivo (força tarefa vs reinício limpo)</li>
+              <li>Configurar e-mail corporativo (Exchange/M365) em iOS e Android</li>
+              <li>Instalar app de colaboração (Teams, Webex) e fazer login corporativo</li>
+              <li>Resolver problemas de conectividade: Wi-Fi, VPN no celular</li>
+            </ul>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">MDM básico (Microsoft Intune)</div>
+            <ul>
+              <li>O que é MDM: gerenciamento remoto de dispositivos móveis corporativos</li>
+              <li>Enrolar dispositivo no Intune (iOS e Android)</li>
+              <li>Políticas de conformidade: PIN obrigatório, criptografia ativa</li>
+              <li>Wipe remoto: apagar dispositivo perdido ou roubado</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">☁️</span>
+        <span class="topic-name">4.4 — Virtualização e Cloud (Azure)</span>
+        <span class="topic-tags"><span class="tag b-blue">AZ-104</span><span class="tag b-purple">roadmap.sh</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Conceitos</div>
+            <ul>
+              <li><strong>Hipervisor:</strong> software que cria e gerencia VMs (Hyper-V, VMware, VirtualBox)</li>
+              <li><strong>Tipo 1:</strong> roda direto no hardware (Hyper-V Server, ESXi)</li>
+              <li><strong>Tipo 2:</strong> roda sobre um SO (VirtualBox, VMware Workstation)</li>
+              <li><strong>IaaS / PaaS / SaaS:</strong> camadas do modelo de nuvem</li>
+              <li><strong>Azure:</strong> provedor cloud da Microsoft — usado na Turim via Entra ID</li>
+            </ul>
+            <a class="network-link" href="https://roadmap.sh/network-engineer" target="_blank">↗ roadmap.sh → Cloud Networking → Azure Fundamentals</a>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Praticar</div>
+            <ul>
+              <li>Criar conta Azure gratuita (portal.azure.com)</li>
+              <li>Subir uma VM Windows simples e conectar via RDP</li>
+              <li>Ver como o Entra ID do Azure se conecta ao AD local (hybrid join)</li>
+              <li>Este tópico é coberto em profundidade pelo AZ-104</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">📦</span>
+        <span class="topic-name">4.5 — Problemas de aplicativos</span>
+        <span class="topic-tags"><span class="tag b-purple">suporte</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Instalação</div>
+            <ul>
+              <li>Apps aprovados: Microsoft Store, portal corporativo do Intune</li>
+              <li>Fontes não confiáveis: riscos de malware, política da empresa</li>
+              <li>Requisitos de compatibilidade: arquitetura x64/ARM, versão do SO</li>
+            </ul>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Apps comuns</div>
+            <ul>
+              <li><strong>Outlook/Teams/M365:</strong> configurar conta, resolver login, limpar cache de perfil</li>
+              <li><strong>Cisco Webex:</strong> instalação, configurar áudio/câmera, testar reunião</li>
+              <li><strong>OneDrive:</strong> sincronização, conflitos de arquivo, compartilhamento</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- BLOCO 5 -->
+  <div class="section" id="bloco5">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <span class="section-title">Segurança</span>
+      <span class="section-badge b-red">Crítico</span>
+    </div>
+
+    <div class="callout red">
+      Como técnico de help desk, você é um <strong>alvo frequente de engenharia social</strong>. Conhecer esses ataques não é opcional — é parte do trabalho.
+    </div>
+    <br>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🎣</span>
+        <span class="topic-name">5.1 — Ameaças e investigação básica</span>
+        <span class="topic-tags"><span class="tag b-red">segurança</span><span class="tag b-purple">roadmap.sh</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Tipos de ameaça</div>
+            <ul>
+              <li><strong>Phishing:</strong> e-mail falso que tenta roubar credenciais ou instalar malware</li>
+              <li><strong>Malware:</strong> vírus, ransomware, spyware — software malicioso</li>
+              <li><strong>Spam:</strong> e-mails indesejados em massa, às vezes com payload</li>
+              <li><strong>Spoofing:</strong> falsificar remetente de e-mail ou IP de origem</li>
+              <li><strong>Acesso não autorizado:</strong> tentativa de login em conta alheia</li>
+            </ul>
+            <a class="network-link" href="https://roadmap.sh/network-engineer" target="_blank">↗ roadmap.sh → Security → Threats & Vulnerabilities</a>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Como agir</div>
+            <ul>
+              <li>Rodar scan de malware: Windows Defender (integrado) ou Malwarebytes</li>
+              <li>Isolar máquina suspeita da rede antes de escanear</li>
+              <li>Reportar tentativas de phishing para a equipe de segurança</li>
+              <li>Senhas fortes: 12+ caracteres, maiúscula, número, símbolo, sem reutilização</li>
+              <li>MFA: reduz drasticamente o risco mesmo com senha comprometida</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🎭</span>
+        <span class="topic-name">5.2 — Engenharia social</span>
+        <span class="topic-tags"><span class="tag b-red">alerta</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Cenários comuns no help desk</div>
+            <ul>
+              <li>"Sou o diretor e preciso que você resete minha senha agora, urgente"</li>
+              <li>"Estou em viagem e perdi o acesso, me adiciona no grupo de segurança"</li>
+              <li>"Sou da TI central e preciso de acesso remoto à sua máquina"</li>
+              <li>E-mail com link urgente pedindo validação de conta</li>
+            </ul>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Como se proteger</div>
+            <ul>
+              <li>Sempre verificar identidade antes de resetar senha ou dar acesso</li>
+              <li>Ligar de volta para o ramal oficial — nunca para o número que a pessoa forneceu</li>
+              <li>Urgência e pressão são sinais de alerta, não de confiança</li>
+              <li>Escalate se tiver dúvida — é melhor pedir confirmação do que ser responsável por um incidente</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🔒</span>
+        <span class="topic-name">5.3 — Dados e conformidade</span>
+        <span class="topic-tags"><span class="tag b-red">PII · LGPD</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-col" style="border:none; padding:.9rem 1rem">
+          <ul>
+            <li><strong>PII (Dados Pessoais):</strong> CPF, e-mail, telefone, endereço — protegidos pela LGPD</li>
+            <li><strong>Dados confidenciais:</strong> informações financeiras de clientes da Turim — tratar com máximo cuidado</li>
+            <li><strong>Dados proprietários:</strong> código, estratégias internas — não compartilhar fora da empresa</li>
+            <li>Nunca enviar dados sensíveis por canais não autorizados (WhatsApp pessoal, e-mail pessoal)</li>
+            <li>Incidente com dados: reportar imediatamente ao gestor e equipe de segurança</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- BLOCO 6 -->
+  <div class="section" id="bloco6">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <span class="section-title">Ferramentas & Windows Server</span>
+      <span class="section-badge b-cyan">Lab completo</span>
+    </div>
+
+    <div class="callout green">
+      Este bloco é o que mais se beneficia do <strong>lab de VMs</strong>. Suba um Windows Server 2022 (eval gratuito, 180 dias) no VirtualBox e pratique cada item aqui.
+    </div>
+    <br>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🖥️</span>
+        <span class="topic-name">6.1 — Acesso remoto</span>
+        <span class="topic-tags"><span class="tag b-cyan">prático</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Ferramentas</div>
+            <ul>
+              <li><strong>RDP (mstsc.exe):</strong> acesso remoto nativo do Windows — padrão corporativo</li>
+              <li><strong>Remote Assistance:</strong> usuário convida o técnico — bom para suporte sem VPN</li>
+              <li><strong>Cisco Webex:</strong> videoconferência + compartilhamento de tela para suporte</li>
+              <li><strong>TeamViewer:</strong> acesso remoto sem precisar de VPN, cross-platform</li>
+              <li><strong>VNC:</strong> open-source, multiplataforma — menor controle de segurança</li>
+              <li><strong>Action1 RMM:</strong> acesso remoto + execução de scripts nos endpoints da Turim</li>
+            </ul>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Lab prático</div>
+            <ul>
+              <li>No lab de VMs: ative RDP no servidor e no cliente, conecte do host físico via mstsc</li>
+              <li>Instale TeamViewer Free em uma VM e faça suporte remoto a partir do host</li>
+              <li>Simule um chamado completo: usuário reporta problema → você acessa remotamente → resolve → documenta</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🔎</span>
+        <span class="topic-name">6.2 — Ferramentas de pesquisa e documentação</span>
+        <span class="topic-tags"><span class="tag b-cyan">metodologia</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Como pesquisar bem</div>
+            <ul>
+              <li><strong>IA (Claude, Copilot):</strong> ótimo para explicar erros e sugerir soluções — sempre valide antes de aplicar em produção</li>
+              <li><strong>Buscas técnicas:</strong> use o erro exato entre aspas: <code>"stop code 0x0000003B"</code></li>
+              <li><strong>Fóruns:</strong> Spiceworks, Reddit r/sysadmin, Microsoft Q&A</li>
+              <li><strong>Docs oficiais:</strong> Microsoft Learn, Dell Support, Cisco Docs</li>
+              <li><strong>KB interna:</strong> registre soluções de chamados recorrentes para reutilizar</li>
+            </ul>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">IA: limitações importantes</div>
+            <ul>
+              <li>Pode alucinar — nunca aplique um script gerado por IA em produção sem testar</li>
+              <li>IA generativa cria conteúdo; IA preditiva classifica/prevê — são coisas diferentes</li>
+              <li>Dados sensíveis da Turim não devem ser colados em ferramentas de IA externas</li>
+              <li>Use para aprender e rascunhar — não para substituir o julgamento técnico</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🗄️</span>
+        <span class="topic-name">6.3 — Windows Server e ferramentas administrativas</span>
+        <span class="topic-tags"><span class="tag b-cyan">lab</span><span class="tag b-purple">roadmap.sh</span></span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <div class="topic-grid">
+          <div class="topic-col">
+            <div class="col-label">Serviços do Windows Server</div>
+            <ul>
+              <li><strong>AD DS:</strong> gerenciar usuários, grupos, OUs, domínio, GPOs</li>
+              <li><strong>DNS:</strong> resolver nomes internos e externos, zonas forward/reverse</li>
+              <li><strong>DHCP:</strong> escopos, reservas de IP, leases, autorizar no AD</li>
+              <li><strong>File Server:</strong> compartilhamentos SMB, permissões NTFS vs Share</li>
+              <li><strong>Print Server:</strong> adicionar impressoras, compartilhar, gerenciar fila via Print Management</li>
+            </ul>
+            <a class="network-link" href="https://roadmap.sh/network-engineer" target="_blank">↗ roadmap.sh → Networking Services → DNS, DHCP, File Sharing</a>
+          </div>
+          <div class="topic-col">
+            <div class="col-label">Lab: passo a passo resumido</div>
+            <ul>
+              <li>VM Server (DC01): WS2022 Eval, IP fixo 192.168.56.10</li>
+              <li>Instalar AD DS → promover a DC (domínio: lab.local)</li>
+              <li>Instalar DNS e DHCP → criar escopo 192.168.56.50–100</li>
+              <li>Criar File Server: pasta compartilhada para Domain Users</li>
+              <li>Criar Print Server: impressora virtual compartilhada</li>
+              <li>VM Cliente (WIN10): ingressar no domínio, mapear drive via GPO</li>
+              <li>Testar tudo: gpupdate /force, RDP entre VMs, acesso ao compartilhamento</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- DIVISÃO SEMANAL -->
+  <div class="section" id="semana">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <span class="section-title">Divisão semanal — fase atual</span>
+      <span class="section-badge b-red">AZ-104 prioridade</span>
+    </div>
+
+    <div class="callout">
+      AZ-104 tem prazo de voucher. O curso de redes tem prazo até junho. Os tópicos de efetivação ficam em segundo plano até a prova — mas muitos conceitos se sobrepõem.
+    </div>
+    <br>
+
+    <div class="schedule">
+      <div class="sch-row">
+        <div class="sch-day">Seg</div>
+        <div class="sch-task"><span class="itag b-blue">AZ-104</span> 1h — estudo do domínio da semana (Microsoft Learn)</div>
+      </div>
+      <div class="sch-row">
+        <div class="sch-day">Ter</div>
+        <div class="sch-task"><span class="itag b-blue">AZ-104</span> 1h — lab prático no portal Azure</div>
+      </div>
+      <div class="sch-row">
+        <div class="sch-day">Qua</div>
+        <div class="sch-task"><span class="itag b-purple">Redes</span> 1h — curso de redes (prazo junho)</div>
+      </div>
+      <div class="sch-row">
+        <div class="sch-day">Qui</div>
+        <div class="sch-task"><span class="itag b-blue">AZ-104</span> 1h — revisar dúvidas ou refazer lab</div>
+      </div>
+      <div class="sch-row">
+        <div class="sch-day">Sex</div>
+        <div class="sch-task"><span class="itag b-blue">AZ-104</span> 1h — revisão + questões de prática</div>
+      </div>
+      <div class="sch-row">
+        <div class="sch-day">Sáb</div>
+        <div class="sch-task"><span class="itag b-purple">Redes</span> 1h — curso de redes ou lab de VMs</div>
+      </div>
+      <div class="sch-row">
+        <div class="sch-day">Dom</div>
+        <div class="sch-task" style="color:var(--muted)">Descanso — ou revisão leve se quiser. Não é obrigação.</div>
+      </div>
+    </div>
+
+    <div class="callout blue" style="margin-top:.75rem">
+      Após o AZ-104: use a mesma estrutura semanal, mas troque os blocos de Azure pelos tópicos de efetivação + lab de VMs.
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- RECURSOS -->
+  <div class="section" id="recursos">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <span class="section-title">Referências de estudo</span>
+      <span class="section-badge b-green">Maioria gratuita</span>
+    </div>
+
+    <div class="topic-block open">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">📘</span>
+        <span class="topic-name">Help desk & hardware (Blocos 1 e 2)</span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <table class="res-table">
+          <tr>
+            <th>Recurso</th>
+            <th>Para quê</th>
+            <th>Custo</th>
+          </tr>
+          <tr>
+            <td><div class="res-name">Cisco NetAcad — IT Essentials</div><div class="res-desc"><a class="res-link" href="https://www.netacad.com" target="_blank">netacad.com</a></div></td>
+            <td>Hardware, SO, help desk, troubleshooting — cobre os blocos 1, 2 e parte do 4</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+          <tr>
+            <td><div class="res-name">Professor Messer — CompTIA A+</div><div class="res-desc"><a class="res-link" href="https://www.professormesser.com" target="_blank">professormesser.com</a></div></td>
+            <td>Vídeos objetivos sobre hardware, portas, cabos, drivers — em inglês, mas direto ao ponto</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+          <tr>
+            <td><div class="res-name">Dell Support — Service Manuals</div><div class="res-desc"><a class="res-link" href="https://www.dell.com/support" target="_blank">dell.com/support</a></div></td>
+            <td>Manuais de serviço do OptiPlex 7020 Micro e Latitude — específicos da frota Turim</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+          <tr>
+            <td><div class="res-name">Spiceworks Community</div><div class="res-desc"><a class="res-link" href="https://community.spiceworks.com" target="_blank">community.spiceworks.com</a></div></td>
+            <td>Fórum real de sysadmins e técnicos de help desk — cenários reais, soluções reais</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🌐</span>
+        <span class="topic-name">Redes & acesso (Bloco 3)</span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <table class="res-table">
+          <tr>
+            <th>Recurso</th>
+            <th>Para quê</th>
+            <th>Custo</th>
+          </tr>
+          <tr>
+            <td><div class="res-name">Cisco NetAcad — CCNAv7 Intro to Networks</div><div class="res-desc"><a class="res-link" href="https://www.netacad.com" target="_blank">netacad.com</a></div></td>
+            <td>DNS, DHCP, IP, subnetting, comandos de rede — base do bloco 3 e do roadmap.sh</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+          <tr>
+            <td><div class="res-name">YouTube: NetworkChuck</div><div class="res-desc"><a class="res-link" href="https://www.youtube.com/@NetworkChuck" target="_blank">youtube.com/@NetworkChuck</a></div></td>
+            <td>DNS, DHCP, subnetting explicados de forma visual e prática</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+          <tr>
+            <td><div class="res-name">Microsoft Learn — Active Directory / Entra ID</div><div class="res-desc"><a class="res-link" href="https://learn.microsoft.com" target="_blank">learn.microsoft.com</a></div></td>
+            <td>Gerenciar usuários, grupos, MFA, RBAC, Conditional Access</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+          <tr>
+            <td><div class="res-name">TryHackMe — Windows Active Directory</div><div class="res-desc"><a class="res-link" href="https://tryhackme.com" target="_blank">tryhackme.com</a></div></td>
+            <td>Lab guiado de AD em ambiente virtual — sem precisar montar VM local</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+          <tr>
+            <td><div class="res-name">roadmap.sh — Network Engineer</div><div class="res-desc"><a class="res-link" href="https://roadmap.sh/network-engineer" target="_blank">roadmap.sh/network-engineer</a></div></td>
+            <td>Visão macro de todos os tópicos de redes — use como mapa para saber onde você está</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🪟</span>
+        <span class="topic-name">Windows Server & ferramentas (Bloco 6)</span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <table class="res-table">
+          <tr>
+            <th>Recurso</th>
+            <th>Para quê</th>
+            <th>Custo</th>
+          </tr>
+          <tr>
+            <td><div class="res-name">Microsoft Eval Center — WS2022</div><div class="res-desc"><a class="res-link" href="https://www.microsoft.com/evalcenter" target="_blank">microsoft.com/evalcenter</a></div></td>
+            <td>ISO do Windows Server 2022 para o lab — 180 dias gratuitos, sem ativação</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+          <tr>
+            <td><div class="res-name">YouTube: Andy Malone</div><div class="res-desc"><a class="res-link" href="https://www.youtube.com/@AndyMaloneMVP" target="_blank">youtube.com/@AndyMaloneMVP</a></div></td>
+            <td>AD DS, GPO, DHCP, DNS no Windows Server — passo a passo em vídeo</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+          <tr>
+            <td><div class="res-name">YouTube: John Savill</div><div class="res-desc"><a class="res-link" href="https://www.youtube.com/@NTFAQGuy" target="_blank">youtube.com/@NTFAQGuy</a></div></td>
+            <td>Azure, Windows Server, AD — conteúdo técnico avançado e muito bem explicado</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+          <tr>
+            <td><div class="res-name">VirtualBox</div><div class="res-desc"><a class="res-link" href="https://www.virtualbox.org" target="_blank">virtualbox.org</a></div></td>
+            <td>Hipervisor gratuito para montar o lab local com Windows Server + cliente</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">🔒</span>
+        <span class="topic-name">Segurança (Bloco 5)</span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <table class="res-table">
+          <tr>
+            <th>Recurso</th>
+            <th>Para quê</th>
+            <th>Custo</th>
+          </tr>
+          <tr>
+            <td><div class="res-name">Cisco NetAcad — Cybersecurity Essentials</div><div class="res-desc"><a class="res-link" href="https://www.netacad.com" target="_blank">netacad.com</a></div></td>
+            <td>Base de segurança: ameaças, criptografia, firewall, boas práticas</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+          <tr>
+            <td><div class="res-name">Google Phishing Quiz</div><div class="res-desc"><a class="res-link" href="https://phishingquiz.withgoogle.com" target="_blank">phishingquiz.withgoogle.com</a></div></td>
+            <td>Treinar identificação de e-mails de phishing — interativo e muito prático</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+          <tr>
+            <td><div class="res-name">TryHackMe — Pre-Security Path</div><div class="res-desc"><a class="res-link" href="https://tryhackme.com/path/outline/presecurity" target="_blank">tryhackme.com</a></div></td>
+            <td>Fundamentos de redes e segurança em labs guiados — sem precisar instalar nada</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="topic-block">
+      <div class="topic-header" onclick="toggle(this.parentElement)">
+        <span class="topic-icon">☁️</span>
+        <span class="topic-name">AZ-104 (paralelo)</span>
+        <span class="chev">›</span>
+      </div>
+      <div class="topic-body">
+        <table class="res-table">
+          <tr>
+            <th>Recurso</th>
+            <th>Para quê</th>
+            <th>Custo</th>
+          </tr>
+          <tr>
+            <td><div class="res-name">Microsoft Learn — trilha AZ-104</div><div class="res-desc"><a class="res-link" href="https://learn.microsoft.com/pt-br/certifications/exams/az-104" target="_blank">learn.microsoft.com</a></div></td>
+            <td>Trilha oficial com módulos, labs interativos e practice assessment</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+          <tr>
+            <td><div class="res-name">Azure Free Account</div><div class="res-desc"><a class="res-link" href="https://azure.microsoft.com/free" target="_blank">azure.microsoft.com/free</a></div></td>
+            <td>US$200 de crédito + serviços always-free para lab prático</td>
+            <td><span class="res-tag b-green">Gratuito</span></td>
+          </tr>
+          <tr>
+            <td><div class="res-name">ExamTopics — AZ-104</div><div class="res-desc"><a class="res-link" href="https://www.examtopics.com/exams/microsoft/az-104" target="_blank">examtopics.com</a></div></td>
+            <td>Questões de prática no estilo da prova real — bom complemento ao Microsoft Learn</td>
+            <td><span class="res-tag b-yellow">Parcial</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- CHECKLIST -->
+  <div class="section" id="checklist">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <span class="section-title">Checklist geral</span>
+      <span class="section-badge b-green">Marque conforme avançar</span>
+    </div>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:1rem;">Seu progresso é salvo no navegador.</p>
+
+    <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:.5rem">Bloco 1 — Help desk</div>
+    <div class="checklist" style="margin-bottom:1rem">
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Entender SLA: o que é, como funcionar e como verificar violações</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Praticar documentação de chamados (problema → passos → resultado → solução)</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Conhecer os 7 passos do processo de troubleshooting</label></div>
+    </div>
+
+    <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:.5rem">Bloco 2 — Hardware</div>
+    <div class="checklist" style="margin-bottom:1rem">
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Usar msinfo32, Task Manager, Event Viewer e ipconfig /all para diagnóstico</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Identificar visualmente portas de vídeo (HDMI, DP, VGA, USB-C) e rede (RJ-45)</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Saber diferença entre SATA SSD, NVMe M.2 e quando usar cada um</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Usar Device Manager para atualizar, reverter e reinstalar drivers</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Interpretar LEDs de erro Dell (branco vs laranja piscante)</label></div>
+    </div>
+
+    <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:.5rem">Bloco 3 — Redes & acesso</div>
+    <div class="checklist" style="margin-bottom:1rem">
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Criar usuário e grupo no AD e Entra ID, resetar senha, verificar permissões</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Configurar MFA em uma conta de teste no Entra ID</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Mapear drive de rede SMB e entender por que falha (permissão, DNS, firewall)</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Explicar DNS, DHCP e APIPA sem consultar nada</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Usar ipconfig, ping, tracert, nslookup e netstat em um cenário real</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Resolver problema de impressora: fila travada, toner, papel</label></div>
+    </div>
+
+    <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:.5rem">Bloco 4 — SO & apps</div>
+    <div class="checklist" style="margin-bottom:1rem">
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Recuperar BitLocker key via Entra ID / AD</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Iniciar Windows em modo seguro via msconfig</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Configurar e-mail corporativo M365 em dispositivo móvel</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Entender IaaS/PaaS/SaaS e hipervisores Tipo 1 vs Tipo 2</label></div>
+    </div>
+
+    <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:.5rem">Bloco 5 — Segurança</div>
+    <div class="checklist" style="margin-bottom:1rem">
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Identificar e-mail de phishing no Google Phishing Quiz (acertar 8/8)</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Conhecer os cenários de engenharia social mais comuns no help desk</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Rodar scan de malware com Windows Defender ou Malwarebytes</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Saber o que é PII e como a LGPD se aplica ao trabalho na Turim</label></div>
+    </div>
+
+    <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:.5rem">Bloco 6 — Ferramentas & servidor</div>
+    <div class="checklist" style="margin-bottom:1rem">
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Fazer suporte remoto via RDP e TeamViewer em cenário simulado</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Lab: subir Windows Server 2022 no VirtualBox e configurar AD DS + DNS</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Lab: configurar DHCP e ingressar cliente no domínio</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Lab: criar File Server (compartilhamento SMB) e Print Server</label></div>
+      <div class="check-item" onclick="tc(this)"><input type="checkbox"><label>Lab: criar e aplicar GPO que mapeia drive de rede automaticamente</label></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="border-top:1px solid var(--border);padding-top:1.25rem;margin-top:.5rem">
+    <p style="font-size:12px;color:var(--muted)">Roadmap gerado com base nos tópicos de efetivação da Turim e no <a class="res-link" href="https://roadmap.sh/network-engineer" target="_blank">roadmap.sh/network-engineer</a>. Boa sorte, Matheus.</p>
+  </div>
+
+</main>
+</div>
+
+<script>
+function toggle(block) {
+  block.classList.toggle('open');
+}
+
+function tc(item) {
+  const cb = item.querySelector('input');
+  if (event.target !== cb) cb.checked = !cb.checked;
+  item.classList.toggle('done', cb.checked);
+  save();
+}
+
+function save() {
+  const states = [...document.querySelectorAll('.check-item input')].map(c => c.checked);
+  try { localStorage.setItem('efetivacao-checks', JSON.stringify(states)); } catch(e){}
+}
+
+function load() {
+  try {
+    const s = JSON.parse(localStorage.getItem('efetivacao-checks') || '[]');
+    document.querySelectorAll('.check-item').forEach((item, i) => {
+      if (s[i]) { item.querySelector('input').checked = true; item.classList.add('done'); }
+    });
+  } catch(e){}
+}
+
+load();
+</script>
+</body>
+</html>
