@@ -1,0 +1,4 @@
+FASE 2 - OK
+FASE 3 - OK
+FASE 4 - OK
+FASE 5 - 
