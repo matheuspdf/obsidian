@@ -227,29 +227,29 @@ No modo PSK (Pre-Shared Key), todos compartilham a mesma chave configurada no AP
 
 ## 📋 Resumo rápido do gabarito
 
-|#|Resposta|
-|---|---|
-|1|Hoax|
-|2|Inserção de SQL|
-|3|DoS|
-|4|Fraqueza que torna alvo suscetível a ataque|
-|5|Senhas|
-|6|Controle de acesso impróprio|
-|7|Hacktivistas→C, Estado→B, Corretores→A|
-|8|Fraqueza em sistema/design explorável|
-|9|Soma de verificação do cabeçalho|
-|10|Sinalização, Deslocamento de fragmento, Identificação|
-|11|Reconhecimento|
-|12|Inundação de SYN|
-|13|Utilização de recursos→B, Envenenamento de cache→C, Amplificação/reflexão→A|
-|14|Script entre sites (XSS)|
-|15|Criptografia para tráfego confidencial|
-|16|iFrame carrega página de outra fonte|
-|17|Solicitação de teste + Beacon|
-|18|Access point invasor|
-|19|Chave que corresponde à do AP|
-|20|AP envia beacons periodicamente|
-|21|Conexões virtuais → rede privada sobre rede pública|
-|22|Dificuldade de visão de rede + suporte a múltiplos SOs|
-|23|Formato de mensagem gestor↔agente|
-|24|Conjunto de regras para detectar atividades intrusivas|
+| #   | Resposta                                                                    |
+| --- | --------------------------------------------------------------------------- |
+| 1   | Hoax                                                                        |
+| 2   | Inserção de SQL                                                             |
+| 3   | DoS                                                                         |
+| 4   | Fraqueza que torna alvo suscetível a ataque                                 |
+| 5   | Senhas                                                                      |
+| 6   | Controle de acesso impróprio                                                |
+| 7   | Hacktivistas→C, Estado→B, Corretores→A                                      |
+| 8   | Fraqueza em sistema/design explorável                                       |
+| 9   | Soma de verificação do cabeçalho                                            |
+| 10  | Sinalização, Deslocamento de fragmento, Identificação                       |
+| 11  | Reconhecimento                                                              |
+| 12  | Inundação de SYN                                                            |
+| 13  | Utilização de recursos→B, Envenenamento de cache→C, Amplificação/reflexão→A |
+| 14  | Script entre sites (XSS)                                                    |
+| 15  | Criptografia para tráfego confidencial                                      |
+| 16  | iFrame carrega página de outra fonte                                        |
+| 17  | Solicitação de teste + Beacon                                               |
+| 18  | Access point invasor                                                        |
+| 19  | Chave que corresponde à do AP                                               |
+| 20  | AP envia beacons periodicamente                                             |
+| 21  | Conexões virtuais → rede privada sobre rede pública                         |
+| 22  | Dificuldade de visão de rede + suporte a múltiplos SOs                      |
+| 23  | Formato de mensagem gestor↔agente                                           |
+| 24  | Conjunto de regras para detectar atividades intrusivas                      |
