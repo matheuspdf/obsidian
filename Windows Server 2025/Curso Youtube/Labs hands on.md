@@ -19,3 +19,8 @@
 6. Configure Windows Firewall
 	1. Keep firewall ON
 	2. Allow only required services
+
+
+Depois de subir o servidor, instalei as ferramentas do VMware clicando com o botao direito da máquina virtual > Install VMWARE Tools
+
+Renomear o nome da máquina.
