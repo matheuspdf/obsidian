@@ -7,5 +7,8 @@ VM up com Windows Server 2025 rodando  - ok
 - Windows Update - ok
 - Agent (VMWare tools) - ok
 - Hostname - ok
-- Rede - ![[Pasted image 20260806233744.png]]
+- Rede - ok
+- ![[Pasted image 20260806233744.png]]
 	![[Pasted image 20260806233806.png]]
+
+12:29
