@@ -369,6 +369,118 @@ O agente do Action1 faz, de forma **remota e centralizada**, o mesmo levantament
 💡 **Conexão com seu trabalho:** isso conversa direto com o que você já estudou no NetAcad (CCNA) — hoje é mais consolidar do que aprender do zero.
 
 ---
+# 📓 Caderno de Estudos — Infraestrutura
+
+**Tema:** [3.3] Conectividade Básica de Rede  
+**Data:** 18/08/2026  
+**Aluno:** Matheus Lopes
+
+### 1. Análise do ipconfig /all e a dúvida do DNS == Gateway
+
+Na saída do meu comando, o DNS e o Gateway são os mesmo porque o meu roteador doméstico atua como Proxy e encaminhador de DNS. Quando meu computador quer resolver um nome, ele manda a pergunta para o gateway. O roteador recebe, pega essa requisição e repassa para um DNS externo, recebe a resposta e entrega de volta.
+
+### 2. Anatomia do tracert 8.8.8.8 (passo a passo de cada salto)
+
+O comando tracert descobre o caminho que um pacote faz da sua máquina até o destino. Cada linha é um roteador no meio do caminho:
+```text
+  1    <1 ms    <1 ms    <1 ms  192.168.18.1
+```
+- No salto 1, meu roteador local/gateway (192.168.18.1) responde instantaneamente porque está na minha sala.
+
+```text
+  2     6 ms     2 ms     2 ms  100.64.0.1
+  3     4 ms     1 ms     1 ms  172.22.0.6
+  4     2 ms     2 ms     2 ms  172.22.0.1
+  5     4 ms     2 ms     4 ms  0.0.23.45
+  6     5 ms     2 ms     2 ms  172.16.172.1
+```
+- Saltos 2 a 6 são roteadores internos da operadora da internet (ISP). Possui faixas de IPs privados (`10.x.x.x`, `172.x.x.x`, `100.x.x.x` - CGNAT).
+
+```text
+  7     2 ms     2 ms     2 ms  142.250.167.18
+  8     4 ms     2 ms     3 ms  142.251.69.139
+  9     5 ms     2 ms     2 ms  108.170.235.139
+ 10     5 ms     2 ms     2 ms  dns.google [8.8.8.8]
+```
+- Saltos de 7 a 10. Entrou na rede backbone pública da internet e na infraestrutura global do Google até chegar ao ip final 8.8.8.8.
+
+### 3. `nslookup` na Prática (Dia a Dia do Estagiário de Infra)
+Ele consulta o servidor DNS para traduzir nomes legíveis em endereços IP.
+
+Como usar no suporte:
+1. Usuário reclama: "Não consigo acessar o sistema da empresa"
+2. Teste com nslookup:
+	1. Se retornar erro (`Server failure` ou `Non-existent domain`), o problema é de DNS (o servidor de nomes não sabe quem é essa intranet, ou o registro A/CNAME sumiu no AD/DNS Server).
+	2. Se retornar o IP certinho, mas o usuário não consegue abrir a página, o problema não é DNS. O cabo está ok, a rede resolveu o nome, mas a aplicação caiu, a porta está bloqueada pelo firewall ou o serviço web parou.
+
+### Análise Linha por Linha:
+
+#### 1. Cabeçalho do Servidor DNS
+
+```text
+Servidor:  UnKnown
+Address:  192.168.18.1
+```
+Ao rodar o comando, ele se questiona de para quem deve perguntar. O windows olha no ipconfig e vê que o servidor DNS configurado é o 192.168.18.1 (roteador).
+
+O Unknown significa que o próprio roteador não tem a informação do nome do DNS reverso nele. Então o Windows usa o IP.
+
+#### 2. O Aviso de Resposta
+
+```text
+Não é resposta autoritativa:
+```
+
+Significa que a resposta não veio direto da fonte, o Windows usou o que tinha em cache. Para o dia a dia, **isso é perfeitamente normal e desejado**, pois acelera a navegação.
+
+#### 3. O Alvo Resolvido
+
+```text
+Nome:    youtube.com
+Addresses:  2800:3f0:4001:81c::200e
+          142.251.133.78
+```
+O DNS cumpriu o seu papel com sucesso. Ele traduziu o nome legível para os endereços IP reais onde o serviço está hospedado:
+- O primeiro (`2800:3f0:...`) é o endereço **IPv6** do YouTube.
+- O segundo (`142.251.133.78`) é o endereço **IPv4** do YouTube.
+
+### Como usar isso no seu dia a dia de Infra/Suporte:
+
+Se um usuário rodar `nslookup` para um sistema da empresa (ex: `erp.suaempresa.local`) e a resposta for algo como:
+
+- `*** O Servidor Desconhecido não pode encontrar erp.suaempresa.local: Non-existent domain` (ou falha no servidor DNS)
+
+Significa que **o servidor DNS não sabe quem é esse nome**. Ou o nome foi digitado errado, ou o registro DNS desse sistema sumiu do servidor Active Directory / DNS da empresa, ou a máquina do usuário está sem comunicação com o DNS corporativo.
+
+### 4. desvendando o netstat -ano
+Ele mostra todas as conexões de rede ativas e portas escutando na sua máquina. A flag -a mostra tudo, -n mostra números (em vez de tentar resolver nomes de domínio) e -o mostra o PID (Process ID).
+
+### Para que serve no dia a dia?
+
+- **Cenário 1 (Conflito de Porta):** Você vai rodar um serviço (ex: um container Docker, IIS, aplicação Node.js) e recebe o erro: _"Porta 80 / 443 / 8080 já está em uso"_.
+    - Você roda: `netstat -ano | findstr 8080`
+    - Ele te dá o PID (ex: `4736`).
+    - Você vai no _Gerenciador de Tarefas_ (aba Detalhes) e descobre qual programa/serviço está travando aquela porta.
+- **Cenário 2 (Auditoria/Segurança):** Investigar se há conexões externas suspeitas saindo da máquina de um usuário para IPs desconhecidos.
+### Colunas explicadas:
+
+- **Proto:** Protocolo (TCP ou UDP).
+- **Endereço Local:** O IP da sua máquina e a porta que está aberta/conversando (`192.168.18.32:53185`). `0.0.0.0` significa "escutando em todas as placas de rede".
+- **Endereço Externo:** Com quem o seu computador está falando na internet (`8.8.8.8:443`).
+- **Estado:**
+    - `LISTENING`: A porta está aberta, "esperando" alguém se conectar (ex: servidor web).
+    - `ESTABLISHED`: Conversa ativa neste exato segundo (ex: aba do navegador aberta consumindo dados).
+    - `TIME_WAIT` / `CLOSE_WAIT`: Conexão recém-encerrada, limpando os recursos.
+- **PID:** O número de identificação do processo no Windows. É a ponte entre a rede e o Gerenciador de Tarefas.
+### 💡 Como usar isso na prática no Help Desk / Infra?
+
+Imagine que um usuário te liga: _"O sistema em nuvem da empresa está fora do ar!"_
+
+1. Você roda um `tracert` para o endereço do sistema da empresa.
+2. Se o rastreio parar no **Salto 2 ou 3** (dentro da rede da empresa ou da operadora de vocês) e ficar dando `* * *` (timeout), o problema é **local ou da operadora** (sua internet caiu ou a operadora rompeu fibra).
+3. Se o rastreio chegar até a porta da nuvem (ex: AWS ou Azure) mas a aplicação não abrir, o problema **não é de rede/internet** — a rota está perfeita, o que significa que o servidor da aplicação em nuvem travou ou o serviço caiu.
+
+---
 
 ### Dia 9 — [4.1] Problemas do Windows
 
