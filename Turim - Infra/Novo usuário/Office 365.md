@@ -1,7 +1,7 @@
 # Atribuir licença
 [Microsoft 365 admin center](https://admin.cloud.microsoft/#/homepage)
 
-Microsoft 365 admin center > Users > Active users > Selecionar usuário > Licenses and apps > Microsoft 365 Business Standard
+Microsoft 365 admin center > Users > Active users > Selecionar usuário > Licenses and apps > Microsoft 365 Business Premium (Standard para sala de reunião)
 
 # Incluir grupo TodosTurim
 [Microsoft 365 admin center](https://admin.cloud.microsoft/#/homepage)

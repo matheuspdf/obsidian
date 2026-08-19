@@ -360,8 +360,8 @@ O agente do Action1 faz, de forma **remota e centralizada**, o mesmo levantament
 
 🛠️ **Pratique hoje:**
 
-- [ ] Rode na sua máquina: `ipconfig /all`, `ping`, `tracert`, `nslookup`, `netstat -ano`
-- [ ] Identifique: seu IP (público x privado), sua sub-rede, seu gateway padrão, seus servidores DNS
+- [x] Rode na sua máquina: `ipconfig /all`, `ping`, `tracert`, `nslookup`, `netstat -ano`
+- [x] Identifique: seu IP (público x privado), sua sub-rede, seu gateway padrão, seus servidores DNS
 - [ ] Explique em voz alta a diferença entre DNS e DHCP como se estivesse ensinando alguém
 
 ⏱️ **Tempo estimado:** 30–40 min
