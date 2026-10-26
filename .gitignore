@@ -7,3 +7,9 @@ conflict-files-obsidian-git.md
 
 # Repositórios clonados dentro do cofre (mantidos no próprio repo de origem)
 /Cursos/Curso de Vulnerabilidades/
+
+# Resíduos do Syncthing (não versionar)
+.stfolder/
+.stfolder.removed-*/
+.stversions/
+*.sync-conflict-*
