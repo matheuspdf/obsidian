@@ -1,0 +1,27 @@
+# Estado de janelas e layout local do Obsidian
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/graph.json
+.obsidian/hotkeys.json
+
+# Dados locais de plugins, que podem conter preferências ou informações privadas
+.obsidian/plugins/*/data.json
+
+# Lixeira do Obsidian
+.trash/
+
+# Arquivos temporários do sistema e de editores
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+~$*
+
+# Segredos locais que nunca devem ser publicados
+.env
+.env.*
+!.env.example
+*.pem
+*.key
